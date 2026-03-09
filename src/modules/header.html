@@ -1,0 +1,54 @@
+<header class="site-header">
+  <div class="header-content">
+
+    <!-- Logo/Branding -->
+    <div class="branding">
+      <a href="/" class="logo">
+        <img src="/images/first-sight-films-logo-st-augustine-fl.png" alt="First Sight Films - St. Augustine Video & Photo Production" width="180" height="60">
+      </a>
+      <span class="tagline">ST. AUGUSTINE VIDEO & PHOTO PRODUCTION</span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-main">
+      <a href="/">Home</a>
+      <a href="/st-augustine-video-production/">Video</a>
+      <a href="/st-augustine-photography/">Photo</a>
+      <a href="/aboutus/">About</a>
+      <a href="/contact/" class="nav-cta">Let's Talk</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/st-augustine-video-production/">Video</a>
+    <a href="/st-augustine-photography/">Photo</a>
+    <a href="/aboutus/">About</a>
+    <a href="/contact/" class="mobile-nav-cta">Let's Talk</a>
+  </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
+  const mobileToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  if (mobileToggle && mobileNav) {
+    mobileToggle.addEventListener('click', function() {
+      const isOpen = mobileNav.classList.toggle('open');
+      this.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+  }
+});
+</script>

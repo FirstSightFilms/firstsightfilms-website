@@ -1,0 +1,7 @@
+# 301 Redirects for SEO-optimized URLs
+# Old URL structure -> New URL structure
+
+/video/*    /st-augustine-video-production/:splat    301
+/photo/*    /st-augustine-photography/:splat         301
+/video      /st-augustine-video-production/          301
+/photo      /st-augustine-photography/               301

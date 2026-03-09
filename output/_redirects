@@ -1,0 +1,12 @@
+# 301 Redirects for SEO - old URLs to new URLs
+
+/video/*          /st-augustine-jacksonville-video-production/:splat    301
+/video            /st-augustine-jacksonville-video-production/          301
+/st-augustine-video-production/*  /st-augustine-jacksonville-video-production/:splat  301
+/st-augustine-video-production    /st-augustine-jacksonville-video-production/        301
+/photo/*          /saint-augustine-jacksonville-photographer/:splat     301
+/photo            /saint-augustine-jacksonville-photographer/           301
+/st-augustine-photography/*  /saint-augustine-jacksonville-photographer/:splat  301
+/st-augustine-photography    /saint-augustine-jacksonville-photographer/        301
+/saint-augustine-photographer/*  /saint-augustine-jacksonville-photographer/:splat  301
+/saint-augustine-photographer    /saint-augustine-jacksonville-photographer/        301

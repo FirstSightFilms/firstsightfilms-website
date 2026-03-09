@@ -1,0 +1,254 @@
+/* ==========================================================================
+   FSF Site Header
+   Clean, modular header styles
+   ========================================================================== */
+
+/* Header Container */
+.site-header {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+/* Branding / Logo */
+.branding {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.branding .logo img {
+  display: block;
+  height: 90px;
+  width: auto;
+}
+
+.branding .tagline {
+  font-size: 1rem;
+  font-weight: 550;
+  letter-spacing: 0.1em;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Desktop Navigation - Hidden, using hamburger instead */
+.nav-main {
+  display: none;
+}
+
+.nav-main a,
+.nav-dropdown-toggle {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 550;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.nav-main a:hover,
+.nav-dropdown-toggle:hover {
+  color: #333;
+}
+
+/* CTA Button in Nav */
+.nav-cta {
+  background: #000 !important;
+  color: #fff !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 4px;
+  transition: background 0.2s ease !important;
+}
+
+.nav-cta:hover {
+  background: #333 !important;
+}
+
+/* Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dropdown-arrow {
+  font-size: 0.75em;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+/* Hamburger Menu Toggle */
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 2rem;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav a,
+.mobile-accordion-toggle {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #333;
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mobile-accordion-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accordion-arrow {
+  transition: transform 0.2s ease;
+}
+
+.mobile-accordion.open .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.mobile-accordion-content {
+  display: none;
+  background: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-accordion.open .mobile-accordion-content {
+  display: block;
+}
+
+.mobile-nav-cta {
+  background: #f4c057 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  margin: 1rem 2rem;
+  padding: 1rem !important;
+  text-align: center !important;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0.75rem 1rem;
+  }
+
+  .branding .logo img {
+    height: 63px;
+  }
+
+  .mobile-menu-toggle {
+    right: 1rem;
+  }
+}
