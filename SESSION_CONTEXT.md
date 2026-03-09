@@ -4,136 +4,147 @@
 - Local: `/Users/diegosmbp/Downloads/diegos first script/downloaded_site`
 - GitHub: https://github.com/FirstSightFilms/firstsightfilms-website
 - Live: https://www.firstsightfilms.com
+- Dev Server: http://localhost:3001 (serves from `output/` folder)
 
 ---
 
-## Latest Session (March 2026) - Modular Build System & Header Redesign
+## Latest Session (March 9, 2026) - Header Redesign & SEO URLs
 
-### What Was Built
+### Deployed to Netlify (Commit 0f2bfa1)
 
-#### 1. Modular Build System
-Created a Python-based build system inspired by robfutrell.com:
+#### 1. Header Navigation Redesign
+- **Removed Portfolio dropdown** - Video and Photo are now separate top-level nav items
+- **Removed Home link** from navigation
+- **Simplified JavaScript** - removed ~40 lines of dropdown/accordion code, kept only mobile menu toggle
+- **Nav structure now:** Video | Photo | About | Let's Talk
 
-**Directory Structure:**
-```
-downloaded_site/
-├── src/
-│   ├── modules/
-│   │   └── header.html      # Reusable header component
-│   ├── pages/
-│   │   ├── index.html       # Homepage template
-│   │   ├── aboutus/
-│   │   ├── contact/
-│   │   ├── photo/
-│   │   ├── portfolio/
-│   │   └── video/           # Includes all video subpages
-│   └── css/
-│       └── header.css       # Header styles
-├── scripts/
-│   ├── build.py             # Main build script
-│   └── migrate_pages.py     # Migration script for existing pages
-└── output/                   # Generated site (serve this folder)
-```
+#### 2. SEO-Optimized URLs
+Changed all URLs to include location keywords:
 
-**How It Works:**
-1. Pages in `src/pages/` use `{{header}}` placeholder
-2. `build.py` replaces placeholders with module content
-3. Output goes to `output/` folder
-4. Run: `python3 scripts/build.py`
+| Old URL | New URL |
+|---------|---------|
+| `/video/` | `/st-augustine-jacksonville-video-production/` |
+| `/photo/` | `/saint-augustine-jacksonville-photographer/` |
 
-#### 2. New Clean Header
-Replaced Squarespace header (~21,000 chars per page) with clean modular header (~2,000 chars):
+- Renamed all folders to match
+- Updated all internal links across all HTML files
+- Created `_redirects` file for 301 redirects from old URLs
 
-**Features:**
-- Centered logo with SEO-optimized filename: `first-sight-films-logo-st-augustine-fl.png`
-- Tagline: "ST. AUGUSTINE VIDEO & PHOTO PRODUCTION"
-- Hamburger menu on all screen sizes (no horizontal nav)
-- Dropdown menu with: Portfolio (Video, Photo), About, Let's Talk (CTA)
-- Yellow CTA button (#f4c057) matching logo color
+#### 3. Header Content Updates
+- **Tagline:** Changed to two lines:
+  - Line 1: "Video Production & Photography"
+  - Line 2: "St. Augustine | Jacksonville"
+- **Tagline font size:** Increased to 1.05rem
+- **Logo filename:** Renamed to `First-Sight-Films-Logo-Video-Production-Photography-St-Augustine-Jacksonville-FL.png`
 
-**Header Files:**
-- `src/modules/header.html` - HTML structure
-- `src/css/header.css` - All header styling (also copied to `css/header.css`)
+#### 4. Homepage Content Updates
+- **H1:** Changed to "St. Augustine & Jacksonville | Video Production & Photography"
+- **H2 "Stop scrambling...":** Increased font size to 200%
 
-#### 3. Homepage Above-the-Fold Copy
-Updated based on StoryBrand framework and ICP research:
+#### 5. Netlify Configuration
+- Created `netlify.toml` to serve from `output/` folder
+- All changes made in `output/` folder for dev testing before deploy
 
-- **H1:** "St. Augustine Video & Photo Production"
-- **Subhead:** "Stop scrambling for content. We've got it."
-- **CTA:** "Let's Talk"
+### Files Changed
+- `output/` - All HTML files updated with new header, URLs, and content
+- `output/css/header.css` - Tagline font size
+- `output/_redirects` - 301 redirects for old URLs
+- `output/images/` - Logo renamed
+- `netlify.toml` - Points Netlify to output/ folder
 
-#### 4. Body Class Cleanup (Homepage Only)
-Reduced homepage `<body class="...">` from 5,857 characters (~120 classes) to:
-```html
-<body class="page-home">
-```
+---
 
-### Commands to Run
+## Development Workflow
 
+### Making Changes
+1. Edit files in `/output/` folder (this is the live dev site)
+2. Test on http://localhost:3001
+3. When ready, commit and push to GitHub
+4. Netlify auto-deploys from `output/` folder
+
+### Starting Dev Server
 ```bash
-# Navigate to project
-cd "/Users/diegosmbp/Downloads/diegos first script/downloaded_site"
-
-# Build all pages
-python3 scripts/build.py
-
-# Start dev server on output folder
-cd output && npx serve -p 3001
-
-# View site
-open http://localhost:3001
+cd "/Users/diegosmbp/Downloads/diegos first script/downloaded_site/output"
+npx serve -p 3001
 ```
 
-### Key Styling Values (Header)
+### Deploying to Live
+```bash
+cd "/Users/diegosmbp/Downloads/diegos first script/downloaded_site"
+git add -A
+git commit -m "Description of changes"
+git push origin main
+```
+
+---
+
+## Current Site Structure
+
+```
+output/
+├── index.html                              # Homepage
+├── aboutus/index.html
+├── contact/index.html
+├── portfolio/index.html
+├── st-augustine-jacksonville-video-production/
+│   ├── index.html                          # Video landing page
+│   ├── fortmose/
+│   ├── singoutloud2024/
+│   ├── staugustineamp/
+│   └── ... (13 video project pages)
+├── saint-augustine-jacksonville-photographer/
+│   └── index.html                          # Photo page
+├── css/
+│   ├── header.css
+│   ├── site_3e6e8161.css
+│   └── static_b4ee7412.css
+├── images/
+└── _redirects
+```
+
+---
+
+## Key Styling Values
 
 | Element | Value |
 |---------|-------|
 | Logo height | 90px desktop, 63px mobile |
-| Tagline font | 1rem, weight 550, letter-spacing 0.1em, color #666 |
-| Menu items | 1rem, weight 550, letter-spacing 0.1em, color #666 |
-| CTA button | Background #f4c057, white text, bold |
-
-### What's Left To Do
-
-1. **Clean up body class** on remaining pages (only homepage done)
-2. **Clean up `<head>` section** - still has Squarespace bloat
-3. **Review homepage content** below the fold
-4. **Commit changes to git** when ready
-5. **Deploy to Netlify** (output folder should be deployed)
+| Tagline font | 1.05rem, weight 550, letter-spacing 0.1em, color #666 |
+| Menu items | 1rem, weight 550, uppercase, color #666 |
+| CTA button (Let's Talk) | Background #000 desktop, #f4c057 mobile |
+| H2 "Stop scrambling" | font-size: 200% |
 
 ---
 
-## Previous Session - Initial Cleanup
+## Redirects (_redirects file)
 
-### 1. Removed Squarespace Bloat (Commit 6a02a42)
-- Removed ~36KB `SQUARESPACE_CONTEXT` JSON blob from all 19 HTML files
-- Removed Squarespace performance scripts and sqspcdn button components
-- Updated social meta images to use local paths
-- Updated schema.org images to local paths
-- Replaced Squarespace favicon with local logo
-- Deleted unused `/cart/` page
-
-### 2. Fixed Homepage Video (Commits f3f5731, 9edd70c)
-- Original Squarespace native video player broke after removing scripts
-- Added HLS.js library to handle the HLS stream
-- Video location in code: `index.html` around line 2096
-
-## Key Video Details
-- Video ID: `3587b48b-6519-4d1a-8d6e-6c83c6ccb8d3`
-- HLS Playlist: `https://video.squarespace-cdn.com/content/v1/67181a4e7af7e4192dd7b946/3587b48b-6519-4d1a-8d6e-6c83c6ccb8d3/playlist.m3u8`
-
-## Git Commits (Previous)
 ```
-9edd70c Fix video playback using HLS.js for Squarespace HLS stream
-f3f5731 Fix homepage video: replace Squarespace native player with HTML5 video
-6a02a42 Remove Squarespace bloat for major performance improvement
+/video/*                      → /st-augustine-jacksonville-video-production/:splat
+/st-augustine-video-production/* → /st-augustine-jacksonville-video-production/:splat
+/photo/*                      → /saint-augustine-jacksonville-photographer/:splat
+/st-augustine-photography/*   → /saint-augustine-jacksonville-photographer/:splat
+/saint-augustine-photographer/* → /saint-augustine-jacksonville-photographer/:splat
 ```
+
+---
+
+## Previous Sessions
+
+### March 2026 - Modular Build System
+- Created `src/modules/` and `src/pages/` structure
+- Built Python build scripts
+- Initial header cleanup
+
+### Initial Cleanup
+- Removed ~36KB Squarespace bloat from all pages
+- Fixed homepage video with HLS.js
+- Removed unused cart page
 
 ---
 
 ## Notes for Next Session
 
-- Always run `python3 scripts/build.py` after making changes to `src/`
-- Dev server should point to `output/` folder, not root
-- Header changes: edit `src/modules/header.html` and `src/css/header.css`, then rebuild
-- To migrate a new page: add to `src/pages/` with `{{header}}` placeholder
+- **Dev server runs from `output/`** - all changes should be made there
+- **Netlify serves from `output/`** - configured via netlify.toml
+- **Video background still uses YouTube** - consider switching to self-hosted MP4
+- **Modular build system (`src/`, `scripts/`)** exists but not actively used - changes made directly to `output/`

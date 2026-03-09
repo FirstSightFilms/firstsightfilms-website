@@ -14,6 +14,7 @@ Directory structure:
 
 import os
 import re
+import json
 import shutil
 from pathlib import Path
 
@@ -22,10 +23,14 @@ BASE_DIR = Path(__file__).parent.parent
 SRC_DIR = BASE_DIR / "src"
 MODULES_DIR = SRC_DIR / "modules"
 PAGES_DIR = SRC_DIR / "pages"
+FAQS_DIR = SRC_DIR / "faqs"
 OUTPUT_DIR = BASE_DIR / "output"
 
 # Assets to copy from root to output
-ASSETS_TO_COPY = ["css", "images", "js"]
+ASSETS_TO_COPY = ["images", "js"]
+
+# CSS directory in src
+SRC_CSS_DIR = SRC_DIR / "css"
 
 
 def load_modules():
@@ -43,8 +48,57 @@ def load_modules():
     return modules
 
 
+def load_faq_data(faq_name):
+    """Load FAQ JSON data."""
+    faq_file = FAQS_DIR / f"{faq_name}.json"
+
+    if not faq_file.exists():
+        print(f"  Warning: FAQ file not found: {faq_file}")
+        return None
+
+    try:
+        return json.loads(faq_file.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        print(f"  Error parsing FAQ JSON {faq_name}: {e}")
+        return None
+
+
+def load_faq(faq_name):
+    """Load FAQ JSON and generate HTML."""
+    faq_data = load_faq_data(faq_name)
+    if not faq_data:
+        return ""
+
+    # Generate FAQ HTML (answers already contain HTML)
+    html_parts = ['<div class="faq-list">']
+
+    for item in faq_data.get("questions", []):
+        question = item.get("question", "")
+        answer = item.get("answer", "")
+        html_parts.append(f'''        <details class="faq-item">
+          <summary class="faq-question">{question}</summary>
+          <div class="faq-answer">
+            {answer}
+          </div>
+        </details>''')
+
+    html_parts.append('      </div>')
+
+    return '\n'.join(html_parts)
+
+
+def load_faq_schema(faq_name):
+    """Load FAQ JSON-LD schema for <head>."""
+    faq_data = load_faq_data(faq_name)
+    if not faq_data or "schema" not in faq_data:
+        return ""
+
+    schema_json = json.dumps(faq_data["schema"], indent=2)
+    return f'<script type="application/ld+json">\n{schema_json}\n</script>'
+
+
 def process_page(page_content, modules):
-    """Replace {{module_name}} placeholders with module content."""
+    """Replace {{module_name}}, {{faq:page-name}}, and {{faq-schema:page-name}} placeholders."""
 
     def replace_module(match):
         module_name = match.group(1).strip()
@@ -53,6 +107,32 @@ def process_page(page_content, modules):
         else:
             print(f"  Warning: Module not found: {module_name}")
             return match.group(0)  # Keep original if not found
+
+    def replace_faq(match):
+        faq_name = match.group(1).strip()
+        faq_html = load_faq(faq_name)
+        if faq_html:
+            print(f"  Loaded FAQ: {faq_name}")
+            return faq_html
+        else:
+            return match.group(0)  # Keep original if not found
+
+    def replace_faq_schema(match):
+        faq_name = match.group(1).strip()
+        schema_html = load_faq_schema(faq_name)
+        if schema_html:
+            print(f"  Loaded FAQ schema: {faq_name}")
+            return schema_html
+        else:
+            return ""  # Return empty if no schema
+
+    # Match {{faq-schema:page-name}} pattern first
+    faq_schema_pattern = r"\{\{faq-schema:([a-zA-Z0-9_-]+)\}\}"
+    page_content = re.sub(faq_schema_pattern, replace_faq_schema, page_content)
+
+    # Match {{faq:page-name}} pattern
+    faq_pattern = r"\{\{faq:([a-zA-Z0-9_-]+)\}\}"
+    page_content = re.sub(faq_pattern, replace_faq, page_content)
 
     # Match {{module_name}} pattern
     pattern = r"\{\{(\w+)\}\}"
@@ -98,7 +178,7 @@ def build_pages(modules):
 
 
 def copy_assets():
-    """Copy static assets (css, images, js) to output directory."""
+    """Copy static assets (images, js) to output directory."""
     for asset_name in ASSETS_TO_COPY:
         src_path = BASE_DIR / asset_name
         dest_path = OUTPUT_DIR / asset_name
@@ -108,6 +188,17 @@ def copy_assets():
                 shutil.rmtree(dest_path)
             shutil.copytree(src_path, dest_path)
             print(f"  Copied: {asset_name}/")
+
+
+def copy_css():
+    """Copy CSS from src/css to output/css."""
+    dest_path = OUTPUT_DIR / "css"
+
+    if SRC_CSS_DIR.exists():
+        if dest_path.exists():
+            shutil.rmtree(dest_path)
+        shutil.copytree(SRC_CSS_DIR, dest_path)
+        print(f"  Copied: css/ (from src/css)")
 
 
 def copy_existing_pages():
@@ -147,19 +238,22 @@ def main():
     print("FSF Site Builder")
     print("=" * 50)
 
-    print("\n[1/4] Loading modules...")
+    print("\n[1/5] Loading modules...")
     modules = load_modules()
 
     if not modules:
         print("No modules found. Add .html files to src/modules/")
 
-    print(f"\n[2/4] Building pages...")
+    print(f"\n[2/5] Building pages...")
     build_pages(modules)
 
-    print(f"\n[3/4] Copying existing pages (not yet migrated)...")
+    print(f"\n[3/5] Copying existing pages (not yet migrated)...")
     copy_existing_pages()
 
-    print(f"\n[4/4] Copying assets...")
+    print(f"\n[4/5] Copying CSS...")
+    copy_css()
+
+    print(f"\n[5/5] Copying assets...")
     copy_assets()
 
     print("\n" + "=" * 50)

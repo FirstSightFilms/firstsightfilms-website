@@ -1,0 +1,107 @@
+{
+  "title": "Corporate Video FAQs",
+  "questions": [
+    {
+      "question": "How much does corporate video production cost in St. Augustine?",
+      "answer": "<p>Most corporate video projects in St. Augustine range from $3,000 to $15,000, depending on scope, length, and complexity. A simple interview-style video with one shoot day runs on the lower end. Multi-day shoots, multiple locations, or videos requiring motion graphics and advanced editing run higher.</p><p>We also offer monthly retainers for organizations that need ongoing video content — typically $5,000/month for dedicated production capacity across multiple projects.</p><p>The best way to get an accurate estimate is to tell us about your project. We'll scope it and give you a clear number before any work begins.</p>"
+    },
+    {
+      "question": "How long does a corporate video project take from start to finish?",
+      "answer": "<p>Most corporate videos take 3-6 weeks from kickoff to final delivery. Here's a typical breakdown:</p><ul><li><strong>Week 1:</strong> Discovery, creative direction, and planning</li><li><strong>Week 2-3:</strong> Production (filming)</li><li><strong>Week 3-5:</strong> Editing and revisions</li><li><strong>Week 5-6:</strong> Final delivery</li></ul><p>Rush projects are possible when schedules demand it — we've turned around videos in under two weeks for clients with tight deadlines. Just let us know upfront if you're working against a date.</p>"
+    },
+    {
+      "question": "What's included in a corporate video project?",
+      "answer": "<p>Everything. When you work with us, you get a full production team — not just a camera operator.</p><p><strong>Pre-production:</strong></p><ul><li>Creative direction and concept development</li><li>Script or talking points</li><li>Location scouting and scheduling</li><li>Project management and coordination</li></ul><p><strong>Production:</strong></p><ul><li>Professional video crew and equipment</li><li>On-site direction</li><li>Audio, lighting, and multiple camera angles</li></ul><p><strong>Post-production:</strong></p><ul><li>Editing and color correction</li><li>Motion graphics and titles</li><li>Music licensing</li><li>Revisions (typically 2 rounds included)</li><li>Final delivery in formats optimized for web, social, and broadcast</li></ul><p>You don't need to manage multiple vendors. We handle it.</p>"
+    },
+    {
+      "question": "How much of my time will this require?",
+      "answer": "<p>Less than you'd expect. That's the point.</p><p>We know marketing directors are stretched thin — managing teams, juggling campaigns, and putting out fires. Our job is to protect your time, not consume it.</p><p>Here's what we typically need from you:</p><ul><li>A kickoff call (30-60 minutes) to understand your goals</li><li>Access to your team or leadership for interviews (if applicable)</li><li>Feedback on edits (we make this easy)</li></ul><p>We handle creative direction, scheduling, logistics, and vendor coordination. You stay focused on running your department.</p>"
+    },
+    {
+      "question": "Do you work with organizations outside St. Augustine?",
+      "answer": "<p>Yes. We're based in St. Augustine and serve clients throughout Northeast Florida — including Jacksonville, Ponte Vedra, Palm Coast, Daytona Beach, and the surrounding areas.</p><p>We regularly produce corporate videos for organizations in Jacksonville and have long-standing relationships with venues and businesses across the region.</p><p>For clients outside Northeast Florida, we travel for the right projects. We've produced videos for nonprofits in Maine, Colorado, and beyond.</p>"
+    },
+    {
+      "question": "Can you handle multiple video projects at once?",
+      "answer": "<p>Yes. We work with multi-venue organizations and marketing teams that need consistent content across multiple properties, campaigns, or events.</p><p>Our retainer clients rely on us for ongoing production capacity — not just one-off projects. That means we're structured to handle parallel workstreams without sacrificing quality or deadlines.</p><p>If you're managing marketing for multiple brands, locations, or business units, we can build a production calendar that keeps everything covered.</p>"
+    },
+    {
+      "question": "Do you offer ongoing video production retainers?",
+      "answer": "<p>Yes. Retainers are how most of our long-term clients work with us.</p><p>A monthly retainer gives you dedicated production capacity — a set number of shoot days, editing hours, and deliverables each month. You get priority scheduling, predictable costs, and a production team that knows your brand.</p><p>Retainers typically start at $5,000/month and scale based on your content needs. It's the best fit for organizations producing regular content for social media, events, internal communications, or marketing campaigns.</p>"
+    },
+    {
+      "question": "What types of businesses do you work with in St. Augustine?",
+      "answer": "<p>We work with a range of organizations across Northeast Florida, including:</p><ul><li><strong>Cultural organizations and venues</strong> — concert halls, festivals, performing arts centers</li><li><strong>Hospitality and tourism</strong> — hotels, restaurants, attractions</li><li><strong>Nonprofits</strong> — fundraising videos, donor stories, impact campaigns</li><li><strong>Professional services</strong> — law firms, healthcare, financial services</li><li><strong>Local businesses</strong> — brand stories, recruiting videos, product launches</li></ul><p>If your organization needs professional video and you're tired of managing it yourself, we're a good fit.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does corporate video production cost in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most corporate video projects in St. Augustine range from $3,000 to $15,000, depending on scope, length, and complexity. A simple interview-style video with one shoot day runs on the lower end. Multi-day shoots, multiple locations, or videos requiring motion graphics and advanced editing run higher. We also offer monthly retainers for organizations that need ongoing video content — typically $5,000/month for dedicated production capacity across multiple projects. The best way to get an accurate estimate is to tell us about your project. We'll scope it and give you a clear number before any work begins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a corporate video project take from start to finish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most corporate videos take 3-6 weeks from kickoff to final delivery. Week 1: Discovery, creative direction, and planning. Week 2-3: Production (filming). Week 3-5: Editing and revisions. Week 5-6: Final delivery. Rush projects are possible when schedules demand it — we've turned around videos in under two weeks for clients with tight deadlines."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in a corporate video project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Everything. When you work with us, you get a full production team — not just a camera operator. Pre-production includes creative direction, script or talking points, location scouting, and project management. Production includes professional video crew and equipment, on-site direction, audio, lighting, and multiple camera angles. Post-production includes editing, color correction, motion graphics, music licensing, revisions, and final delivery in formats optimized for web, social, and broadcast. You don't need to manage multiple vendors. We handle it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much of my time will this require?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Less than you'd expect. That's the point. We know marketing directors are stretched thin — managing teams, juggling campaigns, and putting out fires. Our job is to protect your time, not consume it. We typically need a kickoff call (30-60 minutes), access to your team for interviews if applicable, and feedback on edits. We handle creative direction, scheduling, logistics, and vendor coordination. You stay focused on running your department."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with organizations outside St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We're based in St. Augustine and serve clients throughout Northeast Florida — including Jacksonville, Ponte Vedra, Palm Coast, Daytona Beach, and the surrounding areas. We regularly produce corporate videos for organizations in Jacksonville and have long-standing relationships with venues and businesses across the region. For clients outside Northeast Florida, we travel for the right projects."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you handle multiple video projects at once?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We work with multi-venue organizations and marketing teams that need consistent content across multiple properties, campaigns, or events. Our retainer clients rely on us for ongoing production capacity — not just one-off projects. That means we're structured to handle parallel workstreams without sacrificing quality or deadlines."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer ongoing video production retainers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Retainers are how most of our long-term clients work with us. A monthly retainer gives you dedicated production capacity — a set number of shoot days, editing hours, and deliverables each month. You get priority scheduling, predictable costs, and a production team that knows your brand. Retainers typically start at $5,000/month and scale based on your content needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of businesses do you work with in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We work with a range of organizations across Northeast Florida, including cultural organizations and venues (concert halls, festivals, performing arts centers), hospitality and tourism (hotels, restaurants, attractions), nonprofits (fundraising videos, donor stories, impact campaigns), professional services (law firms, healthcare, financial services), and local businesses (brand stories, recruiting videos, product launches)."
+        }
+      }
+    ]
+  }
+}

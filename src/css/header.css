@@ -5,7 +5,10 @@
 
 /* Header Container */
 .site-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #fff;
   border-bottom: 1px solid #eee;
   z-index: 1000;
@@ -17,7 +20,7 @@
   justify-content: center;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   position: relative;
 }
 
@@ -31,12 +34,12 @@
 
 .branding .logo img {
   display: block;
-  height: 90px;
+  height: 70px;
   width: auto;
 }
 
 .branding .tagline {
-  font-size: 1rem;
+  font-size: 0.79rem;
   font-weight: 550;
   letter-spacing: 0.1em;
   color: #666;
