@@ -24,6 +24,7 @@ SRC_DIR = BASE_DIR / "src"
 MODULES_DIR = SRC_DIR / "modules"
 PAGES_DIR = SRC_DIR / "pages"
 FAQS_DIR = SRC_DIR / "faqs"
+REVIEWS_DIR = SRC_DIR / "reviews"
 OUTPUT_DIR = BASE_DIR / "output"
 
 # Assets to copy from root to output
@@ -97,11 +98,127 @@ def load_faq_schema(faq_name):
     return f'<script type="application/ld+json">\n{schema_json}\n</script>'
 
 
+def load_reviews():
+    """Load reviews JSON and generate testimonials carousel HTML."""
+    reviews_file = REVIEWS_DIR / "testimonials.json"
+
+    if not reviews_file.exists():
+        print(f"  Warning: Reviews file not found: {reviews_file}")
+        return ""
+
+    try:
+        data = json.loads(reviews_file.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        print(f"  Error parsing reviews JSON: {e}")
+        return ""
+
+    title = data.get("title", "What Our Clients Say")
+    subtitle = data.get("subtitle", "")
+    reviews = data.get("reviews", [])
+
+    if not reviews:
+        return ""
+
+    # Build review cards HTML
+    cards_html = []
+    for i, review in enumerate(reviews):
+        author = review.get("author", "Anonymous")
+        initial = author[0].upper() if author else "A"
+        photo = review.get("photo")
+        date = review.get("date", "")
+        text = review.get("text", "")
+        url = review.get("url", "")
+        rating = review.get("rating", 5)
+
+        stars = "★" * rating
+
+        # Avatar HTML
+        if photo:
+            avatar_class = "reviewer-avatar has-photo"
+            avatar_html = f'''<img src="{photo}" alt="{author}" class="reviewer-photo" width="48" height="48" loading="lazy">
+                <span class="reviewer-initial" data-letter="{initial}">{initial}</span>'''
+        else:
+            avatar_class = "reviewer-avatar"
+            avatar_html = f'<span class="reviewer-initial" data-letter="{initial}">{initial}</span>'
+
+        # Link HTML
+        link_html = f'<a href="{url}" target="_blank" rel="noopener" class="review-link">Read on Google</a>' if url else ""
+
+        card = f'''
+          <div class="review-card" data-index="{i}">
+            <div class="review-author-header">
+              <div class="{avatar_class}">
+                {avatar_html}
+              </div>
+              <div class="reviewer-info">
+                <span class="review-author">{author}</span>
+                <span class="review-stars">{stars}</span>
+              </div>
+            </div>
+            <div class="review-quote-wrapper">
+              <blockquote class="review-quote">"{text}"</blockquote>
+            </div>
+            <div class="review-footer">
+              <span class="review-date">{date}</span>
+              {link_html}
+            </div>
+          </div>'''
+        cards_html.append(card)
+
+    total_pages = (len(reviews) + 2) // 3  # 3 cards per page on desktop
+
+    html = f'''<!-- Testimonials Section -->
+<section class="section-testimonials" id="reviews">
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <h2>{title}</h2>
+      <p>{subtitle}</p>
+    </div>
+
+    <div class="review-carousel-wrapper">
+      <button class="review-nav review-nav-side prev" aria-label="Previous reviews">&#8249;</button>
+
+      <div class="review-cards-viewport">
+        <div class="review-cards-track">
+{''.join(cards_html)}
+        </div>
+      </div>
+
+      <button class="review-nav review-nav-side next" aria-label="Next reviews">&#8250;</button>
+    </div>
+
+    <div class="review-mobile-nav">
+      <button class="review-nav prev" aria-label="Previous reviews">&#8249;</button>
+      <div class="review-pagination">
+        <span class="current-page">1</span> / <span class="total-pages">{total_pages}</span>
+      </div>
+      <button class="review-nav next" aria-label="Next reviews">&#8250;</button>
+    </div>
+
+    <div class="review-pagination review-pagination-desktop">
+      <span class="current-page">1</span> / <span class="total-pages">{total_pages}</span>
+    </div>
+
+  </div>
+</section>
+<script src="/js/review-carousel.js"></script>'''
+
+    return html
+
+
 def process_page(page_content, modules):
-    """Replace {{module_name}}, {{faq:page-name}}, and {{faq-schema:page-name}} placeholders."""
+    """Replace {{module_name}}, {{faq:page-name}}, {{faq-schema:page-name}}, and {{reviews}} placeholders."""
 
     def replace_module(match):
         module_name = match.group(1).strip()
+        # Special handling for reviews
+        if module_name == "reviews":
+            reviews_html = load_reviews()
+            if reviews_html:
+                print(f"  Loaded reviews from JSON")
+                return reviews_html
+            else:
+                return match.group(0)
         if module_name in modules:
             return modules[module_name]
         else:
