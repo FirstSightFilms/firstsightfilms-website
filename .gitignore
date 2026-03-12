@@ -6,3 +6,11 @@ CLAUDE.md
 
 # Local Netlify folder
 .netlify
+
+# Large/raw files
+*.psd
+*.PSD
+*.heic
+*.HEIC
+*.raw
+*.RAW

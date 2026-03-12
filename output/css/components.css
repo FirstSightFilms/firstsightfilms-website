@@ -1849,3 +1849,326 @@
     height: 20px;
   }
 }
+
+/* ==========================================
+   About Us Page
+   ========================================== */
+
+/* About Hero */
+.about-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.about-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero-intro {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* About Stats */
+.about-stats {
+  background: #f4c057;
+  padding: 40px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-card {
+  padding: 20px;
+}
+
+.stat-card .stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.stat-card .stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* About Intro */
+.about-intro {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.about-intro-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-intro-content h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-intro-content .lead {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.about-intro-content p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Bio Sections */
+.about-bio {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.about-bio-alt {
+  background: rgba(244, 192, 87, 0.10);
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bio-grid-reverse {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.bio-grid-reverse .bio-image {
+  order: 2;
+}
+
+.bio-grid-reverse .bio-content {
+  order: 1;
+}
+
+.bio-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bio-content h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio-role {
+  font-size: 1.1rem;
+  color: #f4c057;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.bio-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Partnership Section */
+.about-partnership {
+  padding: 80px 0;
+  background: rgba(244, 192, 87, 0.10);
+}
+
+.partnership-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.partnership-content h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.partnership-content .lead {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.partnership-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.partnership-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #000;
+}
+
+.partnership-card p {
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Story Section */
+.about-story {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.story-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.story-content h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.story-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* About CTA */
+.about-cta {
+  padding: 80px 0;
+  background: #f4c057;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.about-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* About Page Mobile */
+@media (max-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero-intro {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-card .stat-number {
+    font-size: 2rem;
+  }
+
+  .about-intro,
+  .about-bio,
+  .about-partnership,
+  .about-story,
+  .about-cta {
+    padding: 50px 0;
+  }
+
+  .bio-grid,
+  .bio-grid-reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .bio-grid-reverse .bio-image,
+  .bio-grid-reverse .bio-content {
+    order: unset;
+  }
+
+  .bio-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .bio-content {
+    text-align: center;
+  }
+
+  .partnership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro-content h2,
+  .partnership-content h2,
+  .story-content h2,
+  .about-cta h2 {
+    font-size: 1.75rem;
+  }
+}
