@@ -906,6 +906,16 @@
 }
 
 /* FAQ Section */
+.section-faq {
+  padding: var(--spacing-xl) 0;
+  background: #fff;
+}
+
+.section-faq h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
 .faq-list {
   max-width: 700px;
   margin: 0 auto;
@@ -1657,5 +1667,185 @@
     line-height: 1.2 !important;
     margin: 0 !important;
     color: white !important;
+  }
+}
+
+/* ==========================================
+   About Section Teaser (Rob-style)
+   ========================================== */
+
+.section-about-teaser {
+  padding: var(--spacing-xl) 0;
+  background: rgba(244, 192, 87, 0.10);
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-subheading {
+  font-size: 1.1rem;
+  color: var(--color-text-muted, #666);
+  margin: 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.about-media {
+  width: 100%;
+}
+
+.about-content {
+  padding-right: 20px;
+}
+
+.section-about-teaser .about-content {
+  width: 100%;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: var(--color-text, #333);
+}
+
+.about-text p:last-child {
+  margin-bottom: 1.5rem;
+}
+
+/* About Bento Grid - 5 items (4 images + 1 video) */
+.about-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 180px);
+  gap: 12px;
+}
+
+.about-bento__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e0e0e0;
+}
+
+.about-bento__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Main image - spans 2 columns */
+.about-bento--main {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+/* Video - spans 1 column, 2 rows */
+.about-bento--video {
+  grid-column: 3;
+  grid-row: span 2;
+}
+
+/* Small images */
+.about-bento--small-1,
+.about-bento--small-2,
+.about-bento--small-3 {
+  grid-column: span 1;
+}
+
+/* Play button overlay */
+.about-bento__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.about-bento__play svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+}
+
+.about-bento__play:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #f4c057;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .about-bento {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 150px 150px;
+  }
+
+  .about-bento--video {
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 120px);
+  }
+
+  .about-bento--main {
+    grid-column: span 2;
+  }
+
+  .about-bento--video {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .about-bento__play {
+    width: 50px;
+    height: 50px;
+  }
+
+  .about-bento__play svg {
+    width: 20px;
+    height: 20px;
   }
 }

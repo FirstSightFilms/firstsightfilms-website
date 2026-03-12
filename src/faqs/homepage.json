@@ -1,0 +1,119 @@
+{
+  "title": "Frequently Asked Questions",
+  "questions": [
+    {
+      "question": "What services does First Sight Films offer?",
+      "answer": "<p>We're a full-service video and photo production company. Our core services include corporate video, event coverage, brand story videos, and social media content. We also help marketing teams with content strategy — figuring out what to create, not just producing it.</p>"
+    },
+    {
+      "question": "Where are you located?",
+      "answer": "<p>We're based in St. Augustine, FL and serve all of Northeast Florida — including Jacksonville, Ponte Vedra, St. Johns County, and Duval County. No travel fees within 60 miles. We also travel for the right projects.</p>"
+    },
+    {
+      "question": "How much does video production cost?",
+      "answer": "<p>Most projects range from $3,000 to $15,000 depending on scope. We also offer monthly retainers starting at $5,000 for organizations that need ongoing content. Tell us what you're working on and we'll give you a clear number.</p>"
+    },
+    {
+      "question": "How long does a project take?",
+      "answer": "<p>It depends on scope — but we move fast. Simple projects in St. Augustine and Jacksonville can be delivered in as few as 3-5 days. Larger productions typically take 3-6 weeks from kickoff to final delivery.</p><p>Either way, we start with a focused discovery process to identify exactly what will be most useful for your business. That clarity upfront means we move with speed and precision — no wasted time, no unnecessary revisions.</p>"
+    },
+    {
+      "question": "What's included when we work together?",
+      "answer": "<p>Everything. Creative direction, project management, filming, editing, music licensing, and revisions. You get a full production team — not just a camera operator.</p>"
+    },
+    {
+      "question": "How much of my time will this take?",
+      "answer": "<p>Less than you'd expect. We need a 30-minute kickoff call and your feedback on edits. We handle the rest — scheduling, logistics, creative direction. Your job is to stay focused on running your business.</p>"
+    },
+    {
+      "question": "What makes First Sight Films different?",
+      "answer": "<p>We're locals who actually know this community. Diego moved to St. Augustine in 2003 and spent years as a Registered Nurse at Flagler Hospital (now UF Health St. Johns), recovering patients after open heart surgery. That experience shapes how he approaches production — staying focused on what actually matters, keeping the mission front and center, and not sweating the small stuff when it counts.</p><p>Dr. Trista Brophy Cerquera brings a different kind of expertise. She just completed her PhD in Interdisciplinary Ecology from the University of Florida and works as a policy advisor — leading a team that drafts policy for the U.S. Congress. Her background in strategic communication, planning, and project management means every production is organized, intentional, and built around your goals.</p><p>Together, we're not just videographers. We're a team that understands Northeast Florida, knows how to run complex projects, and genuinely loves working with local businesses and organizations.</p>"
+    },
+    {
+      "question": "Who do you typically work with?",
+      "answer": "<p>Marketing directors and teams at cultural organizations, venues, nonprofits, and hospitality businesses across Northeast Florida. Most of our clients manage multiple properties or events and need consistent, professional content without adding headcount.</p>"
+    },
+    {
+      "question": "Do you offer ongoing retainers?",
+      "answer": "<p>Yes. Most of our long-term clients work with us on a monthly retainer. You get dedicated production capacity, priority scheduling, and a team that knows your brand. It's the best fit for organizations producing regular content.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does First Sight Films offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're a full-service video and photo production company. Our core services include corporate video, event coverage, brand story videos, and social media content. We also help marketing teams with content strategy — figuring out what to create, not just producing it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where are you located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're based in St. Augustine, FL and serve all of Northeast Florida — including Jacksonville, Ponte Vedra, St. Johns County, and Duval County. No travel fees within 60 miles. We also travel for the right projects."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does video production cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most projects range from $3,000 to $15,000 depending on scope. We also offer monthly retainers starting at $5,000 for organizations that need ongoing content. Tell us what you're working on and we'll give you a clear number."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a project take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on scope — but we move fast. Simple projects in St. Augustine and Jacksonville can be delivered in as few as 3-5 days. Larger productions typically take 3-6 weeks from kickoff to final delivery. Either way, we start with a focused discovery process to identify exactly what will be most useful for your business. That clarity upfront means we move with speed and precision — no wasted time, no unnecessary revisions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included when we work together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Everything. Creative direction, project management, filming, editing, music licensing, and revisions. You get a full production team — not just a camera operator."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much of my time will this take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Less than you'd expect. We need a 30-minute kickoff call and your feedback on edits. We handle the rest — scheduling, logistics, creative direction. Your job is to stay focused on running your business."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes First Sight Films different?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're locals who actually know this community. Diego moved to St. Augustine in 2003 and spent years as a Registered Nurse at Flagler Hospital (now UF Health St. Johns), recovering patients after open heart surgery. That experience shapes how he approaches production — staying focused on what actually matters, keeping the mission front and center, and not sweating the small stuff when it counts. Dr. Trista Brophy Cerquera brings a different kind of expertise. She just completed her PhD in Interdisciplinary Ecology from the University of Florida and works as a policy advisor — leading a team that drafts policy for the U.S. Congress. Her background in strategic communication, planning, and project management means every production is organized, intentional, and built around your goals. Together, we're not just videographers. We're a team that understands Northeast Florida, knows how to run complex projects, and genuinely loves working with local businesses and organizations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who do you typically work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Marketing directors and teams at cultural organizations, venues, nonprofits, and hospitality businesses across Northeast Florida. Most of our clients manage multiple properties or events and need consistent, professional content without adding headcount."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer ongoing retainers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Most of our long-term clients work with us on a monthly retainer. You get dedicated production capacity, priority scheduling, and a team that knows your brand. It's the best fit for organizations producing regular content."
+        }
+      }
+    ]
+  }
+}
