@@ -20,12 +20,12 @@
 }
 
 .btn-primary {
-  background: var(--color-black);
+  background: #f4c057;
   color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background: var(--color-gray-700);
+  background: #e5b34a;
 }
 
 .btn-secondary {
@@ -908,7 +908,7 @@
 /* FAQ Section */
 .section-faq {
   padding: var(--spacing-xl) 0;
-  background: #fff;
+  background: rgba(244, 192, 87, 0.10);
 }
 
 .section-faq h2 {
@@ -2170,5 +2170,297 @@
   .story-content h2,
   .about-cta h2 {
     font-size: 1.75rem;
+  }
+}
+
+
+/* ==========================================================================
+   Photography Gallery
+   ========================================================================== */
+
+.page-photography {
+  background: var(--color-white);
+}
+
+.page-hero {
+  padding: 6rem 0 3rem;
+  text-align: center;
+  background: var(--color-gray-100);
+}
+
+.page-hero h1 {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.page-hero .hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.photo-gallery {
+  padding: 3rem 0 4rem;
+}
+
+.photo-gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.photo-gallery .gallery-item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 4/3;
+}
+
+.photo-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-gallery .gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* CTA Section */
+.section-cta {
+  padding: 4rem 0;
+  text-align: center;
+  background: var(--color-gray-100);
+}
+
+.section-cta h2 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-cta p {
+  font-size: 1.125rem;
+  color: var(--color-gray-600);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Photography Gallery Responsive */
+@media (max-width: 992px) {
+  .photo-gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .page-hero {
+    padding: 5rem 0 2rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-hero .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .photo-gallery .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .section-cta h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ==========================================================================
+   Portfolio Grid
+   ========================================================================== */
+
+.section-portfolio {
+  padding: 4rem 0;
+  background: rgba(244, 192, 87, 0.10);
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.portfolio-header h2 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-black);
+}
+
+.portfolio-header p {
+  font-size: 1.125rem;
+  color: var(--color-gray-600);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 4/3;
+}
+
+.portfolio-item.portrait {
+  aspect-ratio: 3/4;
+}
+
+.portfolio-item.landscape {
+  aspect-ratio: 4/3;
+}
+
+.portfolio-item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-pill {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+  backdrop-filter: blur(4px);
+}
+
+.portfolio-pill .location-text,
+.portfolio-pill .location-link {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.portfolio-pill .location-link:hover {
+  text-decoration: underline;
+}
+
+.portfolio-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* Portfolio Grid Responsive */
+@media (max-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-header h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-portfolio {
+    padding: 3rem 0;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .portfolio-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ==========================================================================
+   Why St. Augustine Section
+   ========================================================================== */
+
+.section-why-st-augustine {
+  padding: 4rem 0;
+  background: var(--color-white);
+}
+
+.why-st-augustine-card {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-st-augustine-card h2 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-black);
+}
+
+.why-st-augustine-card p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+  margin-bottom: 1rem;
+}
+
+.why-st-augustine-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .section-why-st-augustine {
+    padding: 3rem 0;
+  }
+
+  .why-st-augustine-card h2 {
+    font-size: 1.75rem;
+  }
+
+  .why-st-augustine-card p {
+    font-size: 1rem;
   }
 }

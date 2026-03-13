@@ -251,8 +251,8 @@ def process_page(page_content, modules):
     faq_pattern = r"\{\{faq:([a-zA-Z0-9_-]+)\}\}"
     page_content = re.sub(faq_pattern, replace_faq, page_content)
 
-    # Match {{module_name}} pattern
-    pattern = r"\{\{(\w+)\}\}"
+    # Match {{module_name}} pattern (supports hyphens in module names)
+    pattern = r"\{\{([a-zA-Z0-9_-]+)\}\}"
     return re.sub(pattern, replace_module, page_content)
 
 
