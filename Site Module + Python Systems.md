@@ -1,316 +1,263 @@
 # Site Module + Python Systems
 
-Reference document for implementing a modular website architecture like robfutrell.com.
+Reference document for the FSF modular website architecture.
 
 ---
 
 ## Overview
 
 This system uses:
-- **HTML Modules**: Reusable components (header, footer, nav, etc.) stored as separate files
-- **Python Scripts**: Automation for building pages, optimizing images, generating SEO elements
-- **Local + GitHub Workflow**: Edit locally, push to GitHub, Netlify deploys
+- **HTML Modules**: Reusable components stored as separate files in `src/modules/`
+- **Python Build Script**: Combines modules + pages into complete HTML
+- **Placeholder Syntax**: `{{module-name}}` in pages, replaced during build
+- **Local + GitHub Workflow**: Edit locally, build, push to GitHub, Netlify deploys
 
 ---
 
-## Project Structure
+## Current Project Structure
 
 ```
-firstsightfilms-website/
+downloaded_site/
 │
-├── src/                           # SOURCE FILES (you edit these)
+├── src/                           # SOURCE FILES (edit these)
 │   ├── modules/                   # Reusable components
-│   │   ├── head.html              # <head> with meta, fonts, CSS
-│   │   ├── header.html            # Logo + navigation
-│   │   ├── footer.html            # Footer content
-│   │   ├── navigation.html        # Nav menu (included in header)
-│   │   ├── video-player.html      # Video embed component
-│   │   ├── testimonials.html      # Testimonials section
-│   │   ├── schema-business.html   # LocalBusiness schema
-│   │   ├── schema-video.html      # VideoObject schema template
-│   │   └── contact-form.html      # Contact form component
+│   │   ├── head.html              # <head> with meta, fonts, CSS links
+│   │   ├── header.html            # Logo + navigation + mobile menu
+│   │   ├── footer.html            # Footer with CTA, contact, social
+│   │   ├── schema.html            # LocalBusiness JSON-LD schema
+│   │   ├── portfolio-grid.html    # Video project grid (8 projects)
+│   │   └── why-st-augustine.html  # "Why St. Augustine?" section
 │   │
-│   ├── pages/                     # Page-specific content
-│   │   ├── index.html             # Homepage content only
-│   │   ├── about.html
-│   │   ├── contact.html
-│   │   ├── portfolio.html
-│   │   ├── photo.html
-│   │   └── video/                 # Video project pages
-│   │       ├── fortmose.html
-│   │       ├── iceplant.html
-│   │       └── ...
+│   ├── pages/                     # Page templates with {{placeholders}}
+│   │   ├── index.html             # Homepage
+│   │   ├── aboutus/index.html
+│   │   ├── contact/index.html
+│   │   ├── portfolio/index.html
+│   │   ├── st-augustine-photography/index.html
+│   │   ├── corporate-video-st-augustine/index.html
+│   │   └── st-augustine-video-production/
+│   │       ├── index.html         # Video landing page
+│   │       ├── fortmose/index.html
+│   │       ├── staugustineamp/index.html
+│   │       └── ... (13 project pages)
 │   │
 │   ├── css/
-│   │   └── styles.css             # Your styles (cleaned up)
+│   │   ├── base.css
+│   │   ├── header.css
+│   │   ├── components.css         # Buttons, cards, gallery, portfolio grid
+│   │   ├── site_3e6e8161.css      # Legacy Squarespace CSS
+│   │   └── static_b4ee7412.css    # Legacy Squarespace CSS
 │   │
-│   └── images/                    # Source images
-│       ├── logo/
-│       ├── portfolio/
-│       └── projects/
+│   ├── faqs/                      # FAQ content by page
+│   │   ├── homepage.html
+│   │   ├── homepage-schema.json
+│   │   └── corporate-video-st-augustine.html
+│   │
+│   └── reviews/
+│       └── reviews.json           # Google reviews data
 │
-├── scripts/                       # Python automation
-│   ├── build.py                   # Combines modules + pages → output
-│   ├── optimize_images.py         # Resize, convert to WebP
-│   ├── generate_schema.py         # Create/update schema markup
-│   └── generate_sitemap.py        # Build XML sitemap
+├── scripts/
+│   └── build.py                   # Main build script
 │
-├── output/                        # COMPILED SITE (auto-generated)
-│   ├── index.html                 # Final HTML files
-│   ├── about/index.html
-│   ├── video/fortmose/index.html
-│   ├── css/
-│   ├── images/                    # Optimized images
-│   └── sitemap.xml
+├── output/                        # GENERATED SITE (auto-built)
+│   └── ...                        # Served by Netlify
 │
-├── netlify.toml                   # Tells Netlify to serve from /output
-└── README.md
+├── images/                        # Website images
+│   ├── bento/
+│   ├── hero/
+│   ├── about/
+│   ├── logos/
+│   └── portfolio/
+│
+└── netlify.toml                   # Serves from /output
 ```
 
 ---
 
-## How the Modules Work
+## Current Modules
 
-### Example: `src/modules/header.html`
+### `src/modules/head.html`
+Contains `<head>` content: charset, viewport, fonts (Roboto, Poppins), CSS links.
+
+### `src/modules/header.html`
 ```html
 <header class="site-header">
-  <a href="/" class="logo">
-    <img src="/images/logo/fsf-logo.png" alt="First Sight Films" width="180" height="60">
-  </a>
-  {{navigation}}
+  <div class="header-inner">
+    <a href="/" class="header-logo">
+      <img src="/images/logos/first-sight-films-logo-st-augustine-fl.png"
+           alt="First Sight Films - St. Augustine Video & Photo Production">
+    </a>
+    <div class="header-tagline">
+      <span class="tagline-top">Video Production & Photography</span>
+      <span class="tagline-bottom">St. Augustine | Jacksonville</span>
+    </div>
+    <nav class="header-nav">
+      <a href="/st-augustine-video-production/">Video</a>
+      <a href="/st-augustine-photography/">Photo</a>
+      <a href="/aboutus/">About</a>
+      <a href="/contact/" class="nav-cta">Let's Talk</a>
+    </nav>
+    <button class="mobile-menu-toggle">...</button>
+  </div>
 </header>
 ```
 
-### Example: `src/modules/navigation.html`
-```html
-<nav class="main-nav">
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/video/">Video</a></li>
-    <li><a href="/photo/">Photo</a></li>
-    <li><a href="/portfolio/">Portfolio</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/contact/">Contact</a></li>
-  </ul>
-</nav>
-```
+### `src/modules/footer.html`
+Footer with CTA banner, contact info, social links, service areas.
 
-### Example: `src/modules/footer.html`
-```html
-<footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-brand">
-      <img src="/images/logo/fsf-logo.png" alt="First Sight Films">
-      <p>Professional video production for St. Augustine businesses.</p>
-    </div>
-    <div class="footer-contact">
-      <p>St. Augustine, FL 32080</p>
-      <p><a href="tel:+19542947868">(954) 294-7868</a></p>
-      <p><a href="mailto:info@firstsightfilms.com">info@firstsightfilms.com</a></p>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/firstsightfilms/">Instagram</a>
-    </div>
-  </div>
-  <p class="copyright">© 2026 First Sight Films. All rights reserved.</p>
-</footer>
-```
+### `src/modules/portfolio-grid.html`
+8-project grid linking to video project pages with location pills.
 
-### Example: `src/pages/index.html` (Homepage)
+### `src/modules/why-st-augustine.html`
+Local history section about Diego and Trista's connection to St. Augustine.
+
+---
+
+## Page Template Example
+
+### `src/pages/index.html` (Homepage)
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
 {{head}}
-<body>
+</head>
+<body class="page-home">
+
 {{header}}
 
 <main>
-  <section class="hero">
-    {{video-player:hero-reel}}
-    <h1>Premier Video Production for St. Augustine Businesses</h1>
-    <a href="/contact/" class="btn">Start Your Video Project</a>
+  <!-- Hero Section -->
+  <section class="hero hero-split">
+    ...
   </section>
 
-  <section class="about-preview">
-    <h2>More Than Just Videographers</h2>
-    <p>We're business content strategists, with a few cameras.</p>
+  <!-- Services Bento Grid -->
+  <section class="bento-portfolio">
+    ...
   </section>
 
-  {{testimonials}}
+  <!-- About Teaser -->
+  <section class="section-about-teaser">
+    ...
+  </section>
+
+{{why-st-augustine}}
+
+{{portfolio-grid}}
+
+{{reviews}}
+
+  <!-- FAQ Section -->
+  <section class="section-faq">
+    {{faq:homepage}}
+  </section>
+
 </main>
 
-{{schema-business}}
+{{faq-schema:homepage}}
+{{schema}}
 {{footer}}
+
 </body>
 </html>
 ```
 
 ---
 
-## How the Build Script Works
+## Placeholder Syntax
 
-When you run `python scripts/build.py`:
+| Placeholder | Description |
+|-------------|-------------|
+| `{{header}}` | Inserts header.html module |
+| `{{footer}}` | Inserts footer.html module |
+| `{{head}}` | Inserts head.html module |
+| `{{schema}}` | Inserts schema.html module |
+| `{{portfolio-grid}}` | Inserts portfolio grid section |
+| `{{why-st-augustine}}` | Inserts Why St. Augustine section |
+| `{{reviews}}` | Inserts reviews from reviews.json |
+| `{{faq:page-name}}` | Inserts FAQ content for specific page |
+| `{{faq-schema:page-name}}` | Inserts FAQ schema JSON-LD |
 
-1. **Reads** each page from `src/pages/`
-2. **Finds** placeholders like `{{header}}`, `{{footer}}`
-3. **Replaces** them with content from `src/modules/`
-4. **Outputs** complete HTML files to `output/`
-
-```
-src/pages/index.html + src/modules/* → output/index.html
-src/pages/about.html + src/modules/* → output/about/index.html
-```
-
-**Result:** You edit modules once, run build, all pages update.
-
----
-
-## Automation Scripts
-
-### 1. Image Optimization (`optimize_images.py`)
-```
-Input:  src/images/projects/fortmose/ceremony.jpg (4MB, 4000x3000)
-Output: output/images/projects/fortmose/ceremony.webp (150KB, 1920x1440)
-        output/images/projects/fortmose/ceremony-thumb.webp (20KB, 400x300)
-```
-
-**What it does:**
-- Converts JPG/PNG to WebP (smaller file size)
-- Creates multiple sizes (thumbnail, medium, large)
-- Preserves folder structure
-- Generates width/height attributes for HTML
-
-### 2. Schema Generation (`generate_schema.py`)
-```
-Input:  Config file with business info + list of services
-Output: Updated schema-business.html module with current data
-        Individual schema for each video project page
-```
-
-**What it does:**
-- Maintains consistent LocalBusiness schema
-- Generates VideoObject schema for each video project
-- Updates review count, ratings from a config file
-- Ensures NAP (Name, Address, Phone) consistency
-
-### 3. Sitemap Generation (`generate_sitemap.py`)
-```
-Input:  All files in output/ folder
-Output: output/sitemap.xml with all pages, lastmod dates, priorities
-```
-
-**What it does:**
-- Scans output folder for all HTML files
-- Sets priority based on page type (homepage=1.0, projects=0.7)
-- Updates lastmod dates automatically
-- Validates URL structure
+**Note:** Hyphens are supported in module names.
 
 ---
 
-## Your Workflow
+## Build Process
 
-### Making a Site-Wide Change (e.g., update phone number)
+### Command
+```bash
+cd "/Users/diegosmbp/Downloads/diegos first script/downloaded_site"
+python3 scripts/build.py
+```
 
-**Current process:**
-1. Open each of 19 HTML files
-2. Find and replace phone number
-3. Hope you didn't miss any
-4. Commit and push
+### What It Does
+1. Loads all modules from `src/modules/`
+2. For each page in `src/pages/`:
+   - Reads the HTML template
+   - Replaces `{{placeholder}}` with module content
+   - Handles special placeholders (faq, reviews, schema)
+   - Writes complete HTML to `output/`
+3. Copies CSS from `src/css/` to `output/css/`
+4. Copies images to `output/images/`
 
-**New process:**
-1. Edit `src/modules/footer.html` (one file)
-2. Run `python scripts/build.py`
-3. Commit and push
-
-### Adding a New Video Project Page
-
-**Current process:**
-1. Duplicate an existing page
-2. Manually update content, videos, schema
-3. Update navigation on all pages
-4. Update sitemap manually
-
-**New process:**
-1. Create `src/pages/video/newproject.html` with just the unique content
-2. Run `python scripts/build.py`
-3. Sitemap updates automatically
-4. Commit and push
+### Output
+```
+src/pages/index.html + modules → output/index.html
+src/pages/aboutus/index.html + modules → output/aboutus/index.html
+...
+```
 
 ---
 
-## Local + GitHub Workflow
+## Development Workflow
 
-```
-Your Mac                          GitHub                    Netlify
-─────────────────────────────────────────────────────────────────────
-src/ (you edit)          →   pushed to repo      →
-scripts/ (automation)    →   pushed to repo      →
-output/ (generated)      →   pushed to repo      →   serves output/
-```
+### Making Changes
+1. Edit source files in `src/pages/` or `src/modules/`
+2. Run: `python3 scripts/build.py`
+3. Test locally: `python3 -m http.server 8000 --directory output`
+4. View at: http://localhost:8000
 
-**Recommended: Build locally, push output**
-- You run Python scripts on your Mac
-- Push the `output/` folder to GitHub
-- Netlify serves it
+### Deploying
+```bash
+git add -A
+git commit -m "Description of changes"
+git push origin main
+```
+Netlify auto-deploys from `output/` folder.
 
 ---
 
-## SEO Benefits of This Approach
+## Related Tools
 
-### 1. Consistency Across All Pages
-When Google crawls the site, every page has:
-- Proper schema markup (LocalBusiness, Service, FAQPage)
-- Consistent navigation structure
-- Same footer with contact info, NAP (Name, Address, Phone)
+### FSF Image Optimizer
+Location: `/Users/diegosmbp/Desktop/FSF Image Optimizer/`
 
-**Why it matters:** Google trusts sites with consistent, well-structured data.
+**Features:**
+- Watch folder automation
+- Converts to WebP (large/medium/thumb sizes)
+- SEO-friendly naming prompts
+- Claude API integration for alt text generation
 
-### 2. Scalable Location/Service Pages
-Python scripts can generate location-specific pages programmatically:
-```python
-locations = ['st-augustine', 'jacksonville', 'palm-coast']
-services = ['corporate-video', 'event-coverage', 'brand-story']
-
-for location in locations:
-    for service in services:
-        generate_page(location, service)
+**Usage:**
+```bash
+python3 "/Users/diegosmbp/Desktop/FSF Image Optimizer/start-optimizer.py"
 ```
-
-### 3. Instant Site-Wide Updates
-Change the phone number in `modules/footer.html` → rebuild → every page updates.
-
-**Why it matters:** NAP consistency is critical for local SEO.
-
-### 4. Automated Image SEO
-Python can:
-- Generate descriptive alt text from folder names/EXIF data
-- Create proper file names (`st-augustine-corporate-video.webp` vs `IMG_4532.jpg`)
-- Build structured image sitemaps
-- Ensure all images have width/height attributes
-
-### 5. Schema Markup at Scale
-Every service page gets proper structured data automatically.
-
-### 6. Internal Linking Structure
-Python can automatically:
-- Link related project pages
-- Add "related services" sections
-- Build breadcrumb navigation
-- Ensure no orphan pages
 
 ---
 
-## Implementation Steps (When Ready)
+## Future Enhancements (Not Yet Built)
 
-1. **Create module files** by extracting common elements from current HTML
-2. **Write Python scripts** for building, image optimization, schema generation
-3. **Set up folder structure** in local directory
-4. **Create README** with commands to run
-5. **Test locally** before pushing to GitHub
-6. **Update Netlify config** to serve from output folder
+- [ ] `generate_sitemap.py` - Auto-generate XML sitemap
+- [ ] `generate_schema.py` - Auto-generate schema for new pages
+- [ ] Location/service page generator for scaling
+- [ ] Automated internal linking
+- [ ] Image sitemap generation
 
 ---
 
 ## Reference
 
-- Inspired by: robfutrell.com (213 pages managed with similar system)
-- Tools: Python, HTML modules, Netlify
-- Source: Conversation with Claude Code, February 2026
+- Architecture inspired by: robfutrell.com
+- Tools: Python 3, HTML modules, Netlify
+- Last updated: March 15, 2026

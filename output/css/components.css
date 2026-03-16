@@ -165,12 +165,23 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  align-self: center;
+  max-width: 78%;
+  margin-left: auto;
 }
 
 .hero-photo img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 8px;
+}
+
+.hero-photo video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
   border-radius: 8px;
 }
 
@@ -184,6 +195,16 @@
   height: auto;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.hero-photo-mobile video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
