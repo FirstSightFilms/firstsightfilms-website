@@ -202,6 +202,40 @@
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+.video-sound-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.77rem;
+  transition: background 0.2s ease;
+}
+
+.video-sound-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.video-sound-toggle .sound-on {
+  display: none;
+}
+
+.video-sound-toggle.unmuted .sound-off {
+  display: none;
+}
+
+.video-sound-toggle.unmuted .sound-on {
+  display: inline;
   border-radius: 8px;
   max-width: 300px;
   margin: 0 auto;

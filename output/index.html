@@ -92,6 +92,22 @@ document.addEventListener('DOMContentLoaded', function() {
       this.setAttribute('aria-expanded', isOpen);
     });
   }
+
+  // Video sound toggle
+  const video = document.getElementById('heroVideo');
+  const soundToggle = document.getElementById('soundToggle');
+
+  if (video && soundToggle) {
+    soundToggle.addEventListener('click', function() {
+      if (video.muted) {
+        video.muted = false;
+        soundToggle.classList.add('unmuted');
+      } else {
+        video.muted = true;
+        soundToggle.classList.remove('unmuted');
+      }
+    });
+  }
 });
 </script>
 
@@ -121,10 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
     <div class="hero-photo">
-      <video autoplay muted loop playsinline poster="/images/hero/first-sight-films-hero-image.JPG">
+      <video id="heroVideo" autoplay muted loop playsinline poster="/images/hero/first-sight-films-hero-image.JPG">
         <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
         <img src="/images/hero/first-sight-films-hero-image.JPG" alt="Event video production at St. Augustine Amphitheatre by First Sight Films">
       </video>
+      <button class="video-sound-toggle" id="soundToggle" aria-label="Toggle sound">
+        <span class="sound-off">🔇</span>
+        <span class="sound-on">🔊</span>
+      </button>
     </div>
   </section>
 
@@ -882,6 +902,18 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "First Sight Films - St. Augustine Video Production Showreel",
+  "description": "Professional video production services in St. Augustine and Jacksonville, FL. See our work capturing events, brand stories, and corporate content.",
+  "thumbnailUrl": "https://www.firstsightfilms.com/images/hero/first-sight-films-hero-image.JPG",
+  "contentUrl": "https://www.firstsightfilms.com/images/hero/first-sight-films-hero-video-interviews.mp4",
+  "uploadDate": "2026-03-01",
+  "duration": "PT30S"
+}
+</script>
 
 <footer class="site-footer">
 
