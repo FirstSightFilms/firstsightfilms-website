@@ -26,17 +26,42 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/images/favicon.png">
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Critical CSS (inline for faster FCP/LCP) -->
+<style>
+:root{--color-black:#000;--color-white:#fff;--color-gray-100:#f5f5f5;--color-gray-200:#eee;--color-gray-300:#ddd;--color-gray-500:#666;--color-gray-700:#333;--color-accent:#f4c057;--font-primary:'Roboto',-apple-system,BlinkMacSystemFont,sans-serif;--font-heading:'Poppins',var(--font-primary);--spacing-xs:0.5rem;--spacing-sm:1rem;--spacing-md:2rem;--spacing-lg:4rem;--spacing-xl:6rem;--max-width:1200px;--container-padding:2rem}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}body{font-family:var(--font-primary);font-size:1rem;line-height:1.6;color:var(--color-gray-700);background:var(--color-white);-webkit-font-smoothing:antialiased;padding-top:120px}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:600;line-height:1.2;color:var(--color-black)}
+h1{font-size:2.5rem}h2{font-size:2rem}img{max-width:100%;height:auto;display:block}
+.site-header{position:fixed;top:0;left:0;right:0;background:#fff;border-bottom:1px solid #eee;z-index:1000}
+.header-content{display:flex;align-items:center;justify-content:center;max-width:1400px;margin:0 auto;padding:0.5rem 2rem;position:relative}
+.branding{flex-shrink:0;display:flex;flex-direction:column;align-items:center}
+.branding .logo img{display:block;height:70px;width:auto}
+.hero{position:relative;background:rgba(244,192,87,0.10);color:var(--color-black)}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:80vh;align-items:center;gap:var(--spacing-lg);max-width:var(--max-width);margin:0 auto;padding:var(--spacing-lg) var(--container-padding)}
+.hero-text{text-align:left}
+.hero-photo-mobile{display:none}
+@media(max-width:768px){:root{--container-padding:1rem}h1{font-size:2rem}h2{font-size:1.5rem}body{padding-top:100px}.header-content{padding:0.75rem 1rem}.branding .logo img{height:63px}.hero-split{grid-template-columns:1fr;text-align:center;min-height:auto;padding:var(--spacing-md) var(--container-padding)}.hero-text{text-align:center}.hero-photo{display:none}.hero-photo-mobile{display:block;margin:var(--spacing-sm) auto;max-width:280px;position:relative}}
+</style>
 
-<!-- CSS -->
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/header.css">
-<link rel="stylesheet" href="/css/components.css">
+<!-- Fonts (preconnect + async load) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+<!-- CSS (deferred loading) -->
+<link rel="stylesheet" href="/css/base.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/css/header.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/components.css">
+</noscript>
 
 <!-- Preload hero image for faster LCP -->
-<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" imagesrcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp 800w, /images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp 1200w" imagesizes="(max-width: 768px) 100vw, 50vw">
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.jpg" media="(max-width: 768px)">
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.jpg" media="(min-width: 769px)">
 <title>St. Augustine Video Production | First Sight Films</title>
 <meta name="description" content="St. Augustine video production company. Corporate videos, event coverage, and brand stories for Northeast Florida businesses. Based in St. Augustine since 2017.">
 </head>
@@ -107,13 +132,13 @@ document.addEventListener('DOMContentLoaded', function() {
       <h1 class="hero-title">St. Augustine | Jacksonville Video & Photo Production</h1>
       <p class="hero-tagline">Stop scrambling for content. We've got you covered.</p>
       <div class="hero-photo-mobile">
-        <img
-          src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp"
-          srcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp 800w,
-                  /images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp 1200w"
-          sizes="100vw"
-          alt="Event video production at St. Augustine Amphitheatre by First Sight Films"
-          fetchpriority="high">
+        <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.jpg" alt="Concert fans cheering at St. Augustine Amphitheatre - First Sight Films event coverage" class="hero-mobile-poster" fetchpriority="high">
+        <video muted loop playsinline preload="none" class="hero-mobile-video" style="display:none;">
+          <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
+        </video>
+        <button class="hero-mobile-play-btn" aria-label="Play video">
+          <span class="play-icon">▶</span>
+        </button>
       </div>
       <p class="hero-desc"><strong>We handle the strategy, the shoots, and the delivery</strong> so you can focus on running your business.</p>
       <p class="hero-desc">Professional video and photo production for businesses across St. Johns County, FL.</p>
@@ -126,9 +151,9 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
     <div class="hero-photo">
-      <video id="heroVideo" autoplay muted loop playsinline poster="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp">
+      <video id="heroVideo" autoplay muted loop playsinline poster="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.jpg">
         <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
-        <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" alt="Event video production at St. Augustine Amphitheatre by First Sight Films">
+        <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.jpg" alt="Concert fans cheering at St. Augustine Amphitheatre - First Sight Films event coverage">
       </video>
     </div>
   </section>
@@ -144,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="bento-grid">
         <!-- 1. Corporate Video (Featured) -->
         <a href="/corporate-video-st-augustine/" class="bento-item bento-medium bento-featured">
-          <img src="/images/bento/corporate-video-st-augustine-bento-1-thumb.webp" alt="Corporate video production for CrossCountry Mortgage in St. Augustine, FL - behind the scenes with First Sight Films" loading="lazy">
+          <img src="/images/bento/corporate-video-st-augustine-bento-1-thumb.webp" alt="Corporate video production for CrossCountry Mortgage in St. Augustine, FL - behind the scenes with First Sight Films" loading="lazy" decoding="async" width="400" height="533">
           <div class="bento-overlay">
             <span class="bento-label">Corporate Video</span>
             <span class="bento-subtitle">Professional videos for growing businesses</span>
@@ -153,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- 2. Event Coverage -->
         <a href="/st-augustine-video-production/" class="bento-item bento-medium">
-          <img src="/images/bento/event-photography-st-augustine-sing-out-loud-festival-1-thumb.webp" alt="Event video coverage in Jacksonville" loading="lazy">
+          <img src="/images/bento/event-photography-st-augustine-sing-out-loud-festival-1-thumb.webp" alt="Event video coverage in Jacksonville" loading="lazy" decoding="async" width="400" height="500">
           <div class="bento-overlay">
             <span class="bento-label">Event Coverage</span>
             <span class="bento-subtitle">Capture the energy and highlights</span>
@@ -162,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- 3. Brand Story -->
         <a href="/st-augustine-video-production/" class="bento-item bento-medium">
-          <img src="/images/bento/brand-story-video-st-augustine-1-thumb.webp" alt="Brand story video production for St. Augustine Amphitheatre merchandise campaign by First Sight Films" loading="lazy">
+          <img src="/images/bento/brand-story-video-st-augustine-1-thumb.webp" alt="Brand story video production for St. Augustine Amphitheatre merchandise campaign by First Sight Films" loading="lazy" decoding="async" width="400" height="500">
           <div class="bento-overlay">
             <span class="bento-label">Brand Story</span>
             <span class="bento-subtitle">Share your story, connect with customers</span>
@@ -171,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- 4. Social Media -->
         <a href="/st-augustine-video-production/" class="bento-item bento-medium">
-          <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-thumbnail.webp" alt="Social media video content for St. Augustine Amphitheatre featuring Thievery Corporation by First Sight Films" loading="lazy">
+          <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-thumbnail.webp" alt="Social media video content for St. Augustine Amphitheatre featuring Thievery Corporation by First Sight Films" loading="lazy" decoding="async" width="400" height="320">
           <div class="bento-overlay">
             <span class="bento-label">Social Media</span>
             <span class="bento-subtitle">Short-form content that performs</span>
@@ -180,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- 5. Photography -->
         <a href="/st-augustine-photography/" class="bento-item bento-medium">
-          <img src="/images/bento/photography-st-augustine-bento-1-thumb.webp" alt="First Sight Films owner Diego Cerquera at Sing Out Loud Festival, Francis Field, St. Augustine, FL" loading="lazy">
+          <img src="/images/bento/photography-st-augustine-bento-1-thumb.webp" alt="First Sight Films owner Diego Cerquera at Sing Out Loud Festival, Francis Field, St. Augustine, FL" loading="lazy" decoding="async" width="400" height="320">
           <div class="bento-overlay">
             <span class="bento-label">Photography</span>
             <span class="bento-subtitle">Headshots, products, and events</span>
@@ -216,16 +241,16 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="about-media">
         <div class="about-bento">
           <div class="about-bento__item about-bento--main">
-            <img src="/images/about/diego-and-trista-cerquera-sbeach-sunset-travel-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, owners of First Sight Films, St. Augustine video production company" loading="lazy">
+            <img src="/images/about/diego-and-trista-cerquera-sbeach-sunset-travel-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, owners of First Sight Films, St. Augustine video production company" loading="lazy" decoding="async" width="400" height="267">
           </div>
           <div class="about-bento__item about-bento--video">
-            <img src="/images/about/trista-brophy-cerquera-st-augustine-beach-fl-film-set-1-thumb.webp" alt="Dr. Trista Cerquera on set at St. Augustine Beach, FL - First Sight Films project manager" loading="lazy">
+            <img src="/images/about/trista-brophy-cerquera-st-augustine-beach-fl-film-set-1-thumb.webp" alt="Dr. Trista Cerquera on set at St. Augustine Beach, FL - First Sight Films project manager" loading="lazy" decoding="async" width="400" height="600">
           </div>
           <div class="about-bento__item about-bento--small-1">
-            <img src="/images/about/diego-and-trista-brophy-cerquera-st-augustine-first-sight-films-owners-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, First Sight Films owners and St. Augustine videographers" loading="lazy">
+            <img src="/images/about/diego-and-trista-brophy-cerquera-st-augustine-first-sight-films-owners-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, First Sight Films owners and St. Augustine videographers" loading="lazy" decoding="async" width="400" height="320">
           </div>
           <div class="about-bento__item about-bento--small-2">
-            <img src="/images/about/diego-and-trista-brophy-cerquera-at-adobe-max-1-thumb.webp" alt="Diego and Dr. Trista Cerquera at Adobe MAX conference" loading="lazy">
+            <img src="/images/about/diego-and-trista-brophy-cerquera-at-adobe-max-1-thumb.webp" alt="Diego and Dr. Trista Cerquera at Adobe MAX conference" loading="lazy" decoding="async" width="400" height="482">
           </div>
         </div>
       </div>
@@ -966,6 +991,22 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </footer>
 
+
+<script>
+// Mobile hero video play button
+document.addEventListener('DOMContentLoaded', function() {
+  var mobileHero = document.querySelector('.hero-photo-mobile');
+  var playBtn = document.querySelector('.hero-mobile-play-btn');
+  var video = document.querySelector('.hero-mobile-video');
+
+  if (playBtn && video && mobileHero) {
+    playBtn.addEventListener('click', function() {
+      mobileHero.classList.add('playing');
+      video.play();
+    });
+  }
+});
+</script>
 
 </body>
 </html>
