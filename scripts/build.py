@@ -32,11 +32,14 @@ OUTPUT_DIR = BASE_DIR / "output"
 # Global page config (populated by load_page_config)
 PAGE_CONFIG = {}
 
-# Assets to copy from root to output
-ASSETS_TO_COPY = ["images", "js"]
+# Assets to copy from src to output
+ASSETS_TO_COPY = ["images", "js", "video"]
 
 # CSS directory in src
 SRC_CSS_DIR = SRC_DIR / "css"
+
+# Fonts directory in src
+SRC_FONTS_DIR = SRC_DIR / "fonts"
 
 # Global image manifest (populated by load_image_manifests)
 IMAGE_MANIFEST = {}
@@ -553,7 +556,7 @@ def copy_assets():
     For other assets: replaces entirely.
     """
     for asset_name in ASSETS_TO_COPY:
-        src_path = BASE_DIR / asset_name
+        src_path = SRC_DIR / asset_name
         dest_path = OUTPUT_DIR / asset_name
 
         if src_path.exists():
@@ -585,6 +588,17 @@ def copy_css():
             shutil.rmtree(dest_path)
         shutil.copytree(SRC_CSS_DIR, dest_path)
         print(f"  Copied: css/ (from src/css)")
+
+
+def copy_fonts():
+    """Copy fonts from src/fonts to output/fonts."""
+    dest_path = OUTPUT_DIR / "fonts"
+
+    if SRC_FONTS_DIR.exists():
+        if dest_path.exists():
+            shutil.rmtree(dest_path)
+        shutil.copytree(SRC_FONTS_DIR, dest_path)
+        print(f"  Copied: fonts/ (from src/fonts)")
 
 
 def copy_existing_pages():
@@ -643,10 +657,13 @@ def main():
     print(f"\n[5/7] Copying existing pages (not yet migrated)...")
     copy_existing_pages()
 
-    print(f"\n[6/7] Copying CSS...")
+    print(f"\n[6/8] Copying CSS...")
     copy_css()
 
-    print(f"\n[7/7] Copying assets...")
+    print(f"\n[7/8] Copying fonts...")
+    copy_fonts()
+
+    print(f"\n[8/8] Copying assets...")
     copy_assets()
 
     print("\n" + "=" * 50)

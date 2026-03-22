@@ -176,6 +176,46 @@
   border-radius: 8px;
 }
 
+.hero-photo {
+  cursor: pointer;
+}
+
+.hero-desktop-play-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.hero-desktop-play-btn .play-icon {
+  color: white;
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.hero-desktop-play-btn:hover {
+  background: rgba(244, 192, 87, 0.9);
+  border-color: #f4c057;
+}
+
+.hero-photo.playing .hero-desktop-poster,
+.hero-photo.playing .hero-desktop-play-btn {
+  display: none;
+}
+
+.hero-photo.playing .hero-desktop-video {
+  display: block !important;
+}
+
 /* Mobile hero photo - hidden on desktop */
 .hero-photo-mobile {
   display: none;
@@ -215,6 +255,7 @@
     margin: var(--spacing-sm) auto;
     max-width: 280px;
     position: relative;
+    cursor: pointer;
   }
 
   .hero-photo-mobile img,
@@ -227,13 +268,12 @@
 
   .hero-mobile-play-btn {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
+    bottom: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
     background: rgba(0, 0, 0, 0.6);
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -244,8 +284,8 @@
 
   .hero-mobile-play-btn .play-icon {
     color: white;
-    font-size: 24px;
-    margin-left: 4px;
+    font-size: 12px;
+    margin-left: 2px;
   }
 
   .hero-mobile-play-btn:hover {
