@@ -20,12 +20,16 @@
       <p class="hero-script">First Sight Films</p>
       <h1 class="hero-title">St. Augustine | Jacksonville Video & Photo Production</h1>
       <p class="hero-tagline">Stop scrambling for content. We've got you covered.</p>
-      <div class="hero-photo-mobile">
-        <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp" alt="Concert fans cheering at St. Augustine Amphitheatre - First Sight Films event coverage" class="hero-mobile-poster" fetchpriority="high" width="400" height="500">
-        <video muted loop playsinline preload="none" class="hero-mobile-video" style="display:none;">
+      <div class="hero-photo">
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp" width="320" height="400">
+          <source media="(min-width: 769px)" srcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" width="640" height="800">
+          <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" alt="Concert fans cheering at St. Augustine Amphitheatre - First Sight Films event coverage" class="hero-poster" fetchpriority="high" width="640" height="800">
+        </picture>
+        <video id="heroVideo" muted loop playsinline preload="none" class="hero-video" style="display:none;">
           <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
         </video>
-        <button class="hero-mobile-play-btn" aria-label="Play video">
+        <button class="hero-play-btn" aria-label="Play video">
           <span class="play-icon">▶</span>
         </button>
       </div>
@@ -38,15 +42,6 @@
         <div class="stat"><span class="stat-number">5★</span><span class="stat-label">Rating</span></div>
         <div class="stat"><span class="stat-number">50+</span><span class="stat-label">Reviews</span></div>
       </div>
-    </div>
-    <div class="hero-photo">
-      <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" alt="Concert fans cheering at St. Augustine Amphitheatre - First Sight Films event coverage" class="hero-desktop-poster" fetchpriority="high" width="320" height="400">
-      <video id="heroVideo" muted loop playsinline preload="none" class="hero-desktop-video" style="display:none;">
-        <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
-      </video>
-      <button class="hero-desktop-play-btn" aria-label="Play video">
-        <span class="play-icon">▶</span>
-      </button>
     </div>
   </section>
 
@@ -171,25 +166,14 @@
 {{footer}}
 
 <script>
-// Hero video - click anywhere to play (mobile and desktop)
+// Hero video - click anywhere to play
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile
-  var mobileHero = document.querySelector('.hero-photo-mobile');
-  var mobileVideo = document.querySelector('.hero-mobile-video');
-  if (mobileVideo && mobileHero) {
-    mobileHero.addEventListener('click', function() {
-      mobileHero.classList.add('playing');
-      mobileVideo.play();
-    });
-  }
-
-  // Desktop
-  var desktopHero = document.querySelector('.hero-photo');
-  var desktopVideo = document.querySelector('.hero-desktop-video');
-  if (desktopVideo && desktopHero) {
-    desktopHero.addEventListener('click', function() {
-      desktopHero.classList.add('playing');
-      desktopVideo.play();
+  var heroPhoto = document.querySelector('.hero-photo');
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo && heroPhoto) {
+    heroPhoto.addEventListener('click', function() {
+      heroPhoto.classList.add('playing');
+      heroVideo.play();
     });
   }
 });
