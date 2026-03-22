@@ -370,6 +370,11 @@ def load_reviews():
         # Link HTML
         link_html = f'<a href="{url}" target="_blank" rel="noopener" class="review-link">Read on Google</a>' if url else ""
 
+        # Truncate long quotes for mobile display
+        max_chars = 280
+        is_long = len(text) > max_chars
+        read_more_html = f'<a href="{url}" target="_blank" rel="noopener" class="review-read-more">Read full review on Google</a>' if is_long and url else ""
+
         card = f'''
           <div class="review-card" data-index="{i}">
             <div class="review-author-header">
@@ -383,6 +388,7 @@ def load_reviews():
             </div>
             <div class="review-quote-wrapper">
               <blockquote class="review-quote">"{text}"</blockquote>
+              {read_more_html}
             </div>
             <div class="review-footer">
               <span class="review-date">{date}</span>
@@ -391,7 +397,8 @@ def load_reviews():
           </div>'''
         cards_html.append(card)
 
-    total_pages = (len(reviews) + 2) // 3  # 3 cards per page on desktop
+    total_reviews = len(reviews)
+    total_pages_desktop = (total_reviews + 2) // 3  # 3 cards per page on desktop
 
     html = f'''<!-- Testimonials Section -->
 <section class="section-testimonials" id="reviews">
@@ -416,13 +423,17 @@ def load_reviews():
     <div class="review-mobile-nav">
       <button class="review-nav prev" aria-label="Previous reviews">&#8249;</button>
       <div class="review-pagination">
-        <span class="current-page">1</span> / <span class="total-pages">{total_pages}</span>
+        <span class="current-page">1</span> / <span class="total-pages">{total_reviews}</span>
       </div>
       <button class="review-nav next" aria-label="Next reviews">&#8250;</button>
     </div>
 
     <div class="review-pagination review-pagination-desktop">
-      <span class="current-page">1</span> / <span class="total-pages">{total_pages}</span>
+      <span class="current-page">1</span> / <span class="total-pages">{total_pages_desktop}</span>
+    </div>
+
+    <div class="review-cta">
+      <a href="{data.get('google_url', 'https://www.google.com/maps/place/First+Sight+Films/')}" target="_blank" rel="noopener" class="review-cta-link">See more of our reviews</a>
     </div>
 
   </div>
