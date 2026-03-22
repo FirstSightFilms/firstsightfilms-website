@@ -441,13 +441,21 @@
 
 @media (max-width: 600px) {
   .bento-grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
   }
 
   .bento-medium,
   .bento-wide {
+    grid-column: span 2;
+  }
+
+  .bento-half {
     grid-column: span 1;
+  }
+
+  .bento-half img {
+    aspect-ratio: 1 / 1;
   }
 }
 
