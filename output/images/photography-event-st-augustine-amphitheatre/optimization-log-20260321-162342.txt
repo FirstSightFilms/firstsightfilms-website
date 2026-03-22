@@ -1,0 +1,1108 @@
+FSF Image Optimization Log
+Generated: 2026-03-21 16:23:42
+============================================================
+
+Original: 2025_ JON BATISTE_ St Augustine Amphitheatre _ St Augustine FL-2.jpg
+  Size: 8.45 MB
+  Outputs:
+    - jon-batiste-concert-augustine-amphitheatre-st-augustine-1920w.webp (1920x2400, 721.5 KB)
+    - jon-batiste-concert-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 242.5 KB)
+    - jon-batiste-concert-augustine-amphitheatre-st-augustine-400w.webp (400x500, 30.0 KB)
+
+Original: 2025_ JON BATISTE_ St Augustine Amphitheatre _ St Augustine FL-4.jpg
+  Size: 3.10 MB
+  Outputs:
+    - jon-batiste-live-performance-augustine-amphitheatre-1920w.webp (1920x2399, 253.6 KB)
+    - jon-batiste-live-performance-augustine-amphitheatre-1200w.webp (1200x1499, 110.4 KB)
+    - jon-batiste-live-performance-augustine-amphitheatre-400w.webp (400x499, 16.1 KB)
+
+Original: 2025_ JON BATISTE_ St Augustine Amphitheatre _ St Augustine FL-5.jpg
+  Size: 5.59 MB
+  Outputs:
+    - jon-batiste-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x2399, 193.0 KB)
+    - jon-batiste-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1499, 65.2 KB)
+    - jon-batiste-performance-augustine-amphitheatre-st-augustine-400w.webp (400x499, 13.2 KB)
+
+Original: 2025_ John Legend _STA -00.JPG
+  Size: 760.6 KB
+  Outputs:
+    - john-legend-sta-live-performance-augustine-amphitheatre-1920w.webp (864x1080, 219.3 KB)
+    - john-legend-sta-live-performance-augustine-amphitheatre-1200w.webp (864x1080, 219.3 KB)
+    - john-legend-sta-live-performance-augustine-amphitheatre-400w.webp (400x500, 26.3 KB)
+
+Original: 2025_ John Legend _STA -03.JPG
+  Size: 801.9 KB
+  Outputs:
+    - john-legend-sta-concert-augustine-amphitheatre-1920w.webp (864x1080, 183.6 KB)
+    - john-legend-sta-concert-augustine-amphitheatre-1200w.webp (864x1080, 183.6 KB)
+    - john-legend-sta-concert-augustine-amphitheatre-400w.webp (400x500, 34.5 KB)
+
+Original: 2025_ John Legend _STA -09.JPG
+  Size: 1.05 MB
+  Outputs:
+    - john-legend-sta-concert-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 277.0 KB)
+    - john-legend-sta-concert-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 277.0 KB)
+    - john-legend-sta-concert-augustine-amphitheatre-st-augustine-400w.webp (400x500, 20.1 KB)
+
+Original: 2025_ John Legend _STA -11.JPG
+  Size: 707.9 KB
+  Outputs:
+    - john-legend-sta-live-performance-augustine-amphitheatre-2-1920w.webp (831x1039, 159.9 KB)
+    - john-legend-sta-live-performance-augustine-amphitheatre-2-1200w.webp (831x1039, 159.9 KB)
+    - john-legend-sta-live-performance-augustine-amphitheatre-2-400w.webp (400x500, 24.1 KB)
+
+Original: 2025_ John Legend _STA -13.JPG
+  Size: 745.9 KB
+  Outputs:
+    - john-legend-sta-laser-show-augustine-amphitheatre-1920w.webp (782x977, 165.8 KB)
+    - john-legend-sta-laser-show-augustine-amphitheatre-1200w.webp (782x977, 165.8 KB)
+    - john-legend-sta-laser-show-augustine-amphitheatre-400w.webp (400x499, 33.4 KB)
+
+Original: 2025_ John Legend _STA -14.JPG
+  Size: 574.5 KB
+  Outputs:
+    - john-legend-sta-concert-augustine-amphitheatre-st-augustine-2-1920w.webp (723x904, 116.1 KB)
+    - john-legend-sta-concert-augustine-amphitheatre-st-augustine-2-1200w.webp (723x904, 116.1 KB)
+    - john-legend-sta-concert-augustine-amphitheatre-st-augustine-2-400w.webp (400x500, 26.9 KB)
+
+Original: 2025_ RYAN BINGHAM _STA -00.jpg
+  Size: 17.10 MB
+  Outputs:
+    - ryan-bingham-drum-setup-augustine-amphitheatre-1920w.webp (1920x2400, 449.6 KB)
+    - ryan-bingham-drum-setup-augustine-amphitheatre-1200w.webp (1200x1500, 129.0 KB)
+    - ryan-bingham-drum-setup-augustine-amphitheatre-400w.webp (400x500, 21.5 KB)
+
+Original: 2025_ RYAN BINGHAM _STA -01.jpg
+  Size: 7.65 MB
+  Outputs:
+    - ryan-bingham-sta-live-performance-augustine-amphitheatre-1920w.webp (1920x2400, 1.72 MB)
+    - ryan-bingham-sta-live-performance-augustine-amphitheatre-1200w.webp (1200x1500, 568.9 KB)
+    - ryan-bingham-sta-live-performance-augustine-amphitheatre-400w.webp (400x500, 31.5 KB)
+
+Original: 2025_ RYAN BINGHAM _STA -02.jpg
+  Size: 15.11 MB
+  Outputs:
+    - ryan-bingham-sta-augustine-amphitheatre-concert-1920w.webp (1920x1280, 290.6 KB)
+    - ryan-bingham-sta-augustine-amphitheatre-concert-1200w.webp (1200x800, 106.0 KB)
+    - ryan-bingham-sta-augustine-amphitheatre-concert-400w.webp (400x266, 17.5 KB)
+
+Original: 2025_ RYAN BINGHAM _STA -03.jpg
+  Size: 4.79 MB
+  Outputs:
+    - ryan-bingham-sta-acoustic-performance-augustine-amphitheatre-1920w.webp (1920x2400, 199.6 KB)
+    - ryan-bingham-sta-acoustic-performance-augustine-amphitheatre-1200w.webp (1200x1500, 31.5 KB)
+    - ryan-bingham-sta-acoustic-performance-augustine-amphitheatre-400w.webp (400x500, 5.1 KB)
+
+Original: 2025_ RYAN BINGHAM _STA -04.jpg
+  Size: 14.71 MB
+  Outputs:
+    - ryan-bingham-sta-live-performance-augustine-amphitheatre-2-1920w.webp (1920x2400, 629.7 KB)
+    - ryan-bingham-sta-live-performance-augustine-amphitheatre-2-1200w.webp (1200x1500, 195.4 KB)
+    - ryan-bingham-sta-live-performance-augustine-amphitheatre-2-400w.webp (400x500, 29.5 KB)
+
+Original: 2025_ RYAN BINGHAM _STA -08.jpg
+  Size: 11.85 MB
+  Outputs:
+    - all-night-long-tour-fans-augustine-amphitheatre-1920w.webp (1920x2400, 1.03 MB)
+    - all-night-long-tour-fans-augustine-amphitheatre-1200w.webp (1200x1500, 288.4 KB)
+    - all-night-long-tour-fans-augustine-amphitheatre-400w.webp (400x500, 22.2 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES01.jpg
+  Size: 1.18 MB
+  Outputs:
+    - crockett-leon-bridges-augustine-amphitheatre-performance-1920w.webp (1080x1350, 102.7 KB)
+    - crockett-leon-bridges-augustine-amphitheatre-performance-1200w.webp (1080x1350, 102.7 KB)
+    - crockett-leon-bridges-augustine-amphitheatre-performance-400w.webp (400x500, 21.4 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES02.jpg
+  Size: 1.25 MB
+  Outputs:
+    - crockett-leon-bridges-performing-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 136.3 KB)
+    - crockett-leon-bridges-performing-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 136.3 KB)
+    - crockett-leon-bridges-performing-augustine-amphitheatre-st-augustine-400w.webp (400x500, 20.2 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES03.jpg
+  Size: 830.5 KB
+  Outputs:
+    - crockett-leon-bridges-concert-augustine-amphitheatre-1920w.webp (1080x1350, 57.4 KB)
+    - crockett-leon-bridges-concert-augustine-amphitheatre-1200w.webp (1080x1350, 57.4 KB)
+    - crockett-leon-bridges-concert-augustine-amphitheatre-400w.webp (400x500, 13.6 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES05.jpg
+  Size: 1.01 MB
+  Outputs:
+    - crockett-leon-bridges-augustine-amphitheatre-performance-2-1920w.webp (1080x1350, 97.1 KB)
+    - crockett-leon-bridges-augustine-amphitheatre-performance-2-1200w.webp (1080x1350, 97.1 KB)
+    - crockett-leon-bridges-augustine-amphitheatre-performance-2-400w.webp (400x500, 19.8 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES06.jpg
+  Size: 1.00 MB
+  Outputs:
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-1920w.webp (1080x1350, 74.6 KB)
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-1200w.webp (1080x1350, 74.6 KB)
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-400w.webp (400x500, 15.8 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES07.jpg
+  Size: 1.16 MB
+  Outputs:
+    - crockett-leon-bridges-augustine-amphitheatre-performance-3-1920w.webp (1080x1350, 127.2 KB)
+    - crockett-leon-bridges-augustine-amphitheatre-performance-3-1200w.webp (1080x1350, 127.2 KB)
+    - crockett-leon-bridges-augustine-amphitheatre-performance-3-400w.webp (400x500, 29.6 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES09.jpg
+  Size: 1.02 MB
+  Outputs:
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-2-1920w.webp (1080x1350, 111.1 KB)
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-2-1200w.webp (1080x1350, 111.1 KB)
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-2-400w.webp (400x500, 15.9 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES10.jpg
+  Size: 1.47 MB
+  Outputs:
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-3-1920w.webp (1080x1350, 223.9 KB)
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-3-1200w.webp (1080x1350, 223.9 KB)
+    - crockett-leon-bridges-live-performance-augustine-amphitheatre-3-400w.webp (400x500, 21.7 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES11.jpg
+  Size: 1.08 MB
+  Outputs:
+    - female-guitarist-performing-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 104.1 KB)
+    - female-guitarist-performing-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 104.1 KB)
+    - female-guitarist-performing-augustine-amphitheatre-st-augustine-400w.webp (400x500, 25.7 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES12.jpg
+  Size: 1.40 MB
+  Outputs:
+    - crockett-leon-bridges-guitar-performance-augustine-amphitheatre-1920w.webp (1080x1350, 236.9 KB)
+    - crockett-leon-bridges-guitar-performance-augustine-amphitheatre-1200w.webp (1080x1350, 236.9 KB)
+    - crockett-leon-bridges-guitar-performance-augustine-amphitheatre-400w.webp (400x500, 27.7 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES13.jpg
+  Size: 1.36 MB
+  Outputs:
+    - crockett-leon-bridges-guitar-performance-augustine-amphitheatre-2-1920w.webp (1080x1350, 223.1 KB)
+    - crockett-leon-bridges-guitar-performance-augustine-amphitheatre-2-1200w.webp (1080x1350, 223.1 KB)
+    - crockett-leon-bridges-guitar-performance-augustine-amphitheatre-2-400w.webp (400x500, 26.1 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES14.jpg
+  Size: 1.55 MB
+  Outputs:
+    - charley-crockett-live-performance-augustine-amphitheatre-1920w.webp (1080x1350, 327.0 KB)
+    - charley-crockett-live-performance-augustine-amphitheatre-1200w.webp (1080x1350, 327.0 KB)
+    - charley-crockett-live-performance-augustine-amphitheatre-400w.webp (400x500, 33.9 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES15.jpg
+  Size: 1010.3 KB
+  Outputs:
+    - couple-audience-live-event-augustine-amphitheatre-1920w.webp (1080x1350, 106.2 KB)
+    - couple-audience-live-event-augustine-amphitheatre-1200w.webp (1080x1350, 106.2 KB)
+    - couple-audience-live-event-augustine-amphitheatre-400w.webp (400x500, 25.0 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES16.jpg
+  Size: 807.0 KB
+  Outputs:
+    - crockett-leon-bridges-augustine-amphitheatre-performance-4-1920w.webp (1080x1350, 53.3 KB)
+    - crockett-leon-bridges-augustine-amphitheatre-performance-4-1200w.webp (1080x1350, 53.3 KB)
+    - crockett-leon-bridges-augustine-amphitheatre-performance-4-400w.webp (400x500, 14.0 KB)
+
+Original: 2025_CROCKETT _LEON BRIDGES18.jpg
+  Size: 951.4 KB
+  Outputs:
+    - women-group-photo-augustine-amphitheatre-event-1920w.webp (1080x1350, 96.6 KB)
+    - women-group-photo-augustine-amphitheatre-event-1200w.webp (1080x1350, 96.6 KB)
+    - women-group-photo-augustine-amphitheatre-event-400w.webp (400x500, 22.9 KB)
+
+Original: 2025_SIERRA FERREL_-1.jpg
+  Size: 854.6 KB
+  Outputs:
+    - sierra-ferrel-violin-performance-augustine-amphitheatre-1920w.webp (1080x1350, 79.5 KB)
+    - sierra-ferrel-violin-performance-augustine-amphitheatre-1200w.webp (1080x1350, 79.5 KB)
+    - sierra-ferrel-violin-performance-augustine-amphitheatre-400w.webp (400x500, 21.6 KB)
+
+Original: 2025_SIERRA FERREL_-11.jpg
+  Size: 1.03 MB
+  Outputs:
+    - concert-audience-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 52.3 KB)
+    - concert-audience-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 52.3 KB)
+    - concert-audience-augustine-amphitheatre-st-augustine-400w.webp (400x500, 14.2 KB)
+
+Original: 2025_SIERRA FERREL_-3.jpg
+  Size: 887.5 KB
+  Outputs:
+    - sierra-ferrel-violin-performance-augustine-amphitheatre-2-1920w.webp (1080x1350, 111.0 KB)
+    - sierra-ferrel-violin-performance-augustine-amphitheatre-2-1200w.webp (1080x1350, 111.0 KB)
+    - sierra-ferrel-violin-performance-augustine-amphitheatre-2-400w.webp (400x500, 26.2 KB)
+
+Original: 2025_SIERRA FERREL_-4.jpg
+  Size: 1.03 MB
+  Outputs:
+    - audience-reaction-concert-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 106.9 KB)
+    - audience-reaction-concert-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 106.9 KB)
+    - audience-reaction-concert-augustine-amphitheatre-st-augustine-400w.webp (400x500, 16.1 KB)
+
+Original: 2026-StPaulAndTheBrokenBones-00.jpg
+  Size: 3.93 MB
+  Outputs:
+    - stpaulandthebrokenbones-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x2400, 264.2 KB)
+    - stpaulandthebrokenbones-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 132.7 KB)
+    - stpaulandthebrokenbones-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 23.3 KB)
+
+Original: 2026-StPaulAndTheBrokenBones-01.jpg
+  Size: 4.40 MB
+  Outputs:
+    - stpaulandthebrokenbones-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x1536, 233.4 KB)
+    - stpaulandthebrokenbones-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x960, 112.0 KB)
+    - stpaulandthebrokenbones-performance-augustine-amphitheatre-st-augustine-400w.webp (400x320, 15.9 KB)
+
+Original: 2026-StPaulAndTheBrokenBones-05.jpg
+  Size: 5.91 MB
+  Outputs:
+    - stpaulandthebrokenbones-electric-violin-performance-augustine-amphitheatre-1920w.webp (1920x1536, 199.4 KB)
+    - stpaulandthebrokenbones-electric-violin-performance-augustine-amphitheatre-1200w.webp (1200x960, 65.4 KB)
+    - stpaulandthebrokenbones-electric-violin-performance-augustine-amphitheatre-400w.webp (400x320, 13.0 KB)
+
+Original: 2026-StPaulAndTheBrokenBones-06.jpg
+  Size: 6.70 MB
+  Outputs:
+    - stpaulandthebrokenbones-guitar-performance-augustine-amphitheatre-1920w.webp (1920x2400, 957.0 KB)
+    - stpaulandthebrokenbones-guitar-performance-augustine-amphitheatre-1200w.webp (1200x1500, 341.6 KB)
+    - stpaulandthebrokenbones-guitar-performance-augustine-amphitheatre-400w.webp (400x500, 19.6 KB)
+
+Original: 2026-StPaulAndTheBrokenBones-07.jpg
+  Size: 8.80 MB
+  Outputs:
+    - stpaulandthebrokenbones-bass-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x2400, 980.0 KB)
+    - stpaulandthebrokenbones-bass-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1499, 303.1 KB)
+    - stpaulandthebrokenbones-bass-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 24.5 KB)
+
+Original: 2026-StPaulAndTheBrokenBones-13.jpg
+  Size: 9.16 MB
+  Outputs:
+    - stpaulandthebrokenbones-live-performance-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x2400, 918.7 KB)
+    - stpaulandthebrokenbones-live-performance-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x1500, 278.0 KB)
+    - stpaulandthebrokenbones-live-performance-augustine-amphitheatre-st-augustine-2-400w.webp (400x500, 17.6 KB)
+
+Original: 2026-StPaulAndTheBrokenBones-16.jpg
+  Size: 10.62 MB
+  Outputs:
+    - fans-watching-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x1280, 197.2 KB)
+    - fans-watching-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x800, 101.2 KB)
+    - fans-watching-performance-augustine-amphitheatre-st-augustine-400w.webp (400x266, 19.1 KB)
+
+Original: 2026-StPaulAndTheBrokenBones-18.jpg
+  Size: 10.93 MB
+  Outputs:
+    - concert-audience-cheering-augustine-amphitheatre-st-augustine-1920w.webp (1920x1280, 281.3 KB)
+    - concert-audience-cheering-augustine-amphitheatre-st-augustine-1200w.webp (1200x800, 123.1 KB)
+    - concert-audience-cheering-augustine-amphitheatre-st-augustine-400w.webp (400x266, 20.6 KB)
+
+Original: DARK STAR ORCHESTRA - 1.jpg
+  Size: 2.54 MB
+  Outputs:
+    - dark-star-orchestra-live-concert-augustine-amphitheatre-1920w.webp (1920x1199, 146.6 KB)
+    - dark-star-orchestra-live-concert-augustine-amphitheatre-1200w.webp (1200x749, 73.6 KB)
+    - dark-star-orchestra-live-concert-augustine-amphitheatre-400w.webp (400x249, 15.6 KB)
+
+Original: DARK STAR ORCHESTRA - 2.jpg
+  Size: 2.86 MB
+  Outputs:
+    - dark-star-orchestra-concert-augustine-amphitheatre-st-augustine-1920w.webp (1920x2400, 282.4 KB)
+    - dark-star-orchestra-concert-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 141.3 KB)
+    - dark-star-orchestra-concert-augustine-amphitheatre-st-augustine-400w.webp (400x500, 30.2 KB)
+
+Original: GOOSE01.jpg
+  Size: 1013.5 KB
+  Outputs:
+    - goose-concert-lighting-augustine-amphitheatre-st-augustine-1920w.webp (1081x1350, 233.9 KB)
+    - goose-concert-lighting-augustine-amphitheatre-st-augustine-1200w.webp (1081x1350, 233.9 KB)
+    - goose-concert-lighting-augustine-amphitheatre-st-augustine-400w.webp (400x499, 30.8 KB)
+
+Original: GOOSE02.jpg
+  Size: 230.8 KB
+  Outputs:
+    - goose-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 56.3 KB)
+    - goose-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 56.3 KB)
+    - goose-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 13.2 KB)
+
+Original: GOOSE03.jpg
+  Size: 588.2 KB
+  Outputs:
+    - goose-drummer-performance-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 214.0 KB)
+    - goose-drummer-performance-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 214.0 KB)
+    - goose-drummer-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 36.9 KB)
+
+Original: GOOSE06.jpg
+  Size: 2.16 MB
+  Outputs:
+    - goose-concert-performance-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 403.3 KB)
+    - goose-concert-performance-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 403.3 KB)
+    - goose-concert-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 26.2 KB)
+
+Original: GOOSE11.jpg
+  Size: 1.46 MB
+  Outputs:
+    - goose-stage-lighting-augustine-amphitheatre-1920w.webp (1080x1350, 193.3 KB)
+    - goose-stage-lighting-augustine-amphitheatre-1200w.webp (1080x1350, 193.3 KB)
+    - goose-stage-lighting-augustine-amphitheatre-400w.webp (400x500, 41.3 KB)
+
+Original: GOOSE16.jpg
+  Size: 2.16 MB
+  Outputs:
+    - goose-live-concert-augustine-amphitheatre-st-augustine-1920w.webp (1920x1080, 425.9 KB)
+    - goose-live-concert-augustine-amphitheatre-st-augustine-1200w.webp (1200x675, 133.4 KB)
+    - goose-live-concert-augustine-amphitheatre-st-augustine-400w.webp (400x225, 19.1 KB)
+
+Original: GOOSE17.jpg
+  Size: 2.59 MB
+  Outputs:
+    - goose-concert-lighting-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x1280, 431.8 KB)
+    - goose-concert-lighting-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x800, 138.7 KB)
+    - goose-concert-lighting-augustine-amphitheatre-st-augustine-2-400w.webp (400x266, 17.4 KB)
+
+Original: JEWEL-9.JPG
+  Size: 1.99 MB
+  Outputs:
+    - jewel-guitar-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x1920, 270.7 KB)
+    - jewel-guitar-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1200, 114.5 KB)
+    - jewel-guitar-performance-augustine-amphitheatre-st-augustine-400w.webp (400x400, 19.3 KB)
+
+Original: MODEST MOUSE02.jpg
+  Size: 4.18 MB
+  Outputs:
+    - audience-enjoying-event-augustine-amphitheatre-st-augustine-1920w.webp (1920x2399, 221.3 KB)
+    - audience-enjoying-event-augustine-amphitheatre-st-augustine-1200w.webp (1200x1499, 70.5 KB)
+    - audience-enjoying-event-augustine-amphitheatre-st-augustine-400w.webp (400x499, 16.7 KB)
+
+Original: MODEST MOUSE04.jpg
+  Size: 6.89 MB
+  Outputs:
+    - modest-mouse-fans-augustine-amphitheatre-st-augustine-1920w.webp (1920x2399, 1001.0 KB)
+    - modest-mouse-fans-augustine-amphitheatre-st-augustine-1200w.webp (1200x1499, 261.5 KB)
+    - modest-mouse-fans-augustine-amphitheatre-st-augustine-400w.webp (400x499, 16.6 KB)
+
+Original: MODEST MOUSE05.jpg
+  Size: 11.11 MB
+  Outputs:
+    - modest-mouse-audience-high-fives-augustine-amphitheatre-1920w.webp (1920x1536, 567.7 KB)
+    - modest-mouse-audience-high-fives-augustine-amphitheatre-1200w.webp (1200x960, 139.8 KB)
+    - modest-mouse-audience-high-fives-augustine-amphitheatre-400w.webp (400x320, 21.4 KB)
+
+Original: MODEST MOUSE06.jpg
+  Size: 5.77 MB
+  Outputs:
+    - modest-mouse-fans-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x2400, 756.0 KB)
+    - modest-mouse-fans-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x1500, 240.1 KB)
+    - modest-mouse-fans-augustine-amphitheatre-st-augustine-2-400w.webp (400x500, 28.8 KB)
+
+Original: MODEST MOUSE10.jpg
+  Size: 4.30 MB
+  Outputs:
+    - modest-mouse-fan-laughing-augustine-amphitheatre-event-1920w.webp (1920x2399, 657.0 KB)
+    - modest-mouse-fan-laughing-augustine-amphitheatre-event-1200w.webp (1200x1499, 204.2 KB)
+    - modest-mouse-fan-laughing-augustine-amphitheatre-event-400w.webp (400x499, 13.6 KB)
+
+Original: MODEST MOUSE12.jpg
+  Size: 8.32 MB
+  Outputs:
+    - modest-mouse-audience-augustine-amphitheatre-concert-1920w.webp (1920x1536, 356.5 KB)
+    - modest-mouse-audience-augustine-amphitheatre-concert-1200w.webp (1200x960, 100.6 KB)
+    - modest-mouse-audience-augustine-amphitheatre-concert-400w.webp (400x320, 14.4 KB)
+
+Original: MODEST MOUSE14.jpg
+  Size: 5.43 MB
+  Outputs:
+    - modest-mouse-acoustic-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x1280, 97.5 KB)
+    - modest-mouse-acoustic-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x800, 47.4 KB)
+    - modest-mouse-acoustic-performance-augustine-amphitheatre-st-augustine-400w.webp (400x266, 10.4 KB)
+
+Original: MOONTAXI_DC-1.JPG
+  Size: 1.51 MB
+  Outputs:
+    - moontaxi-dc-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1638x2048, 198.0 KB)
+    - moontaxi-dc-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 109.8 KB)
+    - moontaxi-dc-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 19.8 KB)
+
+Original: MOONTAXI_DC-2.JPG
+  Size: 1.17 MB
+  Outputs:
+    - moontaxi-dc-live-performance-augustine-amphitheatre-1920w.webp (1638x2048, 162.5 KB)
+    - moontaxi-dc-live-performance-augustine-amphitheatre-1200w.webp (1200x1500, 107.3 KB)
+    - moontaxi-dc-live-performance-augustine-amphitheatre-400w.webp (400x500, 22.5 KB)
+
+Original: PRETTY LIGHTS 2_01.jpg
+  Size: 1.35 MB
+  Outputs:
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 208.2 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 208.2 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-400w.webp (400x500, 29.9 KB)
+
+Original: PRETTY LIGHTS 2_07.jpg
+  Size: 1.78 MB
+  Outputs:
+    - concert-crowd-cheering-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 430.4 KB)
+    - concert-crowd-cheering-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 430.4 KB)
+    - concert-crowd-cheering-augustine-amphitheatre-st-augustine-400w.webp (400x500, 36.2 KB)
+
+Original: PRETTY LIGHTS 3_05.jpg
+  Size: 2.93 MB
+  Outputs:
+    - concert-crowd-augustine-amphitheatre-st-augustine-1920w.webp (1920x1080, 672.6 KB)
+    - concert-crowd-augustine-amphitheatre-st-augustine-1200w.webp (1200x675, 189.0 KB)
+    - concert-crowd-augustine-amphitheatre-st-augustine-400w.webp (400x225, 16.0 KB)
+
+Original: PRETTY LIGHTS 3_06.jpg
+  Size: 2.59 MB
+  Outputs:
+    - concert-crowd-celebration-augustine-amphitheatre-florida-1920w.webp (1920x1080, 480.8 KB)
+    - concert-crowd-celebration-augustine-amphitheatre-florida-1200w.webp (1200x675, 156.2 KB)
+    - concert-crowd-celebration-augustine-amphitheatre-florida-400w.webp (400x225, 22.7 KB)
+
+Original: PRETTY LIGHTS 3_08.jpg
+  Size: 3.42 MB
+  Outputs:
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x1280, 453.7 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x800, 164.3 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-2-400w.webp (400x266, 25.4 KB)
+
+Original: PRETTY LIGHTS 3_12.jpg
+  Size: 30.40 MB
+  Outputs:
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-3-1920w.webp (1920x1280, 537.6 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-3-1200w.webp (1200x800, 211.9 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-3-400w.webp (400x266, 32.4 KB)
+
+Original: PRETTY LIGHTS 3_16.jpg
+  Size: 2.11 MB
+  Outputs:
+    - pretty-lights-live-performance-augustine-amphitheatre-1920w.webp (1080x1350, 411.5 KB)
+    - pretty-lights-live-performance-augustine-amphitheatre-1200w.webp (1080x1350, 411.5 KB)
+    - pretty-lights-live-performance-augustine-amphitheatre-400w.webp (400x500, 31.6 KB)
+
+Original: PRETTY LIGHTS 3_17.jpg
+  Size: 1.12 MB
+  Outputs:
+    - pretty-lights-fans-celebrating-augustine-amphitheatre-1920w.webp (1080x1350, 347.8 KB)
+    - pretty-lights-fans-celebrating-augustine-amphitheatre-1200w.webp (1080x1350, 347.8 KB)
+    - pretty-lights-fans-celebrating-augustine-amphitheatre-400w.webp (400x500, 37.4 KB)
+
+Original: PRETTY LIGHTS 3_18.jpg:Volumes:4TB DSM #2:ZZ_OVERFLOW_ZZ:2024_11_24_PRETTY LIGHTS:2024_11_24_PRETTY LIGHTS _EXPORTS:PRETTY LIGHTS 3_18.jpg
+  Size: 1.99 MB
+  Outputs:
+    - fan-signed-poster-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 472.9 KB)
+    - fan-signed-poster-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 472.9 KB)
+    - fan-signed-poster-augustine-amphitheatre-st-augustine-400w.webp (400x500, 40.8 KB)
+
+Original: PRETTY LIGHTS 3_23.jpg
+  Size: 1.98 MB
+  Outputs:
+    - costumed-performers-celebrating-augustine-amphitheatre-1920w.webp (1080x1350, 570.4 KB)
+    - costumed-performers-celebrating-augustine-amphitheatre-1200w.webp (1080x1350, 570.4 KB)
+    - costumed-performers-celebrating-augustine-amphitheatre-400w.webp (400x500, 59.5 KB)
+
+Original: PRETTY LIGHTS composite 4.jpg
+  Size: 1.64 MB
+  Outputs:
+    - pretty-lights-composite-live-performance-augustine-amphitheatre-1920w.webp (1080x1350, 277.4 KB)
+    - pretty-lights-composite-live-performance-augustine-amphitheatre-1200w.webp (1080x1350, 277.4 KB)
+    - pretty-lights-composite-live-performance-augustine-amphitheatre-400w.webp (400x500, 46.8 KB)
+
+Original: PRETTY LIGHTS.jpg
+  Size: 2.09 MB
+  Outputs:
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-4-1920w.webp (1080x1350, 485.3 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-4-1200w.webp (1080x1350, 485.3 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-4-400w.webp (400x500, 66.0 KB)
+
+Original: PRETTY LIGHTS09.jpg
+  Size: 2.27 MB
+  Outputs:
+    - pretty-lights-laser-show-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 552.7 KB)
+    - pretty-lights-laser-show-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 552.7 KB)
+    - pretty-lights-laser-show-augustine-amphitheatre-st-augustine-400w.webp (400x500, 51.1 KB)
+
+Original: PRETTY LIGHTS10.jpg
+  Size: 1.21 MB
+  Outputs:
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-5-1920w.webp (1080x1350, 314.4 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-5-1200w.webp (1080x1350, 314.4 KB)
+    - pretty-lights-concert-augustine-amphitheatre-st-augustine-5-400w.webp (400x500, 19.4 KB)
+
+Original: REO SW & CHEAP TRICK-6.jpg
+  Size: 9.35 MB
+  Outputs:
+    - reo-speedwagon-cheap-trick-augustine-amphitheatre-performance-1920w.webp (1920x2399, 687.9 KB)
+    - reo-speedwagon-cheap-trick-augustine-amphitheatre-performance-1200w.webp (1200x1499, 159.5 KB)
+    - reo-speedwagon-cheap-trick-augustine-amphitheatre-performance-400w.webp (400x499, 17.6 KB)
+
+Original: REVIVALIST_DC-1.JPG
+  Size: 1.38 MB
+  Outputs:
+    - revivalist-dc-live-performance-augustine-amphitheatre-1920w.webp (1920x1279, 147.1 KB)
+    - revivalist-dc-live-performance-augustine-amphitheatre-1200w.webp (1200x799, 66.1 KB)
+    - revivalist-dc-live-performance-augustine-amphitheatre-400w.webp (400x266, 13.5 KB)
+
+Original: REVIVALIST_DC-2.JPG
+  Size: 1.82 MB
+  Outputs:
+    - revivalist-dc-keyboard-performance-augustine-amphitheatre-1920w.webp (1920x1279, 200.2 KB)
+    - revivalist-dc-keyboard-performance-augustine-amphitheatre-1200w.webp (1200x799, 91.7 KB)
+    - revivalist-dc-keyboard-performance-augustine-amphitheatre-400w.webp (400x266, 19.1 KB)
+
+Original: REVIVALIST_DC-3.JPG
+  Size: 2.10 MB
+  Outputs:
+    - revivalist-dc-live-performance-augustine-amphitheatre-2-1920w.webp (1638x2048, 717.6 KB)
+    - revivalist-dc-live-performance-augustine-amphitheatre-2-1200w.webp (1200x1500, 314.9 KB)
+    - revivalist-dc-live-performance-augustine-amphitheatre-2-400w.webp (400x500, 14.9 KB)
+
+Original: REVIVALIST_DC-4.JPG
+  Size: 1.01 MB
+  Outputs:
+    - revivalist-dc-steel-guitar-performance-augustine-amphitheatre-1920w.webp (1920x1279, 145.9 KB)
+    - revivalist-dc-steel-guitar-performance-augustine-amphitheatre-1200w.webp (1200x799, 75.7 KB)
+    - revivalist-dc-steel-guitar-performance-augustine-amphitheatre-400w.webp (400x266, 16.3 KB)
+
+Original: REVIVALIST_DC-5.JPG
+  Size: 2.64 MB
+  Outputs:
+    - revivalist-dc-live-performance-augustine-amphitheatre-3-1920w.webp (1638x2048, 875.0 KB)
+    - revivalist-dc-live-performance-augustine-amphitheatre-3-1200w.webp (1200x1500, 377.0 KB)
+    - revivalist-dc-live-performance-augustine-amphitheatre-3-400w.webp (400x500, 26.1 KB)
+
+Original: REVIVALIST_DC-6.JPG
+  Size: 2.89 MB
+  Outputs:
+    - revivalist-dc-live-performance-augustine-amphitheatre-4-1920w.webp (1638x2048, 943.3 KB)
+    - revivalist-dc-live-performance-augustine-amphitheatre-4-1200w.webp (1200x1500, 423.4 KB)
+    - revivalist-dc-live-performance-augustine-amphitheatre-4-400w.webp (400x500, 34.6 KB)
+
+Original: REVIVALIST_DC-7.JPG
+  Size: 984.4 KB
+  Outputs:
+    - revivalist-dc-concert-augustine-amphitheatre-st-augustine-1920w.webp (1920x1279, 119.9 KB)
+    - revivalist-dc-concert-augustine-amphitheatre-st-augustine-1200w.webp (1200x799, 66.6 KB)
+    - revivalist-dc-concert-augustine-amphitheatre-st-augustine-400w.webp (400x266, 15.6 KB)
+
+Original: REVIVALIST_TBC-1.JPG
+  Size: 2.12 MB
+  Outputs:
+    - revivalist-tbc-performance-augustine-amphitheatre-st-augustine-1920w.webp (1638x2048, 569.7 KB)
+    - revivalist-tbc-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 259.5 KB)
+    - revivalist-tbc-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 25.6 KB)
+
+Original: REVIVALIST_TBC-2.JPG
+  Size: 2.09 MB
+  Outputs:
+    - revivalist-tbc-keyboard-performance-augustine-amphitheatre-1920w.webp (1920x1535, 424.3 KB)
+    - revivalist-tbc-keyboard-performance-augustine-amphitheatre-1200w.webp (1200x959, 127.9 KB)
+    - revivalist-tbc-keyboard-performance-augustine-amphitheatre-400w.webp (400x319, 13.8 KB)
+
+Original: REVIVALIST_TBC-3.JPG
+  Size: 1.83 MB
+  Outputs:
+    - revivalist-tbc-performing-augustine-amphitheatre-st-augustine-1920w.webp (1920x1535, 188.1 KB)
+    - revivalist-tbc-performing-augustine-amphitheatre-st-augustine-1200w.webp (1200x959, 67.4 KB)
+    - revivalist-tbc-performing-augustine-amphitheatre-st-augustine-400w.webp (400x319, 14.4 KB)
+
+Original: REVIVALIST_TBC-4.JPG
+  Size: 2.29 MB
+  Outputs:
+    - revivalist-tbc-guitar-performance-augustine-amphitheatre-1920w.webp (1638x2048, 525.3 KB)
+    - revivalist-tbc-guitar-performance-augustine-amphitheatre-1200w.webp (1200x1500, 270.6 KB)
+    - revivalist-tbc-guitar-performance-augustine-amphitheatre-400w.webp (400x500, 31.8 KB)
+
+Original: REVIVALIST_TBC-5.JPG
+  Size: 2.02 MB
+  Outputs:
+    - concert-fans-cheering-augustine-amphitheatre-1920w.webp (1638x2048, 390.5 KB)
+    - concert-fans-cheering-augustine-amphitheatre-1200w.webp (1200x1500, 177.0 KB)
+    - concert-fans-cheering-augustine-amphitheatre-400w.webp (400x500, 28.4 KB)
+
+Original: REVIVALIST_TBC-6.JPG
+  Size: 1.49 MB
+  Outputs:
+    - revivalist-tbc-performance-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x1279, 185.3 KB)
+    - revivalist-tbc-performance-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x799, 45.9 KB)
+    - revivalist-tbc-performance-augustine-amphitheatre-st-augustine-2-400w.webp (400x266, 7.8 KB)
+
+Original: REVIVALIST_TBC-7.JPG
+  Size: 1.80 MB
+  Outputs:
+    - revivalist-tbc-concert-augustine-amphitheatre-st-augustine-1920w.webp (1638x2048, 383.8 KB)
+    - revivalist-tbc-concert-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 124.7 KB)
+    - revivalist-tbc-concert-augustine-amphitheatre-st-augustine-400w.webp (400x500, 8.9 KB)
+
+Original: SELECTS_PEPPER_2025-1.jpg
+  Size: 7.92 MB
+  Outputs:
+    - laser-light-show-concert-augustine-amphitheatre-1920w.webp (1920x2400, 944.5 KB)
+    - laser-light-show-concert-augustine-amphitheatre-1200w.webp (1200x1500, 308.4 KB)
+    - laser-light-show-concert-augustine-amphitheatre-400w.webp (400x500, 33.7 KB)
+
+Original: SELECTS_PEPPER_2025-11.jpg
+  Size: 5.88 MB
+  Outputs:
+    - selects-pepper-2025-bass-performance-augustine-amphitheatre-1920w.webp (1920x2400, 514.4 KB)
+    - selects-pepper-2025-bass-performance-augustine-amphitheatre-1200w.webp (1200x1500, 82.8 KB)
+    - selects-pepper-2025-bass-performance-augustine-amphitheatre-400w.webp (400x500, 8.0 KB)
+
+Original: SELECTS_PEPPER_2025-14.jpg
+  Size: 7.33 MB
+  Outputs:
+    - selects-pepper-2025-guitar-performance-augustine-amphitheatre-1920w.webp (1920x2399, 901.5 KB)
+    - selects-pepper-2025-guitar-performance-augustine-amphitheatre-1200w.webp (1200x1499, 295.2 KB)
+    - selects-pepper-2025-guitar-performance-augustine-amphitheatre-400w.webp (400x499, 34.3 KB)
+
+Original: SELECTS_PEPPER_2025-2.jpg
+  Size: 8.40 MB
+  Outputs:
+    - concert-crowd-cheering-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x2400, 980.0 KB)
+    - concert-crowd-cheering-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x1500, 293.9 KB)
+    - concert-crowd-cheering-augustine-amphitheatre-st-augustine-2-400w.webp (400x500, 24.2 KB)
+
+Original: SELECTS_PEPPER_2025-3.jpg
+  Size: 3.62 MB
+  Outputs:
+    - backyard-stage-augustine-amphitheatre-venue-1920w.webp (1920x2400, 463.1 KB)
+    - backyard-stage-augustine-amphitheatre-venue-1200w.webp (1200x1500, 153.7 KB)
+    - backyard-stage-augustine-amphitheatre-venue-400w.webp (400x500, 17.5 KB)
+
+Original: SELECTS_PEPPER_2025-5.jpg
+  Size: 5.91 MB
+  Outputs:
+    - musicians-performing-augustine-amphitheatre-st-augustine-1920w.webp (1920x2400, 947.1 KB)
+    - musicians-performing-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 281.0 KB)
+    - musicians-performing-augustine-amphitheatre-st-augustine-400w.webp (400x500, 21.2 KB)
+
+Original: SELECTS_PEPPER_2025-7.jpg
+  Size: 7.02 MB
+  Outputs:
+    - selects-pepper-2025-guitar-performance-augustine-amphitheatre-2-1920w.webp (1920x2400, 1.15 MB)
+    - selects-pepper-2025-guitar-performance-augustine-amphitheatre-2-1200w.webp (1200x1500, 390.7 KB)
+    - selects-pepper-2025-guitar-performance-augustine-amphitheatre-2-400w.webp (400x500, 38.9 KB)
+
+Original: SOL REVUE-5.jpg
+  Size: 17.50 MB
+  Outputs:
+    - sol-revue-live-performance-augustine-amphitheatre-1920w.webp (1920x2399, 947.4 KB)
+    - sol-revue-live-performance-augustine-amphitheatre-1200w.webp (1200x1499, 217.1 KB)
+    - sol-revue-live-performance-augustine-amphitheatre-400w.webp (400x499, 18.7 KB)
+
+Original: SOL REVUE-7.jpg
+  Size: 12.76 MB
+  Outputs:
+    - sol-revue-live-performance-augustine-amphitheatre-2-1920w.webp (1920x1079, 370.9 KB)
+    - sol-revue-live-performance-augustine-amphitheatre-2-1200w.webp (1200x674, 82.4 KB)
+    - sol-revue-live-performance-augustine-amphitheatre-2-400w.webp (400x224, 10.8 KB)
+
+Original: Slowdive_1.jpg
+  Size: 1.23 MB
+  Outputs:
+    - slowdive-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 163.8 KB)
+    - slowdive-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 163.8 KB)
+    - slowdive-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 28.8 KB)
+
+Original: Slowdive_2.jpg
+  Size: 1.31 MB
+  Outputs:
+    - slowdive-guitarist-performance-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 118.2 KB)
+    - slowdive-guitarist-performance-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 118.2 KB)
+    - slowdive-guitarist-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 12.9 KB)
+
+Original: Slowdive_3.jpg
+  Size: 1.56 MB
+  Outputs:
+    - slowdive-concert-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 341.1 KB)
+    - slowdive-concert-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 341.1 KB)
+    - slowdive-concert-augustine-amphitheatre-st-augustine-400w.webp (400x500, 26.2 KB)
+
+Original: Slowdive_9.jpg
+  Size: 1.37 MB
+  Outputs:
+    - slowdive-concert-augustine-amphitheatre-st-augustine-2-1920w.webp (1080x1350, 267.2 KB)
+    - slowdive-concert-augustine-amphitheatre-st-augustine-2-1200w.webp (1080x1350, 267.2 KB)
+    - slowdive-concert-augustine-amphitheatre-st-augustine-2-400w.webp (400x500, 35.1 KB)
+
+Original: Theivery Corp_2025_-1.jpg
+  Size: 11.96 MB
+  Outputs:
+    - thievery-corp-2025-guitarist-augustine-amphitheatre-st-augustine-1920w.webp (1920x2400, 720.9 KB)
+    - thievery-corp-2025-guitarist-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 202.4 KB)
+    - thievery-corp-2025-guitarist-augustine-amphitheatre-st-augustine-400w.webp (400x500, 28.5 KB)
+
+Original: Theivery Corp_2025_-11.jpg
+  Size: 14.11 MB
+  Outputs:
+    - thievery-corp-2025-live-performance-augustine-amphitheatre-1920w.webp (1920x2400, 894.4 KB)
+    - thievery-corp-2025-live-performance-augustine-amphitheatre-1200w.webp (1200x1500, 316.3 KB)
+    - thievery-corp-2025-live-performance-augustine-amphitheatre-400w.webp (400x500, 53.8 KB)
+
+Original: Theivery Corp_2025_-12.jpg
+  Size: 9.49 MB
+  Outputs:
+    - thievery-corp-2025-augustine-amphitheatre-performance-1920w.webp (1920x2400, 1.12 MB)
+    - thievery-corp-2025-augustine-amphitheatre-performance-1200w.webp (1200x1500, 349.7 KB)
+    - thievery-corp-2025-augustine-amphitheatre-performance-400w.webp (400x500, 43.1 KB)
+
+Original: Theivery Corp_2025_-3.jpg
+  Size: 15.78 MB
+  Outputs:
+    - thievery-corp-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x1280, 377.6 KB)
+    - thievery-corp-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x800, 144.1 KB)
+    - thievery-corp-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x266, 22.9 KB)
+
+Original: Theivery Corp_2025_-4.jpg
+  Size: 11.58 MB
+  Outputs:
+    - thievery-corp-2025-augustine-amphitheatre-performance-2-1920w.webp (1920x1535, 333.9 KB)
+    - thievery-corp-2025-augustine-amphitheatre-performance-2-1200w.webp (1200x959, 127.5 KB)
+    - thievery-corp-2025-augustine-amphitheatre-performance-2-400w.webp (400x319, 28.1 KB)
+
+Original: Theivery Corp_2025_-6.jpg
+  Size: 11.89 MB
+  Outputs:
+    - thievery-corp-2025-augustine-amphitheatre-performance-3-1920w.webp (1920x2400, 639.4 KB)
+    - thievery-corp-2025-augustine-amphitheatre-performance-3-1200w.webp (1200x1500, 189.1 KB)
+    - thievery-corp-2025-augustine-amphitheatre-performance-3-400w.webp (400x500, 33.8 KB)
+
+Original: Theivery Corp_2025_-7.jpg
+  Size: 8.91 MB
+  Outputs:
+    - theivery-corp-guitarist-augustine-amphitheatre-performance-1920w.webp (1920x2400, 921.6 KB)
+    - theivery-corp-guitarist-augustine-amphitheatre-performance-1200w.webp (1200x1500, 320.2 KB)
+    - theivery-corp-guitarist-augustine-amphitheatre-performance-400w.webp (400x500, 44.3 KB)
+
+Original: Theivery Corp_2025_-9.jpg
+  Size: 10.28 MB
+  Outputs:
+    - thievery-corporation-guitarist-augustine-amphitheatre-st-augustine-1920w.webp (1920x2400, 625.0 KB)
+    - thievery-corporation-guitarist-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 242.2 KB)
+    - thievery-corporation-guitarist-augustine-amphitheatre-st-augustine-400w.webp (400x500, 41.8 KB)
+
+Original: Thievery Corporation - 1.jpg
+  Size: 514.1 KB
+  Outputs:
+    - thievery-corporation-conductor-augustine-amphitheatre-1920w.webp (1080x1350, 65.3 KB)
+    - thievery-corporation-conductor-augustine-amphitheatre-1200w.webp (1080x1350, 65.3 KB)
+    - thievery-corporation-conductor-augustine-amphitheatre-400w.webp (400x500, 18.2 KB)
+
+Original: Thievery Corporation-12.jpg
+  Size: 14.84 MB
+  Outputs:
+    - thievery-corporation-live-augustine-amphitheatre-st-augustine-1920w.webp (1920x2400, 959.2 KB)
+    - thievery-corporation-live-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 222.2 KB)
+    - thievery-corporation-live-augustine-amphitheatre-st-augustine-400w.webp (400x500, 18.1 KB)
+
+Original: Thievery Corporation-13.jpg
+  Size: 20.24 MB
+  Outputs:
+    - thievery-corporation-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x1280, 400.6 KB)
+    - thievery-corporation-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x800, 101.7 KB)
+    - thievery-corporation-performance-augustine-amphitheatre-st-augustine-400w.webp (400x266, 17.9 KB)
+
+Original: Thievery Corporation-15.jpg
+  Size: 19.32 MB
+  Outputs:
+    - thievery-corporation-live-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x2880, 1.20 MB)
+    - thievery-corporation-live-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x1800, 306.0 KB)
+    - thievery-corporation-live-augustine-amphitheatre-st-augustine-2-400w.webp (400x600, 31.6 KB)
+
+Original: Thievery Corporation-16.jpg
+  Size: 4.73 MB
+  Outputs:
+    - thievery-corporation-bassist-augustine-amphitheatre-performance-1920w.webp (1920x2400, 1.07 MB)
+    - thievery-corporation-bassist-augustine-amphitheatre-performance-1200w.webp (1200x1500, 440.7 KB)
+    - thievery-corporation-bassist-augustine-amphitheatre-performance-400w.webp (400x500, 32.5 KB)
+
+Original: Thievery Corporation-17.jpg
+  Size: 12.18 MB
+  Outputs:
+    - thievery-corporation-live-performance-augustine-amphitheatre-1920w.webp (1920x1536, 689.7 KB)
+    - thievery-corporation-live-performance-augustine-amphitheatre-1200w.webp (1200x960, 200.4 KB)
+    - thievery-corporation-live-performance-augustine-amphitheatre-400w.webp (400x320, 32.1 KB)
+
+Original: Thievery Corporation-21.jpg
+  Size: 17.21 MB
+  Outputs:
+    - thievery-corporation-crowd-augustine-amphitheatre-st-augustine-1920w.webp (1920x1280, 331.4 KB)
+    - thievery-corporation-crowd-augustine-amphitheatre-st-augustine-1200w.webp (1200x800, 70.7 KB)
+    - thievery-corporation-crowd-augustine-amphitheatre-st-augustine-400w.webp (400x266, 15.6 KB)
+
+Original: WALLOWS_00.JPG
+  Size: 2.77 MB
+  Outputs:
+    - wallows-bassist-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1638x2048, 755.1 KB)
+    - wallows-bassist-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 364.4 KB)
+    - wallows-bassist-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 32.4 KB)
+
+Original: WALLOWS_01.JPG
+  Size: 2.79 MB
+  Outputs:
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1638x2048, 870.8 KB)
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 390.1 KB)
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 36.9 KB)
+
+Original: WALLOWS_02.JPG
+  Size: 3.53 MB
+  Outputs:
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-2-1920w.webp (1638x2048, 821.3 KB)
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x1500, 355.6 KB)
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-2-400w.webp (400x500, 23.5 KB)
+
+Original: WALLOWS_03.JPG
+  Size: 2.24 MB
+  Outputs:
+    - wallows-double-neck-guitar-augustine-amphitheatre-1920w.webp (1638x2048, 826.0 KB)
+    - wallows-double-neck-guitar-augustine-amphitheatre-1200w.webp (1200x1500, 388.6 KB)
+    - wallows-double-neck-guitar-augustine-amphitheatre-400w.webp (400x500, 24.9 KB)
+
+Original: WALLOWS_04.JPG
+  Size: 4.22 MB
+  Outputs:
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-1920w.webp (1638x2048, 603.7 KB)
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 263.6 KB)
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 20.1 KB)
+
+Original: WALLOWS_05.JPG
+  Size: 1.61 MB
+  Outputs:
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-3-1920w.webp (1638x2048, 141.2 KB)
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-3-1200w.webp (1200x1500, 69.5 KB)
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-3-400w.webp (400x500, 16.5 KB)
+
+Original: WALLOWS_06.JPG
+  Size: 2.47 MB
+  Outputs:
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-4-1920w.webp (1513x2048, 872.4 KB)
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-4-1200w.webp (1200x1624, 466.6 KB)
+    - wallows-live-performance-augustine-amphitheatre-st-augustine-4-400w.webp (400x541, 29.8 KB)
+
+Original: WALLOWS_07.JPG
+  Size: 2.41 MB
+  Outputs:
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-2-1920w.webp (1638x2048, 605.3 KB)
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x1500, 260.0 KB)
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-2-400w.webp (400x500, 23.2 KB)
+
+Original: WALLOWS_08.JPG
+  Size: 2.09 MB
+  Outputs:
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-3-1920w.webp (1638x2048, 482.0 KB)
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-3-1200w.webp (1200x1500, 188.0 KB)
+    - wallows-guitarist-performance-augustine-amphitheatre-st-augustine-3-400w.webp (400x500, 21.5 KB)
+
+Original: WALLOWS_09.JPG
+  Size: 1.09 MB
+  Outputs:
+    - wallows-drummer-live-performance-augustine-amphitheatre-1920w.webp (1638x2048, 106.3 KB)
+    - wallows-drummer-live-performance-augustine-amphitheatre-1200w.webp (1200x1500, 71.5 KB)
+    - wallows-drummer-live-performance-augustine-amphitheatre-400w.webp (400x500, 16.6 KB)
+
+Original: WALLOWS_12.JPG
+  Size: 3.07 MB
+  Outputs:
+    - audience-cheering-augustine-amphitheatre-event-1920w.webp (1638x2048, 1.08 MB)
+    - audience-cheering-augustine-amphitheatre-event-1200w.webp (1200x1500, 528.0 KB)
+    - audience-cheering-augustine-amphitheatre-event-400w.webp (400x500, 40.6 KB)
+
+Original: WALLOWS_14.JPG
+  Size: 3.11 MB
+  Outputs:
+    - concert-crowd-augustine-amphitheatre-st-augustine-2-1920w.webp (1638x2048, 1.04 MB)
+    - concert-crowd-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x1500, 507.3 KB)
+    - concert-crowd-augustine-amphitheatre-st-augustine-2-400w.webp (400x500, 51.0 KB)
+
+Original: WIDESPREADPANIC-1.JPG
+  Size: 2.80 MB
+  Outputs:
+    - widespreadpanic-concert-audience-augustine-amphitheatre-1920w.webp (1638x2048, 692.6 KB)
+    - widespreadpanic-concert-audience-augustine-amphitheatre-1200w.webp (1200x1500, 344.1 KB)
+    - widespreadpanic-concert-audience-augustine-amphitheatre-400w.webp (400x500, 40.7 KB)
+
+Original: WIDESPREADPANIC-12.JPG
+  Size: 1.96 MB
+  Outputs:
+    - widespreadpanic-guitarist-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x1535, 211.3 KB)
+    - widespreadpanic-guitarist-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x959, 106.4 KB)
+    - widespreadpanic-guitarist-performance-augustine-amphitheatre-st-augustine-400w.webp (400x319, 23.8 KB)
+
+Original: WIDESPREADPANIC-13.JPG
+  Size: 1.82 MB
+  Outputs:
+    - widespreadpanic-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1920x1279, 253.6 KB)
+    - widespreadpanic-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x799, 127.6 KB)
+    - widespreadpanic-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x266, 23.3 KB)
+
+Original: WIDESPREADPANIC-2.JPG
+  Size: 1.90 MB
+  Outputs:
+    - golden-girls-shirt-concert-crowd-augustine-amphitheatre-1920w.webp (1920x1279, 293.2 KB)
+    - golden-girls-shirt-concert-crowd-augustine-amphitheatre-1200w.webp (1200x799, 111.2 KB)
+    - golden-girls-shirt-concert-crowd-augustine-amphitheatre-400w.webp (400x266, 22.8 KB)
+
+Original: WIDESPREADPANIC-6.JPG
+  Size: 2.08 MB
+  Outputs:
+    - widespreadpanic-performer-crowd-augustine-amphitheatre-1920w.webp (1920x1535, 299.3 KB)
+    - widespreadpanic-performer-crowd-augustine-amphitheatre-1200w.webp (1200x959, 94.3 KB)
+    - widespreadpanic-performer-crowd-augustine-amphitheatre-400w.webp (400x319, 17.8 KB)
+
+Original: WIDESPREADPANIC-8.JPG
+  Size: 2.04 MB
+  Outputs:
+    - concert-audience-cheering-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x1535, 306.1 KB)
+    - concert-audience-cheering-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x959, 103.6 KB)
+    - concert-audience-cheering-augustine-amphitheatre-st-augustine-2-400w.webp (400x319, 19.1 KB)
+
+Original: amp-crowd-young-people.jpg
+  Size: 10.31 MB
+  Outputs:
+    - friends-celebrating-augustine-amphitheatre-event-1920w.webp (1920x2400, 1.29 MB)
+    - friends-celebrating-augustine-amphitheatre-event-1200w.webp (1200x1500, 477.2 KB)
+    - friends-celebrating-augustine-amphitheatre-event-400w.webp (400x500, 50.0 KB)
+
+Original: avett-brothers-1.jpg
+  Size: 2.91 MB
+  Outputs:
+    - avett-brothers-live-performance-augustine-amphitheatre-1920w.webp (1920x1080, 642.3 KB)
+    - avett-brothers-live-performance-augustine-amphitheatre-1200w.webp (1200x675, 205.8 KB)
+    - avett-brothers-live-performance-augustine-amphitheatre-400w.webp (400x225, 24.9 KB)
+
+Original: avett-brothers-4.jpg
+  Size: 1.87 MB
+  Outputs:
+    - avett-brothers-violinist-performance-augustine-amphitheatre-st-augustine-1920w.webp (1080x1350, 449.7 KB)
+    - avett-brothers-violinist-performance-augustine-amphitheatre-st-augustine-1200w.webp (1080x1350, 449.7 KB)
+    - avett-brothers-violinist-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 35.7 KB)
+
+Original: avett-brothers-5.jpg
+  Size: 2.25 MB
+  Outputs:
+    - avett-brothers-concert-augustine-amphitheatre-st-augustine-1920w.webp (1920x1080, 428.9 KB)
+    - avett-brothers-concert-augustine-amphitheatre-st-augustine-1200w.webp (1200x675, 141.1 KB)
+    - avett-brothers-concert-augustine-amphitheatre-st-augustine-400w.webp (400x225, 20.4 KB)
+
+Original: avett-brothers-8.jpg
+  Size: 1.15 MB
+  Outputs:
+    - avett-brothers-cellist-performance-augustine-amphitheatre-1920w.webp (1080x1350, 198.8 KB)
+    - avett-brothers-cellist-performance-augustine-amphitheatre-1200w.webp (1080x1350, 198.8 KB)
+    - avett-brothers-cellist-performance-augustine-amphitheatre-400w.webp (400x500, 24.3 KB)
+
+Original: googoodolls-1.jpg
+  Size: 6.67 MB
+  Outputs:
+    - woman-with-dog-augustine-amphitheatre-crowd-1920w.webp (1920x2400, 776.6 KB)
+    - woman-with-dog-augustine-amphitheatre-crowd-1200w.webp (1200x1500, 227.6 KB)
+    - woman-with-dog-augustine-amphitheatre-crowd-400w.webp (400x500, 23.1 KB)
+
+Original: googoodolls-2.jpg
+  Size: 3.37 MB
+  Outputs:
+    - googoodolls-concert-audience-augustine-amphitheatre-1920w.webp (1920x2400, 109.0 KB)
+    - googoodolls-concert-audience-augustine-amphitheatre-1200w.webp (1200x1500, 55.1 KB)
+    - googoodolls-concert-audience-augustine-amphitheatre-400w.webp (400x500, 14.9 KB)
+
+Original: googoodolls-3.jpg
+  Size: 5.43 MB
+  Outputs:
+    - goo-goo-dolls-concert-augustine-amphitheatre-1920w.webp (1920x2400, 439.1 KB)
+    - goo-goo-dolls-concert-augustine-amphitheatre-1200w.webp (1200x1500, 121.0 KB)
+    - goo-goo-dolls-concert-augustine-amphitheatre-400w.webp (400x500, 18.4 KB)
+
+Original: juvenile-1.JPG
+  Size: 1.70 MB
+  Outputs:
+    - juvenile-performer-crowd-interaction-augustine-amphitheatre-1920w.webp (1920x1279, 253.0 KB)
+    - juvenile-performer-crowd-interaction-augustine-amphitheatre-1200w.webp (1200x799, 95.8 KB)
+    - juvenile-performer-crowd-interaction-augustine-amphitheatre-400w.webp (400x266, 19.6 KB)
+
+Original: juvenile-2.JPG
+  Size: 2.59 MB
+  Outputs:
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-1920w.webp (1638x2048, 386.4 KB)
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-1200w.webp (1200x1500, 137.6 KB)
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-400w.webp (400x500, 16.3 KB)
+
+Original: juvenile-3.JPG
+  Size: 1.86 MB
+  Outputs:
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-2-1920w.webp (1920x1080, 214.3 KB)
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-2-1200w.webp (1200x675, 87.4 KB)
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-2-400w.webp (400x225, 16.3 KB)
+
+Original: juvenile-4.JPG
+  Size: 2.19 MB
+  Outputs:
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-3-1920w.webp (1638x2048, 357.5 KB)
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-3-1200w.webp (1200x1500, 132.3 KB)
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-3-400w.webp (400x500, 15.0 KB)
+
+Original: juvenile-5.JPG
+  Size: 2.76 MB
+  Outputs:
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-4-1920w.webp (1639x2048, 565.8 KB)
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-4-1200w.webp (1200x1499, 235.5 KB)
+    - juvenile-live-performance-augustine-amphitheatre-st-augustine-4-400w.webp (400x499, 20.5 KB)
+
+Original: king-gizzard-lizard-wizard-1.jpg
+  Size: 1.61 MB
+  Outputs:
+    - king-gizzard-live-performance-augustine-amphitheatre-1920w.webp (1080x1350, 317.2 KB)
+    - king-gizzard-live-performance-augustine-amphitheatre-1200w.webp (1080x1350, 317.2 KB)
+    - king-gizzard-live-performance-augustine-amphitheatre-400w.webp (400x500, 37.2 KB)
+
+Original: king-gizzard-lizard-wizard-2.jpg
+  Size: 1.66 MB
+  Outputs:
+    - king-gizzard-live-concert-augustine-amphitheatre-1920w.webp (1080x1350, 313.6 KB)
+    - king-gizzard-live-concert-augustine-amphitheatre-1200w.webp (1080x1350, 313.6 KB)
+    - king-gizzard-live-concert-augustine-amphitheatre-400w.webp (400x500, 42.4 KB)
+
+Original: king-gizzard-lizard-wizard-3.JPG
+  Size: 2.90 MB
+  Outputs:
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-1920w.webp (1638x2048, 742.0 KB)
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-1200w.webp (1200x1500, 332.3 KB)
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-400w.webp (400x500, 34.5 KB)
+
+Original: king-gizzard-lizard-wizard-4.JPG
+  Size: 3.22 MB
+  Outputs:
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-2-1920w.webp (1638x2048, 894.9 KB)
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-2-1200w.webp (1200x1500, 435.5 KB)
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-2-400w.webp (400x500, 49.2 KB)
+
+Original: king-gizzard-lizard-wizard-5.JPG
+  Size: 3.00 MB
+  Outputs:
+    - concert-crowd-cheering-augustine-amphitheatre-1920w.webp (1638x2048, 901.4 KB)
+    - concert-crowd-cheering-augustine-amphitheatre-1200w.webp (1200x1500, 420.2 KB)
+    - concert-crowd-cheering-augustine-amphitheatre-400w.webp (400x500, 32.6 KB)
+
+Original: king-gizzard-lizard-wizard-6.JPG
+  Size: 2.87 MB
+  Outputs:
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-3-1920w.webp (1638x2048, 849.1 KB)
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-3-1200w.webp (1200x1500, 404.9 KB)
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-3-400w.webp (400x500, 41.6 KB)
+
+Original: king-gizzard-lizard-wizard-7.JPG
+  Size: 3.63 MB
+  Outputs:
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-4-1920w.webp (1638x2048, 1014.6 KB)
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-4-1200w.webp (1200x1500, 464.1 KB)
+    - king-gizzard-guitarist-augustine-amphitheatre-performance-4-400w.webp (400x500, 26.2 KB)
+
+Original: king-gizzard-lizard-wizard-8.JPG
+  Size: 2.62 MB
+  Outputs:
+    - concert-audience-cheering-augustine-amphitheatre-1920w.webp (1638x2048, 921.0 KB)
+    - concert-audience-cheering-augustine-amphitheatre-1200w.webp (1200x1500, 406.2 KB)
+    - concert-audience-cheering-augustine-amphitheatre-400w.webp (400x500, 22.3 KB)
+
+============================================================
+TOTALS
+Original: 708.42 MB
+Output: 108.74 MB
+Savings: 599.68 MB (84.7%)

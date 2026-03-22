@@ -35,6 +35,8 @@
 <link rel="stylesheet" href="/css/header.css">
 <link rel="stylesheet" href="/css/components.css">
 
+<!-- Preload hero image for faster LCP -->
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" imagesrcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp 800w, /images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp 1200w" imagesizes="(max-width: 768px) 100vw, 50vw">
 <title>St. Augustine Video Production | First Sight Films</title>
 <meta name="description" content="St. Augustine video production company. Corporate videos, event coverage, and brand stories for Northeast Florida businesses. Based in St. Augustine since 2017.">
 </head>
@@ -92,22 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
       this.setAttribute('aria-expanded', isOpen);
     });
   }
-
-  // Video sound toggle
-  const video = document.getElementById('heroVideo');
-  const soundToggle = document.getElementById('soundToggle');
-
-  if (video && soundToggle) {
-    soundToggle.addEventListener('click', function() {
-      if (video.muted) {
-        video.muted = false;
-        soundToggle.classList.add('unmuted');
-      } else {
-        video.muted = true;
-        soundToggle.classList.remove('unmuted');
-      }
-    });
-  }
 });
 </script>
 
@@ -121,10 +107,13 @@ document.addEventListener('DOMContentLoaded', function() {
       <h1 class="hero-title">St. Augustine | Jacksonville Video & Photo Production</h1>
       <p class="hero-tagline">Stop scrambling for content. We've got you covered.</p>
       <div class="hero-photo-mobile">
-        <video autoplay muted loop playsinline poster="/images/hero/first-sight-films-hero-image.JPG">
-          <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
-          <img src="/images/hero/first-sight-films-hero-image.JPG" alt="Event video production at St. Augustine Amphitheatre by First Sight Films">
-        </video>
+        <img
+          src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp"
+          srcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp 800w,
+                  /images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp 1200w"
+          sizes="100vw"
+          alt="Event video production at St. Augustine Amphitheatre by First Sight Films"
+          fetchpriority="high">
       </div>
       <p class="hero-desc"><strong>We handle the strategy, the shoots, and the delivery</strong> so you can focus on running your business.</p>
       <p class="hero-desc">Professional video and photo production for businesses across St. Johns County, FL.</p>
@@ -137,14 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
     <div class="hero-photo">
-      <video id="heroVideo" autoplay muted loop playsinline poster="/images/hero/first-sight-films-hero-image.JPG">
+      <video id="heroVideo" autoplay muted loop playsinline poster="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp">
         <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
-        <img src="/images/hero/first-sight-films-hero-image.JPG" alt="Event video production at St. Augustine Amphitheatre by First Sight Films">
+        <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" alt="Event video production at St. Augustine Amphitheatre by First Sight Films">
       </video>
-      <button class="video-sound-toggle" id="soundToggle" aria-label="Toggle sound">
-        <span class="sound-off">🔇</span>
-        <span class="sound-on">🔊</span>
-      </button>
     </div>
   </section>
 
@@ -159,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="bento-grid">
         <!-- 1. Corporate Video (Featured) -->
         <a href="/corporate-video-st-augustine/" class="bento-item bento-medium bento-featured">
-          <img src="/images/bento/corporate-video-st-augustine-bento-1-medium.webp" alt="Corporate video production for CrossCountry Mortgage in St. Augustine, FL - behind the scenes with First Sight Films" loading="lazy">
+          <img src="/images/bento/corporate-video-st-augustine-bento-1-thumb.webp" alt="Corporate video production for CrossCountry Mortgage in St. Augustine, FL - behind the scenes with First Sight Films" loading="lazy">
           <div class="bento-overlay">
             <span class="bento-label">Corporate Video</span>
             <span class="bento-subtitle">Professional videos for growing businesses</span>
@@ -177,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- 3. Brand Story -->
         <a href="/st-augustine-video-production/" class="bento-item bento-medium">
-          <img src="/images/bento/brand-story-video-st-augustine-1-medium.webp" alt="Brand story video production for St. Augustine Amphitheatre merchandise campaign by First Sight Films" loading="lazy">
+          <img src="/images/bento/brand-story-video-st-augustine-1-thumb.webp" alt="Brand story video production for St. Augustine Amphitheatre merchandise campaign by First Sight Films" loading="lazy">
           <div class="bento-overlay">
             <span class="bento-label">Brand Story</span>
             <span class="bento-subtitle">Share your story, connect with customers</span>
@@ -186,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- 4. Social Media -->
         <a href="/st-augustine-video-production/" class="bento-item bento-medium">
-          <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-medium.webp" alt="Social media video content for St. Augustine Amphitheatre featuring Thievery Corporation by First Sight Films" loading="lazy">
+          <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-thumbnail.webp" alt="Social media video content for St. Augustine Amphitheatre featuring Thievery Corporation by First Sight Films" loading="lazy">
           <div class="bento-overlay">
             <span class="bento-label">Social Media</span>
             <span class="bento-subtitle">Short-form content that performs</span>
@@ -195,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- 5. Photography -->
         <a href="/st-augustine-photography/" class="bento-item bento-medium">
-          <img src="/images/bento/photography-st-augustine-bento-1-medium.webp" alt="First Sight Films owner Diego Cerquera at Sing Out Loud Festival, Francis Field, St. Augustine, FL" loading="lazy">
+          <img src="/images/bento/photography-st-augustine-bento-1-thumb.webp" alt="First Sight Films owner Diego Cerquera at Sing Out Loud Festival, Francis Field, St. Augustine, FL" loading="lazy">
           <div class="bento-overlay">
             <span class="bento-label">Photography</span>
             <span class="bento-subtitle">Headshots, products, and events</span>
@@ -231,16 +216,16 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="about-media">
         <div class="about-bento">
           <div class="about-bento__item about-bento--main">
-            <img src="/images/about/diego-and-trista-cerquera-sbeach-sunset-travel-1-medium.webp" alt="Diego and Dr. Trista Cerquera, owners of First Sight Films, St. Augustine video production company" loading="lazy">
+            <img src="/images/about/diego-and-trista-cerquera-sbeach-sunset-travel-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, owners of First Sight Films, St. Augustine video production company" loading="lazy">
           </div>
           <div class="about-bento__item about-bento--video">
-            <img src="/images/about/trista-brophy-cerquera-st-augustine-beach-fl-film-set-1-medium.webp" alt="Dr. Trista Cerquera on set at St. Augustine Beach, FL - First Sight Films project manager" loading="lazy">
+            <img src="/images/about/trista-brophy-cerquera-st-augustine-beach-fl-film-set-1-thumb.webp" alt="Dr. Trista Cerquera on set at St. Augustine Beach, FL - First Sight Films project manager" loading="lazy">
           </div>
           <div class="about-bento__item about-bento--small-1">
-            <img src="/images/about/diego-and-trista-brophy-cerquera-st-augustine-first-sight-films-owners-1-medium.webp" alt="Diego and Dr. Trista Cerquera, First Sight Films owners and St. Augustine videographers" loading="lazy">
+            <img src="/images/about/diego-and-trista-brophy-cerquera-st-augustine-first-sight-films-owners-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, First Sight Films owners and St. Augustine videographers" loading="lazy">
           </div>
           <div class="about-bento__item about-bento--small-2">
-            <img src="/images/about/diego-and-trista-brophy-cerquera-at-adobe-max-1-medium.webp" alt="Diego and Dr. Trista Cerquera at Adobe MAX conference" loading="lazy">
+            <img src="/images/about/diego-and-trista-brophy-cerquera-at-adobe-max-1-thumb.webp" alt="Diego and Dr. Trista Cerquera at Adobe MAX conference" loading="lazy">
           </div>
         </div>
       </div>
@@ -263,20 +248,20 @@ document.addEventListener('DOMContentLoaded', function() {
 <section class="section-portfolio" id="portfolio">
   <div class="portfolio-container">
     <div class="portfolio-header">
-      <h2>Video Production Portfolio</h2>
-      <p>A selection of our recent video projects across St. Augustine and Jacksonville.</p>
+      <h2>St. Augustine & Jacksonville Video Production</h2>
+      <p>Video, photography, and creative direction for Northeast Florida businesses.</p>
     </div>
 
     <div class="portfolio-grid">
       <div class="portfolio-item landscape">
         <a href="/st-augustine-video-production/fort-mose-jazz-blues-festival/" class="portfolio-item-link">
-          <img src="/images/portfolio/festival-st-augustine-fort-mose-jazz-blues/festival-photography-st-augustine-fort-mose-jazz-blues-27-large.webp" alt="Live band performing at Fort Mose Jazz and Blues Festival with dramatic stage lighting, St. Augustine FL festival video production by First Sight Films" loading="lazy">
+          <img src="/images/portfolio/festival-video-production-st-augustine-fort-mose-state-park-2-thumb.webp" alt="Live band performing at Fort Mose Jazz and Blues Festival with dramatic stage lighting, St. Augustine FL festival video production by First Sight Films" loading="lazy">
         </a>
         <figcaption class="portfolio-pill">@ <span class="location-text">Fort Mose</span></figcaption>
       </div>
       <div class="portfolio-item landscape">
         <a href="/st-augustine-video-production/staugustineamp/" class="portfolio-item-link">
-          <img src="/images/portfolio/festival-photography-st-augustine-fort-mose-jazz-blues-30-large.webp" alt="Excited fans cheering at The Revivalists concert at St. Augustine Amphitheatre - event video production by First Sight Films" loading="lazy">
+          <img src="/images/ST+AUGUSTINE+AMPHITHEATRE_3f1413da.jpg" alt="St. Augustine Amphitheatre promotional video production" loading="lazy">
         </a>
         <figcaption class="portfolio-pill">@ <span class="location-text">St. Augustine Amphitheatre</span></figcaption>
       </div>
@@ -285,12 +270,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <img src="/images/ICE+PLANT+ST+AUGUSTINE_-15_80e1c984.JPG" alt="Ice Plant Bar brand video production St. Augustine" loading="lazy">
         </a>
         <figcaption class="portfolio-pill">@ <span class="location-text">Ice Plant Bar</span></figcaption>
-      </div>
-      <div class="portfolio-item landscape">
-        <a href="/st-augustine-video-production/seamarkranch/" class="portfolio-item-link">
-          <img src="/images/SEAMARK+RANCH+ST+AUGUSTINE+FLORIDA__0009_044ba779.JPG" alt="Seamark Ranch nonprofit video production St. Augustine" loading="lazy">
-        </a>
-        <figcaption class="portfolio-pill">@ <span class="location-text">Seamark Ranch</span></figcaption>
       </div>
       <div class="portfolio-item landscape">
         <a href="/st-augustine-video-production/singoutloud2024/" class="portfolio-item-link">
@@ -316,10 +295,22 @@ document.addEventListener('DOMContentLoaded', function() {
         </a>
         <figcaption class="portfolio-pill">@ <span class="location-text">Fish Tank Studios</span></figcaption>
       </div>
+      <div class="portfolio-item landscape">
+        <a href="/st-augustine-video-production/pontevedraconcerthall/" class="portfolio-item-link">
+          <img src="/images/logos/ponte-vedtra-concert-hall-logo.png" alt="Ponte Vedra Concert Hall video production Jacksonville" loading="lazy">
+        </a>
+        <figcaption class="portfolio-pill">@ <span class="location-text">Ponte Vedra Concert Hall</span></figcaption>
+      </div>
+      <div class="portfolio-item landscape">
+        <a href="/st-augustine-video-production/stjohnsculturalcouncil/" class="portfolio-item-link">
+          <img src="/images/logos/st-johns-cultural-council-logo.jpeg" alt="St. Johns Cultural Council video production St. Augustine" loading="lazy">
+        </a>
+        <figcaption class="portfolio-pill">@ <span class="location-text">St. Johns Cultural Council</span></figcaption>
+      </div>
     </div>
 
     <div class="portfolio-cta">
-      <a href="/st-augustine-video-production/" class="btn btn-primary">View All Projects</a>
+      <a href="/st-augustine-video-production/" class="btn btn-primary">View Full Portfolio</a>
     </div>
   </div>
 </section>
@@ -902,18 +893,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "First Sight Films - St. Augustine Video Production Showreel",
-  "description": "Professional video production services in St. Augustine and Jacksonville, FL. See our work capturing events, brand stories, and corporate content.",
-  "thumbnailUrl": "https://www.firstsightfilms.com/images/hero/first-sight-films-hero-image.JPG",
-  "contentUrl": "https://www.firstsightfilms.com/images/hero/first-sight-films-hero-video-interviews.mp4",
-  "uploadDate": "2026-03-01",
-  "duration": "PT30S"
-}
-</script>
 
 <footer class="site-footer">
 

@@ -1,0 +1,156 @@
+FSF Image Optimization Log
+Generated: 2026-03-20 11:25:23
+============================================================
+
+Original: 2025_ SOL_ Hero-2-3.jpg
+  Size: 10.57 MB
+  Outputs:
+    - sing-out-loud-festival-francis-field-concert-1920w.webp (1920x1536, 363.6 KB)
+    - sing-out-loud-festival-francis-field-concert-1200w.webp (1200x959, 169.5 KB)
+    - sing-out-loud-festival-francis-field-concert-400w.webp (400x320, 27.6 KB)
+
+Original: 2025_ SOL_ Hero-2.jpg
+  Size: 20.68 MB
+  Outputs:
+    - sing-out-loud-festival-francis-field-stage-1920w.webp (1920x1535, 475.3 KB)
+    - sing-out-loud-festival-francis-field-stage-1200w.webp (1200x959, 168.1 KB)
+    - sing-out-loud-festival-francis-field-stage-400w.webp (400x319, 25.0 KB)
+
+Original: 2025_ SOL_ LeGrand-2.jpg
+  Size: 562.0 KB
+  Outputs:
+    - sing-out-loud-festival-crowd-francis-field-1920w.webp (1080x720, 57.3 KB)
+    - sing-out-loud-festival-crowd-francis-field-1200w.webp (1080x720, 57.3 KB)
+    - sing-out-loud-festival-crowd-francis-field-400w.webp (400x266, 17.5 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_02.jpg
+  Size: 1.41 MB
+  Outputs:
+    - sing-out-loud-festival-francis-field-performance-1920w.webp (1080x1350, 273.4 KB)
+    - sing-out-loud-festival-francis-field-performance-1200w.webp (1080x1350, 273.4 KB)
+    - sing-out-loud-festival-francis-field-performance-400w.webp (400x500, 37.3 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_04.jpg
+  Size: 1012.8 KB
+  Outputs:
+    - sing-out-loud-performer-francis-field-1920w.webp (1080x1350, 95.9 KB)
+    - sing-out-loud-performer-francis-field-1200w.webp (1080x1350, 95.9 KB)
+    - sing-out-loud-performer-francis-field-400w.webp (400x500, 17.4 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_05.jpg
+  Size: 1.41 MB
+  Outputs:
+    - sing-out-loud-performer-francis-field-2-1920w.webp (1080x1350, 299.7 KB)
+    - sing-out-loud-performer-francis-field-2-1200w.webp (1080x1350, 299.7 KB)
+    - sing-out-loud-performer-francis-field-2-400w.webp (400x500, 24.9 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_08.jpg
+  Size: 721.6 KB
+  Outputs:
+    - sing-out-loud-festival-crowd-francis-field-2-1920w.webp (1080x864, 76.2 KB)
+    - sing-out-loud-festival-crowd-francis-field-2-1200w.webp (1080x864, 76.2 KB)
+    - sing-out-loud-festival-crowd-francis-field-2-400w.webp (400x320, 20.2 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_09.jpg
+  Size: 1.14 MB
+  Outputs:
+    - sing-out-loud-festival-performer-francis-field-1920w.webp (1080x1350, 172.1 KB)
+    - sing-out-loud-festival-performer-francis-field-1200w.webp (1080x1350, 172.1 KB)
+    - sing-out-loud-festival-performer-francis-field-400w.webp (400x500, 27.8 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_11.jpg
+  Size: 1.50 MB
+  Outputs:
+    - sing-out-loud-festival-performer-francis-field-2-1920w.webp (1080x1350, 343.6 KB)
+    - sing-out-loud-festival-performer-francis-field-2-1200w.webp (1080x1350, 343.6 KB)
+    - sing-out-loud-festival-performer-francis-field-2-400w.webp (400x500, 27.3 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_15.jpg
+  Size: 1.30 MB
+  Outputs:
+    - singer-performing-francis-field-festival-1920w.webp (1080x1350, 246.0 KB)
+    - singer-performing-francis-field-festival-1200w.webp (1080x1350, 246.0 KB)
+    - singer-performing-francis-field-festival-400w.webp (400x500, 31.0 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_18.jpg
+  Size: 1.28 MB
+  Outputs:
+    - sing-out-loud-performer-francis-field-3-1920w.webp (1080x1350, 228.1 KB)
+    - sing-out-loud-performer-francis-field-3-1200w.webp (1080x1350, 228.1 KB)
+    - sing-out-loud-performer-francis-field-3-400w.webp (400x500, 28.6 KB)
+
+Original: 2025_SOL_DAY 2_ SOMBR_20.jpg
+  Size: 1.35 MB
+  Outputs:
+    - sing-out-loud-festival-stage-performance-1920w.webp (1080x1350, 245.4 KB)
+    - sing-out-loud-festival-stage-performance-1200w.webp (1080x1350, 245.4 KB)
+    - sing-out-loud-festival-stage-performance-400w.webp (400x500, 39.2 KB)
+
+Original: 2025_SOL_DAY _ DAVID KUSHNER4.jpg
+  Size: 1.30 MB
+  Outputs:
+    - dai-kushner-stage-performance-francis-field-1920w.webp (1080x1350, 189.4 KB)
+    - dai-kushner-stage-performance-francis-field-1200w.webp (1080x1350, 189.4 KB)
+    - dai-kushner-stage-performance-francis-field-400w.webp (400x500, 40.0 KB)
+
+Original: 2025_SOL_DAY _ DAVID KUSHNER7.jpg
+  Size: 1.37 MB
+  Outputs:
+    - dave-kushner-live-performance-francis-field-1920w.webp (1080x1350, 204.9 KB)
+    - dave-kushner-live-performance-francis-field-1200w.webp (1080x1350, 204.9 KB)
+    - dave-kushner-live-performance-francis-field-400w.webp (400x500, 45.1 KB)
+
+Original: 2025_SOL_DAY _ FATHER JOHN MISTY0.jpg
+  Size: 1.10 MB
+  Outputs:
+    - sing-out-loud-festival-performer-francis-field-3-1920w.webp (1080x1350, 132.9 KB)
+    - sing-out-loud-festival-performer-francis-field-3-1200w.webp (1080x1350, 132.9 KB)
+    - sing-out-loud-festival-performer-francis-field-3-400w.webp (400x500, 38.6 KB)
+
+Original: 2025_SOL_DAY _ FATHER JOHN MISTY2.jpg
+  Size: 1.18 MB
+  Outputs:
+    - sing-out-loud-performer-francis-field-4-1920w.webp (1080x1350, 147.1 KB)
+    - sing-out-loud-performer-francis-field-4-1200w.webp (1080x1350, 147.1 KB)
+    - sing-out-loud-performer-francis-field-4-400w.webp (400x500, 39.6 KB)
+
+Original: 2025_SOL_DAY _ FATHER JOHN MISTY4.jpg
+  Size: 1.12 MB
+  Outputs:
+    - lead-singer-performance-francis-field-festival-1920w.webp (1080x1350, 325.3 KB)
+    - lead-singer-performance-francis-field-festival-1200w.webp (1080x1350, 325.3 KB)
+    - lead-singer-performance-francis-field-festival-400w.webp (400x500, 50.2 KB)
+
+Original: 2025_SOL_DAY _ SARAH KINSLEY1.jpg
+  Size: 1.58 MB
+  Outputs:
+    - sing-out-loud-festival-francis-field-performance-2-1920w.webp (1080x1350, 267.4 KB)
+    - sing-out-loud-festival-francis-field-performance-2-1200w.webp (1080x1350, 267.4 KB)
+    - sing-out-loud-festival-francis-field-performance-2-400w.webp (400x500, 42.4 KB)
+
+Original: 2025_SOL_DAY _ SARAH KINSLEY6.jpg
+  Size: 1.14 MB
+  Outputs:
+    - sing-out-loud-vocalist-francis-field-1920w.webp (1920x2400, 137.0 KB)
+    - sing-out-loud-vocalist-francis-field-1200w.webp (1200x1500, 72.0 KB)
+    - sing-out-loud-vocalist-francis-field-400w.webp (400x500, 18.7 KB)
+
+Original: 2025_SOL_DAY _ VANCE JOY3.jpg
+  Size: 1.66 MB
+  Outputs:
+    - sing-out-loud-festival-francis-field-performance-3-1920w.webp (1080x1350, 299.7 KB)
+    - sing-out-loud-festival-francis-field-performance-3-1200w.webp (1080x1350, 299.7 KB)
+    - sing-out-loud-festival-francis-field-performance-3-400w.webp (400x500, 55.7 KB)
+
+Original: 2025_SOL_DAY _ VANCE JOY4.jpg
+  Size: 1008.2 KB
+  Outputs:
+    - musician-guitar-stage-lighting-francis-field-1920w.webp (1080x1350, 150.9 KB)
+    - musician-guitar-stage-lighting-francis-field-1200w.webp (1080x1350, 150.9 KB)
+    - musician-guitar-stage-lighting-francis-field-400w.webp (400x500, 14.1 KB)
+
+============================================================
+TOTALS
+Original: 54.34 MB
+Output: 9.34 MB
+Savings: 45.00 MB (82.8%)

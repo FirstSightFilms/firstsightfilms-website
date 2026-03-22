@@ -167,7 +167,8 @@
   overflow: hidden;
 }
 
-.hero-photo img {
+.hero-photo img,
+.hero-photo video {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -1857,12 +1858,11 @@
 /* About Hero */
 .about-hero {
   position: relative;
-  height: 50vh;
-  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  padding: 4rem 2rem;
+  background: rgba(244, 192, 87, 0.4);
 }
 
 .about-hero-bg {
@@ -1892,7 +1892,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  color: #fff;
+  color: #333;
   padding: 0 20px;
   max-width: 800px;
 }
@@ -1900,6 +1900,7 @@
 .about-hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #f4c057;
 }
 
 .about-hero-intro {

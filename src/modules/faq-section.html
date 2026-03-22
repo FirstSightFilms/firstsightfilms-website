@@ -1,0 +1,34 @@
+<!-- FAQ Section Module
+     Usage: {{faq-section}}
+
+     This module provides the section wrapper for FAQs.
+     The actual FAQ content is data-driven and pulled from JSON files.
+
+     In your page, use:
+       {{faq-section}}        - for the wrapper structure
+       {{faq:homepage}}       - pulls questions from src/faqs/homepage.json
+       {{faq-schema:homepage}} - generates FAQPage schema for SEO
+
+     Example page usage:
+       <section class="section-faq" id="faq">
+         <div class="container">
+           <h2>Frequently Asked Questions</h2>
+           {{faq:homepage}}
+         </div>
+       </section>
+       {{faq-schema:homepage}}
+
+     Or create page-specific FAQ JSON files:
+       src/faqs/corporate-video-st-augustine.json
+       src/faqs/fort-mose.json
+       etc.
+-->
+<section class="section-faq" id="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <!-- FAQ content is data-driven -->
+      <!-- Use {{faq:pagename}} placeholder in your page -->
+    </div>
+  </div>
+</section>

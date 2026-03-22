@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "question": "What is a video and photo retainer?",
+      "answer": "<p>A retainer is an ongoing partnership where we provide a set amount of video and photo production each month. Instead of booking project-by-project, you get priority scheduling, consistent content output, and typically a lower per-deliverable cost. It's ideal for businesses that need regular content for social media, events, or marketing campaigns.</p>"
+    },
+    {
+      "question": "How does pricing work for a monthly retainer?",
+      "answer": "<p>Retainer pricing is based on the scope of deliverables you need each month—number of shoots, video edits, photos, and turnaround time. We build a custom package that fits your budget and content goals. Most retainers start at a monthly commitment with flexible terms after an initial period.</p>"
+    },
+    {
+      "question": "What's included in a typical retainer package?",
+      "answer": "<p>Packages vary, but most include a set number of shoot days, edited videos (short-form and/or long-form), edited photos, and revisions. We also include content strategy sessions to plan your calendar and ensure every shoot aligns with your marketing goals.</p>"
+    },
+    {
+      "question": "How is a retainer different from hiring us per project?",
+      "answer": "<p>Per-project work is great for one-time needs, but retainers give you consistency, priority booking, and cost savings. You also get a production team that deeply understands your brand voice—no re-explaining your style every time.</p>"
+    },
+    {
+      "question": "Can I adjust my retainer if my needs change?",
+      "answer": "<p>Yes. We review retainer scopes quarterly and can scale up or down based on your business needs. If you have a big event coming up, we can add capacity. If things slow down, we can adjust accordingly.</p>"
+    },
+    {
+      "question": "What types of businesses benefit most from a retainer?",
+      "answer": "<p>Businesses with ongoing content needs—venues, restaurants, event spaces, real estate teams, and brands running active social media or ad campaigns. If you're constantly scrambling for fresh content, a retainer takes that off your plate.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a video and photo retainer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A retainer is an ongoing partnership where we provide a set amount of video and photo production each month. Instead of booking project-by-project, you get priority scheduling, consistent content output, and typically a lower per-deliverable cost. It's ideal for businesses that need regular content for social media, events, or marketing campaigns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does pricing work for a monthly retainer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Retainer pricing is based on the scope of deliverables you need each month—number of shoots, video edits, photos, and turnaround time. We build a custom package that fits your budget and content goals. Most retainers start at a monthly commitment with flexible terms after an initial period."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in a typical retainer package?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Packages vary, but most include a set number of shoot days, edited videos (short-form and/or long-form), edited photos, and revisions. We also include content strategy sessions to plan your calendar and ensure every shoot aligns with your marketing goals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is a retainer different from hiring us per project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per-project work is great for one-time needs, but retainers give you consistency, priority booking, and cost savings. You also get a production team that deeply understands your brand voice—no re-explaining your style every time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I adjust my retainer if my needs change?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We review retainer scopes quarterly and can scale up or down based on your business needs. If you have a big event coming up, we can add capacity. If things slow down, we can adjust accordingly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of businesses benefit most from a retainer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Businesses with ongoing content needs—venues, restaurants, event spaces, real estate teams, and brands running active social media or ad campaigns. If you're constantly scrambling for fresh content, a retainer takes that off your plate."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{head}}
+<title>Fort Mose Jazz & Blues Festival Videographer | St. Augustine Video Production</title>
+<meta name="description" content="Official festival videographer for Fort Mose Jazz and Blues Festival in St. Augustine, FL. Two years capturing highlight reels, social clips, and event photography at Fort Mose Historic State Park. Northeast Florida video production.">
+
+<style>
+/* Event Page Specific Styles */
+.event-hero {
+  background: rgba(244, 192, 87, 0.2);
+  color: var(--color-black);
+  width: 100%;
+}
+
+.event-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.event-hero-content {
+  text-align: left;
+}
+
+.event-hero-media {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  align-self: center;
+  max-width: 78%;
+  margin-left: auto;
+}
+
+.event-hero-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.video-sound-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.77rem;
+  transition: background 0.2s ease;
+}
+
+.video-sound-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.video-sound-toggle .sound-on {
+  display: none;
+}
+
+.video-sound-toggle.unmuted .sound-off {
+  display: none;
+}
+
+.video-sound-toggle.unmuted .sound-on {
+  display: inline;
+}
+
+.event-hero-label {
+  display: inline-block;
+  background: var(--color-gold);
+  color: var(--color-black);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  margin-bottom: 1.25rem;
+  margin-left: -0.85rem;
+}
+
+.event-hero h1 {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: #f4c057;
+}
+
+.event-hero h1 .h1-subtitle {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+
+.event-hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.event-hero-tagline {
+  font-size: 1.1rem;
+  color: var(--color-gray-700);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.event-hero-proof {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  margin-bottom: 1.5rem;
+}
+
+.event-hero-proof strong {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.event-hero-stats {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.event-stat {
+  text-align: left;
+}
+
+.event-stat-number {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f4c057;
+  line-height: 1;
+}
+
+.event-stat-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gray-500);
+  margin-top: 0.25rem;
+}
+
+/* What You Get Section */
+.what-you-get {
+  padding: 4rem 0;
+  background: var(--color-white);
+}
+
+.what-you-get-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.what-you-get-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.what-you-get-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-black);
+}
+
+.what-you-get-item p {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+/* Gallery Section */
+.event-gallery {
+  padding: 4rem 0;
+  background: var(--color-white);
+}
+
+.event-gallery h2 {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Video Gallery Section */
+.video-gallery {
+  padding: 4rem 0;
+  background: var(--color-gray-100);
+}
+
+.video-gallery h2 {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.video-item {
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-black);
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-item-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: var(--color-white);
+  font-size: 0.9rem;
+}
+
+/* About Event Section */
+.event-about {
+  padding: 4rem 0;
+  background: var(--color-white);
+}
+
+.event-about-content {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.event-about h2 {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.event-about p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-gray-700);
+  margin-bottom: 1.25rem;
+}
+
+/* How It Works - Simplified */
+.event-process {
+  padding: 4rem 0;
+  background: var(--color-gray-100);
+}
+
+.event-process h2 {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.event-process-subtitle {
+  text-align: center;
+  color: var(--color-gray-600);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.process-steps-simple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.process-step-simple {
+  text-align: center;
+  padding: 1rem;
+}
+
+.process-step-simple .step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-gold);
+  color: var(--color-black);
+  font-weight: 700;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.process-step-simple h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.process-step-simple p {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.event-cta {
+  padding: 4rem 0;
+  background: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.event-cta h2 {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.event-cta p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FAQ Section */
+.event-faq {
+  padding: 4rem 0;
+  background: var(--color-white);
+}
+
+.event-faq h2 {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1044px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .event-hero-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .event-hero-content {
+    text-align: center;
+    order: 2;
+  }
+
+  .event-hero-media {
+    order: 1;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .event-hero-stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .event-hero-inner {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .event-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .what-you-get-grid,
+  .process-steps-simple {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.firstsightfilms.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "St. Augustine Video Production",
+      "item": "https://www.firstsightfilms.com/st-augustine-video-production/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fort Mose Jazz & Blues Festival",
+      "item": "https://www.firstsightfilms.com/st-augustine-video-production/fort-mose-jazz-blues-festival/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Fort Mose Jazz and Blues Festival?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Fort Mose Jazz and Blues Festival is an annual celebration of African American history and music held at Fort Mose Historic State Park in St. Augustine, Florida. The festival honors the legacy of Fort Mose — the first legally sanctioned free Black settlement in what is now the United States, established in 1738."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does First Sight Films handle event video production?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We come prepared. Before your event, we review the schedule, scout the venue, and plan our coverage. On event day, we work independently — no questions, no check-ins, no distractions. You focus on running the event. We deliver a highlight reel and social clips within two weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What deliverables are included with festival video coverage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our standard festival package includes a 2-4 minute highlight reel, 5-10 short-form clips for social media, and a raw footage archive. We can also provide photography, artist interviews, and promotional content for next year's event."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="page-event">
+
+{{header}}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Video sound toggle
+  const video = document.getElementById('heroVideo');
+  const soundToggle = document.getElementById('soundToggle');
+
+  if (video && soundToggle) {
+    soundToggle.addEventListener('click', function() {
+      if (video.muted) {
+        video.muted = false;
+        soundToggle.classList.add('unmuted');
+      } else {
+        video.muted = true;
+        soundToggle.classList.remove('unmuted');
+      }
+    });
+  }
+});
+</script>
+
+
+<main>
+
+  <!-- Hero Section -->
+  <section class="event-hero">
+    <div class="event-hero-inner">
+    <div class="event-hero-content">
+      <span class="event-hero-label">St. Augustine Festival Videography</span>
+      <h1>Fort Mose Jazz & Blues Festival<br><span class="h1-subtitle">First Sight Films</span></h1>
+      <p class="event-hero-subtitle">Video Production & Photography | St. Augustine, FL</p>
+      <p class="event-hero-tagline">First Sight Films partnered with St. Johns Cultural Events, Inc. for the Fort Mose Jazz and Blues Festival. 2026 was our second year in a row providing festival photography and event videography for every night of the festival.</p>
+      <p class="event-hero-proof"><strong>Fort Mose Historic State Park</strong> &bull; St. Augustine, FL &bull; Northeast Florida</p>
+      <div class="event-hero-stats">
+        <div class="event-stat"><span class="event-stat-number">2</span><span class="event-stat-label">Years</span></div>
+        <div class="event-stat"><span class="event-stat-number">11</span><span class="event-stat-label">Nights</span></div>
+        <div class="event-stat"><span class="event-stat-number">100+</span><span class="event-stat-label">Deliverables</span></div>
+      </div>
+    </div>
+    <div class="event-hero-media">
+      <video id="heroVideo" autoplay muted loop playsinline poster="/images/portfolio/festival-video-production-st-augustine-fort-mose-state-park-1-large.webp">
+        <source src="/festival-video-portfolio/festival-video-recap-fort-mose-jazz-blues-fest-2026-web.mp4" type="video/mp4">
+        <img src="/images/portfolio/festival-video-production-st-augustine-fort-mose-state-park-1-large.webp" alt="Fort Mose Jazz and Blues Festival video production by First Sight Films">
+      </video>
+      <button class="video-sound-toggle" id="soundToggle" aria-label="Toggle sound">
+        <span class="sound-off">🔇</span>
+        <span class="sound-on">🔊</span>
+      </button>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Photo Gallery -->
+  <section class="event-gallery">
+    <div class="container">
+      <h2>Festival Photography</h2>
+      <div class="gallery-grid">
+        <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp" alt="Gary Clark Jr performs on stage at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1200w.webp" alt="Gary Clark Jr performing on stage with guitar at outdoor festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-2-1200w.webp" alt="Gary Clark Jr performing with guitar and hat under stage lights in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-3-1200w.webp" alt="Gary Clark Jr performing on stage with band at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-1200w.webp" alt="Samara Joy performing with orchestra at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-2-1200w.webp" alt="Samara Joy performing with live orchestra at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-3-1200w.webp" alt="Samara Joy performs on stage with live band at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/ledisi-fort-mose-jazz-festival-performance-st-augustine-1200w.webp" alt="Ledisi performing energetically on stage with arms outstretched at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/robert-cray-fort-mose-jazz-festival-1200w.webp" alt="Robert Cray performing with electric guitar and microphone on stage in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/ruthie-foster-fort-mose-jazz-festival-performance-1200w.webp" alt="Ruthie Foster performing with guitar and microphone at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-1200w.webp" alt="Don Was performing energetically at microphone during Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/don-was-bass-fort-mose-festival-1200w.webp" alt="Don Was playing upright bass at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/hannah-stokes-fort-mose-jazz-festival-performance-1200w.webp" alt="Hannah Stokes performing with guitar and microphone at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-1200w.webp" alt="Gilmore Quandry performing live on stage with dramatic blue lighting in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-2-1200w.webp" alt="Gilmore Quandry band performing on stage with dramatic blue and green lighting in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/dionysus-band-fort-mose-jazz-festival-performance-1200w.webp" alt="Dionysus band performing on illuminated stage with colorful lighting in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-crowd-stage-1200w.webp" alt="Large crowd gathered at illuminated outdoor concert stage with purple lighting in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-applauding-1200w.webp" alt="Concert audience members raising hands and applauding during live music performance in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-st-augustine-1200w.webp" alt="Audience members smiling and enjoying Fort Mose Jazz Blues Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-laughing-1200w.webp" alt="Woman laughing enthusiastically while holding phone at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-drummer-performance-1200w.webp" alt="Drummer with long dreadlocks and sunglasses performing behind drum kit in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-trumpet-performance-1200w.webp" alt="Musician playing trumpet on stage with blue lighting at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-guitar-performance-1200w.webp" alt="Musician performing with electric guitar against vibrant nebula backdrop in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-stage-performance-1200w.webp" alt="Band performs on stage with colorful lighting at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-musician-performance-1200w.webp" alt="Jazz musician in black beret and blue coat performing at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-performers-st-augustine-1200w.webp" alt="Two smiling festival performers posing together at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-festival-poster-wall-visitors-1200w.webp" alt="Two people viewing colorful poster wall display at cultural venue in St. Augustine, Florida" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-historical-interpreter-festival-attendees-1200w.webp" alt="Historical interpreter in colonial costume speaks with festival attendees in St. Augustine, Florida" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Gallery -->
+  <section class="video-gallery">
+    <div class="container">
+      <h2>Festival Videos</h2>
+      <div class="video-grid">
+        <div class="video-item">
+          <div class="video-item-placeholder">Video 1 - Coming Soon</div>
+        </div>
+        <div class="video-item">
+          <div class="video-item-placeholder">Video 2 - Coming Soon</div>
+        </div>
+        <div class="video-item">
+          <div class="video-item-placeholder">Video 3 - Coming Soon</div>
+        </div>
+        <div class="video-item">
+          <div class="video-item-placeholder">Video 4 - Coming Soon</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Event -->
+  <section class="event-about">
+    <div class="event-about-content">
+      <h2>About Fort Mose</h2>
+      <p>Fort Mose Historic State Park is the site of the first legally sanctioned free Black settlement in what is now the United States. Established in 1738, Fort Mose was a refuge for escaped slaves from the British colonies — a pivotal chapter in American history, located just north of downtown St. Augustine.</p>
+      <p>The annual Fort Mose Jazz and Blues Festival honors this legacy through live music, cultural programming, and community celebration. For two consecutive years, First Sight Films has served as the official video production partner — documenting performances, capturing crowd energy, and helping preserve these moments.</p>
+      <p style="margin-top: 1.5rem;"><a href="/st-augustine-video-production/" style="color: var(--color-gold); text-decoration: underline;">View more of our St. Augustine video production work →</a></p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="event-process">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p class="event-process-subtitle">Simple process. No surprises. No chasing you down.</p>
+
+      <div class="process-steps-simple">
+        <div class="process-step-simple">
+          <span class="step-number">1</span>
+          <h3>Tell Us the Date</h3>
+          <p>Share your event details. We'll ask a few questions upfront so we don't have to bother you later.</p>
+        </div>
+        <div class="process-step-simple">
+          <span class="step-number">2</span>
+          <h3>We Handle the Rest</h3>
+          <p>Pre-production, shot lists, and venue prep happen before we arrive. Event day is just execution.</p>
+        </div>
+        <div class="process-step-simple">
+          <span class="step-number">3</span>
+          <h3>Get Your Content</h3>
+          <p>Social clips delivered fast. Full recap within two weeks. Ready to share and archive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="event-cta">
+    <div class="container">
+      <h2>Planning an event in St. Augustine?</h2>
+      <p>Tell us the date. We'll take video off your plate.</p>
+      <a href="/contact/" class="btn btn-accent">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="event-faq">
+    <div class="container">
+      <h2>Common Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">What do we get?</summary>
+          <div class="faq-answer">
+            <p>Our standard event package includes:</p>
+            <ul>
+              <li>2-4 minute highlight reel</li>
+              <li>5-10 short-form clips for social media</li>
+              <li>Raw footage archive for future use</li>
+            </ul>
+            <p>We can also add photography, artist interviews, or promotional videos for next year's event.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">How much does it cost?</summary>
+          <div class="faq-answer">
+            <p>Single-day festival coverage typically runs $2,500-$4,000 depending on the scope. Multi-day events run higher. We work with nonprofit and cultural organizations regularly and can structure packages around grant funding requirements.</p>
+            <p>Tell us about your event and we'll give you a clear number.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">How far in advance should we book?</summary>
+          <div class="faq-answer">
+            <p>2-3 months is ideal. It gives us time for pre-production — reviewing schedules, scouting locations, coordinating with your team. For larger events, 3-6 months ensures availability.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">What if we've never worked with a videographer before?</summary>
+          <div class="faq-answer">
+            <p>That's fine. We'll guide you through what we need — usually just the event schedule and any key moments you want captured. We handle the rest. You don't need to know anything about video production.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Do you also shoot photos?</summary>
+          <div class="faq-answer">
+            <p>Yes. Many clients bundle video and photography. It's more efficient — one coordinated team, one point of contact. Photo packages include performance shots, crowd candids, and press-ready images.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Fort Mose Jazz and Blues Festival",
+  "description": "Annual celebration of African American history and music at Fort Mose Historic State Park, the site of the first legally sanctioned free Black settlement in the United States.",
+  "location": {
+    "@type": "Place",
+    "name": "Fort Mose Historic State Park",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "St. Augustine",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Fort Mose Historical Society"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Festival Video Production - Fort Mose Jazz & Blues Festival",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "First Sight Films",
+    "url": "https://www.firstsightfilms.com"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "St. Augustine"
+  },
+  "description": "Official video production partner for the Fort Mose Jazz and Blues Festival in St. Augustine, Florida. Professional event videography and photography.",
+  "serviceType": "Event Video Production"
+}
+</script>
+
+{{schema}}
+
+{{footer}}
+
+</body>
+</html>

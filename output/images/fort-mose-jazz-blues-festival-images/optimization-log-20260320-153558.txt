@@ -1,0 +1,212 @@
+FSF Image Optimization Log
+Generated: 2026-03-20 15:35:58
+============================================================
+
+Original: 2026_ FORT MOSE- CROWD-NIGHT 512.jpg
+  Size: 8.20 MB
+  Outputs:
+    - fort-mose-jazz-festival-audience-applauding-1920w.webp (1920x2400, 883.9 KB)
+    - fort-mose-jazz-festival-audience-applauding-1200w.webp (1200x1500, 261.1 KB)
+    - fort-mose-jazz-festival-audience-applauding-400w.webp (400x500, 16.3 KB)
+
+Original: 2026_ FORT MOSE- CROWD-NIGHT 517.jpg
+  Size: 7.93 MB
+  Outputs:
+    - fort-mose-jazz-festival-musician-performance-1920w.webp (1920x2400, 788.6 KB)
+    - fort-mose-jazz-festival-musician-performance-1200w.webp (1200x1500, 240.6 KB)
+    - fort-mose-jazz-festival-musician-performance-400w.webp (400x500, 14.5 KB)
+
+Original: 2026_ FORT MOSE- HANNAH STOKES02.jpg
+  Size: 4.49 MB
+  Outputs:
+    - hannah-stokes-fort-mose-jazz-festival-performance-1920w.webp (1920x2399, 598.8 KB)
+    - hannah-stokes-fort-mose-jazz-festival-performance-1200w.webp (1200x1499, 215.7 KB)
+    - hannah-stokes-fort-mose-jazz-festival-performance-400w.webp (400x499, 17.7 KB)
+
+Original: 2026_ FORT MOSE- SAMARA JOY-02.jpg
+  Size: 6.55 MB
+  Outputs:
+    - samara-joy-fort-mose-jazz-festival-performance-1920w.webp (1920x2400, 300.0 KB)
+    - samara-joy-fort-mose-jazz-festival-performance-1200w.webp (1200x1500, 95.6 KB)
+    - samara-joy-fort-mose-jazz-festival-performance-400w.webp (400x500, 13.0 KB)
+
+Original: 2026_ FORT MOSE- SAMARA JOY-05.jpg
+  Size: 9.64 MB
+  Outputs:
+    - samara-joy-fort-mose-jazz-festival-performance-2-1920w.webp (1920x2400, 486.0 KB)
+    - samara-joy-fort-mose-jazz-festival-performance-2-1200w.webp (1200x1500, 144.3 KB)
+    - samara-joy-fort-mose-jazz-festival-performance-2-400w.webp (400x500, 18.5 KB)
+
+Original: 2026_ FORT MOSE- SAMARA JOY-06.jpg
+  Size: 9.23 MB
+  Outputs:
+    - samara-joy-fort-mose-jazz-festival-performance-3-1920w.webp (1920x2400, 553.5 KB)
+    - samara-joy-fort-mose-jazz-festival-performance-3-1200w.webp (1200x1500, 166.9 KB)
+    - samara-joy-fort-mose-jazz-festival-performance-3-400w.webp (400x500, 19.8 KB)
+
+Original: 2026_ FORT MOSE_ CROWD-14.jpg
+  Size: 7.62 MB
+  Outputs:
+    - fort-mose-jazz-festival-audience-laughing-1920w.webp (1920x1536, 489.0 KB)
+    - fort-mose-jazz-festival-audience-laughing-1200w.webp (1200x960, 141.1 KB)
+    - fort-mose-jazz-festival-audience-laughing-400w.webp (400x320, 19.1 KB)
+
+Original: 2026_ FORT MOSE_ CROWD-19.jpg
+  Size: 7.40 MB
+  Outputs:
+    - fort-mose-jazz-festival-performers-st-augustine-1920w.webp (1920x2400, 771.8 KB)
+    - fort-mose-jazz-festival-performers-st-augustine-1200w.webp (1200x1500, 242.0 KB)
+    - fort-mose-jazz-festival-performers-st-augustine-400w.webp (400x500, 18.7 KB)
+
+Original: 2026_ FORT MOSE_ DON WAS-04.jpg
+  Size: 6.48 MB
+  Outputs:
+    - don-was-fort-mose-jazz-festival-performance-1920w.webp (1920x2399, 666.0 KB)
+    - don-was-fort-mose-jazz-festival-performance-1200w.webp (1200x1499, 194.9 KB)
+    - don-was-fort-mose-jazz-festival-performance-400w.webp (400x499, 12.9 KB)
+
+Original: 2026_ FORT MOSE_ DON WAS-11.jpg
+  Size: 6.77 MB
+  Outputs:
+    - don-was-bass-fort-mose-festival-1920w.webp (1920x2400, 423.6 KB)
+    - don-was-bass-fort-mose-festival-1200w.webp (1200x1500, 107.0 KB)
+    - don-was-bass-fort-mose-festival-400w.webp (400x500, 17.4 KB)
+
+Original: 2026_ FORT MOSE_ GARY CLARK JR-01.jpg
+  Size: 4.88 MB
+  Outputs:
+    - gary-clark-jr-fort-mose-jazz-festival-1920w.webp (1920x2399, 817.1 KB)
+    - gary-clark-jr-fort-mose-jazz-festival-1200w.webp (1200x1499, 255.0 KB)
+    - gary-clark-jr-fort-mose-jazz-festival-400w.webp (400x499, 11.5 KB)
+
+Original: 2026_ FORT MOSE_ GARY CLARK JR-03.jpg
+  Size: 14.41 MB
+  Outputs:
+    - gary-clark-jr-fort-mose-jazz-festival-performance-1920w.webp (1920x2400, 736.7 KB)
+    - gary-clark-jr-fort-mose-jazz-festival-performance-1200w.webp (1200x1500, 225.5 KB)
+    - gary-clark-jr-fort-mose-jazz-festival-performance-400w.webp (400x500, 26.4 KB)
+
+Original: 2026_ FORT MOSE_ GARY CLARK JR-07.jpg
+  Size: 7.83 MB
+  Outputs:
+    - gary-clark-jr-fort-mose-jazz-festival-2-1920w.webp (1920x2400, 588.9 KB)
+    - gary-clark-jr-fort-mose-jazz-festival-2-1200w.webp (1200x1500, 145.0 KB)
+    - gary-clark-jr-fort-mose-jazz-festival-2-400w.webp (400x500, 7.4 KB)
+
+Original: 2026_ FORT MOSE_ GARY CLARK JR-08.jpg
+  Size: 14.87 MB
+  Outputs:
+    - gary-clark-jr-fort-mose-jazz-festival-3-1920w.webp (1920x2400, 827.1 KB)
+    - gary-clark-jr-fort-mose-jazz-festival-3-1200w.webp (1200x1500, 222.3 KB)
+    - gary-clark-jr-fort-mose-jazz-festival-3-400w.webp (400x500, 21.2 KB)
+
+Original: 2026_ FORT MOSE_ GARY CLARK JR-10.jpg
+  Size: 6.06 MB
+  Outputs:
+    - fort-mose-jazz-festival-audience-st-augustine-1920w.webp (1920x1536, 486.5 KB)
+    - fort-mose-jazz-festival-audience-st-augustine-1200w.webp (1200x960, 123.1 KB)
+    - fort-mose-jazz-festival-audience-st-augustine-400w.webp (400x320, 8.9 KB)
+
+Original: 2026_ FORT MOSE_ GARY CLARK JR-15.jpg
+  Size: 11.14 MB
+  Outputs:
+    - dionysus-band-fort-mose-jazz-festival-performance-1920w.webp (1920x1536, 360.8 KB)
+    - dionysus-band-fort-mose-jazz-festival-performance-1200w.webp (1200x960, 115.7 KB)
+    - dionysus-band-fort-mose-jazz-festival-performance-400w.webp (400x320, 16.7 KB)
+
+Original: 2026_ FORT MOSE_ LEDISI-02.jpg
+  Size: 8.82 MB
+  Outputs:
+    - ledisi-fort-mose-jazz-festival-performance-st-augustine-1920w.webp (1920x2400, 436.2 KB)
+    - ledisi-fort-mose-jazz-festival-performance-st-augustine-1200w.webp (1200x1500, 140.2 KB)
+    - ledisi-fort-mose-jazz-festival-performance-st-augustine-400w.webp (400x500, 20.6 KB)
+
+Original: 2026_ FORT MOSE_ LEDISI-08.jpg
+  Size: 8.09 MB
+  Outputs:
+    - man-dining-st-augustine-restaurant-1920w.webp (1920x2400, 667.2 KB)
+    - man-dining-st-augustine-restaurant-1200w.webp (1200x1500, 179.7 KB)
+    - man-dining-st-augustine-restaurant-400w.webp (400x500, 17.8 KB)
+
+Original: 2026_ FORT MOSE_ LEDISI-15.jpg
+  Size: 4.06 MB
+  Outputs:
+    - fort-mose-jazz-festival-drummer-performance-1920w.webp (1920x2399, 623.8 KB)
+    - fort-mose-jazz-festival-drummer-performance-1200w.webp (1200x1499, 257.3 KB)
+    - fort-mose-jazz-festival-drummer-performance-400w.webp (400x499, 32.0 KB)
+
+Original: 2026_ FORT MOSE_ LEDISI-18.jpg
+  Size: 5.81 MB
+  Outputs:
+    - fort-mose-jazz-festival-trumpet-performance-1920w.webp (1920x2400, 510.9 KB)
+    - fort-mose-jazz-festival-trumpet-performance-1200w.webp (1200x1500, 177.9 KB)
+    - fort-mose-jazz-festival-trumpet-performance-400w.webp (400x500, 22.8 KB)
+
+Original: 2026_ FORT MOSE_ LEDISI-20.jpg
+  Size: 11.13 MB
+  Outputs:
+    - fort-mose-jazz-festival-stage-performance-1920w.webp (1920x1536, 417.3 KB)
+    - fort-mose-jazz-festival-stage-performance-1200w.webp (1200x960, 142.9 KB)
+    - fort-mose-jazz-festival-stage-performance-400w.webp (400x320, 18.8 KB)
+
+Original: 2026_ FORT MOSE_ Robert Cray Ruthie Foster-13.jpg
+  Size: 6.23 MB
+  Outputs:
+    - fort-mose-jazz-festival-guitar-performance-1920w.webp (1920x2399, 702.4 KB)
+    - fort-mose-jazz-festival-guitar-performance-1200w.webp (1200x1499, 222.4 KB)
+    - fort-mose-jazz-festival-guitar-performance-400w.webp (400x499, 28.8 KB)
+
+Original: 2026_ FORT MOSE_ Robert Cray Ruthie Foster-17.jpg
+  Size: 7.61 MB
+  Outputs:
+    - ruthie-foster-fort-mose-jazz-festival-performance-1920w.webp (1920x2400, 438.2 KB)
+    - ruthie-foster-fort-mose-jazz-festival-performance-1200w.webp (1200x1500, 120.7 KB)
+    - ruthie-foster-fort-mose-jazz-festival-performance-400w.webp (400x500, 14.8 KB)
+
+Original: 2026_ FORT MOSE_ Robert Cray Ruthie Foster-7.jpg
+  Size: 11.84 MB
+  Outputs:
+    - fort-mose-jazz-festival-crowd-stage-1920w.webp (1920x1535, 733.3 KB)
+    - fort-mose-jazz-festival-crowd-stage-1200w.webp (1200x959, 227.1 KB)
+    - fort-mose-jazz-festival-crowd-stage-400w.webp (400x319, 20.5 KB)
+
+Original: 2026_ FORT MOSE_ Robert Cray Ruthie Foster-9.jpg
+  Size: 7.24 MB
+  Outputs:
+    - robert-cray-fort-mose-jazz-festival-1920w.webp (1920x2400, 593.7 KB)
+    - robert-cray-fort-mose-jazz-festival-1200w.webp (1200x1500, 160.7 KB)
+    - robert-cray-fort-mose-jazz-festival-400w.webp (400x500, 13.7 KB)
+
+Original: 2026_ FORT MOSE_ THE GILMORE QUANDRY-07.jpg
+  Size: 8.38 MB
+  Outputs:
+    - gilmore-quandry-fort-mose-jazz-festival-performance-1920w.webp (1920x2399, 719.7 KB)
+    - gilmore-quandry-fort-mose-jazz-festival-performance-1200w.webp (1200x1499, 228.2 KB)
+    - gilmore-quandry-fort-mose-jazz-festival-performance-400w.webp (400x499, 23.7 KB)
+
+Original: 2026_ FORT MOSE_ THE GILMORE QUANDRY-08.jpg
+  Size: 7.30 MB
+  Outputs:
+    - gilmore-quandry-fort-mose-jazz-festival-performance-2-1920w.webp (1920x1536, 765.4 KB)
+    - gilmore-quandry-fort-mose-jazz-festival-performance-2-1200w.webp (1200x960, 262.1 KB)
+    - gilmore-quandry-fort-mose-jazz-festival-performance-2-400w.webp (400x320, 27.6 KB)
+
+Original: 2026_ FORT MOSE_CROWD-NIGHT 508.jpg
+  Size: 13.12 MB
+  Outputs:
+    - fort-mose-festival-poster-wall-visitors-1920w.webp (1920x1536, 416.2 KB)
+    - fort-mose-festival-poster-wall-visitors-1200w.webp (1200x960, 115.4 KB)
+    - fort-mose-festival-poster-wall-visitors-400w.webp (400x320, 20.2 KB)
+
+Original: 2026_ FORT MOSE_CROWD-NIGHT 512.jpg
+  Size: 10.23 MB
+  Outputs:
+    - fort-mose-historical-interpreter-festival-attendees-1920w.webp (1920x1536, 347.3 KB)
+    - fort-mose-historical-interpreter-festival-attendees-1200w.webp (1200x960, 78.6 KB)
+    - fort-mose-historical-interpreter-festival-attendees-400w.webp (400x320, 9.6 KB)
+
+============================================================
+TOTALS
+Original: 243.38 MB
+Output: 22.35 MB
+Savings: 221.02 MB (90.8%)

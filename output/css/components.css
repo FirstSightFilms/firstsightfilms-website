@@ -165,23 +165,13 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  align-self: center;
-  max-width: 78%;
-  margin-left: auto;
 }
 
-.hero-photo img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
+.hero-photo img,
 .hero-photo video {
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -195,50 +185,6 @@
   height: auto;
   object-fit: cover;
   border-radius: 8px;
-}
-
-.hero-photo-mobile video {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.video-sound-toggle {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.77rem;
-  transition: background 0.2s ease;
-}
-
-.video-sound-toggle:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.video-sound-toggle .sound-on {
-  display: none;
-}
-
-.video-sound-toggle.unmuted .sound-off {
-  display: none;
-}
-
-.video-sound-toggle.unmuted .sound-on {
-  display: inline;
-  border-radius: 8px;
-  max-width: 300px;
-  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -1912,12 +1858,11 @@
 /* About Hero */
 .about-hero {
   position: relative;
-  height: 50vh;
-  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  padding: 4rem 2rem;
+  background: rgba(244, 192, 87, 0.4);
 }
 
 .about-hero-bg {
@@ -1947,7 +1892,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  color: #fff;
+  color: #333;
   padding: 0 20px;
   max-width: 800px;
 }
@@ -1955,6 +1900,7 @@
 .about-hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #f4c057;
 }
 
 .about-hero-intro {

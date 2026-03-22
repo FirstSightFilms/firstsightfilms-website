@@ -1,0 +1,35 @@
+<!-- Testimonials Module
+     Usage: {{testimonials}}
+
+     This module provides the section wrapper for testimonials/reviews.
+     The actual review content is data-driven and pulled from:
+       src/reviews/testimonials.json
+
+     In your page, use:
+       {{reviews}}  - pulls and renders testimonials from JSON
+
+     The reviews carousel includes:
+       - Client name and date
+       - 5-star rating display
+       - Review text
+       - Link to Google reviews
+       - Navigation arrows
+
+     Data file location: src/reviews/testimonials.json
+     Schema: Can include AggregateRating for SEO rich results
+-->
+<section class="section-testimonials" id="reviews">
+  <div class="container">
+    <div class="testimonials-header">
+      <h2>What Our Clients Say</h2>
+      <p class="testimonials-subtitle">50+ five-star reviews on Google</p>
+    </div>
+    <div class="testimonials-carousel">
+      <!-- Review content is data-driven -->
+      <!-- Use {{reviews}} placeholder to render from testimonials.json -->
+    </div>
+    <div class="testimonials-cta">
+      <a href="https://www.google.com/maps/place/First+Sight+Films/" target="_blank" rel="noopener" class="btn btn-secondary">Read All Reviews on Google</a>
+    </div>
+  </div>
+</section>

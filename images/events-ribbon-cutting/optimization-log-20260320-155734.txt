@@ -1,0 +1,51 @@
+FSF Image Optimization Log
+Generated: 2026-03-20 15:57:34
+============================================================
+
+Original: 2025_ WALK ONS ST JOHNS_RIBBON CUTTING_082.jpg
+  Size: 14.56 MB
+  Outputs:
+    - walk-ons-ribbon-cutting-st-augustine-1920w.webp (1920x1280, 255.5 KB)
+    - walk-ons-ribbon-cutting-st-augustine-1200w.webp (1200x800, 112.5 KB)
+    - walk-ons-ribbon-cutting-st-augustine-400w.webp (400x266, 19.3 KB)
+
+Original: 2025_ WALK ONS ST JOHNS_RIBBON CUTTING_085.jpg
+  Size: 11.04 MB
+  Outputs:
+    - walk-ons-ribbon-cutting-celebration-st-augustine-1920w.webp (1920x1536, 249.0 KB)
+    - walk-ons-ribbon-cutting-celebration-st-augustine-1200w.webp (1200x960, 105.6 KB)
+    - walk-ons-ribbon-cutting-celebration-st-augustine-400w.webp (400x320, 18.3 KB)
+
+Original: 2025_ WALK ONS ST JOHNS_RIBBON CUTTING_108.jpg
+  Size: 11.26 MB
+  Outputs:
+    - walk-ons-ribbon-cutting-st-augustine-2-1920w.webp (1920x1536, 349.2 KB)
+    - walk-ons-ribbon-cutting-st-augustine-2-1200w.webp (1200x960, 150.8 KB)
+    - walk-ons-ribbon-cutting-st-augustine-2-400w.webp (400x320, 26.8 KB)
+
+Original: 2025_ WALK ONS ST JOHNS_RIBBON CUTTING_121.jpg
+  Size: 9.84 MB
+  Outputs:
+    - walk-ons-ribbon-cutting-celebration-st-augustine-2-1920w.webp (1920x2400, 589.4 KB)
+    - walk-ons-ribbon-cutting-celebration-st-augustine-2-1200w.webp (1200x1500, 155.4 KB)
+    - walk-ons-ribbon-cutting-celebration-st-augustine-2-400w.webp (400x500, 15.6 KB)
+
+Original: 2025_ WALK ONS ST JOHNS_RIBBON CUTTING_133.jpg
+  Size: 19.89 MB
+  Outputs:
+    - walk-ons-st-johns-employee-badge-st-augustine-1920w.webp (1920x2880, 663.4 KB)
+    - walk-ons-st-johns-employee-badge-st-augustine-1200w.webp (1200x1800, 170.4 KB)
+    - walk-ons-st-johns-employee-badge-st-augustine-400w.webp (400x600, 18.6 KB)
+
+Original: 2025_ WALK ONS ST JOHNS_RIBBON CUTTING_141.jpg
+  Size: 19.07 MB
+  Outputs:
+    - walk-ons-ribbon-cutting-st-augustine-3-1920w.webp (1920x2880, 968.0 KB)
+    - walk-ons-ribbon-cutting-st-augustine-3-1200w.webp (1200x1800, 298.4 KB)
+    - walk-ons-ribbon-cutting-st-augustine-3-400w.webp (400x600, 32.9 KB)
+
+============================================================
+TOTALS
+Original: 85.66 MB
+Output: 4.10 MB
+Savings: 81.56 MB (95.2%)

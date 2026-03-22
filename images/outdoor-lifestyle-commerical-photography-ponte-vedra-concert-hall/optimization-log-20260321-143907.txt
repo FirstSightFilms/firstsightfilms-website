@@ -1,0 +1,233 @@
+FSF Image Optimization Log
+Generated: 2026-03-21 14:39:07
+============================================================
+
+Original: 2025_ PVCH_ FALL MERCH _SEQUENCE 1-14.jpg
+  Size: 7.08 MB
+  Outputs:
+    - outdoor-lifestyle-ponte-vedra-florida-1920w.webp (1920x2399, 329.1 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-1200w.webp (1200x1499, 112.8 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-400w.webp (400x499, 11.0 KB)
+
+Original: 2025_ PVCH_ FALL MERCH _SEQUENCE 1-17.jpg
+  Size: 7.27 MB
+  Outputs:
+    - outdoor-lifestyle-ponte-vedra-florida-2-1920w.webp (1920x2399, 353.7 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-2-1200w.webp (1200x1499, 122.7 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-2-400w.webp (400x499, 16.0 KB)
+
+Original: 2025_ PVCH_ FALL MERCH _SEQUENCE 1-19.jpg
+  Size: 6.44 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-1920w.webp (1920x1920, 292.3 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-1200w.webp (1200x1200, 107.4 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-400w.webp (400x400, 17.6 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-101.jpg
+  Size: 9.02 MB
+  Outputs:
+    - outdoor-lifestyle-waterfront-ponte-vedra-florida-1920w.webp (1920x2400, 429.9 KB)
+    - outdoor-lifestyle-waterfront-ponte-vedra-florida-1200w.webp (1200x1500, 172.7 KB)
+    - outdoor-lifestyle-waterfront-ponte-vedra-florida-400w.webp (400x500, 21.8 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-110.jpg
+  Size: 9.66 MB
+  Outputs:
+    - outdoor-lifestyle-boating-ponte-vedra-florida-1920w.webp (1920x2400, 441.0 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-1200w.webp (1200x1500, 172.1 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-400w.webp (400x500, 21.6 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-112.jpg
+  Size: 10.85 MB
+  Outputs:
+    - outdoor-lifestyle-dock-ponte-vedra-florida-1920w.webp (1920x2880, 506.7 KB)
+    - outdoor-lifestyle-dock-ponte-vedra-florida-1200w.webp (1200x1800, 191.7 KB)
+    - outdoor-lifestyle-dock-ponte-vedra-florida-400w.webp (400x600, 22.6 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-117.jpg
+  Size: 8.89 MB
+  Outputs:
+    - outdoor-lifestyle-dock-ponte-vedra-florida-2-1920w.webp (1920x2400, 409.6 KB)
+    - outdoor-lifestyle-dock-ponte-vedra-florida-2-1200w.webp (1200x1500, 160.9 KB)
+    - outdoor-lifestyle-dock-ponte-vedra-florida-2-400w.webp (400x500, 23.1 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-129.jpg
+  Size: 9.88 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-2-1920w.webp (1920x2880, 403.6 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-2-1200w.webp (1200x1800, 131.3 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-2-400w.webp (400x600, 17.8 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-133.jpg
+  Size: 12.64 MB
+  Outputs:
+    - outdoor-lifestyle-coffee-ponte-vedra-florida-1920w.webp (1920x2880, 554.5 KB)
+    - outdoor-lifestyle-coffee-ponte-vedra-florida-1200w.webp (1200x1800, 193.3 KB)
+    - outdoor-lifestyle-coffee-ponte-vedra-florida-400w.webp (400x600, 25.5 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-135.jpg
+  Size: 7.79 MB
+  Outputs:
+    - outdoor-lifestyle-coffee-ponte-vedra-florida-2-1920w.webp (1920x2399, 378.2 KB)
+    - outdoor-lifestyle-coffee-ponte-vedra-florida-2-1200w.webp (1200x1499, 128.9 KB)
+    - outdoor-lifestyle-coffee-ponte-vedra-florida-2-400w.webp (400x499, 14.6 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-142.jpg
+  Size: 11.98 MB
+  Outputs:
+    - outdoor-lifestyle-ponte-vedra-florida-3-1920w.webp (1920x2880, 505.0 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-3-1200w.webp (1200x1800, 202.9 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-3-400w.webp (400x600, 32.8 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-17.jpg
+  Size: 7.92 MB
+  Outputs:
+    - outdoor-lifestyle-ponte-vedra-florida-4-1920w.webp (1920x2400, 338.5 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-4-1200w.webp (1200x1500, 99.4 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-4-400w.webp (400x500, 11.8 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-18.jpg
+  Size: 7.26 MB
+  Outputs:
+    - outdoor-lifestyle-ponte-vedra-florida-5-1920w.webp (1920x2400, 341.0 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-5-1200w.webp (1200x1500, 113.5 KB)
+    - outdoor-lifestyle-ponte-vedra-florida-5-400w.webp (400x500, 12.8 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-33.jpg
+  Size: 9.01 MB
+  Outputs:
+    - outdoor-lifestyle-dock-ponte-vedra-florida-3-1920w.webp (1920x2400, 433.4 KB)
+    - outdoor-lifestyle-dock-ponte-vedra-florida-3-1200w.webp (1200x1500, 169.8 KB)
+    - outdoor-lifestyle-dock-ponte-vedra-florida-3-400w.webp (400x500, 28.7 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-35.jpg
+  Size: 8.79 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-3-1920w.webp (1920x2400, 426.3 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-3-1200w.webp (1200x1500, 172.2 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-3-400w.webp (400x500, 24.6 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-36.jpg
+  Size: 9.39 MB
+  Outputs:
+    - outdoor-lifestyle-boating-ponte-vedra-florida-2-1920w.webp (1920x2399, 492.7 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-2-1200w.webp (1200x1499, 197.7 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-2-400w.webp (400x499, 30.2 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-4.jpg
+  Size: 7.87 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-4-1920w.webp (1920x1536, 202.0 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-4-1200w.webp (1200x960, 60.1 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-4-400w.webp (400x320, 9.9 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-40.jpg
+  Size: 8.63 MB
+  Outputs:
+    - outdoor-lifestyle-boating-ponte-vedra-florida-3-1920w.webp (1920x2400, 418.2 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-3-1200w.webp (1200x1500, 164.1 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-3-400w.webp (400x500, 26.7 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-47.jpg
+  Size: 7.87 MB
+  Outputs:
+    - outdoor-lifestyle-boating-ponte-vedra-florida-4-1920w.webp (1920x2400, 339.2 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-4-1200w.webp (1200x1500, 131.5 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-4-400w.webp (400x500, 20.3 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-52.jpg
+  Size: 10.24 MB
+  Outputs:
+    - outdoor-lifestyle-boating-ponte-vedra-florida-5-1920w.webp (1920x2880, 468.5 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-5-1200w.webp (1200x1800, 178.0 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-5-400w.webp (400x600, 25.4 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-53.jpg
+  Size: 11.80 MB
+  Outputs:
+    - outdoor-lifestyle-canoe-ponte-vedra-florida-1920w.webp (1920x1280, 318.7 KB)
+    - outdoor-lifestyle-canoe-ponte-vedra-florida-1200w.webp (1200x800, 125.4 KB)
+    - outdoor-lifestyle-canoe-ponte-vedra-florida-400w.webp (400x266, 16.9 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-57.jpg
+  Size: 10.77 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-5-1920w.webp (1920x1280, 225.6 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-5-1200w.webp (1200x800, 81.9 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-5-400w.webp (400x266, 13.9 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-64.jpg
+  Size: 10.80 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-6-1920w.webp (1920x1280, 218.5 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-6-1200w.webp (1200x800, 70.8 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-6-400w.webp (400x266, 10.3 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-65.jpg
+  Size: 11.95 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-7-1920w.webp (1920x1280, 301.4 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-7-1200w.webp (1200x800, 116.1 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-7-400w.webp (400x266, 17.1 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-68.jpg
+  Size: 10.41 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-8-1920w.webp (1920x2400, 541.7 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-8-1200w.webp (1200x1500, 237.8 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-8-400w.webp (400x500, 33.7 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-70.jpg
+  Size: 11.98 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-9-1920w.webp (1920x2880, 568.2 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-9-1200w.webp (1200x1800, 219.8 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-9-400w.webp (400x600, 27.0 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-73.jpg
+  Size: 10.99 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-10-1920w.webp (1920x2880, 528.6 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-10-1200w.webp (1200x1800, 207.3 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-10-400w.webp (400x600, 29.0 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-77.jpg
+  Size: 12.10 MB
+  Outputs:
+    - outdoor-lifestyle-boating-ponte-vedra-florida-6-1920w.webp (1920x2880, 602.3 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-6-1200w.webp (1200x1800, 246.3 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-6-400w.webp (400x600, 33.5 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-82.jpg
+  Size: 11.07 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-11-1920w.webp (1920x2880, 555.2 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-11-1200w.webp (1200x1800, 221.9 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-11-400w.webp (400x600, 28.3 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-86.jpg
+  Size: 10.02 MB
+  Outputs:
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-12-1920w.webp (1920x2400, 531.3 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-12-1200w.webp (1200x1500, 228.7 KB)
+    - outdoor-lifestyle-fishing-ponte-vedra-florida-12-400w.webp (400x500, 32.8 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-88.jpg
+  Size: 8.00 MB
+  Outputs:
+    - outdoor-lifestyle-boating-ponte-vedra-florida-7-1920w.webp (1920x1280, 272.2 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-7-1200w.webp (1200x800, 120.4 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-7-400w.webp (400x266, 20.7 KB)
+
+Original: 2025_ PVCH_ FALL MERCH-96.jpg
+  Size: 7.98 MB
+  Outputs:
+    - outdoor-lifestyle-boating-ponte-vedra-florida-8-1920w.webp (1920x2400, 518.8 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-8-1200w.webp (1200x1500, 214.6 KB)
+    - outdoor-lifestyle-boating-ponte-vedra-florida-8-400w.webp (400x500, 25.2 KB)
+
+============================================================
+TOTALS
+Original: 306.34 MB
+Output: 18.58 MB
+Savings: 287.76 MB (93.9%)

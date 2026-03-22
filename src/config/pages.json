@@ -1,0 +1,53 @@
+{
+  "homepage": {
+    "h1": "St. Augustine | Jacksonville Video & Photo Production",
+    "tagline": "Stop scrambling for content. We've got you covered.",
+    "description": "We handle the strategy, the shoots, and the delivery so you can focus on running your business.",
+    "description2": "Professional video and photo production for businesses across St. Johns County, FL.",
+    "cta_text": "Let's Talk",
+    "cta_url": "/contact/",
+    "hero_video": "/images/hero/first-sight-films-hero-video-interviews.mp4",
+    "hero_image": "/images/hero/first-sight-films-hero-image.JPG",
+    "hero_alt": "Event video production at St. Augustine Amphitheatre by First Sight Films"
+  },
+  "corporate-video-st-augustine": {
+    "label": "St. Augustine & Jacksonville",
+    "h1": "Corporate Video Production in St. Augustine",
+    "tagline": "A full production team — built to protect your time.",
+    "description": "We've spent 10+ years helping businesses in Saint Augustine, FL create video content that aligns with their goals. From brand stories to training videos, we handle the strategy, planning, production, and execution.",
+    "cta_text": "Start a Conversation",
+    "cta_url": "/contact/"
+  },
+  "st-augustine-photography": {
+    "label": "St. Augustine & Jacksonville",
+    "h1": "Professional Photography in St. Augustine",
+    "tagline": "Images that tell your story.",
+    "description": "Event coverage, headshots, and brand photography for businesses across Northeast Florida.",
+    "cta_text": "Book a Shoot",
+    "cta_url": "/contact/"
+  },
+  "st-augustine-video-production": {
+    "label": "Portfolio",
+    "h1": "Video Production Portfolio",
+    "tagline": "See what we've created.",
+    "description": "Browse our work for nonprofits, venues, events, and businesses across Florida.",
+    "cta_text": "Work With Us",
+    "cta_url": "/contact/"
+  },
+  "aboutus": {
+    "label": "Our Story",
+    "h1": "About First Sight Films",
+    "tagline": "St. Augustine storytellers since 2014.",
+    "description": "Diego and Trista Cerquera started First Sight Films with a simple mission: help local businesses tell their stories through video.",
+    "cta_text": "Get In Touch",
+    "cta_url": "/contact/"
+  },
+  "contact": {
+    "label": "Contact",
+    "h1": "Let's Talk About Your Project",
+    "tagline": "Ready to get started?",
+    "description": "Tell us about your project and we'll get back to you within 24 hours.",
+    "cta_text": "",
+    "cta_url": ""
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{head}}
+<title>{{PAGE_TITLE}}</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+</head>
+<body class="{{BODY_CLASS}}">
+
+{{header}}
+
+<main>
+
+  <!-- Hero Section -->
+  <section class="project-hero">
+    <div class="project-hero-inner">
+      <span class="project-hero-label">{{HERO_LABEL}}</span>
+      <h1>{{HERO_H1}}</h1>
+      <p class="project-hero-tagline">{{HERO_TAGLINE}}</p>
+      {{HERO_STATS}}
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="project-about">
+    <div class="project-about-content">
+      <h2>{{ABOUT_HEADING}}</h2>
+      {{ABOUT_CONTENT}}
+    </div>
+  </section>
+
+{{portfolio-grid}}
+
+{{photo-gallery}}
+
+{{reviews}}
+
+  <!-- FAQ Section -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <h2>{{FAQ_HEADING}}</h2>
+      {{faq:{{FAQ_NAME}}}}
+    </div>
+  </section>
+
+</main>
+
+{{faq-schema:{{FAQ_NAME}}}}
+{{schema}}
+
+{{footer}}
+
+</body>
+</html>

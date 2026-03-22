@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 {{head}}
+<!-- Preload hero image for faster LCP -->
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" imagesrcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp 800w, /images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp 1200w" imagesizes="(max-width: 768px) 100vw, 50vw">
 <title>St. Augustine Video Production | First Sight Films</title>
 <meta name="description" content="St. Augustine video production company. Corporate videos, event coverage, and brand stories for Northeast Florida businesses. Based in St. Augustine since 2017.">
 </head>
@@ -18,7 +20,13 @@
       <h1 class="hero-title">St. Augustine | Jacksonville Video & Photo Production</h1>
       <p class="hero-tagline">Stop scrambling for content. We've got you covered.</p>
       <div class="hero-photo-mobile">
-        <img src="/images/hero/first-sight-films-hero-image.JPG" alt="Event video production at St. Augustine Amphitheatre by First Sight Films">
+        <img
+          src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp"
+          srcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp 800w,
+                  /images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp 1200w"
+          sizes="100vw"
+          alt="Event video production at St. Augustine Amphitheatre by First Sight Films"
+          fetchpriority="high">
       </div>
       <p class="hero-desc"><strong>We handle the strategy, the shoots, and the delivery</strong> so you can focus on running your business.</p>
       <p class="hero-desc">Professional video and photo production for businesses across St. Johns County, FL.</p>
@@ -31,7 +39,10 @@
       </div>
     </div>
     <div class="hero-photo">
-      <img src="/images/hero/first-sight-films-hero-image.JPG" alt="Event video production at St. Augustine Amphitheatre by First Sight Films">
+      <video id="heroVideo" autoplay muted loop playsinline poster="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp">
+        <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
+        <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" alt="Event video production at St. Augustine Amphitheatre by First Sight Films">
+      </video>
     </div>
   </section>
 
@@ -46,7 +57,7 @@
       <div class="bento-grid">
         <!-- 1. Corporate Video (Featured) -->
         <a href="/corporate-video-st-augustine/" class="bento-item bento-medium bento-featured">
-          <img src="/images/bento/corporate-video-st-augustine-bento-1-medium.webp" alt="Corporate video production for CrossCountry Mortgage in St. Augustine, FL - behind the scenes with First Sight Films" loading="lazy">
+          <img src="/images/bento/corporate-video-st-augustine-bento-1-thumb.webp" alt="Corporate video production for CrossCountry Mortgage in St. Augustine, FL - behind the scenes with First Sight Films" loading="lazy">
           <div class="bento-overlay">
             <span class="bento-label">Corporate Video</span>
             <span class="bento-subtitle">Professional videos for growing businesses</span>
@@ -64,7 +75,7 @@
 
         <!-- 3. Brand Story -->
         <a href="/st-augustine-video-production/" class="bento-item bento-medium">
-          <img src="/images/bento/brand-story-video-st-augustine-1-medium.webp" alt="Brand story video production for St. Augustine Amphitheatre merchandise campaign by First Sight Films" loading="lazy">
+          <img src="/images/bento/brand-story-video-st-augustine-1-thumb.webp" alt="Brand story video production for St. Augustine Amphitheatre merchandise campaign by First Sight Films" loading="lazy">
           <div class="bento-overlay">
             <span class="bento-label">Brand Story</span>
             <span class="bento-subtitle">Share your story, connect with customers</span>
@@ -73,7 +84,7 @@
 
         <!-- 4. Social Media -->
         <a href="/st-augustine-video-production/" class="bento-item bento-medium">
-          <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-medium.webp" alt="Social media video content for St. Augustine Amphitheatre featuring Thievery Corporation by First Sight Films" loading="lazy">
+          <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-thumbnail.webp" alt="Social media video content for St. Augustine Amphitheatre featuring Thievery Corporation by First Sight Films" loading="lazy">
           <div class="bento-overlay">
             <span class="bento-label">Social Media</span>
             <span class="bento-subtitle">Short-form content that performs</span>
@@ -82,7 +93,7 @@
 
         <!-- 5. Photography -->
         <a href="/st-augustine-photography/" class="bento-item bento-medium">
-          <img src="/images/bento/photography-st-augustine-bento-1-medium.webp" alt="First Sight Films owner Diego Cerquera at Sing Out Loud Festival, Francis Field, St. Augustine, FL" loading="lazy">
+          <img src="/images/bento/photography-st-augustine-bento-1-thumb.webp" alt="First Sight Films owner Diego Cerquera at Sing Out Loud Festival, Francis Field, St. Augustine, FL" loading="lazy">
           <div class="bento-overlay">
             <span class="bento-label">Photography</span>
             <span class="bento-subtitle">Headshots, products, and events</span>
@@ -118,16 +129,16 @@
       <div class="about-media">
         <div class="about-bento">
           <div class="about-bento__item about-bento--main">
-            <img src="/images/about/diego-and-trista-cerquera-sbeach-sunset-travel-1-medium.webp" alt="Diego and Dr. Trista Cerquera, owners of First Sight Films, St. Augustine video production company" loading="lazy">
+            <img src="/images/about/diego-and-trista-cerquera-sbeach-sunset-travel-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, owners of First Sight Films, St. Augustine video production company" loading="lazy">
           </div>
           <div class="about-bento__item about-bento--video">
-            <img src="/images/about/trista-brophy-cerquera-st-augustine-beach-fl-film-set-1-medium.webp" alt="Dr. Trista Cerquera on set at St. Augustine Beach, FL - First Sight Films project manager" loading="lazy">
+            <img src="/images/about/trista-brophy-cerquera-st-augustine-beach-fl-film-set-1-thumb.webp" alt="Dr. Trista Cerquera on set at St. Augustine Beach, FL - First Sight Films project manager" loading="lazy">
           </div>
           <div class="about-bento__item about-bento--small-1">
-            <img src="/images/about/diego-and-trista-brophy-cerquera-st-augustine-first-sight-films-owners-1-medium.webp" alt="Diego and Dr. Trista Cerquera, First Sight Films owners and St. Augustine videographers" loading="lazy">
+            <img src="/images/about/diego-and-trista-brophy-cerquera-st-augustine-first-sight-films-owners-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, First Sight Films owners and St. Augustine videographers" loading="lazy">
           </div>
           <div class="about-bento__item about-bento--small-2">
-            <img src="/images/about/diego-and-trista-brophy-cerquera-at-adobe-max-1-medium.webp" alt="Diego and Dr. Trista Cerquera at Adobe MAX conference" loading="lazy">
+            <img src="/images/about/diego-and-trista-brophy-cerquera-at-adobe-max-1-thumb.webp" alt="Diego and Dr. Trista Cerquera at Adobe MAX conference" loading="lazy">
           </div>
         </div>
       </div>
