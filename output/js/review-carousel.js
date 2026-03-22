@@ -20,41 +20,47 @@
     if (cards.length === 0) return;
 
     let currentIndex = 0;
-    let cardsPerView = getCardsPerView();
-    let totalPages = Math.ceil(cards.length / cardsPerView);
+    let cardsPerView = 1;
+    let totalPages = cards.length;
+    let cachedCardWidth = 0;
+    let cachedGap = 24;
 
     function getCardsPerView() {
-      const width = window.innerWidth;
-      if (width <= 768) return 1;
-      if (width <= 1024) return 2;
+      if (window.matchMedia('(max-width: 768px)').matches) return 1;
+      if (window.matchMedia('(max-width: 1024px)').matches) return 2;
       return 3;
+    }
+
+    function cacheCardDimensions() {
+      // Cache dimensions once to avoid forced reflows
+      requestAnimationFrame(function() {
+        const card = cards[0];
+        cachedCardWidth = card.offsetWidth;
+        const style = getComputedStyle(card);
+        cachedGap = parseFloat(style.marginRight) || 24;
+      });
     }
 
     function updatePagination() {
       const currentPage = Math.floor(currentIndex / cardsPerView) + 1;
-      currentPageEls.forEach(el => el.textContent = currentPage);
-      totalPagesEls.forEach(el => el.textContent = totalPages);
+      currentPageEls.forEach(function(el) { el.textContent = currentPage; });
+      totalPagesEls.forEach(function(el) { el.textContent = totalPages; });
     }
 
     function updateButtons() {
       const atStart = currentIndex === 0;
       const atEnd = currentIndex >= cards.length - cardsPerView;
 
-      prevBtns.forEach(btn => btn.disabled = atStart);
-      nextBtns.forEach(btn => btn.disabled = atEnd);
+      prevBtns.forEach(function(btn) { btn.disabled = atStart; });
+      nextBtns.forEach(function(btn) { btn.disabled = atEnd; });
     }
 
     function slideToIndex(index) {
       const maxIndex = cards.length - cardsPerView;
       currentIndex = Math.max(0, Math.min(index, maxIndex));
 
-      const card = cards[0];
-      const cardStyle = getComputedStyle(card);
-      const cardWidth = card.offsetWidth;
-      const gap = parseFloat(cardStyle.marginRight) || 24; // 1.5rem default
-
-      const offset = currentIndex * (cardWidth + gap);
-      track.style.transform = `translateX(-${offset}px)`;
+      const offset = currentIndex * (cachedCardWidth + cachedGap);
+      track.style.transform = 'translateX(-' + offset + 'px)';
 
       updatePagination();
       updateButtons();
@@ -69,8 +75,8 @@
     }
 
     // Event listeners
-    prevBtns.forEach(btn => btn.addEventListener('click', goToPrev));
-    nextBtns.forEach(btn => btn.addEventListener('click', goToNext));
+    prevBtns.forEach(function(btn) { btn.addEventListener('click', goToPrev); });
+    nextBtns.forEach(function(btn) { btn.addEventListener('click', goToNext); });
 
     // Handle resize
     let resizeTimer;
@@ -81,13 +87,21 @@
         if (newCardsPerView !== cardsPerView) {
           cardsPerView = newCardsPerView;
           totalPages = Math.ceil(cards.length / cardsPerView);
+          cacheCardDimensions();
           slideToIndex(0);
         }
       }, 250);
     });
 
     // Initialize
-    slideToIndex(0);
+    cardsPerView = getCardsPerView();
+    totalPages = Math.ceil(cards.length / cardsPerView);
+    cacheCardDimensions();
+
+    // Delay initial slide to allow dimensions to be cached
+    requestAnimationFrame(function() {
+      slideToIndex(0);
+    });
   }
 
   // Initialize when DOM is ready
