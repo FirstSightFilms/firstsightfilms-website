@@ -424,7 +424,7 @@ def load_reviews():
 
   </div>
 </section>
-<script src="/js/review-carousel.js"></script>'''
+<script src="/js/review-carousel.js" defer></script>'''
 
     return html
 
