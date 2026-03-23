@@ -169,7 +169,7 @@
   transform: translateY(-50%);
   border-radius: 8px;
   overflow: hidden;
-  max-width: 320px;
+  max-width: 416px;
 }
 
 .hero-photo img,
@@ -477,6 +477,10 @@
 .faq-header,
 .section-faq h2 {
   text-align: center;
+}
+
+.why-st-augustine-card h2 {
+  margin-bottom: 2rem;
 }
 
 /* Grid Layouts */

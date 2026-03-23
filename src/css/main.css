@@ -551,18 +551,21 @@ ul, ol {
 
 .hero-photo {
   position: absolute;
-  right: var(--container-padding);
+  left: 75%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   border-radius: 8px;
   overflow: hidden;
-  max-width: 320px;
+  max-width: 500px;
+  max-height: 600px;
+  width: 40vw;
 }
 
 .hero-photo img,
 .hero-photo video {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 600px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -627,12 +630,14 @@ ul, ol {
 
   .hero-photo {
     position: relative;
+    left: auto;
     right: auto;
     top: auto;
     transform: none;
     display: block;
     margin: var(--spacing-sm) auto;
     max-width: 280px;
+    width: 100%;
   }
 
   .hero-photo img,
@@ -661,6 +666,7 @@ ul, ol {
 .bento-portfolio {
   padding: var(--spacing-lg) var(--container-padding);
   background: var(--color-white);
+  margin-bottom: 0;
 }
 
 .bento-header {
@@ -856,6 +862,27 @@ ul, ol {
   text-align: center;
   max-width: 700px;
   margin: 0 auto var(--spacing-lg);
+}
+
+/* Center all section titles on desktop */
+.portfolio-header,
+.why-st-augustine-card,
+.faq-header,
+.section-faq h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-faq {
+  margin-bottom: 32px;
+}
+
+.why-st-augustine-card h2 {
+  margin-bottom: 2rem;
+}
+
+.section-why-st-augustine {
+  padding: 1rem 0;
 }
 
 /* Grid Layouts */
@@ -1133,7 +1160,7 @@ ul, ol {
 .about-bento {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 180px);
+  grid-template-rows: repeat(3, 140px);
   gap: 12px;
 }
 
@@ -1157,12 +1184,23 @@ ul, ol {
 
 .about-bento--video {
   grid-column: 3;
-  grid-row: span 2;
+  grid-row: span 3;
+}
+
+.about-bento--action {
+  grid-column: span 1;
 }
 
 /* Portfolio Grid Section */
 .section-portfolio {
-  padding: var(--spacing-xl) var(--container-padding);
+  padding: 3rem var(--container-padding);
+  background: rgba(244, 192, 87, 0.20);
+  margin-bottom: 0;
+}
+
+.portfolio-cta {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .portfolio-grid {
@@ -1239,11 +1277,15 @@ ul, ol {
 .review-card {
   flex: 0 0 calc(33.333% - 1rem);
   background: var(--color-white);
-  border: 1px solid var(--color-gray-200);
+  border: none;
   border-radius: 12px;
-  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
+  min-height: 280px;
+  max-height: 320px;
+  overflow: hidden;
 }
 
 .review-author-header {
@@ -1306,6 +1348,46 @@ ul, ol {
 
 .review-read-more:hover {
   color: #1a1a1a;
+}
+
+/* Truncated review state */
+.review-quote-wrapper.truncated .review-quote {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.review-quote-wrapper.expanded .review-quote {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.review-card.expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.review-expand {
+  background: none;
+  border: none;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.75rem;
+  display: block;
+  font-weight: 500;
+}
+
+.review-expand:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.review-quote-wrapper.expanded .review-expand {
+  display: none;
 }
 
 .review-footer {

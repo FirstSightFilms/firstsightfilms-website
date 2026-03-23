@@ -370,10 +370,11 @@ def load_reviews():
         # Link HTML
         link_html = f'<a href="{url}" target="_blank" rel="noopener" class="review-link">Read on Google</a>' if url else ""
 
-        # Truncate long quotes for mobile display
+        # Truncate long quotes for display
         max_chars = 280
         is_long = len(text) > max_chars
-        read_more_html = f'<a href="{url}" target="_blank" rel="noopener" class="review-read-more">Read full review on Google</a>' if is_long and url else ""
+        truncated_class = " truncated" if is_long else ""
+        expand_btn_html = '<button class="review-expand" aria-label="Expand review">Read more</button>' if is_long else ""
 
         card = f'''
           <div class="review-card" data-index="{i}">
@@ -386,9 +387,9 @@ def load_reviews():
                 <span class="review-stars">{stars}</span>
               </div>
             </div>
-            <div class="review-quote-wrapper">
+            <div class="review-quote-wrapper{truncated_class}">
               <blockquote class="review-quote">"{text}"</blockquote>
-              {read_more_html}
+              {expand_btn_html}
             </div>
             <div class="review-footer">
               <span class="review-date">{date}</span>

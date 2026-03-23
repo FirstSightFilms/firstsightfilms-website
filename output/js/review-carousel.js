@@ -59,8 +59,19 @@
       const maxIndex = cards.length - cardsPerView;
       currentIndex = Math.max(0, Math.min(index, maxIndex));
 
-      const offset = currentIndex * (cachedCardWidth + cachedGap);
-      track.style.transform = 'translateX(-' + offset + 'px)';
+      const viewport = carousel.querySelector('.review-cards-viewport');
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+      if (isMobile && viewport) {
+        // On mobile, use native scroll for proper scroll-snap
+        track.style.transform = 'none';
+        const scrollPos = currentIndex * viewport.offsetWidth;
+        viewport.scrollTo({ left: scrollPos, behavior: 'smooth' });
+      } else {
+        // On desktop, use transform
+        const offset = currentIndex * (cachedCardWidth + cachedGap);
+        track.style.transform = 'translateX(-' + offset + 'px)';
+      }
 
       updatePagination();
       updateButtons();
@@ -77,6 +88,21 @@
     // Event listeners
     prevBtns.forEach(function(btn) { btn.addEventListener('click', goToPrev); });
     nextBtns.forEach(function(btn) { btn.addEventListener('click', goToNext); });
+
+    // Track manual scroll on mobile to update pagination
+    const viewport = carousel.querySelector('.review-cards-viewport');
+    let scrollTimer;
+    viewport.addEventListener('scroll', function() {
+      if (!window.matchMedia('(max-width: 768px)').matches) return;
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(function() {
+        const scrollPos = viewport.scrollLeft;
+        const cardWidth = viewport.offsetWidth;
+        currentIndex = Math.round(scrollPos / cardWidth);
+        updatePagination();
+        updateButtons();
+      }, 100);
+    });
 
     // Handle resize
     let resizeTimer;
@@ -101,6 +127,22 @@
     // Delay initial slide to allow dimensions to be cached
     requestAnimationFrame(function() {
       slideToIndex(0);
+    });
+
+    // Handle "Read more" expand buttons
+    const expandBtns = carousel.querySelectorAll('.review-expand');
+    expandBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const wrapper = btn.closest('.review-quote-wrapper');
+        const card = btn.closest('.review-card');
+        if (wrapper) {
+          wrapper.classList.remove('truncated');
+          wrapper.classList.add('expanded');
+        }
+        if (card) {
+          card.classList.add('expanded');
+        }
+      });
     });
   }
 

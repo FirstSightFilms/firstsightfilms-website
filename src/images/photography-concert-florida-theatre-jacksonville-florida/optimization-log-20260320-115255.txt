@@ -1,0 +1,51 @@
+FSF Image Optimization Log
+Generated: 2026-03-20 11:52:55
+============================================================
+
+Original: GrupoNiche-10.jpg
+  Size: 6.77 MB
+  Outputs:
+    - gruponiche-live-performance-theatre-jacksonville-florida-1920w.webp (1920x1280, 115.8 KB)
+    - gruponiche-live-performance-theatre-jacksonville-florida-1200w.webp (1200x800, 61.8 KB)
+    - gruponiche-live-performance-theatre-jacksonville-florida-400w.webp (400x266, 11.7 KB)
+
+Original: GrupoNiche-14.jpg
+  Size: 5.63 MB
+  Outputs:
+    - gruponiche-concert-performance-theatre-jacksonville-florida-1920w.webp (1920x2400, 327.1 KB)
+    - gruponiche-concert-performance-theatre-jacksonville-florida-1200w.webp (1200x1500, 162.1 KB)
+    - gruponiche-concert-performance-theatre-jacksonville-florida-400w.webp (400x500, 28.2 KB)
+
+Original: GrupoNiche-19.jpg
+  Size: 9.88 MB
+  Outputs:
+    - gruponiche-performer-theatre-jacksonville-florida-1920w.webp (1920x1280, 138.3 KB)
+    - gruponiche-performer-theatre-jacksonville-florida-1200w.webp (1200x800, 70.9 KB)
+    - gruponiche-performer-theatre-jacksonville-florida-400w.webp (400x266, 13.8 KB)
+
+Original: GrupoNiche-4.jpg
+  Size: 7.03 MB
+  Outputs:
+    - gruponiche-concert-theatre-jacksonville-florida-1920w.webp (1920x1080, 146.0 KB)
+    - gruponiche-concert-theatre-jacksonville-florida-1200w.webp (1200x675, 58.3 KB)
+    - gruponiche-concert-theatre-jacksonville-florida-400w.webp (400x225, 10.2 KB)
+
+Original: GrupoNiche-5.jpg
+  Size: 9.53 MB
+  Outputs:
+    - gruponiche-concert-theatre-jacksonville-florida-2-1920w.webp (1920x1080, 130.3 KB)
+    - gruponiche-concert-theatre-jacksonville-florida-2-1200w.webp (1200x675, 62.0 KB)
+    - gruponiche-concert-theatre-jacksonville-florida-2-400w.webp (400x225, 11.5 KB)
+
+Original: GrupoNiche-7.jpg
+  Size: 6.13 MB
+  Outputs:
+    - gruponiche-concert-theatre-jacksonville-florida-3-1920w.webp (1920x1080, 77.0 KB)
+    - gruponiche-concert-theatre-jacksonville-florida-3-1200w.webp (1200x675, 37.3 KB)
+    - gruponiche-concert-theatre-jacksonville-florida-3-400w.webp (400x225, 7.4 KB)
+
+============================================================
+TOTALS
+Original: 44.97 MB
+Output: 1.44 MB
+Savings: 43.54 MB (96.8%)
