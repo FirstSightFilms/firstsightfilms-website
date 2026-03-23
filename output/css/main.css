@@ -1547,6 +1547,15 @@ ul, ol {
   .portfolio-item img {
     aspect-ratio: 1/1;
   }
+
+  /* Center all section titles on mobile */
+  .portfolio-header,
+  .why-st-augustine-card,
+  .faq-header,
+  .section-header,
+  .section-faq h2 {
+    text-align: center;
+  }
 }
 
 /* ==========================================================================
