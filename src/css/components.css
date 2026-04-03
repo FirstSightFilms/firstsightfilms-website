@@ -3,6 +3,61 @@
    Buttons, cards, and reusable UI components
    ========================================================================== */
 
+/* ==========================================================================
+   Breadcrumb Navigation
+   ========================================================================== */
+
+.breadcrumb {
+  padding: 1rem var(--container-padding, 2rem);
+  font-size: 0.875rem;
+  background: #fff;
+}
+
+.breadcrumb .container {
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+}
+
+.breadcrumb-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+}
+
+.breadcrumb-item a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: #f4c057;
+}
+
+.breadcrumb-item::after {
+  content: "›";
+  color: #ddd;
+}
+
+.breadcrumb-item:last-child::after {
+  display: none;
+}
+
+.breadcrumb-item:last-child {
+  color: #666;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
