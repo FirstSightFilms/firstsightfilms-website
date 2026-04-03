@@ -678,6 +678,12 @@ def main():
     print(f"\n[8/8] Copying assets...")
     copy_assets()
 
+    # Copy _redirects file for Netlify
+    redirects_src = SRC_DIR / "_redirects"
+    if redirects_src.exists():
+        shutil.copy2(redirects_src, OUTPUT_DIR / "_redirects")
+        print(f"  Copied: _redirects")
+
     print("\n" + "=" * 50)
     print(f"Build complete! Output: {OUTPUT_DIR}")
     print("=" * 50 + "\n")
