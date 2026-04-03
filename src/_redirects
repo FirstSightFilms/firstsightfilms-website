@@ -1,3 +1,14 @@
+# 301 Redirects - Old URL structure to new
+/index.html    /    301
+/contact    /contact/    301
+/aboutus    /aboutus/    301
+/portfolio    /portfolio/    301
+/video    /st-augustine-video-production/    301
+/video/fortmose    /st-augustine-video-production/fort-mose-jazz-blues-festival/    301
+/video/*    /st-augustine-video-production/:splat    301
+/st-augustine-jacksonville-video-production    /st-augustine-video-production/    301
+/st-augustine-jacksonville-video-production/*    /st-augustine-video-production/:splat    301
+
 # 410 Gone - Old Squarespace URLs (tell Google to de-index)
 /home    410
 /homepage    410
@@ -17,6 +28,5 @@
 /motivotango    410
 /jingleandmingle    410
 /epictheatre    410
-/video/fortmose    410
 /lsj25-gallery/*    410
 /post/*    410
