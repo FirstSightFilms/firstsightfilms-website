@@ -1641,6 +1641,216 @@ ul, ol {
 }
 
 /* ==========================================================================
+   About Page Styles
+   ========================================================================== */
+
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem 4rem;
+  background: rgba(244, 192, 87, 0.4);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #333;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #f4c057;
+}
+
+.about-hero-intro {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.about-intro {
+  padding: 4rem 2rem;
+  background: var(--color-white);
+}
+
+.about-intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-intro .lead {
+  font-size: 1.15rem;
+  color: var(--color-gray-700);
+  margin-bottom: 1rem;
+}
+
+.about-bio {
+  padding: 4rem 2rem;
+  background: var(--color-white);
+}
+
+.about-bio-alt {
+  background: var(--color-gray-100);
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bio-grid-reverse {
+  grid-template-columns: 1fr 200px;
+}
+
+.bio-grid-reverse .bio-image {
+  order: 2;
+}
+
+.bio-grid-reverse .bio-content {
+  order: 1;
+}
+
+.bio-image {
+  max-width: 200px;
+  max-height: 250px;
+}
+
+.bio-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bio-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio-role {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bio-content p {
+  color: var(--color-gray-700);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.about-partnership {
+  padding: 4rem 2rem;
+  background: var(--color-gray-100);
+}
+
+.partnership-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.partnership-content h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.partnership-content .lead {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--color-gray-700);
+}
+
+.partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.partnership-card {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.partnership-card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--color-black);
+}
+
+.partnership-card p {
+  color: var(--color-gray-700);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.about-story {
+  padding: 4rem 2rem;
+  background: var(--color-white);
+}
+
+.story-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.story-content h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.story-content p {
+  color: var(--color-gray-700);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .bio-grid,
+  .bio-grid-reverse {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .bio-grid-reverse .bio-image,
+  .bio-grid-reverse .bio-content {
+    order: unset;
+  }
+
+  .bio-image {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .partnership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    Service Page Styles
    ========================================================================== */
 

@@ -345,10 +345,10 @@
   margin-bottom: 1.25rem;
 }
 
-/* How It Works - Simplified */
+/* Case Study Process Section */
 .event-process {
   padding: 4rem 0;
-  background: var(--color-gray-100);
+  background: rgba(244, 192, 87, 0.2);
 }
 
 .event-process h2 {
@@ -362,70 +362,82 @@
 .event-process-subtitle {
   text-align: center;
   color: var(--color-gray-600);
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   font-size: 1.05rem;
 }
 
-.process-steps-simple {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 900px;
+.case-study-items {
+  max-width: 1100px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.process-step-simple {
-  text-align: center;
+.case-study-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.case-study-item.reverse {
+  direction: rtl;
+}
+
+.case-study-item.reverse > * {
+  direction: ltr;
+}
+
+.case-study-text {
   padding: 1rem;
 }
 
-.process-step-simple .step-number {
-  display: inline-flex;
+.case-study-text h3 {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.case-study-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+  margin-bottom: 0.75rem;
+}
+
+.case-study-media {
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-gray-200);
+  aspect-ratio: 9/16;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.case-study-media.landscape {
+  aspect-ratio: 16/9;
+  max-width: 100%;
+}
+
+.case-study-media img,
+.case-study-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-study-media-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--color-gold);
-  color: var(--color-black);
-  font-weight: 700;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-.process-step-simple h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.process-step-simple p {
-  font-size: 0.95rem;
-  color: var(--color-gray-600);
-  line-height: 1.5;
-}
-
-/* CTA Section */
-.event-cta {
-  padding: 4rem 0;
-  background: var(--color-black);
-  color: var(--color-white);
-  text-align: center;
-}
-
-.event-cta h2 {
-  font-family: var(--font-primary);
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.event-cta p {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 1.5rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: rgba(255,255,255,0.5);
+  font-size: 0.85rem;
 }
 
 /* FAQ Section */
@@ -478,10 +490,23 @@
     font-size: 1.75rem;
   }
 
-  .what-you-get-grid,
-  .process-steps-simple {
+  .what-you-get-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .case-study-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .case-study-item.reverse {
+    direction: ltr;
+  }
+
+  .case-study-media {
+    order: -1;
+    max-width: 220px;
   }
 
   .gallery-grid {
@@ -663,6 +688,42 @@ document.addEventListener('DOMContentLoaded', function() {
   </section>
 
 
+  <!-- About the Event -->
+  <section class="event-about">
+    <div class="event-about-content">
+      <h2>About Fort Mose</h2>
+      <p>Fort Mose Historic State Park is the site of the first legally sanctioned free Black settlement in what is now the United States. Established in 1738, Fort Mose was a refuge for escaped slaves from the British colonies — a pivotal chapter in American history, located just north of downtown St. Augustine.</p>
+      <p>The annual Fort Mose Jazz and Blues Festival honors this legacy through live music, cultural programming, and community celebration. For two consecutive years, First Sight Films has served as the official video production partner — documenting performances, capturing crowd energy, and helping preserve these moments.</p>
+      <p style="margin-top: 1.5rem;"><a href="/st-augustine-video-production/" style="color: var(--color-gold); text-decoration: underline;">View more of our St. Augustine video production work →</a></p>
+    </div>
+  </section>
+
+  <!-- Our Process - Case Study -->
+  <section class="event-process">
+    <div class="container">
+      <h2>Our Process</h2>
+      <p class="event-process-subtitle">Simple. Value, brand, and story aligned.</p>
+
+      <div class="case-study-items">
+        <!-- Item 1: Discovery -->
+        <div class="case-study-item">
+          <div class="case-study-text">
+            <h3>Understanding the Story</h3>
+            <p>Our process started with a deep dive into the story of Fort Mose — its history and its path forward. Once we understood the full picture, we scheduled an onsite video session to capture a sneak peek social reel, building anticipation for the new fort being constructed in collaboration with SJCCE, Inc.</p>
+            <p>We also connected with Florida State Parks, who manage Fort Mose, as well as the Florida State Park Foundation, a nonprofit ally to Florida's state parks.</p>
+          </div>
+          <div class="case-study-media">
+            <div class="case-study-media-placeholder">Video coming soon</div>
+          </div>
+        </div>
+
+        <!-- Item 2: Placeholder for next content block -->
+        <!-- More case study items will be added here -->
+
+      </div>
+    </div>
+  </section>
+
   <!-- Photo Gallery -->
   <section class="event-gallery">
     <div class="container">
@@ -718,51 +779,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="video-item-placeholder">Video 4 - Coming Soon</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- About the Event -->
-  <section class="event-about">
-    <div class="event-about-content">
-      <h2>About Fort Mose</h2>
-      <p>Fort Mose Historic State Park is the site of the first legally sanctioned free Black settlement in what is now the United States. Established in 1738, Fort Mose was a refuge for escaped slaves from the British colonies — a pivotal chapter in American history, located just north of downtown St. Augustine.</p>
-      <p>The annual Fort Mose Jazz and Blues Festival honors this legacy through live music, cultural programming, and community celebration. For two consecutive years, First Sight Films has served as the official video production partner — documenting performances, capturing crowd energy, and helping preserve these moments.</p>
-      <p style="margin-top: 1.5rem;"><a href="/st-augustine-video-production/" style="color: var(--color-gold); text-decoration: underline;">View more of our St. Augustine video production work →</a></p>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="event-process">
-    <div class="container">
-      <h2>How It Works</h2>
-      <p class="event-process-subtitle">Simple process. No surprises. No chasing you down.</p>
-
-      <div class="process-steps-simple">
-        <div class="process-step-simple">
-          <span class="step-number">1</span>
-          <h3>Tell Us the Date</h3>
-          <p>Share your event details. We'll ask a few questions upfront so we don't have to bother you later.</p>
-        </div>
-        <div class="process-step-simple">
-          <span class="step-number">2</span>
-          <h3>We Handle the Rest</h3>
-          <p>Pre-production, shot lists, and venue prep happen before we arrive. Event day is just execution.</p>
-        </div>
-        <div class="process-step-simple">
-          <span class="step-number">3</span>
-          <h3>Get Your Content</h3>
-          <p>Social clips delivered fast. Full recap within two weeks. Ready to share and archive.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="event-cta">
-    <div class="container">
-      <h2>Planning an event in St. Augustine?</h2>
-      <p>Tell us the date. We'll take video off your plate.</p>
-      <a href="/contact/" class="btn btn-accent">Get in Touch</a>
     </div>
   </section>
 

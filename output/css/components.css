@@ -2053,6 +2053,11 @@
   order: 1;
 }
 
+.bio-image {
+  max-width: 200px;
+  max-height: 250px;
+}
+
 .bio-image img {
   width: 100%;
   border-radius: 8px;
