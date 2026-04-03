@@ -3,9 +3,8 @@
 /contact    /contact/    301
 /aboutus    /aboutus/    301
 /portfolio    /portfolio/    301
-/video    /st-augustine-video-production/    301
-/video/fortmose    /st-augustine-video-production/fort-mose-jazz-blues-festival/    301
-/video/*    /st-augustine-video-production/:splat    301
+/video    410
+/video/*    410
 /st-augustine-jacksonville-video-production    /st-augustine-video-production/    301
 /st-augustine-jacksonville-video-production/*    /st-augustine-video-production/:splat    301
 
@@ -30,3 +29,7 @@
 /epictheatre    410
 /lsj25-gallery/*    410
 /post/*    410
+/juvenile    410
+/seamarkranch    410
+/jjgrey    410
+/slowdive    410
