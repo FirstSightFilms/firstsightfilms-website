@@ -18,6 +18,7 @@ import csv
 import json
 import shutil
 from pathlib import Path
+from datetime import datetime
 
 # Paths
 BASE_DIR = Path(__file__).parent.parent
@@ -645,37 +646,120 @@ def copy_existing_pages():
             print(f"  Copied existing: {folder}/")
 
 
+def generate_sitemap():
+    """Generate sitemap.xml from built pages."""
+    site_url = "https://www.firstsightfilms.com"
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    # Pages to exclude from sitemap (redirects, old URLs, junk, etc.)
+    exclude_patterns = [
+        "st-augustine-jacksonville-video-production",  # Redirects to st-augustine-video-production
+        "/images/",  # Image directories with HTML snippets
+        "google",  # Google verification files
+        "_snippets",  # Snippet files
+        "saint-augustine-jacksonville-photographer",  # Old page
+    ]
+
+    # Priority mapping based on URL depth/importance
+    def get_priority(url_path):
+        if url_path == "/":
+            return "1.0"
+        elif url_path in ["/aboutus/", "/contact/", "/st-augustine-video-production/",
+                          "/st-augustine-photography/", "/corporate-video-st-augustine/"]:
+            return "0.9"
+        elif url_path.startswith("/st-augustine-video-production/") and url_path.count("/") == 3:
+            return "0.8"  # Project pages
+        else:
+            return "0.7"
+
+    # Change frequency mapping
+    def get_changefreq(url_path):
+        if url_path == "/":
+            return "weekly"
+        elif url_path in ["/aboutus/", "/contact/"]:
+            return "monthly"
+        else:
+            return "monthly"
+
+    # Find all HTML files in output
+    urls = []
+    for html_file in OUTPUT_DIR.glob("**/*.html"):
+        relative_path = html_file.relative_to(OUTPUT_DIR)
+
+        # Convert to URL path
+        if relative_path.name == "index.html":
+            if relative_path.parent == Path("."):
+                url_path = "/"
+            else:
+                url_path = "/" + relative_path.parent.as_posix() + "/"
+        else:
+            url_path = "/" + relative_path.with_suffix("").as_posix() + "/"
+
+        # Skip excluded patterns
+        if any(pattern in url_path for pattern in exclude_patterns):
+            continue
+
+        urls.append({
+            "loc": site_url + url_path,
+            "lastmod": today,
+            "changefreq": get_changefreq(url_path),
+            "priority": get_priority(url_path)
+        })
+
+    # Sort URLs (homepage first, then alphabetically)
+    urls.sort(key=lambda x: (x["loc"] != site_url + "/", x["loc"]))
+
+    # Generate XML
+    xml_parts = ['<?xml version="1.0" encoding="UTF-8"?>']
+    xml_parts.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+
+    for url in urls:
+        xml_parts.append("  <url>")
+        xml_parts.append(f"    <loc>{url['loc']}</loc>")
+        xml_parts.append(f"    <lastmod>{url['lastmod']}</lastmod>")
+        xml_parts.append(f"    <changefreq>{url['changefreq']}</changefreq>")
+        xml_parts.append(f"    <priority>{url['priority']}</priority>")
+        xml_parts.append("  </url>")
+
+    xml_parts.append("</urlset>")
+
+    # Write sitemap
+    sitemap_path = OUTPUT_DIR / "sitemap.xml"
+    sitemap_path.write_text("\n".join(xml_parts), encoding="utf-8")
+    print(f"  Generated sitemap.xml with {len(urls)} URLs")
+
+
 def main():
     print("\n" + "=" * 50)
     print("FSF Site Builder")
     print("=" * 50)
 
-    print("\n[1/7] Loading modules...")
+    print("\n[1/9] Loading modules...")
     modules = load_modules()
 
     if not modules:
         print("No modules found. Add .html files to src/modules/")
 
-    print(f"\n[2/7] Loading page config...")
+    print(f"\n[2/9] Loading page config...")
     load_page_config()
 
-    print(f"\n[3/7] Loading image manifests...")
+    print(f"\n[3/9] Loading image manifests...")
     manifests = load_image_manifests()
     print(f"  Loaded {len(manifests)} images from manifests")
 
-    print(f"\n[4/7] Building pages...")
+    print(f"\n[4/9] Building pages...")
     build_pages(modules)
 
-    print(f"\n[5/7] Copying existing pages (not yet migrated)...")
+    print(f"\n[5/9] Copying existing pages (not yet migrated)...")
     copy_existing_pages()
 
-    print(f"\n[6/8] Copying CSS...")
+    print(f"\n[6/9] Copying CSS...")
     copy_css()
 
-    print(f"\n[7/8] Copying fonts...")
+    print(f"\n[7/9] Copying fonts...")
     copy_fonts()
 
-    print(f"\n[8/8] Copying assets...")
+    print(f"\n[8/9] Copying assets...")
     copy_assets()
 
     # Copy _redirects file for Netlify
@@ -683,6 +767,9 @@ def main():
     if redirects_src.exists():
         shutil.copy2(redirects_src, OUTPUT_DIR / "_redirects")
         print(f"  Copied: _redirects")
+
+    print(f"\n[9/9] Generating sitemap...")
+    generate_sitemap()
 
     print("\n" + "=" * 50)
     print(f"Build complete! Output: {OUTPUT_DIR}")
