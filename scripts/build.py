@@ -524,6 +524,19 @@ def process_page(page_content, modules):
     return page_content
 
 
+def inject_canonical(html_content, url_path):
+    """Inject canonical tag into the page head."""
+    site_url = "https://www.firstsightfilms.com"
+    canonical_url = site_url + url_path
+    canonical_tag = f'<link rel="canonical" href="{canonical_url}">'
+
+    # Insert before </head>
+    if '</head>' in html_content:
+        html_content = html_content.replace('</head>', f'{canonical_tag}\n</head>')
+
+    return html_content
+
+
 def build_pages(modules):
     """Process all page templates and output complete HTML."""
     if not PAGES_DIR.exists():
@@ -543,16 +556,24 @@ def build_pages(modules):
         # Process modules
         processed_content = process_page(page_content, modules)
 
-        # Determine output path
+        # Determine output path and URL path
         if relative_path.name == "index.html":
             # Root or subfolder index stays as-is
             output_path = OUTPUT_DIR / relative_path
+            if relative_path.parent == Path("."):
+                url_path = "/"
+            else:
+                url_path = "/" + relative_path.parent.as_posix() + "/"
         else:
             # Other pages become folder/index.html for clean URLs
             # e.g., about.html -> about/index.html
             folder_name = relative_path.stem
             parent = relative_path.parent
             output_path = OUTPUT_DIR / parent / folder_name / "index.html"
+            url_path = "/" + (parent / folder_name).as_posix() + "/"
+
+        # Inject canonical tag
+        processed_content = inject_canonical(processed_content, url_path)
 
         # Create parent directories
         output_path.parent.mkdir(parents=True, exist_ok=True)

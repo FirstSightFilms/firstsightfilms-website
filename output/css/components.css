@@ -218,13 +218,13 @@
 }
 
 .hero-photo {
-  position: absolute;
-  right: var(--container-padding);
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   overflow: hidden;
-  max-width: 320px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .hero-photo img,
