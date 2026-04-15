@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{head}}
+<link rel="stylesheet" href="/css/blog.css">
+<title>Blog | Video Production Tips & Insights | First Sight Films</title>
+<meta name="description" content="Video production tips, behind-the-scenes insights, and marketing strategies from First Sight Films in St. Augustine, Florida.">
+<meta property="og:type" content="website">
+</head>
+<body class="page-blog page-blog-listing">
+
+{{header}}
+
+<main>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Blog</span>
+          <meta itemprop="position" content="2">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Blog Hero -->
+  <section class="blog-listing-hero">
+    <div class="container">
+      <h1>First Sight Films Blog</h1>
+      <p class="blog-listing-subtitle">Insights and notes from our time onset, marketing and branding strategies, and behind the scenes from our work across Northeast Florida.</p>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="blog-listing-section">
+    <div class="container">
+      <div class="blog-grid">
+        {{blog-articles}}
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{schema}}
+{{footer}}
+
+</body>
+</html>

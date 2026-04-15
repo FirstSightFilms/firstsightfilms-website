@@ -1,0 +1,102 @@
+{
+  "slug": "flagler-grad-photoshoot",
+  "title": "Flagler College Grad Photo Sessions",
+  "excerpt": "Skip the awkward poses and stiff smiles. Our Flagler College grad photo sessions are relaxed, fun, and designed to capture the real you at one of Florida's most beautiful campuses.",
+  "author": "diego-cerquera",
+
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-22",
+
+  "categories": {
+    "service": ["photography", "portraits"],
+    "location": ["st-augustine", "flagler-college"],
+    "industry": ["education", "graduation"]
+  },
+  "tags": ["flagler college", "graduation photography", "grad photos", "st augustine photographer", "senior portraits"],
+
+  "images": {
+    "hero": {
+      "src": "/images/grad-photo-flagler-college-18-large.webp",
+      "alt": "Flagler College graduate celebrating with diploma raised in front of historic brick columns",
+      "width": 1200,
+      "height": 630,
+      "position": "center 20%"
+    },
+    "banner": {
+      "src": "/images/grad-photo-flagler-college-23-large.webp",
+      "alt": "Joyful Flagler College graduate laughing by the fountain at Ponce Hall"
+    },
+    "content": [
+      {
+        "id": "ponce-statue",
+        "src": "/images/grad-photo-flagler-college-1-medium.webp",
+        "alt": "Flagler College graduate posing by the Ponce de Leon statue at campus entrance",
+        "width": 800,
+        "height": 600,
+        "caption": "The Ponce de Leon statue is one of many iconic spots we'll capture"
+      },
+      {
+        "id": "candid-joy",
+        "src": "/images/grad-photo-flagler-college-10-medium.webp",
+        "alt": "Joyful Flagler College graduate laughing candidly during photo session",
+        "width": 800,
+        "height": 600,
+        "caption": "Real moments, real smiles - no forced poses here"
+      },
+      {
+        "id": "garden-path",
+        "src": "/images/grad-photo-flagler-college-15-medium.webp",
+        "alt": "Flagler College graduate walking through lush garden pathway on campus",
+        "width": 800,
+        "height": 600,
+        "caption": "The campus gardens provide a natural, relaxed setting"
+      },
+      {
+        "id": "personalized",
+        "src": "/images/grad-photo-flagler-college-20-medium.webp",
+        "alt": "Flagler College graduate with guitar showing personal interests during grad photo session",
+        "width": 800,
+        "height": 600,
+        "caption": "Bring props that show your personality - we love making sessions unique"
+      }
+    ]
+  },
+
+  "seo": {
+    "title": "Flagler College Graduation Photography | Stress-Free Grad Photos | First Sight Films",
+    "description": "Book your Flagler College graduation photos with a fellow Flagler alum. Relaxed 1-hour sessions at $300 for 15 edited images. Golden hour sessions at Ponce Hall, the Rotunda, and more.",
+    "og_type": "article",
+    "og_image": "/images/grad-photo-flagler-college-18-large.webp"
+  },
+
+  "related_articles": ["video-production-tips-st-augustine"],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Flagler College Grad Photo Sessions",
+    "description": "Book your Flagler College graduation photos with a fellow Flagler alum. Relaxed 1-hour sessions, golden hour timing, iconic campus locations.",
+    "image": "https://www.firstsightfilms.com/images/grad-photo-flagler-college-18-large.webp",
+    "datePublished": "2026-04-15",
+    "dateModified": "2026-04-15",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Cerquera",
+      "url": "https://www.firstsightfilms.com/aboutus/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "First Sight Films",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.firstsightfilms.com/blog/flagler-grad-photoshoot/"
+    },
+    "articleSection": ["Photography", "Flagler College", "Graduation"],
+    "keywords": "flagler college graduation photography, flagler grad photos, st augustine graduation photographer"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "slug": "lifestyle-apparel-photo-shoot",
+  "title": "Lifestyle Apparel Photography for the St. Augustine Amphitheatre",
+  "excerpt": "Go behind the scenes of our lifestyle apparel shoot for the St. Augustine Amphitheatre's merch collection, filmed at Anastasia State Park.",
+  "author": "diego-cerquera",
+
+  "datePublished": "2026-03-15",
+  "dateModified": "2026-03-15",
+
+  "categories": {
+    "service": ["photography", "commercial"],
+    "location": ["st-augustine", "anastasia-state-park"],
+    "industry": ["entertainment", "retail", "apparel"]
+  },
+  "tags": ["lifestyle photography", "apparel photography", "product photography", "st augustine amphitheatre", "commercial photography", "anastasia state park"],
+
+  "images": {
+    "hero": {
+      "src": "/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-12-large.webp",
+      "alt": "Group of models wearing St Augustine Amphitheatre merch lounging in grass at golden hour",
+      "width": 1200,
+      "height": 630,
+      "position": "center"
+    },
+    "banner": {
+      "src": "/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-100-large.webp",
+      "alt": "Models wearing Amp merch hanging from oak tree at Anastasia State Park"
+    },
+    "content": [
+      {
+        "id": "lifestyle-vibe",
+        "src": "/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-1-medium.webp",
+        "alt": "Model in Amp sweatshirt with natural sun flare at Anastasia State Park",
+        "width": 800,
+        "height": 600,
+        "caption": "Natural light and real moments - the essence of lifestyle photography"
+      },
+      {
+        "id": "group-storytelling",
+        "src": "/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-25-medium.webp",
+        "alt": "Group of models holding hands showing back of St Augustine Amphitheatre merch designs",
+        "width": 800,
+        "height": 600,
+        "caption": "Lifestyle photography tells a story - not just shows a product"
+      },
+      {
+        "id": "product-detail",
+        "src": "/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-50-medium.webp",
+        "alt": "Detail shot of St Augustine Amphitheatre hoodie and t-shirt designs",
+        "width": 800,
+        "height": 600,
+        "caption": "Product details still matter - we capture both the vibe and the merch"
+      },
+      {
+        "id": "candid-moment",
+        "src": "/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-75-medium.webp",
+        "alt": "Candid lifestyle shot of model in vintage Amphitheatre ringer tee with coffee",
+        "width": 800,
+        "height": 600,
+        "caption": "Candid moments connect customers to the lifestyle your brand represents"
+      }
+    ]
+  },
+
+  "seo": {
+    "title": "Lifestyle Apparel Photography St. Augustine | First Sight Films",
+    "description": "Professional lifestyle and apparel photography in St. Augustine. See our work for the St. Augustine Amphitheatre merch collection shot at Anastasia State Park.",
+    "og_type": "article",
+    "og_image": "/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-130-large.webp"
+  },
+
+  "related_articles": ["flagler-grad-photoshoot"],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Lifestyle Apparel Photography for the St. Augustine Amphitheatre",
+    "description": "Go behind the scenes of our lifestyle apparel shoot for the St. Augustine Amphitheatre's merch collection at Anastasia State Park.",
+    "image": "https://www.firstsightfilms.com/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-130-large.webp",
+    "datePublished": "2026-04-15",
+    "dateModified": "2026-04-15",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Cerquera",
+      "url": "https://www.firstsightfilms.com/aboutus/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "First Sight Films",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.firstsightfilms.com/blog/lifestyle-apparel-photo-shoot/"
+    },
+    "articleSection": ["Photography", "Commercial", "Lifestyle"],
+    "keywords": "lifestyle photography, apparel photography, st augustine amphitheatre, commercial photography, anastasia state park"
+  }
+}

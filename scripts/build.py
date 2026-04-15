@@ -45,6 +45,17 @@ SRC_FONTS_DIR = SRC_DIR / "fonts"
 # Global image manifest (populated by load_image_manifests)
 IMAGE_MANIFEST = {}
 
+# Blog paths
+BLOG_DIR = SRC_DIR / "blog"
+BLOG_ARTICLES_DIR = BLOG_DIR / "articles"
+BLOG_CONTENT_DIR = BLOG_DIR / "content"
+BLOG_CONFIG_DIR = BLOG_DIR / "config"
+
+# Global blog data (populated by load_blog_data)
+BLOG_ARTICLES = []
+BLOG_CATEGORIES = {}
+BLOG_AUTHORS = {}
+
 
 def load_image_manifests():
     """Load all _manifest.csv files from output/images/*/ into a lookup dict."""
@@ -537,6 +548,21 @@ def inject_canonical(html_content, url_path):
     return html_content
 
 
+def fix_og_url(html_content, url_path):
+    """Replace generic og:url with the correct page URL."""
+    site_url = "https://www.firstsightfilms.com"
+    correct_url = site_url + url_path
+
+    # Replace the hardcoded homepage og:url with the correct page URL
+    html_content = re.sub(
+        r'<meta property="og:url" content="https://www\.firstsightfilms\.com/?">',
+        f'<meta property="og:url" content="{correct_url}">',
+        html_content
+    )
+
+    return html_content
+
+
 def build_pages(modules):
     """Process all page templates and output complete HTML."""
     if not PAGES_DIR.exists():
@@ -574,6 +600,9 @@ def build_pages(modules):
 
         # Inject canonical tag
         processed_content = inject_canonical(processed_content, url_path)
+
+        # Fix og:url to match page URL
+        processed_content = fix_og_url(processed_content, url_path)
 
         # Create parent directories
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -679,6 +708,9 @@ def generate_sitemap():
         "google",  # Google verification files
         "_snippets",  # Snippet files
         "saint-augustine-jacksonville-photographer",  # Old page
+        "_service-template",  # Template file, not a real page
+        "_article-template",  # Blog article template, not a real page
+        "/410",  # Error page, not indexable
     ]
 
     # Priority mapping based on URL depth/importance
@@ -750,37 +782,296 @@ def generate_sitemap():
     print(f"  Generated sitemap.xml with {len(urls)} URLs")
 
 
+# =============================================================================
+# Blog Functions
+# =============================================================================
+
+def load_blog_config():
+    """Load blog categories and authors configuration."""
+    global BLOG_CATEGORIES, BLOG_AUTHORS
+
+    # Load categories
+    categories_file = BLOG_CONFIG_DIR / "categories.json"
+    if categories_file.exists():
+        BLOG_CATEGORIES = json.loads(categories_file.read_text(encoding="utf-8"))
+        total_cats = sum(len(c.get('items', {})) for c in BLOG_CATEGORIES.values())
+        print(f"  Loaded {total_cats} categories")
+
+    # Load authors
+    authors_file = BLOG_CONFIG_DIR / "authors.json"
+    if authors_file.exists():
+        BLOG_AUTHORS = json.loads(authors_file.read_text(encoding="utf-8"))
+        print(f"  Loaded {len(BLOG_AUTHORS)} authors")
+
+
+def load_blog_articles():
+    """Load all blog article metadata."""
+    global BLOG_ARTICLES
+    BLOG_ARTICLES = []
+
+    if not BLOG_ARTICLES_DIR.exists():
+        return []
+
+    for article_file in BLOG_ARTICLES_DIR.glob("*.json"):
+        try:
+            article_data = json.loads(article_file.read_text(encoding="utf-8"))
+            BLOG_ARTICLES.append(article_data)
+        except json.JSONDecodeError as e:
+            print(f"  Error parsing {article_file.name}: {e}")
+
+    # Sort by date (newest first)
+    BLOG_ARTICLES.sort(key=lambda x: x.get("datePublished", ""), reverse=True)
+    print(f"  Loaded {len(BLOG_ARTICLES)} blog articles")
+    return BLOG_ARTICLES
+
+
+def load_blog_content(slug):
+    """Load the HTML content for an article."""
+    content_file = BLOG_CONTENT_DIR / f"{slug}.html"
+    if not content_file.exists():
+        print(f"  Warning: Content file not found: {content_file}")
+        return ""
+    return content_file.read_text(encoding="utf-8")
+
+
+def process_blog_images(content, article_data):
+    """Replace {{image:id}} placeholders with full img tags from article data."""
+    images = article_data.get("images", {}).get("content", [])
+    image_map = {img["id"]: img for img in images}
+
+    def replace_image(match):
+        image_id = match.group(1).strip()
+        if image_id not in image_map:
+            print(f"  Warning: Image not found: {image_id}")
+            return match.group(0)
+
+        img = image_map[image_id]
+        caption_html = ""
+        if img.get("caption"):
+            caption_html = f'<figcaption class="blog-image-caption">{img["caption"]}</figcaption>'
+
+        return f'''<figure class="blog-image">
+          <img src="{img['src']}" alt="{img['alt']}" width="{img.get('width', '')}" height="{img.get('height', '')}" loading="lazy">
+          {caption_html}
+        </figure>'''
+
+    pattern = r"\{\{image:([a-zA-Z0-9_-]+)\}\}"
+    return re.sub(pattern, replace_image, content)
+
+
+def generate_blog_article_schema(article):
+    """Generate JSON-LD schema for blog article."""
+    if "schema" in article:
+        return f'<script type="application/ld+json">\n{json.dumps(article["schema"], indent=2)}\n</script>'
+    return ""
+
+
+def generate_breadcrumb_schema(article):
+    """Generate breadcrumb schema for article."""
+    site_url = "https://www.firstsightfilms.com"
+
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": f"{site_url}/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": f"{site_url}/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": article["title"]
+            }
+        ]
+    }
+
+    return f'<script type="application/ld+json">\n{json.dumps(breadcrumb, indent=2)}\n</script>'
+
+
+def format_date(date_str):
+    """Format ISO date to readable format."""
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+        return dt.strftime("%B %d, %Y")
+    except:
+        return date_str
+
+
+def build_blog_article(article, modules):
+    """Build a single blog article page."""
+    slug = article["slug"]
+
+    # Load article template
+    template_file = PAGES_DIR / "blog" / "_article-template.html"
+    if not template_file.exists():
+        print(f"  Warning: Blog article template not found")
+        return
+
+    template = template_file.read_text(encoding="utf-8")
+
+    # Load article content
+    content_html = load_blog_content(slug)
+    content_html = process_blog_images(content_html, article)
+
+    # Get author data
+    author_id = article.get("author", "diego-cerquera")
+    author = BLOG_AUTHORS.get(author_id, {})
+
+    # Build placeholders
+    seo = article.get("seo", {})
+    hero_img = article.get("images", {}).get("hero", {})
+    # Banner image for article hero (falls back to hero if not specified)
+    banner_img = article.get("images", {}).get("banner", hero_img)
+
+    # Replace article-specific placeholders
+    replacements = {
+        "{{blog-title}}": article["title"],
+        "{{blog-seo-title}}": seo.get("title", f"{article['title']} | First Sight Films"),
+        "{{blog-seo-description}}": seo.get("description", article["excerpt"]),
+        "{{blog-og-image}}": hero_img.get("src", ""),
+        "{{blog-date-published}}": article["datePublished"],
+        "{{blog-date-modified}}": article.get("dateModified", article["datePublished"]),
+        "{{blog-date-formatted}}": format_date(article["datePublished"]),
+        "{{blog-excerpt}}": article["excerpt"],
+        "{{blog-content}}": content_html,
+        "{{blog-author-name}}": author.get("name", "Diego Cerquera"),
+        "{{blog-author-bio}}": author.get("bio", ""),
+        "{{blog-author-photo}}": author.get("photo", ""),
+        "{{blog-hero-src}}": banner_img.get("src", ""),
+        "{{blog-hero-alt}}": banner_img.get("alt", ""),
+        "{{blog-article-schema}}": generate_blog_article_schema(article),
+        "{{blog-breadcrumb-schema}}": generate_breadcrumb_schema(article),
+    }
+
+    for placeholder, value in replacements.items():
+        template = template.replace(placeholder, str(value))
+
+    # Process standard modules
+    processed_content = process_page(template, modules)
+
+    # Output path: /blog/article-slug/index.html
+    output_path = OUTPUT_DIR / "blog" / slug / "index.html"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Inject canonical and fix og:url
+    url_path = f"/blog/{slug}/"
+    processed_content = inject_canonical(processed_content, url_path)
+    processed_content = fix_og_url(processed_content, url_path)
+
+    output_path.write_text(processed_content, encoding="utf-8")
+    print(f"  Built blog article: {slug}")
+
+
+def build_blog_listing(modules):
+    """Build the blog listing page."""
+    listing_template_file = PAGES_DIR / "blog" / "index.html"
+    if not listing_template_file.exists():
+        print(f"  Warning: Blog listing template not found")
+        return
+
+    template = listing_template_file.read_text(encoding="utf-8")
+
+    # Generate article cards HTML
+    cards_html = []
+    for article in BLOG_ARTICLES:
+        hero_img = article.get("images", {}).get("hero", {})
+        date_formatted = format_date(article["datePublished"])
+        img_position = hero_img.get("position", "")
+        img_style = f' style="object-position: {img_position};"' if img_position else ""
+        cards_html.append(f'''
+        <article class="blog-card">
+          <a href="/blog/{article['slug']}/" class="blog-card-link">
+            <div class="blog-card-image">
+              <img src="{hero_img.get('src', '')}" alt="{hero_img.get('alt', '')}"{img_style} loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <time class="blog-card-date" datetime="{article['datePublished']}">{date_formatted}</time>
+              <h2 class="blog-card-title">{article['title']}</h2>
+              <p class="blog-card-excerpt">{article['excerpt']}</p>
+              <span class="blog-card-readmore">Read More</span>
+            </div>
+          </a>
+        </article>''')
+
+    template = template.replace("{{blog-articles}}", "\n".join(cards_html))
+
+    # Process modules
+    processed_content = process_page(template, modules)
+
+    # Output
+    output_path = OUTPUT_DIR / "blog" / "index.html"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    processed_content = inject_canonical(processed_content, "/blog/")
+    processed_content = fix_og_url(processed_content, "/blog/")
+
+    output_path.write_text(processed_content, encoding="utf-8")
+    print(f"  Built blog listing: {len(BLOG_ARTICLES)} articles")
+
+
+def build_blog(modules):
+    """Build all blog pages."""
+    print(f"\n[Blog] Loading configuration...")
+    load_blog_config()
+
+    print(f"\n[Blog] Loading articles...")
+    load_blog_articles()
+
+    print(f"\n[Blog] Building listing page...")
+    build_blog_listing(modules)
+
+    if not BLOG_ARTICLES:
+        print("  No blog articles found")
+        return
+
+    print(f"\n[Blog] Building article pages...")
+    for article in BLOG_ARTICLES:
+        build_blog_article(article, modules)
+
+
 def main():
     print("\n" + "=" * 50)
     print("FSF Site Builder")
     print("=" * 50)
 
-    print("\n[1/9] Loading modules...")
+    print("\n[1/10] Loading modules...")
     modules = load_modules()
 
     if not modules:
         print("No modules found. Add .html files to src/modules/")
 
-    print(f"\n[2/9] Loading page config...")
+    print(f"\n[2/10] Loading page config...")
     load_page_config()
 
-    print(f"\n[3/9] Loading image manifests...")
+    print(f"\n[3/10] Loading image manifests...")
     manifests = load_image_manifests()
     print(f"  Loaded {len(manifests)} images from manifests")
 
-    print(f"\n[4/9] Building pages...")
+    print(f"\n[4/10] Building pages...")
     build_pages(modules)
 
-    print(f"\n[5/9] Copying existing pages (not yet migrated)...")
+    print(f"\n[5/10] Building blog...")
+    build_blog(modules)
+
+    print(f"\n[6/10] Copying existing pages (not yet migrated)...")
     copy_existing_pages()
 
-    print(f"\n[6/9] Copying CSS...")
+    print(f"\n[7/10] Copying CSS...")
     copy_css()
 
-    print(f"\n[7/9] Copying fonts...")
+    print(f"\n[8/10] Copying fonts...")
     copy_fonts()
 
-    print(f"\n[8/9] Copying assets...")
+    print(f"\n[9/10] Copying assets...")
     copy_assets()
 
     # Copy _redirects file for Netlify
@@ -789,7 +1080,7 @@ def main():
         shutil.copy2(redirects_src, OUTPUT_DIR / "_redirects")
         print(f"  Copied: _redirects")
 
-    print(f"\n[9/9] Generating sitemap...")
+    print(f"\n[10/10] Generating sitemap...")
     generate_sitemap()
 
     print("\n" + "=" * 50)

@@ -1,0 +1,97 @@
+{
+  "service": {
+    "label": "Services",
+    "items": {
+      "corporate-video": {
+        "name": "Corporate Video",
+        "slug": "corporate-video",
+        "description": "Tips and insights about corporate video production"
+      },
+      "brand-story": {
+        "name": "Brand Story",
+        "slug": "brand-story",
+        "description": "Creating compelling brand narratives through video"
+      },
+      "event-video": {
+        "name": "Event Video",
+        "slug": "event-video",
+        "description": "Capturing events and live productions"
+      },
+      "social-media": {
+        "name": "Social Media",
+        "slug": "social-media",
+        "description": "Video content for social media platforms"
+      },
+      "photography": {
+        "name": "Photography",
+        "slug": "photography",
+        "description": "Professional photography tips and techniques"
+      }
+    }
+  },
+  "location": {
+    "label": "Locations",
+    "items": {
+      "st-augustine": {
+        "name": "St. Augustine",
+        "slug": "st-augustine",
+        "description": "Video production in St. Augustine, FL"
+      },
+      "jacksonville": {
+        "name": "Jacksonville",
+        "slug": "jacksonville",
+        "description": "Video production in Jacksonville, FL"
+      },
+      "ponte-vedra": {
+        "name": "Ponte Vedra",
+        "slug": "ponte-vedra",
+        "description": "Video production in Ponte Vedra Beach"
+      },
+      "st-johns-county": {
+        "name": "St. Johns County",
+        "slug": "st-johns-county",
+        "description": "Video production across St. Johns County"
+      },
+      "northeast-florida": {
+        "name": "Northeast Florida",
+        "slug": "northeast-florida",
+        "description": "Video production across Northeast Florida"
+      }
+    }
+  },
+  "industry": {
+    "label": "Industries",
+    "items": {
+      "nonprofit": {
+        "name": "Nonprofits",
+        "slug": "nonprofit",
+        "description": "Video production for nonprofit organizations"
+      },
+      "hospitality": {
+        "name": "Hospitality & Tourism",
+        "slug": "hospitality",
+        "description": "Videos for hotels, restaurants, and attractions"
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "slug": "healthcare",
+        "description": "Video content for healthcare organizations"
+      },
+      "small-business": {
+        "name": "Small Business",
+        "slug": "small-business",
+        "description": "Video marketing for local businesses"
+      },
+      "real-estate": {
+        "name": "Real Estate",
+        "slug": "real-estate",
+        "description": "Video tours and property marketing"
+      },
+      "festivals-events": {
+        "name": "Festivals & Events",
+        "slug": "festivals-events",
+        "description": "Coverage and promotion for festivals and events"
+      }
+    }
+  }
+}

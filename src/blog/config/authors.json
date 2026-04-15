@@ -1,0 +1,19 @@
+{
+  "diego-cerquera": {
+    "name": "Diego Cerquera",
+    "role": "Owner & Lead Videographer",
+    "bio": "Diego founded First Sight Films in 2022. A Flagler College graduate, Class of 2007, he brings a unique perspective from his background as a registered nurse at Flagler Hospital. He specializes in brand story videos and event coverage for businesses across St. Johns County.",
+    "photo": "/images/about/diego-about-us-photo-1-thumb.webp",
+    "url": "/aboutus/",
+    "social": {
+      "instagram": "https://www.instagram.com/firstsightfilms/"
+    }
+  },
+  "trista-cerquera": {
+    "name": "Dr. Trista Cerquera",
+    "role": "Co-Owner & Producer",
+    "bio": "Trista holds a PhD in Interdisciplinary Ecology and has contributed to policy work for the U.S. Congress. She manages production operations and client relationships at First Sight Films, bringing strategic thinking and attention to detail to every project.",
+    "photo": "/images/about/trista-cerquera.jpg",
+    "url": "/aboutus/"
+  }
+}

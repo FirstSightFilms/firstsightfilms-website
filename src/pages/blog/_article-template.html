@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{head}}
+<link rel="stylesheet" href="/css/blog.css">
+<title>{{blog-seo-title}}</title>
+<meta name="description" content="{{blog-seo-description}}">
+
+<!-- Article-specific Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{blog-title}}">
+<meta property="og:description" content="{{blog-seo-description}}">
+<meta property="og:image" content="https://www.firstsightfilms.com{{blog-og-image}}">
+<meta property="article:published_time" content="{{blog-date-published}}">
+<meta property="article:modified_time" content="{{blog-date-modified}}">
+<meta property="article:author" content="{{blog-author-name}}">
+
+<!-- Article Schema -->
+{{blog-article-schema}}
+{{blog-breadcrumb-schema}}
+</head>
+<body class="page-blog page-blog-article">
+
+{{header}}
+
+<main>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/blog/" itemprop="item"><span itemprop="name">Blog</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">{{blog-title}}</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Article Hero -->
+  <section class="blog-article-hero">
+    <div class="blog-hero-image">
+      <img src="{{blog-hero-src}}" alt="{{blog-hero-alt}}">
+    </div>
+    <div class="container">
+      <div class="blog-article-header">
+        <time class="blog-article-date" datetime="{{blog-date-published}}">{{blog-date-formatted}}</time>
+        <h1>{{blog-title}}</h1>
+        <p class="blog-article-excerpt">{{blog-excerpt}}</p>
+        <div class="blog-article-byline">
+          <span class="blog-author">By {{blog-author-name}}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="blog-article-content">
+    <div class="container container-narrow">
+      {{blog-content}}
+    </div>
+  </article>
+
+  <!-- Author Box -->
+  <section class="blog-author-box">
+    <div class="container container-narrow">
+      <div class="author-box-inner">
+        <img src="{{blog-author-photo}}" alt="{{blog-author-name}}" class="author-photo">
+        <div class="author-info">
+          <h3>About {{blog-author-name}}</h3>
+          <p>{{blog-author-bio}}</p>
+          <a href="/aboutus/" class="author-link">Learn more about our team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{schema}}
+{{footer}}
+
+</body>
+</html>

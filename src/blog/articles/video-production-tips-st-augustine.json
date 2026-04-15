@@ -1,0 +1,105 @@
+{
+  "slug": "video-production-tips-st-augustine",
+  "title": "10 Video Production Tips for St. Augustine Businesses",
+  "excerpt": "Learn the essential video production strategies that help St. Augustine businesses create compelling content that connects with their audience.",
+  "author": "diego-cerquera",
+
+  "datePublished": "2026-03-08",
+  "dateModified": "2026-03-08",
+
+  "categories": {
+    "service": ["corporate-video", "brand-story"],
+    "location": ["st-augustine", "st-johns-county"],
+    "industry": ["small-business", "hospitality"]
+  },
+  "tags": ["video tips", "business marketing", "local video", "st augustine"],
+
+  "images": {
+    "hero": {
+      "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-1-large.webp",
+      "alt": "Professional cinema cameras lined up on set for video production in St. Augustine",
+      "width": 1200,
+      "height": 630
+    },
+    "content": [
+      {
+        "id": "lighting-setup",
+        "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-23-medium.webp",
+        "alt": "Outdoor video interview setup in downtown St. Augustine using natural light",
+        "width": 800,
+        "height": 600,
+        "caption": "Filming outdoors in St. Augustine takes advantage of beautiful natural light"
+      },
+      {
+        "id": "studio-lighting",
+        "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-19-medium.webp",
+        "alt": "Quiet Please Filming in Progress sign held on video production set",
+        "width": 800,
+        "height": 600,
+        "caption": "Keeping the set quiet is essential for capturing clean audio"
+      },
+      {
+        "id": "camera-framing",
+        "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-26-medium.webp",
+        "alt": "Fisherman at the Bridge of Lions in St. Augustine - iconic local backdrop",
+        "width": 800,
+        "height": 600,
+        "caption": "The Bridge of Lions and St. Augustine's waterfront add instant production value"
+      },
+      {
+        "id": "interview-setup",
+        "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-25-medium.webp",
+        "alt": "Smiling woman in outdoor setting - authentic portrait for video content",
+        "width": 800,
+        "height": 600,
+        "caption": "Authentic faces connect with your audience better than any product shot"
+      },
+      {
+        "id": "tripod-setup",
+        "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-22-medium.webp",
+        "alt": "St. Augustine Amphitheatre sign with crowd in foreground - example of B-roll footage",
+        "width": 800,
+        "height": 600,
+        "caption": "B-roll like this establishes location and adds visual interest"
+      }
+    ]
+  },
+
+  "seo": {
+    "title": "10 Video Production Tips for St. Augustine Businesses | First Sight Films",
+    "description": "Learn essential video production strategies for St. Augustine businesses. From lighting to storytelling, these tips help create compelling content.",
+    "og_type": "article",
+    "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-1-large.webp"
+  },
+
+  "related_articles": [],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "10 Video Production Tips for St. Augustine Businesses",
+    "description": "Learn essential video production strategies for St. Augustine businesses. From lighting to storytelling, these tips help create compelling content.",
+    "image": "https://www.firstsightfilms.com/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-1-large.webp",
+    "datePublished": "2026-04-15",
+    "dateModified": "2026-04-15",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Cerquera",
+      "url": "https://www.firstsightfilms.com/aboutus/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "First Sight Films",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.firstsightfilms.com/blog/video-production-tips-st-augustine/"
+    },
+    "articleSection": ["Corporate Video", "St. Augustine"],
+    "keywords": "video production, st augustine, business marketing, corporate video"
+  }
+}
