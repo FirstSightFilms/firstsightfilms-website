@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "question": "What is a brand story video?",
+      "answer": "<p>A brand story video goes beyond showcasing products or services — it communicates who you are, why you exist, and what you stand for. These videos connect emotionally with your audience by sharing your mission, values, and the people behind your organization.</p>"
+    },
+    {
+      "question": "How much does a brand story video cost in St. Augustine?",
+      "answer": "<p>Brand story videos typically range from $3,500 to $8,000 depending on scope, locations, and interview subjects. Most projects include strategy development, scripting, production, and delivery of multiple video assets for web and social media.</p>"
+    },
+    {
+      "question": "How long does it take to produce a brand story video?",
+      "answer": "<p>Most brand story projects take 4-6 weeks from kickoff to final delivery. This includes discovery and strategy, scripting, production days, and post-production. Rush delivery is available for time-sensitive projects.</p>"
+    },
+    {
+      "question": "What's included in a brand story video project?",
+      "answer": "<p>Our brand story packages include strategy consultation, scripting, 1-2 production days, professional editing, music licensing, and delivery in multiple formats. You'll receive a hero video (2-4 minutes) plus shorter cuts for social media.</p>"
+    },
+    {
+      "question": "Do you work with nonprofits on brand story videos?",
+      "answer": "<p>Yes, we've created brand story content for nonprofits including Rocky Mountain Conservancy and Friends of Acadia. We understand how to communicate mission and impact in ways that resonate with donors, volunteers, and stakeholders.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a brand story video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A brand story video goes beyond showcasing products or services — it communicates who you are, why you exist, and what you stand for. These videos connect emotionally with your audience by sharing your mission, values, and the people behind your organization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a brand story video cost in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Brand story videos typically range from $3,500 to $8,000 depending on scope, locations, and interview subjects. Most projects include strategy development, scripting, production, and delivery of multiple video assets for web and social media."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to produce a brand story video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most brand story projects take 4-6 weeks from kickoff to final delivery. This includes discovery and strategy, scripting, production days, and post-production. Rush delivery is available for time-sensitive projects."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in a brand story video project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our brand story packages include strategy consultation, scripting, 1-2 production days, professional editing, music licensing, and delivery in multiple formats. You'll receive a hero video (2-4 minutes) plus shorter cuts for social media."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with nonprofits on brand story videos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we've created brand story content for nonprofits including Rocky Mountain Conservancy and Friends of Acadia. We understand how to communicate mission and impact in ways that resonate with donors, volunteers, and stakeholders."
+        }
+      }
+    ]
+  }
+}

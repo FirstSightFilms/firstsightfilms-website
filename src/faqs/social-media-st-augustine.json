@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "question": "What types of social media video do you create?",
+      "answer": "<p>We specialize in short-form video content for Instagram Reels, YouTube Shorts, and YouTube. This includes promotional clips, behind-the-scenes content, event highlights, artist/performer spotlights, and branded entertainment. We focus on content that isn't boring — videos that stop thumbs and hold attention.</p>"
+    },
+    {
+      "question": "How much does social media video production cost in St. Augustine?",
+      "answer": "<p>Single content days start at $1,500 for up to 4 hours of filming. Our monthly retainer package is $5,000/month, which includes 8 hours of filming with deliverables based on your specific needs. This retainer model is ideal for venues, festivals, and brands that need consistent, ongoing content.</p>"
+    },
+    {
+      "question": "Can you create vertical video for Instagram Reels and YouTube Shorts?",
+      "answer": "<p>Yes, we shoot and edit specifically for vertical formats. All content is delivered sized correctly for each platform — 9:16 for Reels and Shorts, 1:1 for feed posts, and 16:9 for standard YouTube videos.</p>"
+    },
+    {
+      "question": "How quickly can you deliver social media content?",
+      "answer": "<p>Standard turnaround is 5-7 business days for a batch of clips. For events or time-sensitive content, we offer same-day and next-day delivery options — something we regularly provide for the St. Augustine Amphitheatre during concert season.</p>"
+    },
+    {
+      "question": "Do you offer ongoing social media video packages?",
+      "answer": "<p>Yes, our retainer model is designed for clients who need consistent content. Our $5,000/month package includes 8 hours of filming, deliverables based on your needs, and priority scheduling. We've maintained a 2+ year retainer partnership with the St. Augustine Amphitheatre using this model.</p>"
+    },
+    {
+      "question": "What results can social media video drive?",
+      "answer": "<p>The right content drives real business results. As the social media partner for Sing Out Loud Festival, our content has been integral to generating millions of dollars in ticket sales and sponsorship revenue. For venues like the Amphitheatre, our content helps sell tickets, build audience loyalty, and amplify artist announcements.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of social media video do you create?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We specialize in short-form video content for Instagram Reels, YouTube Shorts, and YouTube. This includes promotional clips, behind-the-scenes content, event highlights, artist/performer spotlights, and branded entertainment. We focus on content that isn't boring — videos that stop thumbs and hold attention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does social media video production cost in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Single content days start at $1,500 for up to 4 hours of filming. Our monthly retainer package is $5,000/month, which includes 8 hours of filming with deliverables based on your specific needs. This retainer model is ideal for venues, festivals, and brands that need consistent, ongoing content."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you create vertical video for Instagram Reels and YouTube Shorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we shoot and edit specifically for vertical formats. All content is delivered sized correctly for each platform — 9:16 for Reels and Shorts, 1:1 for feed posts, and 16:9 for standard YouTube videos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can you deliver social media content?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard turnaround is 5-7 business days for a batch of clips. For events or time-sensitive content, we offer same-day and next-day delivery options — something we regularly provide for the St. Augustine Amphitheatre during concert season."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer ongoing social media video packages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our retainer model is designed for clients who need consistent content. Our $5,000/month package includes 8 hours of filming, deliverables based on your needs, and priority scheduling. We've maintained a 2+ year retainer partnership with the St. Augustine Amphitheatre using this model."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What results can social media video drive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The right content drives real business results. As the social media partner for Sing Out Loud Festival, our content has been integral to generating millions of dollars in ticket sales and sponsorship revenue. For venues like the Amphitheatre, our content helps sell tickets, build audience loyalty, and amplify artist announcements."
+        }
+      }
+    ]
+  }
+}

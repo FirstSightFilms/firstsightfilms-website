@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "question": "How much does commercial photography cost in St. Augustine?",
+      "answer": "<p>Event coverage starts at $1,200 for half-day (4 hours) with 100+ edited images. Brand photography starts at $1,500 for a half-day shoot with 40+ images. Product photoshoots for lifestyle brands and apparel start at $4,500 for a full day. All sessions include edited, high-resolution images delivered digitally.</p>"
+    },
+    {
+      "question": "What types of photography does First Sight Films offer?",
+      "answer": "<p>We specialize in event photography and lifestyle brand product photography, particularly apparel shoots. We're the official photographer for the St. Augustine Amphitheatre (including their seasonal merchandise line), Sing Out Loud Festival, and Fort Mose Jazz & Blues Festival. We also photograph corporate events, conferences, and brand imagery.</p>"
+    },
+    {
+      "question": "How quickly will I receive my photos?",
+      "answer": "<p>Standard turnaround is 1-2 weeks for edited images. Event photography can be delivered faster when needed — same-day social media selects are available for an additional fee.</p>"
+    },
+    {
+      "question": "Do you offer video and photography together?",
+      "answer": "<p>Yes, we frequently combine photo and video coverage for events and brand projects. Bundling services is more efficient and cost-effective than hiring separate vendors.</p>"
+    },
+    {
+      "question": "What makes First Sight Films different from other photographers?",
+      "answer": "<p>We prioritize your experience as much as the final images. During events, we capture moments without disrupting the flow. During product shoots, we 'fix it in pre-production' — planning thoroughly so we have room to go with what's working on the day of the shoot. We've photographed corporate events, convention centers, concerts, state parks, national parks, and everything in between.</p>"
+    },
+    {
+      "question": "What areas do you serve for photography?",
+      "answer": "<p>We're based in St. Augustine and serve clients throughout Northeast Florida, including Jacksonville, Ponte Vedra, St. Johns County, and Palm Coast. We also travel for larger projects — we've shot in national parks across the country.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does commercial photography cost in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Event coverage starts at $1,200 for half-day (4 hours) with 100+ edited images. Brand photography starts at $1,500 for a half-day shoot with 40+ images. Product photoshoots for lifestyle brands and apparel start at $4,500 for a full day. All sessions include edited, high-resolution images delivered digitally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of photography does First Sight Films offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We specialize in event photography and lifestyle brand product photography, particularly apparel shoots. We're the official photographer for the St. Augustine Amphitheatre (including their seasonal merchandise line), Sing Out Loud Festival, and Fort Mose Jazz & Blues Festival. We also photograph corporate events, conferences, and brand imagery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly will I receive my photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard turnaround is 1-2 weeks for edited images. Event photography can be delivered faster when needed — same-day social media selects are available for an additional fee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer video and photography together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we frequently combine photo and video coverage for events and brand projects. Bundling services is more efficient and cost-effective than hiring separate vendors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes First Sight Films different from other photographers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We prioritize your experience as much as the final images. During events, we capture moments without disrupting the flow. During product shoots, we 'fix it in pre-production' — planning thoroughly so we have room to go with what's working on the day of the shoot. We've photographed corporate events, convention centers, concerts, state parks, national parks, and everything in between."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve for photography?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're based in St. Augustine and serve clients throughout Northeast Florida, including Jacksonville, Ponte Vedra, St. Johns County, and Palm Coast. We also travel for larger projects — we've shot in national parks across the country."
+        }
+      }
+    ]
+  }
+}

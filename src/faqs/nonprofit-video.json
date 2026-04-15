@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "question": "How much does nonprofit video production cost?",
+      "answer": "<p>Nonprofit video projects typically range from $3,000 to $12,000 depending on scope, travel requirements, and deliverables. We offer flexible pricing structures and can work within grant budgets. As a 1% for the Planet member, we also provide discounted and pro-bono work for qualifying environmental organizations.</p>"
+    },
+    {
+      "question": "Do you travel for nonprofit video projects?",
+      "answer": "<p>Yes, we regularly travel nationwide for nonprofit clients. We've produced content for organizations across the country, including Rocky Mountain Conservancy in Colorado and Friends of Acadia in Maine. Travel costs are included in project quotes upfront.</p>"
+    },
+    {
+      "question": "What types of nonprofit video do you produce?",
+      "answer": "<p>We create fundraising videos, impact stories, donor testimonials, program documentation, annual report videos, event coverage, and campaign content. Each project is tailored to your specific audience — whether that's donors, volunteers, board members, or the communities you serve.</p>"
+    },
+    {
+      "question": "How do you approach nonprofit storytelling differently?",
+      "answer": "<p>We understand that nonprofit video isn't just about production quality — it's about impact. We focus on authentic stories that connect donors to your mission, demonstrate measurable outcomes, and respect the communities you serve. Our process starts with understanding your goals, audience, and how the video fits into your broader communications strategy.</p>"
+    },
+    {
+      "question": "Can you work within grant timelines and budgets?",
+      "answer": "<p>Yes, we have experience working within grant-funded project parameters. We provide detailed scopes and budgets that align with grant reporting requirements, and we're flexible with payment schedules to accommodate nonprofit cash flow cycles.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does nonprofit video production cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nonprofit video projects typically range from $3,000 to $12,000 depending on scope, travel requirements, and deliverables. We offer flexible pricing structures and can work within grant budgets. As a 1% for the Planet member, we also provide discounted and pro-bono work for qualifying environmental organizations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you travel for nonprofit video projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we regularly travel nationwide for nonprofit clients. We've produced content for organizations across the country, including Rocky Mountain Conservancy in Colorado and Friends of Acadia in Maine. Travel costs are included in project quotes upfront."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of nonprofit video do you produce?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We create fundraising videos, impact stories, donor testimonials, program documentation, annual report videos, event coverage, and campaign content. Each project is tailored to your specific audience — whether that's donors, volunteers, board members, or the communities you serve."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you approach nonprofit storytelling differently?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We understand that nonprofit video isn't just about production quality — it's about impact. We focus on authentic stories that connect donors to your mission, demonstrate measurable outcomes, and respect the communities you serve. Our process starts with understanding your goals, audience, and how the video fits into your broader communications strategy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you work within grant timelines and budgets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we have experience working within grant-funded project parameters. We provide detailed scopes and budgets that align with grant reporting requirements, and we're flexible with payment schedules to accommodate nonprofit cash flow cycles."
+        }
+      }
+    ]
+  }
+}
