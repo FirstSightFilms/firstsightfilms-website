@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "question": "How much does video production cost in Ponte Vedra?",
+      "answer": "<p>Video production in Ponte Vedra typically ranges from $1,500 to $10,000 depending on scope. Event coverage starts at $1,200 for half-day coverage, corporate videos start at $3,500, and brand story videos start at $5,500. We provide detailed quotes after understanding your goals.</p>"
+    },
+    {
+      "question": "Do you travel to Ponte Vedra for video projects?",
+      "answer": "<p>Yes, we're based in St. Augustine — just 20 minutes south of Ponte Vedra Beach. We regularly work with Ponte Vedra businesses and venues, including the Ponte Vedra Concert Hall. No travel fees for projects in the Ponte Vedra area.</p>"
+    },
+    {
+      "question": "What types of video production do you offer in Ponte Vedra?",
+      "answer": "<p>We offer corporate video, event coverage, brand story videos, social media content, and commercial photography. Our clients in Ponte Vedra include businesses, country clubs, resorts, and the Ponte Vedra Concert Hall.</p>"
+    },
+    {
+      "question": "Do you work with the Ponte Vedra Concert Hall?",
+      "answer": "<p>Yes, the Ponte Vedra Concert Hall is part of the SJCCE Inc. family of venues we work with, alongside the St. Augustine Amphitheatre. We provide video and photography coverage for select performances and special events at PVCH.</p>"
+    },
+    {
+      "question": "How long does a video project take from start to finish?",
+      "answer": "<p>Most projects take 3-6 weeks from kickoff to final delivery. This includes strategy, pre-production, filming, and editing. Event coverage and quick-turnaround projects can be delivered faster when needed.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does video production cost in Ponte Vedra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Video production in Ponte Vedra typically ranges from $1,500 to $10,000 depending on scope. Event coverage starts at $1,200 for half-day coverage, corporate videos start at $3,500, and brand story videos start at $5,500. We provide detailed quotes after understanding your goals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you travel to Ponte Vedra for video projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we're based in St. Augustine — just 20 minutes south of Ponte Vedra Beach. We regularly work with Ponte Vedra businesses and venues, including the Ponte Vedra Concert Hall. No travel fees for projects in the Ponte Vedra area."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of video production do you offer in Ponte Vedra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer corporate video, event coverage, brand story videos, social media content, and commercial photography. Our clients in Ponte Vedra include businesses, country clubs, resorts, and the Ponte Vedra Concert Hall."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with the Ponte Vedra Concert Hall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the Ponte Vedra Concert Hall is part of the SJCCE Inc. family of venues we work with, alongside the St. Augustine Amphitheatre. We provide video and photography coverage for select performances and special events at PVCH."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a video project take from start to finish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most projects take 3-6 weeks from kickoff to final delivery. This includes strategy, pre-production, filming, and editing. Event coverage and quick-turnaround projects can be delivered faster when needed."
+        }
+      }
+    ]
+  }
+}

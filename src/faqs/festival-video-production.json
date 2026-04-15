@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "question": "How much does festival video production cost?",
+      "answer": "<p>Festival video production varies based on the size and duration of your event. Single-day festivals typically start at $2,400 for full-day coverage. Multi-day festivals are quoted based on scope, crew size, and deliverables. Our 3-year partnership with Sing Out Loud Festival gives us deep experience in festival-scale production.</p>"
+    },
+    {
+      "question": "What's included in festival video coverage?",
+      "answer": "<p>Festival coverage typically includes multi-camera capture of performances, crowd and atmosphere footage, artist/vendor interviews, behind-the-scenes content, highlight reels, and social media clips. We can also provide same-day social content and daily recap videos for multi-day events.</p>"
+    },
+    {
+      "question": "Do you offer same-day social media content for festivals?",
+      "answer": "<p>Yes, we specialize in rapid-turnaround content for festivals. This includes same-day Instagram Reels, YouTube Shorts, and daily highlight packages. Our retainer work with the St. Augustine Amphitheatre has made us experts at delivering content while events are still happening.</p>"
+    },
+    {
+      "question": "What festivals have you worked with?",
+      "answer": "<p>We're the official video and photography partner for Sing Out Loud Festival (3 consecutive years), Fort Mose Jazz & Blues Festival (2 years), and provide ongoing coverage for events at the St. Augustine Amphitheatre and Ponte Vedra Concert Hall. We've covered festivals ranging from 1,000 to 50,000+ attendees.</p>"
+    },
+    {
+      "question": "Can you handle multi-stage festival coverage?",
+      "answer": "<p>Yes, our experience with Sing Out Loud Festival — which spans multiple stages and venues across St. Augustine — has prepared us for complex, multi-location festival coverage. We coordinate crews across stages while maintaining consistent quality and style.</p>"
+    },
+    {
+      "question": "Do you provide photography alongside video for festivals?",
+      "answer": "<p>Yes, we offer combined photo and video coverage for festivals. Bundling services is more efficient and ensures visual consistency across all your content. As the official photographers for Sing Out Loud Festival, we capture both stills and motion for comprehensive coverage.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does festival video production cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Festival video production varies based on the size and duration of your event. Single-day festivals typically start at $2,400 for full-day coverage. Multi-day festivals are quoted based on scope, crew size, and deliverables. Our 3-year partnership with Sing Out Loud Festival gives us deep experience in festival-scale production."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in festival video coverage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Festival coverage typically includes multi-camera capture of performances, crowd and atmosphere footage, artist/vendor interviews, behind-the-scenes content, highlight reels, and social media clips. We can also provide same-day social content and daily recap videos for multi-day events."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer same-day social media content for festivals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in rapid-turnaround content for festivals. This includes same-day Instagram Reels, YouTube Shorts, and daily highlight packages. Our retainer work with the St. Augustine Amphitheatre has made us experts at delivering content while events are still happening."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What festivals have you worked with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're the official video and photography partner for Sing Out Loud Festival (3 consecutive years), Fort Mose Jazz & Blues Festival (2 years), and provide ongoing coverage for events at the St. Augustine Amphitheatre and Ponte Vedra Concert Hall. We've covered festivals ranging from 1,000 to 50,000+ attendees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you handle multi-stage festival coverage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our experience with Sing Out Loud Festival — which spans multiple stages and venues across St. Augustine — has prepared us for complex, multi-location festival coverage. We coordinate crews across stages while maintaining consistent quality and style."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide photography alongside video for festivals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer combined photo and video coverage for festivals. Bundling services is more efficient and ensures visual consistency across all your content. As the official photographers for Sing Out Loud Festival, we capture both stills and motion for comprehensive coverage."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "question": "How much do Flagler College graduation photos cost?",
+      "answer": "<p>Our Flagler College graduation photo sessions are $300 for a 1-hour session with 15 professionally edited digital images. All images receive professional color grading and minor skin retouching — no AI editing. This includes campus locations like Ponce Hall courtyard, and we can incorporate personal items that tell your Flagler story.</p>"
+    },
+    {
+      "question": "When should I book my Flagler graduation photos?",
+      "answer": "<p>For May graduates, we recommend booking between March and April. For fall graduates, reach out about two months before your ceremony. We shoot our official FCGradStories collaboration with Flagler College in April each year. We do accept last-minute requests when schedules allow, so don't hesitate to reach out even if graduation is approaching.</p>"
+    },
+    {
+      "question": "Where do you shoot Flagler College graduation photos?",
+      "answer": "<p>Our favorite spot is the Ponce Hall courtyard — the lighting is incredible and it's absolutely iconic Flagler. With a wide-angle lens, we capture beautiful shots of grads with the famous Flagler College towers in the background. We know this campus intimately and can suggest the best locations, but we also love when grads have their own ideas.</p>"
+    },
+    {
+      "question": "Can I bring family, friends, or pets to my graduation session?",
+      "answer": "<p>Absolutely! You can bring family members, significant others, friends, and even pets to your session. We also encourage you to bring personal items that represent your time at Flagler — your favorite books, sports equipment, art supplies, or anything that tells your story.</p>"
+    },
+    {
+      "question": "What makes First Sight Films different from other graduation photographers?",
+      "answer": "<p>Diego is a Flagler College graduate (Class of 2007) who studied Sociology and Political Science. He spent years in Ponce Hall, took classes in Lewis Auditorium, and logged countless hours in Proctor Library. When he graduated, his own photos were limited — which is why he's passionate about capturing this moment for today's graduates. We've been the official photographers for Flagler's FCGradStories campaign for 3 consecutive years, photographing 50+ graduates.</p>"
+    },
+    {
+      "question": "What's included in the 15 deliverables?",
+      "answer": "<p>You receive 15 high-resolution digital images, professionally edited with color grading and minor skin retouching. All editing is done by hand — no AI. Images are delivered via digital download within 2 weeks of your session, ready for printing, framing, or sharing on social media.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do Flagler College graduation photos cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our Flagler College graduation photo sessions are $300 for a 1-hour session with 15 professionally edited digital images. All images receive professional color grading and minor skin retouching — no AI editing. This includes campus locations like Ponce Hall courtyard, and we can incorporate personal items that tell your Flagler story."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I book my Flagler graduation photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For May graduates, we recommend booking between March and April. For fall graduates, reach out about two months before your ceremony. We shoot our official FCGradStories collaboration with Flagler College in April each year. We do accept last-minute requests when schedules allow, so don't hesitate to reach out even if graduation is approaching."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do you shoot Flagler College graduation photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our favorite spot is the Ponce Hall courtyard — the lighting is incredible and it's absolutely iconic Flagler. With a wide-angle lens, we capture beautiful shots of grads with the famous Flagler College towers in the background. We know this campus intimately and can suggest the best locations, but we also love when grads have their own ideas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I bring family, friends, or pets to my graduation session?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! You can bring family members, significant others, friends, and even pets to your session. We also encourage you to bring personal items that represent your time at Flagler — your favorite books, sports equipment, art supplies, or anything that tells your story."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes First Sight Films different from other graduation photographers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Diego is a Flagler College graduate (Class of 2007) who studied Sociology and Political Science. He spent years in Ponce Hall, took classes in Lewis Auditorium, and logged countless hours in Proctor Library. When he graduated, his own photos were limited — which is why he's passionate about capturing this moment for today's graduates. We've been the official photographers for Flagler's FCGradStories campaign for 3 consecutive years, photographing 50+ graduates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in the 15 deliverables?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You receive 15 high-resolution digital images, professionally edited with color grading and minor skin retouching. All editing is done by hand — no AI. Images are delivered via digital download within 2 weeks of your session, ready for printing, framing, or sharing on social media."
+        }
+      }
+    ]
+  }
+}
