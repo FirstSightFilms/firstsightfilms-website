@@ -576,6 +576,11 @@ def build_pages(modules):
         # Get relative path for nested pages (e.g., video/fortmose.html)
         relative_path = page_file.relative_to(PAGES_DIR)
 
+        # Skip template files (prefixed with _)
+        if page_file.name.startswith("_"):
+            print(f"  Skipped template: {relative_path}")
+            continue
+
         # Read page template
         page_content = page_file.read_text(encoding="utf-8")
 
