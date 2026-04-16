@@ -563,6 +563,61 @@ def fix_og_url(html_content, url_path):
     return html_content
 
 
+def fix_blog_og_tags(html_content):
+    """Remove duplicate OG tags from blog articles.
+
+    The head module includes default OG tags, but blog articles have their own
+    article-specific OG tags. This function removes the default ones so crawlers
+    find the article-specific tags first.
+    """
+    # Remove default og:title (keep article-specific one)
+    html_content = re.sub(
+        r'<meta property="og:title" content="St\. Augustine Video Production \| First Sight Films">\n?',
+        '',
+        html_content
+    )
+
+    # Remove default og:description (keep article-specific one)
+    html_content = re.sub(
+        r'<meta property="og:description" content="Professional video production and photography for St\. Augustine and Northeast Florida businesses\.">\n?',
+        '',
+        html_content
+    )
+
+    # Remove default og:image (keep article-specific one)
+    html_content = re.sub(
+        r'<meta property="og:image" content="https://www\.firstsightfilms\.com/images/fsf-social-share\.png">\n?',
+        '',
+        html_content
+    )
+
+    # Remove default og:type website (article template has og:type article)
+    html_content = re.sub(
+        r'<meta property="og:type" content="website">\n?',
+        '',
+        html_content
+    )
+
+    # Remove default twitter tags (they'll use OG as fallback)
+    html_content = re.sub(
+        r'<meta name="twitter:title" content="St\. Augustine Video Production \| First Sight Films">\n?',
+        '',
+        html_content
+    )
+    html_content = re.sub(
+        r'<meta name="twitter:description" content="Professional video production and photography for St\. Augustine and Northeast Florida businesses\.">\n?',
+        '',
+        html_content
+    )
+    html_content = re.sub(
+        r'<meta name="twitter:image" content="https://www\.firstsightfilms\.com/images/fsf-social-share\.png">\n?',
+        '',
+        html_content
+    )
+
+    return html_content
+
+
 def build_pages(modules):
     """Process all page templates and output complete HTML."""
     if not PAGES_DIR.exists():
@@ -971,6 +1026,7 @@ def build_blog_article(article, modules):
     url_path = f"/blog/{slug}/"
     processed_content = inject_canonical(processed_content, url_path)
     processed_content = fix_og_url(processed_content, url_path)
+    processed_content = fix_blog_og_tags(processed_content)
 
     output_path.write_text(processed_content, encoding="utf-8")
     print(f"  Built blog article: {slug}")

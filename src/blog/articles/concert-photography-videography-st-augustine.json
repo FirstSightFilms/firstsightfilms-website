@@ -1,0 +1,75 @@
+{
+  "slug": "concert-photography-videography-st-augustine",
+  "title": "Concert Photography and Videography in St. Augustine: What Venues Get Wrong",
+  "excerpt": "A lot of concert content produced for live music venues isn't doing what venues think it's doing. Here are the patterns we see most often, and what a better approach looks like.",
+  "author": "diego-cerquera",
+
+  "datePublished": "2026-01-10",
+  "dateModified": "2026-01-10",
+
+  "categories": {
+    "service": ["photography", "event-video"],
+    "location": ["st-augustine"],
+    "industry": ["entertainment", "festivals"]
+  },
+  "tags": ["concert photography", "concert videography", "st augustine", "venue marketing", "event content"],
+
+  "images": {
+    "hero": {
+      "src": "/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1200w.webp",
+      "alt": "Gary Clark Jr performing at Fort Mose Jazz Festival",
+      "width": 1200,
+      "height": 630
+    },
+    "content": [
+      {
+        "id": "crowd-converts",
+        "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-laughing-1200w.webp",
+        "alt": "Audience member laughing at concert",
+        "caption": "Crowd footage is what converts — people buy tickets to be part of an experience"
+      },
+      {
+        "id": "artist-shot",
+        "src": "/images/photography-event-st-augustine-amphitheatre/crockett-leon-bridges-augustine-amphitheatre-performance-1200w.webp",
+        "alt": "Artist performing at St. Augustine Amphitheatre",
+        "caption": "Artist shots are important but shouldn't be 90% of your production time"
+      }
+    ]
+  },
+
+  "seo": {
+    "title": "Concert Photography & Videography St. Augustine | What Venues Get Wrong",
+    "description": "What live music venues in St. Augustine get wrong about concert photography and videography. Common mistakes and what actually works for marketing.",
+    "og_type": "article",
+    "og_image": "/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1200w.webp"
+  },
+
+  "related_articles": ["live-entertainment-venue-video-florida", "behind-scenes-amphitheatre"],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Concert Photography and Videography in St. Augustine: What Venues Get Wrong",
+    "description": "What live music venues in St. Augustine get wrong about concert photography and videography.",
+    "image": "https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1200w.webp",
+    "datePublished": "2026-01-10",
+    "dateModified": "2026-01-10",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Cerquera",
+      "url": "https://www.firstsightfilms.com/aboutus/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "First Sight Films",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.firstsightfilms.com/blog/concert-photography-videography-st-augustine/"
+    }
+  }
+}

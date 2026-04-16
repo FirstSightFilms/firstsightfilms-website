@@ -1,0 +1,69 @@
+{
+  "slug": "videographer-vs-video-production-company",
+  "title": "What's the Difference Between a Videographer and a Video Production Company?",
+  "excerpt": "The terms get used interchangeably, but they describe fundamentally different things. Here's the honest breakdown of when each makes sense for your project.",
+  "author": "diego-cerquera",
+
+  "datePublished": "2026-01-25",
+  "dateModified": "2026-01-25",
+
+  "categories": {
+    "service": ["corporate-video", "event-video"],
+    "location": ["st-augustine", "northeast-florida"],
+    "industry": ["corporate", "small-business"]
+  },
+  "tags": ["videographer", "video production company", "hiring video", "video production", "Florida video"],
+
+  "images": {
+    "hero": {
+      "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-2-large.webp",
+      "alt": "Professional video production team at work in St. Augustine",
+      "width": 1200,
+      "height": 630
+    },
+    "content": [
+      {
+        "id": "production-team",
+        "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-18-medium.webp",
+        "alt": "Video production company team with professional equipment",
+        "caption": "A production company separates functions that a solo videographer combines"
+      }
+    ]
+  },
+
+  "seo": {
+    "title": "Videographer vs Video Production Company | What's the Difference | First Sight Films",
+    "description": "What's the difference between a videographer and a video production company? When to hire each and what the practical differences mean for your project.",
+    "og_type": "article",
+    "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-2-large.webp"
+  },
+
+  "related_articles": ["commercial-video-production-cost-florida", "local-video-partner-st-augustine"],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What's the Difference Between a Videographer and a Video Production Company?",
+    "description": "The honest breakdown of when to hire a videographer vs a video production company.",
+    "image": "https://www.firstsightfilms.com/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-2-large.webp",
+    "datePublished": "2026-01-25",
+    "dateModified": "2026-01-25",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Cerquera",
+      "url": "https://www.firstsightfilms.com/aboutus/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "First Sight Films",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.firstsightfilms.com/blog/videographer-vs-video-production-company/"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "behind-scenes-amphitheatre",
+  "title": "Behind the Scenes: How We Document Live Events at the St. Augustine Amphitheatre",
+  "excerpt": "Great event documentation is less about gear and more about preparation, relationship, and accumulated knowledge. Here's what actually goes into producing content for a world-class venue.",
+  "author": "diego-cerquera",
+
+  "datePublished": "2026-01-05",
+  "dateModified": "2026-01-05",
+
+  "categories": {
+    "service": ["event-video", "photography"],
+    "location": ["st-augustine"],
+    "industry": ["entertainment"]
+  },
+  "tags": ["st augustine amphitheatre", "event documentation", "behind the scenes", "live event video", "concert photography"],
+
+  "images": {
+    "hero": {
+      "src": "/images/photography-event-st-augustine-amphitheatre/avett-brothers-concert-augustine-amphitheatre-st-augustine-1200w.webp",
+      "alt": "Avett Brothers concert at St. Augustine Amphitheatre",
+      "width": 1200,
+      "height": 630
+    },
+    "content": [
+      {
+        "id": "venue-atmosphere",
+        "src": "/images/photography-event-st-augustine-amphitheatre/audience-enjoying-event-augustine-amphitheatre-st-augustine-1200w.webp",
+        "alt": "Audience enjoying event at St. Augustine Amphitheatre",
+        "caption": "We know the Amphitheatre's visual language and how to capture its atmosphere"
+      },
+      {
+        "id": "artist-moment",
+        "src": "/images/photography-event-st-augustine-amphitheatre/avett-brothers-cellist-performance-augustine-amphitheatre-1200w.webp",
+        "alt": "Cellist performing at Amphitheatre",
+        "caption": "Finding the quiet moments in loud shows is part of the craft"
+      }
+    ]
+  },
+
+  "seo": {
+    "title": "Behind the Scenes: Event Video at St. Augustine Amphitheatre | First Sight Films",
+    "description": "How First Sight Films documents live events at the St. Augustine Amphitheatre. Behind the scenes look at preparation, production, and post for world-class venue content.",
+    "og_type": "article",
+    "og_image": "/images/photography-event-st-augustine-amphitheatre/avett-brothers-concert-augustine-amphitheatre-st-augustine-1200w.webp"
+  },
+
+  "related_articles": ["concert-photography-videography-st-augustine", "live-entertainment-venue-video-florida"],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Behind the Scenes: How We Document Live Events at the St. Augustine Amphitheatre",
+    "description": "How First Sight Films documents live events at the St. Augustine Amphitheatre.",
+    "image": "https://www.firstsightfilms.com/images/photography-event-st-augustine-amphitheatre/avett-brothers-concert-augustine-amphitheatre-st-augustine-1200w.webp",
+    "datePublished": "2026-01-05",
+    "dateModified": "2026-01-05",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Cerquera",
+      "url": "https://www.firstsightfilms.com/aboutus/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "First Sight Films",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.firstsightfilms.com/blog/behind-scenes-amphitheatre/"
+    }
+  }
+}

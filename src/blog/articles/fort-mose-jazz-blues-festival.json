@@ -1,0 +1,102 @@
+{
+  "slug": "fort-mose-jazz-blues-festival",
+  "title": "Capturing Live Music at Fort Mose Jazz & Blues Festival",
+  "excerpt": "Two years shooting the Fort Mose Jazz & Blues Festival in St. Augustine. From Gary Clark Jr to Samara Joy, here's what it takes to capture live music at one of Florida's most meaningful cultural events.",
+  "author": "diego-cerquera",
+
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-01",
+
+  "categories": {
+    "service": ["event-video", "photography"],
+    "location": ["st-augustine", "fort-mose"],
+    "industry": ["entertainment", "nonprofit", "festivals"]
+  },
+  "tags": ["fort mose jazz festival", "live music photography", "event videography", "st augustine festivals", "concert photography", "jazz festival", "blues festival"],
+
+  "images": {
+    "hero": {
+      "src": "/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp",
+      "alt": "Gary Clark Jr performs on stage at Fort Mose Jazz Festival in St. Augustine, Florida",
+      "width": 1200,
+      "height": 630,
+      "position": "center 30%"
+    },
+    "banner": {
+      "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-crowd-stage-1200w.webp",
+      "alt": "Large crowd gathered at illuminated outdoor concert stage at Fort Mose Jazz Festival"
+    },
+    "content": [
+      {
+        "id": "stage-wide",
+        "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-stage-performance-1200w.webp",
+        "alt": "Band performs on stage with colorful lighting at Fort Mose Jazz Festival",
+        "width": 800,
+        "height": 600,
+        "caption": "Capturing the full stage during performances"
+      },
+      {
+        "id": "samara-joy",
+        "src": "/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-1200w.webp",
+        "alt": "Samara Joy performing with orchestra at Fort Mose Jazz Festival",
+        "width": 800,
+        "height": 600,
+        "caption": "Grammy-winner Samara Joy brought the house down"
+      },
+      {
+        "id": "audience-energy",
+        "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-applauding-1200w.webp",
+        "alt": "Concert audience members raising hands and applauding during live music performance",
+        "width": 800,
+        "height": 600,
+        "caption": "The crowd energy is just as important as the performers"
+      },
+      {
+        "id": "ledisi",
+        "src": "/images/fort-mose-jazz-blues-festival-images/ledisi-fort-mose-jazz-festival-performance-st-augustine-1200w.webp",
+        "alt": "Ledisi performing energetically on stage with arms outstretched",
+        "width": 800,
+        "height": 600,
+        "caption": "Ledisi brought incredible energy every second she was on stage"
+      }
+    ]
+  },
+
+  "seo": {
+    "title": "Fort Mose Jazz & Blues Festival Video & Photography | First Sight Films",
+    "description": "Behind the scenes of shooting the Fort Mose Jazz & Blues Festival in St. Augustine. Two years of live music photography and event videography featuring Gary Clark Jr, Samara Joy, and more.",
+    "og_type": "article",
+    "og_image": "/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp"
+  },
+
+  "related_articles": ["lifestyle-apparel-photo-shoot", "video-production-tips-st-augustine"],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Capturing Live Music at Fort Mose Jazz & Blues Festival",
+    "description": "Two years shooting the Fort Mose Jazz & Blues Festival in St. Augustine. From Gary Clark Jr to Samara Joy, here's what it takes to capture live music at one of Florida's most meaningful cultural events.",
+    "image": "https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp",
+    "datePublished": "2026-03-01",
+    "dateModified": "2026-03-01",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Cerquera",
+      "url": "https://www.firstsightfilms.com/aboutus/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "First Sight Films",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.firstsightfilms.com/blog/fort-mose-jazz-blues-festival/"
+    },
+    "articleSection": ["Event Video", "Photography", "Festivals"],
+    "keywords": "fort mose jazz festival, live music photography, event videography, st augustine festivals, concert photography"
+  }
+}

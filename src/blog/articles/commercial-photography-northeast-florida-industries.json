@@ -1,0 +1,69 @@
+{
+  "slug": "commercial-photography-northeast-florida-industries",
+  "title": "Commercial Photography in Northeast Florida: What Industries Need It Most",
+  "excerpt": "Commercial photography is underinvested in right up until the moment an organization realizes what it's been costing them. Here's where we see the need most clearly in Northeast Florida.",
+  "author": "diego-cerquera",
+
+  "datePublished": "2026-02-05",
+  "dateModified": "2026-02-05",
+
+  "categories": {
+    "service": ["photography"],
+    "location": ["st-augustine", "northeast-florida"],
+    "industry": ["corporate", "entertainment", "hospitality"]
+  },
+  "tags": ["commercial photography", "Northeast Florida", "business photography", "corporate photography", "hospitality photography"],
+
+  "images": {
+    "hero": {
+      "src": "/images/photography-event-st-augustine-amphitheatre/charley-crockett-live-performance-augustine-amphitheatre-1200w.webp",
+      "alt": "Commercial photography capturing live entertainment in Northeast Florida",
+      "width": 1200,
+      "height": 630
+    },
+    "content": [
+      {
+        "id": "venue-photography",
+        "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-performers-st-augustine-1200w.webp",
+        "alt": "Commercial setup photography at Fort Mose Jazz Festival",
+        "caption": "Live entertainment venues need imagery that communicates scale, energy, and the distinctive character of the setting"
+      }
+    ]
+  },
+
+  "seo": {
+    "title": "Commercial Photography Northeast Florida | What Industries Need It Most",
+    "description": "Commercial photography in Northeast Florida: which industries need it most and what good imagery accomplishes for live entertainment, hospitality, corporate, and cultural clients.",
+    "og_type": "article",
+    "og_image": "/images/photography-event-st-augustine-amphitheatre/charley-crockett-live-performance-augustine-amphitheatre-1200w.webp"
+  },
+
+  "related_articles": ["commercial-photography-st-augustine", "event-videography-vs-photography"],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Commercial Photography in Northeast Florida: What Industries Need It Most",
+    "description": "Which industries in Northeast Florida need commercial photography most and what it accomplishes for each.",
+    "image": "https://www.firstsightfilms.com/images/photography-event-st-augustine-amphitheatre/charley-crockett-live-performance-augustine-amphitheatre-1200w.webp",
+    "datePublished": "2026-02-05",
+    "dateModified": "2026-02-05",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Cerquera",
+      "url": "https://www.firstsightfilms.com/aboutus/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "First Sight Films",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.firstsightfilms.com/blog/commercial-photography-northeast-florida-industries/"
+    }
+  }
+}
