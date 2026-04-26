@@ -14,7 +14,7 @@
     },
     {
       "question": "What festivals have you worked with?",
-      "answer": "<p>We're the official video and photography partner for Sing Out Loud Festival (3 consecutive years), Fort Mose Jazz & Blues Festival (2 years), and provide ongoing coverage for events at the St. Augustine Amphitheatre and Ponte Vedra Concert Hall. We've covered festivals ranging from 1,000 to 50,000+ attendees.</p>"
+      "answer": "<p>We're the video and photography partner for Sing Out Loud Festival (3 consecutive years), Fort Mose Jazz & Blues Festival (2 years), and provide ongoing coverage for events at the St. Augustine Amphitheatre and Ponte Vedra Concert Hall. We've covered festivals ranging from 1,000 to 50,000+ attendees.</p>"
     },
     {
       "question": "Can you handle multi-stage festival coverage?",
@@ -22,7 +22,7 @@
     },
     {
       "question": "Do you provide photography alongside video for festivals?",
-      "answer": "<p>Yes, we offer combined photo and video coverage for festivals. Bundling services is more efficient and ensures visual consistency across all your content. As the official photographers for Sing Out Loud Festival, we capture both stills and motion for comprehensive coverage.</p>"
+      "answer": "<p>Yes, we offer combined photo and video coverage for festivals. Bundling services is more efficient and ensures visual consistency across all your content. As the photographers for Sing Out Loud Festival, we capture both stills and motion for comprehensive coverage.</p>"
     }
   ],
   "schema": {
@@ -58,7 +58,7 @@
         "name": "What festivals have you worked with?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We're the official video and photography partner for Sing Out Loud Festival (3 consecutive years), Fort Mose Jazz & Blues Festival (2 years), and provide ongoing coverage for events at the St. Augustine Amphitheatre and Ponte Vedra Concert Hall. We've covered festivals ranging from 1,000 to 50,000+ attendees."
+          "text": "We're the video and photography partner for Sing Out Loud Festival (3 consecutive years), Fort Mose Jazz & Blues Festival (2 years), and provide ongoing coverage for events at the St. Augustine Amphitheatre and Ponte Vedra Concert Hall. We've covered festivals ranging from 1,000 to 50,000+ attendees."
         }
       },
       {
@@ -74,7 +74,7 @@
         "name": "Do you provide photography alongside video for festivals?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we offer combined photo and video coverage for festivals. Bundling services is more efficient and ensures visual consistency across all your content. As the official photographers for Sing Out Loud Festival, we capture both stills and motion for comprehensive coverage."
+          "text": "Yes, we offer combined photo and video coverage for festivals. Bundling services is more efficient and ensures visual consistency across all your content. As the photographers for Sing Out Loud Festival, we capture both stills and motion for comprehensive coverage."
         }
       }
     ]

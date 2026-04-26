@@ -29,18 +29,87 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
 
-<!-- System fonts - no external font files needed -->
+<!-- Preload critical fonts -->
+<link rel="preload" href="/fonts/roboto-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Preload hero image for LCP -->
+<link rel="preload" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp" as="image" media="(max-width: 768px)">
+<link rel="preload" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" as="image" media="(min-width: 769px)">
 
 <!-- CSS -->
-<link rel="stylesheet" href="/css/main.min.css">
-<link rel="stylesheet" href="/css/components.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/components.css">
 
+<!-- Preload hero image for faster LCP -->
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp" media="(max-width: 768px)">
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" media="(min-width: 769px)">
 <title>Video Production St. Augustine FL | First Sight Films | Corporate & Event</title>
-<meta name="description" content="Professional video production in St. Augustine & Jacksonville FL. Corporate videos, event coverage, and brand stories for Northeast Florida businesses.">
-<meta name="last-modified" content="2026-04-18">
+<meta name="description" content="Professional video production in St. Augustine & Jacksonville FL. Corporate videos, event coverage, brand stories, and social media content for Northeast Florida businesses and nonprofits.">
 <link rel="canonical" href="https://www.firstsightfilms.com/">
+</head>
+<body class="page-home">
 
-<style>
+<header class="site-header">
+  <div class="header-content">
+
+    <!-- Logo/Branding -->
+    <div class="branding">
+      <a href="/" class="logo">
+        <img src="/images/logos/first-sight-films-logo-st-augustine-fl.png" alt="First Sight Films - St. Augustine Video & Photo Production" width="180" height="60">
+      </a>
+      <span class="tagline">Video Production & Photography<br>St. Augustine | Jacksonville</span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-main">
+      <a href="/">Home</a>
+      <a href="/st-augustine-video-production/">Video</a>
+      <a href="/st-augustine-photography/">Photo</a>
+      <a href="/aboutus/">About</a>
+      <a href="/contact/" class="nav-cta">Let's Talk</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/st-augustine-video-production/">Video</a>
+    <a href="/st-augustine-photography/">Photo</a>
+    <a href="/aboutus/">About</a>
+    <a href="/contact/" class="mobile-nav-cta">Let's Talk</a>
+  </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
+  const mobileToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  if (mobileToggle && mobileNav) {
+    mobileToggle.addEventListener('click', function() {
+      const isOpen = mobileNav.classList.toggle('open');
+      this.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+  }
+});
+</script>
+
+
+<main>
+
+  <!-- Hero Section: ThrillX Framework -->
+  <style>
 /* Prevent horizontal overflow on mobile */
 html, body {
   overflow-x: hidden;
@@ -80,7 +149,7 @@ html, body {
 }
 
 .hero-thrillx .hero-eyebrow {
-  color: #f4c057;
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -104,6 +173,7 @@ html, body {
 .brush-underline {
   position: relative;
   display: inline-block;
+  color: #f4c057;
 }
 
 .brush-underline::after {
@@ -212,21 +282,13 @@ html, body {
 }
 
 .hero-thrillx .hero-subtitle {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.15rem;
-  line-height: 1.6;
+  color: #f4c057;
+  font-size: 1.725rem;
+  line-height: 1.4;
   margin-bottom: 1rem;
-  max-width: 650px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.hero-thrillx .hero-promise {
-  color: #ffffff;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
 }
 
 .hero-thrillx .hero-cta-group {
@@ -255,11 +317,6 @@ html, body {
   box-shadow: 0 8px 25px rgba(244, 192, 87, 0.3);
 }
 
-.hero-thrillx .cta-subtext {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
-}
-
 @media (max-width: 768px) {
   .hero-thrillx {
     padding: 1.5rem 1rem 2rem;
@@ -280,7 +337,7 @@ html, body {
   }
 
   .hero-thrillx .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0 0.5rem;
   }
 
@@ -310,7 +367,7 @@ html, body {
   }
 
   .hero-carousel-track {
-    animation-duration: 25s;
+    animation-duration: 20s;
   }
 
   .logo-set {
@@ -332,80 +389,18 @@ html, body {
     display: none;
   }
 }
-</style>
-</head>
-<body class="page-home">
-
-<header class="site-header">
-  <div class="header-content">
-
-    <!-- Logo/Branding -->
-    <div class="branding">
-      <a href="/" class="logo">
-        <img src="/images/logos/first-sight-films-logo-st-augustine-fl.png" alt="First Sight Films - St. Augustine Video & Photo Production" width="180" height="60">
-      </a>
-      <span class="tagline">Video Production & Photography<br>St. Augustine | Jacksonville</span>
-    </div>
-
-    <!-- Desktop Navigation -->
-    <nav class="nav-main">
-      <a href="/">Home</a>
-      <a href="/st-augustine-video-production/">Video</a>
-      <a href="/st-augustine-photography/">Photo</a>
-      <a href="/aboutus/">About</a>
-      <a href="/contact/" class="nav-cta">Let's Talk</a>
-    </nav>
-
-    <!-- Mobile Menu Toggle -->
-    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-  </div>
-
-  <!-- Mobile Navigation -->
-  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-    <a href="/">Home</a>
-    <a href="/st-augustine-video-production/">Video</a>
-    <a href="/st-augustine-photography/">Photo</a>
-    <a href="/aboutus/">About</a>
-    <a href="/contact/" class="mobile-nav-cta">Let's Talk</a>
-  </nav>
-</header>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Mobile menu toggle
-  const mobileToggle = document.querySelector('.mobile-menu-toggle');
-  const mobileNav = document.querySelector('.mobile-nav');
-
-  if (mobileToggle && mobileNav) {
-    mobileToggle.addEventListener('click', function() {
-      const isOpen = mobileNav.classList.toggle('open');
-      this.classList.toggle('open');
-      this.setAttribute('aria-expanded', isOpen);
-    });
-  }
-});
-</script>
-
-
-<main>
-
-  <!-- Hero Section: ThrillX Framework -->
+  </style>
   <section class="hero-thrillx">
     <div class="hero-content">
-      <p class="hero-eyebrow">St. Augustine & Jacksonville Photo/Video</p>
+      <p class="hero-eyebrow">St. Augustine & Jacksonville Video Production</p>
 
       <h1 class="hero-title">
-        Get <span class="highlight">photo and video</span> of <span class="brush-underline">your event</span>.
+        Clear story = <span class="brush-underline">trust</span>
       </h1>
 
-      <p class="hero-subtitle">
-        You've put months into this event. We make content that proves it.
-      </p>
+      <h2 class="hero-subtitle">
+        We make video that tells your story clearly so your customers choose you.
+      </h2>
 
       <!-- SCROLLING LOGO CAROUSEL - Above the fold -->
       <div class="hero-carousel">
@@ -597,7 +592,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <figcaption class="portfolio-pill">@ <span class="location-text">Fort Mose</span></figcaption>
       </div>
       <div class="portfolio-item landscape">
-        <a href="/st-augustine-video-production/staugustineamp/" class="portfolio-item-link">
+        <a href="/st-augustine-video-production/st-augustine-amphitheatre/" class="portfolio-item-link">
           <img src="/images/photography-event-st-augustine-amphitheatre/widespreadpanic-concert-audience-augustine-amphitheatre-400w.webp" alt="Widespread Panic concert audience at St. Augustine Amphitheatre - event video production by First Sight Films" loading="lazy" width="400" height="500">
         </a>
         <figcaption class="portfolio-pill">@ <span class="location-text">St. Augustine Amphitheatre</span></figcaption>
@@ -628,13 +623,13 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
             <div class="portfolio-item landscape">
         <a href="/st-augustine-video-production/pontevedraconcerthall/" class="portfolio-item-link">
-          <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="Ponte Vedra Concert Hall video production Jacksonville" loading="lazy">
+          <img src="/images/logos/ponte-vedtra-concert-hall-logo.png" alt="Ponte Vedra Concert Hall video production Jacksonville" loading="lazy">
         </a>
         <figcaption class="portfolio-pill">@ <span class="location-text">Ponte Vedra Concert Hall</span></figcaption>
       </div>
       <div class="portfolio-item landscape">
         <a href="/st-augustine-video-production/stjohnsculturalcouncil/" class="portfolio-item-link">
-          <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="St. Johns Cultural Council video production St. Augustine" loading="lazy">
+          <img src="/images/logos/st-johns-cultural-council-logo.jpeg" alt="St. Johns Cultural Council video production St. Augustine" loading="lazy">
         </a>
         <figcaption class="portfolio-pill">@ <span class="location-text">St. Johns Cultural Council</span></figcaption>
       </div>
@@ -673,7 +668,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"So great to work with! Diego was fun and made the entire experience really easy. They got great footage of all aspects of my business and the final outcome was exceptional. What can be (for me) a stressful situation (being interviewed on camera) was a fun afternoon of laughing and telling stories. Highly recommend."</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">March 2026</span>
@@ -692,7 +687,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"Wow! Thank you for the outstanding video you created. The quality of your work, professionalism, and attention to detail are well above standard. I am very grateful. This video will go a long way in sharing our welcome message to new members. I can't wait to share it with our Board members at our upcoming board meeting. We are blessed to have you as a member of the St. Johns County Chamber of Commerce."</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">March 2025</span>
@@ -711,7 +706,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"Wow! The photos are absolutely incredible—I LOVE them! Thank you to Diego and Trista for capturing the energy and special moments of the Spanish Food & Wine Festival so beautifully. Your attention to detail really showed in the final product. It was also an absolute pleasure working with you! Your professionalism, creativity, and smooth approach made everything so easy, and I'm so glad to hear you had a great experience with our event team. ~Until Next Time~"</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">May 2025</span>
@@ -730,7 +725,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"Diego and First Sight Films were instrumental to the success of our video project in St. Augustine. As a remote producer, I found him incredibly easy to work with. He was prompt, understood the mission perfectly, and went above and beyond to ensure we had more than enough footage for our client. The next time I'm in St. Augustine, I definitely owe Diego and his team a round of drinks."</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">March 2026</span>
@@ -768,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"So happy Diego is in St. Johns County! He recorded one of our speakers for history club in the fall of 2025. At one point before the talk started I looked over and he was crouching down next to the speaker to get her mic'd. She's a senior who uses a wheelchair. From where I was standing I could see her smiling and laughing a little. I could tell he was making her feel comfortable and taking care of her so she would sound great. And she did. She looked great too. He listened to what she wanted for lighting and he was really easy to schedule with and work with. So glad he could come out for our meeting. The recording looks and sounds way better than I thought it could. Stoked this photography and videography resource is here in St. Augustine"</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">December 2025</span>
@@ -787,7 +782,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"Diego did an incredible job capturing our event! From start to finish, he was professional, reliable, and easy to work with. He has a great eye for detail, and the way he brought the energy of the day to life through his filming was amazing. The final product exceeded our expectations — high quality, creative, and something we'll cherish and share for a long time. I highly recommend Diego to anyone looking for top-notch videography."</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">November 2025</span>
@@ -806,7 +801,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"It was such a pleasure working with First Sight Films. We hired them to take our holiday family photographs. From our first conversation with Trista and Diego, they were professional, great with communication and full of great ideas! They made the whole family feel so comfortable in front of the camera and the photos came out absolutely stunning! I highly recommend First Sight Films."</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">November 2025</span>
@@ -901,7 +896,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"I worked with Diego and Trista for the HMA 2025 Sales Rally and they were amazing. The entire process from booking to the final video deliverables, everything was professionally done. They have excellent communication skills, and Diego is very detailed when it comes to making sure he meets your expectations. Our team is so impressed with you both and we truly hope to work together again in the near future!"</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">May 2025</span>
@@ -920,7 +915,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"Diego and Trista took beautiful photos of my wife and I's special day! While they took beautiful photos, they also made the photo shoot fun with all the different shots they took. We wouldn't have wanted anyone else to take our photos that day and I highly recommend them if you're looking for a photographer for weddings, events or any occasion for that matter."</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">March 2025</span>
@@ -939,7 +934,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"Diego exceeded all my expectations with his fantastic photography! He flawlessly captured the essence of my event and the emotions of the attendees. His fast turnaround time was a pleasant surprise, and I'm eagerly anticipating the video footage. I will absolutely be hiring Diego again for future events. Thank you for your outstanding work!"</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">March 2024</span>
@@ -977,7 +972,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"We had Diego over in Austin TX for a weekend dance event and the photos were lovely. The moments were captured so beautifully that it takes me back to the event when I look at them a month after the event. I recommend Diego to anyone. He also has a very calming energy that feels very grounding. Haha he is a great guy to have around."</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">March 2024</span>
@@ -1015,7 +1010,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-quote-wrapper truncated">
               <blockquote class="review-quote">"I approached Diego for design-review and branding advice. He has an eye for consistency and insightful commentary that is above and beyond most professionals that I know. I'm also familiar with his photography & videography work, which is excellent. Highly recommend working with this human; even if you have an unusual problem, Diego can likely help you get through it."</blockquote>
-              <button class="review-expand" aria-label="Read more">Read more</button>
+              <button class="review-expand" aria-label="Expand review">Read more</button>
             </div>
             <div class="review-footer">
               <span class="review-date">March 2024</span>
@@ -1149,8 +1144,6 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </section>
 
-<p class="page-last-updated" style="text-align: center; font-size: 0.85rem; color: #666; padding: 1rem 0; margin: 0;">Last updated: April 18, 2026</p>
-
 </main>
 
 <script type="application/ld+json">
@@ -1268,7 +1261,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "ratingValue": "5.0",
     "bestRating": "5",
     "worstRating": "1",
-    "reviewCount": "45"
+    "reviewCount": "25"
   },
   "sameAs": [
     "https://www.instagram.com/firstsightfilms/"
@@ -1375,6 +1368,19 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 
 
+<script>
+// Hero video - click anywhere to play
+document.addEventListener('DOMContentLoaded', function() {
+  var heroPhoto = document.querySelector('.hero-photo');
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo && heroPhoto) {
+    heroPhoto.addEventListener('click', function() {
+      heroPhoto.classList.add('playing');
+      heroVideo.play();
+    });
+  }
+});
+</script>
 
 </body>
 </html>

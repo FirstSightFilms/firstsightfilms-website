@@ -14,32 +14,356 @@
 
 <main>
 
-  <!-- Hero Section -->
-  <section class="hero hero-split">
-    <div class="hero-text">
-      <p class="hero-script">First Sight Films</p>
-      <h1 class="hero-title">St. Augustine Video Production</h1>
-      <div class="hero-photo">
-        <picture>
-          <source media="(max-width: 768px)" srcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp" width="480" height="600">
-          <source media="(min-width: 769px)" srcset="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" width="1344" height="1680">
-          <img src="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" alt="Concert fans cheering at St. Augustine Amphitheatre - First Sight Films event coverage" class="hero-poster" fetchpriority="high" width="1344" height="1680">
-        </picture>
-        <video id="heroVideo" muted loop playsinline preload="none" class="hero-video" style="display:none;">
-          <source src="/images/hero/first-sight-films-hero-video-interviews.mp4" type="video/mp4">
-        </video>
-        <button class="hero-play-btn" aria-label="Play video">
-          <span class="play-icon">▶</span>
-        </button>
+  <!-- Hero Section: ThrillX Framework -->
+  <style>
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ThrillX Hero Styles */
+.hero-thrillx {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-thrillx::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.hero-thrillx .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-thrillx .hero-eyebrow {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.hero-thrillx .hero-title {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-thrillx .hero-title .highlight {
+  color: #f4c057;
+}
+
+.brush-underline {
+  position: relative;
+  display: inline-block;
+  color: #f4c057;
+}
+
+.brush-underline::after {
+  content: '';
+  position: absolute;
+  left: -10%;
+  bottom: -22px;
+  width: 120%;
+  height: 28px;
+  background-image: url('/images/brush-stroke-yellow.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Inline Proof Stats - Above the fold */
+.hero-proof-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 35px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.proof-item-inline {
+  text-align: center;
+}
+
+.proof-number-inline {
+  color: #f4c057;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+}
+
+.proof-label-inline {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.proof-divider {
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Scrolling Carousel */
+.hero-carousel {
+  margin-bottom: 1.5rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+}
+
+.hero-carousel-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.hero-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.hero-carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: hero-scroll 35s linear infinite;
+}
+
+.logo-set {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+  flex-shrink: 0;
+}
+
+.logo-set img {
+  max-height: 85px;
+  max-width: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(1.2) contrast(1.1);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 16px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+@keyframes hero-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.hero-thrillx .hero-subtitle {
+  color: #f4c057;
+  font-size: 1.725rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-thrillx .hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-thrillx .btn-primary {
+  background: #f4c057;
+  color: #1a1a2e;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hero-thrillx .btn-primary:hover {
+  background: #ffd275;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(244, 192, 87, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-thrillx {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .hero-thrillx .hero-content {
+    padding-top: 40px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-thrillx .hero-title {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero-thrillx .hero-subtitle {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-proof-inline {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .proof-number-inline {
+    font-size: 1rem;
+  }
+
+  .proof-label-inline {
+    font-size: 0.65rem;
+  }
+
+  .proof-divider {
+    height: 20px;
+  }
+
+  .hero-carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-carousel-track {
+    animation-duration: 20s;
+  }
+
+  .logo-set {
+    gap: 1rem;
+    padding-right: 1rem;
+  }
+
+  .logo-set img {
+    max-height: 55px;
+    max-width: 120px;
+    padding: 8px 10px;
+  }
+
+  .hero-cta-group {
+    padding: 0 1rem;
+  }
+
+  .brush-underline::after {
+    display: none;
+  }
+}
+  </style>
+  <section class="hero-thrillx">
+    <div class="hero-content">
+      <p class="hero-eyebrow">St. Augustine & Jacksonville Video Production</p>
+
+      <h1 class="hero-title">
+        Clear story = <span class="brush-underline">trust</span>
+      </h1>
+
+      <h2 class="hero-subtitle">
+        We make video that tells your story clearly so your customers choose you.
+      </h2>
+
+      <!-- SCROLLING LOGO CAROUSEL - Above the fold -->
+      <div class="hero-carousel">
+        <p class="hero-carousel-label">Trusted by:</p>
+        <div class="hero-carousel-wrapper">
+          <div class="hero-carousel-track" id="logoTrack">
+            <div class="logo-set">
+              <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="St. Augustine Amphitheatre" width="170" height="170" loading="lazy">
+              <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="Sing Out Loud Festival" width="266" height="170" loading="lazy">
+              <img src="/images/logos/St-Johns-County-Government-Logo.webp" alt="St. Johns County" width="170" height="170" loading="lazy">
+              <img src="/images/logos/Flagler-College-logo.webp" alt="Flagler College" width="394" height="170" loading="lazy">
+              <img src="/images/logos/FL-DEP-STATE-PARKS-Logo.webp" alt="Florida State Parks" width="170" height="170" loading="lazy">
+              <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="Ponte Vedra Concert Hall" width="302" height="170" loading="lazy">
+              <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="St. Johns Cultural Council" width="174" height="170" loading="lazy">
+              <img src="/images/logos/st-johns-chamber-of-commerce-logo.webp" alt="Chamber of Commerce" width="170" height="170" loading="lazy">
+              <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="Fort Mose Jazz Festival" width="366" height="170" loading="lazy">
+            </div>
+            <div class="logo-set" aria-hidden="true">
+              <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="" width="170" height="170" loading="lazy">
+              <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="" width="266" height="170" loading="lazy">
+              <img src="/images/logos/St-Johns-County-Government-Logo.webp" alt="" width="170" height="170" loading="lazy">
+              <img src="/images/logos/Flagler-College-logo.webp" alt="" width="394" height="170" loading="lazy">
+              <img src="/images/logos/FL-DEP-STATE-PARKS-Logo.webp" alt="" width="170" height="170" loading="lazy">
+              <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="" width="302" height="170" loading="lazy">
+              <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="" width="174" height="170" loading="lazy">
+              <img src="/images/logos/st-johns-chamber-of-commerce-logo.webp" alt="" width="170" height="170" loading="lazy">
+              <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="" width="366" height="170" loading="lazy">
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="hero-desc"><strong>We handle the strategy, the shoots, and the delivery</strong> so you can focus on running your business.</p>
-      <p class="hero-desc">Professional video and photo production for businesses across St. Johns County, FL.</p>
-      <a href="/contact/" class="btn btn-primary hero-cta">Let's Talk</a>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-number">10+</span><span class="stat-label">Years</span></div>
-        <div class="stat"><span class="stat-number">100+</span><span class="stat-label">Projects</span></div>
-        <div class="stat"><span class="stat-number">5★</span><span class="stat-label">Rating</span></div>
-        <div class="stat"><span class="stat-number">50+</span><span class="stat-label">Reviews</span></div>
+
+      <!-- PROOF STATS - Above CTA -->
+      <div class="hero-proof-inline">
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">10+</span>
+          <span class="proof-label-inline">Years</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">100+</span>
+          <span class="proof-label-inline">Projects</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">5.0★</span>
+          <span class="proof-label-inline">Google</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">50+</span>
+          <span class="proof-label-inline">Reviews</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="/contact/" class="btn btn-primary">Get Quote ASAP</a>
       </div>
     </div>
   </section>

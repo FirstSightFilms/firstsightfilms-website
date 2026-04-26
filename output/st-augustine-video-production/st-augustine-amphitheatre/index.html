@@ -41,23 +41,49 @@
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/components.css">
 
-<title>St. Augustine Amphitheatre Video Production | First Sight Films</title>
-<meta name="description" content="First Sight Films has partnered with the St. Augustine Amphitheatre since 2022 providing video editing, videography, photography, and creative direction.">
+<title>St. Augustine Amphitheatre Video Production | Content Partner</title>
+<meta name="description" content="video and photography partner for the St. Augustine Amphitheatre. Two years on retainer creating content for The Amp, Ponte Vedra Concert Hall, Fort Mose, Sing Out Loud Festival, and Sounds of Sawgrass. Northeast Florida concert videography.">
 
 <style>
-/* Project Hero */
-.project-hero {
+/* Event Page Specific Styles */
+.event-hero {
   background: rgba(244, 192, 87, 0.2);
+  color: var(--color-black);
+  width: 100%;
+}
+
+.event-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-.project-hero-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+.event-hero-content {
+  text-align: left;
 }
 
-.project-hero-label {
+.event-hero-media {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  align-self: center;
+  max-width: 78%;
+  margin-left: auto;
+}
+
+.event-hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.event-hero-label {
   display: inline-block;
   background: var(--color-gold);
   color: var(--color-black);
@@ -68,57 +94,64 @@
   letter-spacing: 0.08em;
   border-radius: 4px;
   margin-bottom: 1.25rem;
+  margin-left: -0.85rem;
 }
 
-.project-hero h1 {
+.event-hero h1 {
   font-family: var(--font-primary);
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
   color: #f4c057;
 }
 
-.project-hero-tagline {
-  font-size: 1.15rem;
+.event-hero h1 .h1-subtitle {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+
+.event-hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.event-hero-tagline {
+  font-size: 1.1rem;
   color: var(--color-gray-700);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
-.project-hero-grid {
-  margin: 1.5rem auto;
-  max-width: 600px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  border-radius: 8px;
-  overflow: hidden;
+.event-hero-proof {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  margin-bottom: 1.5rem;
 }
 
-.project-hero-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: 1/1;
-  display: block;
+.event-hero-proof strong {
+  color: var(--color-black);
+  font-weight: 600;
 }
 
-.project-hero-stats {
+.event-hero-stats {
   display: flex;
-  justify-content: center;
   gap: 2rem;
   padding-top: 1.5rem;
   margin-top: 1.5rem;
   border-top: 1px solid rgba(0,0,0,0.1);
-  flex-wrap: wrap;
 }
 
-.project-stat {
-  text-align: center;
+.event-stat {
+  text-align: left;
 }
 
-.project-stat-number {
+.event-stat-number {
   display: block;
   font-size: 1.75rem;
   font-weight: 700;
@@ -126,29 +159,133 @@
   line-height: 1;
 }
 
-.project-stat-label {
+.event-stat-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-gray-500);
   margin-top: 0.25rem;
-  max-width: 100px;
 }
 
-/* About Section */
-.project-about {
+/* Brands Grid */
+.brands-section {
+  padding: 3rem 0;
+  background: var(--color-white);
+}
+
+.brands-section h2 {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.brands-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.brands-grid img {
+  height: 60px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.brands-grid img:hover {
+  opacity: 1;
+}
+
+/* What You Get Section */
+.what-you-get {
   padding: 4rem 0;
   background: var(--color-white);
 }
 
-.project-about-content {
+.what-you-get-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.what-you-get-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.what-you-get-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-black);
+}
+
+.what-you-get-item p {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+/* Gallery Section */
+.event-gallery {
+  padding: 4rem 0;
+  background: var(--color-white);
+}
+
+.event-gallery h2 {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* About Event Section */
+.event-about {
+  padding: 4rem 0;
+  background: var(--color-white);
+}
+
+.event-about-content {
   max-width: 750px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-.project-about h2 {
+.event-about h2 {
   font-family: var(--font-primary);
   font-size: 1.75rem;
   font-weight: 700;
@@ -156,254 +293,240 @@
   text-align: center;
 }
 
-.project-about p {
+.event-about p {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--color-gray-700);
   margin-bottom: 1.25rem;
 }
 
-/* Video Portfolio Section */
-.video-portfolio {
+/* Case Study Process Section */
+.event-process {
   padding: 4rem 0;
-  background: var(--color-gray-100);
+  background: rgba(244, 192, 87, 0.2);
 }
 
-.video-portfolio-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.video-portfolio h2 {
+.event-process h2 {
+  text-align: center;
   font-family: var(--font-primary);
   font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.event-process-subtitle {
   text-align: center;
+  color: var(--color-gray-600);
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
 }
 
-.video-grid {
+.case-study-items {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.case-study-item {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
-.video-item {
-  position: relative;
+.case-study-item.reverse {
+  direction: rtl;
+}
+
+.case-study-item.reverse > * {
+  direction: ltr;
+}
+
+.case-study-text {
+  padding: 1rem;
+}
+
+.case-study-text h3 {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.case-study-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+  margin-bottom: 0.75rem;
+}
+
+.case-study-media {
   border-radius: 8px;
   overflow: hidden;
-  background: var(--color-black);
+  background: var(--color-gray-200);
+  aspect-ratio: 16/9;
+  max-width: 100%;
+}
+
+.case-study-media.portrait {
   aspect-ratio: 9/16;
-  max-width: 300px;
+  max-width: 280px;
   margin: 0 auto;
 }
 
-.video-item.horizontal {
-  aspect-ratio: 16/9;
-  max-width: 100%;
-  grid-column: span 2;
-}
-
-.video-item video {
+.case-study-media img,
+.case-study-media video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  cursor: pointer;
 }
 
-.video-item-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
-  color: white;
-  pointer-events: none;
-}
-
-.video-item-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-/* Play Button Overlay */
-.video-play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid white;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  z-index: 10;
-}
-
-.video-play-btn:hover {
-  background: rgba(244, 192, 87, 0.9);
-  border-color: #f4c057;
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
-.video-play-btn::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 18px solid white;
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-  margin-left: 4px;
-}
-
-.video-item.playing .video-play-btn {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Sound Toggle Button */
-.video-sound-toggle {
-  position: absolute;
-  bottom: 50px;
-  right: 10px;
-  width: 32px;
-  height: 32px;
-  background: rgba(0, 0, 0, 0.6);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.video-item:hover .video-sound-toggle,
-.video-item.playing .video-sound-toggle {
-  opacity: 1;
-}
-
-.video-sound-toggle:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.video-sound-toggle .sound-on {
-  display: none;
-}
-
-.video-sound-toggle.unmuted .sound-off {
-  display: none;
-}
-
-.video-sound-toggle.unmuted .sound-on {
-  display: inline;
-}
-
-/* Photo Gallery Section */
-.photo-gallery-section {
+/* FAQ Section */
+.event-faq {
   padding: 4rem 0;
   background: var(--color-white);
 }
 
-.photo-gallery-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.photo-gallery-section h2 {
+.event-faq h2 {
+  text-align: center;
   font-family: var(--font-primary);
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  text-align: center;
 }
 
-.photo-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.photo-gallery-item {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 3/2;
-}
-
-.photo-gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.photo-gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-/* FAQ Section */
-.section-faq {
-  padding: 4rem 0;
-  background: var(--color-gray-100);
-}
-
-/* CTA Section */
-.project-cta {
-  padding: 4rem 0;
-  background: var(--color-black);
-  color: var(--color-white);
-  text-align: center;
-}
-
-.project-cta h2 {
-  font-family: var(--font-primary);
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.project-cta p {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 1.5rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  .project-hero h1 {
-    font-size: 1.75rem;
+@media (max-width: 1044px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .project-hero-stats {
+  .event-hero-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .event-hero-content {
+    text-align: center;
+    order: 2;
+  }
+
+  .event-hero-media {
+    order: 1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .event-hero-stats {
+    justify-content: center;
     gap: 1.5rem;
   }
 
-  .video-item.horizontal {
-    grid-column: span 1;
+  .event-hero-inner {
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
 
-  .photo-gallery-grid {
+  .event-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .what-you-get-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .case-study-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .case-study-item.reverse {
+    direction: ltr;
+  }
+
+  .case-study-media {
+    order: -1;
+  }
+
+  .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brands-grid {
+    gap: 2rem;
+  }
+
+  .brands-grid img {
+    height: 45px;
   }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.firstsightfilms.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "St. Augustine Video Production",
+      "item": "https://www.firstsightfilms.com/st-augustine-video-production/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "St. Augustine Amphitheatre",
+      "item": "https://www.firstsightfilms.com/st-augustine-video-production/st-augustine-amphitheatre/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the St. Augustine Amphitheatre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The St. Augustine Amphitheatre is a 4,000+ capacity outdoor concert venue in St. Augustine, Florida. Originally built in 1965, it was renovated in 2006 and has since become one of the top outdoor music venues in the Southeast, hosting national touring acts across rock, country, jam, and EDM genres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What brands does First Sight Films create content for at the Amphitheatre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve as the content partner for multiple brands under the St. Johns County Cultural Events Division including the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, Fort Mose Jazz & Blues Festival, Sing Out Loud Festival, and Sounds of Sawgrass. Content ranges from social media clips to broadcast-ready footage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What type of content does First Sight Films produce for concert venues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We produce vertical social content optimized for Instagram Reels and TikTok, horizontal recap videos for YouTube and broadcast, event photography for press and marketing, behind-the-scenes content, and promotional assets for upcoming shows. All content is delivered ready for immediate use across platforms."
+      }
+    }
+  ]
+}
+</script>
 <link rel="canonical" href="https://www.firstsightfilms.com/st-augustine-video-production/st-augustine-amphitheatre/">
 </head>
-<body class="page-project">
+<body class="page-event">
 
 <header class="site-header">
   <div class="header-content">
@@ -463,253 +586,185 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <main>
 
-  <!-- Hero Section -->
-  <section class="project-hero">
-    <div class="project-hero-inner">
-      <span class="project-hero-label">Case Study</span>
-      <h1>St. Augustine Amphitheatre</h1>
-      <p class="project-hero-tagline">A First Sight Films partner since 2022.</p>
-      <div class="project-hero-grid">
-        <img src="/images/photography-event-st-augustine-amphitheatre/juvenile-live-performance-augustine-amphitheatre-st-augustine-3-1200w.webp" alt="Juvenile performing at St. Augustine Amphitheatre" loading="eager" width="1200" height="1500">
-        <img src="/images/photography-event-st-augustine-amphitheatre/king-gizzard-live-performance-augustine-amphitheatre-1200w.webp" alt="King Gizzard live performance at St. Augustine Amphitheatre" loading="eager" width="1080" height="1350">
-        <img src="/images/photography-event-st-augustine-amphitheatre/crockett-leon-bridges-guitar-performance-augustine-amphitheatre-2-1200w.webp" alt="Charley Crockett guitar performance at St. Augustine Amphitheatre" loading="eager" width="1080" height="1350">
-        <img src="/images/photography-event-st-augustine-amphitheatre/female-guitarist-performing-augustine-amphitheatre-st-augustine-1200w.webp" alt="Female guitarist performing at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
-        <img src="/images/photography-event-st-augustine-amphitheatre/jon-batiste-concert-augustine-amphitheatre-st-augustine-1200w.webp" alt="Jon Batiste concert at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
-        <img src="/images/photography-event-st-augustine-amphitheatre/slowdive-guitarist-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Slowdive guitarist at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
-      </div>
-      <div class="project-hero-stats">
-        <div class="project-stat">
-          <span class="project-stat-number">4+</span>
-          <span class="project-stat-label">Years</span>
-        </div>
-        <div class="project-stat">
-          <span class="project-stat-number">300+</span>
-          <span class="project-stat-label">Video Deliverables</span>
-        </div>
-        <div class="project-stat">
-          <span class="project-stat-number">3</span>
-          <span class="project-stat-label">Annual Festivals</span>
-        </div>
-        <div class="project-stat">
-          <span class="project-stat-number">All</span>
-          <span class="project-stat-label">Venues Covered</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="project-about">
-    <div class="project-about-content">
-      <h2>How First Sight Films Works with The Amp</h2>
-      <p>What began as a video editing partnership in 2022 has grown into a comprehensive creative retainer with the St. Augustine Amphitheatre. First Sight Films now serves as the venue's go-to production team for video, photography, and creative direction across their full calendar of events.</p>
-      <p>Our monthly retainer covers three core areas: seasonal merchandise campaigns, concert coverage, and festival documentation. For merchandise, we produce lifestyle photo and video content featuring The Amp's apparel and goods—capturing the Florida outdoor aesthetic that resonates with their audience. Concert nights see us capturing artist performances, crowd energy, and behind-the-scenes moments that fuel their social media and promotional efforts.</p>
-      <p>The partnership extends to St. Augustine's signature festivals, including Sing Out Loud and other multi-day events hosted at The Amp and surrounding venues. From stage performances to vendor activations, we deliver a steady stream of content that keeps the venue connected with its community year-round.</p>
-      <p>This ongoing collaboration allows us to deeply understand The Amp's brand voice and deliver consistent, on-brand content without the overhead of project-by-project coordination.</p>
-      <p style="margin-top: 1.5rem;"><a href="/st-augustine-video-production/" style="color: var(--color-gold); text-decoration: underline;">View more of our video production work →</a></p>
-    </div>
-  </section>
-
-  <!-- Video Portfolio Section -->
-  <section class="video-portfolio">
-    <div class="video-portfolio-container">
-      <h2>Video Projects for The Amp</h2>
-      <div class="video-grid">
-        <div class="video-item">
-          <video poster="/images/portfolio/st-augustine-amphitheatre/ryan-bingham-amp-vertical-thumb.jpg" loop playsinline preload="metadata" muted>
-            <source src="/video/portfolio/st-augustine-amphitheatre/ryan-bingham-amp-vertical.mp4" type="video/mp4">
-          </video>
-          <button class="video-play-btn" aria-label="Play video"></button>
-          <button class="video-sound-toggle" aria-label="Toggle sound">
-            <span class="sound-off">🔇</span>
-            <span class="sound-on">🔊</span>
-          </button>
-          <div class="video-item-overlay">
-            <span class="video-item-title">Ryan Bingham</span>
-          </div>
-        </div>
-        <div class="video-item">
-          <video poster="/images/portfolio/st-augustine-amphitheatre/billy-strings-shakedown-street-vertical-thumb.jpg" loop playsinline preload="metadata" muted>
-            <source src="/video/portfolio/st-augustine-amphitheatre/billy-strings-shakedown-street-vertical.mp4" type="video/mp4">
-          </video>
-          <button class="video-play-btn" aria-label="Play video"></button>
-          <button class="video-sound-toggle" aria-label="Toggle sound">
-            <span class="sound-off">🔇</span>
-            <span class="sound-on">🔊</span>
-          </button>
-          <div class="video-item-overlay">
-            <span class="video-item-title">Billy Strings - Shakedown Street</span>
-          </div>
-        </div>
-        <div class="video-item">
-          <video poster="/images/portfolio/st-augustine-amphitheatre/billy-strings-tix-sale-vertical-thumb.jpg" loop playsinline preload="metadata" muted>
-            <source src="/video/portfolio/st-augustine-amphitheatre/billy-strings-tix-sale-vertical.mp4" type="video/mp4">
-          </video>
-          <button class="video-play-btn" aria-label="Play video"></button>
-          <button class="video-sound-toggle" aria-label="Toggle sound">
-            <span class="sound-off">🔇</span>
-            <span class="sound-on">🔊</span>
-          </button>
-          <div class="video-item-overlay">
-            <span class="video-item-title">Billy Strings Ticket Sale</span>
-          </div>
-        </div>
-        <div class="video-item">
-          <video poster="/images/portfolio/st-augustine-amphitheatre/amp-beaver-collab-vertical-thumb.jpg" loop playsinline preload="metadata" muted>
-            <source src="/video/portfolio/st-augustine-amphitheatre/amp-beaver-collab-vertical.mp4" type="video/mp4">
-          </video>
-          <button class="video-play-btn" aria-label="Play video"></button>
-          <button class="video-sound-toggle" aria-label="Toggle sound">
-            <span class="sound-off">🔇</span>
-            <span class="sound-on">🔊</span>
-          </button>
-          <div class="video-item-overlay">
-            <span class="video-item-title">AMP x Beaver Collaboration</span>
-          </div>
-        </div>
-        <div class="video-item horizontal">
-          <video poster="/images/portfolio/st-augustine-amphitheatre/amp-stats-2024-horizontal-thumb.jpg" loop playsinline preload="metadata" muted>
-            <source src="/video/portfolio/st-augustine-amphitheatre/amp-stats-2024-horizontal.mp4" type="video/mp4">
-          </video>
-          <button class="video-play-btn" aria-label="Play video"></button>
-          <button class="video-sound-toggle" aria-label="Toggle sound">
-            <span class="sound-off">🔇</span>
-            <span class="sound-on">🔊</span>
-          </button>
-          <div class="video-item-overlay">
-            <span class="video-item-title">2024 AMP Year in Review</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Photo Gallery Section -->
-  <section class="photo-gallery-section">
-    <div class="photo-gallery-container">
-      <h2>Photos at St Augustine Amphitheatre</h2>
-      <div class="photo-gallery-grid">
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/john-legend-sta-live-performance-augustine-amphitheatre-1200w.webp" alt="John Legend live performance at St. Augustine Amphitheatre" loading="lazy" width="864" height="1080">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/jon-batiste-live-performance-augustine-amphitheatre-1200w.webp" alt="Jon Batiste live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1499">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/pretty-lights-live-performance-augustine-amphitheatre-1200w.webp" alt="Pretty Lights live performance at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/goose-live-concert-augustine-amphitheatre-st-augustine-1200w.webp" alt="Goose live concert at St. Augustine Amphitheatre" loading="lazy" width="1200" height="675">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/avett-brothers-live-performance-augustine-amphitheatre-1200w.webp" alt="Avett Brothers live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="675">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/wallows-live-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Wallows live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/king-gizzard-live-performance-augustine-amphitheatre-1200w.webp" alt="King Gizzard live performance at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/modest-mouse-acoustic-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Modest Mouse acoustic performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="800">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/ryan-bingham-sta-live-performance-augustine-amphitheatre-1200w.webp" alt="Ryan Bingham live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/charley-crockett-live-performance-augustine-amphitheatre-1200w.webp" alt="Charley Crockett live performance at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/sierra-ferrel-violin-performance-augustine-amphitheatre-1200w.webp" alt="Sierra Ferrell violin performance at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/juvenile-live-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Juvenile live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/thievery-corporation-live-performance-augustine-amphitheatre-1200w.webp" alt="Thievery Corporation live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="960">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/stpaulandthebrokenbones-live-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="St. Paul and the Broken Bones live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/goo-goo-dolls-concert-augustine-amphitheatre-1200w.webp" alt="Goo Goo Dolls concert at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/dark-star-orchestra-live-concert-augustine-amphitheatre-1200w.webp" alt="Dark Star Orchestra live concert at St. Augustine Amphitheatre" loading="lazy" width="1200" height="749">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/widespreadpanic-live-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Widespread Panic live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="799">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/revivalist-dc-live-performance-augustine-amphitheatre-1200w.webp" alt="The Revivalists live performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="799">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/jewel-guitar-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Jewel guitar performance at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1200">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/slowdive-live-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Slowdive live performance at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/concert-crowd-augustine-amphitheatre-st-augustine-1200w.webp" alt="Concert crowd at St. Augustine Amphitheatre" loading="lazy" width="1200" height="675">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/audience-cheering-augustine-amphitheatre-event-1200w.webp" alt="Audience cheering at St. Augustine Amphitheatre event" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/concert-fans-cheering-augustine-amphitheatre-1200w.webp" alt="Concert fans cheering at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/friends-celebrating-augustine-amphitheatre-event-1200w.webp" alt="Friends celebrating at St. Augustine Amphitheatre event" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/backyard-stage-augustine-amphitheatre-venue-1200w.webp" alt="Backyard Stage at St. Augustine Amphitheatre venue" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="photo-gallery-item">
-          <img src="/images/photography-event-st-augustine-amphitheatre/laser-light-show-concert-augustine-amphitheatre-1200w.webp" alt="Laser light show at St. Augustine Amphitheatre concert" loading="lazy" width="1200" height="1500">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="section-faq" id="faq">
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-      <h2>Frequently Asked Questions</h2>
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/st-augustine-video-production/" itemprop="item"><span itemprop="name">Video Production</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">St. Augustine Amphitheatre</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="event-hero">
+    <div class="event-hero-inner">
+    <div class="event-hero-content">
+      <span class="event-hero-label">Venue Retainer Partnership</span>
+      <h1>St. Augustine Amphitheatre<br><span class="h1-subtitle">Content Partner</span></h1>
+      <p class="event-hero-subtitle">Video Production & Photography | St. Augustine, FL</p>
+      <p class="event-hero-tagline">First Sight Films has served as the video and photography partner for the St. Augustine Amphitheatre since 2024. On retainer, we create content for everything from phone screens to broadcast — across The Amp, Ponte Vedra Concert Hall, Fort Mose, Sing Out Loud, and Sounds of Sawgrass.</p>
+      <p class="event-hero-proof"><strong>St. Augustine Amphitheatre</strong> &bull; 1340C A1A South &bull; St. Augustine, FL</p>
+      <div class="event-hero-stats">
+        <div class="event-stat"><span class="event-stat-number">2</span><span class="event-stat-label">Years</span></div>
+        <div class="event-stat"><span class="event-stat-number">5</span><span class="event-stat-label">Brands</span></div>
+        <div class="event-stat"><span class="event-stat-number">500+</span><span class="event-stat-label">Deliverables</span></div>
+      </div>
+    </div>
+    <div class="event-hero-media">
+      <img src="/images/photography-event-st-augustine-amphitheatre/jon-batiste-live-performance-augustine-amphitheatre-1920w.webp" alt="Jon Batiste performing live at St. Augustine Amphitheatre - First Sight Films concert photography" width="1920" height="2399" loading="lazy">
+    </div>
+    </div>
+  </section>
+
+  <!-- Brands We Create Content For -->
+  <section class="brands-section">
+    <h2>Brands We Create Content For</h2>
+    <div class="brands-grid">
+      <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="St. Augustine Amphitheatre" loading="lazy">
+      <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="Ponte Vedra Concert Hall" loading="lazy">
+      <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="Fort Mose Jazz & Blues Festival" loading="lazy">
+      <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="Sing Out Loud Festival" loading="lazy">
+    </div>
+  </section>
+
+  <!-- About the Partnership -->
+  <section class="event-about">
+    <div class="event-about-content">
+      <h2>The Partnership</h2>
+      <p>The St. Augustine Amphitheatre is one of the premier outdoor concert venues in the Southeast. With a capacity of over 4,000 and a lineup that ranges from jam bands to country legends to EDM acts, The Amp needed a content partner who could keep up with a demanding schedule and deliver across multiple platforms.</p>
+      <p>Since 2024, First Sight Films has been on retainer as the video and photography partner for St. Johns County Cultural Events. That means we're not just covering shows — we're embedded with the marketing team, understanding their goals, and delivering content that actually gets used.</p>
+      <p>Our work spans five distinct brands: The Amp, Ponte Vedra Concert Hall, Fort Mose Jazz & Blues Festival, Sing Out Loud Festival, and Sounds of Sawgrass. Each has its own audience and style. We adapt.</p>
+      <p style="margin-top: 1.5rem;"><a href="/contact/" style="color: var(--color-gold); text-decoration: underline;">Interested in a similar partnership? Let's talk →</a></p>
+    </div>
+  </section>
+
+  <!-- Our Process - Case Study -->
+  <section class="event-process">
+    <div class="container">
+      <h2>What We Deliver</h2>
+      <p class="event-process-subtitle">Content for every platform, every show.</p>
+
+      <div class="case-study-items">
+        <!-- Item 1: Social Content -->
+        <div class="case-study-item">
+          <div class="case-study-text">
+            <h3>Vertical Social Content</h3>
+            <p>Most concert content lives on phones. We shoot and edit vertical videos optimized for Instagram Reels, TikTok, and Stories — fast turnaround so the marketing team can post while the show is still buzzing.</p>
+            <p>Format: 9:16 vertical, under 60 seconds, captions included.</p>
+          </div>
+          <div class="case-study-media portrait">
+            <img src="/images/photography-event-st-augustine-amphitheatre/charley-crockett-live-performance-augustine-amphitheatre-1200w.webp" alt="Charley Crockett performing at St. Augustine Amphitheatre - vertical concert content" width="1080" height="1350" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Item 2: Broadcast/Horizontal -->
+        <div class="case-study-item reverse">
+          <div class="case-study-text">
+            <h3>Broadcast-Ready Footage</h3>
+            <p>Some content needs to look good on a big screen. We deliver horizontal recap videos, promotional clips, and archival footage that can be used for TV spots, YouTube, and sponsor presentations.</p>
+            <p>Format: 16:9 horizontal, 4K or 1080p, color graded.</p>
+          </div>
+          <div class="case-study-media">
+            <img src="/images/photography-event-st-augustine-amphitheatre/pretty-lights-laser-show-augustine-amphitheatre-st-augustine-1920w.webp" alt="Pretty Lights laser show at St. Augustine Amphitheatre - broadcast quality concert footage" width="1080" height="1350" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Item 3: Photography -->
+        <div class="case-study-item">
+          <div class="case-study-text">
+            <h3>Event Photography</h3>
+            <p>Every show gets full photo coverage — artist performances, crowd energy, venue atmosphere. Images are delivered press-ready for media kits, social posts, and marketing collateral.</p>
+            <p>Turnaround: Same week. Format: High-res JPG and web-optimized.</p>
+          </div>
+          <div class="case-study-media">
+            <img src="/images/photography-event-st-augustine-amphitheatre/widespreadpanic-concert-audience-augustine-amphitheatre-1200w.webp" alt="Widespread Panic concert crowd at St. Augustine Amphitheatre" width="1200" height="1500" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="event-gallery">
+    <div class="container">
+      <h2>Concert Photography</h2>
+      <div class="gallery-grid">
+        <img src="/images/photography-event-st-augustine-amphitheatre/john-legend-sta-live-performance-augustine-amphitheatre-1920w.webp" alt="John Legend performing at St. Augustine Amphitheatre" loading="lazy" width="864" height="1080">
+        <img src="/images/photography-event-st-augustine-amphitheatre/avett-brothers-live-performance-augustine-amphitheatre-1920w.webp" alt="The Avett Brothers performing at St. Augustine Amphitheatre" loading="lazy" width="1920" height="1080">
+        <img src="/images/photography-event-st-augustine-amphitheatre/ryan-bingham-sta-augustine-amphitheatre-concert-1920w.webp" alt="Ryan Bingham performing at St. Augustine Amphitheatre" loading="lazy" width="1920" height="1280">
+        <img src="/images/photography-event-st-augustine-amphitheatre/goose-concert-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Goose performing at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
+        <img src="/images/photography-event-st-augustine-amphitheatre/widespreadpanic-live-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Widespread Panic performing at St. Augustine Amphitheatre" loading="lazy" width="1200" height="799">
+        <img src="/images/photography-event-st-augustine-amphitheatre/modest-mouse-acoustic-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Modest Mouse performing at St. Augustine Amphitheatre" loading="lazy" width="1200" height="800">
+        <img src="/images/photography-event-st-augustine-amphitheatre/sierra-ferrel-violin-performance-augustine-amphitheatre-2-1200w.webp" alt="Sierra Ferrell violin performance at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
+        <img src="/images/photography-event-st-augustine-amphitheatre/crockett-leon-bridges-performing-augustine-amphitheatre-st-augustine-1920w.webp" alt="Leon Bridges performing at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
+        <img src="/images/photography-event-st-augustine-amphitheatre/thievery-corporation-live-augustine-amphitheatre-st-augustine-2-1920w.webp" alt="Thievery Corporation performing at St. Augustine Amphitheatre" loading="lazy" width="1920" height="2880">
+        <img src="/images/photography-event-st-augustine-amphitheatre/stpaulandthebrokenbones-live-performance-augustine-amphitheatre-st-augustine-1920w.webp" alt="St. Paul and the Broken Bones at St. Augustine Amphitheatre" loading="lazy" width="1920" height="2400">
+        <img src="/images/photography-event-st-augustine-amphitheatre/wallows-live-performance-augustine-amphitheatre-st-augustine-1200w.webp" alt="Wallows performing at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
+        <img src="/images/photography-event-st-augustine-amphitheatre/juvenile-live-performance-augustine-amphitheatre-st-augustine-4-1920w.webp" alt="Juvenile performing at St. Augustine Amphitheatre" loading="lazy" width="1639" height="2048">
+        <img src="/images/photography-event-st-augustine-amphitheatre/concert-audience-cheering-augustine-amphitheatre-1920w.webp" alt="Concert audience cheering at St. Augustine Amphitheatre" loading="lazy" width="1638" height="2048">
+        <img src="/images/photography-event-st-augustine-amphitheatre/fans-watching-performance-augustine-amphitheatre-st-augustine-1920w.webp" alt="Fans watching performance at St. Augustine Amphitheatre" loading="lazy" width="1920" height="1280">
+        <img src="/images/photography-event-st-augustine-amphitheatre/modest-mouse-fans-augustine-amphitheatre-st-augustine-1920w.webp" alt="Concert fans at St. Augustine Amphitheatre" loading="lazy" width="1920" height="2399">
+        <img src="/images/photography-event-st-augustine-amphitheatre/king-gizzard-guitarist-augustine-amphitheatre-performance-2-1200w.webp" alt="King Gizzard performing at St. Augustine Amphitheatre" loading="lazy" width="1200" height="1500">
+        <img src="/images/photography-event-st-augustine-amphitheatre/revivalist-tbc-performing-augustine-amphitheatre-st-augustine-1920w.webp" alt="The Revivalists performing at St. Augustine Amphitheatre" loading="lazy" width="1920" height="1535">
+        <img src="/images/photography-event-st-augustine-amphitheatre/pretty-lights-concert-augustine-amphitheatre-st-augustine-4-1200w.webp" alt="Pretty Lights concert at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
+        <img src="/images/photography-event-st-augustine-amphitheatre/concert-crowd-augustine-amphitheatre-st-augustine-2-1920w.webp" alt="Concert crowd at St. Augustine Amphitheatre" loading="lazy" width="1638" height="2048">
+        <img src="/images/photography-event-st-augustine-amphitheatre/avett-brothers-violinist-performance-augustine-amphitheatre-st-augustine-1920w.webp" alt="Avett Brothers violinist at St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="event-faq">
+    <div class="container">
+      <h2>Common Questions</h2>
       <div class="faq-list">
         <details class="faq-item">
-          <summary class="faq-question">What is a video and photo retainer?</summary>
+          <summary class="faq-question">What does a venue retainer include?</summary>
           <div class="faq-answer">
-            <p>A retainer is an ongoing partnership where we provide a set amount of video and photo production each month. Instead of booking project-by-project, you get priority scheduling, consistent content output, and typically a lower per-deliverable cost. It's ideal for businesses that need regular content for social media, events, or marketing campaigns.</p>
+            <p>Our retainer partnerships are customized to each venue's needs, but typically include:</p>
+            <ul>
+              <li>Dedicated coverage for a set number of shows per month</li>
+              <li>Vertical and horizontal video content</li>
+              <li>Event photography with fast turnaround</li>
+              <li>Archival footage for future use</li>
+              <li>Priority scheduling and consistent pricing</li>
+            </ul>
           </div>
         </details>
         <details class="faq-item">
-          <summary class="faq-question">How does pricing work for a monthly retainer?</summary>
+          <summary class="faq-question">How fast is turnaround for concert content?</summary>
           <div class="faq-answer">
-            <p>Retainer pricing is based on the scope of deliverables you need each month—number of shoots, video edits, photos, and turnaround time. We build a custom package that fits your budget and content goals. Most retainers start at a monthly commitment with flexible terms after an initial period.</p>
+            <p>Social clips (vertical, under 60 seconds) are typically delivered within 24-48 hours. Full photo galleries within 3-5 days. Longer-form recap videos within 1-2 weeks depending on complexity.</p>
           </div>
         </details>
         <details class="faq-item">
-          <summary class="faq-question">What's included in a typical retainer package?</summary>
+          <summary class="faq-question">Do you work with other venues?</summary>
           <div class="faq-answer">
-            <p>Packages vary, but most include a set number of shoot days, edited videos (short-form and/or long-form), edited photos, and revisions. We also include content strategy sessions to plan your calendar and ensure every shoot aligns with your marketing goals.</p>
+            <p>Yes. While the Amphitheatre is our flagship venue partnership, we work with concert halls, theaters, festivals, and event spaces throughout Northeast Florida. If you're looking for consistent, reliable content coverage, let's talk.</p>
           </div>
         </details>
         <details class="faq-item">
-          <summary class="faq-question">How is a retainer different from hiring us per project?</summary>
+          <summary class="faq-question">What equipment do you use for concert video?</summary>
           <div class="faq-answer">
-            <p>Per-project work is great for one-time needs, but retainers give you consistency, priority booking, and cost savings. You also get a production team that deeply understands your brand voice—no re-explaining your style every time.</p>
+            <p>We shoot on professional mirrorless systems (Sony FX series) with fast lenses optimized for low-light concert environments. Audio is captured separately and synced in post. We're set up for challenging lighting conditions — strobes, LED walls, fog machines, you name it.</p>
           </div>
         </details>
         <details class="faq-item">
-          <summary class="faq-question">Can I adjust my retainer if my needs change?</summary>
+          <summary class="faq-question">Can you cover shows at other venues for us?</summary>
           <div class="faq-answer">
-            <p>Yes. We review retainer scopes quarterly and can scale up or down based on your business needs. If you have a big event coming up, we can add capacity. If things slow down, we can adjust accordingly.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">What types of businesses benefit most from a retainer?</summary>
-          <div class="faq-answer">
-            <p>Businesses with ongoing content needs—venues, restaurants, event spaces, real estate teams, and brands running active social media or ad campaigns. If you're constantly scrambling for fresh content, a retainer takes that off your plate.</p>
+            <p>Absolutely. Our partnership with St. Johns County Cultural Events includes coverage at multiple venues — The Amp, Ponte Vedra Concert Hall, and various festival locations. We're flexible and mobile.</p>
           </div>
         </details>
       </div>
@@ -721,59 +776,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a video and photo retainer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A retainer is an ongoing partnership where we provide a set amount of video and photo production each month. Instead of booking project-by-project, you get priority scheduling, consistent content output, and typically a lower per-deliverable cost. It's ideal for businesses that need regular content for social media, events, or marketing campaigns."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does pricing work for a monthly retainer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Retainer pricing is based on the scope of deliverables you need each month\u2014number of shoots, video edits, photos, and turnaround time. We build a custom package that fits your budget and content goals. Most retainers start at a monthly commitment with flexible terms after an initial period."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's included in a typical retainer package?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Packages vary, but most include a set number of shoot days, edited videos (short-form and/or long-form), edited photos, and revisions. We also include content strategy sessions to plan your calendar and ensure every shoot aligns with your marketing goals."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is a retainer different from hiring us per project?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Per-project work is great for one-time needs, but retainers give you consistency, priority booking, and cost savings. You also get a production team that deeply understands your brand voice\u2014no re-explaining your style every time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I adjust my retainer if my needs change?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We review retainer scopes quarterly and can scale up or down based on your business needs. If you have a big event coming up, we can add capacity. If things slow down, we can adjust accordingly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What types of businesses benefit most from a retainer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Businesses with ongoing content needs\u2014venues, restaurants, event spaces, real estate teams, and brands running active social media or ad campaigns. If you're constantly scrambling for fresh content, a retainer takes that off your plate."
-      }
-    }
-  ]
+  "@type": "Place",
+  "name": "St. Augustine Amphitheatre",
+  "description": "Premier outdoor concert venue in St. Augustine, Florida with 4,000+ capacity hosting national touring acts.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1340C A1A South",
+    "addressLocality": "St. Augustine",
+    "addressRegion": "FL",
+    "postalCode": "32080",
+    "addressCountry": "US"
+  }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Concert Video Production - St. Augustine Amphitheatre",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "First Sight Films",
+    "url": "https://www.firstsightfilms.com"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "St. Augustine"
+  },
+  "description": "video production and photography partner for the St. Augustine Amphitheatre. Concert videography, event photography, and social media content.",
+  "serviceType": "Concert Video Production"
+}
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -915,65 +949,6 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </footer>
 
-
-<script>
-// Video Player Controls
-document.addEventListener('DOMContentLoaded', function() {
-  const videoItems = document.querySelectorAll('.video-item');
-
-  videoItems.forEach(function(item) {
-    const video = item.querySelector('video');
-    const playBtn = item.querySelector('.video-play-btn');
-    const soundBtn = item.querySelector('.video-sound-toggle');
-
-    // Play/Pause on play button click
-    playBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      togglePlay(video, item);
-    });
-
-    // Play/Pause on video click
-    video.addEventListener('click', function() {
-      togglePlay(video, item);
-    });
-
-    // Sound toggle
-    soundBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      video.muted = !video.muted;
-      soundBtn.classList.toggle('unmuted', !video.muted);
-    });
-
-    // Update playing state when video ends or pauses
-    video.addEventListener('pause', function() {
-      item.classList.remove('playing');
-    });
-
-    video.addEventListener('play', function() {
-      item.classList.add('playing');
-    });
-  });
-
-  function togglePlay(video, item) {
-    // Pause all other videos
-    document.querySelectorAll('.video-item video').forEach(function(v) {
-      if (v !== video && !v.paused) {
-        v.pause();
-        v.closest('.video-item').classList.remove('playing');
-      }
-    });
-
-    // Toggle this video
-    if (video.paused) {
-      video.play();
-      item.classList.add('playing');
-    } else {
-      video.pause();
-      item.classList.remove('playing');
-    }
-  }
-});
-</script>
 
 </body>
 </html>
