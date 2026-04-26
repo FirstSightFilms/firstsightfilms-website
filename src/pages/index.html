@@ -64,7 +64,7 @@ html, body {
 }
 
 .hero-thrillx .hero-title {
-  color: #ffffff;
+  color: #f4c057;
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.2;
@@ -188,7 +188,7 @@ html, body {
 }
 
 .hero-thrillx .hero-subtitle {
-  color: #f4c057;
+  color: #ffffff;
   font-size: 1.725rem;
   line-height: 1.4;
   margin-bottom: 1rem;
@@ -268,12 +268,20 @@ html, body {
   }
 
   .hero-carousel {
-    width: 100%;
+    width: 100vw;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    overflow: visible;
+  }
+
+  .hero-carousel-wrapper {
     overflow: hidden;
   }
 
   .hero-carousel-track {
     animation-duration: 20s;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
   }
 
   .logo-set {
