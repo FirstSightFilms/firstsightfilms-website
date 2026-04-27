@@ -386,7 +386,7 @@ def load_reviews():
         max_chars = 280
         is_long = len(text) > max_chars
         truncated_class = " truncated" if is_long else ""
-        expand_btn_html = '<button class="review-expand" aria-label="Expand review">Read more</button>' if is_long else ""
+        expand_btn_html = '<button class="review-expand" aria-label="Read more">Read more</button>' if is_long else ""
 
         card = f'''
           <div class="review-card" data-index="{i}">
@@ -702,15 +702,53 @@ def copy_assets():
                 print(f"  Copied: {asset_name}/")
 
 
+def minify_css(css_content):
+    """Minify CSS by removing comments, whitespace, and unnecessary characters."""
+    # Remove CSS comments
+    css_content = re.sub(r'/\*[\s\S]*?\*/', '', css_content)
+    # Remove newlines and extra whitespace
+    css_content = re.sub(r'\s+', ' ', css_content)
+    # Remove spaces around special characters
+    css_content = re.sub(r'\s*([{}:;,>~+])\s*', r'\1', css_content)
+    # Remove trailing semicolons before closing braces
+    css_content = re.sub(r';}', '}', css_content)
+    # Remove leading/trailing whitespace
+    css_content = css_content.strip()
+    return css_content
+
+
 def copy_css():
-    """Copy CSS from src/css to output/css."""
+    """Copy and minify CSS from src/css to output/css."""
     dest_path = OUTPUT_DIR / "css"
 
     if SRC_CSS_DIR.exists():
         if dest_path.exists():
             shutil.rmtree(dest_path)
-        shutil.copytree(SRC_CSS_DIR, dest_path)
-        print(f"  Copied: css/ (from src/css)")
+        dest_path.mkdir(parents=True, exist_ok=True)
+
+        total_original = 0
+        total_minified = 0
+
+        for css_file in SRC_CSS_DIR.glob("*.css"):
+            original_content = css_file.read_text(encoding="utf-8")
+            original_size = len(original_content)
+            total_original += original_size
+
+            # Skip already minified files
+            if css_file.name.endswith('.min.css'):
+                minified_content = original_content
+            else:
+                minified_content = minify_css(original_content)
+
+            minified_size = len(minified_content)
+            total_minified += minified_size
+
+            dest_file = dest_path / css_file.name
+            dest_file.write_text(minified_content, encoding="utf-8")
+
+        savings = total_original - total_minified
+        savings_kb = savings / 1024
+        print(f"  Copied and minified: css/ (saved {savings_kb:.1f} KB)")
 
 
 def copy_fonts():

@@ -583,8 +583,8 @@
 }
 
 .review-link {
-  color: var(--color-accent);
-  text-decoration: none;
+  color: #1a1a2e;
+  text-decoration: underline;
   font-weight: 500;
 }
 

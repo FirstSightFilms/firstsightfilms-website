@@ -3,8 +3,8 @@
 <head>
 {{head}}
 <!-- Preload hero image for faster LCP -->
-<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp" media="(max-width: 768px)">
-<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" media="(min-width: 769px)">
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" media="(min-width: 769px)" fetchpriority="high">
 <title>Video Production St. Augustine FL | First Sight Films | Corporate & Event</title>
 <meta name="description" content="Professional video production in St. Augustine & Jacksonville FL. Corporate videos, event coverage, brand stories, and social media content for Northeast Florida businesses and nonprofits.">
 </head>
@@ -157,8 +157,12 @@ html, body {
 
 .hero-carousel-track {
   display: flex;
-  width: fit-content;
+  width: max-content;
   animation: hero-scroll 35s linear infinite;
+  -webkit-animation: hero-scroll 35s linear infinite;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .logo-set {
@@ -182,9 +186,13 @@ html, body {
   flex-shrink: 0;
 }
 
+@-webkit-keyframes hero-scroll {
+  0% { -webkit-transform: translateX(0); transform: translateX(0); }
+  100% { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}
 @keyframes hero-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { -webkit-transform: translateX(0); transform: translateX(0); }
+  100% { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 }
 
 .hero-thrillx .hero-subtitle {
@@ -322,26 +330,26 @@ html, body {
         <div class="hero-carousel-wrapper">
           <div class="hero-carousel-track" id="logoTrack">
             <div class="logo-set">
-              <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="St. Augustine Amphitheatre" width="170" height="170" loading="lazy">
-              <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="Sing Out Loud Festival" width="266" height="170" loading="lazy">
-              <img src="/images/logos/St-Johns-County-Government-Logo.webp" alt="St. Johns County" width="170" height="170" loading="lazy">
-              <img src="/images/logos/Flagler-College-logo.webp" alt="Flagler College" width="394" height="170" loading="lazy">
-              <img src="/images/logos/FL-DEP-STATE-PARKS-Logo.webp" alt="Florida State Parks" width="170" height="170" loading="lazy">
-              <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="Ponte Vedra Concert Hall" width="302" height="170" loading="lazy">
-              <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="St. Johns Cultural Council" width="174" height="170" loading="lazy">
-              <img src="/images/logos/st-johns-chamber-of-commerce-logo.webp" alt="Chamber of Commerce" width="170" height="170" loading="lazy">
-              <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="Fort Mose Jazz Festival" width="366" height="170" loading="lazy">
+              <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="St. Augustine Amphitheatre" width="170" height="170" loading="eager">
+              <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="Sing Out Loud Festival" width="266" height="170" loading="eager">
+              <img src="/images/logos/St-Johns-County-Government-Logo.webp" alt="St. Johns County" width="170" height="170" loading="eager">
+              <img src="/images/logos/Flagler-College-logo.webp" alt="Flagler College" width="394" height="170" loading="eager">
+              <img src="/images/logos/FL-DEP-STATE-PARKS-Logo.webp" alt="Florida State Parks" width="170" height="170" loading="eager">
+              <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="Ponte Vedra Concert Hall" width="302" height="170" loading="eager">
+              <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="St. Johns Cultural Council" width="174" height="170" loading="eager">
+              <img src="/images/logos/st-johns-chamber-of-commerce-logo.webp" alt="Chamber of Commerce" width="170" height="170" loading="eager">
+              <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="Fort Mose Jazz Festival" width="366" height="170" loading="eager">
             </div>
             <div class="logo-set" aria-hidden="true">
-              <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="" width="170" height="170" loading="lazy">
-              <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="" width="266" height="170" loading="lazy">
-              <img src="/images/logos/St-Johns-County-Government-Logo.webp" alt="" width="170" height="170" loading="lazy">
-              <img src="/images/logos/Flagler-College-logo.webp" alt="" width="394" height="170" loading="lazy">
-              <img src="/images/logos/FL-DEP-STATE-PARKS-Logo.webp" alt="" width="170" height="170" loading="lazy">
-              <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="" width="302" height="170" loading="lazy">
-              <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="" width="174" height="170" loading="lazy">
-              <img src="/images/logos/st-johns-chamber-of-commerce-logo.webp" alt="" width="170" height="170" loading="lazy">
-              <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="" width="366" height="170" loading="lazy">
+              <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="" width="170" height="170" loading="eager">
+              <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="" width="266" height="170" loading="eager">
+              <img src="/images/logos/St-Johns-County-Government-Logo.webp" alt="" width="170" height="170" loading="eager">
+              <img src="/images/logos/Flagler-College-logo.webp" alt="" width="394" height="170" loading="eager">
+              <img src="/images/logos/FL-DEP-STATE-PARKS-Logo.webp" alt="" width="170" height="170" loading="eager">
+              <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="" width="302" height="170" loading="eager">
+              <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="" width="174" height="170" loading="eager">
+              <img src="/images/logos/st-johns-chamber-of-commerce-logo.webp" alt="" width="170" height="170" loading="eager">
+              <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="" width="366" height="170" loading="eager">
             </div>
           </div>
         </div>

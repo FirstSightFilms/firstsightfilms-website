@@ -76,7 +76,7 @@
 
 .btn-primary {
   background: #f4c057;
-  color: var(--color-white);
+  color: #1a1a1a;
 }
 
 .btn-primary:hover {
@@ -355,7 +355,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 0.5rem;
-  max-width: 900px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -452,28 +452,28 @@
 
 .bento-info-content {
   padding: 2rem;
-  color: #fff;
+  color: #1a1a2e;
   text-align: center;
 }
 
 .bento-info-content h3 {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #1a1a2e;
 }
 
 .bento-info-content p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: rgba(255,255,255,0.9);
+  color: #1a1a2e;
   margin-bottom: 1.25rem;
 }
 
 .bento-info-cta {
   display: inline-block;
-  color: #fff;
-  font-weight: 500;
+  color: #1a1a2e;
+  font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
   transition: opacity 0.2s ease;
@@ -562,13 +562,13 @@
 .footer-cta-content h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
+  color: #1a1a2e;
   margin-bottom: 0.5rem;
 }
 
 .footer-cta-content p {
   font-size: 1.2rem;
-  color: rgba(255,255,255,0.9);
+  color: #1a1a2e;
   margin-bottom: 1.5rem;
 }
 
@@ -613,7 +613,7 @@
 }
 
 .footer-tagline {
-  color: var(--color-gray-500);
+  color: #ffffff;
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -640,7 +640,7 @@
 }
 
 .footer-col a {
-  color: var(--color-gray-500);
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
   padding: 0.35rem 0;
@@ -652,13 +652,13 @@
 }
 
 .footer-col p {
-  color: var(--color-gray-500);
+  color: #ffffff;
   font-size: 0.9rem;
   margin-bottom: 0.25rem;
 }
 
 .footer-col .contact-label {
-  color: var(--color-gray-500);
+  color: rgba(255,255,255,0.8);
   font-size: 0.8rem;
   margin-top: 0.75rem;
   margin-bottom: 0.25rem;
@@ -693,7 +693,7 @@
 }
 
 .footer-bottom p {
-  color: var(--color-gray-500);
+  color: #ffffff;
   font-size: 0.875rem;
   margin: 0;
 }
@@ -703,7 +703,7 @@
 }
 
 .footer-service-areas a {
-  color: var(--color-gray-500);
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -1340,8 +1340,8 @@
 }
 
 .review-link {
-  color: var(--color-accent);
-  text-decoration: none;
+  color: #1a1a2e;
+  text-decoration: underline;
   font-weight: 500;
 }
 
