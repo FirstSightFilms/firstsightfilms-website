@@ -399,18 +399,23 @@
 }
 
 @media (max-width: 600px) {
+  .section-collab {
+    padding: 1.5rem 0;
+  }
+
   .collaborators-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .collaborators-heading {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .collaborator-logo img {
-    max-height: 70px;
-    max-width: 156px;
+    max-height: 50px;
+    max-width: 110px;
   }
 }
 
