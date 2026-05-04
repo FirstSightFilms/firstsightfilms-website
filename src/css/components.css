@@ -2760,11 +2760,37 @@
   }
 
   .team-profile {
-    padding: 50px 20px;
+    padding: 40px 20px;
+  }
+
+  .team-profile-content {
+    max-width: 100%;
   }
 
   .team-profile .bio-image {
-    max-width: 250px;
+    max-width: 180px;
+    max-height: none;
+    margin: 0 auto 20px;
+  }
+
+  .team-profile .bio-image img {
+    height: auto;
+    width: 100%;
+  }
+
+  .team-profile .bio-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .team-profile .bio-role {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .team-profile .bio-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
   }
 
   .partnership-grid {
