@@ -481,7 +481,7 @@
 
     .client-logos {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(7, minmax(0, 1fr));
       gap: 2rem 1.5rem;
       align-items: center;
     }
@@ -501,7 +501,10 @@
 
     .client-logo img {
       max-height: 80px;
+      max-width: 100%;
       width: auto;
+      height: auto;
+      object-fit: contain;
       filter: grayscale(100%);
       transition: filter 0.3s;
     }
@@ -516,7 +519,7 @@
       }
 
       .client-logos {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1rem;
       }
 
@@ -527,7 +530,7 @@
 
     @media (max-width: 480px) {
       .client-logos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -970,6 +973,7 @@
       }
     }
   </style>
+<link rel="canonical" href="https://www.firstsightfilms.com/">
 </head>
 <body>
 
@@ -1258,7 +1262,7 @@
     window.addEventListener('load', () => {
       const video = document.getElementById('hero-video');
       if (video) {
-        video.src = '/images/hero/rocky-mountain-conservancy-hero-web.mp4';
+        video.src = '/images/hero/fsf-homepage-hero-720p.mp4';
         video.load();
         video.addEventListener('loadeddata', () => {
           video.classList.add('loaded');
