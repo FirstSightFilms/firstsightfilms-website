@@ -129,7 +129,7 @@
 /* Hero Section - Split Layout */
 .hero {
   position: relative;
-  background: rgba(244, 192, 87, 0.10);
+  background: rgba(244, 192, 87, 0.20);
   color: var(--color-black);
 }
 

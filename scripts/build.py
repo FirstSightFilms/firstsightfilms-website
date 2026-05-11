@@ -4,7 +4,9 @@ FSF Site Builder
 Combines modules + pages into complete HTML files.
 
 Usage:
-    python scripts/build.py
+    python scripts/build.py --watch     # Watch mode (recommended) - auto-rebuilds changed files
+    python scripts/build.py --page X    # Build only specific page
+    python scripts/build.py --all       # Full rebuild of entire site
 
 Directory structure:
     src/modules/    - Reusable components (header.html, footer.html, etc.)
@@ -17,8 +19,18 @@ import re
 import csv
 import json
 import shutil
+import argparse
+import time
 from pathlib import Path
 from datetime import datetime
+
+# Try to import watchdog for watch mode
+try:
+    from watchdog.observers import Observer
+    from watchdog.events import FileSystemEventHandler
+    WATCHDOG_AVAILABLE = True
+except ImportError:
+    WATCHDOG_AVAILABLE = False
 
 # Paths
 BASE_DIR = Path(__file__).parent.parent
@@ -29,6 +41,12 @@ FAQS_DIR = SRC_DIR / "faqs"
 REVIEWS_DIR = SRC_DIR / "reviews"
 CONFIG_DIR = SRC_DIR / "config"
 OUTPUT_DIR = BASE_DIR / "output"
+
+# Protected pages - these will NEVER be overwritten by the build script
+# Edit these directly in output/ - they bypass the build system
+PROTECTED_PAGES = [
+    "index.html",  # Homepage has custom changes
+]
 
 # Global page config (populated by load_page_config)
 PAGE_CONFIG = {}
@@ -618,8 +636,14 @@ def fix_blog_og_tags(html_content):
     return html_content
 
 
-def build_pages(modules):
-    """Process all page templates and output complete HTML."""
+def build_pages(modules, page_filter=None, skip_protected=True):
+    """Process page templates and output complete HTML.
+
+    Args:
+        modules: Dict of loaded module HTML
+        page_filter: Optional string to filter which pages to build (e.g., "st-augustine-photography")
+        skip_protected: If True, skip pages in PROTECTED_PAGES list
+    """
     if not PAGES_DIR.exists():
         print(f"Warning: Pages directory not found: {PAGES_DIR}")
         return
@@ -635,6 +659,19 @@ def build_pages(modules):
         if page_file.name.startswith("_"):
             print(f"  Skipped template: {relative_path}")
             continue
+
+        # Skip protected pages (like homepage)
+        if skip_protected and relative_path.name in PROTECTED_PAGES:
+            if relative_path.parent == Path("."):
+                print(f"  Protected (skipped): {relative_path}")
+                continue
+
+        # Filter to specific page if requested
+        if page_filter:
+            # Match against folder name or file stem
+            page_identifier = relative_path.parent.as_posix() if relative_path.name == "index.html" else relative_path.stem
+            if page_filter not in str(relative_path) and page_filter != page_identifier:
+                continue  # Skip silently - not the page we're looking for
 
         # Read page template
         page_content = page_file.read_text(encoding="utf-8")
@@ -1137,10 +1174,177 @@ def build_blog(modules):
         build_blog_article(article, modules)
 
 
-def main():
+# =============================================================================
+# Watch Mode
+# =============================================================================
+
+class FSFBuildHandler(FileSystemEventHandler if WATCHDOG_AVAILABLE else object):
+    """Handles file system events and triggers selective rebuilds."""
+
+    def __init__(self):
+        self.modules = None
+        self.last_build_time = 0
+        self.debounce_seconds = 0.5  # Prevent rapid rebuilds
+        self._load_modules()
+
+    def _load_modules(self):
+        """Load modules once for reuse."""
+        self.modules = load_modules()
+        load_page_config()
+        load_image_manifests()
+
+    def _should_rebuild(self):
+        """Debounce rapid file changes."""
+        now = time.time()
+        if now - self.last_build_time < self.debounce_seconds:
+            return False
+        self.last_build_time = now
+        return True
+
+    def _get_page_from_path(self, file_path):
+        """Determine which page to rebuild based on changed file."""
+        path = Path(file_path)
+        relative = path.relative_to(SRC_DIR) if SRC_DIR in path.parents or path.parent == SRC_DIR else path
+
+        # Module changed - need to rebuild all (except protected)
+        if "modules" in str(relative):
+            return "__all_modules__"
+
+        # CSS changed - just copy CSS
+        if "css" in str(relative):
+            return "__css__"
+
+        # Page changed - rebuild just that page
+        if "pages" in str(relative):
+            # Extract page identifier
+            parts = relative.parts
+            if "pages" in parts:
+                pages_idx = parts.index("pages")
+                if len(parts) > pages_idx + 1:
+                    return parts[pages_idx + 1]
+
+        # Blog content changed
+        if "blog" in str(relative):
+            return "__blog__"
+
+        # FAQ changed
+        if "faqs" in str(relative):
+            # Try to find which page uses this FAQ
+            faq_name = path.stem
+            return faq_name  # Will match pages that use this FAQ
+
+        return None
+
+    def on_modified(self, event):
+        """Handle file modification events."""
+        if event.is_directory:
+            return
+
+        # Only watch relevant files
+        if not event.src_path.endswith(('.html', '.css', '.json')):
+            return
+
+        if not self._should_rebuild():
+            return
+
+        page = self._get_page_from_path(event.src_path)
+        if not page:
+            return
+
+        print(f"\n[Watch] Detected change: {Path(event.src_path).name}")
+
+        if page == "__css__":
+            print("[Watch] Copying CSS...")
+            copy_css()
+            print("[Watch] Done!")
+
+        elif page == "__all_modules__":
+            print("[Watch] Module changed - rebuilding all pages (except protected)...")
+            self._load_modules()  # Reload modules
+            build_pages(self.modules, page_filter=None, skip_protected=True)
+            print("[Watch] Done!")
+
+        elif page == "__blog__":
+            print("[Watch] Rebuilding blog...")
+            build_blog(self.modules)
+            print("[Watch] Done!")
+
+        else:
+            print(f"[Watch] Rebuilding: {page}")
+            build_pages(self.modules, page_filter=page, skip_protected=True)
+            print("[Watch] Done!")
+
+    def on_created(self, event):
+        """Handle new file creation."""
+        self.on_modified(event)
+
+
+def run_watch_mode():
+    """Run the file watcher for automatic rebuilds."""
+    if not WATCHDOG_AVAILABLE:
+        print("\n[Error] Watch mode requires the 'watchdog' package.")
+        print("Install it with: pip install watchdog")
+        return
+
     print("\n" + "=" * 50)
-    print("FSF Site Builder")
+    print("FSF Site Builder - Watch Mode")
     print("=" * 50)
+
+    print("\n[Watch] Initial setup...")
+    handler = FSFBuildHandler()
+
+    print(f"\n[Watch] Protected pages (will not be overwritten):")
+    for page in PROTECTED_PAGES:
+        print(f"  - {page}")
+
+    print(f"\n[Watch] Monitoring: {SRC_DIR}")
+    print("[Watch] Press Ctrl+C to stop\n")
+
+    observer = Observer()
+    observer.schedule(handler, str(SRC_DIR), recursive=True)
+    observer.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\n[Watch] Stopping...")
+        observer.stop()
+    observer.join()
+    print("[Watch] Stopped.")
+
+
+def build_single_page(page_name):
+    """Build a single page by name."""
+    print("\n" + "=" * 50)
+    print(f"FSF Site Builder - Building: {page_name}")
+    print("=" * 50)
+
+    print("\n[1/3] Loading modules...")
+    modules = load_modules()
+    load_page_config()
+    load_image_manifests()
+
+    print(f"\n[2/3] Building page: {page_name}")
+    build_pages(modules, page_filter=page_name, skip_protected=False)
+
+    print(f"\n[3/3] Copying CSS...")
+    copy_css()
+
+    print("\n" + "=" * 50)
+    print(f"Done! Built: {page_name}")
+    print("=" * 50 + "\n")
+
+
+def full_build():
+    """Full site rebuild (original behavior, but skips protected pages)."""
+    print("\n" + "=" * 50)
+    print("FSF Site Builder - Full Rebuild")
+    print("=" * 50)
+
+    print(f"\n[Info] Protected pages (will not be overwritten):")
+    for page in PROTECTED_PAGES:
+        print(f"  - {page}")
 
     print("\n[1/10] Loading modules...")
     modules = load_modules()
@@ -1156,7 +1360,7 @@ def main():
     print(f"  Loaded {len(manifests)} images from manifests")
 
     print(f"\n[4/10] Building pages...")
-    build_pages(modules)
+    build_pages(modules, skip_protected=True)
 
     print(f"\n[5/10] Building blog...")
     build_blog(modules)
@@ -1183,8 +1387,79 @@ def main():
     generate_sitemap()
 
     print("\n" + "=" * 50)
-    print(f"Build complete! Output: {OUTPUT_DIR}")
+    print(f"Full rebuild complete! Output: {OUTPUT_DIR}")
     print("=" * 50 + "\n")
+
+
+def main():
+    """Main entry point with argument parsing."""
+    parser = argparse.ArgumentParser(
+        description="FSF Site Builder - Build website from source files",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python scripts/build.py --watch              # Watch mode (recommended)
+  python scripts/build.py --page photography   # Build single page
+  python scripts/build.py --all                # Full rebuild
+  python scripts/build.py --all --force        # Full rebuild INCLUDING protected pages
+        """
+    )
+
+    parser.add_argument(
+        '--watch', '-w',
+        action='store_true',
+        help='Watch mode: auto-rebuild on file changes'
+    )
+
+    parser.add_argument(
+        '--page', '-p',
+        type=str,
+        help='Build only a specific page (e.g., "st-augustine-photography")'
+    )
+
+    parser.add_argument(
+        '--all', '-a',
+        action='store_true',
+        help='Full site rebuild'
+    )
+
+    parser.add_argument(
+        '--force', '-f',
+        action='store_true',
+        help='Force rebuild of protected pages (use with --all)'
+    )
+
+    args = parser.parse_args()
+
+    # Determine which mode to run
+    if args.watch:
+        run_watch_mode()
+    elif args.page:
+        build_single_page(args.page)
+    elif args.all:
+        if args.force:
+            # Temporarily clear protected pages
+            global PROTECTED_PAGES
+            print("\n[Warning] --force flag: Protected pages WILL be overwritten!")
+            PROTECTED_PAGES = []
+        full_build()
+    else:
+        # No arguments - show help
+        print("\n" + "=" * 50)
+        print("FSF Site Builder")
+        print("=" * 50)
+        print("\nNo build mode specified. Choose one:\n")
+        print("  --watch, -w    Watch mode (recommended)")
+        print("                 Auto-rebuilds when you save files")
+        print("                 Protected pages won't be overwritten\n")
+        print("  --page, -p X   Build single page")
+        print("                 Example: --page st-augustine-photography\n")
+        print("  --all, -a      Full site rebuild")
+        print("                 Rebuilds everything except protected pages\n")
+        print("  --force, -f    Include protected pages (use with --all)\n")
+        print(f"Protected pages: {', '.join(PROTECTED_PAGES)}")
+        print("\nRun with --help for more details.")
+        print("=" * 50 + "\n")
 
 
 if __name__ == "__main__":
