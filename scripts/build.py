@@ -831,6 +831,89 @@ def copy_existing_pages():
             print(f"  Copied existing: {folder}/")
 
 
+def validate_video_references():
+    """Scan built HTML for video references and validate they exist.
+
+    Returns:
+        tuple: (is_valid, missing_videos, large_videos, warnings)
+    """
+    print("\n[Validation] Checking video references...")
+
+    missing_videos = []
+    large_videos = []  # Files over 100MB (GitHub limit)
+    warnings = []
+    found_videos = set()
+
+    # Patterns to find video references in HTML
+    video_patterns = [
+        r'data-video=["\']([^"\']+\.mp4)["\']',  # data-video attributes
+        r'<source[^>]+src=["\']([^"\']+\.mp4)["\']',  # <source> tags
+        r'<video[^>]+src=["\']([^"\']+\.mp4)["\']',  # <video src> tags
+        r'href=["\']([^"\']+\.mp4)["\']',  # Direct video links
+    ]
+
+    # Scan all HTML files in output
+    for html_file in OUTPUT_DIR.glob("**/*.html"):
+        content = html_file.read_text(encoding="utf-8")
+
+        for pattern in video_patterns:
+            matches = re.findall(pattern, content, re.IGNORECASE)
+            for video_path in matches:
+                # Normalize path (remove leading slash for file check)
+                clean_path = video_path.lstrip("/")
+                found_videos.add((video_path, clean_path, html_file))
+
+    # Check each video reference
+    checked_paths = set()
+    for original_path, clean_path, html_file in found_videos:
+        if clean_path in checked_paths:
+            continue
+        checked_paths.add(clean_path)
+
+        video_file = OUTPUT_DIR / clean_path
+
+        if not video_file.exists():
+            missing_videos.append({
+                "path": original_path,
+                "referenced_in": html_file.relative_to(OUTPUT_DIR),
+                "expected_at": video_file
+            })
+        else:
+            # Check file size
+            size_bytes = video_file.stat().st_size
+            size_mb = size_bytes / (1024 * 1024)
+
+            if size_mb > 100:
+                large_videos.append({
+                    "path": original_path,
+                    "size_mb": round(size_mb, 1),
+                    "file": video_file
+                })
+
+    # Report results
+    total_videos = len(checked_paths)
+    print(f"  Found {total_videos} video references in HTML")
+
+    if missing_videos:
+        print(f"\n  [ERROR] {len(missing_videos)} MISSING VIDEO(S):")
+        for v in missing_videos:
+            print(f"    - {v['path']}")
+            print(f"      Referenced in: {v['referenced_in']}")
+
+    if large_videos:
+        print(f"\n  [WARNING] {len(large_videos)} video(s) exceed GitHub 100MB limit:")
+        for v in large_videos:
+            print(f"    - {v['path']} ({v['size_mb']} MB)")
+        warnings.append(f"{len(large_videos)} videos exceed 100MB - cannot push to GitHub without Git LFS")
+
+    is_valid = len(missing_videos) == 0
+
+    if is_valid and not large_videos:
+        print("  All video references valid!")
+
+    return is_valid, missing_videos, large_videos, warnings
+
+
 def generate_sitemap():
     """Generate sitemap.xml from built pages."""
     site_url = "https://www.firstsightfilms.com"
@@ -1346,35 +1429,35 @@ def full_build():
     for page in PROTECTED_PAGES:
         print(f"  - {page}")
 
-    print("\n[1/10] Loading modules...")
+    print("\n[1/11] Loading modules...")
     modules = load_modules()
 
     if not modules:
         print("No modules found. Add .html files to src/modules/")
 
-    print(f"\n[2/10] Loading page config...")
+    print(f"\n[2/11] Loading page config...")
     load_page_config()
 
-    print(f"\n[3/10] Loading image manifests...")
+    print(f"\n[3/11] Loading image manifests...")
     manifests = load_image_manifests()
     print(f"  Loaded {len(manifests)} images from manifests")
 
-    print(f"\n[4/10] Building pages...")
+    print(f"\n[4/11] Building pages...")
     build_pages(modules, skip_protected=True)
 
-    print(f"\n[5/10] Building blog...")
+    print(f"\n[5/11] Building blog...")
     build_blog(modules)
 
-    print(f"\n[6/10] Copying existing pages (not yet migrated)...")
+    print(f"\n[6/11] Copying existing pages (not yet migrated)...")
     copy_existing_pages()
 
-    print(f"\n[7/10] Copying CSS...")
+    print(f"\n[7/11] Copying CSS...")
     copy_css()
 
-    print(f"\n[8/10] Copying fonts...")
+    print(f"\n[8/11] Copying fonts...")
     copy_fonts()
 
-    print(f"\n[9/10] Copying assets...")
+    print(f"\n[9/11] Copying assets...")
     copy_assets()
 
     # Copy _redirects file for Netlify
@@ -1383,12 +1466,36 @@ def full_build():
         shutil.copy2(redirects_src, OUTPUT_DIR / "_redirects")
         print(f"  Copied: _redirects")
 
-    print(f"\n[10/10] Generating sitemap...")
+    print(f"\n[10/11] Generating sitemap...")
     generate_sitemap()
 
+    print(f"\n[11/11] Validating video references...")
+    is_valid, missing, large, warnings = validate_video_references()
+
     print("\n" + "=" * 50)
-    print(f"Full rebuild complete! Output: {OUTPUT_DIR}")
-    print("=" * 50 + "\n")
+    if not is_valid:
+        print("BUILD COMPLETED WITH ERRORS")
+        print("=" * 50)
+        print(f"\n[BLOCKED] {len(missing)} missing video(s) - DO NOT PUSH")
+        print("Fix: Add missing videos to output/video/portfolio/ or remove references")
+        for v in missing:
+            print(f"  - {v['path']}")
+        print("\n" + "=" * 50 + "\n")
+        return False  # Indicate build has issues
+    elif large:
+        print("BUILD COMPLETED WITH WARNINGS")
+        print("=" * 50)
+        print(f"\n[WARNING] {len(large)} video(s) exceed GitHub 100MB limit")
+        print("These files won't push to GitHub without Git LFS or external hosting:")
+        for v in large:
+            print(f"  - {v['path']} ({v['size_mb']} MB)")
+        print(f"\nOutput: {OUTPUT_DIR}")
+        print("=" * 50 + "\n")
+        return True  # Build ok but with warnings
+    else:
+        print(f"Full rebuild complete! Output: {OUTPUT_DIR}")
+        print("=" * 50 + "\n")
+        return True
 
 
 def main():
