@@ -45,7 +45,8 @@ OUTPUT_DIR = BASE_DIR / "output"
 # Protected pages - these will NEVER be overwritten by the build script
 # Edit these directly in output/ - they bypass the build system
 PROTECTED_PAGES = [
-    "index.html",  # Homepage has custom changes
+    # Homepage now builds from src/pages/index.html via the shared modules
+    # (footer module). Re-add "index.html" here to bypass the build again.
 ]
 
 # Global page config (populated by load_page_config)
@@ -929,6 +930,7 @@ def generate_sitemap():
         "_service-template",  # Template file, not a real page
         "_article-template",  # Blog article template, not a real page
         "/410",  # Error page, not indexable
+        "professional-services",  # noindex page — keep out of sitemap (2026-06-08)
     ]
 
     # Priority mapping based on URL depth/importance
@@ -1465,6 +1467,12 @@ def full_build():
     if redirects_src.exists():
         shutil.copy2(redirects_src, OUTPUT_DIR / "_redirects")
         print(f"  Copied: _redirects")
+
+    # Copy favicon to root (browsers request /favicon.ico automatically)
+    favicon_src = OUTPUT_DIR / "images" / "favicon" / "favicon.ico"
+    if favicon_src.exists():
+        shutil.copy2(favicon_src, OUTPUT_DIR / "favicon.ico")
+        print(f"  Copied: favicon.ico to root")
 
     print(f"\n[10/11] Generating sitemap...")
     generate_sitemap()

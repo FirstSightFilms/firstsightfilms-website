@@ -58,7 +58,8 @@
 # 410 Gone - Old Squarespace URLs (tell Google to de-index)
 /home    /410.html    410
 /homepage    /410.html    410
-/homepage-1    /410.html    410
+# /homepage-1 ranks at pos ~4.5 — send its equity to the real homepage instead of 410 (2026-06-08)
+/homepage-1    /    301
 /info-about-first-sight-films    /410.html    410
 /services    /410.html    410
 /events    /410.html    410

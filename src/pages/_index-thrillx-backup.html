@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{head}}
+<!-- Preload hero image for faster LCP -->
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-medium.webp" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp" media="(min-width: 769px)" fetchpriority="high">
+<title>Video Production St. Augustine & Jacksonville | First Sight</title>
+<meta name="description" content="Professional video production in St. Augustine & Jacksonville FL. Corporate videos, event coverage, and brand stories for Northeast Florida businesses.">
+</head>
+<body class="page-home">
+
+{{header}}
+
+<main>
+
+  <!-- Hero Section: ThrillX Framework -->
+  <style>
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ThrillX Hero Styles */
+.hero-thrillx {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-thrillx .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-thrillx .hero-eyebrow {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.hero-thrillx .hero-title {
+  color: #f4c057;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-thrillx .hero-title .highlight {
+  color: #f4c057;
+}
+
+.brush-underline {
+  position: relative;
+  display: inline-block;
+  color: #f4c057;
+}
+
+.brush-underline::after {
+  content: '';
+  position: absolute;
+  left: -10%;
+  bottom: -22px;
+  width: 120%;
+  height: 28px;
+  background-image: url('/images/brush-stroke-yellow.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Inline Proof Stats - Above the fold */
+.hero-proof-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 35px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.proof-item-inline {
+  text-align: center;
+}
+
+.proof-number-inline {
+  color: #f4c057;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+}
+
+.proof-label-inline {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.proof-divider {
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Scrolling Carousel */
+.hero-carousel {
+  margin-bottom: 1.5rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+}
+
+.hero-carousel-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.hero-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.hero-carousel-track {
+  display: flex;
+  width: max-content;
+  animation: hero-scroll 35s linear infinite;
+  -webkit-animation: hero-scroll 35s linear infinite;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.logo-set {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+  flex-shrink: 0;
+}
+
+.logo-set img {
+  max-height: 85px;
+  max-width: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(1.2) contrast(1.1);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 16px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+@-webkit-keyframes hero-scroll {
+  0% { -webkit-transform: translateX(0); transform: translateX(0); }
+  100% { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}
+@keyframes hero-scroll {
+  0% { -webkit-transform: translateX(0); transform: translateX(0); }
+  100% { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}
+
+.hero-thrillx .hero-subtitle {
+  color: #ffffff;
+  font-size: 1.55rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-thrillx .hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-thrillx .btn-primary {
+  background: #f4c057;
+  color: #1a1a2e;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hero-thrillx .btn-primary:hover {
+  background: #ffd275;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(244, 192, 87, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-thrillx {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .hero-thrillx .hero-content {
+    padding-top: 40px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-thrillx .hero-title {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero-thrillx .hero-subtitle {
+    font-size: 1.35rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-proof-inline {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .proof-number-inline {
+    font-size: 1rem;
+  }
+
+  .proof-label-inline {
+    font-size: 0.65rem;
+  }
+
+  .proof-divider {
+    height: 20px;
+  }
+
+  .hero-carousel {
+    width: 100vw;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    overflow: visible;
+  }
+
+  .hero-carousel-wrapper {
+    overflow: hidden;
+  }
+
+  .hero-carousel-track {
+    animation-duration: 20s;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+  }
+
+  .logo-set {
+    gap: 1rem;
+    padding-right: 1rem;
+  }
+
+  .logo-set img {
+    max-height: 55px;
+    max-width: 120px;
+    padding: 8px 10px;
+  }
+
+  .hero-cta-group {
+    padding: 0 1rem;
+  }
+
+  .brush-underline::after {
+    display: none;
+  }
+}
+  </style>
+  <section class="hero-thrillx">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="/images/hero/first-sight-films-video-production-st-augustine-florida-hero-1-large.webp">
+      <source src="/images/hero/fsf-homepage-hero-720p.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        YOUR CONTENT ISN'T <span class="brush-underline">CONNECTING</span>
+      </h1>
+
+      <h2 class="hero-subtitle">
+        We produce content that tells your story so your audience connects to you.
+      </h2>
+
+      <!-- SCROLLING LOGO CAROUSEL - Above the fold -->
+      <div class="hero-carousel">
+        <p class="hero-carousel-label">Trusted by:</p>
+        <div class="hero-carousel-wrapper">
+          <div class="hero-carousel-track" id="logoTrack">
+            <div class="logo-set">
+              <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="St. Augustine Amphitheatre" width="170" height="170" loading="eager">
+              <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="Sing Out Loud Festival" width="266" height="170" loading="eager">
+              <img src="/images/logos/St-Johns-County-Government-Logo.webp" alt="St. Johns County" width="170" height="170" loading="eager">
+              <img src="/images/logos/Flagler-College-logo.webp" alt="Flagler College" width="394" height="170" loading="eager">
+              <img src="/images/logos/FL-DEP-STATE-PARKS-Logo.webp" alt="Florida State Parks" width="170" height="170" loading="eager">
+              <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="Ponte Vedra Concert Hall" width="302" height="170" loading="eager">
+              <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="St. Johns Cultural Council" width="174" height="170" loading="eager">
+              <img src="/images/logos/st-johns-chamber-of-commerce-logo.webp" alt="Chamber of Commerce" width="170" height="170" loading="eager">
+              <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="Fort Mose Jazz Festival" width="366" height="170" loading="eager">
+            </div>
+            <div class="logo-set" aria-hidden="true">
+              <img src="/images/logos/St-Augustine-Amphitheatre-Logo.webp" alt="" width="170" height="170" loading="eager">
+              <img src="/images/logos/sing-out-loud-music-festival-logo.webp" alt="" width="266" height="170" loading="eager">
+              <img src="/images/logos/St-Johns-County-Government-Logo.webp" alt="" width="170" height="170" loading="eager">
+              <img src="/images/logos/Flagler-College-logo.webp" alt="" width="394" height="170" loading="eager">
+              <img src="/images/logos/FL-DEP-STATE-PARKS-Logo.webp" alt="" width="170" height="170" loading="eager">
+              <img src="/images/logos/ponte-vedtra-concert-hall-logo.webp" alt="" width="302" height="170" loading="eager">
+              <img src="/images/logos/st-johns-cultural-council-logo.webp" alt="" width="174" height="170" loading="eager">
+              <img src="/images/logos/st-johns-chamber-of-commerce-logo.webp" alt="" width="170" height="170" loading="eager">
+              <img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.webp" alt="" width="366" height="170" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROOF STATS - Above CTA -->
+      <div class="hero-proof-inline">
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">10+</span>
+          <span class="proof-label-inline">Years</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">100+</span>
+          <span class="proof-label-inline">Projects</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">5.0★</span>
+          <span class="proof-label-inline">Google</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">50+</span>
+          <span class="proof-label-inline">Reviews</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="/contact/" class="btn btn-primary">Get Quote ASAP</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photography Portfolio Grid -->
+  <style>
+.insta-grid-section {
+  padding: 3rem 0;
+  background: #fff;
+}
+
+.insta-grid-section h2 {
+  color: #000;
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 100%;
+}
+
+.insta-grid__item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.insta-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.insta-grid__item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .insta-grid-section {
+    padding: 2rem 0;
+  }
+  .insta-grid {
+    gap: 6px;
+  }
+}
+  </style>
+  <section class="insta-grid-section">
+    <h2>Photography Portfolio</h2>
+    <div class="insta-grid">
+      <!-- Row 1 -->
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-3-thumb.webp" alt="Lifestyle apparel photography at Anastasia State Park" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-6-thumb.webp" alt="Commercial photography St. Augustine" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/grad-photo-flagler-college-1-thumb.webp" alt="Flagler College graduation photography session" loading="lazy" decoding="async">
+      </div>
+      <!-- Row 2 -->
+      <div class="insta-grid__item">
+        <img src="/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-5-thumb.webp" alt="Behind the scenes video production in St. Augustine" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/grad-photo-session-flagler-college-st-augustine-15-thumb.webp" alt="Senior portraits Flagler College" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-24-thumb.webp" alt="Commercial photography St. Augustine Amphitheatre apparel" loading="lazy" decoding="async">
+      </div>
+      <!-- Row 3 -->
+      <div class="insta-grid__item">
+        <img src="/images/grad-photo-session-flagler-college-st-augustine-10-thumb.webp" alt="Graduation photo session at Flagler College" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/bento/corporate-video-st-augustine-bento-1-thumb.webp" alt="Corporate video production St. Augustine" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-46-thumb.webp" alt="Outdoor lifestyle photography" loading="lazy" decoding="async">
+      </div>
+      <!-- Row 4 -->
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-52-thumb.webp" alt="Outdoor lifestyle photography session" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-12-thumb.webp" alt="Video production behind the scenes" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/grad-photo-flagler-college-17-thumb.webp" alt="Flagler College graduation portraits" loading="lazy" decoding="async">
+      </div>
+      <!-- Row 5 -->
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-71-thumb.webp" alt="Product photography Florida" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/bento/event-photography-st-augustine-sing-out-loud-festival-1-thumb.webp" alt="Event photography at Sing Out Loud Festival" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-83-thumb.webp" alt="Apparel product photography St. Augustine" loading="lazy" decoding="async">
+      </div>
+      <!-- Row 6 -->
+      <div class="insta-grid__item">
+        <img src="/images/grad-photo-session-flagler-college-st-augustine-22-thumb.webp" alt="Senior portraits Flagler College" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-97-thumb.webp" alt="Commercial lifestyle photography" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-18-thumb.webp" alt="Professional video production St. Augustine" loading="lazy" decoding="async">
+      </div>
+      <!-- Row 7 -->
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-107-thumb.webp" alt="Commercial lifestyle photography Florida" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/grad-photo-flagler-college-25-thumb.webp" alt="Graduation photography St. Augustine" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-121-thumb.webp" alt="Lifestyle photography session" loading="lazy" decoding="async">
+      </div>
+      <!-- Row 8 -->
+      <div class="insta-grid__item">
+        <img src="/images/bento/brand-story-video-st-augustine-1-thumb.webp" alt="Brand story video production" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/lifestyle-apparel-commercial-photo-shoot-anastasia-state-park/outdoor-life-style-product-photogrpahy-st-augustine-the-amp-135-thumb.webp" alt="Product photography session" loading="lazy" decoding="async">
+      </div>
+      <div class="insta-grid__item">
+        <img src="/images/grad-photo-session-flagler-college-st-augustine-18-thumb.webp" alt="College graduation photos" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Portfolio Section -->
+  <section class="bento-portfolio" id="our-work">
+    <div class="container">
+      <div class="bento-header">
+        <h2>St. Augustine Video Production Services</h2>
+        <p>Whether you need video for social media, an event you're producing, or a TV commercial, we've got you.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- 1. Corporate Video (Featured) -->
+        <a href="/corporate-video-st-augustine/" class="bento-item bento-medium bento-featured">
+          <img src="/images/bento/corporate-video-st-augustine-bento-1-thumb.webp" alt="Corporate video production for CrossCountry Mortgage in St. Augustine, FL - behind the scenes with First Sight Films" loading="lazy" decoding="async" width="400" height="533">
+          <div class="bento-overlay">
+            <span class="bento-label">Corporate Video</span>
+            <span class="bento-subtitle">Professional videos for growing businesses</span>
+          </div>
+        </a>
+
+        <!-- 2. Event Coverage -->
+        <a href="/event-video-st-augustine/" class="bento-item bento-medium">
+          <img src="/images/bento/event-photography-st-augustine-sing-out-loud-festival-1-thumb.webp" alt="Event video coverage in Jacksonville" loading="lazy" decoding="async" width="400" height="500">
+          <div class="bento-overlay">
+            <span class="bento-label">Event Coverage</span>
+            <span class="bento-subtitle">Capture the energy and highlights</span>
+          </div>
+        </a>
+
+        <!-- 3. Brand Story -->
+        <a href="/brand-story-st-augustine/" class="bento-item bento-medium">
+          <img src="/images/bento/brand-story-video-st-augustine-1-thumb.webp" alt="Brand story video production for St. Augustine Amphitheatre merchandise campaign by First Sight Films" loading="lazy" decoding="async" width="400" height="500">
+          <div class="bento-overlay">
+            <span class="bento-label">Brand Story</span>
+            <span class="bento-subtitle">Share your story, connect with customers</span>
+          </div>
+        </a>
+
+        <!-- 4. Social Media -->
+        <a href="/social-media-st-augustine/" class="bento-item bento-medium">
+          <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-thumbnail.webp" alt="Social media video content for St. Augustine Amphitheatre featuring Thievery Corporation by First Sight Films" loading="lazy" decoding="async" width="400" height="320">
+          <div class="bento-overlay">
+            <span class="bento-label">Social Media</span>
+            <span class="bento-subtitle">Short-form content that performs</span>
+          </div>
+        </a>
+
+        <!-- 5. Photography -->
+        <a href="/st-augustine-photography/" class="bento-item bento-medium">
+          <img src="/images/bento/photography-st-augustine-bento-1-thumb.webp" alt="First Sight Films owner Diego Cerquera at Sing Out Loud Festival, Francis Field, St. Augustine, FL" loading="lazy" decoding="async" width="400" height="320">
+          <div class="bento-overlay">
+            <span class="bento-label">Photography</span>
+            <span class="bento-subtitle">Headshots, products, and events</span>
+          </div>
+        </a>
+
+        <!-- 6. CTA -->
+        <div class="bento-item bento-medium bento-info">
+          <div class="bento-info-content">
+            <h3>Start Your Project.</h3>
+            <p>If what you need involves photo or video, we've got you covered.</p>
+            <a href="/contact/" class="bento-info-cta">Get in Touch →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section-about-teaser">
+    <div class="about-header">
+      <h2>Meet Diego and Trista</h2>
+      <p class="about-subheading">St. Johns County's video production partner since 2017.</p>
+    </div>
+    <div class="about-container">
+      <div class="about-content">
+        <div class="about-text">
+          <p>With over a decade of experience in video production and photography, we have no doubt we can capture your project... but this isn't what makes us stand out. It's our strategy-first approach mixed with our empathetic nature that drives us and our projects forward while making sure you are taken care of in the process.</p>
+          <p>Our minimal footprint approach means we work efficiently without disrupting your operations. Local to St. Augustine, we understand the Northeast Florida market and deliver content that connects with your audience.</p>
+        </div>
+        <a href="/aboutus/" class="btn btn-primary">Get to Know Us</a>
+      </div>
+      <div class="about-media">
+        <div class="about-bento">
+          <div class="about-bento__item about-bento--main">
+            <img src="/images/about/diego-and-trista-cerquera-sbeach-sunset-travel-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, owners of First Sight Films, St. Augustine video production company" loading="lazy" decoding="async" width="400" height="267">
+          </div>
+          <div class="about-bento__item about-bento--video">
+            <img src="/images/about/trista-brophy-cerquera-st-augustine-beach-fl-film-set-1-thumb.webp" alt="Dr. Trista Cerquera on set at St. Augustine Beach, FL - First Sight Films project manager" loading="lazy" decoding="async" width="400" height="600">
+          </div>
+          <div class="about-bento__item about-bento--small-1">
+            <img src="/images/about/diego-and-trista-brophy-cerquera-st-augustine-first-sight-films-owners-1-thumb.webp" alt="Diego and Dr. Trista Cerquera, First Sight Films owners and St. Augustine videographers" loading="lazy" decoding="async" width="400" height="320">
+          </div>
+          <div class="about-bento__item about-bento--small-2">
+            <img src="/images/about/diego-and-trista-brophy-cerquera-at-adobe-max-1-thumb.webp" alt="Diego and Dr. Trista Cerquera at Adobe MAX conference" loading="lazy" decoding="async" width="400" height="482">
+          </div>
+          <div class="about-bento__item about-bento--action">
+            <img src="/images/about/diego-about-us-photo-1-thumb.webp" alt="Diego Cerquera photographing a live event at St. Augustine Amphitheatre" loading="lazy" decoding="async" width="400" height="553">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{why-st-augustine}}
+
+{{portfolio-grid}}
+
+<!-- Reviews Section - Ultra Compact Grid -->
+  <section class="section-reviews-compact" id="reviews">
+    <style>
+    .section-reviews-compact {
+      padding: 3rem 1rem;
+      background: #fff;
+    }
+    .reviews-compact-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .reviews-compact-header h2 {
+      font-size: 1.75rem;
+      color: #1a1a2e;
+      margin-bottom: 0.5rem;
+    }
+    .reviews-compact-header p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .reviews-compact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      max-width: 1400px;
+      margin: 0 auto 1.5rem;
+    }
+    .review-card-compact {
+      background: #fafafa;
+      padding: 0.75rem;
+      height: 130px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .review-card-compact .review-stars {
+      color: #f4c057;
+      font-size: 0.7rem;
+      margin-bottom: 0.25rem;
+    }
+    .review-card-compact .review-text {
+      font-size: 0.75rem;
+      line-height: 1.4;
+      color: #444;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 0.4rem;
+    }
+    .review-card-compact .review-author {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+    .review-card-compact::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 25px;
+      background: linear-gradient(transparent, #fafafa);
+      pointer-events: none;
+    }
+    .reviews-compact-cta {
+      text-align: center;
+    }
+    .reviews-compact-cta a {
+      color: #1a1a2e;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-bottom: 1px solid #f4c057;
+      padding-bottom: 2px;
+    }
+    .reviews-compact-cta a:hover {
+      color: #f4c057;
+    }
+    @media (max-width: 1100px) {
+      .reviews-compact-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .section-reviews-compact { padding: 2rem 0.75rem; }
+      .reviews-compact-grid { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }
+      .reviews-compact-header h2 { font-size: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .reviews-compact-grid { grid-template-columns: repeat(2, 1fr); }
+      .review-card-compact { height: 115px; padding: 0.6rem; }
+      .review-card-compact .review-text { -webkit-line-clamp: 2; font-size: 0.7rem; }
+    }
+    </style>
+    <div class="reviews-compact-header">
+      <h2>What Our Clients Say</h2>
+      <p>50+ five-star reviews on Google</p>
+    </div>
+    <div class="reviews-compact-grid">
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">So great to work with! Diego was fun and made the entire experience really easy. The final outcome was exceptional.</p>
+        <p class="review-author">Megan Vidal</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The quality of your work, professionalism, and attention to detail are well above standard. I am very grateful.</p>
+        <p class="review-author">Isabelle Renault</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The photos are absolutely incredible—I LOVE them! Your attention to detail really showed in the final product.</p>
+        <p class="review-author">Anna Gilbert</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Diego and First Sight Films were instrumental to the success of our video project. He went above and beyond.</p>
+        <p class="review-author">Marcus Fung</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">His team was responsive in their replies. They took great photos and video clips for our exhibition design business.</p>
+        <p class="review-author">Quatrefoil Associates</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The recording looks and sounds way better than I thought it could. Stoked this resource is here in St. Augustine.</p>
+        <p class="review-author">Kelsey May</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Diego did an incredible job capturing our event! He has a great eye for detail. The final product exceeded our expectations.</p>
+        <p class="review-author">John Kersey</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">They made the whole family feel so comfortable in front of the camera and the photos came out absolutely stunning!</p>
+        <p class="review-author">Emma Parmar</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Diego & Trista delivered high-quality photo, video, and audio that really helped us tell our organization's story.</p>
+        <p class="review-author">Laura Baldwin</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">He made it comfortable and easy. The equipment was top-notch and professionally operated.</p>
+        <p class="review-author">Chris Minnis</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">What a fabulous experience! Diego makes it easy, and makes you look great too.</p>
+        <p class="review-author">Amy Angelilli</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The videos were absolutely spectacular! They completely captured our vibe and definitely made us look cool!</p>
+        <p class="review-author">HMA Mortgage</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The entire process from booking to the final video deliverables, everything was professionally done.</p>
+        <p class="review-author">Melanie Schuler</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">They took beautiful photos of my wife and I's special day! They made the photo shoot fun.</p>
+        <p class="review-author">Logan</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Diego exceeded all my expectations with his fantastic photography! He flawlessly captured the essence of my event.</p>
+        <p class="review-author">LA Tango Academy</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Diego did an amazing job at capturing the perfect moments during our tango event. He's calm and very professional.</p>
+        <p class="review-author">Manon Narbonne</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The photos were lovely. The moments were captured so beautifully. He has a very calming energy.</p>
+        <p class="review-author">Sharath Raj</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Diego went above and beyond to make my promo video beautiful and personalized. Highly recommend.</p>
+        <p class="review-author">Lauren Shirer</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">He has an eye for consistency and insightful commentary that is above and beyond most professionals.</p>
+        <p class="review-author">Jewel Rechsteiner</p>
+      </div>
+      <div class="review-card-compact">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">His pricing was fair and transparent and the photos were perfect. I highly recommend Diego.</p>
+        <p class="review-author">Raychill Muller</p>
+      </div>
+    </div>
+    <div class="reviews-compact-cta">
+      <a href="https://www.google.com/maps/place/First+Sight+Films/" target="_blank" rel="noopener">See all reviews on Google →</a>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <h2>St. Augustine Video Production FAQ</h2>
+      {{faq:homepage}}
+    </div>
+  </section>
+
+</main>
+
+{{faq-schema:homepage}}
+{{schema}}
+
+{{footer}}
+
+<script>
+// Hero video - click anywhere to play
+document.addEventListener('DOMContentLoaded', function() {
+  var heroPhoto = document.querySelector('.hero-photo');
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo && heroPhoto) {
+    heroPhoto.addEventListener('click', function() {
+      heroPhoto.classList.add('playing');
+      heroVideo.play();
+    });
+  }
+});
+</script>
+
+</body>
+</html>
