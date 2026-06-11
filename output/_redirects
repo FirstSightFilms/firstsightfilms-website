@@ -20,8 +20,11 @@
 /video/singoutloud2018/    /st-augustine-video-production/singoutloud2018/    301
 /video/singoutloud2024    /st-augustine-video-production/singoutloud2024/    301
 /video/singoutloud2024/    /st-augustine-video-production/singoutloud2024/    301
-/video/staugustineamp    /st-augustine-video-production/staugustineamp/    301
-/video/staugustineamp/    /st-augustine-video-production/staugustineamp/    301
+/video/staugustineamp    /st-augustine-video-production/st-augustine-amphitheatre/    301
+/video/staugustineamp/    /st-augustine-video-production/st-augustine-amphitheatre/    301
+# Duplicate Amphitheatre page consolidated -> keep st-augustine-amphitheatre (2026-06-10)
+/st-augustine-video-production/staugustineamp    /st-augustine-video-production/st-augustine-amphitheatre/    301
+/st-augustine-video-production/staugustineamp/    /st-augustine-video-production/st-augustine-amphitheatre/    301
 /video/avilesstreetfestival    /st-augustine-video-production/avilesstreetfestival/    301
 /video/avilesstreetfestival/    /st-augustine-video-production/avilesstreetfestival/    301
 /video/livewildlyfloridastateparkfoundation    /st-augustine-video-production/livewildlyfloridastateparkfoundation/    301
