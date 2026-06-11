@@ -1,0 +1,166 @@
+{
+  "questions": [
+    {
+      "category": "Pricing & What You Get",
+      "question": "How much does event video coverage cost in St. Augustine?",
+      "answer": "<p>A full day of coverage starts at $1,800 and includes one 30&ndash;45 second video delivered in both horizontal and vertical formats for social and your website. Additional deliverables can be added on. Every project is a little different, so book a 15-minute call and we'll get you a transparent, no-surprises quote based on exactly what you need.</p>"
+    },
+    {
+      "category": "Pricing & What You Get",
+      "question": "What do you deliver with event video coverage?",
+      "answer": "<p>We handle the whole process&mdash;we're on-site filming your event, then we edit it into polished, ready-to-use content: recap videos, testimonials from attendees, social media reels, and videos cut for your website and paid ads. We're a content team that films and edits, not an AV or staging company, so what you get is finished video you can actually use.</p>"
+    },
+    {
+      "category": "Pricing & What You Get",
+      "question": "Can one team handle both photo and video?",
+      "answer": "<p>Absolutely. We have a team of videographers, photographers, and production assistants we trust and regularly work with, so one crew can cover both photo and video at the same event.</p>"
+    },
+    {
+      "category": "Pricing & What You Get",
+      "question": "Can you deliver a quick-turn highlight&mdash;same-night or next-day?",
+      "answer": "<p>Yes. We offer same-day photo editing of selects&mdash;a curated set, not your full gallery&mdash;for +$500 per day, and same-day video editing for real-time social posts (+$1,200&ndash;$1,500 depending on scope). For multi-day events, we can also deliver next-morning photo highlights so you have content ready for the next day.</p>"
+    },
+    {
+      "category": "Event Day",
+      "question": "How will you capture the key moments?",
+      "answer": "<p>We've worked live events from every angle&mdash;as planners, producers, and PAs, as well as videographers and photographers&mdash;so we know how important a schedule with the key moments highlighted really is. We coordinate with you before the event to get every key moment on our shot list. And if something changes day-of? No problem&mdash;we'll shift to cover whatever you need without asking unnecessary questions or adding stress to your day.</p>"
+    },
+    {
+      "category": "Event Day",
+      "question": "Will you be discreet and out of the way?",
+      "answer": "<p>This matters a lot to us, so let's call it out: your attendees' experience is everything. Without them you have no event&mdash;which is why we work hard to keep them comfortable and enjoying themselves. That means no bright camera flashes in their faces (unless that's what you want), never blocking their view of a keynote, and treating everyone the way we'd want to be treated at an event.</p>"
+    },
+    {
+      "category": "Event Day",
+      "question": "What's your backup plan if gear fails or a shooter is out?",
+      "answer": "<p>Years of working events taught us to plan for the worst and hope for the best. We build in redundancy on both gear and crew&mdash;bringing backup cameras and lenses, and booking extra crew as a just-in-case&mdash;so a single failure never puts your coverage at risk.</p>"
+    },
+    {
+      "category": "Trust & Coverage",
+      "question": "Do you have a certificate of insurance (COI)?",
+      "answer": "<p>Yes. We carry a certificate of insurance with $1,000,000 in general liability coverage.</p>"
+    },
+    {
+      "category": "Trust & Coverage",
+      "question": "Do you cover corporate events, festivals, and conferences?",
+      "answer": "<p>Yes&mdash;that's our focus. We regularly cover festivals, concerts, conferences, fundraisers, and corporate and higher-ed events across St. Augustine and Northeast Florida. (We don't shoot weddings.) If you're running an organizational event and need video and photo coverage, you're in the right place.</p>"
+    },
+    {
+      "category": "Trust & Coverage",
+      "question": "What areas do you serve?",
+      "answer": "<p>We're based in St. Augustine and work throughout St. Johns County, Jacksonville, Ponte Vedra, and Northeast Florida. We travel for the right projects too&mdash;just ask.</p>"
+    },
+    {
+      "category": "Booking",
+      "question": "What happens after I book a call?",
+      "answer": "<p>We have a 15-minute call to discuss your project, dates, and what you need. After our call, we'll put together an itemized quote covering everything we talked about.</p>"
+    },
+    {
+      "category": "Booking",
+      "question": "How far ahead should I book an event?",
+      "answer": "<p>The earlier the better. Events are date-specific and our calendar fills up in peak season&mdash;if your date is set, reach out now so we can hold it.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does event video coverage cost in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A full day of coverage starts at $1,800 and includes one 30–45 second video delivered in both horizontal and vertical formats for social and your website. Additional deliverables can be added on. Every project is a little different, so book a 15-minute call and we'll get you a transparent, no-surprises quote based on exactly what you need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do you deliver with event video coverage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We handle the whole process—we're on-site filming your event, then we edit it into polished, ready-to-use content: recap videos, testimonials from attendees, social media reels, and videos cut for your website and paid ads. We're a content team that films and edits, not an AV or staging company, so what you get is finished video you can actually use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can one team handle both photo and video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We have a team of videographers, photographers, and production assistants we trust and regularly work with, so one crew can cover both photo and video at the same event."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you deliver a quick-turn highlight—same-night or next-day?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer same-day photo editing of selects—a curated set, not your full gallery—for +$500 per day, and same-day video editing for real-time social posts (+$1,200–$1,500 depending on scope). For multi-day events, we can also deliver next-morning photo highlights so you have content ready for the next day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How will you capture the key moments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We've worked live events from every angle—as planners, producers, and PAs, as well as videographers and photographers—so we know how important a schedule with the key moments highlighted really is. We coordinate with you before the event to get every key moment on our shot list. And if something changes day-of? No problem—we'll shift to cover whatever you need without asking unnecessary questions or adding stress to your day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will you be discreet and out of the way?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This matters a lot to us, so let's call it out: your attendees' experience is everything. Without them you have no event—which is why we work hard to keep them comfortable and enjoying themselves. That means no bright camera flashes in their faces (unless that's what you want), never blocking their view of a keynote, and treating everyone the way we'd want to be treated at an event."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's your backup plan if gear fails or a shooter is out?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Years of working events taught us to plan for the worst and hope for the best. We build in redundancy on both gear and crew—bringing backup cameras and lenses, and booking extra crew as a just-in-case—so a single failure never puts your coverage at risk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you have a certificate of insurance (COI)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We carry a certificate of insurance with $1,000,000 in general liability coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you cover corporate events, festivals, and conferences?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes—that's our focus. We regularly cover festivals, concerts, conferences, fundraisers, and corporate and higher-ed events across St. Augustine and Northeast Florida. We don't shoot weddings. If you're running an organizational event and need video and photo coverage, you're in the right place."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're based in St. Augustine and work throughout St. Johns County, Jacksonville, Ponte Vedra, and Northeast Florida. We travel for the right projects too—just ask."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after I book a call?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We have a 15-minute call to discuss your project, dates, and what you need. After our call, we'll put together an itemized quote covering everything we talked about."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far ahead should I book an event?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The earlier the better. Events are date-specific and our calendar fills up in peak season—if your date is set, reach out now so we can hold it."
+        }
+      }
+    ]
+  }
+}

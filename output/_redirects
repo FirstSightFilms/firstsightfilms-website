@@ -15,6 +15,20 @@
 /st-augustine-jacksonville-video-production/    /st-augustine-video-production/    301
 /st-augustine-jacksonville-video-production/*    /st-augustine-video-production/:splat/    301
 
+# Events page consolidation (2026-06-11) -> main events page is /event-video-coverage-st-augustine/
+# Old event page still builds a static file, so force (!) the redirect to win over it.
+/event-video-st-augustine    /event-video-coverage-st-augustine/    301!
+/event-video-st-augustine/    /event-video-coverage-st-augustine/    301!
+# Temp slug from the build (never deployed) -> consolidate too
+/event-corporate-videography-st-augustine    /event-video-coverage-st-augustine/    301
+/event-corporate-videography-st-augustine/    /event-video-coverage-st-augustine/    301
+
+# Nonprofit page + blog post retired/archived (2026-06-11)
+/nonprofit-video-production    /st-augustine-video-production/    301
+/nonprofit-video-production/    /st-augustine-video-production/    301
+/blog/documentary-video-nonprofits-florida    /blog/    301
+/blog/documentary-video-nonprofits-florida/    /blog/    301
+
 # Old /video/ URLs - redirect to new structure (with and without trailing slash)
 /video/singoutloud2018    /st-augustine-video-production/singoutloud2018/    301
 /video/singoutloud2018/    /st-augustine-video-production/singoutloud2018/    301

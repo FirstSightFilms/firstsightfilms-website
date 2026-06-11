@@ -1,0 +1,86 @@
+{
+  "questions": [
+    {
+      "question": "How much does event coverage cost?",
+      "answer": "<p>Most event projects land between <strong>$1,800 and $9,000</strong>, depending on how many cameras, how big the crew, and what you need delivered. The tiers above will get you close; the call gets you exact.</p>"
+    },
+    {
+      "question": "Do you work at my venue?",
+      "answer": "<p>Almost certainly. We're local and we've covered events across St. Augustine and the beach — including the Embassy Suites in St. Augustine Beach. If we haven't shot your room yet, we'll scout it ahead of time so nothing's a surprise on the day.</p>"
+    },
+    {
+      "question": "How far in advance should I book?",
+      "answer": "<p>The sooner the better — we take a limited number of event dates and the good ones go first, especially in season. If your event is soon, check the date now; we sometimes have room.</p>"
+    },
+    {
+      "question": "What do I actually get, and when?",
+      "answer": "<p>Typically a highlight or recap film plus social cutdowns, with keynote, panel, award, or testimonial captures on the larger tiers. Turnaround is usually 7 business days, and we'll give you an exact date when we quote.</p>"
+    },
+    {
+      "question": "Can you capture keynotes, panels, and testimonials?",
+      "answer": "<p>Yes. Multi-camera coverage means we can capture full sessions and main-stage moments, and we regularly grab on-site testimonials and interviews while the energy's high. Tell us what you need and we'll build it into the quote.</p>"
+    },
+    {
+      "question": "What if something goes wrong with the gear?",
+      "answer": "<p>We bring backups for everything — cameras, audio, power, media. With multi-camera coverage, a single point of failure never costs you the moment. That redundancy is the reason live clients keep coming back.</p>"
+    },
+    {
+      "question": "What makes you different from a freelancer?",
+      "answer": "<p>Three things: the venues and institutions that already trust us, the fact that we're local and likely already know your room, and the way we treat event coverage as documentary storytelling — not just stage footage. You're hiring a team that's done this hundreds of times and shows up prepared for a moment you can't redo.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does event coverage cost in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most event projects land between $1,800 and $9,000, depending on how many cameras, how big the crew, and what you need delivered. A 15-minute call gets you an exact quote for your event."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work at my venue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Almost certainly. We're local and have covered events across St. Augustine and St. Augustine Beach. If we haven't shot your room yet, we scout it ahead of time so nothing is a surprise on the day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book event coverage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The sooner the better. We take a limited number of event dates and they fill quickly, especially in season. If your event is soon, check the date now — we sometimes have room."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you capture keynotes, panels, and testimonials?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Multi-camera coverage lets us capture full sessions and main-stage moments, and we regularly grab on-site testimonials and interviews while the energy is high."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if something goes wrong with the gear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We bring backups for everything — cameras, audio, power, media. With multi-camera coverage, a single point of failure never costs you the moment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes First Sight Films different from a freelancer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The venues and institutions that already trust us, the fact that we're local and likely already know your room, and the way we treat event coverage as documentary storytelling rather than just stage footage. You hire a team that has done this hundreds of times and shows up prepared for a moment you can't redo."
+        }
+      }
+    ]
+  }
+}

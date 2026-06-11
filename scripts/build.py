@@ -321,28 +321,68 @@ def load_faq_data(faq_name):
         return None
 
 
-def load_faq(faq_name):
-    """Load FAQ JSON and generate HTML."""
-    faq_data = load_faq_data(faq_name)
-    if not faq_data:
-        return ""
+def _faq_slug(text):
+    """Make a URL-safe anchor id from a category name."""
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
-    # Generate FAQ HTML (answers already contain HTML)
-    html_parts = ['<div class="faq-list">']
 
-    for item in faq_data.get("questions", []):
+def _render_faq_items(items):
+    """Render a list of FAQ question dicts as accordion <details> HTML."""
+    parts = ['    <div class="faq-list">']
+    for item in items:
         question = item.get("question", "")
         answer = item.get("answer", "")
-        html_parts.append(f'''        <details class="faq-item">
+        parts.append(f'''        <details class="faq-item">
           <summary class="faq-question">{question}</summary>
           <div class="faq-answer">
             {answer}
           </div>
         </details>''')
+    parts.append('      </div>')
+    return '\n'.join(parts)
 
-    html_parts.append('      </div>')
 
-    return '\n'.join(html_parts)
+def load_faq(faq_name):
+    """Load FAQ JSON and generate HTML.
+
+    If any question carries a "category" field, render grouped sections with a
+    scannable jump-nav. Otherwise render a single flat list (backward compatible).
+    """
+    faq_data = load_faq_data(faq_name)
+    if not faq_data:
+        return ""
+
+    questions = faq_data.get("questions", [])
+
+    # No categories -> original flat list behavior
+    if not any(q.get("category") for q in questions):
+        return _render_faq_items(questions)
+
+    # Group by category, preserving first-seen order
+    groups = []
+    index = {}
+    for q in questions:
+        cat = q.get("category", "More Questions")
+        if cat not in index:
+            index[cat] = len(groups)
+            groups.append((cat, []))
+        groups[index[cat]][1].append(q)
+
+    def esc(text):
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    parts = ['<div class="faq-grouped">']
+    parts.append('      <nav class="faq-jump" aria-label="Jump to FAQ category">')
+    for cat, _items in groups:
+        parts.append(f'        <a href="#faq-g-{_faq_slug(cat)}">{esc(cat)}</a>')
+    parts.append('      </nav>')
+    for cat, items in groups:
+        parts.append(f'      <div class="faq-group" id="faq-g-{_faq_slug(cat)}">')
+        parts.append(f'        <h3 class="faq-group-title">{esc(cat)}</h3>')
+        parts.append(_render_faq_items(items))
+        parts.append('      </div>')
+    parts.append('    </div>')
+    return '\n'.join(parts)
 
 
 def load_faq_schema(faq_name):
@@ -931,6 +971,7 @@ def generate_sitemap():
         "_article-template",  # Blog article template, not a real page
         "/410",  # Error page, not indexable
         "professional-services",  # noindex page — keep out of sitemap (2026-06-08)
+        "event-video-st-augustine",  # retired -> 301 to event-video-coverage-st-augustine (2026-06-11)
     ]
 
     # Priority mapping based on URL depth/importance

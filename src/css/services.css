@@ -100,6 +100,7 @@
 
 .credibility-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem;
   text-align: center;
@@ -361,6 +362,55 @@
   margin: 0;
 }
 
+/* Grouped FAQ — categories + scannable jump nav */
+.faq-grouped {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.faq-jump a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-black);
+  background: rgba(244, 192, 87, 0.25);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.faq-jump a:hover {
+  background: #f4c057;
+}
+
+.faq-group {
+  margin-bottom: var(--spacing-lg);
+  scroll-margin-top: 110px;
+}
+
+.faq-group-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-black);
+  text-align: left;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 2px solid #f4c057;
+}
+
+.faq-group .faq-list {
+  max-width: none;
+  margin: 0;
+}
+
 /* CTA Content */
 .cta-content {
   text-align: center;
@@ -407,7 +457,7 @@
 
 .collaborators-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 2rem 3rem;
   align-items: center;
   justify-items: center;
@@ -424,7 +474,7 @@
 
 .collaborator-logo img {
   max-height: 94px;
-  max-width: 234px;
+  max-width: min(234px, 100%);
   width: auto;
   object-fit: contain;
   filter: grayscale(0);
@@ -439,7 +489,7 @@
 
 @media (max-width: 900px) {
   .collaborators-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem 2rem;
   }
 }
@@ -450,7 +500,7 @@
   }
 
   .collaborators-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
 
@@ -461,7 +511,7 @@
 
   .collaborator-logo img {
     max-height: 50px;
-    max-width: 110px;
+    max-width: min(110px, 100%);
   }
 }
 
@@ -809,6 +859,52 @@
 .section-contact {
   background: rgba(244, 192, 87, 0.15);
   padding: 1.5rem 0;
+}
+
+/* Discovery call booking card */
+.booking-card {
+  max-width: 760px;
+  margin: 0 auto var(--spacing-md);
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  border-top: 4px solid #f4c057;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.booking-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.booking-card p {
+  color: var(--color-gray-500);
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.booking-button {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+/* Scale Google's injected scheduling button up 25% (load() only exposes color + label) */
+.booking-button button {
+  transform: scale(1.25);
+  transform-origin: center;
+}
+
+.contact-or {
+  max-width: 760px;
+  margin: 0 auto var(--spacing-md);
+  text-align: center;
+  color: var(--color-gray-500);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .section-contact .section-header {

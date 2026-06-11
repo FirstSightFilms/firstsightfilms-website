@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="/css/services.css">
 <title>Contact Us | First Sight Films - St. Augustine Video Production</title>
 <meta name="description" content="Contact First Sight Films for video production in St. Augustine, FL. Get a free consultation for corporate videos, event coverage, or social media content.">
+{{faq-schema:contact}}
 </head>
 <body class="page-contact">
 
@@ -35,15 +36,43 @@
       <div class="contact-hero-overlay"></div>
     </div>
     <div class="contact-hero-content">
-      <h1>Reach Out!</h1>
-      <div class="contact-hero-divider"></div>
-      <h2>What project can we help you with?</h2>
+      <h1>Get a Quote for Event Coverage</h1>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section class="section-contact">
     <div class="container">
+
+      <!-- Discovery Call Booking -->
+      <div class="booking-card">
+        <h2>Book a 15-Minute Discovery Call</h2>
+        <p>Pick a time that works for you. We'll talk through your project, your dates, and what you need&mdash;then follow up with a transparent, no-surprises quote.</p>
+        <!-- Google Calendar Appointment Scheduling -->
+        <div class="booking-button">
+          <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+          <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+          <script>
+          (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2c9GJBG3RO9fVeUMtldiulgbvnT34cuIrJtlahHi5tV6ir3-vY1RDe5M-gBqQ9xLXirsYaZcGu?gv=true',
+                color: '#1A1A1A',
+                label: 'Book a 15-Minute Discovery Call',
+                target,
+              });
+            });
+          })();
+          </script>
+          <noscript>
+            <a class="btn btn-primary" href="https://calendar.app.google/QzcD7BqrKKBuLCD48" target="_blank" rel="noopener">Book a 15-Minute Discovery Call</a>
+          </noscript>
+        </div>
+      </div>
+
+      <p class="contact-or">or send us a message</p>
+
       <div class="contact-container">
 
         <div class="contact-sidebar">
@@ -88,12 +117,22 @@
             </div>
             <div class="form-group">
               <label for="message">Your Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project and what you're looking for..."></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your event: dates, hours of coverage, and deliverables — or book a call above and we'll dial in the details."></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-faq section-light" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions about Event Video Coverage</h2>
+      </div>
+      {{faq:contact}}
     </div>
   </section>
 

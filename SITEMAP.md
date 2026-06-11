@@ -1,6 +1,6 @@
 # FSF Site Map
 
-**55 pages total**
+**53 pages total**
 
 ---
 
@@ -15,15 +15,14 @@
 
 ---
 
-## Service Pages (8)
+## Service Pages (7)
 | URL | Page |
 |-----|------|
 | `/corporate-video-st-augustine/` | Corporate Video |
 | `/st-augustine-photography/` | Photography |
-| `/event-video-st-augustine/` | Event Video |
+| `/event-video-coverage-st-augustine/` | Event Video Coverage (main events page) |
 | `/social-media-st-augustine/` | Social Media |
 | `/brand-story-st-augustine/` | Brand Story |
-| `/nonprofit-video-production/` | Nonprofit Video |
 | `/festival-video-production/` | Festival Video |
 | `/flagler-college-graduation-photography/` | Flagler Graduation Photography |
 
@@ -63,11 +62,10 @@ All nested under `/st-augustine-video-production/`
 
 ---
 
-## Blog (28)
+## Blog (27)
 | URL | Article |
 |-----|---------|
 | `/blog/` | Blog Index |
-| `/blog/documentary-video-nonprofits-florida/` | Documentary Video for Nonprofits |
 | `/blog/outdoor-amphitheater-photo-video-team/` | Outdoor Amphitheater Photo/Video |
 | `/blog/videographer-vs-video-production-company/` | Videographer vs Production Company |
 | `/blog/museum-cultural-video-grants-florida/` | Museum/Cultural Video Grants |
