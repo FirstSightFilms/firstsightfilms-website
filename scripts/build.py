@@ -515,6 +515,38 @@ def load_reviews():
     return html
 
 
+ASSET_VERSION = None
+
+
+def get_asset_version():
+    """Content hash of all CSS/JS files — used to cache-bust asset links. Computed once."""
+    global ASSET_VERSION
+    if ASSET_VERSION is None:
+        import hashlib
+        h = hashlib.md5()
+        for d in [SRC_CSS_DIR, SRC_DIR / "js"]:
+            if d.exists():
+                for f in sorted(d.rglob("*")):
+                    if f.is_file() and f.suffix in (".css", ".js"):
+                        h.update(f.read_bytes())
+        ASSET_VERSION = h.hexdigest()[:8]
+    return ASSET_VERSION
+
+
+def apply_cache_busting(html_content):
+    """Append ?v=<hash> to local /css/*.css and /js/*.js links so browsers refetch on change."""
+    version = get_asset_version()
+    if not version:
+        return html_content
+
+    def add_version(match):
+        attr, path = match.group(1), match.group(2)
+        sep = "&" if "?" in path else "?"
+        return f'{attr}="{path}{sep}v={version}"'
+
+    return re.sub(r'(href|src)="(/(?:css|js)/[^"]+\.(?:css|js))"', add_version, html_content)
+
+
 def process_page(page_content, modules):
     """Replace {{module_name}}, {{hero:page}}, {{faq:page-name}}, {{faq-schema:page-name}}, and {{reviews}} placeholders."""
 
@@ -590,6 +622,9 @@ def process_page(page_content, modules):
 
     # Auto-inject image attributes (alt, width, height, loading) from manifests
     page_content = inject_image_attributes(page_content)
+
+    # Cache-bust local CSS/JS links so browsers refetch them when they change
+    page_content = apply_cache_busting(page_content)
 
     return page_content
 
