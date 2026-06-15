@@ -118,6 +118,8 @@
   .event-hero-video { width: 100%; max-width: 760px; margin: 0 auto 2rem; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; background: #000; }
   .event-hero-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .event-hero > * { position: relative; z-index: 2; transform: translateY(-5px); }
+  /* This page's process grids hold 3 steps — center them across the row on desktop */
+  @media (min-width: 901px) { .process-grid { grid-template-columns: repeat(3, 1fr); } }
   .event-hero h1 { color: #f4c057; max-width: 18ch; margin: 0 auto 1.25rem; }
   .event-hero .event-hero-sub { color: rgba(255,255,255,.92); font-size: 1.15rem; line-height: 1.7; max-width: 60ch; margin: 0 auto 2rem; }
   .event-hero .event-hero-note { display: block; margin-top: .9rem; font-size: .92rem; color: rgba(255,255,255,.8); }
@@ -261,7 +263,28 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="collaborator-logo"><img src="/images/logos/St-Johns-County-Government-Logo.png" alt="St. Johns County Government" loading="lazy"></div>
         <div class="collaborator-logo"><img src="/images/logos/sing-out-loud-music-festival-logo.png" alt="Sing Out Loud Festival" loading="lazy"></div>
         <div class="collaborator-logo"><img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.png" alt="Fort Mose Jazz &amp; Blues Festival" loading="lazy"></div>
+        <div class="collaborator-logo"><img src="/images/logos/st-johns-cultural-council-logo.webp" alt="St. Johns Cultural Council" loading="lazy"></div>
+        <div class="collaborator-logo"><img src="/images/logos/live-wildly-logo.jpg" alt="Live Wildly" loading="lazy"></div>
+        <div class="collaborator-logo"><img src="/images/logos/FL-DEP-STATE-PARKS-Logo.png" alt="Florida State Parks" loading="lazy"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Venues We've Filmed At -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2>Venues We've Filmed At</h2>
+      </div>
+      <ul style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem 2.5rem; list-style: none; padding: 0; text-align: center; font-size: 1.1rem;">
+        <li>St. Augustine Amphitheatre</li>
+        <li>Ponte Vedra Concert Hall</li>
+        <li>Embassy Suites St. Augustine Beach</li>
+        <li>Flagler College</li>
+        <li>St. Augustine Visitor Center</li>
+        <li>Sea Mark Ranch</li>
+        <li>Francis Field</li>
+      </ul>
     </div>
   </section>
 
@@ -576,6 +599,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="footer-heading">Video Services</p>
           <a href="/event-video-coverage-st-augustine/">Event Video</a>
           <a href="/st-augustine-video-production/">Commercial Video</a>
+          <a href="/festival-video-production/">Festival Video</a>
         </div>
 
         <div class="footer-col">
@@ -583,6 +607,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <a href="/st-augustine-photography/">Event Photography</a>
           <a href="/st-augustine-photography/">Commercial Photography</a>
           <a href="/st-augustine-photography/">Product Photography</a>
+          <a href="/flagler-college-graduation-photography/">Graduation Photography</a>
         </div>
 
         <div class="footer-col">

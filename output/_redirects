@@ -29,6 +29,34 @@
 /blog/documentary-video-nonprofits-florida    /blog/    301
 /blog/documentary-video-nonprofits-florida/    /blog/    301
 
+# Squarespace leftover Portfolio page retired/archived (2026-06-15)
+/portfolio    /st-augustine-video-production/    301
+/portfolio/    /st-augustine-video-production/    301
+
+# Squarespace-leftover project pages retired/archived (2026-06-15) — rebuild later if needed
+/st-augustine-video-production/avilesstreetfestival    /st-augustine-video-production/    301
+/st-augustine-video-production/avilesstreetfestival/    /st-augustine-video-production/    301
+/st-augustine-video-production/epiccure    /st-augustine-video-production/    301
+/st-augustine-video-production/epiccure/    /st-augustine-video-production/    301
+/st-augustine-video-production/fishtankstudios    /st-augustine-video-production/    301
+/st-augustine-video-production/fishtankstudios/    /st-augustine-video-production/    301
+/st-augustine-video-production/friendsofacadia    /st-augustine-video-production/    301
+/st-augustine-video-production/friendsofacadia/    /st-augustine-video-production/    301
+/st-augustine-video-production/iceplant    /st-augustine-video-production/    301
+/st-augustine-video-production/iceplant/    /st-augustine-video-production/    301
+/st-augustine-video-production/livewildlyfloridastateparkfoundation    /st-augustine-video-production/    301
+/st-augustine-video-production/livewildlyfloridastateparkfoundation/    /st-augustine-video-production/    301
+/st-augustine-video-production/rockymountainconservancy    /st-augustine-video-production/    301
+/st-augustine-video-production/rockymountainconservancy/    /st-augustine-video-production/    301
+/st-augustine-video-production/seamarkranch    /st-augustine-video-production/    301
+/st-augustine-video-production/seamarkranch/    /st-augustine-video-production/    301
+/st-augustine-video-production/singoutloud2018    /st-augustine-video-production/    301
+/st-augustine-video-production/singoutloud2018/    /st-augustine-video-production/    301
+/st-augustine-video-production/singoutloud2024    /st-augustine-video-production/    301
+/st-augustine-video-production/singoutloud2024/    /st-augustine-video-production/    301
+/st-augustine-video-production/sjcchamberofcommerce    /st-augustine-video-production/    301
+/st-augustine-video-production/sjcchamberofcommerce/    /st-augustine-video-production/    301
+
 # Old /video/ URLs - redirect to new structure (with and without trailing slash)
 /video/singoutloud2018    /st-augustine-video-production/singoutloud2018/    301
 /video/singoutloud2018/    /st-augustine-video-production/singoutloud2018/    301

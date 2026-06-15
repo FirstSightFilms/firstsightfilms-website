@@ -124,6 +124,9 @@
       font-size: 2rem;
     }
   }
+  .project-links { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem 2rem; list-style: none; padding: 0; }
+  .project-links a { color: var(--color-black); border-bottom: 1px solid #f4c057; padding-bottom: 2px; transition: color 0.2s ease; }
+  .project-links a:hover { color: #f4c057; }
 </style>
 <link rel="canonical" href="https://www.firstsightfilms.com/st-augustine-video-production/">
 </head>
@@ -291,6 +294,21 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </section>
 
+  <!-- Featured Projects (internal links to project pages) -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+      </div>
+      <ul class="project-links">
+        <li><a href="/st-augustine-video-production/st-augustine-amphitheatre/">St. Augustine Amphitheatre</a></li>
+        <li><a href="/st-augustine-video-production/pontevedraconcerthall/">Ponte Vedra Concert Hall</a></li>
+        <li><a href="/st-augustine-video-production/fort-mose-jazz-blues-festival/">Fort Mose Jazz &amp; Blues Festival</a></li>
+        <li><a href="/st-augustine-video-production/stjohnsculturalcouncil/">St. Johns Cultural Council</a></li>
+      </ul>
+    </div>
+  </section>
+
   <!-- FAQ Section -->
   <section class="section-faq" id="faq">
     <div class="container">
@@ -445,6 +463,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="footer-heading">Video Services</p>
           <a href="/event-video-coverage-st-augustine/">Event Video</a>
           <a href="/st-augustine-video-production/">Commercial Video</a>
+          <a href="/festival-video-production/">Festival Video</a>
         </div>
 
         <div class="footer-col">
@@ -452,6 +471,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <a href="/st-augustine-photography/">Event Photography</a>
           <a href="/st-augustine-photography/">Commercial Photography</a>
           <a href="/st-augustine-photography/">Product Photography</a>
+          <a href="/flagler-college-graduation-photography/">Graduation Photography</a>
         </div>
 
         <div class="footer-col">

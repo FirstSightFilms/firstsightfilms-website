@@ -76,6 +76,9 @@
       font-size: 2rem;
     }
   }
+  .project-links { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem 2rem; list-style: none; padding: 0; }
+  .project-links a { color: var(--color-black); border-bottom: 1px solid #f4c057; padding-bottom: 2px; transition: color 0.2s ease; }
+  .project-links a:hover { color: #f4c057; }
 </style>
 </head>
 <body class="page-video-portfolio">
@@ -185,6 +188,21 @@
           </div>
         </button>
       </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects (internal links to project pages) -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+      </div>
+      <ul class="project-links">
+        <li><a href="/st-augustine-video-production/st-augustine-amphitheatre/">St. Augustine Amphitheatre</a></li>
+        <li><a href="/st-augustine-video-production/pontevedraconcerthall/">Ponte Vedra Concert Hall</a></li>
+        <li><a href="/st-augustine-video-production/fort-mose-jazz-blues-festival/">Fort Mose Jazz &amp; Blues Festival</a></li>
+        <li><a href="/st-augustine-video-production/stjohnsculturalcouncil/">St. Johns Cultural Council</a></li>
+      </ul>
     </div>
   </section>
 
