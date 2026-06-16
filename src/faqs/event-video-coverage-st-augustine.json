@@ -5,20 +5,48 @@
       "answer": "<p>Most event projects land between <strong>$1,800 and $9,000</strong>, depending on how many cameras, how big the crew, and what you need delivered. The tiers above will get you close; the call gets you exact.</p>"
     },
     {
-      "question": "Do you work at my venue?",
-      "answer": "<p>Almost certainly. We're local and we've covered events across St. Augustine and the beach — including the Embassy Suites in St. Augustine Beach. If we haven't shot your room yet, we'll scout it ahead of time so nothing's a surprise on the day.</p>"
-    },
-    {
-      "question": "How far in advance should I book?",
-      "answer": "<p>The sooner the better — we take a limited number of event dates and the good ones go first, especially in season. If your event is soon, check the date now; we sometimes have room.</p>"
-    },
-    {
       "question": "What do I actually get, and when?",
       "answer": "<p>Typically a highlight or recap film plus social cutdowns, with keynote, panel, award, or testimonial captures on the larger tiers. Turnaround is usually 7 business days, and we'll give you an exact date when we quote.</p>"
     },
     {
+      "question": "Can you deliver content during the event, not just after?",
+      "answer": "<p>Yes, and it's one of the things producers hire us for. We turn same-day and next-day social cutdowns while the event's still live — at Sing Out Loud we edit photos the moment an act steps off stage so the festival posts that night, and HMA had a 30-second reel the day after their rally. Full recaps usually land within 7 business days.</p>"
+    },
+    {
+      "question": "Do you shoot photo and video at the same event?",
+      "answer": "<p>Yes — a lot of our event work is both, one team covering video and stills so you're not juggling two vendors. At HMA's rally we ran video plus a photographer; at Sing Out Loud we staff a 4–5 person crew of videographers, a drone operator, and photographers. Tell us what you need for each and we'll build one quote that covers it.</p>"
+    },
+    {
       "question": "Can you capture keynotes, panels, and testimonials?",
-      "answer": "<p>Yes. Multi-camera coverage means we can capture full sessions and main-stage moments, and we regularly grab on-site testimonials and interviews while the energy's high. Tell us what you need and we'll build it into the quote.</p>"
+      "answer": "<p>Yes. Multi-camera coverage means we can capture full conference sessions, keynotes, and main-stage moments, and we regularly grab on-site testimonials and interviews while the energy's high. Tell us what you need and we'll build it into the quote.</p>"
+    },
+    {
+      "question": "How do you make sure speaker audio is clean?",
+      "answer": "<p>We capture multiple audio inputs for redundancy, so one failure never costs you the speech. We run a recorder pulling a direct feed from the venue's audio board, and we can add lav mics at the podium when speakers are there for the full remarks. For on-site interviews and testimonials, we use lav mics backed by a second-camera source. You get clean, usable speaker audio — not just room sound.</p>"
+    },
+    {
+      "question": "Can you get aerial / drone footage of our event?",
+      "answer": "<p>Sometimes — it depends on the location and FAA rules. Aerial drone b-roll of the general area where your event is held may be available to use in your video at no extra cost. Live drone videography or photography during the event isn't included by default — we bring in licensed, insured drone operators for that as an add-on (custom quote; a full day of drone coverage generally runs around $1,800). All flights comply with FAA regulations and depend on where your event is held.</p>"
+    },
+    {
+      "question": "Do you work at my venue?",
+      "answer": "<p>Almost certainly. We're local and we've covered events at venues across St. Augustine and St. Johns County — the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, Embassy Suites St. Augustine Beach, Flagler College, the St. Augustine Visitor Information Center, and Francis Field, among others. If we haven't shot your room yet, we'll scout it ahead of time so nothing's a surprise on the day.</p>"
+    },
+    {
+      "question": "Do you travel outside St. Augustine?",
+      "answer": "<p>Yes. We regularly cover events across St. Augustine, St. Augustine Beach, Ponte Vedra, Jacksonville, and the rest of Northeast Florida. If your event's further out, just ask — we fold any travel into the quote up front, so there are no surprises.</p>"
+    },
+    {
+      "question": "Can you provide a certificate of insurance for our venue?",
+      "answer": "<p>Yes. We carry $1 million in general liability insurance and can send a certificate of insurance for your venue ahead of the event — including naming the venue as additional insured if they require it.</p>"
+    },
+    {
+      "question": "Can we use the footage in our ads and campaigns?",
+      "answer": "<p>Yes — you get full usage rights to everything we deliver: website, social, and paid advertising. The Consulate General of Ireland ran our reel as a paid month-long campaign, and SJCCE reuses our festival footage for the next year's ad campaigns. First Sight Films retains ownership of the final deliverables and reserves the right to use the work in our own marketing. We deliver the finished pieces (not raw footage) and archive the raw files for three years.</p>"
+    },
+    {
+      "question": "How far in advance should I book?",
+      "answer": "<p>The sooner the better — we take a limited number of event dates and the good ones go first, especially in season. If your event is soon, check the date now; we sometimes have room.</p>"
     },
     {
       "question": "What if something goes wrong with the gear?",
@@ -43,10 +71,82 @@
       },
       {
         "@type": "Question",
+        "name": "What do I actually get, and when?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically a highlight or recap film plus social cutdowns, with keynote, panel, award, or testimonial captures on the larger tiers. Turnaround is usually 7 business days, and we'll give you an exact date when we quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you deliver event video content during the event, not just after?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, and it's one of the things producers hire us for. We turn same-day and next-day social cutdowns while the event's still live — at Sing Out Loud we edit photos the moment an act steps off stage so the festival posts that night, and HMA had a 30-second reel the day after their rally. Full recaps usually land within 7 business days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you shoot photo and video at the same event in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — a lot of our event work is both, one team covering video and stills so you're not juggling two vendors. At HMA's rally we ran video plus a photographer; at Sing Out Loud we staff a 4–5 person crew of videographers, a drone operator, and photographers. Tell us what you need for each and we'll build one quote that covers it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you capture keynotes, panels, and testimonials?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Multi-camera coverage lets us capture full conference sessions and main-stage moments, and we regularly grab on-site testimonials and interviews while the energy is high."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you make sure speaker audio is clean for event video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We capture multiple audio inputs for redundancy, so one failure never costs you the speech. We run a recorder pulling a direct feed from the venue's audio board, and we can add lav mics at the podium when speakers are there for the full remarks. For on-site interviews and testimonials, we use lav mics backed by a second-camera source. You get clean, usable speaker audio — not just room sound."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you get aerial / drone footage of our event in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sometimes — it depends on the location and FAA rules. Aerial drone b-roll of the general area where your event is held may be available to use in your video at no extra cost. Live drone videography or photography during the event isn't included by default — we bring in licensed, insured drone operators for that as an add-on (custom quote; a full day of drone coverage generally runs around $1,800). All flights comply with FAA regulations and depend on where your event is held."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Do you work at my venue?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Almost certainly. We're local and have covered events across St. Augustine and St. Augustine Beach. If we haven't shot your room yet, we scout it ahead of time so nothing is a surprise on the day."
+          "text": "Almost certainly. We're local and have covered events at venues across St. Augustine and St. Johns County — the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, Embassy Suites St. Augustine Beach, Flagler College, the St. Augustine Visitor Information Center, and Francis Field. If we haven't shot your room yet, we scout it ahead of time so nothing is a surprise on the day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you travel outside St. Augustine for event coverage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We regularly cover events across St. Augustine, St. Augustine Beach, Ponte Vedra, Jacksonville, and the rest of Northeast Florida. If your event's further out, just ask — we fold any travel into the quote up front, so there are no surprises."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide a certificate of insurance for event venues in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We carry $1 million in general liability insurance and can send a certificate of insurance for your venue ahead of the event — including naming the venue as additional insured if they require it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we use the event video footage in our ads and campaigns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — you get full usage rights to everything we deliver: website, social, and paid advertising. The Consulate General of Ireland ran our reel as a paid month-long campaign, and SJCCE reuses our festival footage for the next year's ad campaigns. First Sight Films retains ownership of the final deliverables and reserves the right to use the work in our own marketing. We deliver the finished pieces (not raw footage) and archive the raw files for three years."
         }
       },
       {
@@ -55,14 +155,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The sooner the better. We take a limited number of event dates and they fill quickly, especially in season. If your event is soon, check the date now — we sometimes have room."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you capture keynotes, panels, and testimonials?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Multi-camera coverage lets us capture full sessions and main-stage moments, and we regularly grab on-site testimonials and interviews while the energy is high."
         }
       },
       {
