@@ -74,6 +74,7 @@ BLOG_CONFIG_DIR = BLOG_DIR / "config"
 BLOG_ARTICLES = []
 BLOG_CATEGORIES = {}
 BLOG_AUTHORS = {}
+RELATED_MAP = {}  # slug -> [related slugs] (computed by compute_related_map)
 
 
 def load_image_manifests():
@@ -1202,6 +1203,105 @@ def format_date(date_str):
         return date_str
 
 
+def compute_related_map(count=3):
+    """Build the slug -> [related slugs] map for all posts, balanced so every
+    post also *receives* inbound links instead of a few hubs absorbing them all.
+
+    Relevance comes first (curated `related_articles`, then shared categories
+    weighted over tags). Balance is the tie-breaker: when filling a slot, an
+    equally-relevant post with fewer inbound links so far is preferred — which
+    pulls otherwise-orphaned posts into the link graph.
+    """
+    global RELATED_MAP
+
+    def cat_set(a):
+        c = a.get("categories", {})
+        vals = []
+        for k in ("service", "location", "industry"):
+            vals += c.get(k, [])
+        return set(vals)
+
+    def tag_set(a):
+        return set(t.lower() for t in a.get("tags", []))
+
+    by_slug = {a["slug"]: a for a in BLOG_ARTICLES}
+    score = {}  # (from, to) -> relevance score
+    for a in BLOG_ARTICLES:
+        ac, at = cat_set(a), tag_set(a)
+        for b in BLOG_ARTICLES:
+            if a["slug"] == b["slug"]:
+                continue
+            score[(a["slug"], b["slug"])] = len(ac & cat_set(b)) * 2 + len(at & tag_set(b))
+
+    related = {}
+    inbound = {a["slug"]: 0 for a in BLOG_ARTICLES}
+
+    # 1) Honor curated picks first
+    for a in BLOG_ARTICLES:
+        chosen = []
+        for s in a.get("related_articles", []):
+            if s in by_slug and s != a["slug"] and s not in chosen:
+                chosen.append(s)
+        related[a["slug"]] = chosen[:count]
+    for s, ch in related.items():
+        for t in ch:
+            inbound[t] += 1
+
+    # 2) Fill remaining slots: best relevance, then fewest inbound, then newest
+    for a in BLOG_ARTICLES:
+        s = a["slug"]
+        chosen = related[s]
+        while len(chosen) < count:
+            cands = [c for c in by_slug if c != s and c not in chosen]
+            if not cands:
+                break
+            best = max(cands, key=lambda c: (score[(s, c)], -inbound[c], by_slug[c]["datePublished"]))
+            chosen.append(best)
+            inbound[best] += 1
+
+    RELATED_MAP = related
+    return related
+
+
+def generate_related_articles(article, count=3):
+    """Render the 'Related articles' grid for a post from the balanced map."""
+    by_slug = {a["slug"]: a for a in BLOG_ARTICLES}
+    chosen = RELATED_MAP.get(article["slug"], [])
+    if not chosen:
+        return ""
+
+    cards = []
+    for s in chosen[:count]:
+        a = by_slug[s]
+        hero_img = a.get("images", {}).get("hero", {})
+        date_formatted = format_date(a["datePublished"])
+        img_position = hero_img.get("position", "")
+        img_style = f' style="object-position: {img_position};"' if img_position else ""
+        cards.append(f'''
+        <article class="blog-card">
+          <a href="/blog/{a['slug']}/" class="blog-card-link">
+            <div class="blog-card-image">
+              <img src="{hero_img.get('src', '')}" alt="{hero_img.get('alt', '')}"{img_style} loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <time class="blog-card-date" datetime="{a['datePublished']}">{date_formatted}</time>
+              <h2 class="blog-card-title">{a['title']}</h2>
+              <p class="blog-card-excerpt">{a['excerpt']}</p>
+              <span class="blog-card-readmore">Read More</span>
+            </div>
+          </a>
+        </article>''')
+
+    return f'''  <!-- Related Articles -->
+  <section class="blog-related">
+    <div class="container">
+      <h2 class="blog-related-title">Related articles</h2>
+      <div class="blog-grid">{''.join(cards)}
+      </div>
+    </div>
+  </section>'''
+
+
 def build_blog_article(article, modules):
     """Build a single blog article page."""
     slug = article["slug"]
@@ -1246,6 +1346,7 @@ def build_blog_article(article, modules):
         "{{blog-hero-alt}}": banner_img.get("alt", ""),
         "{{blog-article-schema}}": generate_blog_article_schema(article),
         "{{blog-breadcrumb-schema}}": generate_breadcrumb_schema(article),
+        "{{blog-related}}": generate_related_articles(article),
     }
 
     for placeholder, value in replacements.items():
@@ -1322,6 +1423,8 @@ def build_blog(modules):
 
     print(f"\n[Blog] Loading articles...")
     load_blog_articles()
+
+    compute_related_map()
 
     print(f"\n[Blog] Building listing page...")
     build_blog_listing(modules)
