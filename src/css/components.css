@@ -1049,6 +1049,14 @@
   display: none;
 }
 
+/* Question is an <h3> for heading semantics; render it inline like the summary text */
+.faq-question h3 {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  display: inline;
+}
+
 .faq-question::after {
   content: "+";
   float: right;

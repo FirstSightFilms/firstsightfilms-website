@@ -1,26 +1,61 @@
-# 301 Redirects - Old URL structure to new
+# 301 Redirects — First Sight Films
+# Order matters: first match wins. Keep specific rules + asset protections ABOVE wildcards.
+# 301! forces the redirect even when a static file exists at that path.
+
 /index.html    /    301
+
+# Crawl artifacts (bare-email href crawled as a path) — keep 410 ABOVE the wildcards so they win (2026-06-17)
+/aboutus/info@firstsightfilms.com    /410.html    410
+/portfolio/info@firstsightfilms.com    /410.html    410
+/video/fishtankstudios/info@firstsightfilms.com    /410.html    410
+
+# Section / trailing-slash normalizers
 /contact    /contact/    301
 /aboutus    /aboutus/    301
-/photo    /st-augustine-photography/    301
-/photo/    /st-augustine-photography/    301
+/photo    /st-augustine-commercial-photographer/    301
+/photo/    /st-augustine-commercial-photographer/    301
+/saint-augustine-jacksonville-photographer    /st-augustine-commercial-photographer/    301
+/saint-augustine-jacksonville-photographer/    /st-augustine-commercial-photographer/    301
+/st-augustine-photography    /st-augustine-commercial-photographer/    301
+/st-augustine-photography/    /st-augustine-commercial-photographer/    301
+/commercial-photography-st-augustine    /st-augustine-commercial-photographer/    301
+/commercial-photography-st-augustine/    /st-augustine-commercial-photographer/    301
 
-# Old photographer URL
-/saint-augustine-jacksonville-photographer    /st-augustine-photography/    301
-/saint-augustine-jacksonville-photographer/    /st-augustine-photography/    301
+# Homepage / about / services variants (2026-06-17)
+/home    /    301!
+/homepage    /    301!
+/homepage-1    /    301
+/services    /    301!
+/services/    /    301!
+/info-about-first-sight-films    /aboutus/    301!
 
-# Old video production URLs (jacksonville in name)
-/st-augustine-jacksonville-video-production    /st-augustine-video-production/    301
-/st-augustine-jacksonville-video-production/    /st-augustine-video-production/    301
-/st-augustine-jacksonville-video-production/*    /st-augustine-video-production/:splat/    301
+# --- Consolidate project work to the canonical event page; KEEP the video-production hub live ---
+# Hub stays live (served via 200); all its project sub-pages -> canonical event page (2026-06-17)
+/st-augustine-video-production/    /st-augustine-video-production/    200
+/st-augustine-video-production/*    /event-video-coverage-st-augustine/    301!
 
-# Events page consolidation (2026-06-11) -> main events page is /event-video-coverage-st-augustine/
-# Old event page still builds a static file, so force (!) the redirect to win over it.
+# Old "jacksonville in name" video-production URLs -> event page
+/st-augustine-jacksonville-video-production    /event-video-coverage-st-augustine/    301!
+/st-augustine-jacksonville-video-production/    /event-video-coverage-st-augustine/    301!
+/st-augustine-jacksonville-video-production/*    /event-video-coverage-st-augustine/    301!
+
+# Real video assets MUST keep serving; old /video/ project PAGE urls -> event page (2026-06-17)
+/video/portfolio/*    /video/portfolio/:splat    200
+/video    /event-video-coverage-st-augustine/    301!
+/video/*    /event-video-coverage-st-augustine/    301!
+
+# Squarespace Portfolio -> event page
+/portfolio    /event-video-coverage-st-augustine/    301!
+/portfolio/    /event-video-coverage-st-augustine/    301!
+/portfolio/*    /event-video-coverage-st-augustine/    301!
+
+# Old standalone event-page slugs / sections -> event page
 /event-video-st-augustine    /event-video-coverage-st-augustine/    301!
 /event-video-st-augustine/    /event-video-coverage-st-augustine/    301!
-# Temp slug from the build (never deployed) -> consolidate too
-/event-corporate-videography-st-augustine    /event-video-coverage-st-augustine/    301
-/event-corporate-videography-st-augustine/    /event-video-coverage-st-augustine/    301
+/event-corporate-videography-st-augustine    /event-video-coverage-st-augustine/    301!
+/event-corporate-videography-st-augustine/    /event-video-coverage-st-augustine/    301!
+/events    /event-video-coverage-st-augustine/    301!
+/eventcoverage    /event-video-coverage-st-augustine/    301!
 
 # Nonprofit page + blog post retired/archived (2026-06-11)
 /nonprofit-video-production    /st-augustine-video-production/    301
@@ -28,105 +63,27 @@
 /blog/documentary-video-nonprofits-florida    /blog/    301
 /blog/documentary-video-nonprofits-florida/    /blog/    301
 
-# Squarespace leftover Portfolio page retired/archived (2026-06-15)
-/portfolio    /st-augustine-video-production/    301
-/portfolio/    /st-augustine-video-production/    301
+# Festival Video page retired — redundant with the event coverage page (2026-06-18)
+/festival-video-production    /event-video-coverage-st-augustine/    301
+/festival-video-production/    /event-video-coverage-st-augustine/    301
 
-# Squarespace-leftover project pages retired/archived (2026-06-15) — rebuild later if needed
-/st-augustine-video-production/avilesstreetfestival    /st-augustine-video-production/    301
-/st-augustine-video-production/avilesstreetfestival/    /st-augustine-video-production/    301
-/st-augustine-video-production/epiccure    /st-augustine-video-production/    301
-/st-augustine-video-production/epiccure/    /st-augustine-video-production/    301
-/st-augustine-video-production/fishtankstudios    /st-augustine-video-production/    301
-/st-augustine-video-production/fishtankstudios/    /st-augustine-video-production/    301
-/st-augustine-video-production/friendsofacadia    /st-augustine-video-production/    301
-/st-augustine-video-production/friendsofacadia/    /st-augustine-video-production/    301
-/st-augustine-video-production/iceplant    /st-augustine-video-production/    301
-/st-augustine-video-production/iceplant/    /st-augustine-video-production/    301
-/st-augustine-video-production/livewildlyfloridastateparkfoundation    /st-augustine-video-production/    301
-/st-augustine-video-production/livewildlyfloridastateparkfoundation/    /st-augustine-video-production/    301
-/st-augustine-video-production/rockymountainconservancy    /st-augustine-video-production/    301
-/st-augustine-video-production/rockymountainconservancy/    /st-augustine-video-production/    301
-/st-augustine-video-production/seamarkranch    /st-augustine-video-production/    301
-/st-augustine-video-production/seamarkranch/    /st-augustine-video-production/    301
-/st-augustine-video-production/singoutloud2018    /st-augustine-video-production/    301
-/st-augustine-video-production/singoutloud2018/    /st-augustine-video-production/    301
-/st-augustine-video-production/singoutloud2024    /st-augustine-video-production/    301
-/st-augustine-video-production/singoutloud2024/    /st-augustine-video-production/    301
-/st-augustine-video-production/sjcchamberofcommerce    /st-augustine-video-production/    301
-/st-augustine-video-production/sjcchamberofcommerce/    /st-augustine-video-production/    301
+# Old Squarespace event/show slugs -> event page (preserve residual equity) (2026-06-17)
+/elembrujotango2025    /event-video-coverage-st-augustine/    301!
+/elembrujotango    /event-video-coverage-st-augustine/    301!
+/motivotango    /event-video-coverage-st-augustine/    301!
+/thievery-corp    /event-video-coverage-st-augustine/    301!
+/kinggizard    /event-video-coverage-st-augustine/    301!
+/prettylights    /event-video-coverage-st-augustine/    301!
+/epictheatre    /event-video-coverage-st-augustine/    301!
+/goose    /event-video-coverage-st-augustine/    301!
+/wallows    /event-video-coverage-st-augustine/    301!
+/revivalist    /event-video-coverage-st-augustine/    301!
+/jingleandmingle    /event-video-coverage-st-augustine/    301!
+/post/tegen-patrick    /event-video-coverage-st-augustine/    301!
+/lsj25-gallery/*    /event-video-coverage-st-augustine/    301!
 
-# Old /video/ URLs - redirect to new structure (with and without trailing slash)
-# Retired projects -> point straight to the hub (single hop; their /st-augustine-video-production/<x>/ pages are themselves 301'd) (2026-06-17)
-/video/singoutloud2018    /st-augustine-video-production/    301
-/video/singoutloud2018/    /st-augustine-video-production/    301
-/video/singoutloud2024    /st-augustine-video-production/    301
-/video/singoutloud2024/    /st-augustine-video-production/    301
-/video/staugustineamp    /st-augustine-video-production/st-augustine-amphitheatre/    301
-/video/staugustineamp/    /st-augustine-video-production/st-augustine-amphitheatre/    301
-# Duplicate Amphitheatre page consolidated -> keep st-augustine-amphitheatre (2026-06-10)
-/st-augustine-video-production/staugustineamp    /st-augustine-video-production/st-augustine-amphitheatre/    301
-/st-augustine-video-production/staugustineamp/    /st-augustine-video-production/st-augustine-amphitheatre/    301
-/video/avilesstreetfestival    /st-augustine-video-production/    301
-/video/avilesstreetfestival/    /st-augustine-video-production/    301
-/video/livewildlyfloridastateparkfoundation    /st-augustine-video-production/    301
-/video/livewildlyfloridastateparkfoundation/    /st-augustine-video-production/    301
-/video/rockymountainconservancy    /st-augustine-video-production/    301
-/video/rockymountainconservancy/    /st-augustine-video-production/    301
-/video/fortmose    /st-augustine-video-production/fort-mose-jazz-blues-festival/    301
-/video/fortmose/    /st-augustine-video-production/fort-mose-jazz-blues-festival/    301
-/video/fort-mose    /st-augustine-video-production/fort-mose-jazz-blues-festival/    301
-/video/fort-mose/    /st-augustine-video-production/fort-mose-jazz-blues-festival/    301
-/video/seamarkranch    /st-augustine-video-production/    301
-/video/seamarkranch/    /st-augustine-video-production/    301
-/video/iceplant    /st-augustine-video-production/    301
-/video/iceplant/    /st-augustine-video-production/    301
-/video/epiccure    /st-augustine-video-production/    301
-/video/epiccure/    /st-augustine-video-production/    301
-/video/fishtankstudios    /st-augustine-video-production/    301
-/video/fishtankstudios/    /st-augustine-video-production/    301
-/video/stjohnsculturalcouncil    /st-augustine-video-production/stjohnsculturalcouncil/    301
-/video/stjohnsculturalcouncil/    /st-augustine-video-production/stjohnsculturalcouncil/    301
-/video/sjcchamberofcommerce    /st-augustine-video-production/    301
-/video/sjcchamberofcommerce/    /st-augustine-video-production/    301
-/video/friendsofacadia    /st-augustine-video-production/    301
-/video/friendsofacadia/    /st-augustine-video-production/    301
-/video/pontevedraconcerthall    /st-augustine-video-production/pontevedraconcerthall/    301
-/video/pontevedraconcerthall/    /st-augustine-video-production/pontevedraconcerthall/    301
-/video/st-augustine-amphitheatre    /st-augustine-video-production/st-augustine-amphitheatre/    301
-/video/st-augustine-amphitheatre/    /st-augustine-video-production/st-augustine-amphitheatre/    301
-
-# Old /video/ base path - 410 for anything not redirected above
-/video    /410.html    410
-/video/    /410.html    410
-
-# 410 Gone - Old Squarespace URLs (tell Google to de-index)
-/home    /410.html    410
-/homepage    /410.html    410
-# /homepage-1 ranks at pos ~4.5 — send its equity to the real homepage instead of 410 (2026-06-08)
-/homepage-1    /    301
-/info-about-first-sight-films    /410.html    410
-/services    /410.html    410
-/events    /410.html    410
-/eventcoverage    /410.html    410
-/prettylights    /410.html    410
-/kinggizard    /410.html    410
-/goose    /410.html    410
-/thievery-corp    /410.html    410
-/wallows    /410.html    410
-/revivalist    /410.html    410
-/elembrujotango    /410.html    410
-/elembrujotango2025    /410.html    410
-/motivotango    /410.html    410
-/jingleandmingle    /410.html    410
-/epictheatre    /410.html    410
-/lsj25-gallery/*    /410.html    410
+# 410 Gone — remaining old Squarespace URLs (de-index)
 /post/*    /410.html    410
 /juvenile    /410.html    410
 /jjgrey    /410.html    410
 /slowdive    /410.html    410
-
-# Squarespace mailto-appended crawl artifacts — bare email href crawled as relative path (2026-06-17)
-/aboutus/info@firstsightfilms.com    /410.html    410
-/portfolio/info@firstsightfilms.com    /410.html    410
-/video/fishtankstudios/info@firstsightfilms.com    /410.html    410

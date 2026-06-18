@@ -6,6 +6,8 @@
   <title>First Sight Films | Video Production St. Augustine</title>
   <meta name="description" content="Professional video production in St. Augustine, FL. Corporate videos, event coverage, and brand stories for Northeast Florida businesses. 48 five-star reviews.">
 
+  {{faq-schema:homepage}}
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="/images/hero/fsf-homepage-hero-poster.jpg" fetchpriority="high">
@@ -797,16 +799,25 @@
       background: rgba(26, 26, 26, 0.50);
     }
 
-    .hero-dalton h2 {
-      font-size: clamp(3rem, 7vw, 5.5rem);
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f4c057;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero-dalton h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
       font-weight: 300;
-      line-height: 1.05;
-      margin-bottom: 2rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
       letter-spacing: -0.02em;
       color: var(--white);
     }
 
-    .hero-dalton h2 strong {
+    .hero-dalton h1 strong {
       font-weight: 600;
       color: #f4c057;
     }
@@ -814,7 +825,7 @@
     .hero-sub {
       font-size: 1.15rem;
       color: rgba(255, 255, 255, 0.85);
-      max-width: 600px;
+      max-width: 640px;
       margin: 0 auto 2.5rem;
       line-height: 1.7;
     }
@@ -910,10 +921,10 @@
         padding: 0 1.5rem;
       }
 
-      .hero-dalton h2 {
-        font-size: 2.25rem;
-        line-height: 1.15;
-        margin-bottom: 1.5rem;
+      .hero-dalton h1 {
+        font-size: 2.1rem;
+        line-height: 1.2;
+        margin-bottom: 1.25rem;
       }
 
       .hero-sub {
@@ -1078,8 +1089,9 @@
              height="960"
              fetchpriority="high">
       </div>
-      <h2><strong>Your event happens once.</strong> We capture it so you can <strong>increase attendance next year.</strong></h2>
-      <h1 class="hero-sub">Event Video Coverage &amp; Photography in St. Augustine, Florida</h1>
+      <p class="hero-eyebrow">Event Video Coverage &amp; Photography · St. Augustine, FL</p>
+      <h1>You made the event look incredible. We make sure the footage does too.</h1>
+      <p class="hero-sub">One team for photo and video, capturing your event so you look good, your client looks good, and you walk away with content you can use all year.</p>
       <div class="hero-ctas">
         <a href="/contact/" class="btn-primary">Book a 15-Minute Call for a Same-Day Quote</a>
       </div>
@@ -1092,6 +1104,11 @@
         <div class="proof-item-inline">
           <span class="proof-number-inline">50+</span>
           <span class="proof-label-inline">Events</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline">
+          <span class="proof-number-inline">100+</span>
+          <span class="proof-label-inline">Shoots</span>
         </div>
         <div class="proof-divider"></div>
         <div class="proof-item-inline">
@@ -1158,35 +1175,58 @@
       </div>
     </section>
 
+    <!-- At a Glance -->
+    <style>
+    .at-a-glance { padding: 3rem 1.5rem; background: #fff; }
+    .at-a-glance-inner { max-width: 820px; margin: 0 auto; }
+    .at-a-glance h2 { font-size: 1.75rem; margin-bottom: 1.25rem; text-align: center; color: #1a1a2e; }
+    .glance-list { list-style: none; padding: 0; margin: 0; }
+    .glance-list li { padding: .7rem 0; border-bottom: 1px solid #eee; line-height: 1.55; font-size: 1.02rem; color: #333; }
+    .glance-list li:last-child { border-bottom: none; }
+    </style>
+    <section class="at-a-glance">
+      <div class="at-a-glance-inner">
+        <h2>What is First Sight Films?</h2>
+        <ul class="glance-list">
+          <li><strong>Who we are:</strong> First Sight Films — a St. Augustine photo &amp; video studio</li>
+          <li><strong>What we do:</strong> event video coverage · commercial video · brand stories · commercial photography</li>
+          <li><strong>Who we serve:</strong> cultural institutions, venues, and brands across Northeast Florida</li>
+          <li><strong>Track record:</strong> 3 years · 50+ events · 100+ shoots · 48 five-star reviews (5.0)</li>
+          <li><strong>Trusted by:</strong> St. Augustine Amphitheatre · Flagler College · SJC Cultural Events · Ponte Vedra Concert Hall</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Our Work -->
     <section class="our-work" id="work">
       <div class="our-work-inner">
         <div class="work-header">
-          <p class="work-label">Our Work</p>
+          <h2 class="work-label">What We Do</h2>
         </div>
-        <div class="work-grid">
-          <a href="/event-video-coverage-st-augustine/" class="work-item">
+        <style>.work-grid > li { display: contents; }</style>
+        <ul class="work-grid">
+          <li><a href="/event-video-coverage-st-augustine/" class="work-item">
             <img src="/images/hma-corporate-event-video-embassy-suites-st-augustine-beach.png" alt="Event Video coverage in St. Augustine" width="400" height="300" loading="lazy">
             <div class="work-overlay">
-              <h3>EVENT VIDEO</h3>
-              <p>Live event video for corporate events and festivals</p>
+              <h3>Event Video Coverage</h3>
+              <p>Multi-camera coverage of festivals, conferences, and corporate events.</p>
             </div>
-          </a>
-          <a href="/st-augustine-video-production/" class="work-item">
+          </a></li>
+          <li><a href="/st-augustine-video-production/" class="work-item">
             <img src="/images/events-ribbon-cutting/walk-ons-ribbon-cutting-st-augustine-400w.webp" alt="Corporate Video Production" width="400" height="300" loading="lazy">
             <div class="work-overlay">
-              <h3>COMMERCIAL VIDEO</h3>
-              <p>Commercial video production portfolio</p>
+              <h3>Commercial Video</h3>
+              <p>Corporate videos, brand stories, and campaign content.</p>
             </div>
-          </a>
-          <a href="/st-augustine-photography/" class="work-item">
-            <img src="/images/bento/event-photography-st-augustine-sing-out-loud-festival-1-medium.webp" alt="Event Coverage" width="400" height="300" loading="lazy">
+          </a></li>
+          <li><a href="/st-augustine-commercial-photographer/" class="work-item">
+            <img src="/images/bento/event-photography-st-augustine-sing-out-loud-festival-1-medium.webp" alt="Commercial Photography in St. Augustine" width="400" height="300" loading="lazy">
             <div class="work-overlay">
-              <h3>PHOTO</h3>
-              <p>Commercial and lifestyle photography in St. Augustine.</p>
+              <h3>Commercial Photography</h3>
+              <p>Apparel, product, brand, and architectural.</p>
             </div>
-          </a>
-        </div>
+          </a></li>
+        </ul>
         <div class="work-cta">
           <a href="/st-augustine-video-production/">View All Work →</a>
         </div>
@@ -1198,17 +1238,17 @@
       <div class="who-we-work-with-inner">
         <h2>A Short, Honest Filter</h2>
         <p class="who-subtitle">We don't fit every organization. We do our best work with those that share similar values.</p>
-        <div class="values-grid">
-          <div class="value-item">
+        <ul class="values-grid">
+          <li class="value-item">
             <h3>You Put People First</h3>
-          </div>
-          <div class="value-item">
+          </li>
+          <li class="value-item">
             <h3>You Value Partnerships</h3>
-          </div>
-          <div class="value-item">
+          </li>
+          <li class="value-item">
             <h3>You Are A Good Steward</h3>
-          </div>
-        </div>
+          </li>
+        </ul>
         <div class="who-cta">
           <a href="/commitments/">Learn more about our values and commitments →</a>
         </div>
@@ -1415,7 +1455,33 @@
         </div>
       </div>
       <div class="reviews-compact-cta">
-        <a href="https://www.google.com/maps/place/First+Sight+Films/" target="_blank" rel="noopener">See all reviews on Google →</a>
+        <a href="https://www.google.com/maps/place/First+Sight+Films/@30.1788029,-82.3170331,9z/data=!4m16!1m9!3m8!1s0xcd5ff2faebcc099:0xd08ed6156a6d3bfa!2sFirst+Sight+Films!8m2!3d30.180452!4d-81.6576015!9m1!1b1!16s%2Fg%2F11svbh8bjv!3m5!1s0xcd5ff2faebcc099:0xd08ed6156a6d3bfa!8m2!3d30.180452!4d-81.6576015!16s%2Fg%2F11svbh8bjv?entry=ttu" target="_blank" rel="noopener">See all reviews on Google →</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <style>
+    .home-faq { padding: 3.5rem 1.5rem; background: #f7f7f7; }
+    .home-faq-inner { max-width: 760px; margin: 0 auto; }
+    .home-faq h2 { font-size: 1.75rem; text-align: center; margin-bottom: 1.5rem; color: #1a1a2e; }
+    .home-faq .faq-list { max-width: 700px; margin: 0 auto; }
+    .home-faq .faq-item { border-bottom: 1px solid #eee; }
+    .home-faq .faq-question { display: block; width: 100%; padding: 1.25rem 0; font-family: 'Open Sans', sans-serif; font-size: 1rem; font-weight: 600; color: #1a1a2e; cursor: pointer; list-style: none; }
+    .home-faq .faq-question h3 { font: inherit; color: inherit; margin: 0; display: inline; }
+    .home-faq .faq-question::-webkit-details-marker { display: none; }
+    .home-faq .faq-question::after { content: "+"; float: right; font-size: 1.5rem; font-weight: 400; color: #888; transition: transform .2s ease; }
+    .home-faq .faq-item[open] .faq-question::after { content: "−"; }
+    .home-faq .faq-answer { padding-bottom: 1.25rem; }
+    .home-faq .faq-answer p { color: #555; line-height: 1.7; margin: 0; }
+    .home-faq .faq-answer a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; }
+    .home-faq-more { text-align: center; margin-top: 1.75rem; }
+    .home-faq-more a { color: #1a1a2e; font-weight: 600; text-decoration: none; border-bottom: 1px solid #f4c057; padding-bottom: 2px; }
+    </style>
+    <section class="home-faq" id="faq">
+      <div class="home-faq-inner">
+        <h2>Frequently Asked Questions</h2>
+        {{faq:homepage}}
+        <p class="home-faq-more"><a href="/event-video-coverage-st-augustine/">More event coverage questions →</a></p>
       </div>
     </section>
   </main>

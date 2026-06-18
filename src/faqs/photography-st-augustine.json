@@ -6,19 +6,43 @@
     },
     {
       "question": "What types of photography does First Sight Films offer?",
-      "answer": "<p>We specialize in event photography and lifestyle brand product photography, particularly apparel shoots. We're the photographer for the St. Augustine Amphitheatre (including their seasonal merchandise line), Sing Out Loud Festival, and Fort Mose Jazz & Blues Festival. We also photograph corporate events, conferences, and brand imagery.</p>"
+      "answer": "<p>We focus on commercial photography: apparel &amp; lifestyle, product (including clean white-background e-commerce stills), brand &amp; team, and architectural/interior. We shoot the merchandise lines for the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, and Sing Out Loud, plus brand and architectural work across Northeast Florida.</p>"
+    },
+    {
+      "question": "What makes First Sight Films different from other photographers?",
+      "answer": "<p>We run real productions, not just a camera — art direction, production design, multi-look planning, and a pre-shoot site visit when it's needed. You get full usage rights, and we plan around where the images will actually be used so they work in every channel.</p>"
+    },
+    {
+      "question": "Do you provide models for apparel and lifestyle shoots?",
+      "answer": "<p>You can bring your own models, or we'll source and coordinate them for an additional $50–120 per hour per model, depending on their experience. The Amphitheatre's Fall/Winter line ran 7 models across two days.</p>"
+    },
+    {
+      "question": "Do you handle art direction and production?",
+      "answer": "<p>Yes. Larger shoots get an art director, production designer, and on-set crew, plus a pre-shoot site visit so looks and locations are locked before the day.</p>"
+    },
+    {
+      "question": "Do you shoot in a studio or on location?",
+      "answer": "<p>Both. We shoot on location — venues, state parks, downtown St. Augustine — and we shoot clean studio-style product stills (we'll rent a studio space when a shoot calls for it). Often both in one production.</p>"
+    },
+    {
+      "question": "Do you shoot white-background product photos for e-commerce?",
+      "answer": "<p>Yes — clean white-background stills built to drop straight into online-store and vendor listings (we do this for the Amphitheatre's store), plus styled in-field shots of the same products for social and catalogs.</p>"
     },
     {
       "question": "How quickly will I receive my photos?",
-      "answer": "<p>Standard turnaround is 1-2 weeks for edited images. Event photography can be delivered faster when needed — same-day social media selects are available for an additional fee.</p>"
+      "answer": "<p>Standard turnaround is within 72 hours for edited images delivered via online gallery. Faster delivery can be arranged when a launch date depends on it — just let us know up front.</p>"
+    },
+    {
+      "question": "Who owns the photos and how can we use them?",
+      "answer": "<p>You get full usage rights — a perpetual license across web, print, social, e-commerce, and vendor sites. First Sight Films retains ownership of the photographs. We deliver edited high-res images, not raw files.</p>"
+    },
+    {
+      "question": "Are you insured, and can you provide a certificate of insurance?",
+      "answer": "<p>Yes — we carry $1 million in general liability insurance and can provide a COI for your venue or property ahead of the shoot, including naming them as additional insured if required.</p>"
     },
     {
       "question": "Do you offer video and photography together?",
       "answer": "<p>Yes, we frequently combine photo and video coverage for events and brand projects. Bundling services is more efficient and cost-effective than hiring separate vendors.</p>"
-    },
-    {
-      "question": "What makes First Sight Films different from other photographers?",
-      "answer": "<p>We prioritize your experience as much as the final images. During events, we capture moments without disrupting the flow. During product shoots, we 'fix it in pre-production' — planning thoroughly so we have room to go with what's working on the day of the shoot. We've photographed corporate events, convention centers, concerts, state parks, national parks, and everything in between.</p>"
     },
     {
       "question": "What areas do you serve for photography?",
@@ -42,7 +66,47 @@
         "name": "What types of photography does First Sight Films offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We specialize in event photography and lifestyle brand product photography, particularly apparel shoots. We're the photographer for the St. Augustine Amphitheatre (including their seasonal merchandise line), Sing Out Loud Festival, and Fort Mose Jazz & Blues Festival. We also photograph corporate events, conferences, and brand imagery."
+          "text": "We focus on commercial photography: apparel & lifestyle, product (including clean white-background e-commerce stills), brand & team, and architectural/interior. We shoot the merchandise lines for the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, and Sing Out Loud, plus brand and architectural work across Northeast Florida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes First Sight Films different from other photographers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We run real productions, not just a camera — art direction, production design, multi-look planning, and a pre-shoot site visit when it's needed. You get full usage rights, and we plan around where the images will actually be used so they work in every channel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide models for apparel and lifestyle shoots?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can bring your own models, or we'll source and coordinate them for an additional $50–120 per hour per model, depending on their experience. The Amphitheatre's Fall/Winter line ran 7 models across two days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle art direction and production?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Larger shoots get an art director, production designer, and on-set crew, plus a pre-shoot site visit so looks and locations are locked before the day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you shoot in a studio or on location?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. We shoot on location — venues, state parks, downtown St. Augustine — and we shoot clean studio-style product stills (we'll rent a studio space when a shoot calls for it). Often both in one production."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you shoot white-background product photos for e-commerce?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — clean white-background stills built to drop straight into online-store and vendor listings (we do this for the Amphitheatre's store), plus styled in-field shots of the same products for social and catalogs."
         }
       },
       {
@@ -50,7 +114,23 @@
         "name": "How quickly will I receive my photos?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Standard turnaround is 1-2 weeks for edited images. Event photography can be delivered faster when needed — same-day social media selects are available for an additional fee."
+          "text": "Standard turnaround is within 72 hours for edited images delivered via online gallery. Faster delivery can be arranged when a launch date depends on it — just let us know up front."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the photos and how can we use them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You get full usage rights — a perpetual license across web, print, social, e-commerce, and vendor sites. First Sight Films retains ownership of the photographs. We deliver edited high-res images, not raw files."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you insured, and can you provide a certificate of insurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — we carry $1 million in general liability insurance and can provide a COI for your venue or property ahead of the shoot, including naming them as additional insured if required."
         }
       },
       {
@@ -59,14 +139,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, we frequently combine photo and video coverage for events and brand projects. Bundling services is more efficient and cost-effective than hiring separate vendors."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What makes First Sight Films different from other photographers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We prioritize your experience as much as the final images. During events, we capture moments without disrupting the flow. During product shoots, we 'fix it in pre-production' — planning thoroughly so we have room to go with what's working on the day of the shoot. We've photographed corporate events, convention centers, concerts, state parks, national parks, and everything in between."
         }
       },
       {

@@ -334,7 +334,7 @@ def _render_faq_items(items):
         question = item.get("question", "")
         answer = item.get("answer", "")
         parts.append(f'''        <details class="faq-item">
-          <summary class="faq-question">{question}</summary>
+          <summary class="faq-question"><h3>{question}</h3></summary>
           <div class="faq-answer">
             {answer}
           </div>
@@ -1008,6 +1008,11 @@ def generate_sitemap():
         "/410",  # Error page, not indexable
         "professional-services",  # noindex page — keep out of sitemap (2026-06-08)
         "event-video-st-augustine",  # retired -> 301 to event-video-coverage-st-augustine (2026-06-11)
+        # Project sub-pages consolidated -> 301 to event page; hub stays live (2026-06-17)
+        "st-augustine-video-production/fort-mose-jazz-blues-festival",
+        "st-augustine-video-production/pontevedraconcerthall",
+        "st-augustine-video-production/st-augustine-amphitheatre",
+        "st-augustine-video-production/stjohnsculturalcouncil",
     ]
 
     # Priority mapping based on URL depth/importance
@@ -1015,7 +1020,7 @@ def generate_sitemap():
         if url_path == "/":
             return "1.0"
         elif url_path in ["/aboutus/", "/contact/", "/st-augustine-video-production/",
-                          "/st-augustine-photography/", "/corporate-video-st-augustine/"]:
+                          "/st-augustine-commercial-photographer/", "/corporate-video-st-augustine/"]:
             return "0.9"
         elif url_path.startswith("/st-augustine-video-production/") and url_path.count("/") == 3:
             return "0.8"  # Project pages
