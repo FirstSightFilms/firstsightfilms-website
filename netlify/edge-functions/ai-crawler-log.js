@@ -1,4 +1,4 @@
-import { matchBot } from "./ai-bots.js";
+import { matchBot } from "./lib/ai-bots.js";
 
 export default async (request, context) => {
   const ua = request.headers.get("user-agent") || "";
