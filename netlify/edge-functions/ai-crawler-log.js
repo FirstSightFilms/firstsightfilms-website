@@ -1,4 +1,4 @@
-import { getStore } from "@netlify/blobs";
+import { getStore } from "npm:@netlify/blobs";
 import { matchBot } from "./ai-bots.js";
 
 export default async (request, context) => {
