@@ -1020,7 +1020,8 @@ def generate_sitemap():
         if url_path == "/":
             return "1.0"
         elif url_path in ["/aboutus/", "/contact/", "/st-augustine-video-production/",
-                          "/st-augustine-commercial-photographer/", "/corporate-video-st-augustine/"]:
+                          "/st-augustine-commercial-photographer/", "/st-augustine-event-photographer/",
+                          "/corporate-video-st-augustine/"]:
             return "0.9"
         elif url_path.startswith("/st-augustine-video-production/") and url_path.count("/") == 3:
             return "0.8"  # Project pages

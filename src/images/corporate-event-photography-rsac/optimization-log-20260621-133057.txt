@@ -1,0 +1,51 @@
+FSF Image Optimization Log
+Generated: 2026-06-21 13:30:57
+============================================================
+
+Original: corporate-event-photographer-rsa-1.jpg
+  Size: 8.91 MB
+  Outputs:
+    - corporate-event-photographer-rsa-1-1920w.webp (1920x1280, 103.1 KB)
+    - corporate-event-photographer-rsa-1-1200w.webp (1200x800, 51.0 KB)
+    - corporate-event-photographer-rsa-1-400w.webp (400x266, 14.4 KB)
+
+Original: corporate-event-photographer-rsa-2.jpg
+  Size: 9.84 MB
+  Outputs:
+    - corporate-event-photographer-rsa-2-1920w.webp (1920x1280, 229.7 KB)
+    - corporate-event-photographer-rsa-2-1200w.webp (1200x800, 94.3 KB)
+    - corporate-event-photographer-rsa-2-400w.webp (400x266, 17.7 KB)
+
+Original: corporate-event-photographer-rsa-3.jpg
+  Size: 10.91 MB
+  Outputs:
+    - corporate-event-photographer-rsa-3-1920w.webp (1920x1280, 265.1 KB)
+    - corporate-event-photographer-rsa-3-1200w.webp (1200x800, 116.0 KB)
+    - corporate-event-photographer-rsa-3-400w.webp (400x266, 21.2 KB)
+
+Original: corporate-event-photographer-rsa-4.jpg
+  Size: 9.74 MB
+  Outputs:
+    - corporate-event-photographer-rsa-4-1920w.webp (1920x1280, 295.2 KB)
+    - corporate-event-photographer-rsa-4-1200w.webp (1200x800, 135.3 KB)
+    - corporate-event-photographer-rsa-4-400w.webp (400x266, 26.7 KB)
+
+Original: corporate-event-photographer-rsa-5.jpg
+  Size: 12.10 MB
+  Outputs:
+    - corporate-event-photographer-rsa-5-1920w.webp (1920x2880, 954.4 KB)
+    - corporate-event-photographer-rsa-5-1200w.webp (1200x1800, 264.1 KB)
+    - corporate-event-photographer-rsa-5-400w.webp (400x600, 39.0 KB)
+
+Original: corporate-event-photographer-rsa-6.jpg
+  Size: 12.51 MB
+  Outputs:
+    - corporate-event-photographer-rsa-6-1920w.webp (1920x2880, 732.8 KB)
+    - corporate-event-photographer-rsa-6-1200w.webp (1200x1799, 224.1 KB)
+    - corporate-event-photographer-rsa-6-400w.webp (400x600, 34.1 KB)
+
+============================================================
+TOTALS
+Original: 64.02 MB
+Output: 3.53 MB
+Savings: 60.48 MB (94.5%)

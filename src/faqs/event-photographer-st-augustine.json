@@ -1,0 +1,55 @@
+{
+  "questions": [
+    {
+      "question": "What types of events do you photograph?",
+      "answer": "<p>Concerts and festivals, corporate conferences, brand &amp; sponsor activations, ribbon cuttings and grand openings, and graduation/commencement. We're the house photographer for the St. Augustine Amphitheatre and the main photographer for Sing Out Loud and Fort Mose.</p>"
+    },
+    {
+      "question": "How much does event photography cost?",
+      "answer": "<p>Photo coverage starts at $1,200 for a half-day with 100+ edited images; combined photo + video event coverage starts at $5,500. A quick call gets you an exact number.</p>"
+    },
+    {
+      "question": "How soon do I get my photos?",
+      "answer": "<p>Within 72 hours by default, and same-day when the moment needs it — we turned Walk-On's grand opening around same day and edit festivals live so they post that night.</p>"
+    },
+    {
+      "question": "Do you shoot photo and video together?",
+      "answer": "<p>Yes — much of our event work is both, one team on stills and video so you're not juggling vendors.</p>"
+    },
+    {
+      "question": "Can you photograph brand and sponsor activations?",
+      "answer": "<p>Yes. Activation coverage built for sponsorship ROI — the brand in use, attendee engagement, crowd scale — for recap decks, social, and next-year pitches.</p>"
+    },
+    {
+      "question": "Do you travel outside St. Augustine?",
+      "answer": "<p>Yes. We cover events across Northeast Florida and travel nationally — we've photographed the RSA Conference in San Francisco for six years.</p>"
+    },
+    {
+      "question": "Are you insured, and can you provide a COI?",
+      "answer": "<p>Yes — $1M general liability, with a certificate of insurance for your venue, including additional insured if required.</p>"
+    },
+    {
+      "question": "Who owns the photos and how can we use them?",
+      "answer": "<p>Full usage rights (perpetual license across web, print, social, and ads). First Sight Films retains ownership; we deliver edited high-res images, not raw.</p>"
+    },
+    {
+      "question": "What areas do you serve?",
+      "answer": "<p>Based in St. Augustine, serving Jacksonville, Ponte Vedra, St. Johns County, Palm Coast, and Northeast Florida.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What types of events do you photograph?","acceptedAnswer":{"@type":"Answer","text":"Concerts and festivals, corporate conferences, brand & sponsor activations, ribbon cuttings and grand openings, and graduation/commencement. We're the house photographer for the St. Augustine Amphitheatre and the main photographer for Sing Out Loud and Fort Mose."}},
+      {"@type":"Question","name":"How much does event photography cost?","acceptedAnswer":{"@type":"Answer","text":"Photo coverage starts at $1,200 for a half-day with 100+ edited images; combined photo + video event coverage starts at $5,500. A quick call gets you an exact number."}},
+      {"@type":"Question","name":"How soon do I get my photos?","acceptedAnswer":{"@type":"Answer","text":"Within 72 hours by default, and same-day when the moment needs it — we turned Walk-On's grand opening around same day and edit festivals live so they post that night."}},
+      {"@type":"Question","name":"Do you shoot photo and video together?","acceptedAnswer":{"@type":"Answer","text":"Yes — much of our event work is both, one team on stills and video so you're not juggling vendors."}},
+      {"@type":"Question","name":"Can you photograph brand and sponsor activations?","acceptedAnswer":{"@type":"Answer","text":"Yes. Activation coverage built for sponsorship ROI — the brand in use, attendee engagement, crowd scale — for recap decks, social, and next-year pitches."}},
+      {"@type":"Question","name":"Do you travel outside St. Augustine?","acceptedAnswer":{"@type":"Answer","text":"Yes. We cover events across Northeast Florida and travel nationally — we've photographed the RSA Conference in San Francisco for six years."}},
+      {"@type":"Question","name":"Are you insured, and can you provide a COI?","acceptedAnswer":{"@type":"Answer","text":"Yes — $1M general liability, with a certificate of insurance for your venue, including additional insured if required."}},
+      {"@type":"Question","name":"Who owns the photos and how can we use them?","acceptedAnswer":{"@type":"Answer","text":"Full usage rights (perpetual license across web, print, social, and ads). First Sight Films retains ownership; we deliver edited high-res images, not raw."}},
+      {"@type":"Question","name":"What areas do you serve?","acceptedAnswer":{"@type":"Answer","text":"Based in St. Augustine, serving Jacksonville, Ponte Vedra, St. Johns County, Palm Coast, and Northeast Florida."}}
+    ]
+  }
+}

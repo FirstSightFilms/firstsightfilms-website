@@ -1,0 +1,51 @@
+FSF Image Optimization Log
+Generated: 2026-06-21 13:39:45
+============================================================
+
+Original: corporate-event-photographer-1.jpg
+  Size: 8.87 MB
+  Outputs:
+    - corporate-event-photographer-1-1920w.webp (1920x2880, 331.8 KB)
+    - corporate-event-photographer-1-1200w.webp (1200x1800, 106.3 KB)
+    - corporate-event-photographer-1-400w.webp (400x600, 23.7 KB)
+
+Original: corporate-event-photographer-2.jpg
+  Size: 10.14 MB
+  Outputs:
+    - corporate-event-photographer-2-1920w.webp (1920x2880, 449.0 KB)
+    - corporate-event-photographer-2-1200w.webp (1200x1800, 129.5 KB)
+    - corporate-event-photographer-2-400w.webp (400x600, 24.5 KB)
+
+Original: corporate-event-photographer-3.jpg
+  Size: 10.44 MB
+  Outputs:
+    - corporate-event-photographer-3-1920w.webp (1920x2880, 504.8 KB)
+    - corporate-event-photographer-3-1200w.webp (1200x1800, 127.4 KB)
+    - corporate-event-photographer-3-400w.webp (400x600, 28.4 KB)
+
+Original: corporate-event-photographer-4.jpg
+  Size: 11.45 MB
+  Outputs:
+    - corporate-event-photographer-4-1920w.webp (1920x1280, 378.6 KB)
+    - corporate-event-photographer-4-1200w.webp (1200x800, 173.1 KB)
+    - corporate-event-photographer-4-400w.webp (400x266, 27.6 KB)
+
+Original: corporate-event-photographer-5.jpg
+  Size: 11.59 MB
+  Outputs:
+    - corporate-event-photographer-5-1920w.webp (1920x2880, 497.4 KB)
+    - corporate-event-photographer-5-1200w.webp (1200x1800, 162.5 KB)
+    - corporate-event-photographer-5-400w.webp (400x600, 34.9 KB)
+
+Original: corporate-event-photographer-6.jpg
+  Size: 13.16 MB
+  Outputs:
+    - corporate-event-photographer-6-1920w.webp (1920x2880, 620.8 KB)
+    - corporate-event-photographer-6-1200w.webp (1200x1800, 125.8 KB)
+    - corporate-event-photographer-6-400w.webp (400x600, 20.9 KB)
+
+============================================================
+TOTALS
+Original: 65.65 MB
+Output: 3.68 MB
+Savings: 61.97 MB (94.4%)
