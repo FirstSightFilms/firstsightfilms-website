@@ -1,4 +1,3 @@
-import { getStore } from "npm:@netlify/blobs";
 import { matchBot } from "./ai-bots.js";
 
 export default async (request, context) => {
@@ -15,15 +14,22 @@ export default async (request, context) => {
     status: response.status,
     ua,
   };
-  const key = `${Date.now()}-${crypto.randomUUID()}`;   // unique per hit, no append race
-  context.waitUntil(                                    // background, after response is sent
-    getStore("ai-crawler-hits").set(key, JSON.stringify(hit)).catch(() => {})  // fail silent
+  // Hand the write off to a Node function (the Blobs SDK works natively in the
+  // Node runtime; edge bundling does not). Fire-and-forget after the response is sent.
+  const secret = Netlify.env.get("AI_CRAWLER_LOG_SECRET") || "";
+  const origin = new URL(request.url).origin;
+  context.waitUntil(
+    fetch(`${origin}/.netlify/functions/ai-crawler-write`, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-log-secret": secret },
+      body: JSON.stringify(hit),
+    }).catch(() => {})  // fail silent — never affects the visitor
   );
   return response;
 };
 
 export const config = {
   path: "/*",
-  excludedPath: ["/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg",
+  excludedPath: ["/.netlify/*", "/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg",
                  "/*.jpeg", "/*.svg", "/*.ico", "/*.webp", "/*.woff2"],
 };
