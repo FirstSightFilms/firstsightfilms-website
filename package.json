@@ -1,0 +1,9 @@
+{
+  "name": "firstsightfilms-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "First Sight Films website — static build in output/, plus Netlify edge & serverless functions",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
