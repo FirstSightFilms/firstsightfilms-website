@@ -778,6 +778,16 @@ def build_pages(modules, page_filter=None, skip_protected=True):
         # Fix og:url to match page URL
         processed_content = fix_og_url(processed_content, url_path)
 
+        # When a page declares its own OG title, drop the default OG title/description
+        # (the head module's defaults) so the page-specific ones are authoritative.
+        if 'property="og:title"' in page_content:
+            processed_content = re.sub(
+                r'<meta property="og:title" content="St\. Augustine Video Production \| First Sight Films">\n?',
+                '', processed_content)
+            processed_content = re.sub(
+                r'<meta property="og:description" content="Professional video production and photography for St\. Augustine and Northeast Florida businesses\.">\n?',
+                '', processed_content)
+
         # Create parent directories
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
