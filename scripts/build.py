@@ -1018,10 +1018,13 @@ def generate_sitemap():
         "/410",  # Error page, not indexable
         "professional-services",  # noindex page — keep out of sitemap (2026-06-08)
         "event-video-st-augustine",  # retired -> 301 to event-video-coverage-st-augustine (2026-06-11)
-        # Note: nested project sub-pages (st-augustine-amphitheatre, pontevedraconcerthall,
-        # fort-mose-jazz-blues-festival, stjohnsculturalcouncil) are LIVE 200 content that link
-        # up to the hub. Re-included in the sitemap as of Part B (2026-06-30), reversing the
-        # 2026-06-17 consolidation exclusion (no 301s exist for them in _redirects).
+        # Project sub-pages are FORCE-redirected (301!) to the event page via the _redirects
+        # wildcard `/st-augustine-video-production/*` (2026-06-17 consolidation). They must stay
+        # OUT of the sitemap. Confirmed live 2026-06-30 (an attempt to include them was reverted).
+        "st-augustine-video-production/fort-mose-jazz-blues-festival",
+        "st-augustine-video-production/pontevedraconcerthall",
+        "st-augustine-video-production/st-augustine-amphitheatre",
+        "st-augustine-video-production/stjohnsculturalcouncil",
     ]
 
     # Priority mapping based on URL depth/importance
