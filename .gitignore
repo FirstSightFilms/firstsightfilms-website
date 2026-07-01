@@ -14,3 +14,6 @@ CLAUDE.md
 *.HEIC
 *.raw
 *.RAW
+
+# Local safety backups (not shipped)
+_backups/

@@ -50,8 +50,9 @@
   <link rel="stylesheet" href="/css/components.css?v=1ee420c6">
 </noscript>
 
-<title>Video Production Portfolio | First Sight Films St. Augustine</title>
-<meta name="description" content="Watch our video production portfolio - corporate videos, brand stories, and event coverage for St. Augustine and Northeast Florida businesses and nonprofits.">
+<title>St. Augustine Video Production | First Sight Films</title>
+<meta name="description" content="Video production in St. Augustine — corporate videos, event coverage, brand films, and social content. Rated 5.0 from 48 reviews. Most projects $3K–$15K.">
+<link rel="preload" as="image" href="/images/Meredith+Budd+Live+Wildly+Florida_602ffe36.JPG" fetchpriority="high">
 <style>
   .portfolio-grid-item {
     background: none;
@@ -127,10 +128,71 @@
   .project-links { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem 2rem; list-style: none; padding: 0; }
   .project-links a { color: var(--color-black); border-bottom: 1px solid #f4c057; padding-bottom: 2px; transition: color 0.2s ease; }
   .project-links a:hover { color: #f4c057; }
+  .quick-facts, .service-list, .how-it-works { max-width: 760px; margin: 1.5rem auto 0; padding: 0; list-style: none; }
+  .quick-facts li, .service-list li { position: relative; padding: 0.6rem 0 0.6rem 1.5rem; border-bottom: 1px solid var(--color-gray-200); line-height: 1.6; }
+  .quick-facts li::before, .service-list li::before { content: ""; position: absolute; left: 0; top: 1.05rem; width: 7px; height: 7px; background: #f4c057; border-radius: 50%; }
+  .service-list a { color: var(--color-black); border-bottom: 1px solid #f4c057; padding-bottom: 1px; font-weight: 600; transition: color 0.2s ease; }
+  .service-list a:hover { color: #f4c057; }
+  .how-it-works { list-style: none; counter-reset: step; }
+  .how-it-works li { position: relative; padding: 0.6rem 0 0.6rem 2.75rem; line-height: 1.6; counter-increment: step; }
+  .how-it-works li::before { content: counter(step); position: absolute; left: 0; top: 0.55rem; width: 1.8rem; height: 1.8rem; background: #f4c057; color: var(--color-black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; }
+  /* Case studies + testimonials — reused from the event page's proven format */
+  .video-casestudy { max-width: 760px; margin: 2.5rem auto 0; text-align: left; }
+  .video-casestudy h3 { margin-bottom: .25rem; }
+  .video-casestudy .video-meta { font-size: 0.95rem; color: #555; margin: 0 0 1rem; }
+  .video-casestudy p { line-height: 1.7; margin-bottom: 1rem; color: #333; }
+  .video-casestudy blockquote { border-left: 3px solid #f4c057; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #444; }
+  .video-casestudy blockquote footer { font-style: normal; font-size: .9rem; color: #666; margin-top: .5rem; }
+  .glance-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; margin: 0 0 .6rem; }
+  .project-glance { list-style: none; padding: 1rem 1.25rem; margin: 0 0 1.25rem; background: #f7f7f7; border-left: 3px solid #f4c057; border-radius: 4px; }
+  .project-glance li { margin: 0 0 .5rem; line-height: 1.55; font-size: .95rem; color: #333; }
+  .project-glance li:last-child { margin-bottom: 0; }
+  .video-casestudy a, .project-glance a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  .video-casestudy a:hover, .project-glance a:hover { color: #b8860b; }
+  .event-testimonials { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+  .event-testimonial { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 1.5rem; margin: 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .et-stars { color: #f4c057; margin-bottom: .5rem; letter-spacing: 2px; }
+  .et-text { font-size: 1rem; line-height: 1.6; color: #333; margin: 0 0 1rem; }
+  .et-author { font-size: .9rem; color: #666; }
+  @media (max-width: 700px) { .event-testimonials { grid-template-columns: 1fr; } }
+  .hub-prose { max-width: 760px; margin: 0 auto; }
+  .hub-prose p { line-height: 1.7; margin-bottom: 1rem; }
+  /* Hero image (Change 3a) — inline image above the copy, no background */
+  .service-hero .hero-img { display: block; width: 100%; max-width: 1000px; margin: 0 auto 2rem; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; }
+  /* Case-study images (Change 3b) */
+  .casestudy-img { display: block; width: 100%; max-width: 760px; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin: 0 auto 1.25rem; }
+  /* Meet-team layout (Change 3c) */
+  .meet-team { display: grid; grid-template-columns: 0.85fr 1fr; gap: 2rem; align-items: center; max-width: 960px; margin: 0 auto; }
+  .meet-team-img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .meet-team .hub-prose { margin: 0; }
+  @media (max-width: 700px) { .meet-team { grid-template-columns: 1fr; } }
+  /* Pricing table (Change 2) */
+  .pricing-table { width: 100%; max-width: 760px; margin: 1.5rem auto 0; border-collapse: collapse; font-size: 0.97rem; }
+  .pricing-table .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+  .pricing-table th, .pricing-table td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-gray-200); vertical-align: top; }
+  .pricing-table thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #888; border-bottom: 2px solid #f4c057; }
+  .pricing-table tbody th { font-weight: 700; color: var(--color-black); }
+  .pricing-table tbody td:nth-child(2) { white-space: nowrap; font-weight: 600; }
+  @media (max-width: 600px) {
+    .pricing-table, .pricing-table thead, .pricing-table tbody, .pricing-table tr, .pricing-table th, .pricing-table td { display: block; }
+    .pricing-table thead { display: none; }
+    .pricing-table tbody th { border-bottom: 0; padding-bottom: 0; }
+  }
+  /* Media rows — alternating image/text for the top run */
+  .media-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; max-width: var(--max-width); margin: 0 auto; }
+  .media-row__media img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; }
+  .media-row__content h2 { margin-top: 0; }
+  .media-row--reverse .media-row__media { order: 2; }
+  .media-bento { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .media-bento img { width: 100%; display: block; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; }
+  @media (max-width: 768px) {
+    .media-row { grid-template-columns: 1fr; gap: 1.5rem; }
+    .media-row--reverse .media-row__media { order: 0; }
+  }
 </style>
 <link rel="canonical" href="https://www.firstsightfilms.com/st-augustine-video-production/">
 </head>
-<body class="page-video-portfolio">
+<body class="page-service">
 
 <header class="site-header">
   <div class="header-content">
@@ -212,17 +274,227 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </nav>
 
-  <!-- Portfolio Hero -->
-  <section class="video-portfolio-hero">
-    <div class="container">
-      <h1>Video Production Portfolio</h1>
-      <p class="lead">Videography that is brand and mission aligned for use on social to broadcast.</p>
+  <!-- Hero Section -->
+  <section class="service-hero">
+    <div class="service-hero-content">
+      <img class="hero-img" src="/images/Meredith+Budd+Live+Wildly+Florida_602ffe36.JPG" alt="First Sight Films on-camera interview for the Live Wildly campaign in Florida" width="1000" height="563" fetchpriority="high">
+      <h1>St. Augustine Video Production</h1>
+      <p class="lead">First Sight Films is a St. Augustine video production company. We produce corporate videos, event coverage, brand films, and social content for businesses, nonprofits, and cultural institutions across Northeast Florida — built to perform everywhere from social feeds to broadcast.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-number">5.0★</span><span class="stat-label">Average Google rating</span></div>
+        <div class="stat"><span class="stat-number">48</span><span class="stat-label">Five-star reviews</span></div>
+        <div class="stat"><span class="stat-number">100%</span><span class="stat-label">Five-star — every review</span></div>
+        <div class="stat"><span class="stat-number">National</span><span class="stat-label">Reach from St. Augustine, FL</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- Portfolio Grid -->
-  <section class="video-portfolio-grid">
+  <!-- At a glance (quick facts) -->
+  <section class="section section-light">
     <div class="container">
+      <div class="media-row">
+        <div class="media-row__media">
+          <img src="/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-20-large.webp" alt="First Sight Films videographer filming at an event in St. Augustine" loading="lazy">
+        </div>
+        <div class="media-row__content">
+          <h2>St. Augustine video production at a glance</h2>
+          <ul class="quick-facts">
+            <li>Based in St. Augustine, FL — serving Northeast Florida. No travel fees within 60 miles.</li>
+            <li>Event coverage starts at $1,000 (half-day); most projects run $3,000–$15,000; monthly content retainers from $5,000.</li>
+            <li>Delivery: 3–5 days for simple projects; 3–6 weeks for brand films and multi-day shoots.</li>
+            <li>A full in-house team — creative direction, filming, editing, color grading, and music licensing.</li>
+            <li>Rated 5.0 from 48 client reviews.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we produce -->
+  <section class="section">
+    <div class="container">
+      <div class="media-row media-row--reverse">
+        <div class="media-row__media">
+          <div class="media-bento">
+            <img src="/images/bento/corporate-video-st-augustine-bento-1-large.webp" alt="Corporate video production in St. Augustine" loading="lazy">
+            <img src="/images/bento/brand-story-video-st-augustine-1-large.webp" alt="Brand story film production in St. Augustine" loading="lazy">
+            <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-large.webp" alt="Social media video content filmed at the St. Augustine Amphitheatre" loading="lazy">
+            <img src="/images/bento/photography-st-augustine-bento-1-large.webp" alt="Commercial photography in St. Augustine" loading="lazy">
+          </div>
+        </div>
+        <div class="media-row__content">
+          <h2>What we produce</h2>
+          <ul class="service-list">
+            <li><a href="/corporate-video-st-augustine/">Corporate video</a> — sales rallies, conferences, galas, and anniversaries.</li>
+            <li><a href="/event-video-coverage-st-augustine/">Event video coverage</a> — festivals, ceremonies, and ribbon cuttings.</li>
+            <li><a href="/brand-story-st-augustine/">Brand story films</a> — the mission and people behind the work.</li>
+            <li><a href="/event-video-coverage-st-augustine/">Festival recaps</a> — multi-day shoots cut for social and sponsors.</li>
+            <li><a href="/social-media-st-augustine/">Social media content</a> — ongoing short-form built for the feed.</li>
+            <li><a href="/st-augustine-commercial-photographer/">Commercial photography</a> — stills to pair with the video.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where we work -->
+  <section class="section">
+    <div class="container">
+      <div class="media-row">
+        <div class="media-row__media">
+          <img src="/images/architectural-photography/venue-photography-ponte-vedra-concert-hall-1.jpg" alt="Ponte Vedra Concert Hall, a Northeast Florida venue First Sight Films films at" loading="lazy">
+        </div>
+        <div class="media-row__content">
+          <h2>Where we work</h2>
+          <p>We're based in St. Augustine and shoot across Northeast Florida.</p>
+          <ul class="service-list">
+            <li><a href="/jacksonville-video-production/">Video production in Jacksonville</a></li>
+            <li><a href="/ponte-vedra-video-production/">Video production in Ponte Vedra</a></li>
+            <li><a href="/st-johns-county-video-production/">Video production in St. Johns County</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="media-row media-row--reverse">
+        <div class="media-row__media">
+          <img src="/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-8-large.webp" alt="First Sight Films videographer on a production shoot in St. Augustine" loading="lazy">
+        </div>
+        <div class="media-row__content">
+          <h2>How it works</h2>
+          <ol class="how-it-works">
+            <li><strong>Discovery call</strong> — we start with a focused call to map your goals, audience, and timeline, so the shoot day runs efficiently and revisions stay minimal.</li>
+            <li><strong>Pre-production</strong> — we handle creative direction and a shoot plan, including locations, talent, and a shot list, before anyone picks up a camera.</li>
+            <li><strong>Production</strong> — a full crew films on the day, not just a camera operator, capturing the main moments and the details in between.</li>
+            <li><strong>Post-production</strong> — editing, color grading, music licensing, and revisions, all handled in-house by the same team.</li>
+            <li><strong>Delivery</strong> — you get a final master plus social cutdowns, delivered ready to publish, built to perform from social feeds to broadcast.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What it costs (pricing tiers) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What video production costs in St. Augustine</h2>
+        <p>Typical starting points. Every project is quoted to scope after a discovery call.</p>
+      </div>
+      <table class="pricing-table">
+        <caption class="sr-only">First Sight Films video production pricing tiers</caption>
+        <thead>
+          <tr><th scope="col">Tier</th><th scope="col">Starting price</th><th scope="col">Best for</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Event coverage (half-day)</th>
+            <td>From $1,000 (4 hours)</td>
+            <td>Single events, ceremonies, ribbon cuttings</td>
+          </tr>
+          <tr>
+            <th scope="row">Most projects</th>
+            <td>$3,000–$15,000</td>
+            <td>Corporate videos, brand films, festival recaps</td>
+          </tr>
+          <tr>
+            <th scope="row">Monthly content retainer</th>
+            <td>From $5,000 / month</td>
+            <td>Ongoing short-form and social content</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Featured Work (text case studies) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured work</h2>
+        <p>A few St. Augustine video production projects, start to finish.</p>
+      </div>
+
+      <div class="video-casestudy">
+        <h3>Corporate &amp; Conference Video: HMA Mortgage Sales Rally</h3>
+        <img class="casestudy-img" src="/images/hma-corporate-event-video-embassy-suites-st-augustine-beach-1200w.webp" alt="HMA Mortgage sales rally corporate video, Embassy Suites St. Augustine Beach" loading="lazy">
+        <p class="video-meta">April 2025 · Embassy Suites, St. Augustine Beach</p>
+        <p class="glance-label">Project at a glance</p>
+        <ul class="project-glance">
+          <li><strong>Client:</strong> HMA Mortgage — national lender licensed in 35+ states</li>
+          <li><strong>Event:</strong> 2-day sales rally</li>
+          <li><strong>Crew:</strong> 3 cameras (1 stationary, 2 roaming)</li>
+          <li><strong>Captured:</strong> keynotes, breakouts, panels, Q&amp;As, 12 attendee testimonials</li>
+          <li><strong>Delivered:</strong> 30-sec social reel next day; 2-min recap + 12 testimonials + 4 product videos within the week; custom animated logo</li>
+        </ul>
+        <p>First Sight Films filmed HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach. HMA's a national mortgage lender licensed in 35+ states, and they flew their whole team in, so we covered all of it — full <a href="/event-video-coverage-st-augustine/">corporate event coverage</a> across keynotes, breakouts, panels, Q&amp;As, and the twelve attendee testimonials in between.</p>
+        <p>The hard part of a corporate rally isn't the filming — it's making a room full of people who've flown in, woken up early, and sat for eight hours actually look engaged. Tired doesn't read well on camera. So we planned around it: we studied the agenda ahead of time, mapped which sessions would be most interactive, and captured our best attendee b-roll on day one before the fatigue set in — then filled in the energy from the socials, the breaks, and the after-hours, where people actually connect.</p>
+        <p>Turnaround is where it counted — a social reel in their hands the very next day, then the recap, the testimonials, and four product videos inside the week, plus a custom animated logo they kept using.</p>
+        <blockquote>
+          <p>"Wow, the videos that Diego and the team created for our corporate Sales Rally were absolutely spectacular! They completely captured our vibe (and definitely made us look cool!)! They were tuned into our goals and objectives, and delivered a product that went above and beyond!"</p>
+          <footer>— Rachael Tresch, Director of Sales &amp; Marketing Strategy, HMA Mortgage (Google, May 2025)</footer>
+        </blockquote>
+      </div>
+
+      <div class="video-casestudy">
+        <h3>Brand Story Film: Friends of Acadia</h3>
+        <img class="casestudy-img" src="/images/FRIENDS+OF+ACADIA+_MAINE+_BRAND+STORY+FILM+_VOLUNTEER+STEWARDSHIP+_2025_161fcd55.png" alt="Friends of Acadia brand story film, Acadia National Park, Maine" loading="lazy">
+        <p class="video-meta">2025 · Acadia National Park, Maine</p>
+        <p class="glance-label">Project at a glance</p>
+        <ul class="project-glance">
+          <li><strong>Client:</strong> Friends of Acadia — Maine conservation nonprofit</li>
+          <li><strong>Goal:</strong> a 60–90 sec film + photography for web and social</li>
+          <li><strong>Subject:</strong> the volunteer program that helps sustain the park — its history, how locals get involved, its impact</li>
+          <li><strong>Access:</strong> interviewed the volunteer program director + shadowed volunteers on the carriage roads and a fence repair</li>
+          <li><strong>Shoot:</strong> 1 day</li>
+        </ul>
+        <p>A <a href="/brand-story-st-augustine/">brand story film</a> goes past what an organization does to why it exists. First Sight Films traveled to Maine to tell that story for Friends of Acadia — the nonprofit behind much of the volunteer work that keeps Acadia National Park running. We met with their team to plan the shoot, then spent a day on the ground: an interview with Nicki Burtis, their volunteer program director, and hands-on footage of volunteers clearing leaf litter from the historic carriage roads and mending a broken fence.</p>
+        <p>The interview didn't start smoothly — Nicki wasn't comfortable on camera. So we changed the setup. Instead of sitting her down under lights, we had her drive us out to the fence site and talked while she drove. Hands busy, eyes on the road, the camera disappeared — and she opened up. That's where the real story came from. It's the kind of read-the-room directing that separates footage from a film.</p>
+        <blockquote>
+          <p>"We love it, thank you so much!"</p>
+          <footer>— Julia Walker Thomas, Visual Storytelling &amp; Visual Assets Manager, Friends of Acadia</footer>
+        </blockquote>
+      </div>
+
+      <div class="video-casestudy">
+        <h3>Brand Story Film: Rocky Mountain Conservancy</h3>
+        <img class="casestudy-img" src="/images/Rocky+Mountain+Conservancy+_Brand+Story+Film+_2025_4093bc35.png" alt="Rocky Mountain Conservancy brand story film, Rocky Mountain National Park, Colorado" loading="lazy">
+        <p class="video-meta">2025 · Rocky Mountain National Park, Colorado</p>
+        <p>We produced the same kind of documentary brand film for the Rocky Mountain Conservancy, the philanthropic partner of Rocky Mountain National Park. Over two days, we hiked in with our gear to the spots they wanted to feature — the park's highlights and the newly added accessibility boardwalks that open the landscape to more visitors. The Conservancy went on to screen the film for the Friends Alliance, the national coalition of organizations that support America's national parks, using it to showcase their park and introduce their turn hosting the Alliance's next annual meeting. We travel nationally for mission-driven work like this.</p>
+      </div>
+
+      <div class="video-casestudy">
+        <h3>Venue &amp; Promotional Video: St. Augustine Amphitheatre &amp; Ponte Vedra Concert Hall</h3>
+        <img class="casestudy-img" src="/images/ponte-vedra-concert-hall-florida-thumbnail.jpg" alt="Ponte Vedra Concert Hall live performance video production" loading="lazy">
+        <p class="video-meta">Ongoing · 4-year partnership</p>
+        <p class="glance-label">Project at a glance</p>
+        <ul class="project-glance">
+          <li><strong>Client:</strong> SJC Cultural Events — runs the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, Sing Out Loud Festival, and Fort Mose Jazz &amp; Blues</li>
+          <li><strong>Relationship:</strong> 4 years, ongoing</li>
+          <li><strong>Produced:</strong> promotional videos for social, web, and broadcast</li>
+          <li><strong>Scope:</strong> on call for video, editing, and photography</li>
+        </ul>
+        <p>Some of our steadiest work is for SJC Cultural Events, the organization that runs the St. Augustine Amphitheatre and the <a href="/ponte-vedra-video-production/">Ponte Vedra Concert Hall</a>. For four years we've produced their promotional content — and not just for social and web; some of it runs on broadcast, a bar most local work never has to clear.</p>
+        <p>The relationship has grown into something rare for us: SJCCE keeps First Sight Films on call. When they need video, editing, or photography, we handle it. That's trust you only earn by delivering, year after year — from the same team that fills those venues night after night. (Some of our biggest compliments from them have come on the stills — see our <a href="/st-augustine-commercial-photographer/">commercial photography</a>.)</p>
+      </div>
+
+      <div class="video-casestudy">
+        <h3>Social &amp; Ongoing Content</h3>
+        <p>Every project we shoot comes back cut for the feed, not just as a final master — <a href="/social-media-st-augustine/">short-form clips built to perform on social</a>, sized and paced for how people actually watch. For organizations that need a steady stream of it, we take on a limited number of bespoke retainers: SJC Cultural Events keeps us on call for exactly this kind of ongoing video, editing, and photography. If you need ongoing content rather than a one-off, ask — we'll scope it to what you actually need.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent work grid -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recent work</h2>
+      </div>
       <div class="portfolio-grid-items">
         <button type="button" class="portfolio-grid-item" data-video="/video/portfolio/st-augustine-amphitheatre-st-johns-florida.mp4" aria-label="Play St. Augustine Amphitheatre video">
           <img src="/images/THE+AMP_+ST+AUGUSTINE+AMPHITHEATRE+_STA+_2024_4f9acd9e.png" alt="St. Augustine Amphitheatre video production" loading="lazy">
@@ -300,17 +572,81 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </section>
 
-  <!-- Featured Projects (internal links to project pages) -->
+  <!-- Explore these projects in depth (internal links to project sub-pages) -->
   <section class="section section-light">
     <div class="container">
       <div class="section-header">
-        <h2>Featured Projects</h2>
+        <h2>Explore these projects in depth</h2>
+        <p>Full write-ups on a few of the projects above.</p>
       </div>
       <ul class="project-links">
         <li><a href="/st-augustine-video-production/st-augustine-amphitheatre/">St. Augustine Amphitheatre</a></li>
         <li><a href="/st-augustine-video-production/pontevedraconcerthall/">Ponte Vedra Concert Hall</a></li>
         <li><a href="/st-augustine-video-production/fort-mose-jazz-blues-festival/">Fort Mose Jazz &amp; Blues Festival</a></li>
         <li><a href="/st-augustine-video-production/stjohnsculturalcouncil/">St. Johns Cultural Council</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2>What clients say</h2>
+        <p>From our 48 five-star reviews on Google.</p>
+      </div>
+      <div class="event-testimonials">
+        <blockquote class="event-testimonial">
+          <div class="et-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="et-text">"I worked with Diego and Trista for the HMA 2025 Sales Rally and they were amazing. The entire process from booking to the final video deliverables, everything was professionally done. Diego is very detailed when it comes to making sure he meets your expectations."</p>
+          <footer class="et-author"><strong>Melanie Schuler</strong> · Google · May 2025</footer>
+        </blockquote>
+        <blockquote class="event-testimonial">
+          <div class="et-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="et-text">"Diego &amp; Trista delivered high-quality photo, video, and audio that really helped us tell our organization's story. They were accommodating to our schedule, professional, and put our interviewees at ease. We look forward to working with them again!"</p>
+          <footer class="et-author"><strong>Laura Baldwin</strong> · Google · Aug 2025</footer>
+        </blockquote>
+        <blockquote class="event-testimonial">
+          <div class="et-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="et-text">"Diego and First Sight Films were instrumental to the success of our video project in St. Augustine. As a remote producer, I found him incredibly easy to work with. He was prompt, understood the mission perfectly, and went above and beyond to ensure we had more than enough footage for our client."</p>
+          <footer class="et-author"><strong>Marcus Fung</strong> · Google · March 2026</footer>
+        </blockquote>
+        <blockquote class="event-testimonial">
+          <div class="et-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="et-text">"Diego was fun and made the entire experience really easy. They got great footage of all aspects of my business and the final outcome was exceptional. What can be (for me) a stressful situation — being interviewed on camera — was a fun afternoon. Highly recommend."</p>
+          <footer class="et-author"><strong>Megan Vidal</strong> · Google · March 2026</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet First Sight Films -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Meet First Sight Films</h2>
+      </div>
+      <div class="meet-team">
+        <img class="meet-team-img" src="/images/about/diego-and-trista-brophy-cerquera-st-augustine-first-sight-films-owners-1-large.webp" alt="Diego and Trista Brophy Cerquera, owners of First Sight Films, St. Augustine" loading="lazy">
+        <div class="hub-prose">
+          <p>We're Diego and Trista — a husband-and-wife team who call St. Augustine home. We combine creative vision with strategic thinking to help local businesses and organizations tell their stories through video.</p>
+          <p>Diego handles creative direction, cinematography, and editing — the one behind the camera making sure every frame serves your story. Trista holds a PhD in Interdisciplinary Ecology from the University of Florida and handles strategy, client communication, and project coordination, so every project runs smoothly. First Sight Films started in 2023, when Diego transitioned from a nursing career to pursue visual storytelling full-time.</p>
+          <p><strong>Why St. Augustine?</strong> We're not a production company flying in from Orlando or Jacksonville — we live and work here, and we've filmed across Northeast Florida since Diego moved to St. Augustine in 2003. <a href="/aboutus/">More about our team →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related guides -->
+  <section class="section section-light">
+    <div class="container">
+      <h2>Planning an event or a project?</h2>
+      <p>These guides walk through what coverage costs and how to choose:</p>
+      <ul class="service-list">
+        <li><a href="/guides/event-planning/event-coverage-costs-northeast-florida/">What event coverage costs in Northeast Florida</a></li>
+        <li><a href="/guides/event-services/photo-vs-video-for-events/">Photo vs. video for events</a></li>
+        <li><a href="/guides/event-types/corporate-conference-coverage-st-augustine/">Corporate &amp; conference coverage</a></li>
+        <li><a href="/guides/event-types/music-festival-coverage-st-augustine/">Music festival coverage</a></li>
       </ul>
     </div>
   </section>
@@ -360,6 +696,42 @@ document.addEventListener('DOMContentLoaded', function() {
           <summary class="faq-question"><h3>Can you produce video coverage for corporate events in St. Augustine?</h3></summary>
           <div class="faq-answer">
             <p>Yes. Corporate event videography — sales rallies, conferences, galas, anniversaries — is one of our specialties. Recent work includes the HMA Sales Rally at Embassy Suites St. Augustine Beach and the SJC Chamber of Commerce 120th anniversary celebration. We can deliver a full recap, social cutdowns, and individual interview clips from the same shoot.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><h3>Can we use the video in our ads and campaigns?</h3></summary>
+          <div class="faq-answer">
+            <p>Yes. You get a perpetual license to use everything we deliver for commercial purposes — website, social, and paid advertising. We keep ownership of the footage (and may feature the work in our own portfolio), but your right to run it in your marketing doesn't expire.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><h3>How do you make sure interviews and speaker audio are clean?</h3></summary>
+          <div class="faq-answer">
+            <p>We capture multiple audio inputs for redundancy, so one failure never costs you the take. For a podium or stage, we pull a direct feed from the venue's audio board and add lav mics on speakers when they're there for the full remarks. Clean audio is half of what makes a video feel professional — we don't leave it to the on-camera mic.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><h3>Can you provide a certificate of insurance for our venue?</h3></summary>
+          <div class="faq-answer">
+            <p>Yes. We carry $1 million in general liability insurance and can send a certificate of insurance ahead of your shoot, including naming your venue as additional insured if they require it.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><h3>What if something goes wrong with the gear?</h3></summary>
+          <div class="faq-answer">
+            <p>We bring backups for everything — cameras, audio, power, and media. On multi-camera shoots, a single point of failure never costs you the moment. That redundancy is a big part of why clients trust us with once-only events they can't reshoot.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><h3>How far in advance should I book?</h3></summary>
+          <div class="faq-answer">
+            <p>The sooner the better — we take a limited number of projects at a time, and dates fill first in busy stretches. If your shoot is soon, check the date with us now; we can sometimes fit in fast-turnaround work.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><h3>What makes you different from a freelancer or another production company?</h3></summary>
+          <div class="faq-answer">
+            <p>Most companies hand you a video; we set out to deliver a result. We start from your goal, ask why until we understand it, and stay tenacious until the finished piece does the job — like redirecting a camera-shy interviewee until the real story comes out. You also get a full in-house team (creative direction, filming, editing, color, and music under one roof) and the trust of the institutions we already work with, from national lenders to the organizations that run St. Augustine's biggest venues.</p>
           </div>
         </details>
         <details class="faq-item">
@@ -438,7 +810,339 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of video production does First Sight Films offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We produce corporate videos, brand story films, event coverage, festival recaps, and social media content. Our portfolio above includes work for businesses, nonprofits, music festivals, and cultural institutions across St. Augustine, Jacksonville, and beyond."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is First Sight Films based, and where do you film?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We're based in St. Augustine, FL and primarily serve Northeast Florida \u2014 including Jacksonville, Ponte Vedra, St. Johns County, and Duval County. There are no travel fees within 60 miles. We also travel nationally for select projects, including recent shoots in Maine (Friends of Acadia) and Colorado (Rocky Mountain Conservancy)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a video production project cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most projects range from $3,000 to $15,000 depending on scope, length, and crew size. We also offer monthly content retainers starting at $5,000 for organizations that need ongoing content. Reach out with your goals and we'll give you a clear, itemized quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical video project take from start to finish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple projects in St. Augustine or Jacksonville can be delivered in 3\u20135 days. Larger productions \u2014 like brand films, festival recaps, or multi-day corporate shoots \u2014 typically take 3\u20136 weeks from kickoff to final delivery. We start every project with a focused discovery call so the shoot day runs efficiently and revisions stay minimal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with nonprofits and festivals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A significant portion of our portfolio is nonprofit and festival work \u2014 including Friends of Acadia, Rocky Mountain Conservancy, Live Wildly + Florida State Park Foundation, Fort Mose Jazz & Blues Festival, Sing Out Loud Music Festival, and the St. Johns County Chamber of Commerce. We offer adjusted rates for qualifying mission-driven organizations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included when I hire First Sight Films for a video project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everything end-to-end: creative direction, pre-production planning, filming, editing, color grading, music licensing, and revisions. You get a full production team \u2014 not just a camera operator. We also help with content strategy upfront, so you're investing in video that actually moves your business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you produce video coverage for corporate events in St. Augustine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Corporate event videography \u2014 sales rallies, conferences, galas, anniversaries \u2014 is one of our specialties. Recent work includes the HMA Sales Rally at Embassy Suites St. Augustine Beach and the SJC Chamber of Commerce 120th anniversary celebration. We can deliver a full recap, social cutdowns, and individual interview clips from the same shoot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we use the video in our ads and campaigns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You get a perpetual license to use everything we deliver for commercial purposes \u2014 website, social, and paid advertising. We keep ownership of the footage (and may feature the work in our own portfolio), but your right to run it in your marketing doesn't expire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you make sure interviews and speaker audio are clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We capture multiple audio inputs for redundancy, so one failure never costs you the take. For a podium or stage, we pull a direct feed from the venue's audio board and add lav mics on speakers when they're there for the full remarks. Clean audio is half of what makes a video feel professional \u2014 we don't leave it to the on-camera mic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you provide a certificate of insurance for our venue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We carry $1 million in general liability insurance and can send a certificate of insurance ahead of your shoot, including naming your venue as additional insured if they require it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if something goes wrong with the gear?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We bring backups for everything \u2014 cameras, audio, power, and media. On multi-camera shoots, a single point of failure never costs you the moment. That redundancy is a big part of why clients trust us with once-only events they can't reshoot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should I book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The sooner the better \u2014 we take a limited number of projects at a time, and dates fill first in busy stretches. If your shoot is soon, check the date with us now; we can sometimes fit in fast-turnaround work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes you different from a freelancer or another production company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most companies hand you a video; we set out to deliver a result. We start from your goal, ask why until we understand it, and stay tenacious until the finished piece does the job \u2014 like redirecting a camera-shy interviewee until the real story comes out. You also get a full in-house team (creative direction, filming, editing, color, and music under one roof) and the trust of the institutions we already work with, from national lenders to the organizations that run St. Augustine's biggest venues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote for my video project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The fastest way is the contact form on our contact page \u2014 tell us what you're trying to accomplish, your timeline, and any examples you like. We'll respond within one business day with next steps and a ballpark quote."
+      }
+    }
+  ]
+}
+</script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "VideoObject",
+      "name": "St. Augustine Amphitheatre",
+      "description": "Promotional video production for the St. Augustine Amphitheatre, produced by First Sight Films.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/THE+AMP_+ST+AUGUSTINE+AMPHITHEATRE+_STA+_2024_4f9acd9e.png",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/st-augustine-amphitheatre-st-johns-florida.mp4",
+      "uploadDate": "2024",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT1M2S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "HMA Sales Rally",
+      "description": "First Sight Films filmed HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach — corporate event coverage for a national lender licensed in 35+ states.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/hma-corporate-event-video-embassy-suites-st-augustine-beach.png",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/hma-sales-rally-corporate-event-videography.mp4",
+      "uploadDate": "2025-05",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT2M14S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Ponte Vedra Concert Hall",
+      "description": "Promotional and live-performance video production for the Ponte Vedra Concert Hall in Ponte Vedra Beach, Florida, produced by First Sight Films.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/ponte-vedra-concert-hall-florida-thumbnail.jpg",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/ponte-vedra-concert-hall-brand-video.mp4",
+      "uploadDate": "2026-02",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT30S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Fort Mose Jazz & Blues Festival",
+      "description": "First Sight Films produced the festival recap video for the Fort Mose Jazz & Blues Festival in St. Augustine, Florida.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/FORT+MOSE_-13_08323525.JPG",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/fort-mose-jazz-blues-festival-recap-video-st-augustine.mp4",
+      "uploadDate": "2026-02",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT50S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Sing Out Loud Music Festival 2024",
+      "description": "First Sight Films produced the recap video for the 2024 Sing Out Loud Music Festival in St. Augustine, Florida.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/NO+WATER+Sing+Out+Loud+2024+RECAP+__24ad2bd1.JPG",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/sing-out-loud-2024.mp4",
+      "uploadDate": "2024",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT1M1S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Ice Plant",
+      "description": "Brand video production for the Ice Plant bar and restaurant in St. Augustine, Florida, produced by First Sight Films.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/Drink+Shot+Pouring+_b8c25277.jpg",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/ice-plant-st-augustine-fl.mp4",
+      "uploadDate": "2018-07",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT31S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Aviles Street Festival",
+      "description": "First Sight Films produced the event film for the Aviles Street Festival with the St. Johns Cultural Council in St. Augustine, Florida.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/AVILES+STREET+FESTIVAL+_STA+_ST+JOHNS+COUNTY+_EVENT+FILM_9fb25c19.jpg",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/aviles-street-festival-st-johns-cultural-council.mp4",
+      "uploadDate": "2025-04",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT46S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Friends of Acadia",
+      "description": "A documentary brand story film for Friends of Acadia on the volunteer program that helps sustain Acadia National Park in Maine.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/FRIENDS+OF+ACADIA+_MAINE+_BRAND+STORY+FILM+_VOLUNTEER+STEWARDSHIP+_2025_161fcd55.png",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/friends-of-acadia-brand-video-maine.mp4",
+      "uploadDate": "2025",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT1M9S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Rocky Mountain Conservancy",
+      "description": "A documentary brand story film for the Rocky Mountain Conservancy, philanthropic partner of Rocky Mountain National Park in Colorado, produced by First Sight Films.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/Rocky+Mountain+Conservancy+_Brand+Story+Film+_2025_4093bc35.png",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/rocky-mountain-conservancy-denver-colorado.mp4",
+      "uploadDate": "2025",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT50S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "SJC Chamber of Commerce",
+      "description": "First Sight Films produced the 120th-anniversary event video for the St. Johns County Chamber of Commerce.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/CELEBRATE__74406376.JPG",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/sjc-chamber-of-commerce-celebrate-florida.mp4",
+      "uploadDate": "2024-12",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT1M12S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Live Wildly + Florida State Park Foundation",
+      "description": "Campaign video production for Live Wildly and the Florida State Park Foundation, produced by First Sight Films.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/Meredith+Budd+Live+Wildly+Florida_602ffe36.JPG",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/live-wildly-florida-state-park-foundation.mp4",
+      "uploadDate": "2025-08",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT2M57S"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Irish Consulate — St. Augustine Visitor Center",
+      "description": "First Sight Films produced the event video for the Irish Consulate at the City of St. Augustine Visitor Center in Florida.",
+      "thumbnailUrl": "https://www.firstsightfilms.com/images/irish-consulate-city-of-st-augustine-visitor-center-thumbnail.jpg",
+      "contentUrl": "https://www.firstsightfilms.com/video/portfolio/irish-consulate-city-of-st-augustine-visitor-center.mp4",
+      "uploadDate": "2026-03",
+      "publisher": {
+        "@type": "Organization",
+        "name": "First Sight Films",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.firstsightfilms.com/images/fsf-logo.png"
+        }
+      },
+      "duration": "PT1M5S"
+    }
+  ]
+}
+</script>
 
 <footer class="site-footer">
 

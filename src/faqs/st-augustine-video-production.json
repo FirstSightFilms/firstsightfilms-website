@@ -30,8 +30,150 @@
       "answer": "<p>Yes. Corporate event videography — sales rallies, conferences, galas, anniversaries — is one of our specialties. Recent work includes the HMA Sales Rally at Embassy Suites St. Augustine Beach and the SJC Chamber of Commerce 120th anniversary celebration. We can deliver a full recap, social cutdowns, and individual interview clips from the same shoot.</p>"
     },
     {
+      "question": "Can we use the video in our ads and campaigns?",
+      "answer": "<p>Yes. You get a perpetual license to use everything we deliver for commercial purposes — website, social, and paid advertising. We keep ownership of the footage (and may feature the work in our own portfolio), but your right to run it in your marketing doesn't expire.</p>"
+    },
+    {
+      "question": "How do you make sure interviews and speaker audio are clean?",
+      "answer": "<p>We capture multiple audio inputs for redundancy, so one failure never costs you the take. For a podium or stage, we pull a direct feed from the venue's audio board and add lav mics on speakers when they're there for the full remarks. Clean audio is half of what makes a video feel professional — we don't leave it to the on-camera mic.</p>"
+    },
+    {
+      "question": "Can you provide a certificate of insurance for our venue?",
+      "answer": "<p>Yes. We carry $1 million in general liability insurance and can send a certificate of insurance ahead of your shoot, including naming your venue as additional insured if they require it.</p>"
+    },
+    {
+      "question": "What if something goes wrong with the gear?",
+      "answer": "<p>We bring backups for everything — cameras, audio, power, and media. On multi-camera shoots, a single point of failure never costs you the moment. That redundancy is a big part of why clients trust us with once-only events they can't reshoot.</p>"
+    },
+    {
+      "question": "How far in advance should I book?",
+      "answer": "<p>The sooner the better — we take a limited number of projects at a time, and dates fill first in busy stretches. If your shoot is soon, check the date with us now; we can sometimes fit in fast-turnaround work.</p>"
+    },
+    {
+      "question": "What makes you different from a freelancer or another production company?",
+      "answer": "<p>Most companies hand you a video; we set out to deliver a result. We start from your goal, ask why until we understand it, and stay tenacious until the finished piece does the job — like redirecting a camera-shy interviewee until the real story comes out. You also get a full in-house team (creative direction, filming, editing, color, and music under one roof) and the trust of the institutions we already work with, from national lenders to the organizations that run St. Augustine's biggest venues.</p>"
+    },
+    {
       "question": "How do I get a quote for my video project?",
       "answer": "<p>The fastest way is the contact form on our <a href=\"/contact/\">contact page</a> — tell us what you're trying to accomplish, your timeline, and any examples you like. We'll respond within one business day with next steps and a ballpark quote.</p>"
     }
-  ]
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of video production does First Sight Films offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We produce corporate videos, brand story films, event coverage, festival recaps, and social media content. Our portfolio above includes work for businesses, nonprofits, music festivals, and cultural institutions across St. Augustine, Jacksonville, and beyond."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is First Sight Films based, and where do you film?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're based in St. Augustine, FL and primarily serve Northeast Florida — including Jacksonville, Ponte Vedra, St. Johns County, and Duval County. There are no travel fees within 60 miles. We also travel nationally for select projects, including recent shoots in Maine (Friends of Acadia) and Colorado (Rocky Mountain Conservancy)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a video production project cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most projects range from $3,000 to $15,000 depending on scope, length, and crew size. We also offer monthly content retainers starting at $5,000 for organizations that need ongoing content. Reach out with your goals and we'll give you a clear, itemized quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a typical video project take from start to finish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simple projects in St. Augustine or Jacksonville can be delivered in 3–5 days. Larger productions — like brand films, festival recaps, or multi-day corporate shoots — typically take 3–6 weeks from kickoff to final delivery. We start every project with a focused discovery call so the shoot day runs efficiently and revisions stay minimal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with nonprofits and festivals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A significant portion of our portfolio is nonprofit and festival work — including Friends of Acadia, Rocky Mountain Conservancy, Live Wildly + Florida State Park Foundation, Fort Mose Jazz & Blues Festival, Sing Out Loud Music Festival, and the St. Johns County Chamber of Commerce. We offer adjusted rates for qualifying mission-driven organizations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included when I hire First Sight Films for a video project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Everything end-to-end: creative direction, pre-production planning, filming, editing, color grading, music licensing, and revisions. You get a full production team — not just a camera operator. We also help with content strategy upfront, so you're investing in video that actually moves your business."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you produce video coverage for corporate events in St. Augustine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Corporate event videography — sales rallies, conferences, galas, anniversaries — is one of our specialties. Recent work includes the HMA Sales Rally at Embassy Suites St. Augustine Beach and the SJC Chamber of Commerce 120th anniversary celebration. We can deliver a full recap, social cutdowns, and individual interview clips from the same shoot."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we use the video in our ads and campaigns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You get a perpetual license to use everything we deliver for commercial purposes — website, social, and paid advertising. We keep ownership of the footage (and may feature the work in our own portfolio), but your right to run it in your marketing doesn't expire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you make sure interviews and speaker audio are clean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We capture multiple audio inputs for redundancy, so one failure never costs you the take. For a podium or stage, we pull a direct feed from the venue's audio board and add lav mics on speakers when they're there for the full remarks. Clean audio is half of what makes a video feel professional — we don't leave it to the on-camera mic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you provide a certificate of insurance for our venue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We carry $1 million in general liability insurance and can send a certificate of insurance ahead of your shoot, including naming your venue as additional insured if they require it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if something goes wrong with the gear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We bring backups for everything — cameras, audio, power, and media. On multi-camera shoots, a single point of failure never costs you the moment. That redundancy is a big part of why clients trust us with once-only events they can't reshoot."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The sooner the better — we take a limited number of projects at a time, and dates fill first in busy stretches. If your shoot is soon, check the date with us now; we can sometimes fit in fast-turnaround work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes you different from a freelancer or another production company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most companies hand you a video; we set out to deliver a result. We start from your goal, ask why until we understand it, and stay tenacious until the finished piece does the job — like redirecting a camera-shy interviewee until the real story comes out. You also get a full in-house team (creative direction, filming, editing, color, and music under one roof) and the trust of the institutions we already work with, from national lenders to the organizations that run St. Augustine's biggest venues."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get a quote for my video project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The fastest way is the contact form on our contact page — tell us what you're trying to accomplish, your timeline, and any examples you like. We'll respond within one business day with next steps and a ballpark quote."
+        }
+      }
+    ]
+  }
 }
