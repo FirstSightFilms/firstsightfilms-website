@@ -1,0 +1,118 @@
+{
+  "questions": [
+    {
+      "question": "What does First Sight Films do for the St. Augustine Amphitheatre?",
+      "answer": "<p>We're the Amphitheatre's on-call photo and video partner. For four years, we've covered concert nights, venue promos, and the Saturday market for social, web, and broadcast.</p>"
+    },
+    {
+      "question": "Do you shoot both photography and video at events?",
+      "answer": "<p>Yes. We shoot video and photography together, so the same event can be covered with both motion and stills.</p>"
+    },
+    {
+      "question": "What do you deliver at the St. Augustine Amphitheatre?",
+      "answer": "<p>We deliver commercial photography, concert photography, and architectural photography, along with video highlight reels, recap films, social media reels, and short-form content — all formatted for social, web, and broadcast.</p>"
+    },
+    {
+      "question": "Who is the client behind the Amphitheatre work?",
+      "answer": "<p>The client is SJC Cultural Events, the nonprofit behind the Amphitheatre, Ponte Vedra Concert Hall, Sing Out Loud, and Fort Mose Jazz &amp; Blues.</p>"
+    },
+    {
+      "question": "How long have you worked with the St. Augustine Amphitheatre?",
+      "answer": "<p>We have worked with the Amphitheatre for four years.</p>"
+    },
+    {
+      "question": "What does \"on call\" mean in this relationship?",
+      "answer": "<p>It means we handle video, editing, and photography as the calendar demands. SJC Cultural Events keeps us on call under a standing arrangement.</p>"
+    },
+    {
+      "question": "Who owns the photos and video?",
+      "answer": "<p>First Sight Films retains ownership. The client receives a perpetual commercial license for web, social, and paid ads.</p>"
+    },
+    {
+      "question": "What does coverage at the Amphitheatre cost?",
+      "answer": "<p>Event coverage starts at $1,000 for a half-day. Most projects run $3,000–$15,000.</p>"
+    },
+    {
+      "question": "How fast do you deliver?",
+      "answer": "<p>During a show, social cutdowns land same- or next-day. The full recap usually arrives within 7 business days.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does First Sight Films do for the St. Augustine Amphitheatre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're the Amphitheatre's on-call photo and video partner. For four years, we've covered concert nights, venue promos, and the Saturday market for social, web, and broadcast."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you shoot both photography and video at events?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We shoot video and photography together, so the same event can be covered with both motion and stills."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do you deliver at the St. Augustine Amphitheatre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We deliver commercial photography, concert photography, and architectural photography, along with video highlight reels, recap films, social media reels, and short-form content — all formatted for social, web, and broadcast."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is the client behind the Amphitheatre work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The client is SJC Cultural Events, the nonprofit behind the Amphitheatre, Ponte Vedra Concert Hall, Sing Out Loud, and Fort Mose Jazz & Blues."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long have you worked with the St. Augustine Amphitheatre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We have worked with the Amphitheatre for four years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does \"on call\" mean in this relationship?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It means we handle video, editing, and photography as the calendar demands. SJC Cultural Events keeps us on call under a standing arrangement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the photos and video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films retains ownership. The client receives a perpetual commercial license for web, social, and paid ads."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does coverage at the Amphitheatre cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Event coverage starts at $1,000 for a half-day. Most projects run $3,000–$15,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast do you deliver?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "During a show, social cutdowns land same- or next-day. The full recap usually arrives within 7 business days."
+        }
+      }
+    ]
+  }
+}

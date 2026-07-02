@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  /work/{project}/ — ENTITY / CASE-STUDY PAGE TEMPLATE
+  ============================================================================
+  This is the reusable shell for a single real project under /work/.
+  It is `_`-prefixed, so the build script SKIPS it (never rendered). To make a
+  real page, COPY this file to:  src/pages/work/<project-slug>/index.html
+  then fill every [[BRACKETED]] token and follow the <!-- SEO: ... --> notes.
+
+  RULES (from FSF-Site-Architecture.md §3):
+  - One entity page ONLY where a real shoot backs it (footage/photos). No thin shells.
+  - Target ~1,000–1,400 words. Job = proof + closing + citation (NOT keyword capture).
+  - No fabricated quotes. Attribution guardrail: event/entity-scale stats stay bound
+    to that entity — never claimed as First Sight Films' own result.
+  - CONTENT is SEO's job. Web dev owns this structure/shell; SEO fills the copy.
+
+  SECTION ORDER (do not reorder): 1 Breadcrumb · 2 Hero · 3 Project at a glance ·
+  4 Story · 5 The work (video/stills) · [5b Recent Shoots feed] · 6 Related ·
+  7 Conversion (required) · 8 FAQ · 9 Schema stack.
+
+  TWO MODES (same shell — architecture-doc §3 / §3b):
+  - ONE-OFF page (shot once): keep §5 "The Work" media rows. DELETE §5b + the
+    lightbox modal + the work-feed.js script at the bottom.
+  - RECURRING PILLAR (shot repeatedly — Amphitheatre, Ponte Vedra Concert Hall):
+    DELETE §5 "The Work" and use §5b "Recent Shoots" (dated feed, append newest on
+    top). KEEP the lightbox modal + work-feed.js script. One URL forever — never a
+    page per show.
+
+  DELIVERY: SEO provides copy per page. FAQ is data-driven — create
+  src/faqs/work-<project-slug>.json (with a "schema" key) and reference it below.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+{{head}}
+<link rel="stylesheet" href="/css/services.css">
+<title>[[PROJECT NAME]] | First Sight Films</title>
+<meta name="description" content="[[SEO META DESCRIPTION — ~150 chars, entity-named]]">
+<!-- FAQ schema: rename to this page's FAQ json (src/faqs/work-<slug>.json must have a "schema" key) -->
+{{faq-schema:work-PROJECT-SLUG}}
+<style>
+  /* Page-scoped classes not in the global stylesheets (adapted from the event page). */
+  .work-hero { padding: 3rem 1.5rem 2rem; text-align: center; }
+  .work-hero .hero-img { max-width: 900px; margin: 0 auto 2rem; border-radius: 10px; overflow: hidden; }
+  .work-hero .hero-img img { width: 100%; height: auto; display: block; }
+  .work-hero h1 { max-width: 22ch; margin: 0 auto 1rem; }
+  .work-hero .work-lead { font-size: 1.15rem; line-height: 1.7; max-width: 60ch; margin: 0 auto 2rem; color: #333; }
+
+  /* Project at a glance (extractable = citable) */
+  .glance-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; margin: 0 0 .6rem; }
+  .project-glance { list-style: none; padding: 1rem 1.25rem; margin: 0 auto 1.25rem; max-width: 760px; background: #f7f7f7; border-left: 3px solid #f4c057; border-radius: 4px; }
+  .project-glance li { margin: 0 0 .5rem; line-height: 1.55; font-size: .95rem; color: #333; }
+  .project-glance li:last-child { margin-bottom: 0; }
+
+  /* Story + case-study prose */
+  .work-story { max-width: 760px; margin: 0 auto; text-align: left; }
+  .work-story p { line-height: 1.7; margin-bottom: 1rem; color: #333; }
+  .work-story blockquote { border-left: 3px solid #f4c057; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #444; }
+  .work-story blockquote footer { font-style: normal; font-size: .9rem; color: #666; margin-top: .5rem; }
+  .work-story a, .project-glance a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+
+  /* Alternating media rows (image/video + caption) */
+  .media-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: center; max-width: 1000px; margin: 2rem auto; }
+  .media-row:nth-of-type(even) .media-row-text { order: 2; }
+  .media-row .media-frame { border-radius: 10px; overflow: hidden; background: #000; }
+  .media-row .media-frame img, .media-row .media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .media-row-text p { line-height: 1.7; color: #333; }
+  @media (max-width: 700px) { .media-row { grid-template-columns: 1fr; } .media-row:nth-of-type(even) .media-row-text { order: 0; } }
+
+  /* Conversion block (the closer) */
+  .work-conversion { text-align: center; }
+  .work-conversion .conversion-inner { max-width: 640px; margin: 0 auto; }
+  .work-conversion .price-signal { font-size: .95rem; color: #555; margin: 1rem 0; }
+  .work-conversion .next-steps { font-size: .95rem; color: #555; margin-top: 1rem; }
+
+  /* ── §5b Recent Shoots feed (recurring pillars) ── */
+  .shoot-feed { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
+  .shoot-card { border-bottom: 1px solid #eee; padding-bottom: 2rem; }
+  .shoot-card.is-collapsed { display: none; } /* stays in DOM (indexable), just hidden until "Load more" */
+  .shoot-card-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .75rem; }
+  .shoot-card-head time { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; }
+  .shoot-card-head h3 { margin: 0; font-size: 1.2rem; }
+  .shoot-card-note { margin: .9rem 0 0; color: #333; line-height: 1.6; font-size: .95rem; }
+  .shoot-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+  @media (max-width: 560px) { .shoot-thumbs { grid-template-columns: repeat(2, 1fr); } }
+  .shoot-thumb { position: relative; display: block; padding: 0; border: 0; background: #000; border-radius: 8px; overflow: hidden; cursor: pointer; aspect-ratio: 4/3; }
+  .shoot-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+  .shoot-thumb:hover img { transform: scale(1.05); }
+  .shoot-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; padding-left: 3px; }
+  .shoot-thumb:hover .shoot-play { background: #f4c057; color: #1a1a1a; }
+  .shoot-load-more { display: block; margin: 2.5rem auto 0; }
+
+  /* Shared lightbox modal (photo + video) */
+  .work-modal { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 2rem; }
+  .work-modal[data-open="true"] { display: flex; }
+  .work-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.9); cursor: pointer; }
+  .work-modal__content { position: relative; width: auto; max-width: 1200px; max-height: 90vh; }
+  .work-modal__player, .work-modal__image { max-width: 100%; max-height: 90vh; background: #000; display: block; }
+  .work-modal__player[hidden], .work-modal__image[hidden] { display: none; }  /* honor the hidden attr the JS toggles */
+  .work-modal__close { position: absolute; top: -3rem; right: 0; background: none; border: 0; color: #fff; font-size: 2.5rem; line-height: 1; cursor: pointer; padding: .25rem .75rem; }
+  .work-modal__close:hover { color: #f4c057; }
+  @media (max-width: 768px) { .work-modal { padding: 1rem; } .work-modal__close { top: -2.5rem; font-size: 2rem; } }
+</style>
+</head>
+<body class="page-service">
+
+{{header}}
+
+<main>
+
+  <!-- ═══ 1. BREADCRUMB (Home › Work › Project) — provides BreadcrumbList schema via microdata ═══ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/work/" itemprop="item"><span itemprop="name">Work</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">[[PROJECT NAME]]</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ═══ 2. HERO — real image + H1 (the entity name) + lead + credibility bar ═══ -->
+  <section class="work-hero">
+    <div class="container">
+      <!-- SEO: real hero image (photo or video still from this shoot). Descriptive alt. -->
+      <div class="hero-img">
+        <img src="[[/images/... hero image for this project]]" alt="[[descriptive alt: entity + what it shows]]" width="900" height="600">
+      </div>
+      <!-- SEO: H1 = the entity name (venue / event / client). This is the search + citation asset. -->
+      <h1>[[PROJECT / ENTITY NAME]]</h1>
+      <p class="work-lead">[[1–2 sentence lead: who this was for and what we made — plain, specific.]]</p>
+      <a href="/contact/" class="btn btn-primary">Get a Quote</a>
+      <!-- Credibility bar (relationship + rating). Keep review count = 48 site-wide. -->
+      <div class="credibility-grid" style="margin-top: 2.5rem;">
+        <div class="credibility-item"><span class="credibility-number">[[e.g. 3 yrs]]</span><span class="credibility-label">[[Relationship]]</span></div>
+        <div class="credibility-item"><span class="credibility-number">5.0★</span><span class="credibility-label">Google</span></div>
+        <div class="credibility-item"><span class="credibility-number">48</span><span class="credibility-label">Reviews</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 3. PROJECT AT A GLANCE — extractable quick-facts (citable) ═══ -->
+  <section class="section">
+    <div class="container">
+      <p class="glance-label">Project at a glance</p>
+      <!-- SEO: keep each line factual + extractable. Attribution guardrail applies to any stat. -->
+      <ul class="project-glance">
+        <li><strong>Client / context:</strong> [[who + who they are]]</li>
+        <li><strong>What we did:</strong> [[video, photo, or both — scope]]</li>
+        <li><strong>Venue / event:</strong> [[named entity + location + date]]</li>
+        <li><strong>Deliverables:</strong> [[recap, social cuts, stills, etc.]]</li>
+        <li><strong>Usage rights:</strong> [[how the client uses the footage]]</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ 4. THE STORY — 2–3 paragraphs: the real work, the challenge, the outcome ═══ -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="work-story">
+        <!-- SEO: Diego's voice. No fabricated quotes. Real quotes only, with attribution. -->
+        <p>[[Paragraph 1 — the situation / what they needed.]]</p>
+        <p>[[Paragraph 2 — what we did + the challenge we solved.]]</p>
+        <p>[[Paragraph 3 — the outcome / how the work was used.]]</p>
+        <!-- Optional real testimonial:
+        <blockquote>
+          <p>"[[verbatim client quote]]"</p>
+          <footer>— [[Name, Title, Org (source, date)]]</footer>
+        </blockquote>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 5. THE WORK — real footage (VideoObject) + stills (ImageObject), alternating rows ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Work</h2>
+      </div>
+
+      <!-- SEO/web dev: one .media-row per asset. Alternate image/video. 100% alt text. -->
+      <div class="media-row">
+        <div class="media-frame">
+          <!-- Real video from this shoot -->
+          <video controls playsinline poster="[[/images/... poster]]" preload="none">
+            <source src="[[/video/portfolio/... .mp4]]" type="video/mp4">
+          </video>
+        </div>
+        <div class="media-row-text">
+          <p>[[Caption / context for this clip.]]</p>
+        </div>
+      </div>
+
+      <div class="media-row">
+        <div class="media-frame">
+          <img src="[[/images/... still]]" alt="[[descriptive alt]]" loading="lazy">
+        </div>
+        <div class="media-row-text">
+          <p>[[Caption / context for this still.]]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 5b. RECENT SHOOTS — dated feed (RECURRING PILLARS ONLY) ═══
+       Use this INSTEAD of §5 "The Work" for recurring entities (Amphitheatre, Ponte
+       Vedra). Append newest card on TOP. Cards beyond 12 auto-collapse behind
+       "Load more" (they stay in the DOM = still indexed). Photo + video cards mix.
+       DELETE this whole section (and the lightbox modal + work-feed.js at the bottom)
+       for one-off pages. -->
+  <section class="section section-gray" id="recent-shoots">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recent Shoots</h2>
+        <p>[[optional line, e.g. "New coverage from the Amphitheatre — newest first."]]</p>
+      </div>
+
+      <div class="shoot-feed" id="shoot-feed">
+
+        <!-- ── RECAP CARD (video) — copy per shoot, newest on top ── -->
+        <article class="shoot-card">
+          <div class="shoot-card-head">
+            <time datetime="[[YYYY-MM]]">[[Month YYYY]]</time>
+            <h3>[[Event / artist name]]</h3>
+          </div>
+          <div class="shoot-card-media">
+            <button type="button" class="shoot-thumb" data-lightbox-video="[[/video/portfolio/....mp4]]" aria-label="Play [[event]] recap">
+              <img src="[[/images/...-thumb.webp]]" alt="[[descriptive alt]]" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </div>
+          <p class="shoot-card-note">[[1–2 sentences.]]</p>
+        </article>
+
+        <!-- ── RECAP CARD (photo set, 3–6 thumbnails) ── -->
+        <article class="shoot-card">
+          <div class="shoot-card-head">
+            <time datetime="[[YYYY-MM]]">[[Month YYYY]]</time>
+            <h3>[[Event / artist name]]</h3>
+          </div>
+          <div class="shoot-card-media shoot-thumbs">
+            <!-- Each thumb: data-lightbox-img = the FULL-RES src; the <img> is the small thumb. Repeat 3–6. -->
+            <button type="button" class="shoot-thumb" data-lightbox-img="[[/images/...-large.webp]]" aria-label="[[alt]]">
+              <img src="[[/images/...-thumb.webp]]" alt="[[descriptive alt]]" loading="lazy">
+            </button>
+          </div>
+          <p class="shoot-card-note">[[1–2 sentences.]]</p>
+        </article>
+
+        <!-- SEO: add more cards above the oldest; per §9 add one VideoObject/ImageObject
+             schema block per card so structured data accumulates. -->
+
+      </div>
+
+      <button type="button" class="btn btn-primary shoot-load-more" id="shoot-load-more" hidden>Load more</button>
+    </div>
+  </section>
+
+  <!-- ═══ 6. RELATED — soft-links to the relevant service hub(s) + sibling projects ═══ -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2>Related</h2>
+      </div>
+      <div class="work-story">
+        <!-- SEO: link the service hub(s) this project supports + 1–2 sibling /work/ projects. -->
+        <p>
+          Service: <a href="/st-augustine-video-production/">St. Augustine Video Production</a> ·
+          <a href="/event-video-coverage-st-augustine/">Event Coverage</a><br>
+          More work: <a href="/work/">See all projects</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 7. CONVERSION BLOCK (REQUIRED — the closer) ═══ -->
+  <section class="section section-light work-conversion">
+    <div class="container">
+      <div class="conversion-inner">
+        <div class="section-header">
+          <h2>[[Have a project like this? Let's talk.]]</h2>
+          <p>[[One line of reassurance / what we bring.]]</p>
+        </div>
+        <a href="/contact/" class="btn btn-primary">Let's Talk</a>
+        <!-- Pricing signal (from the architecture doc): event coverage from $1,000; most projects $3K–$15K. -->
+        <p class="price-signal">Event coverage from $1,000 · most projects $3K–$15K.</p>
+        <p class="next-steps"><strong>What happens next:</strong> [[book a 15-min call → we scope it → you get a transparent quote.]]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 8. FAQ (4–5) — visible + FAQPage schema (1:1) ═══ -->
+  <section class="section section-gray" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <!-- Data-driven: create src/faqs/work-<slug>.json (with "schema" key) and reference it here. -->
+      {{faq:work-PROJECT-SLUG}}
+    </div>
+  </section>
+
+</main>
+
+<!-- Shared lightbox modal (RECURRING PILLARS ONLY — delete with §5b for one-off pages) -->
+<div id="work-modal" class="work-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Media viewer">
+  <div class="work-modal__backdrop" data-close-modal></div>
+  <div class="work-modal__content">
+    <button type="button" class="work-modal__close" data-close-modal aria-label="Close">&times;</button>
+    <video id="work-modal-video" class="work-modal__player" controls playsinline preload="metadata" hidden></video>
+    <img id="work-modal-image" class="work-modal__image" alt="" hidden>
+  </div>
+</div>
+<script src="/js/work-feed.js" defer></script>
+
+<!-- ═══ 9. SCHEMA STACK ═══
+     NOTE: do NOT write module tokens (schema / faq-schema in double braces) inside
+     comments — the build expands them even in comments. Refer to them by name only.
+     BreadcrumbList → from the breadcrumb microdata above.
+     FAQPage        → from the faq-schema module in <head> (set the faq name there).
+     LocalBusiness + AggregateRating → from the schema module below.
+     VideoObject / ImageObject → inline per asset (fill one block per real asset). -->
+
+<!-- SEO/web dev: one VideoObject per real video. Use ffprobe'd ISO-8601 durations. -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"[[Video title — entity-named]]","description":"[[full-sentence description]]","thumbnailUrl":"https://www.firstsightfilms.com[[/images/... poster]]","uploadDate":"[[YYYY-MM]]","duration":"[[PT#M#S]]","contentUrl":"https://www.firstsightfilms.com[[/video/portfolio/... .mp4]]","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+<!-- Optional: one ImageObject per key still. -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com[[/images/... still]]","creditText":"First Sight Films","creator":{"@type":"Organization","name":"First Sight Films"},"description":"[[what the image shows]]"}
+</script>
+
+{{schema}}
+
+{{footer}}
+</body>
+</html>

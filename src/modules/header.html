@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="header-content">
 
-    <!-- Logo/Branding -->
+    <!-- Logo/Branding (logo links home — no separate Home nav item) -->
     <div class="branding">
       <a href="/" class="logo">
         <img src="/images/logos/first-sight-films-logo-st-augustine-fl.png" alt="First Sight Films - St. Augustine Video & Photo Production" width="180" height="60">
@@ -9,19 +9,7 @@
       <span class="tagline">Video Production & Photography<br>St. Augustine | Jacksonville</span>
     </div>
 
-    <!-- Desktop Navigation -->
-    <nav class="nav-main">
-      <a href="/">Home</a>
-      <a href="/st-augustine-video-production/">Video</a>
-      <a href="/event-video-coverage-st-augustine/">Events</a>
-      <a href="/st-augustine-commercial-photographer/">Photo</a>
-      <a href="/st-augustine-event-photographer/">Event Photo</a>
-      <a href="/guides/">Guides</a>
-      <a href="/aboutus/">About</a>
-      <a href="/contact/" class="nav-cta">Let's Talk</a>
-    </nav>
-
-    <!-- Mobile Menu Toggle -->
+    <!-- Menu Toggle (hamburger — used on all screen sizes) -->
     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
       <span></span>
       <span></span>
@@ -30,13 +18,35 @@
 
   </div>
 
-  <!-- Mobile Navigation -->
-  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-    <a href="/">Home</a>
-    <a href="/st-augustine-video-production/">Video</a>
-    <a href="/event-video-coverage-st-augustine/">Events</a>
-    <a href="/st-augustine-commercial-photographer/">Photo</a>
-    <a href="/st-augustine-event-photographer/">Event Photo</a>
+  <!-- Primary Navigation (hamburger panel) -->
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Main navigation">
+
+    <!-- Video (accordion) -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="nav-acc-video">
+        Video <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="mobile-accordion-content" id="nav-acc-video">
+        <a href="/st-augustine-video-production/">St. Augustine Video Production</a>
+        <a href="/corporate-video-st-augustine/">Corporate Video</a>
+        <a href="/event-video-coverage-st-augustine/">Event Coverage</a>
+        <a href="/social-media-st-augustine/">Social Content</a>
+        <a href="/brand-story-st-augustine/">Brand Story</a>
+      </div>
+    </div>
+
+    <!-- Photography (accordion) -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="nav-acc-photo">
+        Photography <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="mobile-accordion-content" id="nav-acc-photo">
+        <a href="/st-augustine-commercial-photographer/">Commercial Photography</a>
+        <a href="/st-augustine-event-photographer/">Event Photography</a>
+      </div>
+    </div>
+
+    <a href="/work/">Work</a>
     <a href="/guides/">Guides</a>
     <a href="/aboutus/">About</a>
     <a href="/contact/" class="mobile-nav-cta">Let's Talk</a>
@@ -45,7 +55,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile menu toggle
+  // Hamburger menu toggle
   const mobileToggle = document.querySelector('.mobile-menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
 
@@ -56,5 +66,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.setAttribute('aria-expanded', isOpen);
     });
   }
+
+  // Accordion sections (Video / Photography)
+  document.querySelectorAll('.mobile-accordion-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      const accordion = this.closest('.mobile-accordion');
+      const isOpen = accordion.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+  });
 });
 </script>

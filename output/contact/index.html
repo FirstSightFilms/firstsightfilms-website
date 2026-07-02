@@ -43,14 +43,17 @@
 </style>
 
 <!-- Deferred CSS - Load asynchronously to avoid render blocking -->
-<link rel="stylesheet" href="/css/main.css?v=1ee420c6" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="/css/components.css?v=1ee420c6" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/css/main.css?v=2f20891a" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/css/components.css?v=2f20891a" media="print" onload="this.media='all'">
 <noscript>
-  <link rel="stylesheet" href="/css/main.css?v=1ee420c6">
-  <link rel="stylesheet" href="/css/components.css?v=1ee420c6">
+  <link rel="stylesheet" href="/css/main.css?v=2f20891a">
+  <link rel="stylesheet" href="/css/components.css?v=2f20891a">
 </noscript>
 
-<link rel="stylesheet" href="/css/services.css?v=1ee420c6">
+<!-- Umami analytics (privacy-friendly, cookieless — no consent banner needed) -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="23f9e6da-5e3a-461f-a191-1036350897bf"></script>
+
+<link rel="stylesheet" href="/css/services.css?v=2f20891a">
 <title>Contact Us | First Sight Films - St. Augustine Video Production</title>
 <meta name="description" content="Contact First Sight Films for video production in St. Augustine, FL. Get a free consultation for corporate videos, event coverage, or social media content.">
 <script type="application/ld+json">
@@ -164,7 +167,7 @@
 <header class="site-header">
   <div class="header-content">
 
-    <!-- Logo/Branding -->
+    <!-- Logo/Branding (logo links home — no separate Home nav item) -->
     <div class="branding">
       <a href="/" class="logo">
         <img src="/images/logos/first-sight-films-logo-st-augustine-fl.png" alt="First Sight Films - St. Augustine Video & Photo Production" width="180" height="60">
@@ -172,19 +175,7 @@
       <span class="tagline">Video Production & Photography<br>St. Augustine | Jacksonville</span>
     </div>
 
-    <!-- Desktop Navigation -->
-    <nav class="nav-main">
-      <a href="/">Home</a>
-      <a href="/st-augustine-video-production/">Video</a>
-      <a href="/event-video-coverage-st-augustine/">Events</a>
-      <a href="/st-augustine-commercial-photographer/">Photo</a>
-      <a href="/st-augustine-event-photographer/">Event Photo</a>
-      <a href="/guides/">Guides</a>
-      <a href="/aboutus/">About</a>
-      <a href="/contact/" class="nav-cta">Let's Talk</a>
-    </nav>
-
-    <!-- Mobile Menu Toggle -->
+    <!-- Menu Toggle (hamburger — used on all screen sizes) -->
     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
       <span></span>
       <span></span>
@@ -193,13 +184,35 @@
 
   </div>
 
-  <!-- Mobile Navigation -->
-  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-    <a href="/">Home</a>
-    <a href="/st-augustine-video-production/">Video</a>
-    <a href="/event-video-coverage-st-augustine/">Events</a>
-    <a href="/st-augustine-commercial-photographer/">Photo</a>
-    <a href="/st-augustine-event-photographer/">Event Photo</a>
+  <!-- Primary Navigation (hamburger panel) -->
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Main navigation">
+
+    <!-- Video (accordion) -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="nav-acc-video">
+        Video <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="mobile-accordion-content" id="nav-acc-video">
+        <a href="/st-augustine-video-production/">St. Augustine Video Production</a>
+        <a href="/corporate-video-st-augustine/">Corporate Video</a>
+        <a href="/event-video-coverage-st-augustine/">Event Coverage</a>
+        <a href="/social-media-st-augustine/">Social Content</a>
+        <a href="/brand-story-st-augustine/">Brand Story</a>
+      </div>
+    </div>
+
+    <!-- Photography (accordion) -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="nav-acc-photo">
+        Photography <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="mobile-accordion-content" id="nav-acc-photo">
+        <a href="/st-augustine-commercial-photographer/">Commercial Photography</a>
+        <a href="/st-augustine-event-photographer/">Event Photography</a>
+      </div>
+    </div>
+
+    <a href="/work/">Work</a>
     <a href="/guides/">Guides</a>
     <a href="/aboutus/">About</a>
     <a href="/contact/" class="mobile-nav-cta">Let's Talk</a>
@@ -208,7 +221,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile menu toggle
+  // Hamburger menu toggle
   const mobileToggle = document.querySelector('.mobile-menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
 
@@ -219,6 +232,15 @@ document.addEventListener('DOMContentLoaded', function() {
       this.setAttribute('aria-expanded', isOpen);
     });
   }
+
+  // Accordion sections (Video / Photography)
+  document.querySelectorAll('.mobile-accordion-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      const accordion = this.closest('.mobile-accordion');
+      const isOpen = accordion.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+  });
 });
 </script>
 
@@ -261,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <h2>Book a 15-Minute Discovery Call</h2>
         <p>Pick a time that works for you. We'll talk through your project, your dates, and what you need&mdash;then follow up with a transparent, no-surprises quote.</p>
         <!-- Google Calendar Appointment Scheduling -->
-        <div class="booking-button">
+        <div class="booking-button" data-umami-event="calendar-open">
           <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
           <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
           <script>
@@ -278,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function() {
           })();
           </script>
           <noscript>
-            <a class="btn btn-primary" href="https://calendar.app.google/QzcD7BqrKKBuLCD48" target="_blank" rel="noopener">Book a 15-Minute Discovery Call</a>
+            <a class="btn btn-primary" href="https://calendar.app.google/QzcD7BqrKKBuLCD48" target="_blank" rel="noopener" data-umami-event="calendar-open">Book a 15-Minute Discovery Call</a>
           </noscript>
         </div>
       </div>
@@ -290,8 +312,8 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="contact-sidebar">
           <div class="contact-info-box">
             <h4>Get in Touch</h4>
-            <p><strong>Phone:</strong><br><a href="tel:+19044948397">(904) 494-8397</a></p>
-            <p><strong>Email:</strong><br><a href="mailto:info@firstsightfilms.com">info@firstsightfilms.com</a></p>
+            <p><strong>Phone:</strong><br><a href="tel:+19044948397" data-umami-event="phone-click">(904) 494-8397</a></p>
+            <p><strong>Email:</strong><br><a href="mailto:info@firstsightfilms.com" data-umami-event="email-click">info@firstsightfilms.com</a></p>
             <div class="contact-social">
               <strong>Follow Us:</strong>
               <div class="contact-social-icons">
@@ -331,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <label for="message">Your Message</label>
               <textarea id="message" name="message" rows="5" placeholder="Tell us about your event: dates, hours of coverage, and deliverables — or book a call above and we'll dial in the details."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary" data-umami-event="contact-form-submit">Send Message</button>
           </form>
         </div>
       </div>
@@ -509,9 +531,9 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- CTA Banner -->
   <div class="footer-cta">
     <div class="footer-cta-content">
-      <h3>Ready to start your project?</h3>
-      <p>Let's create content that moves your business forward.</p>
-      <a href="/contact/" class="footer-cta-button">Let's Talk</a>
+      <h3>We're ready to start your project!</h3>
+      <p>Click below.</p>
+      <a href="/contact/" class="footer-cta-button">Send Us a Message</a>
     </div>
   </div>
 
@@ -524,7 +546,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <img src="/images/logos/first-sight-films-logo-st-augustine-fl.png" alt="First Sight Films - St. Augustine Video & Photo Production" loading="lazy" width="180" height="60">
           </a>
         </div>
-        <p class="footer-tagline">St. Augustine's video production team with 10+ years of experience creating professional business content across St. Johns County and Northeast Florida.</p>
+        <p class="footer-tagline">St. Augustine's video production company with 3 years of experience creating professional business content across St. Johns County and Northeast Florida.</p>
       </div>
 
       <!-- Navigation Columns -->
@@ -554,7 +576,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="footer-col">
           <p class="footer-heading">Company</p>
           <a href="/aboutus/">About Us</a>
+          <a href="/work/">Our Work</a>
           <a href="/guides/">Guides</a>
+          <a href="/commitments/">Commitments</a>
           <a href="/contact/">Contact</a>
         </div>
 
@@ -563,9 +587,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <p>First Sight Films</p>
           <p>St. Augustine, FL 32084</p>
           <p class="contact-label">Phone:</p>
-          <a href="tel:+19044948397">(904) 494-8397</a>
+          <a href="tel:+19044948397" data-umami-event="phone-click">(904) 494-8397</a>
           <p class="contact-label">Email:</p>
-          <a href="mailto:info@firstsightfilms.com">info@firstsightfilms.com</a>
+          <a href="mailto:info@firstsightfilms.com" data-umami-event="email-click">info@firstsightfilms.com</a>
         </div>
 
         <div class="footer-col">

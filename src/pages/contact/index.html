@@ -49,7 +49,7 @@
         <h2>Book a 15-Minute Discovery Call</h2>
         <p>Pick a time that works for you. We'll talk through your project, your dates, and what you need&mdash;then follow up with a transparent, no-surprises quote.</p>
         <!-- Google Calendar Appointment Scheduling -->
-        <div class="booking-button">
+        <div class="booking-button" data-umami-event="calendar-open">
           <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
           <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
           <script>
@@ -66,7 +66,7 @@
           })();
           </script>
           <noscript>
-            <a class="btn btn-primary" href="https://calendar.app.google/QzcD7BqrKKBuLCD48" target="_blank" rel="noopener">Book a 15-Minute Discovery Call</a>
+            <a class="btn btn-primary" href="https://calendar.app.google/QzcD7BqrKKBuLCD48" target="_blank" rel="noopener" data-umami-event="calendar-open">Book a 15-Minute Discovery Call</a>
           </noscript>
         </div>
       </div>
@@ -78,8 +78,8 @@
         <div class="contact-sidebar">
           <div class="contact-info-box">
             <h4>Get in Touch</h4>
-            <p><strong>Phone:</strong><br><a href="tel:+19044948397">(904) 494-8397</a></p>
-            <p><strong>Email:</strong><br><a href="mailto:info@firstsightfilms.com">info@firstsightfilms.com</a></p>
+            <p><strong>Phone:</strong><br><a href="tel:+19044948397" data-umami-event="phone-click">(904) 494-8397</a></p>
+            <p><strong>Email:</strong><br><a href="mailto:info@firstsightfilms.com" data-umami-event="email-click">info@firstsightfilms.com</a></p>
             <div class="contact-social">
               <strong>Follow Us:</strong>
               <div class="contact-social-icons">
@@ -119,7 +119,7 @@
               <label for="message">Your Message</label>
               <textarea id="message" name="message" rows="5" placeholder="Tell us about your event: dates, hours of coverage, and deliverables — or book a call above and we'll dial in the details."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary" data-umami-event="contact-form-submit">Send Message</button>
           </form>
         </div>
       </div>

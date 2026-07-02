@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "question": "What does First Sight Films do?",
+      "answer": "<p>A St. Augustine video and photography company producing corporate films, event and concert coverage, brand stories, and commercial photography across Northeast Florida.</p>"
+    },
+    {
+      "question": "Who have you worked with?",
+      "answer": "<p>The St. Augustine Amphitheatre, Ponte Vedra Concert Hall, Fort Mose Jazz &amp; Blues, and Flagler College, plus national brands like HMA Mortgage and Friends of Acadia.</p>"
+    },
+    {
+      "question": "Do you do both video and photography?",
+      "answer": "<p>Yes — often together, so you get motion and stills from the same shoot.</p>"
+    },
+    {
+      "question": "What areas do you serve?",
+      "answer": "<p>St. Augustine, St. Johns County, Jacksonville, Ponte Vedra, and across Northeast Florida.</p>"
+    },
+    {
+      "question": "How do we start a project?",
+      "answer": "<p>Tell us the date and what you need on the <a href=\"/contact/\">contact page</a>; we'll confirm scope and a quote.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does First Sight Films do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A St. Augustine video and photography company producing corporate films, event and concert coverage, brand stories, and commercial photography across Northeast Florida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who have you worked with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The St. Augustine Amphitheatre, Ponte Vedra Concert Hall, Fort Mose Jazz & Blues, and Flagler College, plus national brands like HMA Mortgage and Friends of Acadia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do both video and photography?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — often together, so you get motion and stills from the same shoot."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "St. Augustine, St. Johns County, Jacksonville, Ponte Vedra, and across Northeast Florida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we start a project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tell us the date and what you need on the contact page; we'll confirm scope and a quote."
+        }
+      }
+    ]
+  }
+}
