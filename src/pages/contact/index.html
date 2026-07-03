@@ -3,7 +3,12 @@
 <head>
 {{head}}
 <link rel="stylesheet" href="/css/services.css">
-<title>Contact Us | First Sight Films - St. Augustine Video Production</title>
+<style>
+  /* Match the referral dropdown to the form's input styling */
+  .form-group select { width: 100%; padding: 0.75rem 0.875rem; font-family: var(--font-primary); font-size: 0.9rem; color: var(--color-black); background: var(--color-white); border: 1px solid var(--color-gray-300); border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+  .form-group select:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(244, 192, 87, 0.2); }
+</style>
+<title>Contact First Sight Films | St. Augustine Video &amp; Photo</title>
 <meta name="description" content="Contact First Sight Films for video production in St. Augustine, FL. Get a free consultation for corporate videos, event coverage, or social media content.">
 {{faq-schema:contact}}
 </head>
@@ -111,9 +116,23 @@
                 <input type="tel" id="phone" name="phone">
               </div>
               <div class="form-group">
-                <label for="referral">How did you hear about us?</label>
-                <input type="text" id="referral" name="referral">
+                <label for="referral_source">How did you hear about us? <span class="required">*</span></label>
+                <select id="referral_source" name="referral_source" required>
+                  <option value="" disabled selected>Select one&hellip;</option>
+                  <option>Referral (a person or company)</option>
+                  <option>Google search</option>
+                  <option>Google Maps</option>
+                  <option>AI assistant (ChatGPT, Perplexity, etc.)</option>
+                  <option>Social media</option>
+                  <option>A directory or listing</option>
+                  <option>Met us at an event</option>
+                  <option>Other</option>
+                </select>
               </div>
+            </div>
+            <div class="form-group" id="referral_detail_wrap" style="display:none;">
+              <label for="referral_detail">Who referred you / tell us more</label>
+              <input type="text" id="referral_detail" name="referral_detail">
             </div>
             <div class="form-group">
               <label for="message">Your Message</label>
@@ -121,6 +140,19 @@
             </div>
             <button type="submit" class="btn btn-primary" data-umami-event="contact-form-submit">Send Message</button>
           </form>
+          <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var sel = document.getElementById('referral_source');
+            var wrap = document.getElementById('referral_detail_wrap');
+            if (!sel || !wrap) return;
+            function sync() {
+              var v = sel.value;
+              wrap.style.display = (v === 'Referral (a person or company)' || v === 'Other') ? 'block' : 'none';
+            }
+            sel.addEventListener('change', sync);
+            sync();
+          });
+          </script>
         </div>
       </div>
     </div>

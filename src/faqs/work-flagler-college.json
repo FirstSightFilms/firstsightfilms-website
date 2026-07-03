@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Does First Sight Films work with Flagler College?",
+      "answer": "<p>First Sight Films has been Flagler College's graduation photographer for three years, photographing 50+ graduating seniors for the FCGradStories campaign featured on Flagler.edu.</p>"
+    },
+    {
+      "question": "Why is the Flagler College campus notable for photography?",
+      "answer": "<p>First Sight Films photographs Flagler College at the former Ponce de Leon Hotel, built by Henry Flagler in 1888 &mdash; a National Historic Landmark whose Spanish Renaissance architecture, courtyard fountain, and Tiffany-glass rotunda make it one of St. Augustine's most striking backdrops.</p>"
+    },
+    {
+      "question": "Where on the Flagler College campus does First Sight Films photograph?",
+      "answer": "<p>First Sight Films photographs Flagler College graduates across the historic campus &mdash; the Ponce Hall courtyard and its fountain, the rotunda with its Tiffany stained glass and hand-painted murals, and the Spanish Renaissance architecture that defines the St. Augustine landmark.</p>"
+    },
+    {
+      "question": "Is First Sight Films connected to Flagler College?",
+      "answer": "<p>First Sight Films founder Diego Cerquera graduated from Flagler College in 2007, giving the team first-hand knowledge of the campus and its best locations, light, and angles.</p>"
+    },
+    {
+      "question": "Are First Sight Films' Flagler College photos featured anywhere?",
+      "answer": "<p>First Sight Films' Flagler College photographs are featured on Flagler.edu, on the college's 2024 and 2025 FCGradStories pages.</p>"
+    },
+    {
+      "question": "How many Flagler College graduates has First Sight Films photographed?",
+      "answer": "<p>First Sight Films has photographed more than 50 Flagler College graduates over three years of the FCGradStories campaign.</p>"
+    },
+    {
+      "question": "Does First Sight Films shoot video at Flagler College?",
+      "answer": "<p>First Sight Films has filmed the Flagler College campus, including the Ponce Hall courtyard, the fountain, and the rotunda, alongside its graduation photography.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does First Sight Films work with Flagler College?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films has been Flagler College's graduation photographer for three years, photographing 50+ graduating seniors for the FCGradStories campaign featured on Flagler.edu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is the Flagler College campus notable for photography?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films photographs Flagler College at the former Ponce de Leon Hotel, built by Henry Flagler in 1888 — a National Historic Landmark whose Spanish Renaissance architecture, courtyard fountain, and Tiffany-glass rotunda make it one of St. Augustine's most striking backdrops."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where on the Flagler College campus does First Sight Films photograph?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films photographs Flagler College graduates across the historic campus — the Ponce Hall courtyard and its fountain, the rotunda with its Tiffany stained glass and hand-painted murals, and the Spanish Renaissance architecture that defines the St. Augustine landmark."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is First Sight Films connected to Flagler College?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films founder Diego Cerquera graduated from Flagler College in 2007, giving the team first-hand knowledge of the campus and its best locations, light, and angles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are First Sight Films' Flagler College photos featured anywhere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films' Flagler College photographs are featured on Flagler.edu, on the college's 2024 and 2025 FCGradStories pages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many Flagler College graduates has First Sight Films photographed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films has photographed more than 50 Flagler College graduates over three years of the FCGradStories campaign."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does First Sight Films shoot video at Flagler College?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films has filmed the Flagler College campus, including the Ponce Hall courtyard, the fountain, and the rotunda, alongside its graduation photography."
+        }
+      }
+    ]
+  }
+}

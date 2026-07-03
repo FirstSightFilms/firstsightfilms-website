@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!-- /work/flagler-college/ — CLIENT/INSTITUTION page (CollegeOrUniversity). Photo+video gallery cloned from the Amp.
+     Content: SEO drop 2026-07-03. NO 301 — proof/pitch split with /flagler-college-graduation-photography/ (that page
+     keeps the pitch + pricing; this page owns the entity/authority). FSF = photographer/creator, NOT part of the college. -->
+<html lang="en">
+<head>
+{{head}}
+<link rel="stylesheet" href="/css/services.css">
+<title>Flagler College Photo &amp; Video | First Sight Films</title>
+<meta name="description" content="First Sight Films is Flagler College's graduation photographer &mdash; three years on the FCGradStories campaign, from Ponce Hall's courtyard to the rotunda.">
+<meta property="og:title" content="Flagler College Photo &amp; Video | First Sight Films">
+<meta property="og:description" content="First Sight Films is Flagler College's graduation photographer &mdash; three years on the FCGradStories campaign, from Ponce Hall's courtyard to the rotunda.">
+<meta property="og:image" content="https://www.firstsightfilms.com/images/grad-photo-flagler-college-1-medium.webp">
+<meta name="twitter:title" content="Flagler College Photo &amp; Video | First Sight Films">
+<meta name="twitter:description" content="First Sight Films is Flagler College's graduation photographer &mdash; three years on the FCGradStories campaign, from Ponce Hall's courtyard to the rotunda.">
+<meta name="twitter:image" content="https://www.firstsightfilms.com/images/grad-photo-flagler-college-1-medium.webp">
+{{faq-schema:work-flagler-college}}
+<style>
+  /* Hero (small image — the feed is the star, not the hero) */
+  .work-hero { padding: 3rem 1.5rem 2rem; text-align: center; }
+  .work-hero h1 { max-width: 22ch; margin: 0 auto 1.25rem; }
+  .work-hero .hero-img { max-width: 500px; margin: 0 auto 1.5rem; border-radius: 10px; overflow: hidden; }
+  .work-hero .hero-img img { width: 100%; height: auto; display: block; }
+  .work-hero .work-lead { font-size: 0.86rem; font-weight: 360; line-height: 1.6; max-width: 58ch; margin: 0 auto 1.5rem; color: #333; }
+  .work-hero .work-lead a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  .hero-proof-inline { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .proof-item-inline { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .proof-number-inline { font-size: 1.75rem; font-weight: 700; color: #1a1a2e; line-height: 1.2; }
+  .proof-label-inline { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: #666; margin-top: .25rem; }
+  .proof-divider { width: 1px; height: 40px; background: #ddd; }
+
+  /* At a glance — scannable facts (replaces prose) */
+  .quick-facts-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; margin: 0 0 .6rem; text-align: center; }
+  .quick-facts { list-style: none; padding: 1.25rem 1.5rem; margin: 0 auto; max-width: 820px; background: #fff; border: 1px solid #eee; border-left: 3px solid #f4c057; border-radius: 4px; }
+  .quick-facts li { margin: 0 0 .5rem; line-height: 1.55; font-size: .95rem; color: #333; }
+  .quick-facts li:last-child { margin-bottom: 0; }
+
+  /* THE WORK — Recent Shoots feed (the star: prominent, big thumbnails) */
+  .shoot-feed { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem; }
+  .shoot-card-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .shoot-card-head time { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; }
+  .shoot-card-head h3 { margin: 0; font-size: 1.35rem; }
+  .shoot-thumb { position: relative; display: block; padding: 0; border: 0; background: #000; border-radius: 8px; overflow: hidden; cursor: pointer; }
+  .shoot-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+  .shoot-thumb:hover img { transform: scale(1.04); }
+  .shoot-card-media:not(.shoot-thumbs) .shoot-thumb { aspect-ratio: 16 / 9; }  /* single video = big widescreen */
+  /* §4a photo set = balanced masonry: 2 cols, tight gaps, orientation-tagged tiles, object-fit cover */
+  .shoot-thumbs { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 7rem; grid-auto-flow: dense; gap: .45rem; }
+  .shoot-thumbs .shoot-thumb { grid-row: span 2; }                       /* fallback = landscape */
+  .shoot-thumbs .shoot-thumb.is-horizontal { grid-row: span 2; }
+  .shoot-thumbs .shoot-thumb.is-vertical   { grid-row: span 3; }
+  @media (max-width: 768px) { .shoot-thumbs { grid-template-columns: 1fr; grid-auto-rows: 9rem; } }
+  /* metadata via tags (service · venue · date), not captions */
+  .shoot-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+  .shoot-tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; color: #555; background: #f0f0f2; padding: .25rem .65rem; border-radius: 999px; }
+  a.shoot-tag { cursor: pointer; transition: background .2s ease, color .2s ease; }
+  a.shoot-tag:hover { background: #f4c057; color: #1a1a1a; }
+  .shoot-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 64px; height: 64px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; padding-left: 4px; }
+  .shoot-thumb:hover .shoot-play { background: #f4c057; color: #1a1a1a; }
+
+  /* Short story (1–2 tight paragraphs — the whole story) */
+  .work-story { max-width: 720px; margin: 0 auto; text-align: left; }
+  .work-story p { line-height: 1.75; margin-bottom: 1rem; color: #333; }
+  .work-story a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+
+  /* Service pathway (§4.6) — service cards, not a link list */
+  .pathway { max-width: 860px; margin: 0 auto; }
+  .pathway-lead { text-align: center; font-size: 1.25rem; margin: 0 auto 1.75rem; }
+  .pathway-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 640px) { .pathway-cards { grid-template-columns: 1fr; } }
+  .pathway-card { display: block; border: 1px solid #eee; border-radius: 10px; background: #fff; padding: 1.35rem 1.4rem; box-shadow: 0 2px 8px rgba(0,0,0,.05); transition: box-shadow .2s ease, transform .2s ease; color: inherit; }
+  .pathway-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,.1); transform: translateY(-2px); }
+  .pathway-card h3 { margin: 0 0 .45rem; font-size: 1.1rem; }
+  .pathway-card h3 .arrow { color: #b8860b; font-weight: 700; }
+  .pathway-card p { margin: 0; font-size: .92rem; line-height: 1.55; color: #555; }
+  .pathway-more { text-align: center; margin-top: 1.75rem; }
+  .pathway-more a { font-weight: 600; color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+
+  /* Shared lightbox modal (photo + video) */
+  .work-modal { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 2rem; }
+  .work-modal[data-open="true"] { display: flex; }
+  .work-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.9); cursor: pointer; }
+  .work-modal__content { position: relative; width: auto; max-width: 1200px; max-height: 90vh; }
+  .work-modal__player, .work-modal__image { max-width: 100%; max-height: 90vh; background: #000; display: block; }
+  .work-modal__player[hidden], .work-modal__image[hidden] { display: none; }  /* honor the hidden attr the JS toggles */
+  .work-modal__close { position: absolute; top: -3rem; right: 0; background: none; border: 0; color: #fff; font-size: 2.5rem; line-height: 1; cursor: pointer; padding: .25rem .75rem; }
+  .work-modal__close:hover { color: #f4c057; }
+  @media (max-width: 768px) { .work-modal { padding: 1rem; } .work-modal__close { top: -2.5rem; font-size: 2rem; } }
+  .hero-tags { justify-content: center; margin-top: 1.5rem; }
+  /* Multiple videos: labeled landscape recap (16:9) + a vertical social pair (9:16) */
+  .shoot-label { font-size: .8rem; font-weight: 600; letter-spacing: .03em; color: #555; text-align: center; margin: .6rem 0 0; }
+  .video-verticals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 620px; margin: 0 auto; }
+  .video-verticals .vv-item { display: flex; flex-direction: column; }
+  .video-verticals .shoot-thumb.vv { aspect-ratio: 9 / 16; }
+  @media (max-width: 640px) { .video-verticals { gap: .6rem; } }
+</style>
+</head>
+<body class="page-service">
+
+{{header}}
+
+<main>
+
+  <!-- 1. Breadcrumb (Home › Our Work › Flagler College) -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/work/" itemprop="item"><span itemprop="name">Our Work</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Flagler College</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- 2. Hero — image + H1 + one-line lead + hero tag row (NO stat bar) -->
+  <section class="work-hero">
+    <div class="container">
+      <h1>Flagler College Photo &amp; Video</h1>
+      <div class="hero-img">
+        <img src="/images/grad-photo-flagler-college-1-medium.webp" alt="First Sight Films photograph of a Flagler College graduate by the Henry Flagler statue at Ponce de Leon Hall in St. Augustine" width="1200" height="960" loading="lazy">
+      </div>
+      <p class="work-lead"><a href="/aboutus/">First Sight Films</a> is Flagler College's graduation photographer, a role we've held for three years &mdash; and a personal one: founder Diego Cerquera is a Flagler graduate himself.</p>
+      <div class="shoot-tags hero-tags">
+        <a class="shoot-tag" href="/flagler-college-graduation-photography/">Graduation Photography</a>
+        <span class="shoot-tag">Flagler College, St. Augustine</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. At a glance -->
+  <section class="section section-gray">
+    <div class="container">
+      <p class="quick-facts-label">At a glance</p>
+      <ul class="quick-facts">
+        <li><strong>Client:</strong> Flagler College &mdash; private liberal arts college, St. Augustine, FL</li>
+        <li><strong>Relationship:</strong> Flagler's graduation photographer, three years running (FCGradStories campaign)</li>
+        <li><strong>Works with:</strong> Beth Sweeny, Director of External &amp; Government Relations, plus Special Events and Marketing</li>
+        <li><strong>Captured:</strong> 50+ graduating seniors across the historic campus &mdash; Ponce Hall courtyard, rotunda, Spanish Renaissance architecture</li>
+        <li><strong>Campus:</strong> The former Ponce de Leon Hotel, built by Henry Flagler in 1888 &mdash; a National Historic Landmark in Spanish Renaissance style</li>
+        <li><strong>Featured:</strong> FSF's photos appear on Flagler.edu (2024 &amp; 2025 FCGradStories pages)</li>
+        <li><strong>Local connection:</strong> Founder Diego Cerquera is a Flagler graduate (Class of 2007)</li>
+        <li><strong>Medium:</strong> Photo + video</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. THE WORK — campus b-roll + curated grad photography -->
+  <section class="section" id="recent-shoots">
+    <div class="container">
+      <div class="shoot-feed" id="shoot-feed">
+
+        <!-- Campus b-roll (landscape 16:9) -->
+        <article class="shoot-card">
+          <div class="shoot-card-media">
+            <button type="button" class="shoot-thumb" data-lightbox-video="/video/portfolio/flagler-college-rotunda-courtyard-broll.mp4" aria-label="Play First Sight Films Flagler College campus b-roll">
+              <img src="/images/flagler-college-broll-poster.jpg" alt="First Sight Films b-roll of the Flagler College courtyard and rotunda, featuring the courtyard fountain and the new Henry Flagler statue" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </div>
+          <div class="shoot-tags"><span class="shoot-tag">Ponce Hall, Flagler College</span></div>
+        </article>
+
+        <!-- Curated Flagler graduation photography (25 images; FCGradStories portraits lead, commencement interleaved) -->
+        <article class="shoot-card">
+          <div class="shoot-card-media shoot-thumbs">
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-5-large.webp" aria-label="FCGradStories photography session">
+              <img src="/images/grad-photo-flagler-college-5-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-5-thumb.webp 400w, /images/grad-photo-flagler-college-5-medium.webp 1200w, /images/grad-photo-flagler-college-5-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="FCGradStories photography session" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-2-large.webp" aria-label="Flagler College senior portrait - campus courtyard">
+              <img src="/images/grad-photo-flagler-college-2-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-2-thumb.webp 400w, /images/grad-photo-flagler-college-2-medium.webp 1200w, /images/grad-photo-flagler-college-2-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College senior portrait - campus courtyard" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-flagler-college-9-large.webp" aria-label="Flagler College graduation portraits - Ponce de Leon Hall">
+              <img src="/images/grad-photo-flagler-college-9-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-9-thumb.webp 400w, /images/grad-photo-flagler-college-9-medium.webp 1200w, /images/grad-photo-flagler-college-9-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduation portraits - Ponce de Leon Hall" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-10-large.webp" aria-label="St Augustine graduation photographer - Flagler campus">
+              <img src="/images/grad-photo-flagler-college-10-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-10-thumb.webp 400w, /images/grad-photo-flagler-college-10-medium.webp 1200w, /images/grad-photo-flagler-college-10-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="St Augustine graduation photographer - Flagler campus" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-11-large.webp" aria-label="Flagler College graduation photoshoot - historic campus">
+              <img src="/images/grad-photo-flagler-college-11-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-11-thumb.webp 400w, /images/grad-photo-flagler-college-11-medium.webp 1200w, /images/grad-photo-flagler-college-11-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduation photoshoot - historic campus" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-6-large.webp" aria-label="Flagler College senior photos - cap and gown">
+              <img src="/images/grad-photo-flagler-college-6-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-6-thumb.webp 400w, /images/grad-photo-flagler-college-6-medium.webp 1200w, /images/grad-photo-flagler-college-6-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College senior photos - cap and gown" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-flagler-college-17-large.webp" aria-label="Flagler College senior portrait along a palm-lined campus walkway in St. Augustine — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-17-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-17-thumb.webp 400w, /images/grad-photo-flagler-college-17-medium.webp 1200w, /images/grad-photo-flagler-college-17-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College senior portrait along a palm-lined campus walkway in St. Augustine — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-12-large.webp" aria-label="Flagler senior portraits - class of 2025">
+              <img src="/images/grad-photo-flagler-college-12-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-12-thumb.webp 400w, /images/grad-photo-flagler-college-12-medium.webp 1200w, /images/grad-photo-flagler-college-12-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler senior portraits - class of 2025" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-4-large.webp" aria-label="Flagler College grad photos - St Augustine">
+              <img src="/images/grad-photo-flagler-college-4-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-4-thumb.webp 400w, /images/grad-photo-flagler-college-4-medium.webp 1200w, /images/grad-photo-flagler-college-4-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College grad photos - St Augustine" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-19-large.webp" aria-label="Flagler College graduate celebrating with a decorated cap at a Ponce Hall archway — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-19-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-19-thumb.webp 400w, /images/grad-photo-flagler-college-19-medium.webp 1200w, /images/grad-photo-flagler-college-19-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate celebrating with a decorated cap at a Ponce Hall archway — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-flagler-college-20-large.webp" aria-label="Flagler College graduate with a guitar on the historic campus in St. Augustine — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-20-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-20-thumb.webp 400w, /images/grad-photo-flagler-college-20-medium.webp 1200w, /images/grad-photo-flagler-college-20-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate with a guitar on the historic campus in St. Augustine — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-13-large.webp" aria-label="Flagler College graduate in cap and gown among the campus palms in St. Augustine — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-13-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-13-thumb.webp 400w, /images/grad-photo-flagler-college-13-medium.webp 1200w, /images/grad-photo-flagler-college-13-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate in cap and gown among the campus palms in St. Augustine — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-16-large.webp" aria-label="Flagler College graduate holding her cap on the historic St. Augustine campus — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-16-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-16-thumb.webp 400w, /images/grad-photo-flagler-college-16-medium.webp 1200w, /images/grad-photo-flagler-college-16-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate holding her cap on the historic St. Augustine campus — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-flagler-college-26-large.webp" aria-label="Flagler College graduate with a diploma outside the historic Ponce de Leon Hall — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-26-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-26-thumb.webp 400w, /images/grad-photo-flagler-college-26-medium.webp 1200w, /images/grad-photo-flagler-college-26-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate with a diploma outside the historic Ponce de Leon Hall — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-8-large.webp" aria-label="Flagler College Class of 2024 graduation photos">
+              <img src="/images/grad-photo-flagler-college-8-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-8-thumb.webp 400w, /images/grad-photo-flagler-college-8-medium.webp 1200w, /images/grad-photo-flagler-college-8-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College Class of 2024 graduation photos" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-21-large.webp" aria-label="Flagler College graduate seated below the Ponce Hall towers in St. Augustine — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-21-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-21-thumb.webp 400w, /images/grad-photo-flagler-college-21-medium.webp 1200w, /images/grad-photo-flagler-college-21-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate seated below the Ponce Hall towers in St. Augustine — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-session-flagler-college-st-augustine-14-large.webp" aria-label="Flagler College graduates celebrating at commencement in St. Augustine — First Sight Films">
+              <img src="/images/grad-photo-session-flagler-college-st-augustine-14-medium.webp"
+                   srcset="/images/grad-photo-session-flagler-college-st-augustine-14-thumb.webp 400w, /images/grad-photo-session-flagler-college-st-augustine-14-medium.webp 1200w, /images/grad-photo-session-flagler-college-st-augustine-14-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduates celebrating at commencement in St. Augustine — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-24-large.webp" aria-label="Flagler College graduate celebrating at a Spanish Renaissance archway on campus — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-24-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-24-thumb.webp 400w, /images/grad-photo-flagler-college-24-medium.webp 1200w, /images/grad-photo-flagler-college-24-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate celebrating at a Spanish Renaissance archway on campus — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-27-large.webp" aria-label="Flagler College graduate in cap and gown seated on the historic campus steps — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-27-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-27-thumb.webp 400w, /images/grad-photo-flagler-college-27-medium.webp 1200w, /images/grad-photo-flagler-college-27-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate in cap and gown seated on the historic campus steps — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-session-flagler-college-st-augustine-13-large.webp" aria-label="Flagler College commencement ceremony at the historic St. Augustine campus — First Sight Films">
+              <img src="/images/grad-photo-session-flagler-college-st-augustine-13-medium.webp"
+                   srcset="/images/grad-photo-session-flagler-college-st-augustine-13-thumb.webp 400w, /images/grad-photo-session-flagler-college-st-augustine-13-medium.webp 1200w, /images/grad-photo-session-flagler-college-st-augustine-13-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College commencement ceremony at the historic St. Augustine campus — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-session-flagler-college-st-augustine-31-large.webp" aria-label="Flagler College graduate celebrating at commencement with arms raised — First Sight Films">
+              <img src="/images/grad-photo-session-flagler-college-st-augustine-31-medium.webp"
+                   srcset="/images/grad-photo-session-flagler-college-st-augustine-31-thumb.webp 400w, /images/grad-photo-session-flagler-college-st-augustine-31-medium.webp 1200w, /images/grad-photo-session-flagler-college-st-augustine-31-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate celebrating at commencement with arms raised — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/grad-photo-flagler-college-29-large.webp" aria-label="Flagler College graduate seated on the Ponce Hall steps in St. Augustine — First Sight Films">
+              <img src="/images/grad-photo-flagler-college-29-medium.webp"
+                   srcset="/images/grad-photo-flagler-college-29-thumb.webp 400w, /images/grad-photo-flagler-college-29-medium.webp 1200w, /images/grad-photo-flagler-college-29-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate seated on the Ponce Hall steps in St. Augustine — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-session-flagler-college-st-augustine-19-large.webp" aria-label="Flagler College graduates in cap and gown at commencement — First Sight Films">
+              <img src="/images/grad-photo-session-flagler-college-st-augustine-19-medium.webp"
+                   srcset="/images/grad-photo-session-flagler-college-st-augustine-19-thumb.webp 400w, /images/grad-photo-session-flagler-college-st-augustine-19-medium.webp 1200w, /images/grad-photo-session-flagler-college-st-augustine-19-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduates in cap and gown at commencement — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-session-flagler-college-st-augustine-21-large.webp" aria-label="Flagler College graduate with her diploma at commencement in St. Augustine — First Sight Films">
+              <img src="/images/grad-photo-session-flagler-college-st-augustine-21-medium.webp"
+                   srcset="/images/grad-photo-session-flagler-college-st-augustine-21-thumb.webp 400w, /images/grad-photo-session-flagler-college-st-augustine-21-medium.webp 1200w, /images/grad-photo-session-flagler-college-st-augustine-21-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Flagler College graduate with her diploma at commencement in St. Augustine — First Sight Films" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/grad-photo-session-flagler-college-st-augustine-10-large.webp" aria-label="College graduation photo session in St. Augustine">
+              <img src="/images/grad-photo-session-flagler-college-st-augustine-10-medium.webp"
+                   srcset="/images/grad-photo-session-flagler-college-st-augustine-10-thumb.webp 400w, /images/grad-photo-session-flagler-college-st-augustine-10-medium.webp 1200w, /images/grad-photo-session-flagler-college-st-augustine-10-large.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="College graduation photo session in St. Augustine" loading="lazy">
+            </button>
+          </div>
+          <div class="shoot-tags"><a class="shoot-tag" href="/flagler-college-graduation-photography/">Graduation Photography</a><span class="shoot-tag">Flagler College</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Short story -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="work-story">
+        <p>First Sight Films has been Flagler College's graduation photographer for three years, shooting the college's FCGradStories campaign each spring alongside Beth Sweeny and the marketing team. The work is personal: founder Diego Cerquera graduated from Flagler in 2007, and he knows the campus not just as a photographer but as someone who studied in Ponce Hall and Proctor Library.</p>
+        <p>Flagler College occupies the former Ponce de Leon Hotel, built by Henry Flagler in 1888 &mdash; a National Historic Landmark whose Spanish Renaissance architecture makes every frame count. Over three years we've photographed 50+ graduating seniors across it &mdash; the Ponce Hall courtyard and its fountain, the rotunda's Tiffany stained glass and hand-painted murals &mdash; and those images are featured on Flagler.edu, telling graduates' stories in the college's own channels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Service pathway -->
+  <section class="section">
+    <div class="container">
+      <div class="pathway">
+        <h2 class="pathway-lead">Photography Services</h2>
+        <div class="pathway-cards">
+          <a class="pathway-card" href="/flagler-college-graduation-photography/">
+            <h3>Flagler Graduation Photography <span class="arrow" aria-hidden="true">&rarr;</span></h3>
+            <p>Graduation photo sessions for Flagler seniors, on campus each spring.</p>
+          </a>
+          <a class="pathway-card" href="/st-augustine-event-photographer/">
+            <h3>Event Photography <span class="arrow" aria-hidden="true">&rarr;</span></h3>
+            <p>Commencement, alumni, and campus event photography.</p>
+          </a>
+        </div>
+        <p class="pathway-more"><a href="/work/">See more of our work &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ (7 Qs; visible + FAQPage schema, 1:1) -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      {{faq:work-flagler-college}}
+    </div>
+  </section>
+
+</main>
+
+<!-- Shared lightbox modal (photo + video) -->
+<div id="work-modal" class="work-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Media viewer">
+  <div class="work-modal__backdrop" data-close-modal></div>
+  <div class="work-modal__content">
+    <button type="button" class="work-modal__close" data-close-modal aria-label="Close">&times;</button>
+    <video id="work-modal-video" class="work-modal__player" controls playsinline preload="metadata" hidden></video>
+    <img id="work-modal-image" class="work-modal__image" alt="" hidden>
+  </div>
+</div>
+<script src="/js/work-feed.js" defer></script>
+
+<!-- Schema: BreadcrumbList (microdata above) · FAQPage (faq-schema module, in head) · VideoObject (campus b-roll) ·
+     ImageObject (key campus/landmark shots) · CollegeOrUniversity (Flagler; FSF = creator/photographer, NOT part of
+     the college) · CreativeWork (FSF as media creator, about the college) · LocalBusiness+AggregateRating (module). -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"Flagler College Campus B-Roll — Courtyard & Rotunda","description":"First Sight Films b-roll of the Flagler College courtyard and rotunda in St. Augustine, featuring the courtyard fountain and the new Henry Flagler statue.","thumbnailUrl":"https://www.firstsightfilms.com/images/flagler-college-broll-poster.jpg","uploadDate":"2025-04","duration":"PT25S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/flagler-college-rotunda-courtyard-broll.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/grad-photo-flagler-college-1-large.webp","description":"Flagler College graduate by the Henry Flagler statue at Ponce de Leon Hall in St. Augustine","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Flagler College","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/grad-photo-flagler-college-5-large.webp","description":"Flagler College graduate in cap and gown before the Spanish Renaissance towers of Ponce Hall in St. Augustine","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Flagler College","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/grad-photo-flagler-college-9-large.webp","description":"Flagler College graduate in the historic Ponce de Leon Hall courtyard in St. Augustine","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Flagler College","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/grad-photo-flagler-college-10-large.webp","description":"Flagler College graduate in the Ponce Hall rotunda in St. Augustine","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Flagler College","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/grad-photo-flagler-college-19-large.webp","description":"Flagler College graduate celebrating at a Ponce Hall archway in St. Augustine","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Flagler College","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/grad-photo-session-flagler-college-st-augustine-14-large.webp","description":"Flagler College graduates celebrating at commencement in St. Augustine","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Flagler College","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollegeOrUniversity","@id":"https://www.firstsightfilms.com/work/flagler-college/#flagler","name":"Flagler College","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CreativeWork","name":"Flagler College — Photo & Video by First Sight Films","about":{"@id":"https://www.firstsightfilms.com/work/flagler-college/#flagler"},"creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"}}
+</script>
+
+{{schema}}
+
+{{footer}}
+</body>
+</html>

@@ -1,0 +1,106 @@
+{
+  "questions": [
+    {
+      "question": "Who filmed HMA Mortgage's 2025 Sales Rally?",
+      "answer": "<p>First Sight Films filmed HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach in April 2025, covering keynotes, breakouts, panels, and Q&amp;As with a three-camera crew.</p>"
+    },
+    {
+      "question": "Who films corporate sales rallies and conferences in St. Augustine, Florida?",
+      "answer": "<p>First Sight Films films corporate sales rallies, conferences, and multi-day events across St. Augustine and Northeast Florida, delivering recap films, attendee testimonials, and next-day social reels.</p>"
+    },
+    {
+      "question": "What videos did First Sight Films deliver for HMA Mortgage?",
+      "answer": "<p>First Sight Films delivered HMA Mortgage a 30-second social reel the next day, a two-minute recap film, 12 attendee testimonials, four product videos within a week, and a custom animated 2D logo.</p>"
+    },
+    {
+      "question": "How many cameras does First Sight Films use to cover a corporate conference?",
+      "answer": "<p>First Sight Films recorded the HMA Sales Rally with three cameras — one stationary and two roaming — so keynotes, breakouts, panels, and candid moments were all captured across the two-day event.</p>"
+    },
+    {
+      "question": "How fast does First Sight Films deliver corporate event video?",
+      "answer": "<p>First Sight Films delivered HMA Mortgage a social reel the next day and the full package — recap film, testimonials, and product videos — within one week of the event.</p>"
+    },
+    {
+      "question": "Does First Sight Films record attendee testimonials at corporate events?",
+      "answer": "<p>First Sight Films recorded 12 attendee testimonials at HMA Mortgage's Sales Rally — quick on-site interviews filmed at Embassy Suites St. Augustine Beach and delivered for HMA to market the following year's event across its website and social channels.</p>"
+    },
+    {
+      "question": "Is First Sight Films insured to film at hotels and corporate venues?",
+      "answer": "<p>First Sight Films carries $1 million in general liability insurance and provides a certificate of insurance (COI) naming the host venue as additionally insured on request.</p>"
+    },
+    {
+      "question": "Does First Sight Films travel outside St. Augustine for corporate video?",
+      "answer": "<p>First Sight Films travels for corporate and brand video beyond St. Augustine, with recent projects filmed in Maine and Colorado, and covers sales rallies, conferences, award nights, and retreats on location.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who filmed HMA Mortgage's 2025 Sales Rally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films filmed HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach in April 2025, covering keynotes, breakouts, panels, and Q&As with a three-camera crew."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who films corporate sales rallies and conferences in St. Augustine, Florida?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films films corporate sales rallies, conferences, and multi-day events across St. Augustine and Northeast Florida, delivering recap films, attendee testimonials, and next-day social reels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What videos did First Sight Films deliver for HMA Mortgage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films delivered HMA Mortgage a 30-second social reel the next day, a two-minute recap film, 12 attendee testimonials, four product videos within a week, and a custom animated 2D logo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many cameras does First Sight Films use to cover a corporate conference?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films recorded the HMA Sales Rally with three cameras — one stationary and two roaming — so keynotes, breakouts, panels, and candid moments were all captured across the two-day event."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast does First Sight Films deliver corporate event video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films delivered HMA Mortgage a social reel the next day and the full package — recap film, testimonials, and product videos — within one week of the event."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does First Sight Films record attendee testimonials at corporate events?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films recorded 12 attendee testimonials at HMA Mortgage's Sales Rally — quick on-site interviews filmed at Embassy Suites St. Augustine Beach and delivered for HMA to market the following year's event across its website and social channels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is First Sight Films insured to film at hotels and corporate venues?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films carries $1 million in general liability insurance and provides a certificate of insurance (COI) naming the host venue as additionally insured on request."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does First Sight Films travel outside St. Augustine for corporate video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films travels for corporate and brand video beyond St. Augustine, with recent projects filmed in Maine and Colorado, and covers sales rallies, conferences, award nights, and retreats on location."
+        }
+      }
+    ]
+  }
+}

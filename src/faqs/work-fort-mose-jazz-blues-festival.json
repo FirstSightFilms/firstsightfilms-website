@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Who photographed and filmed the Fort Mose Jazz &amp; Blues Festival?",
+      "answer": "<p>First Sight Films photographed and filmed the Fort Mose Jazz &amp; Blues Festival at Fort Mose Historic State Park for two years running, covering every night of performances.</p>"
+    },
+    {
+      "question": "What is the Fort Mose Jazz &amp; Blues Festival?",
+      "answer": "<p>First Sight Films has been the photo and video partner for the Fort Mose Jazz &amp; Blues Festival, an annual celebration of African American history and music at Fort Mose Historic State Park in St. Augustine &mdash; the first legally sanctioned free Black settlement in what is now the United States, established in 1738.</p>"
+    },
+    {
+      "question": "Which artists did First Sight Films photograph at the festival?",
+      "answer": "<p>First Sight Films photographed Gary Clark Jr, Samara Joy, Ledisi, Robert Cray, and Ruthie Foster performing at the Fort Mose Jazz &amp; Blues Festival, along with the crowds and cultural programming.</p>"
+    },
+    {
+      "question": "Does First Sight Films cover multi-night music festivals?",
+      "answer": "<p>First Sight Films covers multi-night music festivals end to end, filming and photographing every night &mdash; as it has for two years at the Fort Mose Jazz &amp; Blues Festival in St. Augustine.</p>"
+    },
+    {
+      "question": "Does First Sight Films shoot both photo and video at festivals?",
+      "answer": "<p>First Sight Films shoots both photography and video at festivals with one coordinated team, delivering performance photos, crowd candids, highlight reels, and short-form social clips.</p>"
+    },
+    {
+      "question": "What does First Sight Films deliver for a festival?",
+      "answer": "<p>First Sight Films delivers a highlight reel, short-form social clips, and festival photography, plus optional artist interviews and promotional content for the next year's event.</p>"
+    },
+    {
+      "question": "Does First Sight Films work with nonprofits and cultural organizations?",
+      "answer": "<p>First Sight Films works with nonprofit and cultural organizations like St. Johns Cultural Events, producing festival photo and video for the Fort Mose Jazz &amp; Blues Festival at Fort Mose Historic State Park.</p>"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who photographed and filmed the Fort Mose Jazz & Blues Festival?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films photographed and filmed the Fort Mose Jazz & Blues Festival at Fort Mose Historic State Park for two years running, covering every night of performances."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Fort Mose Jazz & Blues Festival?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films has been the photo and video partner for the Fort Mose Jazz & Blues Festival, an annual celebration of African American history and music at Fort Mose Historic State Park in St. Augustine — the first legally sanctioned free Black settlement in what is now the United States, established in 1738."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which artists did First Sight Films photograph at the festival?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films photographed Gary Clark Jr, Samara Joy, Ledisi, Robert Cray, and Ruthie Foster performing at the Fort Mose Jazz & Blues Festival, along with the crowds and cultural programming."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does First Sight Films cover multi-night music festivals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films covers multi-night music festivals end to end, filming and photographing every night — as it has for two years at the Fort Mose Jazz & Blues Festival in St. Augustine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does First Sight Films shoot both photo and video at festivals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films shoots both photography and video at festivals with one coordinated team, delivering performance photos, crowd candids, highlight reels, and short-form social clips."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does First Sight Films deliver for a festival?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films delivers a highlight reel, short-form social clips, and festival photography, plus optional artist interviews and promotional content for the next year's event."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does First Sight Films work with nonprofits and cultural organizations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films works with nonprofit and cultural organizations like St. Johns Cultural Events, producing festival photo and video for the Fort Mose Jazz & Blues Festival at Fort Mose Historic State Park."
+        }
+      }
+    ]
+  }
+}

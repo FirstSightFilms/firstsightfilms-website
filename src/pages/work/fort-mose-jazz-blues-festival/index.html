@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!-- /work/fort-mose-jazz-blues-festival/ — EVENT PILLAR (photo+video gallery; two-axis rule -> cloned from the Amp).
+     MIGRATION target (SEO §11): 301s from /blog/fort-mose-jazz-blues-festival/ and
+     /st-augustine-video-production/fort-mose-jazz-blues-festival/. Content: SEO drop 2026-07-03.
+     Launches as a curated gallery (26 photos + recap video); dated feed can be added later.
+     FSF = creator of the media, NOT the festival organizer (that is St. Johns Cultural Events). -->
+<html lang="en">
+<head>
+{{head}}
+<link rel="stylesheet" href="/css/services.css">
+<title>Fort Mose Jazz &amp; Blues Festival Photo &amp; Video</title>
+<meta name="description" content="First Sight Films photographed and filmed the Fort Mose Jazz &amp; Blues Festival &mdash; Gary Clark Jr and Samara Joy &mdash; two years at Fort Mose Historic State Park.">
+<meta property="og:title" content="Fort Mose Jazz &amp; Blues Festival Photo &amp; Video">
+<meta property="og:description" content="First Sight Films photographed and filmed the Fort Mose Jazz &amp; Blues Festival &mdash; Gary Clark Jr and Samara Joy &mdash; two years at Fort Mose Historic State Park.">
+<meta property="og:image" content="https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp">
+<meta name="twitter:title" content="Fort Mose Jazz &amp; Blues Festival Photo &amp; Video">
+<meta name="twitter:description" content="First Sight Films photographed and filmed the Fort Mose Jazz &amp; Blues Festival &mdash; Gary Clark Jr and Samara Joy &mdash; two years at Fort Mose Historic State Park.">
+<meta name="twitter:image" content="https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp">
+{{faq-schema:work-fort-mose-jazz-blues-festival}}
+<style>
+  /* Hero (small image — the feed is the star, not the hero) */
+  .work-hero { padding: 3rem 1.5rem 2rem; text-align: center; }
+  .work-hero h1 { max-width: 22ch; margin: 0 auto 1.25rem; }
+  .work-hero .hero-img { max-width: 500px; margin: 0 auto 1.5rem; border-radius: 10px; overflow: hidden; }
+  .work-hero .hero-img img { width: 100%; height: auto; display: block; }
+  .work-hero .work-lead { font-size: 0.86rem; font-weight: 360; line-height: 1.6; max-width: 58ch; margin: 0 auto 1.5rem; color: #333; }
+  .work-hero .work-lead a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  .hero-proof-inline { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .proof-item-inline { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .proof-number-inline { font-size: 1.75rem; font-weight: 700; color: #1a1a2e; line-height: 1.2; }
+  .proof-label-inline { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: #666; margin-top: .25rem; }
+  .proof-divider { width: 1px; height: 40px; background: #ddd; }
+
+  /* At a glance — scannable facts (replaces prose) */
+  .quick-facts-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; margin: 0 0 .6rem; text-align: center; }
+  .quick-facts { list-style: none; padding: 1.25rem 1.5rem; margin: 0 auto; max-width: 820px; background: #fff; border: 1px solid #eee; border-left: 3px solid #f4c057; border-radius: 4px; }
+  .quick-facts li { margin: 0 0 .5rem; line-height: 1.55; font-size: .95rem; color: #333; }
+  .quick-facts li:last-child { margin-bottom: 0; }
+
+  /* THE WORK — Recent Shoots feed (the star: prominent, big thumbnails) */
+  .shoot-feed { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem; }
+  .shoot-card-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .shoot-card-head time { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; }
+  .shoot-card-head h3 { margin: 0; font-size: 1.35rem; }
+  .shoot-thumb { position: relative; display: block; padding: 0; border: 0; background: #000; border-radius: 8px; overflow: hidden; cursor: pointer; }
+  .shoot-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+  .shoot-thumb:hover img { transform: scale(1.04); }
+  .shoot-card-media:not(.shoot-thumbs) .shoot-thumb { aspect-ratio: 16 / 9; }  /* single video = big widescreen */
+  /* §4a photo set = balanced masonry: 2 cols, tight gaps, orientation-tagged tiles, object-fit cover */
+  .shoot-thumbs { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 7rem; grid-auto-flow: dense; gap: .45rem; }
+  .shoot-thumbs .shoot-thumb { grid-row: span 2; }                       /* fallback = landscape */
+  .shoot-thumbs .shoot-thumb.is-horizontal { grid-row: span 2; }
+  .shoot-thumbs .shoot-thumb.is-vertical   { grid-row: span 3; }
+  @media (max-width: 768px) { .shoot-thumbs { grid-template-columns: 1fr; grid-auto-rows: 9rem; } }
+  /* metadata via tags (service · venue · date), not captions */
+  .shoot-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+  .shoot-tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; color: #555; background: #f0f0f2; padding: .25rem .65rem; border-radius: 999px; }
+  a.shoot-tag { cursor: pointer; transition: background .2s ease, color .2s ease; }
+  a.shoot-tag:hover { background: #f4c057; color: #1a1a1a; }
+  .shoot-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 64px; height: 64px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; padding-left: 4px; }
+  .shoot-thumb:hover .shoot-play { background: #f4c057; color: #1a1a1a; }
+
+  /* Short story (1–2 tight paragraphs — the whole story) */
+  .work-story { max-width: 720px; margin: 0 auto; text-align: left; }
+  .work-story p { line-height: 1.75; margin-bottom: 1rem; color: #333; }
+  .work-story a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+
+  /* Service pathway (§4.6) — service cards, not a link list */
+  .pathway { max-width: 860px; margin: 0 auto; }
+  .pathway-lead { text-align: center; font-size: 1.25rem; margin: 0 auto 1.75rem; }
+  .pathway-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 640px) { .pathway-cards { grid-template-columns: 1fr; } }
+  .pathway-card { display: block; border: 1px solid #eee; border-radius: 10px; background: #fff; padding: 1.35rem 1.4rem; box-shadow: 0 2px 8px rgba(0,0,0,.05); transition: box-shadow .2s ease, transform .2s ease; color: inherit; }
+  .pathway-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,.1); transform: translateY(-2px); }
+  .pathway-card h3 { margin: 0 0 .45rem; font-size: 1.1rem; }
+  .pathway-card h3 .arrow { color: #b8860b; font-weight: 700; }
+  .pathway-card p { margin: 0; font-size: .92rem; line-height: 1.55; color: #555; }
+  .pathway-more { text-align: center; margin-top: 1.75rem; }
+  .pathway-more a { font-weight: 600; color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+
+  /* Shared lightbox modal (photo + video) */
+  .work-modal { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 2rem; }
+  .work-modal[data-open="true"] { display: flex; }
+  .work-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.9); cursor: pointer; }
+  .work-modal__content { position: relative; width: auto; max-width: 1200px; max-height: 90vh; }
+  .work-modal__player, .work-modal__image { max-width: 100%; max-height: 90vh; background: #000; display: block; }
+  .work-modal__player[hidden], .work-modal__image[hidden] { display: none; }  /* honor the hidden attr the JS toggles */
+  .work-modal__close { position: absolute; top: -3rem; right: 0; background: none; border: 0; color: #fff; font-size: 2.5rem; line-height: 1; cursor: pointer; padding: .25rem .75rem; }
+  .work-modal__close:hover { color: #f4c057; }
+  @media (max-width: 768px) { .work-modal { padding: 1rem; } .work-modal__close { top: -2.5rem; font-size: 2rem; } }
+  .hero-tags { justify-content: center; margin-top: 1.5rem; }
+  /* Multiple videos: labeled landscape recap (16:9) + a vertical social pair (9:16) */
+  .shoot-label { font-size: .8rem; font-weight: 600; letter-spacing: .03em; color: #555; text-align: center; margin: .6rem 0 0; }
+  .video-verticals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 620px; margin: 0 auto; }
+  .video-verticals .vv-item { display: flex; flex-direction: column; }
+  .video-verticals .shoot-thumb.vv { aspect-ratio: 9 / 16; }
+  @media (max-width: 640px) { .video-verticals { gap: .6rem; } }
+</style>
+</head>
+<body class="page-service">
+
+{{header}}
+
+<main>
+
+  <!-- 1. Breadcrumb (Home › Our Work › Fort Mose Jazz & Blues Festival) -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/work/" itemprop="item"><span itemprop="name">Our Work</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Fort Mose Jazz &amp; Blues Festival</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- 2. Hero — image + H1 + one-line lead + hero tag row (NO stat bar on this page) -->
+  <section class="work-hero">
+    <div class="container">
+      <h1>Fort Mose Jazz &amp; Blues Festival Photo &amp; Video</h1>
+      <div class="hero-img">
+        <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-crowd-stage-1200w.webp" alt="Large crowd gathered at an illuminated outdoor concert stage at the Fort Mose Jazz &amp; Blues Festival in St. Augustine, Florida" width="1200" height="959" loading="lazy">
+      </div>
+      <p class="work-lead"><a href="/aboutus/">First Sight Films</a> is the photo and video production company that has covered the Fort Mose Jazz &amp; Blues Festival at Fort Mose Historic State Park for two years running.</p>
+      <div class="shoot-tags hero-tags">
+        <a class="shoot-tag" href="/st-augustine-event-photographer/">Event Photography</a>
+        <a class="shoot-tag" href="/event-video-coverage-st-augustine/">Event Video Coverage</a>
+        <span class="shoot-tag">Fort Mose Historic State Park</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. At a glance — scannable facts -->
+  <section class="section section-gray">
+    <div class="container">
+      <p class="quick-facts-label">At a glance</p>
+      <ul class="quick-facts">
+        <li><strong>Client:</strong> St. Johns Cultural Events, Inc. (SJCCE) &mdash; plans and produces the festival</li>
+        <li><strong>Event:</strong> Fort Mose Jazz &amp; Blues Festival &middot; held at Fort Mose Historic State Park &middot; St. Augustine, FL</li>
+        <li><strong>Relationship:</strong> Two years running, covering every night</li>
+        <li><strong>Captured:</strong> Headline sets &mdash; Gary Clark Jr, Samara Joy, Ledisi, Robert Cray &mdash; plus crowds and cultural programming</li>
+        <li><strong>Delivered:</strong> Highlight reels, short-form social clips, and festival photography</li>
+        <li><strong>Medium:</strong> Photo + video</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. THE WORK — the recap video + curated photo gallery (the star) -->
+  <section class="section" id="recent-shoots">
+    <div class="container">
+      <div class="shoot-feed" id="shoot-feed">
+
+        <!-- 2026 festival recap (landscape 16:9 — newest on top) -->
+        <article class="shoot-card">
+          <div class="shoot-card-media">
+            <button type="button" class="shoot-thumb" data-lightbox-video="/video/portfolio/fort-mose-jazz-blues-festival-2026-recap-st-augustine-web.mp4" aria-label="Play the Fort Mose Jazz &amp; Blues Festival 2026 recap video">
+              <img src="/images/fort-mose-jazz-blues-festival-2026-recap-poster.jpg" alt="Guitarist performing under colorful stage lighting at the Fort Mose Jazz &amp; Blues Festival in St. Augustine, Florida — First Sight Films" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </div>
+          <p class="shoot-label">2026 festival recap</p>
+          <div class="shoot-tags"><a class="shoot-tag" href="/event-video-coverage-st-augustine/">Event Video Coverage</a><span class="shoot-tag">Fort Mose Historic State Park</span></div>
+        </article>
+
+        <!-- 2025 festival recap (landscape 16:9) -->
+        <article class="shoot-card">
+          <div class="shoot-card-media">
+            <button type="button" class="shoot-thumb" data-lightbox-video="/video/portfolio/fort-mose-jazz-blues-festival-2025-recap-st-augustine-web.mp4" aria-label="Play the Fort Mose Jazz &amp; Blues Festival 2025 recap video">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-crowd-stage-1200w.webp" alt="Large crowd gathered at illuminated outdoor concert stage with purple lighting in St. Augustine, Florida" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </div>
+          <p class="shoot-label">2025 festival recap</p>
+          <div class="shoot-tags"><a class="shoot-tag" href="/event-video-coverage-st-augustine/">Event Video Coverage</a><span class="shoot-tag">Fort Mose Historic State Park</span></div>
+        </article>
+
+        <!-- Vertical social pair: dinner party promo + teaser (9:16) — room for more festival video cards later -->
+        <article class="shoot-card">
+          <div class="video-verticals">
+            <div class="vv-item">
+              <button type="button" class="shoot-thumb vv" data-lightbox-video="/video/portfolio/fort-mose-jazz-blues-festival-dinner-party-promo-st-augustine-web.mp4" aria-label="Play the Fort Mose Jazz &amp; Blues Festival dinner party promo video">
+                <img src="/images/fort-mose-jazz-blues-festival-dinner-party-promo-poster.jpg" alt="First Sight Films dinner party promo for the Fort Mose Jazz &amp; Blues Festival featuring Robert Glasper" loading="lazy">
+                <span class="shoot-play" aria-hidden="true">&#9658;</span>
+              </button>
+              <p class="shoot-label">Dinner party promo</p>
+              <div class="shoot-tags"><a class="shoot-tag" href="/event-video-coverage-st-augustine/">Event Video Coverage</a><span class="shoot-tag">Fort Mose Historic State Park</span></div>
+            </div>
+            <div class="vv-item">
+              <button type="button" class="shoot-thumb vv" data-lightbox-video="/video/portfolio/fort-mose-jazz-blues-festival-2025-teaser-st-augustine-web.mp4" aria-label="Play the Fort Mose Jazz &amp; Blues Festival 2025 teaser video">
+                <img src="/images/fort-mose-jazz-blues-festival-2025-teaser-poster.jpg" alt="First Sight Films teaser for the Fort Mose Jazz &amp; Blues Festival — honoring history and community through music" loading="lazy">
+                <span class="shoot-play" aria-hidden="true">&#9658;</span>
+              </button>
+              <p class="shoot-label">Teaser</p>
+              <div class="shoot-tags"><a class="shoot-tag" href="/event-video-coverage-st-augustine/">Event Video Coverage</a><span class="shoot-tag">Fort Mose Historic State Park</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Curated festival photography (26 images; named performers lead, crowds + cultural interleaved) -->
+        <article class="shoot-card">
+          <div class="shoot-card-media shoot-thumbs">
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1920w.webp" aria-label="Gary Clark Jr performing on stage with guitar at outdoor festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Gary Clark Jr performing on stage with guitar at outdoor festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-1920w.webp" aria-label="Samara Joy performing with orchestra at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Samara Joy performing with orchestra at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/ledisi-fort-mose-jazz-festival-performance-st-augustine-1920w.webp" aria-label="Ledisi performing energetically on stage with arms outstretched at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/ledisi-fort-mose-jazz-festival-performance-st-augustine-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/ledisi-fort-mose-jazz-festival-performance-st-augustine-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/ledisi-fort-mose-jazz-festival-performance-st-augustine-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/ledisi-fort-mose-jazz-festival-performance-st-augustine-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Ledisi performing energetically on stage with arms outstretched at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/robert-cray-fort-mose-jazz-festival-1920w.webp" aria-label="Robert Cray performing with electric guitar and microphone on stage in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/robert-cray-fort-mose-jazz-festival-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/robert-cray-fort-mose-jazz-festival-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/robert-cray-fort-mose-jazz-festival-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/robert-cray-fort-mose-jazz-festival-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Robert Cray performing with electric guitar and microphone on stage in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/ruthie-foster-fort-mose-jazz-festival-performance-1920w.webp" aria-label="Ruthie Foster performing with guitar and microphone at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/ruthie-foster-fort-mose-jazz-festival-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/ruthie-foster-fort-mose-jazz-festival-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/ruthie-foster-fort-mose-jazz-festival-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/ruthie-foster-fort-mose-jazz-festival-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Ruthie Foster performing with guitar and microphone at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-1920w.webp" aria-label="Don Was performing energetically at microphone during Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Don Was performing energetically at microphone during Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-st-augustine-1920w.webp" aria-label="Audience members smiling and enjoying Fort Mose Jazz Blues Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-st-augustine-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-st-augustine-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-st-augustine-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-st-augustine-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Audience members smiling and enjoying Fort Mose Jazz Blues Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-2-1920w.webp" aria-label="Gary Clark Jr performing with guitar and hat under stage lights in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-2-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-2-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-2-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-2-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Gary Clark Jr performing with guitar and hat under stage lights in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-3-1920w.webp" aria-label="Gary Clark Jr performing on stage with band at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-3-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-3-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-3-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-3-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Gary Clark Jr performing on stage with band at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-historical-interpreter-festival-attendees-1920w.webp" aria-label="Historical interpreter in colonial costume speaks with festival attendees in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-historical-interpreter-festival-attendees-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-historical-interpreter-festival-attendees-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-historical-interpreter-festival-attendees-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-historical-interpreter-festival-attendees-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Historical interpreter in colonial costume speaks with festival attendees in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-2-1920w.webp" aria-label="Samara Joy performing with live orchestra at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-2-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-2-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-2-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-2-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Samara Joy performing with live orchestra at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-3-1920w.webp" aria-label="Samara Joy performs on stage with live band at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-3-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-3-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-3-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-3-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Samara Joy performs on stage with live band at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/dionysus-band-fort-mose-jazz-festival-performance-1920w.webp" aria-label="Dionysus band performing on illuminated stage with colorful lighting in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/dionysus-band-fort-mose-jazz-festival-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/dionysus-band-fort-mose-jazz-festival-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/dionysus-band-fort-mose-jazz-festival-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/dionysus-band-fort-mose-jazz-festival-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Dionysus band performing on illuminated stage with colorful lighting in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/don-was-bass-fort-mose-festival-1920w.webp" aria-label="Don Was playing upright bass at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/don-was-bass-fort-mose-festival-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/don-was-bass-fort-mose-festival-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/don-was-bass-fort-mose-festival-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/don-was-bass-fort-mose-festival-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Don Was playing upright bass at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/hannah-stokes-fort-mose-jazz-festival-performance-1920w.webp" aria-label="Hannah Stokes performing with guitar and microphone at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/hannah-stokes-fort-mose-jazz-festival-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/hannah-stokes-fort-mose-jazz-festival-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/hannah-stokes-fort-mose-jazz-festival-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/hannah-stokes-fort-mose-jazz-festival-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Hannah Stokes performing with guitar and microphone at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-laughing-1920w.webp" aria-label="Woman laughing enthusiastically while holding phone at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-laughing-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-laughing-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-laughing-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-laughing-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Woman laughing enthusiastically while holding phone at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-musician-performance-1920w.webp" aria-label="Jazz musician in black beret and blue coat performing at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-musician-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-musician-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-musician-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-musician-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Jazz musician in black beret and blue coat performing at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-drummer-performance-1920w.webp" aria-label="Drummer with long dreadlocks and sunglasses performing behind drum kit in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-drummer-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-drummer-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-drummer-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-drummer-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Drummer with long dreadlocks and sunglasses performing behind drum kit in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-2-1920w.webp" aria-label="Gilmore Quandry band performing on stage with dramatic blue and green lighting in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-2-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-2-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-2-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-2-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Gilmore Quandry band performing on stage with dramatic blue and green lighting in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-trumpet-performance-1920w.webp" aria-label="Musician playing trumpet on stage with blue lighting at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-trumpet-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-trumpet-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-trumpet-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-trumpet-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Musician playing trumpet on stage with blue lighting at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-guitar-performance-1920w.webp" aria-label="Musician performing with electric guitar against vibrant nebula backdrop in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-guitar-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-guitar-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-guitar-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-guitar-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Musician performing with electric guitar against vibrant nebula backdrop in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-festival-poster-wall-visitors-1920w.webp" aria-label="Two people viewing colorful poster wall display at cultural venue in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-festival-poster-wall-visitors-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-festival-poster-wall-visitors-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-festival-poster-wall-visitors-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-festival-poster-wall-visitors-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Two people viewing colorful poster wall display at cultural venue in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-performers-st-augustine-1920w.webp" aria-label="Two smiling festival performers posing together at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-performers-st-augustine-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-performers-st-augustine-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-performers-st-augustine-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-performers-st-augustine-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Two smiling festival performers posing together at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-1920w.webp" aria-label="Gilmore Quandry performing live on stage with dramatic blue lighting in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/gilmore-quandry-fort-mose-jazz-festival-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Gilmore Quandry performing live on stage with dramatic blue lighting in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-horizontal" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-stage-performance-1920w.webp" aria-label="Band performs on stage with colorful lighting at Fort Mose Jazz Festival in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-stage-performance-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-stage-performance-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-stage-performance-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-stage-performance-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Band performs on stage with colorful lighting at Fort Mose Jazz Festival in St. Augustine, Florida" loading="lazy">
+            </button>
+            <button type="button" class="shoot-thumb is-vertical" data-lightbox-img="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-applauding-1920w.webp" aria-label="Concert audience members raising hands and applauding during live music performance in St. Augustine, Florida">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-applauding-1200w.webp"
+                   srcset="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-applauding-400w.webp 400w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-applauding-1200w.webp 1200w, /images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-applauding-1920w.webp 1920w"
+                   sizes="(max-width: 768px) 100vw, 600px"
+                   alt="Concert audience members raising hands and applauding during live music performance in St. Augustine, Florida" loading="lazy">
+            </button>
+          </div>
+          <div class="shoot-tags"><a class="shoot-tag" href="/st-augustine-event-photographer/">Event Photography</a><span class="shoot-tag">Fort Mose Historic State Park</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Short story — 2 tight paragraphs -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="work-story">
+        <p>Fort Mose Historic State Park is the site of the first legally sanctioned free Black settlement in what is now the United States, established in 1738 just north of downtown St. Augustine. Its annual Jazz &amp; Blues Festival honors that legacy with live music and cultural programming.</p>
+        <p>First Sight Films has been the festival's photo and video partner for two years running, working with St. Johns Cultural Events to document every night &mdash; headline sets from Gary Clark Jr, Samara Joy, Ledisi, and Robert Cray, the crowds, and the historical programming &mdash; and delivering highlight reels, social clips, and photography the organization uses across web and social.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Service pathway (§4.6) — up to the service page(s); "see more" covers other projects -->
+  <section class="section">
+    <div class="container">
+      <div class="pathway">
+        <h2 class="pathway-lead">Event Coverage Services</h2>
+        <div class="pathway-cards">
+          <a class="pathway-card" href="/st-augustine-event-photographer/">
+            <h3>Event Photography <span class="arrow" aria-hidden="true">&rarr;</span></h3>
+            <p>Performance, crowd, and press photography for festivals and events.</p>
+          </a>
+          <a class="pathway-card" href="/event-video-coverage-st-augustine/">
+            <h3>Event Video Coverage <span class="arrow" aria-hidden="true">&rarr;</span></h3>
+            <p>Multi-camera coverage of festivals, concerts, and live events.</p>
+          </a>
+        </div>
+        <p class="pathway-more"><a href="/work/">See more of our work &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ (7 Qs; visible + FAQPage schema, 1:1) -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      {{faq:work-fort-mose-jazz-blues-festival}}
+    </div>
+  </section>
+
+</main>
+
+<!-- Shared lightbox modal (photo + video) -->
+<div id="work-modal" class="work-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Media viewer">
+  <div class="work-modal__backdrop" data-close-modal></div>
+  <div class="work-modal__content">
+    <button type="button" class="work-modal__close" data-close-modal aria-label="Close">&times;</button>
+    <video id="work-modal-video" class="work-modal__player" controls playsinline preload="metadata" hidden></video>
+    <img id="work-modal-image" class="work-modal__image" alt="" hidden>
+  </div>
+</div>
+<script src="/js/work-feed.js" defer></script>
+
+<!-- Schema: BreadcrumbList (microdata above) · FAQPage (faq-schema module, in head) ·
+     VideoObject (recap) · ImageObject (named-entity photos) · Event (festival; organizer = St. Johns
+     Cultural Events; FSF NOT organizer) · CreativeWork (FSF as media creator, about the Event) ·
+     LocalBusiness + AggregateRating (schema module, below). -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"Fort Mose Jazz & Blues Festival 2026 — Recap","description":"First Sight Films recap video of the 2026 Fort Mose Jazz & Blues Festival at Fort Mose Historic State Park in St. Augustine, Florida.","thumbnailUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-2026-recap-poster.jpg","duration":"PT50S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/fort-mose-jazz-blues-festival-2026-recap-st-augustine-web.mp4","contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}},"publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"Fort Mose Jazz & Blues Festival 2025 — Recap","description":"First Sight Films recap video of the 2025 Fort Mose Jazz & Blues Festival at Fort Mose Historic State Park in St. Augustine, Florida.","thumbnailUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-crowd-stage-1200w.webp","duration":"PT43S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/fort-mose-jazz-blues-festival-2025-recap-st-augustine-web.mp4","contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}},"publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"Fort Mose Jazz & Blues Festival — Dinner Party Promo","description":"First Sight Films promotional video for the Fort Mose Jazz & Blues Festival dinner party at Fort Mose Historic State Park in St. Augustine, Florida.","thumbnailUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-dinner-party-promo-poster.jpg","duration":"PT20S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/fort-mose-jazz-blues-festival-dinner-party-promo-st-augustine-web.mp4","contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}},"publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"Fort Mose Jazz & Blues Festival 2025 — Teaser","description":"First Sight Films teaser video for the 2025 Fort Mose Jazz & Blues Festival at Fort Mose Historic State Park in St. Augustine, Florida.","thumbnailUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-2025-teaser-poster.jpg","duration":"PT22S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/fort-mose-jazz-blues-festival-2025-teaser-st-augustine-web.mp4","contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}},"publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-performance-1920w.webp","description":"Gary Clark Jr performing on stage with guitar at outdoor festival in St. Augustine, Florida","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/samara-joy-fort-mose-jazz-festival-performance-1920w.webp","description":"Samara Joy performing with orchestra at Fort Mose Jazz Festival in St. Augustine, Florida","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/ledisi-fort-mose-jazz-festival-performance-st-augustine-1920w.webp","description":"Ledisi performing energetically on stage with arms outstretched at Fort Mose Jazz Festival in St. Augustine, Florida","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/robert-cray-fort-mose-jazz-festival-1920w.webp","description":"Robert Cray performing with electric guitar and microphone on stage in St. Augustine, Florida","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/ruthie-foster-fort-mose-jazz-festival-performance-1920w.webp","description":"Ruthie Foster performing with guitar and microphone at Fort Mose Jazz Festival in St. Augustine, Florida","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-1920w.webp","description":"Don Was performing energetically at microphone during Fort Mose Jazz Festival in St. Augustine, Florida","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageObject","contentUrl":"https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/fort-mose-historical-interpreter-festival-attendees-1920w.webp","description":"Historical interpreter in colonial costume speaks with festival attendees in St. Augustine, Florida","creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"},"contentLocation":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","@id":"https://www.firstsightfilms.com/work/fort-mose-jazz-blues-festival/#event","name":"Fort Mose Jazz & Blues Festival","description":"An annual celebration of African American history and music at Fort Mose Historic State Park in St. Augustine, Florida — the site of the first legally sanctioned free Black settlement in what is now the United States, established in 1738.","location":{"@type":"Place","name":"Fort Mose Historic State Park","address":{"@type":"PostalAddress","addressLocality":"St. Augustine","addressRegion":"FL","addressCountry":"US"}},"organizer":{"@type":"Organization","name":"St. Johns Cultural Events, Inc."}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CreativeWork","name":"Fort Mose Jazz & Blues Festival — Photo & Video by First Sight Films","about":{"@id":"https://www.firstsightfilms.com/work/fort-mose-jazz-blues-festival/#event"},"creator":{"@type":"Organization","name":"First Sight Films","url":"https://www.firstsightfilms.com"}}
+</script>
+
+{{schema}}
+
+{{footer}}
+</body>
+</html>

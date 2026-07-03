@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!-- /work/hma-mortgage/ — ONE-OFF PROJECT (headless video gallery, no dated feed, no photos).
+     Cloned from /work/st-augustine-amphitheatre/. Content: SEO drop 2026-07-02.
+     THE WORK launches with one recap video and grows as more HMA clips are added. -->
+<html lang="en">
+<head>
+{{head}}
+<link rel="stylesheet" href="/css/services.css">
+<title>HMA Mortgage Sales Rally Video | Corporate Event Coverage</title>
+<meta name="description" content="First Sight Films filmed HMA Mortgage's 2025 Sales Rally at Embassy Suites St. Augustine Beach — 3 cameras, 12 attendee testimonials, next-day social reel.">
+<meta property="og:title" content="HMA Mortgage Sales Rally Video | Corporate Event Coverage">
+<meta property="og:description" content="First Sight Films filmed HMA Mortgage's 2025 Sales Rally at Embassy Suites St. Augustine Beach — 3 cameras, 12 attendee testimonials, next-day social reel.">
+<meta property="og:image" content="https://www.firstsightfilms.com/images/hma-sales-rally-embassy-suites-st-augustine-720w.jpg">
+<meta name="twitter:title" content="HMA Mortgage Sales Rally Video | Corporate Event Coverage">
+<meta name="twitter:description" content="First Sight Films filmed HMA Mortgage's 2025 Sales Rally at Embassy Suites St. Augustine Beach — 3 cameras, 12 attendee testimonials, next-day social reel.">
+<meta name="twitter:image" content="https://www.firstsightfilms.com/images/hma-sales-rally-embassy-suites-st-augustine-720w.jpg">
+{{faq-schema:work-hma-mortgage}}
+<style>
+  /* Hero (small image — the work is the star, not the hero) */
+  .work-hero { padding: 3rem 1.5rem 2rem; text-align: center; }
+  .work-hero h1 { max-width: 22ch; margin: 0 auto 1.25rem; }
+  .work-hero .hero-img { max-width: 504px; margin: 0 auto 1.5rem; border-radius: 10px; overflow: hidden; }
+  .work-hero .hero-img img { width: 100%; height: auto; display: block; }
+  .work-hero .work-lead { font-size: 0.86rem; font-weight: 360; line-height: 1.6; max-width: 58ch; margin: 0 auto 1.5rem; color: #333; }
+  .work-hero .work-lead a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  .hero-proof-inline { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .proof-item-inline { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .proof-number-inline { font-size: 1.75rem; font-weight: 700; color: #1a1a2e; line-height: 1.2; }
+  .proof-label-inline { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: #666; margin-top: .25rem; }
+  .proof-divider { width: 1px; height: 40px; background: #ddd; }
+  .hero-tags { justify-content: center; margin-top: 1.5rem; }
+
+  /* At a glance — scannable facts (replaces prose) */
+  .quick-facts-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; margin: 0 0 .6rem; text-align: center; }
+  .quick-facts { list-style: none; padding: 1.25rem 1.5rem; margin: 0 auto; max-width: 820px; background: #fff; border: 1px solid #eee; border-left: 3px solid #f4c057; border-radius: 4px; }
+  .quick-facts li { margin: 0 0 .5rem; line-height: 1.55; font-size: .95rem; color: #333; }
+  .quick-facts li:last-child { margin-bottom: 0; }
+
+  /* THE WORK — video gallery (the star): responsive grid, tiles multiple videos */
+  .shoot-feed { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  @media (max-width: 640px) { .shoot-feed { grid-template-columns: 1fr; } }
+  .shoot-thumb { position: relative; display: block; padding: 0; border: 0; background: #000; border-radius: 8px; overflow: hidden; cursor: pointer; }
+  .shoot-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+  .shoot-thumb:hover img { transform: scale(1.04); }
+  .shoot-card-media:not(.shoot-thumbs) .shoot-thumb { aspect-ratio: 16 / 9; }  /* video = big widescreen */
+  .shoot-label { margin: .85rem 0 0; font-size: 1rem; font-weight: 600; color: #1a1a2e; }
+  .shoot-label + .shoot-tags { margin-top: .5rem; }
+  .shoot-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+  .shoot-tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; color: #555; background: #f0f0f2; padding: .25rem .65rem; border-radius: 999px; }
+  a.shoot-tag { cursor: pointer; transition: background .2s ease, color .2s ease; }
+  a.shoot-tag:hover { background: #f4c057; color: #1a1a1a; }
+  .shoot-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 64px; height: 64px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; padding-left: 4px; }
+  .shoot-thumb:hover .shoot-play { background: #f4c057; color: #1a1a1a; }
+  /* Onsite team interviews — portrait sub-group beneath the main video */
+  .interview-group { max-width: 1000px; margin: 2.5rem auto 0; }
+  .interview-heading { text-align: center; font-size: 1.1rem; margin: 0 0 .5rem; }
+  .interview-intro { text-align: center; font-size: .95rem; color: #555; max-width: 560px; margin: 0 auto 1.5rem; }
+  .interview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; max-width: 760px; margin: 0 auto; }
+  .interview-item { margin: 0; }
+  .interview-thumb { aspect-ratio: 9 / 16; }
+  .interview-item .shoot-tags { justify-content: center; margin-top: .6rem; }
+  @media (max-width: 560px) { .interview-grid { gap: .5rem; } }
+
+  /* Short story (1–2 tight paragraphs + inline quote) */
+  .work-story { max-width: 720px; margin: 0 auto; text-align: left; }
+  .work-story p { line-height: 1.75; margin-bottom: 1rem; color: #333; }
+  .work-story a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  .work-story blockquote { border-left: 3px solid #f4c057; padding-left: 1rem; margin: 1.5rem 0 0; font-style: italic; color: #444; }
+  .work-story blockquote footer { font-style: normal; font-size: .9rem; color: #666; margin-top: .5rem; }
+
+  /* Service pathway (§4.6) — service cards, not a link list */
+  .pathway { max-width: 860px; margin: 0 auto; }
+  .pathway-lead { text-align: center; font-size: 1.25rem; margin: 0 auto 1.75rem; }
+  .pathway-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 640px) { .pathway-cards { grid-template-columns: 1fr; } }
+  .pathway-card { display: block; border: 1px solid #eee; border-radius: 10px; background: #fff; padding: 1.35rem 1.4rem; box-shadow: 0 2px 8px rgba(0,0,0,.05); transition: box-shadow .2s ease, transform .2s ease; color: inherit; }
+  .pathway-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,.1); transform: translateY(-2px); }
+  .pathway-card h3 { margin: 0 0 .45rem; font-size: 1.1rem; }
+  .pathway-card h3 .arrow { color: #b8860b; font-weight: 700; }
+  .pathway-card p { margin: 0; font-size: .92rem; line-height: 1.55; color: #555; }
+  .pathway-more { text-align: center; margin-top: 1.75rem; }
+  .pathway-more a { font-weight: 600; color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+
+  /* Shared lightbox modal (video) */
+  .work-modal { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 2rem; }
+  .work-modal[data-open="true"] { display: flex; }
+  .work-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.9); cursor: pointer; }
+  .work-modal__content { position: relative; width: auto; max-width: 1200px; max-height: 90vh; }
+  .work-modal__player, .work-modal__image { max-width: 100%; max-height: 90vh; background: #000; display: block; }
+  .work-modal__player[hidden], .work-modal__image[hidden] { display: none; }
+  .work-modal__close { position: absolute; top: -3rem; right: 0; background: none; border: 0; color: #fff; font-size: 2.5rem; line-height: 1; cursor: pointer; padding: .25rem .75rem; }
+  .work-modal__close:hover { color: #f4c057; }
+  @media (max-width: 768px) { .work-modal { padding: 1rem; } .work-modal__close { top: -2.5rem; font-size: 2rem; } }
+</style>
+</head>
+<body class="page-service">
+
+{{header}}
+
+<main>
+
+  <!-- 1. Breadcrumb (Home › Our Work › HMA Mortgage Sales Rally) -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/work/" itemprop="item"><span itemprop="name">Our Work</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">HMA Mortgage Sales Rally</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- 2. Hero — image + H1 + one-line lead + stat bar -->
+  <section class="work-hero">
+    <div class="container">
+      <h1>HMA Mortgage Sales Rally Event Video</h1>
+      <div class="hero-img">
+        <img src="/images/hma-sales-rally-embassy-suites-st-augustine-720w.jpg" alt="First Sight Films corporate event video of HMA Mortgage's Sales Rally at Embassy Suites St. Augustine Beach" width="720" height="478" loading="lazy">
+      </div>
+      <p class="work-lead"><a href="/aboutus/">First Sight Films</a> produced the corporate event video for HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach.</p>
+      <div class="hero-proof-inline">
+        <div class="proof-item-inline"><span class="proof-number-inline">2</span><span class="proof-label-inline">Days</span></div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline"><span class="proof-number-inline">3</span><span class="proof-label-inline">Cameras</span></div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline"><span class="proof-number-inline">15</span><span class="proof-label-inline">Deliverables</span></div>
+        <div class="proof-divider"></div>
+        <div class="proof-item-inline"><span class="proof-number-inline">Next-Day</span><span class="proof-label-inline">Social Reel</span></div>
+      </div>
+      <div class="shoot-tags hero-tags">
+        <a class="shoot-tag" href="/corporate-video-st-augustine/">Corporate Video</a>
+        <a class="shoot-tag" href="/event-video-coverage-st-augustine/">Event Video</a>
+        <span class="shoot-tag">Embassy Suites St. Augustine Beach</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. At a glance — scannable facts -->
+  <section class="section section-gray">
+    <div class="container">
+      <ul class="quick-facts">
+        <li><strong>Client:</strong> HMA Mortgage — national mortgage lender, licensed in 35+ states</li>
+        <li><strong>Event:</strong> Two-day sales rally · Embassy Suites St. Augustine Beach · April 2025</li>
+        <li><strong>Crew:</strong> 3 cameras (1 stationary, 2 roaming)</li>
+        <li><strong>Captured:</strong> Keynotes, breakouts, panels, and Q&amp;As · 12 attendee testimonials · socials and downtime</li>
+        <li><strong>Delivered:</strong> 30-second social reel (next day) · 2-minute recap film + 12 testimonials + 4 product videos (within a week) · custom animated 2D logo</li>
+        <li><strong>Turnaround:</strong> Social reel next day; full package within a week</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. THE WORK — headless video gallery (launches with one video; grows) -->
+  <section class="section" id="the-work">
+    <div class="container">
+      <div class="shoot-feed" id="shoot-feed">
+
+        <article class="shoot-card">
+          <div class="shoot-card-media">
+            <button type="button" class="shoot-thumb" data-lightbox-video="/video/portfolio/hma-sales-rally-corporate-event-videography.mp4" aria-label="Play the HMA Mortgage Sales Rally recap video">
+              <img src="/images/hma-sales-rally-embassy-suites-st-augustine-720w.jpg" alt="First Sight Films corporate event video of HMA Mortgage's Sales Rally at Embassy Suites St. Augustine Beach" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </div>
+          <p class="shoot-label">Event recap</p>
+          <div class="shoot-tags"><a class="shoot-tag" href="/corporate-video-st-augustine/">Corporate Video</a><span class="shoot-tag">Embassy Suites St. Augustine Beach</span></div>
+        </article>
+
+        <article class="shoot-card">
+          <div class="shoot-card-media">
+            <button type="button" class="shoot-thumb" data-lightbox-video="/video/portfolio/hma-sales-rally-social-reel-web.mp4" aria-label="Play the HMA Mortgage Sales Rally social media reel">
+              <img src="/images/hma-sales-rally-social-reel-poster.jpg" alt="First Sight Films social media reel of HMA Mortgage's Sales Rally at Embassy Suites St. Augustine Beach" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </div>
+          <p class="shoot-label">Social media reel</p>
+          <div class="shoot-tags"><a class="shoot-tag" href="/corporate-video-st-augustine/">Corporate Video</a><span class="shoot-tag">Embassy Suites St. Augustine Beach</span></div>
+        </article>
+
+
+
+
+      </div>
+
+      <!-- Onsite team interviews (portrait) — presented beneath the main video -->
+      <div class="interview-group">
+        <h3 class="interview-heading">On-site testimonial videos</h3>
+        <p class="interview-intro">These on-site testimonial videos became marketing content for the following year's rally.</p>
+        <div class="interview-grid">
+          <figure class="interview-item">
+            <button type="button" class="shoot-thumb interview-thumb" data-lightbox-video="/video/portfolio/hma-team-interview-rachael-tresch-web.mp4" aria-label="Play an on-site testimonial video from HMA Mortgage's 2025 Sales Rally">
+              <img src="/images/hma-team-interview-rachael-tresch-poster.jpg" alt="On-site attendee testimonial video filmed at HMA Mortgage's 2025 Sales Rally by First Sight Films, St. Augustine Beach" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </figure>
+          <figure class="interview-item">
+            <button type="button" class="shoot-thumb interview-thumb" data-lightbox-video="/video/portfolio/hma-team-interview-dan-anderson-web.mp4" aria-label="Play a second testimonial video from HMA Mortgage's Sales Rally">
+              <img src="/images/hma-team-interview-dan-anderson-poster.jpg" alt="Event testimonial video recorded for HMA Mortgage at Embassy Suites St. Augustine Beach by First Sight Films" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </figure>
+          <figure class="interview-item">
+            <button type="button" class="shoot-thumb interview-thumb" data-lightbox-video="/video/portfolio/hma-team-interview-greg-malamut-web.mp4" aria-label="Play a third testimonial video from HMA Mortgage's Sales Rally">
+              <img src="/images/hma-team-interview-greg-malamut-poster.jpg" alt="Corporate testimonial video captured at HMA Mortgage's Sales Rally, produced by First Sight Films" loading="lazy">
+              <span class="shoot-play" aria-hidden="true">&#9658;</span>
+            </button>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Short story — 2 paragraphs + inline quote -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="work-story">
+        <p>HMA Mortgage flew its entire team into St. Augustine Beach for a two-day sales rally, and First Sight Films filmed all of it with a three-camera crew — keynotes, breakouts, panels, and Q&amp;As, plus everything in between: team-building, games, and people connecting. We shot the main sessions in the Anastasia Ballroom and out on the terrace, then pulled folks into the Surf Crest Ballroom, the Atlantic right behind them, for attendee testimonials and product videos.</p>
+        <p>The challenge with a multi-day rally is that flown-in attendees get tired and don't always read as engaged on camera. First Sight Films studied the agenda ahead of time, mapped the most interactive sessions, and shot the best attendee b-roll on day one before fatigue set in. HMA had a social reel the next day and put the finished videos to work across its website and social channels.</p>
+        <blockquote>
+          <p>"Wow, the videos that Diego and the team created for our corporate Sales Rally were absolutely spectacular! They completely captured our vibe (and definitely made us look cool!)! They were tuned into our goals and objectives, and delivered a product that went above and beyond!"</p>
+          <footer>— Rachael Tresch, Director of Sales &amp; Marketing Strategy, HMA Mortgage (Google, May 2025)</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Service pathway (§4.6) -->
+  <section class="section">
+    <div class="container">
+      <div class="pathway">
+        <h2 class="pathway-lead">Video Production Services</h2>
+        <div class="pathway-cards">
+          <a class="pathway-card" href="/corporate-video-st-augustine/">
+            <h3>Corporate Video <span class="arrow" aria-hidden="true">&rarr;</span></h3>
+            <p>Sales rallies, conferences, and brand films for companies.</p>
+          </a>
+          <a class="pathway-card" href="/event-video-coverage-st-augustine/">
+            <h3>Event Video Coverage <span class="arrow" aria-hidden="true">&rarr;</span></h3>
+            <p>Multi-camera coverage of conferences, festivals, and live events.</p>
+          </a>
+        </div>
+        <p class="pathway-more"><a href="/work/">See more of our work &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ (6 Qs; visible + FAQPage schema, 1:1) -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      {{faq:work-hma-mortgage}}
+    </div>
+  </section>
+
+</main>
+
+<!-- Shared lightbox modal (video) -->
+<div id="work-modal" class="work-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Media viewer">
+  <div class="work-modal__backdrop" data-close-modal></div>
+  <div class="work-modal__content">
+    <button type="button" class="work-modal__close" data-close-modal aria-label="Close">&times;</button>
+    <video id="work-modal-video" class="work-modal__player" controls playsinline preload="metadata" hidden></video>
+    <img id="work-modal-image" class="work-modal__image" alt="" hidden>
+  </div>
+</div>
+<script src="/js/work-feed.js" defer></script>
+
+<!-- Schema: BreadcrumbList (microdata above) · FAQPage (faq-schema module, head) ·
+     VideoObject (reused verbatim from the event page) · Organization (client = HMA, FSF as
+     creator/associated, spec §2) · LocalBusiness + AggregateRating (schema module, below). -->
+
+<!-- VideoObject — HMA Mortgage Sales Rally (verbatim from the event page; real duration PT2M14S) -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "VideoObject", "name": "HMA Mortgage Sales Rally — Corporate Event Coverage, St. Augustine", "description": "First Sight Films filmed HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach in April 2025. HMA's a national mortgage lender — licensed in 35+ states — and they flew their whole team into St. Augustine Beach for a two-day rally, so we covered all of it.", "thumbnailUrl": "https://www.firstsightfilms.com/images/hma-sales-rally-embassy-suites-st-augustine-720w.jpg", "uploadDate": "2025-04", "duration": "PT2M13S", "contentUrl": "https://www.firstsightfilms.com/video/portfolio/hma-sales-rally-corporate-event-videography.mp4", "publisher": {"@type": "Organization", "name": "First Sight Films", "logo": {"@type": "ImageObject", "url": "https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+
+<!-- VideoObject — HMA Sales Rally 30-second social reel (real ffprobe duration PT39S) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"HMA Mortgage Sales Rally — Social Media Reel","description":"Short-form social media reel of HMA Mortgage's Sales Rally at Embassy Suites St. Augustine Beach, produced by First Sight Films.","thumbnailUrl":"https://www.firstsightfilms.com/images/hma-sales-rally-social-reel-poster.jpg","uploadDate":"2025-04","duration":"PT39S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/hma-sales-rally-social-reel-web.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+
+<!-- VideoObject — onsite attendee testimonials (generic; ffprobe-exact durations) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"HMA Mortgage Sales Rally — Attendee Testimonial Video (1 of 3)","description":"First Sight Films captured this quick attendee testimonial on-site at HMA Mortgage's 2025 Sales Rally at Embassy Suites St. Augustine Beach — one of a set of short interviews filmed for HMA to market the following year's event across its website and social channels.","thumbnailUrl":"https://www.firstsightfilms.com/images/hma-team-interview-rachael-tresch-poster.jpg","uploadDate":"2025-04","duration":"PT28S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/hma-team-interview-rachael-tresch-web.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"HMA Mortgage Sales Rally — Attendee Testimonial Video (2 of 3)","description":"First Sight Films recorded this on-site attendee testimonial at HMA Mortgage's 2025 Sales Rally at Embassy Suites St. Augustine Beach — part of a set of quick interviews delivered to HMA for promoting the next year's rally on its website and social channels.","thumbnailUrl":"https://www.firstsightfilms.com/images/hma-team-interview-dan-anderson-poster.jpg","uploadDate":"2025-04","duration":"PT36S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/hma-team-interview-dan-anderson-web.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"HMA Mortgage Sales Rally — Attendee Testimonial Video (3 of 3)","description":"First Sight Films filmed this brief attendee testimonial during HMA Mortgage's 2025 Sales Rally at Embassy Suites St. Augustine Beach — one of several on-site interviews created to help HMA promote the following year's event.","thumbnailUrl":"https://www.firstsightfilms.com/images/hma-team-interview-greg-malamut-poster.jpg","uploadDate":"2025-04","duration":"PT28S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/hma-team-interview-greg-malamut-web.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+</script>
+
+<!-- Client authority: HMA Mortgage as an Organization; FSF as creator of the work (spec §2) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "HMA Mortgage Sales Rally Video by First Sight Films",
+  "about": {
+    "@type": "Organization",
+    "name": "HMA Mortgage",
+    "description": "National mortgage lender, licensed in 35+ states.",
+    "areaServed": "US"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "First Sight Films",
+    "url": "https://www.firstsightfilms.com"
+  }
+}
+</script>
+
+{{schema}}
+
+{{footer}}
+</body>
+</html>

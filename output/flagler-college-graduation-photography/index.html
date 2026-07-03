@@ -262,21 +262,6 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </section>
 
-  <!-- Personal Story Section -->
-  <section class="section" style="background: rgba(244, 192, 87, 0.1);">
-    <div class="container">
-      <div class="section-header">
-        <h2>From Student to Photographer</h2>
-        <p>A personal connection to Flagler College.</p>
-      </div>
-      <div class="commitments-intro-content" style="max-width: 800px; margin: 0 auto;">
-        <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">Diego graduated from Flagler College in 2007 with degrees in <strong>Sociology and Political Science</strong>. He spent plenty of time in Ponce Hall, took classes in Lewis Auditorium, and logged countless hours studying in Proctor Library. He knows this campus — not just as a photographer, but as someone who walked these halls as a student.</p>
-        <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">When Diego graduated, his own graduation photos were limited. A few quick shots, nothing that truly captured the moment or the place that shaped him. That experience stayed with him.</p>
-        <p style="font-size: 1.125rem; line-height: 1.8;"><strong>That's why he's passionate about capturing this moment for today's graduates.</strong> These students have accomplished so much during their time at Flagler, and they deserve photos that reflect that — images that capture both the beauty of this historic campus and the individual stories of the graduates who call it home.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Photo Gallery Section -->
   <section class="section section-gray">
     <div class="container">
@@ -325,31 +310,27 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </section>
 
-  <!-- FCGradStories Partnership Section -->
+  <!-- Proof → the full /work/ project (feed-back to the entity page; deep case-study lives there) -->
+  <style>
+    .featured-work { max-width: 780px; margin: 0 auto; display: flex; gap: 1.5rem; align-items: center; border: 1px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-decoration: none; color: inherit; transition: box-shadow .2s ease, transform .2s ease; }
+    .featured-work:hover { box-shadow: 0 6px 18px rgba(0,0,0,.1); transform: translateY(-2px); }
+    .featured-work img { width: 300px; aspect-ratio: 16/10; object-fit: cover; display: block; flex-shrink: 0; }
+    .featured-work-body { padding: 1rem 1.5rem 1rem 0; }
+    .featured-work-body h3 { margin: 0 0 .4rem; font-size: 1.2rem; }
+    .featured-work-body p { margin: 0 0 .6rem; color: #555; font-size: .95rem; line-height: 1.5; }
+    .featured-work-body .arrow { font-weight: 600; color: #b8860b; }
+    @media (max-width: 600px) { .featured-work { flex-direction: column; align-items: stretch; } .featured-work img { width: 100%; } .featured-work-body { padding: 0 1.25rem 1.25rem; } }
+  </style>
   <section class="section section-light">
     <div class="container">
-      <div class="section-header">
-        <h2>The FCGradStories Partnership</h2>
-        <p>Three years as Flagler College's graduation photographer.</p>
-      </div>
-      <div class="process-grid">
-        <div class="process-step">
-          <h3>Collaboration</h3>
-          <p>We work directly with Beth Sweeny, Director of External and Government Relations, along with Special Events and Marketing to capture graduating seniors for Flagler's FCGradStories campaign each spring.</p>
+      <a class="featured-work" href="/work/flagler-college/">
+        <img src="/images/grad-photo-flagler-college-1-medium.webp" alt="First Sight Films graduation photography at Flagler College's Ponce Hall campus" loading="lazy">
+        <div class="featured-work-body">
+          <h3>Our Flagler College work</h3>
+          <p>Diego is a Flagler grad (Class of 2007) and the college's FCGradStories photographer. See three years of campus photo and video — 50+ graduates across the historic Ponce Hall campus, plus the images featured on Flagler.edu.</p>
+          <span class="arrow">See our full Flagler College work &rarr;</span>
         </div>
-        <div class="process-step">
-          <h3>Featured on Flagler.edu</h3>
-          <p>Our photographs are featured on Flagler College's website, telling the stories of graduates and their journeys through college. See our work on the <a href="https://www.flagler.edu/student-life/fcgradstories-2025" target="_blank" rel="noopener">2025</a> and <a href="https://www.flagler.edu/student-life/fcgradstories-2024" target="_blank" rel="noopener">2024</a> FCGradStories pages.</p>
-        </div>
-        <div class="process-step">
-          <h3>50+ Graduates</h3>
-          <p>Over three years, we've photographed more than 50 Flagler graduates — each with their own story, their own accomplishments, and their own vision for their graduation photos.</p>
-        </div>
-        <div class="process-step">
-          <h3>Campus Expertise</h3>
-          <p>From the iconic Ponce Hall courtyard to hidden gems across campus, we know where to go to get the shot. We've spent years learning the best light, the best angles, and the best times to capture Flagler's Spanish Renaissance architecture.</p>
-        </div>
-      </div>
+      </a>
     </div>
   </section>
 

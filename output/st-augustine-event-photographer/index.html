@@ -508,6 +508,41 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </section>
 
+  <!-- Featured project — feed-back cross-link to /work/ (proof → pitch) -->
+  <style>
+    .featured-work { max-width: 780px; margin: 0 auto; display: flex; gap: 1.5rem; align-items: center; border: 1px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-decoration: none; color: inherit; transition: box-shadow .2s ease, transform .2s ease; }
+    .featured-work:hover { box-shadow: 0 6px 18px rgba(0,0,0,.1); transform: translateY(-2px); }
+    .featured-work img { width: 300px; aspect-ratio: 16/10; object-fit: cover; display: block; flex-shrink: 0; }
+    .featured-work-body { padding: 1rem 1.5rem 1rem 0; }
+    .featured-work-body h3 { margin: 0 0 .4rem; font-size: 1.2rem; }
+    .featured-work-body p { margin: 0 0 .6rem; color: #555; font-size: .95rem; line-height: 1.5; }
+    .featured-work-body .arrow { font-weight: 600; color: #b8860b; }
+    @media (max-width: 600px) { .featured-work { flex-direction: column; align-items: stretch; } .featured-work img { width: 100%; } .featured-work-body { padding: 0 1.25rem 1.25rem; } }
+  </style>
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured projects</h2>
+      </div>
+      <a class="featured-work" href="/work/fort-mose-jazz-blues-festival/">
+        <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp" alt="First Sight Films photography of Gary Clark Jr at the Fort Mose Jazz &amp; Blues Festival" loading="lazy" width="1200" height="1499">
+        <div class="featured-work-body">
+          <h3>Fort Mose Jazz &amp; Blues Festival</h3>
+          <p>Two years of festival photography at Fort Mose Historic State Park — Gary Clark Jr, Samara Joy, Ledisi, and the crowds, shot night after night.</p>
+          <span class="arrow">See the project &rarr;</span>
+        </div>
+      </a>
+      <a class="featured-work" href="/work/flagler-college/" style="margin-top:1.25rem;">
+        <img src="/images/grad-photo-flagler-college-1-medium.webp" alt="First Sight Films graduation photography of a Flagler College graduate by the Henry Flagler statue at Ponce Hall" loading="lazy">
+        <div class="featured-work-body">
+          <h3>Flagler College</h3>
+          <p>Flagler's graduation photographer for three years — 50+ seniors across the historic Ponce Hall campus for the FCGradStories campaign.</p>
+          <span class="arrow">See the project &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
 <!-- Reviews Section - Ultra Compact Grid -->
   <section class="section-reviews-compact" id="reviews">
     <style>

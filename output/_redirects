@@ -2,7 +2,7 @@
 # Order matters: first match wins. Keep specific rules + asset protections ABOVE wildcards.
 # 301! forces the redirect even when a static file exists at that path.
 
-/index.html    /    301
+/index.html    /    301!
 
 # Crawl artifacts (bare-email href crawled as a path) — keep 410 ABOVE the wildcards so they win (2026-06-17)
 /aboutus/info@firstsightfilms.com    /410.html    410
@@ -32,6 +32,9 @@
 # --- Consolidate project work to the canonical event page; KEEP the video-production hub live ---
 # Hub stays live (served via 200); all its project sub-pages -> canonical event page (2026-06-17)
 /st-augustine-video-production/    /st-augustine-video-production/    200
+# Fort Mose project migrated to the /work/ pillar (2026-07-03) — exact rule MUST precede the wildcard
+/st-augustine-video-production/fort-mose-jazz-blues-festival/    /work/fort-mose-jazz-blues-festival/    301!
+/st-augustine-video-production/fort-mose-jazz-blues-festival    /work/fort-mose-jazz-blues-festival/    301!
 /st-augustine-video-production/*    /event-video-coverage-st-augustine/    301!
 
 # Old "jacksonville in name" video-production URLs -> event page
@@ -62,6 +65,9 @@
 /nonprofit-video-production/    /st-augustine-video-production/    301
 /blog/documentary-video-nonprofits-florida    /blog/    301
 /blog/documentary-video-nonprofits-florida/    /blog/    301
+# Fort Mose blog post migrated to the /work/ pillar (2026-07-03)
+/blog/fort-mose-jazz-blues-festival    /work/fort-mose-jazz-blues-festival/    301!
+/blog/fort-mose-jazz-blues-festival/    /work/fort-mose-jazz-blues-festival/    301!
 
 # Festival Video page retired — redundant with the event coverage page (2026-06-18)
 /festival-video-production    /event-video-coverage-st-augustine/    301

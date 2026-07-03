@@ -778,15 +778,34 @@ def build_pages(modules, page_filter=None, skip_protected=True):
         # Fix og:url to match page URL
         processed_content = fix_og_url(processed_content, url_path)
 
-        # When a page declares its own OG title, drop the default OG title/description
-        # (the head module's defaults) so the page-specific ones are authoritative.
-        if 'property="og:title"' in page_content:
+        # Drop head-module OG/Twitter DEFAULTS only when the page uses {{head}} AND
+        # overrides them. Bespoke pages (no {{head}}) own their tags — never strip those.
+        uses_head = '{{head}}' in page_content
+        if uses_head and 'property="og:title"' in page_content:
             processed_content = re.sub(
                 r'<meta property="og:title" content="St\. Augustine Video Production \| First Sight Films">\n?',
                 '', processed_content)
             processed_content = re.sub(
                 r'<meta property="og:description" content="Professional video production and photography for St\. Augustine and Northeast Florida businesses\.">\n?',
                 '', processed_content)
+
+        # Drop the head-module default only for the exact OG/Twitter tags a page
+        # overrides, so a page that overrides just one tag keeps the defaults for the rest.
+        _og_defaults = [
+            ('property="og:image"',
+             r'<meta property="og:image" content="https://www\.firstsightfilms\.com/images/fsf-social-share\.png">\n?'),
+            ('name="twitter:title"',
+             r'<meta name="twitter:title" content="St\. Augustine Video Production \| First Sight Films">\n?'),
+            ('name="twitter:description"',
+             r'<meta name="twitter:description" content="Professional video production and photography for St\. Augustine and Northeast Florida businesses\.">\n?'),
+            ('name="twitter:image"',
+             r'<meta name="twitter:image" content="https://www\.firstsightfilms\.com/images/fsf-social-share\.png">\n?'),
+        ]
+        for _marker, _pat in _og_defaults:
+            if uses_head and _marker in page_content:
+                # count=1: strip only the head-module default (first occurrence);
+                # keep the page's own tag even if its value equals the default.
+                processed_content = re.sub(_pat, '', processed_content, count=1)
 
         # Create parent directories
         output_path.parent.mkdir(parents=True, exist_ok=True)
