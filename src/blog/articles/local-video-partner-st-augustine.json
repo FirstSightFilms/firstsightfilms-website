@@ -3,17 +3,29 @@
   "title": "Why St. Augustine Businesses Choose Local Video Partners",
   "excerpt": "There's a version of this conversation that happens a lot. A marketing director gets a recommendation for a production company out of Orlando or Jacksonville. Here's what gets lost in that calculation.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-01-28",
   "dateModified": "2026-01-28",
-
   "categories": {
-    "service": ["corporate-video", "brand-story"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["small-business", "corporate", "entertainment"]
+    "service": [
+      "corporate-video",
+      "brand-story"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "small-business",
+      "corporate",
+      "entertainment"
+    ]
   },
-  "tags": ["local video production", "st augustine video company", "video production partner", "northeast florida"],
-
+  "tags": [
+    "local video production",
+    "st augustine video company",
+    "video production partner",
+    "northeast florida"
+  ],
   "images": {
     "hero": {
       "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-26-medium.webp",
@@ -26,20 +38,22 @@
         "id": "local-knowledge",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-14-medium.webp",
         "alt": "St. Augustine Amphitheatre sign - local venue knowledge",
-        "caption": "Local knowledge means understanding your venues, your community, and your audience"
+        "caption": "Local knowledge means understanding your venues, your community, and your audience",
+        "width": 1200,
+        "height": 800
       }
     ]
   },
-
   "seo": {
-    "title": "Local Video Production St. Augustine | Why Choose Local | First Sight Films",
+    "title": "Local Video Production St. Augustine | Why Choose Local",
     "description": "Why St. Augustine businesses choose local video production partners over Orlando or Jacksonville agencies. The real advantages of working with a local team.",
     "og_type": "article",
     "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-26-medium.webp"
   },
-
-  "related_articles": ["video-retainers-northeast-florida", "commercial-photography-st-augustine"],
-
+  "related_articles": [
+    "video-retainers-northeast-florida",
+    "commercial-photography-st-augustine"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

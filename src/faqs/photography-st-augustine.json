@@ -2,7 +2,7 @@
   "questions": [
     {
       "question": "How much does commercial photography cost in St. Augustine?",
-      "answer": "<p>Event coverage starts at $1,200 for half-day (4 hours) with 100+ edited images. Brand photography starts at $1,500 for a half-day shoot with 40+ images. Product photoshoots for lifestyle brands and apparel start at $4,500 for a full day. All sessions include edited, high-resolution images delivered digitally.</p>"
+      "answer": "<p>Event coverage starts at $1,200 for half-day (4 hours) with 100+ edited images. Commercial photography starts at $1,500 for a half-day shoot with 40+ images. Product photoshoots for lifestyle brands and apparel start at $4,500 for a full day. All sessions include edited, high-resolution images delivered digitally.</p>"
     },
     {
       "question": "What types of photography does First Sight Films offer?",
@@ -58,7 +58,7 @@
         "name": "How much does commercial photography cost in St. Augustine?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Event coverage starts at $1,200 for half-day (4 hours) with 100+ edited images. Brand photography starts at $1,500 for a half-day shoot with 40+ images. Product photoshoots for lifestyle brands and apparel start at $4,500 for a full day. All sessions include edited, high-resolution images delivered digitally."
+          "text": "Event coverage starts at $1,200 for half-day (4 hours) with 100+ edited images. Commercial photography starts at $1,500 for a half-day shoot with 40+ images. Product photoshoots for lifestyle brands and apparel start at $4,500 for a full day. All sessions include edited, high-resolution images delivered digitally."
         }
       },
       {

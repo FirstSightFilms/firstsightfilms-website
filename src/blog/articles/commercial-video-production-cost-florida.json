@@ -3,17 +3,30 @@
   "title": "What Does Commercial Video Production Actually Cost in Northeast Florida?",
   "excerpt": "Commercial video production in Northeast Florida ranges from a few hundred dollars to $15,000+. Here's what actually drives the cost and how to make a good decision.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-02-15",
   "dateModified": "2026-02-15",
-
   "categories": {
-    "service": ["corporate-video", "brand-story"],
-    "location": ["st-augustine", "jacksonville", "northeast-florida"],
-    "industry": ["small-business", "corporate"]
+    "service": [
+      "corporate-video",
+      "brand-story"
+    ],
+    "location": [
+      "st-augustine",
+      "jacksonville",
+      "northeast-florida"
+    ],
+    "industry": [
+      "small-business",
+      "corporate"
+    ]
   },
-  "tags": ["video production cost", "commercial video", "st augustine video production", "video pricing", "corporate video"],
-
+  "tags": [
+    "video production cost",
+    "commercial video",
+    "st augustine video production",
+    "video pricing",
+    "corporate video"
+  ],
   "images": {
     "hero": {
       "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-1-large.webp",
@@ -26,26 +39,30 @@
         "id": "camera-setup",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-1-medium.webp",
         "alt": "Cinema cameras lined up for video production",
-        "caption": "Professional equipment is one factor that drives production cost"
+        "caption": "Professional equipment is one factor that drives production cost",
+        "width": 1200,
+        "height": 800
       },
       {
         "id": "on-location",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-23-medium.webp",
         "alt": "On-location video production in St. Augustine",
-        "caption": "Location shoots require planning, crew, and gear coordination"
+        "caption": "Location shoots require planning, crew, and gear coordination",
+        "width": 1200,
+        "height": 1600
       }
     ]
   },
-
   "seo": {
-    "title": "Commercial Video Production Cost in Florida | First Sight Films",
-    "description": "What does commercial video production cost in Northeast Florida? A realistic breakdown from social clips ($500-$2,500) to full campaigns ($10,000+). St. Augustine video company.",
+    "title": "Commercial Video Production Cost in Florida",
+    "description": "What does commercial video production cost in Northeast Florida? A realistic breakdown from social clips ($500-$2,500) to full campaigns ($9,500+).",
     "og_type": "article",
     "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-1-large.webp"
   },
-
-  "related_articles": ["video-retainers-northeast-florida", "outgrown-diy-video"],
-
+  "related_articles": [
+    "video-retainers-northeast-florida",
+    "outgrown-diy-video"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

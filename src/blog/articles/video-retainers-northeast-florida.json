@@ -3,17 +3,29 @@
   "title": "Why Northeast Florida Businesses Are Switching to Video Retainers",
   "excerpt": "One video doesn't solve a content problem. Here's why organizations are moving from project-based to retainer video relationships — and why they don't go back.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-02-10",
   "dateModified": "2026-02-10",
-
   "categories": {
-    "service": ["corporate-video", "brand-story"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["corporate", "entertainment"]
+    "service": [
+      "corporate-video",
+      "brand-story"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "corporate",
+      "entertainment"
+    ]
   },
-  "tags": ["video retainer", "video production", "st augustine", "content strategy", "corporate video"],
-
+  "tags": [
+    "video retainer",
+    "video production",
+    "st augustine",
+    "content strategy",
+    "corporate video"
+  ],
   "images": {
     "hero": {
       "src": "/images/bento/corporate-video-st-augustine-bento-1-large.webp",
@@ -26,20 +38,22 @@
         "id": "production-team",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-22-medium.webp",
         "alt": "Video production team on location",
-        "caption": "A retainer relationship means your production team knows your brand inside out"
+        "caption": "A retainer relationship means your production team knows your brand inside out",
+        "width": 1200,
+        "height": 1500
       }
     ]
   },
-
   "seo": {
-    "title": "Video Retainer Services Northeast Florida | First Sight Films",
-    "description": "Why businesses in St. Augustine and Northeast Florida are switching from project-based to retainer video services. Better content, better rates, less overhead.",
+    "title": "Video Retainer Services Northeast Florida",
+    "description": "Why St. Augustine and Northeast Florida businesses are switching from project-based to retainer video services. Better content, better rates, less overhead.",
     "og_type": "article",
     "og_image": "/images/bento/corporate-video-st-augustine-bento-1-large.webp"
   },
-
-  "related_articles": ["commercial-video-production-cost-florida", "local-video-partner-st-augustine"],
-
+  "related_articles": [
+    "commercial-video-production-cost-florida",
+    "local-video-partner-st-augustine"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

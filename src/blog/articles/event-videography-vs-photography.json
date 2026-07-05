@@ -3,17 +3,29 @@
   "title": "Event Videography vs. Event Photography: What Does Your Venue Need?",
   "excerpt": "Should you focus on video or photography? The answer isn't either/or. Here's how each medium creates value for live entertainment venues — and why both together outperforms either alone.",
   "author": "diego-cerquera",
-
   "datePublished": "2025-12-28",
   "dateModified": "2025-12-28",
-
   "categories": {
-    "service": ["event-video", "photography"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["entertainment", "corporate"]
+    "service": [
+      "event-video",
+      "photography"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "entertainment",
+      "corporate"
+    ]
   },
-  "tags": ["event videography", "event photography", "venue content", "video vs photo", "content strategy"],
-
+  "tags": [
+    "event videography",
+    "event photography",
+    "venue content",
+    "video vs photo",
+    "content strategy"
+  ],
   "images": {
     "hero": {
       "src": "/images/bento/event-photography-st-augustine-sing-out-loud-festival-1-large.webp",
@@ -26,20 +38,22 @@
         "id": "photography-value",
         "src": "/images/photography-event-st-augustine-amphitheatre/crockett-leon-bridges-guitar-performance-augustine-amphitheatre-1200w.webp",
         "alt": "Live performance photograph at St. Augustine Amphitheatre",
-        "caption": "A single great photograph can carry marketing weight for years"
+        "caption": "A single great photograph can carry marketing weight for years",
+        "width": 1080,
+        "height": 1350
       }
     ]
   },
-
   "seo": {
     "title": "Event Videography vs Photography: What Does Your Venue Need?",
     "description": "Event videography vs event photography for live entertainment venues. How each medium creates value and why both together outperforms either alone.",
     "og_type": "article",
     "og_image": "/images/bento/event-photography-st-augustine-sing-out-loud-festival-1-large.webp"
   },
-
-  "related_articles": ["concert-photography-videography-st-augustine", "live-entertainment-venue-video-florida"],
-
+  "related_articles": [
+    "concert-photography-videography-st-augustine",
+    "live-entertainment-venue-video-florida"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

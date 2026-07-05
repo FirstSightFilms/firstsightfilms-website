@@ -3,17 +3,29 @@
   "title": "5 Signs Your Business Has Outgrown DIY Video Content",
   "excerpt": "There's a moment where DIY video stops being scrappy and starts being a quiet drain on time, reputation, and opportunity. Here are five signs you've reached that point.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-01-20",
   "dateModified": "2026-01-20",
-
   "categories": {
-    "service": ["corporate-video", "brand-story"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["small-business", "corporate"]
+    "service": [
+      "corporate-video",
+      "brand-story"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "small-business",
+      "corporate"
+    ]
   },
-  "tags": ["diy video", "professional video", "video production", "content strategy", "business video"],
-
+  "tags": [
+    "diy video",
+    "professional video",
+    "video production",
+    "content strategy",
+    "business video"
+  ],
   "images": {
     "hero": {
       "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-19-medium.webp",
@@ -26,20 +38,22 @@
         "id": "professional-setup",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-20-medium.webp",
         "alt": "Cinema cameras for professional video production",
-        "caption": "Professional production gives you back the time your team should spend on their actual expertise"
+        "caption": "Professional production gives you back the time your team should spend on their actual expertise",
+        "width": 1200,
+        "height": 959
       }
     ]
   },
-
   "seo": {
-    "title": "5 Signs You've Outgrown DIY Video | When to Hire a Video Company",
+    "title": "5 Signs You've Outgrown DIY Video | When to Hire a Pro",
     "description": "5 signs your business has outgrown DIY video content. When to make the shift to professional video production for better results and less overhead.",
     "og_type": "article",
     "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-19-medium.webp"
   },
-
-  "related_articles": ["commercial-video-production-cost-florida", "video-retainers-northeast-florida"],
-
+  "related_articles": [
+    "commercial-video-production-cost-florida",
+    "video-retainers-northeast-florida"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

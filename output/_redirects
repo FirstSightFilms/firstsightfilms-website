@@ -69,6 +69,12 @@
 /blog/fort-mose-jazz-blues-festival    /work/fort-mose-jazz-blues-festival/    301!
 /blog/fort-mose-jazz-blues-festival/    /work/fort-mose-jazz-blues-festival/    301!
 
+# Blog consolidation — 2 merges (2026-07-05): retired posts -> canonical winners
+/blog/video-publishing-frequency-deep-dive    /blog/video-content-publishing-frequency-florida/    301
+/blog/video-publishing-frequency-deep-dive/    /blog/video-content-publishing-frequency-florida/    301
+/blog/event-photography-vs-commercial-photography    /blog/event-videography-vs-photography/    301
+/blog/event-photography-vs-commercial-photography/    /blog/event-videography-vs-photography/    301
+
 # Festival Video page retired — redundant with the event coverage page (2026-06-18)
 /festival-video-production    /event-video-coverage-st-augustine/    301
 /festival-video-production/    /event-video-coverage-st-augustine/    301

@@ -3,17 +3,29 @@
   "title": "Video Strategy for Cultural Institutions: Moving Beyond the Recap Reel",
   "excerpt": "The recap reel is where most cultural institution video begins — and unfortunately, where it ends. Here's what a real video strategy looks like for cultural organizations with serious communication objectives.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-01-10",
   "dateModified": "2026-01-10",
-
   "categories": {
-    "service": ["corporate-video", "brand-story"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["nonprofit", "cultural"]
+    "service": [
+      "corporate-video",
+      "brand-story"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "nonprofit",
+      "cultural"
+    ]
   },
-  "tags": ["video strategy", "cultural institutions", "nonprofit video", "recap reel", "brand film"],
-
+  "tags": [
+    "video strategy",
+    "cultural institutions",
+    "nonprofit video",
+    "recap reel",
+    "brand film"
+  ],
   "images": {
     "hero": {
       "src": "/images/photography-event-st-augustine-amphitheatre/goose-concert-performance-augustine-amphitheatre-st-augustine-1200w.webp",
@@ -26,20 +38,22 @@
         "id": "strategic-video",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-3-medium.webp",
         "alt": "Video production planning for cultural institutions",
-        "caption": "Strategic video starts with the audience, not the organization"
+        "caption": "Strategic video starts with the audience, not the organization",
+        "width": 1200,
+        "height": 1800
       }
     ]
   },
-
   "seo": {
-    "title": "Video Strategy for Cultural Institutions | Beyond the Recap Reel | First Sight Films",
-    "description": "Move beyond the recap reel with a real video strategy for cultural institutions. Brand films, impact stories, and content that serves specific audiences and objectives.",
+    "title": "Video Strategy for Cultural Institutions | Recap Reel",
+    "description": "Move beyond the recap reel with a real video strategy for cultural institutions. Brand films and impact stories that serve specific audiences.",
     "og_type": "article",
     "og_image": "/images/photography-event-st-augustine-amphitheatre/goose-concert-performance-augustine-amphitheatre-st-augustine-1200w.webp"
   },
-
-  "related_articles": ["museum-cultural-video-grants-florida", "video-retainers-northeast-florida"],
-
+  "related_articles": [
+    "museum-cultural-video-grants-florida",
+    "video-retainers-northeast-florida"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

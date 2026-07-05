@@ -2,15 +2,15 @@
   "questions": [
     {
       "question": "How much does event coverage cost?",
-      "answer": "<p>Most event projects land between <strong>$1,800 and $9,000</strong>, depending on how many cameras, how big the crew, and what you need delivered. The tiers above will get you close; the call gets you exact.</p>"
+      "answer": "<p>Most event projects range from <strong>$1,200 to $9,500+</strong>, depending on how many cameras, how big the crew, and what you need delivered. The tiers above will get you close; the call gets you exact.</p>"
     },
     {
       "question": "What do I actually get, and when?",
-      "answer": "<p>Typically a highlight or recap film plus social cutdowns, with keynote, panel, award, or testimonial captures on the larger tiers. Turnaround is usually 7 business days, and we'll give you an exact date when we quote.</p>"
+      "answer": "<p>Typically a highlight or recap film plus social cutdowns, with keynote, panel, award, or testimonial captures on the larger tiers. Turnaround is photos and a 20–30 second recap within 72 hours, with full films in 2–3 weeks (7 business days on our Rush tier), and we'll give you an exact date when we quote.</p>"
     },
     {
       "question": "Can you deliver content during the event, not just after?",
-      "answer": "<p>Yes, and it's one of the things producers hire us for. We turn same-day and next-day social cutdowns while the event's still live — at Sing Out Loud we edit photos the moment an act steps off stage so the festival posts that night, and HMA had a 30-second reel the day after their rally. Full recaps usually land within 7 business days.</p>"
+      "answer": "<p>Yes, and it's one of the things producers hire us for. We turn same-day and next-day social cutdowns while the event's still live — at Sing Out Loud we edit photos the moment an act steps off stage so the festival posts that night, and HMA had a 30-second reel the day after their rally. Full recaps usually land within 2–3 weeks (7 business days on our Rush tier).</p>"
     },
     {
       "question": "Do you shoot photo and video at the same event?",
@@ -26,7 +26,7 @@
     },
     {
       "question": "Can you get aerial / drone footage of our event?",
-      "answer": "<p>Sometimes — it depends on the location and FAA rules. Aerial drone b-roll of the general area where your event is held may be available to use in your video at no extra cost. Live drone videography or photography during the event isn't included by default — we bring in licensed, insured drone operators for that as an add-on (custom quote; a full day of drone coverage generally runs around $1,800). All flights comply with FAA regulations and depend on where your event is held.</p>"
+      "answer": "<p>Sometimes — it depends on the location and FAA rules. Aerial drone b-roll of the general area where your event is held may be available to use in your video at no extra cost. Live drone videography or photography during the event isn't included by default — we bring in licensed, insured drone operators for that as an add-on (custom quote; a full day of drone coverage is quoted per flight). All flights comply with FAA regulations and depend on where your event is held.</p>"
     },
     {
       "question": "Do you work at my venue?",
@@ -66,7 +66,7 @@
         "name": "How much does event coverage cost in St. Augustine?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most event projects land between $1,800 and $9,000, depending on how many cameras, how big the crew, and what you need delivered. A 15-minute call gets you an exact quote for your event."
+          "text": "Most event projects range from $1,200 to $9,500+, depending on how many cameras, how big the crew, and what you need delivered. A 15-minute call gets you an exact quote for your event."
         }
       },
       {
@@ -74,7 +74,7 @@
         "name": "What do I actually get, and when?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Typically a highlight or recap film plus social cutdowns, with keynote, panel, award, or testimonial captures on the larger tiers. Turnaround is usually 7 business days, and we'll give you an exact date when we quote."
+          "text": "Typically a highlight or recap film plus social cutdowns, with keynote, panel, award, or testimonial captures on the larger tiers. Turnaround is photos and a 20–30 second recap within 72 hours, with full films in 2–3 weeks (7 business days on our Rush tier), and we'll give you an exact date when we quote."
         }
       },
       {
@@ -82,7 +82,7 @@
         "name": "Can you deliver event video content during the event, not just after?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, and it's one of the things producers hire us for. We turn same-day and next-day social cutdowns while the event's still live — at Sing Out Loud we edit photos the moment an act steps off stage so the festival posts that night, and HMA had a 30-second reel the day after their rally. Full recaps usually land within 7 business days."
+          "text": "Yes, and it's one of the things producers hire us for. We turn same-day and next-day social cutdowns while the event's still live — at Sing Out Loud we edit photos the moment an act steps off stage so the festival posts that night, and HMA had a 30-second reel the day after their rally. Full recaps usually land within 2–3 weeks (7 business days on our Rush tier)."
         }
       },
       {
@@ -114,7 +114,7 @@
         "name": "Can you get aerial / drone footage of our event in St. Augustine?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sometimes — it depends on the location and FAA rules. Aerial drone b-roll of the general area where your event is held may be available to use in your video at no extra cost. Live drone videography or photography during the event isn't included by default — we bring in licensed, insured drone operators for that as an add-on (custom quote; a full day of drone coverage generally runs around $1,800). All flights comply with FAA regulations and depend on where your event is held."
+          "text": "Sometimes — it depends on the location and FAA rules. Aerial drone b-roll of the general area where your event is held may be available to use in your video at no extra cost. Live drone videography or photography during the event isn't included by default — we bring in licensed, insured drone operators for that as an add-on (custom quote; a full day of drone coverage is quoted per flight). All flights comply with FAA regulations and depend on where your event is held."
         }
       },
       {

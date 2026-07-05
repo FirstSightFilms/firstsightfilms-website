@@ -3,17 +3,28 @@
   "title": "Architectural and Interior Photography for St. Augustine Historic Properties",
   "excerpt": "There is no city in Florida with the architectural depth of St. Augustine. Shooting that environment well is a genuine specialty — here's what you need to know.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-02-08",
   "dateModified": "2026-02-08",
-
   "categories": {
-    "service": ["photography"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["hospitality", "cultural"]
+    "service": [
+      "photography"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "hospitality",
+      "cultural"
+    ]
   },
-  "tags": ["architectural photography", "St. Augustine", "historic properties", "interior photography", "Flagler College"],
-
+  "tags": [
+    "architectural photography",
+    "St. Augustine",
+    "historic properties",
+    "interior photography",
+    "Flagler College"
+  ],
   "images": {
     "hero": {
       "src": "/images/photography-event-st-augustine-amphitheatre/backyard-stage-augustine-amphitheatre-venue-1200w.webp",
@@ -26,20 +37,22 @@
         "id": "historic-interior",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-16-medium.webp",
         "alt": "Interior photography of historic St. Augustine property",
-        "caption": "Historic architecture has its own visual logic — understanding it is the difference between honoring a space and merely documenting it"
+        "caption": "Historic architecture has its own visual logic — understanding it is the difference between honoring a space and merely documenting it",
+        "width": 1200,
+        "height": 1800
       }
     ]
   },
-
   "seo": {
-    "title": "Architectural Photography St. Augustine Historic Properties | First Sight Films",
-    "description": "Architectural and interior photography for St. Augustine historic properties. What you need to know about shooting the built environment of Florida's oldest city.",
+    "title": "Architectural Photography St. Augustine Historic Properties",
+    "description": "Architectural and interior photography for St. Augustine's historic properties. Shooting the built environment of Florida's oldest city well.",
     "og_type": "article",
     "og_image": "/images/photography-event-st-augustine-amphitheatre/backyard-stage-augustine-amphitheatre-venue-1200w.webp"
   },
-
-  "related_articles": ["commercial-photography-northeast-florida-industries", "commercial-photography-st-augustine"],
-
+  "related_articles": [
+    "commercial-photography-northeast-florida-industries",
+    "commercial-photography-st-augustine"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

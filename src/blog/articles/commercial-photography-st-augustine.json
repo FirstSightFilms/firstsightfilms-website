@@ -3,17 +3,29 @@
   "title": "Commercial Photography in St. Augustine, FL: What Local Businesses Need to Know",
   "excerpt": "St. Augustine is visually distinctive — but pretty pictures don't always work hard for your business. Here's what to know before booking commercial photography.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-02-05",
   "dateModified": "2026-02-05",
-
   "categories": {
-    "service": ["photography", "commercial"],
-    "location": ["st-augustine"],
-    "industry": ["hospitality", "small-business", "corporate"]
+    "service": [
+      "photography",
+      "commercial"
+    ],
+    "location": [
+      "st-augustine"
+    ],
+    "industry": [
+      "hospitality",
+      "small-business",
+      "corporate"
+    ]
   },
-  "tags": ["commercial photography", "st augustine photographer", "business photography", "brand photography", "local photographer"],
-
+  "tags": [
+    "commercial photography",
+    "st augustine photographer",
+    "business photography",
+    "brand photography",
+    "local photographer"
+  ],
   "images": {
     "hero": {
       "src": "/images/bento/photography-st-augustine-bento-1-large.webp",
@@ -26,26 +38,30 @@
         "id": "lifestyle-shoot",
         "src": "/images/outdoor-lifestyle-commerical-photography-ponte-vedra-concert-hall/outdoor-lifestyle-boating-ponte-vedra-florida-1200w.webp",
         "alt": "Lifestyle commercial photography in Ponte Vedra Florida",
-        "caption": "Commercial photography captures the feeling of your brand, not just how things look"
+        "caption": "Commercial photography captures the feeling of your brand, not just how things look",
+        "width": 1200,
+        "height": 1500
       },
       {
         "id": "event-photo",
         "src": "/images/photography-event-st-augustine-amphitheatre/concert-fans-cheering-augustine-amphitheatre-1200w.webp",
         "alt": "Event photography at St. Augustine Amphitheatre",
-        "caption": "Event documentation requires different skills than commercial brand photography"
+        "caption": "Event documentation requires different skills than commercial brand photography",
+        "width": 1200,
+        "height": 1500
       }
     ]
   },
-
   "seo": {
     "title": "Commercial Photography St. Augustine FL | First Sight Films",
-    "description": "Professional commercial photography in St. Augustine, FL. What local businesses need to know about brand photography, event documentation, and finding the right photographer.",
+    "description": "Professional commercial photography in St. Augustine, FL. What local businesses need to know about brand photography and finding the right photographer.",
     "og_type": "article",
     "og_image": "/images/bento/photography-st-augustine-bento-1-large.webp"
   },
-
-  "related_articles": ["local-video-partner-st-augustine", "event-videography-vs-photography"],
-
+  "related_articles": [
+    "local-video-partner-st-augustine",
+    "event-videography-vs-photography"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

@@ -3,17 +3,29 @@
   "title": "How Often Should Your Business Be Publishing Video Content? A Florida SMB Guide",
   "excerpt": "The honest answer depends on several things specific to your business. Here's a framework for thinking through the variables and arriving at a cadence that's sustainable and strategically sound.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-01-28",
   "dateModified": "2026-01-28",
-
   "categories": {
-    "service": ["corporate-video", "social-media"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["small-business", "corporate"]
+    "service": [
+      "corporate-video",
+      "social-media"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "small-business",
+      "corporate"
+    ]
   },
-  "tags": ["video content", "publishing frequency", "content strategy", "Florida business", "social media video"],
-
+  "tags": [
+    "video content",
+    "publishing frequency",
+    "content strategy",
+    "Florida business",
+    "social media video"
+  ],
   "images": {
     "hero": {
       "src": "/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-large.webp",
@@ -26,20 +38,22 @@
         "id": "content-strategy",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-8-medium.webp",
         "alt": "Video content planning and production",
-        "caption": "The right cadence is the one where everything you publish represents you accurately and well"
+        "caption": "The right cadence is the one where everything you publish represents you accurately and well",
+        "width": 1200,
+        "height": 1800
       }
     ]
   },
-
   "seo": {
-    "title": "How Often Should Your Business Publish Video Content? | Florida SMB Guide",
-    "description": "How often should your Florida business be publishing video content? A framework for finding the right cadence across Instagram, LinkedIn, YouTube, and your website.",
+    "title": "How Often to Publish Video? | Florida SMB Guide",
+    "description": "How often should your Florida business publish video? A framework for finding the right cadence across Instagram, LinkedIn, YouTube, and your website.",
     "og_type": "article",
     "og_image": "/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-large.webp"
   },
-
-  "related_articles": ["video-retainers-northeast-florida", "outgrown-diy-video"],
-
+  "related_articles": [
+    "video-retainers-northeast-florida",
+    "outgrown-diy-video"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

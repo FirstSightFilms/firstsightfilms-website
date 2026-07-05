@@ -3,17 +3,29 @@
   "title": "Filming in Historic St. Augustine: Permits, Locations, and What You Need to Know",
   "excerpt": "St. Augustine is one of the most frequently filmed small cities in the United States. It also has a permitting environment and practical production context that's different from most places.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-02-18",
   "dateModified": "2026-02-18",
-
   "categories": {
-    "service": ["corporate-video", "event-video"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["corporate", "entertainment"]
+    "service": [
+      "corporate-video",
+      "event-video"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "corporate",
+      "entertainment"
+    ]
   },
-  "tags": ["filming St. Augustine", "film permits", "video production locations", "historic district", "Flagler College filming"],
-
+  "tags": [
+    "filming St. Augustine",
+    "film permits",
+    "video production locations",
+    "historic district",
+    "Flagler College filming"
+  ],
   "images": {
     "hero": {
       "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-5-large.webp",
@@ -26,20 +38,22 @@
         "id": "historic-filming",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-17-medium.webp",
         "alt": "Filming in St. Augustine historic district",
-        "caption": "Local knowledge is a production asset that translates directly into more efficient shoots"
+        "caption": "Local knowledge is a production asset that translates directly into more efficient shoots",
+        "width": 1200,
+        "height": 800
       }
     ]
   },
-
   "seo": {
-    "title": "Filming in St. Augustine FL | Permits, Locations, Production Guide | First Sight Films",
-    "description": "Guide to filming in historic St. Augustine: permits, locations, the Castillo, Flagler College, and practical production knowledge from over a decade of local experience.",
+    "title": "Filming St. Augustine FL | Permits, Locations, Guide",
+    "description": "Guide to filming in historic St. Augustine: permits, locations, the Castillo, Flagler College, and production knowledge from a decade of local experience.",
     "og_type": "article",
     "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-5-large.webp"
   },
-
-  "related_articles": ["video-production-st-johns-county-florida", "local-video-partner-st-augustine"],
-
+  "related_articles": [
+    "video-production-st-johns-county-florida",
+    "local-video-partner-st-augustine"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

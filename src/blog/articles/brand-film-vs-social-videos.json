@@ -3,17 +3,29 @@
   "title": "Why One Great Brand Film Is Worth More Than 12 Mediocre Social Videos",
   "excerpt": "The content marketing industry tells you to post more. Here's the case for the opposite: a single piece of content that says who you are is the foundation that makes everything else work.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-02-01",
   "dateModified": "2026-02-01",
-
   "categories": {
-    "service": ["brand-story", "corporate-video"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["corporate", "small-business"]
+    "service": [
+      "brand-story",
+      "corporate-video"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "corporate",
+      "small-business"
+    ]
   },
-  "tags": ["brand film", "social video", "content strategy", "video marketing", "quality vs quantity"],
-
+  "tags": [
+    "brand film",
+    "social video",
+    "content strategy",
+    "video marketing",
+    "quality vs quantity"
+  ],
   "images": {
     "hero": {
       "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-7-large.webp",
@@ -26,20 +38,22 @@
         "id": "brand-foundation",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-4-medium.webp",
         "alt": "Professional brand film production",
-        "caption": "A brand film sets the standard that every subsequent piece of content is measured against"
+        "caption": "A brand film sets the standard that every subsequent piece of content is measured against",
+        "width": 1200,
+        "height": 1800
       }
     ]
   },
-
   "seo": {
-    "title": "Brand Film vs Social Videos | Quality Over Quantity | First Sight Films",
+    "title": "Brand Film vs Social Videos | Quality Over Quantity",
     "description": "Why one great brand film is worth more than 12 mediocre social videos. The case for building a content foundation before chasing volume.",
     "og_type": "article",
     "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-7-large.webp"
   },
-
-  "related_articles": ["video-content-publishing-frequency-florida", "outgrown-diy-video"],
-
+  "related_articles": [
+    "video-content-publishing-frequency-florida",
+    "outgrown-diy-video"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

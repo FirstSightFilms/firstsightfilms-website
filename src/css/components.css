@@ -2118,8 +2118,9 @@
 }
 
 .team-profile .bio-image {
-  max-width: 200px;
-  max-height: 250px;
+  width: 200px;
+  height: 250px;
+  max-width: 100%;
   margin: 0 auto 30px;
 }
 

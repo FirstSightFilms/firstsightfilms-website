@@ -3,17 +3,29 @@
   "title": "Flagler College Grad Photo Sessions",
   "excerpt": "Skip the awkward poses and stiff smiles. Our Flagler College grad photo sessions are relaxed, fun, and designed to capture the real you at one of Florida's most beautiful campuses.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-03-22",
   "dateModified": "2026-03-22",
-
   "categories": {
-    "service": ["photography", "portraits"],
-    "location": ["st-augustine", "flagler-college"],
-    "industry": ["education", "graduation"]
+    "service": [
+      "photography",
+      "portraits"
+    ],
+    "location": [
+      "st-augustine",
+      "flagler-college"
+    ],
+    "industry": [
+      "education",
+      "graduation"
+    ]
   },
-  "tags": ["flagler college", "graduation photography", "grad photos", "st augustine photographer", "senior portraits"],
-
+  "tags": [
+    "flagler college",
+    "graduation photography",
+    "grad photos",
+    "st augustine photographer",
+    "senior portraits"
+  ],
   "images": {
     "hero": {
       "src": "/images/grad-photo-flagler-college-18-large.webp",
@@ -24,7 +36,9 @@
     },
     "banner": {
       "src": "/images/grad-photo-flagler-college-23-large.webp",
-      "alt": "Joyful Flagler College graduate laughing by the fountain at Ponce Hall"
+      "alt": "Joyful Flagler College graduate laughing by the fountain at Ponce Hall",
+      "width": 1920,
+      "height": 1280
     },
     "content": [
       {
@@ -61,16 +75,15 @@
       }
     ]
   },
-
   "seo": {
-    "title": "Flagler College Graduation Photography | Stress-Free Grad Photos | First Sight Films",
-    "description": "Book your Flagler College graduation photos with a fellow Flagler alum. Relaxed 1-hour sessions at $300 for 15 edited images. Golden hour sessions at Ponce Hall, the Rotunda, and more.",
+    "title": "Flagler College Graduation Photography | Grad Photos",
+    "description": "Book your Flagler College grad photos with a fellow Flagler alum. Relaxed 1-hour sessions, $300 for 15 edited images, golden hour at Ponce Hall and more.",
     "og_type": "article",
     "og_image": "/images/grad-photo-flagler-college-18-large.webp"
   },
-
-  "related_articles": ["video-production-tips-st-augustine"],
-
+  "related_articles": [
+    "video-production-tips-st-augustine"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -96,7 +109,11 @@
       "@type": "WebPage",
       "@id": "https://www.firstsightfilms.com/blog/flagler-grad-photoshoot/"
     },
-    "articleSection": ["Photography", "Flagler College", "Graduation"],
+    "articleSection": [
+      "Photography",
+      "Flagler College",
+      "Graduation"
+    ],
     "keywords": "flagler college graduation photography, flagler grad photos, st augustine graduation photographer"
   }
 }

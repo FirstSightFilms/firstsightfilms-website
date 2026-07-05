@@ -3,17 +3,29 @@
   "title": "What Is a Video Sales Letter, Why It Works, and What to Look for When Hiring",
   "excerpt": "A Video Sales Letter is one of the most powerful pieces of video content an organization can produce. Here's what it is, when it works, and what makes First Sight Films the right choice.",
   "author": "diego-cerquera",
-
   "datePublished": "2025-12-15",
   "dateModified": "2025-12-15",
-
   "categories": {
-    "service": ["corporate-video", "brand-story"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["corporate", "small-business"]
+    "service": [
+      "corporate-video",
+      "brand-story"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "corporate",
+      "small-business"
+    ]
   },
-  "tags": ["video sales letter", "VSL", "video marketing", "conversion video", "corporate video"],
-
+  "tags": [
+    "video sales letter",
+    "VSL",
+    "video marketing",
+    "conversion video",
+    "corporate video"
+  ],
   "images": {
     "hero": {
       "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-6-large.webp",
@@ -26,20 +38,22 @@
         "id": "authentic-storytelling",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-7-medium.webp",
         "alt": "Authentic portrait for video content",
-        "caption": "The most effective VSLs don't sound like sales pitches — they sound like conversations"
+        "caption": "The most effective VSLs don't sound like sales pitches — they sound like conversations",
+        "width": 1200,
+        "height": 1800
       }
     ]
   },
-
   "seo": {
-    "title": "Video Sales Letter Production Florida | What is a VSL | First Sight Films",
-    "description": "What is a Video Sales Letter (VSL), why it works, and what to look for when hiring a production company. Documentary-style VSL production in St. Augustine, FL.",
+    "title": "Video Sales Letter Production Florida | What is a VSL",
+    "description": "What is a Video Sales Letter (VSL), why it works, and what to look for when hiring. Documentary-style VSL production in St. Augustine, FL.",
     "og_type": "article",
     "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-6-large.webp"
   },
-
-  "related_articles": ["commercial-video-production-cost-florida", "video-retainers-northeast-florida"],
-
+  "related_articles": [
+    "commercial-video-production-cost-florida",
+    "video-retainers-northeast-florida"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

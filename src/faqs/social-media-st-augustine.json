@@ -14,7 +14,7 @@
     },
     {
       "question": "How quickly can you deliver social media content?",
-      "answer": "<p>Standard turnaround is 5-7 business days for a batch of clips. For events or time-sensitive content, we offer same-day and next-day delivery options — something we regularly provide for the St. Augustine Amphitheatre during concert season.</p>"
+      "answer": "<p>Standard turnaround is about 5–7 days for a batch of clips. For events or time-sensitive content, we offer same-day and next-day delivery options — something we regularly provide for the St. Augustine Amphitheatre during concert season.</p>"
     },
     {
       "question": "Do you offer ongoing social media video packages?",
@@ -58,7 +58,7 @@
         "name": "How quickly can you deliver social media content?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Standard turnaround is 5-7 business days for a batch of clips. For events or time-sensitive content, we offer same-day and next-day delivery options — something we regularly provide for the St. Augustine Amphitheatre during concert season."
+          "text": "Standard turnaround is about 5–7 days for a batch of clips. For events or time-sensitive content, we offer same-day and next-day delivery options — something we regularly provide for the St. Augustine Amphitheatre during concert season."
         }
       },
       {

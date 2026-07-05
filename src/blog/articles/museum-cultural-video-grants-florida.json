@@ -3,17 +3,29 @@
   "title": "How Florida Museums and Cultural Organizations Use Video to Increase Grants and Attendance",
   "excerpt": "Cultural organizations face a unique communication challenge. Video, when done right, can build attendance, strengthen donor relationships, and make a more compelling case for institutional support than any written document.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-01-05",
   "dateModified": "2026-01-05",
-
   "categories": {
-    "service": ["corporate-video", "brand-story"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["nonprofit", "cultural"]
+    "service": [
+      "corporate-video",
+      "brand-story"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "nonprofit",
+      "cultural"
+    ]
   },
-  "tags": ["museum video", "cultural organizations", "grant video", "nonprofit video", "Florida museums"],
-
+  "tags": [
+    "museum video",
+    "cultural organizations",
+    "grant video",
+    "nonprofit video",
+    "Florida museums"
+  ],
   "images": {
     "hero": {
       "src": "/images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-1200w.webp",
@@ -26,26 +38,30 @@
         "id": "cultural-event",
         "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-historical-interpreter-festival-attendees-1200w.webp",
         "alt": "Audience at Fort Mose cultural festival in St. Augustine",
-        "caption": "Cultural organizations that use video strategically build attendance through emotional connection"
+        "caption": "Cultural organizations that use video strategically build attendance through emotional connection",
+        "width": 1200,
+        "height": 960
       },
       {
         "id": "storytelling-approach",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-12-medium.webp",
         "alt": "Documentary-style video production for cultural organizations",
-        "caption": "Documentary-style video centers the human story, not the institutional narrative"
+        "caption": "Documentary-style video centers the human story, not the institutional narrative",
+        "width": 1200,
+        "height": 800
       }
     ]
   },
-
   "seo": {
-    "title": "Museum & Cultural Organization Video Production Florida | Grants & Attendance",
-    "description": "How Florida museums and cultural organizations use video to increase grants and attendance. Documentary-style video production for cultural institutions in Northeast Florida.",
+    "title": "Museum & Cultural Video Florida | Grants & Attendance",
+    "description": "How Florida museums and cultural organizations use video to increase grants and attendance. Documentary-style production for Northeast Florida institutions.",
     "og_type": "article",
     "og_image": "/images/fort-mose-jazz-blues-festival-images/don-was-fort-mose-jazz-festival-performance-1200w.webp"
   },
-
-  "related_articles": ["video-strategy-cultural-institutions", "documentary-video-nonprofits-florida"],
-
+  "related_articles": [
+    "video-strategy-cultural-institutions",
+    "documentary-video-nonprofits-florida"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

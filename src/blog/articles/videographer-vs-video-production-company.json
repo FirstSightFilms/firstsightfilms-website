@@ -3,17 +3,29 @@
   "title": "What's the Difference Between a Videographer and a Video Production Company?",
   "excerpt": "The terms get used interchangeably, but they describe fundamentally different things. Here's the honest breakdown of when each makes sense for your project.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-01-25",
   "dateModified": "2026-01-25",
-
   "categories": {
-    "service": ["corporate-video", "event-video"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["corporate", "small-business"]
+    "service": [
+      "corporate-video",
+      "event-video"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "corporate",
+      "small-business"
+    ]
   },
-  "tags": ["videographer", "video production company", "hiring video", "video production", "Florida video"],
-
+  "tags": [
+    "videographer",
+    "video production company",
+    "hiring video",
+    "video production",
+    "Florida video"
+  ],
   "images": {
     "hero": {
       "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-2-large.webp",
@@ -26,20 +38,22 @@
         "id": "production-team",
         "src": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-18-medium.webp",
         "alt": "Video production company team with professional equipment",
-        "caption": "A production company separates functions that a solo videographer combines"
+        "caption": "A production company separates functions that a solo videographer combines",
+        "width": 1200,
+        "height": 1800
       }
     ]
   },
-
   "seo": {
-    "title": "Videographer vs Video Production Company | What's the Difference | First Sight Films",
+    "title": "Videographer vs Video Production Company | The Difference",
     "description": "What's the difference between a videographer and a video production company? When to hire each and what the practical differences mean for your project.",
     "og_type": "article",
     "og_image": "/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-2-large.webp"
   },
-
-  "related_articles": ["commercial-video-production-cost-florida", "local-video-partner-st-augustine"],
-
+  "related_articles": [
+    "commercial-video-production-cost-florida",
+    "local-video-partner-st-augustine"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

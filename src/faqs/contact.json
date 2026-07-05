@@ -3,7 +3,7 @@
     {
       "category": "Pricing & What You Get",
       "question": "How much does event video coverage cost in St. Augustine?",
-      "answer": "<p>A full day of coverage starts at $1,800 and includes one 30&ndash;45 second video delivered in both horizontal and vertical formats for social and your website. Additional deliverables can be added on. Every project is a little different, so book a 15-minute call and we'll get you a transparent, no-surprises quote based on exactly what you need.</p>"
+      "answer": "<p>A video day starts at $2,500 and includes one 30&ndash;45 second video delivered in both horizontal and vertical formats for social and your website. Additional deliverables can be added on. Every project is a little different, so book a 15-minute call and we'll get you a transparent, no-surprises quote based on exactly what you need.</p>"
     },
     {
       "category": "Pricing & What You Get",
@@ -18,7 +18,7 @@
     {
       "category": "Pricing & What You Get",
       "question": "Can you deliver a quick-turn highlight&mdash;same-night or next-day?",
-      "answer": "<p>Yes. We offer same-day photo editing of selects&mdash;a curated set, not your full gallery&mdash;for +$500 per day, and same-day video editing for real-time social posts (+$1,200&ndash;$1,500 depending on scope). For multi-day events, we can also deliver next-morning photo highlights so you have content ready for the next day.</p>"
+      "answer": "<p>Yes. We offer same-day photo editing of selects&mdash;a curated set, not your full gallery&mdash;for +$500 per day, and same-day video editing for real-time social posts (available as an add-on, quoted to scope). For multi-day events, we can also deliver next-morning photo highlights so you have content ready for the next day.</p>"
     },
     {
       "category": "Event Day",
@@ -70,7 +70,7 @@
         "name": "How much does event video coverage cost in St. Augustine?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A full day of coverage starts at $1,800 and includes one 30–45 second video delivered in both horizontal and vertical formats for social and your website. Additional deliverables can be added on. Every project is a little different, so book a 15-minute call and we'll get you a transparent, no-surprises quote based on exactly what you need."
+          "text": "A video day starts at $2,500 and includes one 30–45 second video delivered in both horizontal and vertical formats for social and your website. Additional deliverables can be added on. Every project is a little different, so book a 15-minute call and we'll get you a transparent, no-surprises quote based on exactly what you need."
         }
       },
       {
@@ -94,7 +94,7 @@
         "name": "Can you deliver a quick-turn highlight—same-night or next-day?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. We offer same-day photo editing of selects—a curated set, not your full gallery—for +$500 per day, and same-day video editing for real-time social posts (+$1,200–$1,500 depending on scope). For multi-day events, we can also deliver next-morning photo highlights so you have content ready for the next day."
+          "text": "Yes. We offer same-day photo editing of selects—a curated set, not your full gallery—for +$500 per day, and same-day video editing for real-time social posts (available as an add-on, quoted to scope). For multi-day events, we can also deliver next-morning photo highlights so you have content ready for the next day."
         }
       },
       {

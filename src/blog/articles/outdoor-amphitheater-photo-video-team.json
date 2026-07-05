@@ -3,17 +3,29 @@
   "title": "How to Choose a Photo and Video Team for Outdoor Amphitheater Events in Florida",
   "excerpt": "Outdoor amphitheater production is its own category of challenge. Here's what to look for when evaluating production partners for outdoor venue work in Florida.",
   "author": "diego-cerquera",
-
   "datePublished": "2025-12-20",
   "dateModified": "2025-12-20",
-
   "categories": {
-    "service": ["event-video", "photography"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["entertainment", "festivals"]
+    "service": [
+      "event-video",
+      "photography"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "entertainment",
+      "festivals"
+    ]
   },
-  "tags": ["outdoor event video", "amphitheater video", "florida venue video", "outdoor concert photography", "event production"],
-
+  "tags": [
+    "outdoor event video",
+    "amphitheater video",
+    "florida venue video",
+    "outdoor concert photography",
+    "event production"
+  ],
   "images": {
     "hero": {
       "src": "/images/fort-mose-jazz-blues-festival-images/hannah-stokes-fort-mose-jazz-festival-performance-1200w.webp",
@@ -26,20 +38,22 @@
         "id": "outdoor-challenges",
         "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-audience-st-augustine-1200w.webp",
         "alt": "Wide shot of outdoor amphitheater crowd and stage",
-        "caption": "Outdoor venues present unique challenges for audio, lighting, and weather"
+        "caption": "Outdoor venues present unique challenges for audio, lighting, and weather",
+        "width": 1200,
+        "height": 960
       }
     ]
   },
-
   "seo": {
     "title": "How to Choose a Photo/Video Team for Florida Amphitheaters",
     "description": "How to choose a photo and video team for outdoor amphitheater events in Florida — experience, audio strategy, and climate knowledge to look for.",
     "og_type": "article",
     "og_image": "/images/fort-mose-jazz-blues-festival-images/hannah-stokes-fort-mose-jazz-festival-performance-1200w.webp"
   },
-
-  "related_articles": ["behind-scenes-amphitheatre", "concert-photography-videography-st-augustine"],
-
+  "related_articles": [
+    "behind-scenes-amphitheatre",
+    "concert-photography-videography-st-augustine"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

@@ -3,6 +3,7 @@
 <head>
 {{head}}
 <link rel="stylesheet" href="/css/services.css">
+<link rel="preload" as="image" href="/images/CELEBRATE__74406376.JPG" fetchpriority="high">
 <title>Event Video Coverage in St. Augustine | First Sight Films</title>
 <meta name="description" content="Event video coverage in St. Augustine, FL — corporate events, conferences, and festivals. Same-day social cutdowns, full recap in 7 days. Get a quote.">
 {{faq-schema:event-video-coverage-st-augustine}}
@@ -12,8 +13,10 @@
   /* Video hero (above-the-fold reel) — styled to the site's palette */
   .event-hero { position: relative; min-height: 80vh; display: flex; flex-direction: column; align-items: center;
     justify-content: center; text-align: center; padding: 4rem 1.5rem; overflow: hidden; color: #fff; background: #14141e; }
-  .event-hero-video { width: 100%; max-width: 760px; margin: 0 auto 2rem; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; background: #000; }
-  .event-hero-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .event-hero-video { position: relative; width: 100%; max-width: 760px; margin: 0 auto 2rem; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; background: #000; }
+  .event-hero-video .event-hero-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .event-hero-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity .4s ease; }
+  .event-hero-video video.loaded { opacity: 1; }
   .event-hero > * { position: relative; z-index: 2; transform: translateY(-5px); }
   /* This page's process grids hold 3 steps — center them across the row on desktop */
   @media (min-width: 901px) { .process-grid { grid-template-columns: repeat(5, 1fr); } }
@@ -89,9 +92,9 @@
   <!-- 1. Above the fold (video reel hero) -->
   <section class="event-hero">
     <div class="event-hero-video">
-      <video autoplay muted loop playsinline controls poster="/images/CELEBRATE__74406376.JPG">
-        <source src="/video/portfolio/sjc-chamber-of-commerce-celebrate-florida-web.mp4" type="video/mp4">
-      </video>
+      <img class="event-hero-poster" src="/images/CELEBRATE__74406376.JPG" alt="First Sight Films event videography reel in St. Augustine" width="2048" height="1194" fetchpriority="high">
+      <video id="event-hero-video" muted loop playsinline controls preload="none"
+             data-src="/video/portfolio/sjc-chamber-of-commerce-celebrate-florida-web.mp4"></video>
     </div>
     <h1>Event Video Coverage in St. Augustine.</h1>
     <p class="event-hero-sub">We're event professionals with years of experience who know how to work with you to make sure your event gets covered.</p>
@@ -120,15 +123,15 @@
   <section class="section-collab">
     <div class="container">
       <div class="collaborators-grid">
-        <div class="collaborator-logo"><img src="/images/logos/St-Augustine-Amphitheatre-Logo.png" alt="St. Augustine Amphitheatre" loading="lazy"></div>
-        <div class="collaborator-logo"><img src="/images/logos/ponte-vedtra-concert-hall-logo.png" alt="Ponte Vedra Concert Hall" loading="lazy"></div>
-        <div class="collaborator-logo"><img src="/images/logos/Flagler-College-logo.png" alt="Flagler College" loading="lazy"></div>
-        <div class="collaborator-logo"><img src="/images/logos/St-Johns-County-Government-Logo.png" alt="St. Johns County Government" loading="lazy"></div>
-        <div class="collaborator-logo"><img src="/images/logos/sing-out-loud-music-festival-logo.png" alt="Sing Out Loud Festival" loading="lazy"></div>
-        <div class="collaborator-logo"><img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.png" alt="Fort Mose Jazz &amp; Blues Festival" loading="lazy"></div>
-        <div class="collaborator-logo"><img src="/images/logos/st-johns-cultural-council-logo.webp" alt="St. Johns Cultural Council" loading="lazy"></div>
-        <div class="collaborator-logo"><img src="/images/logos/live-wildly-logo.jpg" alt="Live Wildly" loading="lazy"></div>
-        <div class="collaborator-logo"><img src="/images/logos/FL-DEP-STATE-PARKS-Logo.png" alt="Florida State Parks" loading="lazy"></div>
+        <div class="collaborator-logo"><img src="/images/logos/St-Augustine-Amphitheatre-Logo.png" alt="St. Augustine Amphitheatre" loading="lazy" width="2400" height="2400"></div>
+        <div class="collaborator-logo"><img src="/images/logos/ponte-vedtra-concert-hall-logo.png" alt="Ponte Vedra Concert Hall" loading="lazy" width="1920" height="1080"></div>
+        <div class="collaborator-logo"><img src="/images/logos/Flagler-College-logo.png" alt="Flagler College" loading="lazy" width="1533" height="662"></div>
+        <div class="collaborator-logo"><img src="/images/logos/St-Johns-County-Government-Logo.png" alt="St. Johns County Government" loading="lazy" width="662" height="589"></div>
+        <div class="collaborator-logo"><img src="/images/logos/sing-out-loud-music-festival-logo.png" alt="Sing Out Loud Festival" loading="lazy" width="1440" height="864"></div>
+        <div class="collaborator-logo"><img src="/images/logos/Fort-mose-jazz-and-blues-festival-logo.png" alt="Fort Mose Jazz &amp; Blues Festival" loading="lazy" width="6172" height="2850"></div>
+        <div class="collaborator-logo"><img src="/images/logos/st-johns-cultural-council-logo.webp" alt="St. Johns Cultural Council" loading="lazy" width="174" height="170"></div>
+        <div class="collaborator-logo"><img src="/images/logos/live-wildly-logo.jpg" alt="Live Wildly" loading="lazy" width="800" height="800"></div>
+        <div class="collaborator-logo"><img src="/images/logos/FL-DEP-STATE-PARKS-Logo.png" alt="Florida State Parks" loading="lazy" width="900" height="905"></div>
       </div>
     </div>
   </section>
@@ -143,7 +146,7 @@
       </div>
       <div class="vsl-frame">
         <button type="button" class="event-video-trigger" data-video="/video/portfolio/hma-sales-rally-corporate-event-videography.mp4" aria-label="Play the HMA Sales Rally event video">
-          <img src="/images/hma-corporate-event-video-embassy-suites-st-augustine-beach.png" alt="HMA Sales Rally event video at Embassy Suites St. Augustine Beach">
+          <img src="/images/hma-corporate-event-video-embassy-suites-st-augustine-beach-1200w.webp" alt="HMA Sales Rally event video at Embassy Suites St. Augustine Beach" width="1200" height="796" loading="lazy">
           <span class="event-video-play" aria-hidden="true">&#9658;</span>
         </button>
       </div>
@@ -172,7 +175,7 @@
       </div>
       <div class="vsl-frame">
         <button type="button" class="event-video-trigger" data-video="/video/portfolio/sing-out-loud-2024.mp4" aria-label="Play the Sing Out Loud Music Festival event video">
-          <img src="/images/NO+WATER+Sing+Out+Loud+2024+RECAP+__24ad2bd1.JPG" alt="Sing Out Loud Music Festival event video in St. Augustine">
+          <img src="/images/NO+WATER+Sing+Out+Loud+2024+RECAP+__24ad2bd1.JPG" alt="Sing Out Loud Music Festival event video in St. Augustine" loading="lazy" width="2048" height="1150">
           <span class="event-video-play" aria-hidden="true">&#9658;</span>
         </button>
       </div>
@@ -187,7 +190,7 @@
           <li><strong>Crew:</strong> 4–5 (videographers, drone operator, photographers)</li>
           <li><strong>Delivered:</strong> per-day recaps within 48 hrs · 15–20 sec social clips · same-day photo edits · ~400 images (2025)</li>
           <li><strong>Proof:</strong> photos ran in Ponte Vedra Recorder + Jacksonville Business Journal · 13,000 IG likes/impressions in 3 days</li>
-          <li><strong>Festival scale (context, not ours):</strong> <a href="https://jaxtoday.org/2026/03/17/sing-out-loud-move/" target="_blank" rel="noopener">34,000+ across the month</a> · <a href="https://www.bizjournals.com/jacksonville/news/2025/09/26/sing-out-loud-draws-25-000-fans.html" target="_blank" rel="noopener">25,000 at the Live Wildly Showcase</a> · <a href="https://jaxtoday.org/2026/03/17/sing-out-loud-move/" target="_blank" rel="noopener">~$9M local impact</a> · <a href="https://www.staugustine.com/story/entertainment/music/2025/09/30/sing-out-louds-live-wildly-showcase-draws-over-25000-fans/86434001007/" target="_blank" rel="noopener">$130K+ raised</a> in charitable donations to Florida wildlife corridor preservation</li>
+          <li><strong>Festival scale (context, not ours):</strong> <a href="https://jaxtoday.org/2026/03/17/sing-out-loud-move/" target="_blank" rel="noopener">34,000+ across the month</a> · <a href="https://www.bizjournals.com/jacksonville/news/2025/09/26/sing-out-loud-draws-25-000-fans.html" target="_blank" rel="noopener">25,000 at the Live Wildly Showcase</a> · <a href="https://jaxtoday.org/2026/03/17/sing-out-loud-move/" target="_blank" rel="noopener">~$9M local impact</a> · <a href="https://www.theglobeandmail.com/investing/markets/markets-news/ACCESS%20Newswire/35196960/live-wildly-and-sing-out-loud-festival-raise-130-000-to-protect-florida-s-wild-places/" target="_blank" rel="noopener">$130K+ raised</a> in charitable donations to Florida wildlife corridor preservation</li>
         </ul>
         <p>First Sight Films has covered the Sing Out Loud Festival for three years running. Sing Out Loud is produced by SJC Cultural Events (SJCCE), the St. Johns County nonprofit that also runs the St. Augustine Amphitheatre and the Ponte Vedra Concert Hall — so the same team that trusts us with the festival trusts us with their venues. It's one piece of our broader <a href="/st-augustine-video-production/">St. Augustine video production</a> work.</p>
         <p>The festival comes in two parts, and we cover both — the free Local Showcase across downtown all September, and the paid Live Wildly main event at Francis Field, headlined by major national acts.</p>
@@ -196,7 +199,7 @@
       </div>
       <div class="vsl-frame">
         <button type="button" class="event-video-trigger" data-video="/video/portfolio/fort-mose-jazz-blues-festival-recap-video-st-augustine.mp4" aria-label="Play the Fort Mose Jazz &amp; Blues Festival event video">
-          <img src="/images/FORT+MOSE_-13_08323525.JPG" alt="Fort Mose Jazz &amp; Blues Festival event video in St. Augustine">
+          <img src="/images/FORT+MOSE_-13_08323525.JPG" alt="Fort Mose Jazz &amp; Blues Festival event video in St. Augustine" loading="lazy" width="2048" height="1150">
           <span class="event-video-play" aria-hidden="true">&#9658;</span>
         </button>
       </div>
@@ -210,7 +213,7 @@
 
       <div class="vsl-frame vsl-portrait">
         <button type="button" class="event-video-trigger" data-video="/video/portfolio/irish-consulate-ribbon-cutting-event-recap-video.mp4" aria-label="Play the ribbon cutting event recap video">
-          <img src="/images/irish-consulate-ribbon-cutting-st-augustine-poster.jpg" alt="Ribbon cutting event recap video in St. Augustine">
+          <img src="/images/irish-consulate-ribbon-cutting-st-augustine-poster.jpg" alt="Ribbon cutting event recap video in St. Augustine" loading="lazy" width="1080" height="1920">
           <span class="event-video-play" aria-hidden="true">&#9658;</span>
         </button>
       </div>
@@ -239,7 +242,7 @@
 
   <!-- VideoObject schema for the Recent Event Videos (Item 4) -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"VideoObject","name":"HMA Mortgage Sales Rally — Corporate Event Coverage, St. Augustine","description":"First Sight Films filmed HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach in April 2025. HMA's a national mortgage lender — licensed in 35+ states — and they flew their whole team into St. Augustine Beach for a two-day rally, so we covered all of it.","thumbnailUrl":"https://www.firstsightfilms.com/images/hma-corporate-event-video-embassy-suites-st-augustine-beach.png","uploadDate":"2025-04","duration":"PT2M13S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/hma-sales-rally-corporate-event-videography.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+  {"@context":"https://schema.org","@type":"VideoObject","name":"HMA Mortgage Sales Rally — Corporate Event Coverage, St. Augustine","description":"First Sight Films filmed HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach in April 2025. HMA's a national mortgage lender — licensed in 35+ states — and they flew their whole team into St. Augustine Beach for a two-day rally, so we covered all of it.","thumbnailUrl":"https://www.firstsightfilms.com/images/hma-corporate-event-video-embassy-suites-st-augustine-beach-1200w.webp","uploadDate":"2025-04","duration":"PT2M13S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/hma-sales-rally-corporate-event-videography.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Sing Out Loud Music Festival — Event Recap","description":"Recap film of the Sing Out Loud Music Festival in St. Augustine, produced by First Sight Films.","thumbnailUrl":"https://www.firstsightfilms.com/images/NO+WATER+Sing+Out+Loud+2024+RECAP+__24ad2bd1.JPG","uploadDate":"2025-09-23","duration":"PT1M1S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/sing-out-loud-2024.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
@@ -310,7 +313,7 @@
         <h2>Featured project</h2>
       </div>
       <a class="featured-work" href="/work/fort-mose-jazz-blues-festival/">
-        <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp" alt="First Sight Films video of Gary Clark Jr at the Fort Mose Jazz &amp; Blues Festival" loading="lazy">
+        <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp" alt="First Sight Films video of Gary Clark Jr at the Fort Mose Jazz &amp; Blues Festival" loading="lazy" width="1200" height="1499">
         <div class="featured-work-body">
           <h3>Fort Mose Jazz &amp; Blues Festival</h3>
           <p>Two years covering St. Augustine's Jazz &amp; Blues Festival — a recap film and social clips from headline sets by Gary Clark Jr, Samara Joy, and more.</p>
@@ -320,50 +323,58 @@
     </div>
   </section>
 
-  <!-- 5. Pricing -->
+  <!-- 5. Pricing (aligned to locked pricing-ladder.md 2026-07-05) -->
   <section class="section section-light" id="pricing">
     <div class="container">
       <div class="section-header">
         <h2>What are your pricing options and packages?</h2>
-        <p>Most event projects fall between <strong>$1,800 and $9,000</strong>, depending on cameras, crew, and what you need delivered.</p>
+        <p>Most event projects run from <strong>$1,200 to $9,500+</strong>, depending on crew, days, and what you need delivered. Every tier includes photos and a 20&ndash;30 second recap within 72 hours.</p>
       </div>
       <div class="pricing-grid">
         <div class="pricing-card">
-          <h3>Single Videographer</h3>
-          <p class="pricing-price">From $1,800</p>
+          <h3>Event Photo</h3>
+          <p class="pricing-price">From $1,200</p>
           <ul class="pricing-features">
-            <li>8-hour coverage — 1 videographer</li>
+            <li>Half-day photo coverage</li>
+            <li>100+ edited images</li>
+            <li>Photos delivered within 72 hours</li>
+          </ul>
+          <a href="/contact/" class="btn btn-secondary">Get a Quote</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Video Day</h3>
+          <p class="pricing-price">From $2,500</p>
+          <ul class="pricing-features">
+            <li>8-hour coverage &mdash; 1 videographer (video only)</li>
             <li>30&ndash;45 second highlight edit</li>
             <li>Color-graded stringout of the main moments (ready for your editor)</li>
           </ul>
           <a href="/contact/" class="btn btn-secondary">Get a Quote</a>
         </div>
         <div class="pricing-card">
-          <h3>Single Event</h3>
+          <h3>Event Story</h3>
           <p class="pricing-price">From $5,500</p>
           <ul class="pricing-features">
-            <li>10-hour coverage — 1 videographer + 1 photographer</li>
-            <li>30&ndash;45 second highlight edit</li>
-            <li>Color-graded stringout of the main moments (ready for your editor)</li>
-            <li>60&ndash;90 second recap video</li>
-            <li>300+ edited images from the event</li>
-            <li>All assets delivered within 7 business days</li>
+            <li>2-person photo + video crew, up to 10 hours</li>
+            <li>300+ edited images</li>
+            <li>90&ndash;120 second recap in 3 cuts</li>
+            <li>Delivered in 2&ndash;3 weeks (Rush, 7 business days: $7,500)</li>
           </ul>
           <a href="/contact/" class="btn btn-secondary">Get a Quote</a>
         </div>
         <div class="pricing-card">
           <h3>Full Coverage</h3>
-          <p class="pricing-price">From $9,000</p>
+          <p class="pricing-price">From $9,500</p>
           <ul class="pricing-features">
-            <li>3-camera coverage</li>
-            <li>Recap film + key-moment captures (keynotes, awards, testimonials)</li>
-            <li>Photo coverage</li>
-            <li>Faster turnaround</li>
+            <li>2-person crew, 2&ndash;3 days</li>
+            <li>500+ edited images</li>
+            <li>Festival highlight + 60 second brand recap</li>
+            <li>Delivered in 3&ndash;4 weeks</li>
           </ul>
           <a href="/contact/" class="btn btn-primary">Get a Quote</a>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 1rem; font-style: italic;">Not sure which fits? That's exactly what the call is for — 15 minutes and you'll leave with a real number for your event.</p>
+      <p style="text-align: center; margin-top: 1rem; font-style: italic;">Not sure which fits? That's exactly what the call is for &mdash; 15 minutes and you'll leave with a real number for your event.</p>
     </div>
   </section>
 
@@ -397,7 +408,7 @@
         <div class="process-step">
           <span class="process-number">5</span>
           <h3>You get your footage</h3>
-          <p>Same-day social cutdowns, then your full recap within 7 business days. Raw files archived for 3 years.</p>
+          <p>Same-day social cutdowns, then your full recap in 2–3 weeks (7 business days on our Rush tier). Raw files archived for 3 years.</p>
         </div>
       </div>
     </div>
@@ -425,6 +436,16 @@
 
 </main>
 
+<script>
+// Defer the hero reel until after load so it doesn't compete with the LCP poster paint.
+window.addEventListener('load', function () {
+  var v = document.getElementById('event-hero-video');
+  if (!v || !v.dataset.src) return;
+  v.src = v.dataset.src;
+  v.load();
+  v.addEventListener('loadeddata', function () { v.classList.add('loaded'); v.play().catch(function () {}); });
+});
+</script>
 <script>
 (function () {
   const modal = document.getElementById('video-modal');

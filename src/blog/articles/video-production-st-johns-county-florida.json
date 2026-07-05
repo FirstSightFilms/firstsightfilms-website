@@ -3,17 +3,30 @@
   "title": "Video Production Services in St. Johns County: A Local Guide",
   "excerpt": "St. Johns County is one of the fastest-growing counties in Florida — and one of the most visually and culturally distinctive. Here's a guide to professional video production in this market.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-02-15",
   "dateModified": "2026-02-15",
-
   "categories": {
-    "service": ["corporate-video", "event-video"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["corporate", "entertainment", "cultural"]
+    "service": [
+      "corporate-video",
+      "event-video"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "corporate",
+      "entertainment",
+      "cultural"
+    ]
   },
-  "tags": ["St. Johns County", "video production", "local video", "Florida video production", "Northeast Florida"],
-
+  "tags": [
+    "St. Johns County",
+    "video production",
+    "local video",
+    "Florida video production",
+    "Northeast Florida"
+  ],
   "images": {
     "hero": {
       "src": "/images/photography-event-st-augustine-amphitheatre/goose-live-concert-augustine-amphitheatre-st-augustine-1200w.webp",
@@ -26,20 +39,22 @@
         "id": "local-production",
         "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-guitar-performance-1200w.webp",
         "alt": "Local event production at Fort Mose Jazz Festival",
-        "caption": "St. Johns County has an extraordinary concentration of cultural infrastructure for its size"
+        "caption": "St. Johns County has an extraordinary concentration of cultural infrastructure for its size",
+        "width": 1200,
+        "height": 1499
       }
     ]
   },
-
   "seo": {
-    "title": "Video Production St. Johns County FL | Local Guide | First Sight Films",
-    "description": "Video production services in St. Johns County, Florida. A local guide to who hires video production, what makes the market specific, and finding the right partner.",
+    "title": "Video Production St. Johns County FL | Local Guide",
+    "description": "Video production services in St. Johns County, Florida. A local guide to who hires video, what makes the market specific, and finding the right partner.",
     "og_type": "article",
     "og_image": "/images/photography-event-st-augustine-amphitheatre/goose-live-concert-augustine-amphitheatre-st-augustine-1200w.webp"
   },
-
-  "related_articles": ["local-video-partner-st-augustine", "commercial-video-production-cost-florida"],
-
+  "related_articles": [
+    "local-video-partner-st-augustine",
+    "commercial-video-production-cost-florida"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

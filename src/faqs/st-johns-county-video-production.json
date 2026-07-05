@@ -2,7 +2,7 @@
   "questions": [
     {
       "question": "How much does video production cost in St. Johns County?",
-      "answer": "<p>Video production in St. Johns County typically ranges from $1,500 to $10,000 depending on scope. Event coverage starts at $1,200 for half-day coverage, corporate videos start at $3,500, and brand story videos start at $5,500. We provide detailed quotes after understanding your goals.</p>"
+      "answer": "<p>Video production in St. Johns County typically runs from $1,200 to $9,500+ depending on scope. Event photo starts at $1,200, a video day at $2,500, and full photo-and-video event coverage at $5,500. We provide detailed quotes after understanding your goals.</p>"
     },
     {
       "question": "What areas of St. Johns County do you serve?",
@@ -30,7 +30,7 @@
         "name": "How much does video production cost in St. Johns County?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Video production in St. Johns County typically ranges from $1,500 to $10,000 depending on scope. Event coverage starts at $1,200 for half-day coverage, corporate videos start at $3,500, and brand story videos start at $5,500. We provide detailed quotes after understanding your goals."
+          "text": "Video production in St. Johns County typically runs from $1,200 to $9,500+ depending on scope. Event photo starts at $1,200, a video day at $2,500, and full photo-and-video event coverage at $5,500. We provide detailed quotes after understanding your goals."
         }
       },
       {

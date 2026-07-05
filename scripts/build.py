@@ -1318,7 +1318,7 @@ def generate_related_articles(article, count=3):
         <article class="blog-card">
           <a href="/blog/{a['slug']}/" class="blog-card-link">
             <div class="blog-card-image">
-              <img src="{hero_img.get('src', '')}" alt="{hero_img.get('alt', '')}"{img_style} loading="lazy">
+              <img src="{hero_img.get('src', '')}" alt="{hero_img.get('alt', '')}"{img_style} width="{hero_img.get('width', '')}" height="{hero_img.get('height', '')}" loading="lazy">
             </div>
             <div class="blog-card-content">
               <time class="blog-card-date" datetime="{a['datePublished']}">{date_formatted}</time>
@@ -1379,8 +1379,12 @@ def build_blog_article(article, modules):
         "{{blog-author-name}}": author.get("name", "Diego Cerquera"),
         "{{blog-author-bio}}": author.get("bio", ""),
         "{{blog-author-photo}}": author.get("photo", ""),
+        "{{blog-author-photo-width}}": author.get("photo_width", ""),
+        "{{blog-author-photo-height}}": author.get("photo_height", ""),
         "{{blog-hero-src}}": banner_img.get("src", ""),
         "{{blog-hero-alt}}": banner_img.get("alt", ""),
+        "{{blog-hero-width}}": banner_img.get("width", ""),
+        "{{blog-hero-height}}": banner_img.get("height", ""),
         "{{blog-article-schema}}": generate_blog_article_schema(article),
         "{{blog-breadcrumb-schema}}": generate_breadcrumb_schema(article),
         "{{blog-related}}": generate_related_articles(article),
@@ -1426,7 +1430,7 @@ def build_blog_listing(modules):
         <article class="blog-card">
           <a href="/blog/{article['slug']}/" class="blog-card-link">
             <div class="blog-card-image">
-              <img src="{hero_img.get('src', '')}" alt="{hero_img.get('alt', '')}"{img_style} loading="lazy">
+              <img src="{hero_img.get('src', '')}" alt="{hero_img.get('alt', '')}"{img_style} width="{hero_img.get('width', '')}" height="{hero_img.get('height', '')}" loading="lazy">
             </div>
             <div class="blog-card-content">
               <time class="blog-card-date" datetime="{article['datePublished']}">{date_formatted}</time>

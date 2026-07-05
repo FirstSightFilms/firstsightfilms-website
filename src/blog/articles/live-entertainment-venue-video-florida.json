@@ -3,17 +3,29 @@
   "title": "How Live Entertainment Venues Capture Events That Drive Ticket Sales",
   "excerpt": "There's event video that gets posted and does nothing for ticket sales. Then there's the kind that stops people mid-scroll. The difference isn't the event — it's the strategy.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-01-15",
   "dateModified": "2026-01-15",
-
   "categories": {
-    "service": ["event-video", "corporate-video"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["entertainment", "festivals"]
+    "service": [
+      "event-video",
+      "corporate-video"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "entertainment",
+      "festivals"
+    ]
   },
-  "tags": ["live entertainment video", "event video", "ticket sales", "venue marketing", "concert video"],
-
+  "tags": [
+    "live entertainment video",
+    "event video",
+    "ticket sales",
+    "venue marketing",
+    "concert video"
+  ],
   "images": {
     "hero": {
       "src": "/images/photography-event-st-augustine-amphitheatre/concert-crowd-cheering-augustine-amphitheatre-st-augustine-1200w.webp",
@@ -26,26 +38,30 @@
         "id": "crowd-moment",
         "src": "/images/photography-event-st-augustine-amphitheatre/concert-crowd-celebration-augustine-amphitheatre-florida-1200w.webp",
         "alt": "Crowd moment captured at live music event",
-        "caption": "Crowd moments are what convert — people buy tickets to be part of something"
+        "caption": "Crowd moments are what convert — people buy tickets to be part of something",
+        "width": 1200,
+        "height": 675
       },
       {
         "id": "stage-atmosphere",
         "src": "/images/photography-event-st-augustine-amphitheatre/all-night-long-tour-fans-augustine-amphitheatre-1200w.webp",
         "alt": "Stage lights at outdoor concert venue",
-        "caption": "The wide establishing shot communicates scale and atmosphere"
+        "caption": "The wide establishing shot communicates scale and atmosphere",
+        "width": 1200,
+        "height": 1500
       }
     ]
   },
-
   "seo": {
-    "title": "Live Entertainment Venue Video That Drives Ticket Sales | Florida",
+    "title": "Live Entertainment Venue Video That Drives Ticket Sales",
     "description": "How live entertainment venues in Florida capture event video that actually drives ticket sales. Strategy, shot types, and audio approaches that work.",
     "og_type": "article",
     "og_image": "/images/photography-event-st-augustine-amphitheatre/concert-crowd-cheering-augustine-amphitheatre-st-augustine-1200w.webp"
   },
-
-  "related_articles": ["concert-photography-videography-st-augustine", "behind-scenes-amphitheatre"],
-
+  "related_articles": [
+    "concert-photography-videography-st-augustine",
+    "behind-scenes-amphitheatre"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

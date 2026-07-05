@@ -3,17 +3,29 @@
   "title": "How Flagler College and St. Johns County Use Storytelling Video to Build Community Trust",
   "excerpt": "Institutions rooted in a specific place face a unique communication challenge: the community already has opinions about you. Here's how storytelling video builds and maintains community trust over time.",
   "author": "diego-cerquera",
-
   "datePublished": "2026-01-15",
   "dateModified": "2026-01-15",
-
   "categories": {
-    "service": ["corporate-video", "brand-story"],
-    "location": ["st-augustine", "northeast-florida"],
-    "industry": ["corporate", "cultural"]
+    "service": [
+      "corporate-video",
+      "brand-story"
+    ],
+    "location": [
+      "st-augustine",
+      "northeast-florida"
+    ],
+    "industry": [
+      "corporate",
+      "cultural"
+    ]
   },
-  "tags": ["Flagler College", "St. Johns County", "community video", "storytelling video", "institutional video"],
-
+  "tags": [
+    "Flagler College",
+    "St. Johns County",
+    "community video",
+    "storytelling video",
+    "institutional video"
+  ],
   "images": {
     "hero": {
       "src": "/images/photography-event-st-augustine-amphitheatre/jon-batiste-concert-augustine-amphitheatre-st-augustine-1200w.webp",
@@ -26,20 +38,22 @@
         "id": "community-trust",
         "src": "/images/fort-mose-jazz-blues-festival-images/fort-mose-festival-poster-wall-visitors-1200w.webp",
         "alt": "Community gathering at St. Johns County cultural event",
-        "caption": "Community trust is built over time through consistent, honest communication"
+        "caption": "Community trust is built over time through consistent, honest communication",
+        "width": 1200,
+        "height": 960
       }
     ]
   },
-
   "seo": {
-    "title": "Flagler College & St. Johns County Storytelling Video | Community Trust | First Sight Films",
-    "description": "How Flagler College and St. Johns County use storytelling video to build community trust. Documentary-style video production for institutions in Northeast Florida.",
+    "title": "Flagler College & St. Johns County Storytelling Video",
+    "description": "How Flagler College and St. Johns County use storytelling video to build community trust. Documentary-style production for Northeast Florida institutions.",
     "og_type": "article",
     "og_image": "/images/photography-event-st-augustine-amphitheatre/jon-batiste-concert-augustine-amphitheatre-st-augustine-1200w.webp"
   },
-
-  "related_articles": ["museum-cultural-video-grants-florida", "documentary-video-nonprofits-florida"],
-
+  "related_articles": [
+    "museum-cultural-video-grants-florida",
+    "documentary-video-nonprofits-florida"
+  ],
   "schema": {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

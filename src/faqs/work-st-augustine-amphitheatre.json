@@ -30,11 +30,11 @@
     },
     {
       "question": "What does coverage at the Amphitheatre cost?",
-      "answer": "<p>Event coverage starts at $1,000 for a half-day. Most projects run $3,000–$15,000.</p>"
+      "answer": "<p>Event photo starts at $1,200 and full photo-and-video coverage at $5,500. Most projects run $2,500–$9,500+.</p>"
     },
     {
       "question": "How fast do you deliver?",
-      "answer": "<p>During a show, social cutdowns land same- or next-day. The full recap usually arrives within 7 business days.</p>"
+      "answer": "<p>During a show, social cutdowns land same- or next-day. The full recap usually arrives in 2–3 weeks (7 business days on our Rush tier).</p>"
     }
   ],
   "schema": {
@@ -102,7 +102,7 @@
         "name": "What does coverage at the Amphitheatre cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Event coverage starts at $1,000 for a half-day. Most projects run $3,000–$15,000."
+          "text": "Event photo starts at $1,200 and full photo-and-video coverage at $5,500. Most projects run $2,500–$9,500+."
         }
       },
       {
@@ -110,7 +110,7 @@
         "name": "How fast do you deliver?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "During a show, social cutdowns land same- or next-day. The full recap usually arrives within 7 business days."
+          "text": "During a show, social cutdowns land same- or next-day. The full recap usually arrives in 2–3 weeks (7 business days on our Rush tier)."
         }
       }
     ]

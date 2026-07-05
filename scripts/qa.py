@@ -121,8 +121,8 @@ def check_page(path):
     if not re.search(r'rel="canonical"', h):
         fails.append("no canonical")
 
-    # FAQ 1:1
-    visible = h.count("faq-question")
+    # FAQ 1:1 — count actual question elements, not stray substrings (e.g. inline CSS selectors)
+    visible = h.count('class="faq-question"')
     faq = next((d for d in parsed if isinstance(d, dict) and d.get("@type") == "FAQPage"), None)
     sch = len(faq["mainEntity"]) if faq else 0
     if (visible or sch) and visible != sch:
