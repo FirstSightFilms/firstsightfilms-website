@@ -3,6 +3,9 @@
 <head>
 {{head}}
 <link rel="stylesheet" href="/css/services.css">
+<link rel="stylesheet" href="/css/contact-wizard.css">
+<script defer src="/js/estimate-logic.js"></script>
+<script defer src="/js/contact-wizard.js"></script>
 <style>
   /* Match the referral dropdown to the form's input styling */
   .form-group select { width: 100%; padding: 0.75rem 0.875rem; font-family: var(--font-primary); font-size: 0.9rem; color: var(--color-black); background: var(--color-white); border: 1px solid var(--color-gray-300); border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
@@ -55,21 +58,8 @@
   <section class="section-contact">
     <div class="container">
 
-      <!-- Discovery Call Booking -->
-      <div class="booking-card">
-        <h2>Book a 15-Minute Discovery Call</h2>
-        <p>Pick a time that works for you. We'll talk through your project, your dates, and what you need&mdash;then follow up with a transparent, no-surprises quote.</p>
-        <!-- Google Calendar Appointment Scheduling (inline embed — no JS dependency) -->
-        <div class="booking-embed" data-umami-event="calendar-open">
-          <iframe
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2c9GJBG3RO9fVeUMtldiulgbvnT34cuIrJtlahHi5tV6ir3-vY1RDe5M-gBqQ9xLXirsYaZcGu?gv=true"
-            title="Book a 15-minute discovery call with First Sight Films"
-            width="100%" height="600" frameborder="0" loading="lazy" style="border:0;"></iframe>
-        </div>
-        <p class="booking-fallback">Calendar not loading? <a href="https://calendar.app.google/QzcD7BqrKKBuLCD48" target="_blank" rel="noopener" data-umami-event="calendar-open">Open the scheduler in a new tab</a>.</p>
-      </div>
-
-      <p class="contact-or">or send us a message</p>
+      <p class="wizard-intro">Answer a few quick questions and see a real price range for your event — it takes about a minute.</p>
+      <p class="wizard-fastlane">Already know what you need? <a href="#book-a-call" data-umami-event="fastlane-click">Book a call instead &rarr;</a></p>
 
       <div class="contact-container">
 
@@ -92,24 +82,70 @@
         <div class="contact-form-wrapper">
           <form name="contact" class="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="estimate_shown" id="estimate_shown" value="">
             <p class="hp-field" aria-hidden="true"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-            <div class="form-row">
+
+            <fieldset class="wizard-step" data-step="event-type">
+              <legend tabindex="-1">What kind of event is it?</legend>
+              <div class="chip-group">
+                <label class="chip-option"><input type="radio" name="event_type" value="Festival / Concert" required><span>Festival / Concert</span></label>
+                <label class="chip-option"><input type="radio" name="event_type" value="Conference / Corporate"><span>Conference / Corporate</span></label>
+                <label class="chip-option"><input type="radio" name="event_type" value="Higher-ed"><span>Higher-ed</span></label>
+                <label class="chip-option"><input type="radio" name="event_type" value="Nonprofit / Community"><span>Nonprofit / Community</span></label>
+                <label class="chip-option"><input type="radio" name="event_type" value="Wedding / private party"><span>Wedding or private party</span></label>
+                <label class="chip-option"><input type="radio" name="event_type" value="Other"><span>Something else</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="coverage">
+              <legend tabindex="-1">What coverage do you need?</legend>
+              <div class="chip-group">
+                <label class="chip-option"><input type="radio" name="coverage_type" value="Photo + video" required><span>Photo + video</span></label>
+                <label class="chip-option"><input type="radio" name="coverage_type" value="Video only"><span>Video only</span></label>
+                <label class="chip-option"><input type="radio" name="coverage_type" value="Photo only"><span>Photo only</span></label>
+                <label class="chip-option"><input type="radio" name="coverage_type" value="Not sure — help me decide"><span>Not sure — help me decide</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="length">
+              <legend tabindex="-1">How long is the event?</legend>
+              <div class="chip-group">
+                <label class="chip-option"><input type="radio" name="event_length" value="Half day" required><span>Half day (up to ~4 hours)</span></label>
+                <label class="chip-option"><input type="radio" name="event_length" value="Full day"><span>Full day</span></label>
+                <label class="chip-option"><input type="radio" name="event_length" value="2–3 days"><span>2–3 days</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="when-where">
+              <legend tabindex="-1">When and where is it?</legend>
               <div class="form-group">
-                <label for="name">Your Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required>
+                <label for="event_date">Event date</label>
+                <input type="date" id="event_date" name="event_date">
               </div>
               <div class="form-group">
-                <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Phone Number <span class="label-hint">(in case email doesn't work)</span></label>
-                <input type="tel" id="phone" name="phone">
+                <label class="chip-option"><input type="checkbox" id="no_date_yet" name="no_date_yet" value="yes"><span>No date yet</span></label>
               </div>
               <div class="form-group">
-                <label for="referral_source">How did you hear about us? <span class="required">*</span></label>
+                <label for="event_location">City or venue <span class="required">*</span></label>
+                <input type="text" id="event_location" name="event_location" required placeholder="e.g. St. Augustine Amphitheatre, or just the city">
+              </div>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="budget">
+              <legend tabindex="-1">What budget range are you working with?</legend>
+              <div class="chip-group">
+                <label class="chip-option"><input type="radio" name="budget_range" value="Under $2,500" required><span>Under $2,500</span></label>
+                <label class="chip-option"><input type="radio" name="budget_range" value="$2,500–5,500"><span>$2,500–5,500</span></label>
+                <label class="chip-option"><input type="radio" name="budget_range" value="$5,500–9,500"><span>$5,500–9,500</span></label>
+                <label class="chip-option"><input type="radio" name="budget_range" value="$9,500+"><span>$9,500+</span></label>
+                <label class="chip-option"><input type="radio" name="budget_range" value="Not sure yet"><span>Not sure yet</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="referral">
+              <legend tabindex="-1">How did you hear about us?</legend>
+              <div class="form-group">
+                <label for="referral_source">Source <span class="required">*</span></label>
                 <select id="referral_source" name="referral_source" required>
                   <option value="" disabled selected>Select one&hellip;</option>
                   <option>Referral (a person or company)</option>
@@ -122,59 +158,59 @@
                   <option>Other</option>
                 </select>
               </div>
-            </div>
-            <div class="form-group" id="referral_detail_wrap" style="display:none;">
-              <label for="referral_detail">Who referred you / tell us more</label>
-              <input type="text" id="referral_detail" name="referral_detail">
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="event_type">Type of event <span class="required">*</span></label>
-                <select id="event_type" name="event_type" required>
-                  <option value="" disabled selected>Select one&hellip;</option>
-                  <option>Festival / Concert</option>
-                  <option>Conference / Corporate</option>
-                  <option>Higher-ed</option>
-                  <option>Nonprofit / Community</option>
-                  <option>Other</option>
-                </select>
+              <div class="form-group" id="referral_detail_wrap">
+                <label for="referral_detail">Who referred you / tell us more</label>
+                <input type="text" id="referral_detail" name="referral_detail">
+              </div>
+            </fieldset>
+
+            <fieldset class="wizard-step" data-step="contact">
+              <legend tabindex="-1">Where should we send your estimate?</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="organization">Organization <span class="label-hint">(if you have one)</span></label>
+                  <input type="text" id="organization" name="organization">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="label-hint">(in case email doesn't work)</span></label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
               </div>
               <div class="form-group">
-                <label for="budget_range">Budget range <span class="required">*</span></label>
-                <select id="budget_range" name="budget_range" required>
-                  <option value="" disabled selected>Select one&hellip;</option>
-                  <option>Under $2,500</option>
-                  <option>$2,500&ndash;5,500</option>
-                  <option>$5,500&ndash;9,500</option>
-                  <option>$9,500+</option>
-                  <option>Not sure yet</option>
-                </select>
+                <label for="message">Anything else we should know?</label>
+                <textarea id="message" name="message" rows="4" placeholder="Deliverables you have in mind, sponsor deadlines, anything unusual about the event."></textarea>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="event_date">Event date <span class="label-hint">(if you have one)</span></label>
-              <input type="date" id="event_date" name="event_date">
-            </div>
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your event: dates, hours of coverage, and deliverables — or book a call above and we'll dial in the details."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" data-umami-event="contact-form-submit">Send Message</button>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Get my estimate</button>
           </form>
-          <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            var sel = document.getElementById('referral_source');
-            var wrap = document.getElementById('referral_detail_wrap');
-            if (!sel || !wrap) return;
-            function sync() {
-              var v = sel.value;
-              wrap.style.display = (v === 'Referral (a person or company)' || v === 'Other') ? 'block' : 'none';
-            }
-            sel.addEventListener('change', sync);
-            sync();
-          });
-          </script>
         </div>
+      </div>
+
+      <p class="contact-or" id="book-a-call">or pick a call time directly</p>
+
+      <!-- Discovery Call Booking -->
+      <div class="booking-card">
+        <h2>Book a 15-Minute Discovery Call</h2>
+        <p>Pick a time that works for you. We'll talk through your project, your dates, and what you need&mdash;then follow up with a transparent, no-surprises quote.</p>
+        <!-- Google Calendar Appointment Scheduling (inline embed — no JS dependency) -->
+        <div class="booking-embed" data-umami-event="calendar-open">
+          <iframe
+            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2c9GJBG3RO9fVeUMtldiulgbvnT34cuIrJtlahHi5tV6ir3-vY1RDe5M-gBqQ9xLXirsYaZcGu?gv=true"
+            title="Book a 15-minute discovery call with First Sight Films"
+            width="100%" height="600" frameborder="0" loading="lazy" style="border:0;"></iframe>
+        </div>
+        <p class="booking-fallback">Calendar not loading? <a href="https://calendar.app.google/QzcD7BqrKKBuLCD48" target="_blank" rel="noopener" data-umami-event="calendar-open">Open the scheduler in a new tab</a>.</p>
       </div>
     </div>
   </section>
