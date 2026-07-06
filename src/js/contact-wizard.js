@@ -34,6 +34,7 @@
     var wrapper = form.closest('.contact-form-wrapper');
     var current = 0;
     var submitAttempts = 0;
+    var completed = false;
 
     // --- injected UI ---
     var progress = document.createElement('div');
@@ -95,6 +96,7 @@
 
     // --- persistence ---
     function saveState() {
+      if (completed) return; // never resurrect state cleared on success
       var values = {};
       Array.prototype.forEach.call(form.elements, function (el) {
         if (!el.name || el.name === 'bot-field' || el.name === 'form-name') return;
@@ -187,14 +189,24 @@
       showStep(current + 1);
     }
 
-    backBtn.addEventListener('click', function () { if (current > 0) showStep(current - 1); });
+    backBtn.addEventListener('click', function () {
+      if (current > 0) {
+        if (history.state && typeof history.state.wizardStep === 'number') {
+          history.back(); // popstate drives showStep — same path as browser Back
+        } else {
+          showStep(current - 1);
+        }
+      }
+    });
     nextBtn.addEventListener('click', advance);
 
-    // Auto-advance on chip (radio) selection for radio-only steps
+    // Auto-advance on chip (radio) click: label taps and Space both fire click
+    // (a deliberate confirm); arrow-key browsing fires change but NOT click, so
+    // it never advances mid-selection.
     steps.forEach(function (step) {
       var radios = step.querySelectorAll('input[type="radio"]');
       Array.prototype.forEach.call(radios, function (r) {
-        r.addEventListener('change', function () {
+        r.addEventListener('click', function () {
           saveState();
           setTimeout(function () {
             if (steps[current] === step) advance();
@@ -203,8 +215,10 @@
       });
     });
     form.addEventListener('input', saveState);
+    form.addEventListener('change', saveState); // radios/selects where 'input' doesn't fire
 
     window.addEventListener('popstate', function (e) {
+      if (completed) return;
       if (e.state && typeof e.state.wizardStep === 'number') {
         showStep(e.state.wizardStep, { fromHistory: true, noFocus: true });
       }
@@ -212,6 +226,7 @@
 
     // Enter key advances instead of submitting mid-wizard
     form.addEventListener('keydown', function (e) {
+      if (e.target.tagName === 'BUTTON') return; // Enter on Back must not advance
       if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA' && current < steps.length - 1) {
         e.preventDefault();
         advance();
@@ -257,12 +272,17 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var err = stepValid(current);
-      if (err) {
-        stepError.textContent = err;
-        stepError.classList.add('is-visible');
-        return;
+      // novalidate is on, so validate every step ourselves (not just the last)
+      for (var i = 0; i < steps.length; i++) {
+        var err = stepValid(i);
+        if (err) {
+          showStep(i);
+          stepError.textContent = err;
+          stepError.classList.add('is-visible');
+          return;
+        }
       }
+      track('wizard-step-' + steps.length);
       var estimate = logic.getEstimate(collectAnswers());
       form.querySelector('#estimate_shown').value = estimate.headline;
       submitBtn.disabled = true;
@@ -276,6 +296,7 @@
       }).then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         clearState();
+        completed = true;
         track('contact-form-submit');
         track('estimate-shown', { tier: estimate.tier });
         renderEstimate(estimate);
@@ -294,7 +315,7 @@
 
     submitError.querySelector('.wizard-retry').addEventListener('click', function () {
       submitError.classList.remove('is-visible');
-      form.requestSubmit();
+      if (form.requestSubmit) form.requestSubmit(); else form.submit();
     });
 
     // --- estimate screen (spec §5) ---
@@ -319,11 +340,12 @@
       wrapper.appendChild(screen);
       if (bookingCard) screen.appendChild(bookingCard);
       if (anchor) anchor.hidden = true;
-      screen.querySelector('h3').focus();
+      screen.querySelector('h3').focus({ preventScroll: true });
       screen.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     // --- activate ---
+    form.noValidate = true; // stepValid() validates per step; native check would block on hidden steps
     form.classList.add('wizard-active');
     syncReferralDetail();
     var startAt = restoreState();
