@@ -235,6 +235,7 @@ def main():
         return "/" + (rel[:-len("index.html")] if rel.endswith("/index.html") else rel)
     pages = [p for p in pages if "_snippets" not in p and "/410" not in p
              and "_template" not in p and os.path.basename(p) != "410.html"
+             and not re.fullmatch(r"google[0-9a-f]+\.html", os.path.basename(p))
              and not is_redirect(page_url(p))]
 
     print("=" * 60)
