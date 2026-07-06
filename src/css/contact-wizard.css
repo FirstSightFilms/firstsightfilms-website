@@ -12,7 +12,7 @@
 .contact-form.wizard-active button[type="submit"] { display: none; }
 .contact-form.wizard-active.on-last-step button[type="submit"] { display: inline-block; }
 
-.wizard-step { border: 0; padding: 0; margin: 0; }
+.wizard-step { border: 0; padding: 0; margin: 0 0 1.75rem; }
 .wizard-step legend { padding: 0; }
 .wizard-step legend:focus { outline: none; }
 
@@ -24,7 +24,7 @@
 
 /* Answer chips: real radios/checkboxes styled as tap targets */
 .chip-group { display: flex; flex-direction: column; gap: 0.5rem; }
-.chip-option { display: block; cursor: pointer; }
+.chip-option { display: block; cursor: pointer; position: relative; }
 .chip-option input { position: absolute; opacity: 0; pointer-events: none; }
 .chip-option span {
   display: block; padding: 0.85rem 1rem; font-family: var(--font-primary); font-size: 0.95rem;
@@ -45,11 +45,11 @@
 .wizard-back[hidden] { display: none; }
 
 /* Inline step error */
-.wizard-error { color: #b3261e; font-size: 0.85rem; margin-top: 0.75rem; display: none; }
+.wizard-error { color: #e74c3c; font-size: 0.85rem; margin-top: 0.75rem; display: none; }
 .wizard-error.is-visible { display: block; }
 
 /* Submission failure banner */
-.wizard-submit-error { border: 1px solid #b3261e; border-radius: 6px; padding: 0.85rem 1rem; margin-top: 1rem; font-size: 0.9rem; display: none; }
+.wizard-submit-error { border: 1px solid #e74c3c; border-radius: 6px; padding: 0.85rem 1rem; margin-top: 1rem; font-size: 0.9rem; display: none; }
 .wizard-submit-error.is-visible { display: block; }
 
 /* Wedding exit + estimate screens (injected by JS) */

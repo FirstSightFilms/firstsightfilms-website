@@ -29,6 +29,10 @@ assert.equal(est('Photo + video', 'Full day', '$5,500–9,500', '2026-09-30').ru
 assert.equal(est('Photo + video', '2–3 days', '$9,500+', '2026-07-20').rushLine, null, 'no rush for multi-day');
 assert.equal(est('Video only', 'Full day', 'Not sure yet', '2026-07-20').rushLine, null, 'no rush for video-only');
 assert.equal(est('Photo + video', 'Full day', '$5,500–9,500', '').rushLine, null, 'no rush without a date');
+assert.ok(est('Photo + video', 'Full day', '$5,500–9,500', '2026-07-06').rushLine, 'rush at day 0 (event today)');
+assert.ok(est('Photo + video', 'Full day', '$5,500–9,500', '2026-08-05').rushLine, 'rush at exactly day 30');
+assert.equal(est('Photo + video', 'Full day', '$5,500–9,500', '2026-08-06').rushLine, null, 'no rush at day 31');
+assert.equal(est('Photo + video', 'Full day', '$5,500–9,500', '2026-07-01').rushLine, null, 'no rush for past dates');
 
 // — Under-budget honesty —
 assert.match(est('Photo + video', 'Full day', 'Under $2,500', '').underBudgetLine, /\$1,200 event photo half-day/);
