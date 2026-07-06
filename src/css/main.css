@@ -1788,6 +1788,7 @@ ul, ol {
   border-radius: 8px;
 }
 
+.partnership-card h3,
 .partnership-card h4 {
   margin-bottom: 0.5rem;
   color: var(--color-black);
