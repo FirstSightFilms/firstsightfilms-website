@@ -1,7 +1,7 @@
 # FSF Site Map
 
-**57 pages total** — mirrors the generated `output/sitemap.xml` (200-only; redirects excluded).
-Last reconciled 2026-07-05 against the live build.
+**58 pages total** — mirrors the generated `output/sitemap.xml` (200-only; redirects excluded).
+Last reconciled 2026-07-07 against the live build.
 
 ---
 
@@ -53,7 +53,7 @@ Last reconciled 2026-07-05 against the live build.
 
 ---
 
-## Guides (12)
+## Guides (13)
 Event guides built for AI citability.
 
 | URL | Page |
@@ -69,7 +69,8 @@ Event guides built for AI citability.
 | `/guides/event-venues/st-augustine-event-venues/` | St. Augustine Event Venues |
 | `/guides/event-services/` | Event Services (hub) |
 | `/guides/event-services/photo-vs-video-for-events/` | Photo vs Video for Events |
-| `/guides/event-locations/` | Event Locations |
+| `/guides/event-locations/` | Event Locations (hub) |
+| `/guides/event-locations/northeast-florida-conference-venues/` | Northeast Florida Conference Venues |
 
 ---
 
