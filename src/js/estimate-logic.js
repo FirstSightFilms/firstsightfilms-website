@@ -40,8 +40,8 @@
     }
     // Photo + video
     if (length === 'Half day') {
-      return { floor: 2750, tier: 'story-half',
-        headline: 'Photo + video for a half-day event runs $2,750.' };
+      return { floor: 2000, tier: 'story-half',
+        headline: 'Photo + video for a half-day event runs $2,000.' };
     }
     if (length === '2–3 days') {
       return { floor: 9500, tier: 'full-coverage',

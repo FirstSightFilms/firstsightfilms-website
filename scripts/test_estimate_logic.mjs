@@ -16,7 +16,7 @@ assert.match(est('Photo only', 'Full day', 'Not sure yet', '').headline, /starts
 assert.match(est('Photo only', '2–3 days', 'Not sure yet', '').headline, /starts at \$1,200/);
 assert.match(est('Video only', 'Half day', 'Not sure yet', '').headline, /starts at \$2,500/);
 assert.match(est('Video only', '2–3 days', 'Not sure yet', '').headline, /multi-day/);
-assert.match(est('Photo + video', 'Half day', 'Not sure yet', '').headline, /\$2,750/);
+assert.match(est('Photo + video', 'Half day', 'Not sure yet', '').headline, /\$2,000/);
 assert.match(est('Photo + video', 'Full day', 'Not sure yet', '').headline, /\$5,500/);
 assert.match(est('Photo + video', '2–3 days', 'Not sure yet', '').headline, /\$9,500/);
 assert.match(est('Photo + video', '2–3 days', 'Not sure yet', '').headline, /\$13,500/);
