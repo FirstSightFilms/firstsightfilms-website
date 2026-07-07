@@ -34,6 +34,16 @@
 }
 .wizard-fastlane a:hover { border-color: #e5b34a; }
 
+/* Sidebar phone/email links: gold text on the gold-tint box fails WCAG contrast
+   (Lighthouse flag) — switch to the fastlane treatment: dark text, gold underline. */
+.page-contact .contact-info-box a {
+  color: #1a1a1a;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 1px;
+}
+.page-contact .contact-info-box a:hover { text-decoration: none; border-color: #e5b34a; }
+
 /* Step visibility (only when JS has activated the wizard) */
 .contact-form.wizard-active .wizard-step { display: none; }
 .contact-form.wizard-active .wizard-step.is-current {
