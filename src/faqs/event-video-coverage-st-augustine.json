@@ -55,6 +55,10 @@
     {
       "question": "What makes you different from a freelancer?",
       "answer": "<p>Three things: the venues and institutions that already trust us, the fact that we're local and likely already know your room, and the way we treat event coverage as documentary storytelling — not just stage footage. You're hiring a team that's done this hundreds of times and shows up prepared for a moment you can't redo.</p>"
+    },
+    {
+      "question": "Do you cover college graduations and campus events?",
+      "answer": "<p>Yes. Graduation coverage is photography — Flagler College brings us in to photograph its commencement ceremonies. We don't film or livestream graduations, but we do provide full video coverage for campus conferences, speaker events, homecomings, and fundraising campaigns.</p>"
     }
   ],
   "schema": {
@@ -171,6 +175,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The venues and institutions that already trust us, the fact that we're local and likely already know your room, and the way we treat event coverage as documentary storytelling rather than just stage footage. You hire a team that has done this hundreds of times and shows up prepared for a moment you can't redo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you cover college graduations and campus events?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Graduation coverage is photography — Flagler College brings us in to photograph its commencement ceremonies. We don't film or livestream graduations, but we do provide full video coverage for campus conferences, speaker events, homecomings, and fundraising campaigns."
         }
       }
     ]
