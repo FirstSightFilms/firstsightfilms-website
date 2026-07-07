@@ -315,13 +315,13 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
 
-        <div class="bento-item bento-medium">
+        <a href="#training" class="bento-item bento-medium">
           <img src="/images/bento/corporate-video-st-augustine-bento-1-large.webp" alt="Training and explainer videos" loading="lazy" width="1920" height="2560">
           <div class="bento-overlay">
             <span class="bento-label">Training Videos</span>
             <span class="bento-subtitle">Onboarding and education</span>
           </div>
-        </div>
+        </a>
 
         <a href="/social-media-st-augustine/" class="bento-item bento-medium">
           <img src="/images/bento/social-media-st-augustine-florida-st-amphitheatre-thievery-corporation-medium.webp" alt="Social media video content" loading="lazy" width="1200" height="960">
@@ -453,7 +453,24 @@ document.addEventListener('DOMContentLoaded', function() {
           </ul>
           <a href="/contact/" class="btn btn-secondary">Get Quote</a>
         </div>
+        <div class="pricing-card" id="training">
+          <h3>Training &amp; Internal Comms</h3>
+          <p class="pricing-price">Programs from $6,500</p>
+          <ul class="pricing-features">
+            <li>Scripted program of 4&ndash;6 videos</li>
+            <li>Onboarding, training, or rollout comms</li>
+            <li>One production plan across the series</li>
+            <li>Consistent look, reusable graphics</li>
+            <li>Annual refresh scheduling available</li>
+          </ul>
+          <a href="/contact/" class="btn btn-secondary">Get Quote</a>
+        </div>
       </div>
+      <style>
+        /* 4 cards on this page: 2x2 reads better than a lone wrapped card */
+        #pricing .pricing-grid { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin-left: auto; margin-right: auto; }
+        @media (max-width: 768px) { #pricing .pricing-grid { grid-template-columns: 1fr; } }
+      </style>
     </div>
   </section>
 
