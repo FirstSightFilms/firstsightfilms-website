@@ -404,6 +404,74 @@
   font-size: 0.9rem;
 }
 
+/* Pricing Section */
+.section-pricing-tiers {
+  background: white;
+  padding: 4rem 2rem;
+}
+
+.pricing-tiers-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pricing-tiers-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-tiers-header h2 {
+  font-size: 1.8rem;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-tiers-header p {
+  color: #666;
+}
+
+.pricing-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.pricing-tier-card {
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-tier-card:hover {
+  border-color: #f4c057;
+  box-shadow: 0 8px 30px rgba(244, 192, 87, 0.15);
+}
+
+.pricing-tier-card h3 {
+  color: #1a1a2e;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-tier-price {
+  color: #1a1a2e;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pricing-tier-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
 /* Final CTA Section */
 .section-final-cta {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -648,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="value-card">
           <h3>Transparent, Project-Based Pricing</h3>
-          <p>Clear quotes with no hidden fees. Attorney profile videos and firm overviews start from $5,000.</p>
+          <p>Clear quotes with no hidden fees. Half-day productions are $2,000, full-day productions are $4,000, and larger campaigns get a customized quote.</p>
         </div>
       </div>
     </div>
@@ -686,6 +754,37 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="icon">&#128202;</div>
           <h3>CPA & Accounting</h3>
           <p>Communicate complex services with clarity</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="section-pricing-tiers">
+    <div class="pricing-tiers-container">
+      <div class="pricing-tiers-header">
+        <h2>Simple, Project-Based Pricing</h2>
+        <p>Clear quotes with no hidden fees. Pick the production that fits your firm.</p>
+      </div>
+
+      <div class="pricing-tiers-grid">
+        <div class="pricing-tier-card">
+          <h3>Half-Day Production</h3>
+          <p class="pricing-tier-price">$2,000</p>
+          <p>4-5 hours on site. B-roll of your practice at work, interviews with partners and key staff, and a few edited videos ready for your website and social media.</p>
+          <a href="/contact/" class="btn btn-secondary">Get Started</a>
+        </div>
+        <div class="pricing-tier-card">
+          <h3>Full-Day Production</h3>
+          <p class="pricing-tier-price">$4,000</p>
+          <p>A full production day for a firm overview or attorney profile. Multiple interview subjects, b-roll at more than one location, and a full set of campaign-ready videos.</p>
+          <a href="/contact/" class="btn btn-primary">Get Started</a>
+        </div>
+        <div class="pricing-tier-card">
+          <h3>Larger Campaigns</h3>
+          <p class="pricing-tier-price">Customized quote</p>
+          <p>Multi-day productions and video series for firms with bigger content plans. Tell us your scope and we will build a quote around it.</p>
+          <a href="/contact/" class="btn btn-secondary">Get a Custom Quote</a>
         </div>
       </div>
     </div>
