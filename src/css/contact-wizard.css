@@ -1,46 +1,142 @@
 /* Contact wizard — enhancement layer over the plain form (loaded on /contact/ only).
-   Without JS none of these classes are applied and the plain form renders as-is. */
+   Without JS none of these classes are applied and the plain form renders as-is.
+   Class names are a contract with contact-wizard.js — do not rename. */
 
-.wizard-intro { font-size: 1.05rem; margin: 0 0 0.25rem; }
-.wizard-fastlane { font-size: 0.9rem; color: var(--color-gray-600); margin: 0 0 1.5rem; }
-.wizard-fastlane a { font-weight: 600; }
+/* Wizard card: match the site's card language (white, gold top bar, soft shadow).
+   Scoped to the contact page so other pages using .contact-form-wrapper are untouched. */
+.page-contact .contact-form-wrapper {
+  background: var(--color-white);
+  border-radius: 12px;
+  border-top: 4px solid var(--color-accent);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+}
+
+.wizard-intro {
+  font-size: 1.15rem;
+  color: var(--color-gray-600);
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 0.35rem;
+}
+.wizard-fastlane {
+  font-size: 0.9rem;
+  color: var(--color-gray-500);
+  text-align: center;
+  margin: 0 0 1.75rem;
+}
+.wizard-fastlane a {
+  color: #1a1a1a;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 1px;
+  transition: border-color 0.15s ease;
+}
+.wizard-fastlane a:hover { border-color: #e5b34a; }
 
 /* Step visibility (only when JS has activated the wizard) */
 .contact-form.wizard-active .wizard-step { display: none; }
-.contact-form.wizard-active .wizard-step.is-current { display: block; }
-.contact-form.wizard-active .wizard-step legend { font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem; }
+.contact-form.wizard-active .wizard-step.is-current {
+  display: block;
+  animation: wizard-step-in 0.28s ease both;
+}
 .contact-form.wizard-active button[type="submit"] { display: none; }
 .contact-form.wizard-active.on-last-step button[type="submit"] { display: inline-block; }
 
+@keyframes wizard-step-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
 .wizard-step { border: 0; padding: 0; margin: 0 0 1.75rem; }
-.wizard-step legend { padding: 0; }
+.wizard-step legend {
+  padding: 0;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-black);
+  margin-bottom: 1.25rem;
+  text-wrap: balance;
+}
 .wizard-step legend:focus { outline: none; }
 
 /* Progress bar (injected by JS) */
-.wizard-progress { margin-bottom: 1.25rem; }
-.wizard-progress-text { font-size: 0.8rem; color: var(--color-gray-600); margin-bottom: 0.35rem; display: block; }
-.wizard-progress-track { height: 4px; background: var(--color-gray-300); border-radius: 2px; overflow: hidden; }
-.wizard-progress-fill { height: 100%; width: 0; background: var(--color-accent); border-radius: 2px; transition: width 0.25s ease; }
+.wizard-progress { margin-bottom: 1.5rem; }
+.wizard-progress-text {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gray-500);
+  margin-bottom: 0.45rem;
+}
+.wizard-progress-track {
+  height: 6px;
+  background: var(--color-gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.wizard-progress-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--color-accent), #e5b34a);
+  border-radius: 3px;
+  transition: width 0.35s ease;
+}
 
 /* Answer chips: real radios/checkboxes styled as tap targets */
-.chip-group { display: flex; flex-direction: column; gap: 0.5rem; }
-.chip-option { display: block; cursor: pointer; position: relative; }
+.chip-group { display: flex; flex-direction: column; gap: 0.6rem; }
+.chip-option { display: block; position: relative; cursor: pointer; }
 .chip-option input { position: absolute; opacity: 0; pointer-events: none; }
 .chip-option span {
-  display: block; padding: 0.85rem 1rem; font-family: var(--font-primary); font-size: 0.95rem;
-  color: var(--color-black); background: var(--color-white);
-  border: 1px solid var(--color-gray-300); border-radius: 6px;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  display: block;
+  padding: 0.95rem 1.15rem;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-black);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
-.chip-option:hover span { border-color: var(--color-accent); }
+.chip-option:hover span {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
 .chip-option input:focus-visible + span { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .chip-option input:checked + span {
-  border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(244, 192, 87, 0.25); font-weight: 600;
+  border-color: var(--color-accent);
+  /* inset ring reads as a 2px border without shifting layout */
+  box-shadow: inset 0 0 0 1px var(--color-accent);
+  background: rgba(244, 192, 87, 0.12);
+  font-weight: 600;
 }
 
 /* Wizard nav (injected by JS) */
-.wizard-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; gap: 1rem; }
-.wizard-back { background: none; border: none; cursor: pointer; font-family: var(--font-primary); font-size: 0.9rem; color: var(--color-gray-600); padding: 0.5rem 0; }
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+.wizard-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  padding: 0.5rem 0;
+  transition: color 0.15s ease;
+}
 .wizard-back:hover { color: var(--color-black); }
 .wizard-back[hidden] { display: none; }
 
@@ -49,21 +145,88 @@
 .wizard-error.is-visible { display: block; }
 
 /* Submission failure banner */
-.wizard-submit-error { border: 1px solid #e74c3c; border-radius: 6px; padding: 0.85rem 1rem; margin-top: 1rem; font-size: 0.9rem; display: none; }
+.wizard-submit-error {
+  border: 1px solid #e74c3c;
+  background: rgba(231, 76, 60, 0.06);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  display: none;
+}
 .wizard-submit-error.is-visible { display: block; }
 
-/* Wedding exit + estimate screens (injected by JS) */
-.wizard-exit h3, .estimate-screen h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
-.estimate-screen .estimate-headline { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; }
+/* Wedding exit (injected by JS) */
+.wizard-exit { animation: wizard-step-in 0.28s ease both; padding: 0.25rem 0; }
+.wizard-exit h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  line-height: 1.25;
+  margin-bottom: 0.85rem;
+  text-wrap: balance;
+}
+.wizard-exit p { color: var(--color-gray-600); max-width: 56ch; }
+.wizard-exit .btn { margin-top: 0.5rem; }
+
+/* Estimate screen (injected by JS) — the payoff moment: staggered reveal */
+.estimate-screen { animation: wizard-step-in 0.35s ease both; }
+.estimate-screen h3 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gray-500);
+  margin-bottom: 0.75rem;
+}
+.estimate-screen .estimate-headline {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+  text-wrap: balance;
+  animation: wizard-step-in 0.35s ease 0.08s both;
+}
 .estimate-screen p { margin-bottom: 0.75rem; }
-.estimate-screen .estimate-note { font-size: 0.9rem; color: var(--color-gray-600); }
-.estimate-screen .estimate-extra { padding: 0.75rem 1rem; border-left: 3px solid var(--color-accent); background: rgba(244, 192, 87, 0.08); margin-bottom: 0.75rem; font-size: 0.95rem; }
+.estimate-screen .estimate-note { font-size: 0.95rem; color: var(--color-gray-500); }
+.estimate-screen .estimate-extra {
+  padding: 0.85rem 1.1rem;
+  border-left: 3px solid var(--color-accent);
+  background: rgba(244, 192, 87, 0.1);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  animation: wizard-step-in 0.35s ease 0.16s both;
+}
+/* The relocated booking card sits inside the white wizard card — flatten its
+   shadow so it reads as a section of the result, not a floating twin card. */
+.estimate-screen .booking-card {
+  margin-top: 1.75rem;
+  box-shadow: none;
+  border: 1px solid var(--color-gray-200);
+  border-top: 4px solid var(--color-accent);
+  animation: wizard-step-in 0.35s ease 0.24s both;
+}
 
 @media (min-width: 600px) {
   .chip-group { flex-direction: row; flex-wrap: wrap; }
-  .chip-group .chip-option { flex: 1 1 calc(50% - 0.5rem); }
+  .chip-group .chip-option { flex: 1 1 calc(50% - 0.6rem); }
+}
+
+@media (max-width: 480px) {
+  .page-contact .contact-form-wrapper { padding: 1.25rem; }
+  .wizard-step legend { font-size: 1.2rem; }
+  .estimate-screen .estimate-headline { font-size: 1.35rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wizard-progress-fill, .chip-option span { transition: none; }
+  .wizard-progress-fill, .chip-option span, .wizard-back, .wizard-fastlane a { transition: none; }
+  .chip-option:hover span { transform: none; }
+  .contact-form.wizard-active .wizard-step.is-current,
+  .wizard-exit,
+  .estimate-screen,
+  .estimate-screen .estimate-headline,
+  .estimate-screen .estimate-extra,
+  .estimate-screen .booking-card { animation: none; }
 }

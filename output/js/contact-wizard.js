@@ -341,7 +341,8 @@
       if (bookingCard) screen.appendChild(bookingCard);
       if (anchor) anchor.hidden = true;
       screen.querySelector('h3').focus({ preventScroll: true });
-      screen.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      screen.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
     }
 
     // --- activate ---
