@@ -3,9 +3,49 @@
 <head>
 {{head}}
 <link rel="stylesheet" href="/css/services.css">
-<title>Video Production Jacksonville FL | First Sight Films</title>
-<meta name="description" content="Video production in Jacksonville, FL. Corporate videos, event coverage, brand stories, and social. Based in St. Augustine, serving Northeast Florida.">
+<title>Video Production in Jacksonville, FL | First Sight Films</title>
+<meta name="description" content="Video production in Jacksonville, FL. Corporate video, event coverage, brand films from a St. Augustine crew 40 min south. From $1,200 · 5.0★ · 46 reviews.">
 {{faq-schema:jacksonville-video-production}}
+<style>
+  /* Case-study + video patterns copied from the event coverage page */
+  .video-casestudy { max-width: 760px; margin: 1.5rem auto 0; text-align: left; }
+  .video-casestudy h3 { margin-bottom: .25rem; }
+  .video-casestudy .video-meta { text-align: left; margin: 0 0 1rem; }
+  .video-casestudy p { line-height: 1.7; margin-bottom: 1rem; color: #333; }
+  .video-casestudy blockquote { border-left: 3px solid #f4c057; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #444; }
+  .video-casestudy blockquote footer { font-style: normal; font-size: .9rem; color: #666; margin-top: .5rem; }
+  .video-meta { text-align: center; font-size: 0.95rem; color: #555; margin: 0.6rem auto 0; max-width: 760px; }
+  .glance-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #888; font-weight: 700; margin: 0 0 .6rem; }
+  .project-glance { list-style: none; padding: 1rem 1.25rem; margin: 0 0 1.25rem; background: #f7f7f7; border-left: 3px solid #f4c057; border-radius: 4px; }
+  .project-glance li { margin: 0 0 .5rem; line-height: 1.55; font-size: .95rem; color: #333; }
+  .project-glance li:last-child { margin-bottom: 0; }
+  .video-casestudy a, .project-glance a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  .video-casestudy a:hover, .project-glance a:hover { color: #b8860b; }
+  .vsl-frame { position: relative; max-width: 760px; margin: 2rem auto 0; aspect-ratio: 16/9; background: #000; border-radius: 10px; overflow: hidden; }
+  .vsl-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .vsl-frame .event-video-trigger { width: 100%; height: 100%; border: 0; padding: 0; margin: 0; cursor: pointer; display: block; background: #000; position: relative; }
+  .vsl-frame .event-video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; padding-left: 4px; transition: background .2s ease, color .2s ease; }
+  .vsl-frame .event-video-trigger:hover .event-video-play { background: #f4c057; color: #1a1a1a; }
+  .gallery-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 760px; margin: 1.5rem auto 0; }
+  .gallery-row img { width: 100%; height: auto; display: block; border-radius: 10px; }
+  @media (max-width: 600px) { .gallery-row { grid-template-columns: 1fr; } }
+  .quick-facts-wrap { max-width: 760px; margin: 0 auto; }
+  .services-intro { max-width: 760px; margin: 0 auto 2rem; text-align: left; }
+  .services-intro p { line-height: 1.7; margin-bottom: 1rem; color: #333; }
+  .services-intro ul { margin: 0 0 1rem 1.25rem; padding: 0; }
+  .services-intro li { line-height: 1.7; margin-bottom: .6rem; color: #333; }
+  .services-intro a { color: #1a1a2e; text-decoration: underline; text-decoration-color: #f4c057; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  .services-intro a:hover { color: #b8860b; }
+  /* Video modal — same behavior as the event coverage page */
+  .video-modal { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 2rem; }
+  .video-modal[data-open="true"] { display: flex; }
+  .video-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.9); cursor: pointer; }
+  .video-modal__content { position: relative; width: auto; max-width: 1200px; max-height: 90vh; aspect-ratio: 16 / 9; }
+  .video-modal__player { width: 100%; height: 100%; max-height: 90vh; background: #000; display: block; }
+  .video-modal__close { position: absolute; top: -3rem; right: 0; background: none; border: 0; color: #fff; font-size: 2.5rem; line-height: 1; cursor: pointer; padding: .25rem .75rem; }
+  .video-modal__close:hover { color: #f4c057; }
+  @media (max-width: 768px) { .video-modal { padding: 1rem; } .video-modal__close { top: -2.5rem; font-size: 2rem; } }
+</style>
 </head>
 <body class="page-service">
 
@@ -34,9 +74,45 @@
     <div class="service-hero-content">
       <p class="service-hero-label">Northeast Florida</p>
       <h1>Video Production in Jacksonville, FL</h1>
-      <p class="service-hero-tagline">St. Augustine quality. No travel fees.</p>
-      <p class="service-hero-desc">Based in St. Augustine — just 40 minutes south — we regularly serve Jacksonville businesses, nonprofits, and organizations. We've worked at the Florida Theatre, EverBank Stadium, and venues throughout Northeast Florida. From corporate videos to event coverage, we bring the same strategic, hands-on approach to every project in Jacksonville.</p>
+      <p class="service-hero-tagline">A St. Augustine crew, 40 minutes south. No travel fees inside 50 miles.</p>
+      <p class="service-hero-desc">First Sight Films is a St. Augustine production company that serves Jacksonville and Duval County, 40 minutes down I-95 from our home base. We produce corporate video, conference and event coverage, brand story films, short-form social content, and commercial photography for businesses, nonprofits, government agencies, and cultural organizations across Northeast Florida. We have photographed concerts at the Florida Theatre in downtown Jacksonville and covered a national mortgage lender's two-day sales rally on the coast just south of the metro. Jacksonville sits inside our standard 50-mile service radius, so you get the same crew, the same rates, and no travel line on the quote. We are honest about where we are based, and we are on site in Duval County before most morning call times.</p>
       <a href="/contact/" class="btn btn-accent">Start a Conversation</a>
+      <div class="credibility-grid" style="margin-top: 2.5rem;">
+        <div class="credibility-item">
+          <span class="credibility-number">3</span>
+          <span class="credibility-label">Years</span>
+        </div>
+        <div class="credibility-item">
+          <span class="credibility-number">50+</span>
+          <span class="credibility-label">Events</span>
+        </div>
+        <div class="credibility-item">
+          <span class="credibility-number">5.0★</span>
+          <span class="credibility-label">Google</span>
+        </div>
+        <div class="credibility-item">
+          <span class="credibility-number">46</span>
+          <span class="credibility-label">Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- At a Glance -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Jacksonville video production at a glance</h2>
+      </div>
+      <div class="quick-facts-wrap">
+        <ul class="project-glance">
+          <li>Based in St. Augustine, serving Jacksonville and all of Duval County within a 50-mile radius, travel included.</li>
+          <li>Corporate video, conference and event coverage, brand story films, social content, and commercial photography under one roof.</li>
+          <li>5.0 average across 46 Google reviews, every one of them five stars.</li>
+          <li>Husband-and-wife team, Diego and Dr. Trista Brophy Cerquera, with creative direction, filming, editing, color, and music licensing all in-house.</li>
+          <li>$1 million in general liability insurance, with a certificate of insurance available for any Jacksonville venue.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -64,26 +140,22 @@
     </div>
   </section>
 
-  <!-- Jacksonville Work Section -->
-  <section class="section" style="background: rgba(244, 192, 87, 0.1);">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Work in Jacksonville</h2>
-        <p>Experience across Northeast Florida's top venues.</p>
-      </div>
-      <div class="commitments-intro-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">We're no strangers to Jacksonville. We've photographed events at the <strong>Florida Theatre</strong>, one of Jacksonville's most iconic venues, and worked on a film set at <strong>EverBank Stadium</strong> (home of the Jaguars).</p>
-        <p style="font-size: 1.125rem; line-height: 1.8;">Combined with our ongoing work at the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, and venues throughout St. Johns County, we bring deep experience in Northeast Florida's event and entertainment scene to every Jacksonville project.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Services Bento Grid -->
   <section class="bento-portfolio" id="services">
     <div class="container">
       <div class="section-header">
-        <h2>Video Production Services in Jacksonville</h2>
-        <p>Full-service video production for businesses across Northeast Florida.</p>
+        <h2>Video production services in Jacksonville</h2>
+      </div>
+
+      <div class="services-intro">
+        <p>First Sight Films produces finished video and photo assets, the kind a marketing team keeps using long after the shoot. We are a content production company, so if your event needs staging, sound reinforcement, or a livestream operator, that is an AV company's job, and we work alongside them without friction. Here is what we make for Jacksonville organizations.</p>
+        <ul>
+          <li><strong>Corporate video.</strong> Sales meetings, conferences, testimonial shoots, product explainers, and internal communications, filmed with multi-camera setups and delivered in the formats your channels need.</li>
+          <li><strong>Event coverage.</strong> Photo and video teams for conferences, festivals, galas, and grand openings, with photos and a short social recap in your hands within 72 hours of the event.</li>
+          <li><strong>Brand story films.</strong> The 60 to 120 second film that explains who you are and why you exist, built from real interviews and real work, for your website and your campaigns.</li>
+          <li><strong>Social media content.</strong> Short-form vertical clips cut for Instagram, TikTok, and LinkedIn, shot on their own or pulled from a larger production.</li>
+          <li><strong>Commercial photography.</strong> Product, architectural, and brand imagery, plus event photography, from a team that shoots stills and motion at the same job.</li>
+        </ul>
       </div>
 
       <div class="bento-grid">
@@ -138,33 +210,153 @@
     </div>
   </section>
 
-  <!-- Why Choose Us Section -->
+  <!-- Our Work in and around Jacksonville -->
+  <section class="section" style="background: rgba(244, 192, 87, 0.1);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our work in and around Jacksonville</h2>
+        <p>We are not new to this market. Below is real work, named clients, and what each project delivered. The corporate and conference lane leads because that is what Jacksonville teams hire us for most.</p>
+      </div>
+
+      <!-- Block A: HMA corporate -->
+      <div class="vsl-frame">
+        <button type="button" class="event-video-trigger" data-video="/video/portfolio/hma-sales-rally-corporate-event-videography.mp4" aria-label="Play the HMA Sales Rally event video">
+          <img src="/images/hma-corporate-event-video-embassy-suites-st-augustine-beach-1200w.webp" alt="HMA Mortgage sales rally corporate event video at Embassy Suites St. Augustine Beach" loading="lazy" width="1200" height="796">
+          <span class="event-video-play" aria-hidden="true">&#9658;</span>
+        </button>
+      </div>
+      <div class="video-casestudy">
+        <h3>Corporate and Conference Video: HMA Mortgage Sales Rally</h3>
+        <p class="video-meta">April 2025 &middot; Embassy Suites, St. Augustine Beach</p>
+        <p class="glance-label">Project at a glance</p>
+        <ul class="project-glance">
+          <li><strong>Client:</strong> HMA Mortgage, a national lender licensed in 35+ states</li>
+          <li><strong>Event:</strong> 2-day sales rally, Embassy Suites St. Augustine Beach, April 2025</li>
+          <li><strong>Crew:</strong> 3 cameras, 1 stationary and 2 roaming</li>
+          <li><strong>Captured:</strong> keynotes, breakouts, panels, Q&amp;As, 12 attendee testimonials</li>
+          <li><strong>Delivered:</strong> 30-second social reel the next day, then a 2-minute recap, 12 testimonials, and 4 product videos within the week, plus a custom animated logo</li>
+        </ul>
+        <p>When HMA Mortgage flew its national team into Northeast Florida for a two-day sales rally, First Sight Films covered all of it. The venue was Embassy Suites St. Augustine Beach, an easy drive from Jacksonville International for their team and 45 minutes from downtown Jacksonville for ours. This is exactly the shape of the corporate work we do across the metro.</p>
+        <p>The challenge with a multi-day corporate event is that flown-in attendees sitting through sessions do not read as engaged on camera by day two. So we studied the agenda before the shoot, mapped the most interactive sessions, shot our best attendee b-roll on day one before fatigue set in, and mined the socials, breaks, and after-hours for energy. HMA had a social reel in hand the very next morning, while the rally was still the talk of their Slack.</p>
+        <blockquote>
+          <p>"Wow, the videos that Diego and the team created for our corporate Sales Rally were absolutely spectacular! They completely captured our vibe (and definitely made us look cool!)! They were tuned into our goals and objectives, and delivered a product that went above and beyond!"</p>
+          <footer>Rachael Tresch, Director of Sales &amp; Marketing Strategy, HMA Mortgage (Google, May 2025)</footer>
+        </blockquote>
+        <p>Planning a conference, rally, or company meeting in Jacksonville? This package travels. See the full corporate story on our <a href="/event-video-coverage-st-augustine/">event video coverage page</a>.</p>
+      </div>
+
+      <!-- Block B: Florida Theatre -->
+      <div class="video-casestudy">
+        <h3>Concert Photography at the Florida Theatre</h3>
+        <p class="video-meta">Downtown Jacksonville</p>
+        <p>First Sight Films photographed a Grupo Niche concert at the Florida Theatre, the historic venue on East Forsyth Street and one of downtown Jacksonville's landmark rooms. Live music is demanding work for a camera: mixed stage lighting, fast movement, and no second takes. It is also the environment we work in most, after four years covering venues and festivals for Northeast Florida's largest cultural events organization. The Florida Theatre job put that same approach to work in the heart of Duval County, and the images sit in the gallery below.</p>
+      </div>
+      <div class="gallery-row">
+        <img src="/images/photography-concert-florida-theatre-jacksonville-florida/gruponiche-concert-theatre-jacksonville-florida-1200w.webp" alt="Grupo Niche concert photography at the Florida Theatre in downtown Jacksonville, Florida" loading="lazy" width="1200" height="675">
+        <img src="/images/photography-concert-florida-theatre-jacksonville-florida/gruponiche-concert-theatre-jacksonville-florida-2-1200w.webp" alt="Grupo Niche performing on stage at the Florida Theatre, Jacksonville, photographed by First Sight Films" loading="lazy" width="1200" height="675">
+      </div>
+
+      <!-- Block C: SJCCE retainer -->
+      <div class="video-casestudy">
+        <h3>Venue and Promotional Video: SJC Cultural Events</h3>
+        <p class="video-meta">St. Augustine Amphitheatre &middot; Ponte Vedra Concert Hall</p>
+        <p class="glance-label">Project at a glance</p>
+        <ul class="project-glance">
+          <li><strong>Client:</strong> SJC Cultural Events, the nonprofit behind the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, Sing Out Loud Festival, and Fort Mose Jazz &amp; Blues</li>
+          <li><strong>Work:</strong> promotional video for social, web, and broadcast, plus photography</li>
+          <li><strong>Relationship:</strong> 4 years and counting, FSF's only on-call retainer client</li>
+          <li><strong>Press:</strong> our festival photography has run in the Jacksonville Business Journal and the Ponte Vedra Recorder</li>
+        </ul>
+        <p>For four years, First Sight Films has produced promotional video for the St. Augustine Amphitheatre and the Ponte Vedra Concert Hall, the two flagship venues run by SJC Cultural Events. The Ponte Vedra Concert Hall sits on the Jacksonville metro's southern edge, and plenty of its audience drives down from Duval County. The organization keeps us on a bespoke on-call arrangement, the only retainer we hold, which means when they need video, editing, or photography, we are already booked.</p>
+        <p>That is the relationship a venue builds with a crew it trusts. Our coverage of their festivals has run alongside news stories in the Jacksonville Business Journal, and the biggest client reaction of the whole relationship came on a <a href="/st-augustine-commercial-photographer/">photography</a> job, the Amphitheatre product shoot, which is why we pitch photo and video as one team. If you run a Jacksonville venue, theater, or event series, this is the model: one crew that already knows your rooms, on call when the calendar fills.</p>
+      </div>
+
+      <!-- Block D: Brand story films -->
+      <div class="video-casestudy">
+        <h3>Brand Story Films: Friends of Acadia and Rocky Mountain Conservancy</h3>
+        <p class="video-meta">Acadia National Park, Maine &middot; Rocky Mountain National Park, Colorado</p>
+        <p class="glance-label">Project at a glance</p>
+        <ul class="project-glance">
+          <li><strong>Clients:</strong> Friends of Acadia (Maine) and Rocky Mountain Conservancy (Colorado), the philanthropic partners of two national parks</li>
+          <li><strong>Format:</strong> 60 to 90 second brand story films plus photography, 1-day and 2-day shoots</li>
+          <li><strong>Approach:</strong> pre-shoot stakeholder meetings, real interviews, filming volunteers and locations on the ground</li>
+          <li><strong>Outcome:</strong> FOA's film runs on its website and social channels; RMC screened its film to the Friends Alliance, the national coalition of park support organizations</li>
+        </ul>
+        <p>Organizations have flown First Sight Films to Maine and Colorado to make their brand films. Jacksonville is a 40-minute drive, which is the point of this section.</p>
+        <p>For Friends of Acadia, the conservation nonprofit behind Acadia National Park, we shadowed volunteers on two real projects and interviewed the volunteer program director. She froze on camera. So Diego moved the interview into her car and filmed while she drove to the work site. With her mind off the lens, she relaxed and gave the film its story. "We love it, thank you so much," Julia Walker Thomas, the organization's visual assets manager, told us on delivery.</p>
+        <p>For Rocky Mountain Conservancy, we spent two days hiking gear into Rocky Mountain National Park to film the park's highlights and its newly built accessible boardwalks. RMC screened the finished film to the Friends Alliance, the national coalition of park support organizations, as it introduced itself as host of the group's next annual meeting.</p>
+        <p>The same process makes brand films for Jacksonville companies and nonprofits: a real interview, real work on screen, and a director who can get a story out of someone who hates being on camera.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VideoObject schema for the embedded HMA video (copied from the event coverage page; duration ffprobe-verified there) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"VideoObject","name":"HMA Mortgage Sales Rally: Corporate Event Coverage, St. Augustine","description":"First Sight Films filmed HMA Mortgage's two-day Sales Rally at Embassy Suites St. Augustine Beach in April 2025. HMA's a national mortgage lender, licensed in 35+ states, and they flew their whole team into St. Augustine Beach for a two-day rally, so we covered all of it.","thumbnailUrl":"https://www.firstsightfilms.com/images/hma-corporate-event-video-embassy-suites-st-augustine-beach-1200w.webp","uploadDate":"2025-04","duration":"PT2M13S","contentUrl":"https://www.firstsightfilms.com/video/portfolio/hma-sales-rally-corporate-event-videography.mp4","publisher":{"@type":"Organization","name":"First Sight Films","logo":{"@type":"ImageObject","url":"https://www.firstsightfilms.com/images/fsf-logo.png"}}}
+  </script>
+
+  <!-- Service Area Section -->
   <section class="section section-gray">
     <div class="container">
       <div class="section-header">
-        <h2>Why Jacksonville Businesses Choose Us</h2>
-        <p>A better video production experience.</p>
+        <h2>Jacksonville service area</h2>
+      </div>
+      <div class="services-intro">
+        <p>Our studio is in St. Augustine and we say so on every page. What Jacksonville clients get is a crew that treats Duval County as home turf: travel is included for any project inside our 50-mile radius, which covers the whole Jacksonville metro. Farther out, we quote travel up front, so the number you see is the number you pay. Explore our <a href="/st-augustine-video-production/">St. Augustine video production</a> work to see the home-base side of the operation.</p>
+      </div>
+      <div class="service-areas-grid">
+        <div class="service-area-list">
+          <h3>Jacksonville and surrounding</h3>
+          <ul>
+            <li>Downtown Jacksonville</li>
+            <li>Southbank and San Marco</li>
+            <li>Riverside and Avondale</li>
+            <li>Jacksonville Beaches</li>
+            <li>Ponte Vedra Beach</li>
+            <li>Mandarin</li>
+            <li>Orange Park</li>
+          </ul>
+        </div>
+        <div class="service-area-list">
+          <h3>Also serving</h3>
+          <ul>
+            <li>St. Augustine and St. Johns County</li>
+            <li>Nocatee</li>
+            <li>Palm Coast</li>
+            <li>Daytona Beach</li>
+            <li>Gainesville</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Jacksonville teams choose us</h2>
       </div>
       <div class="process-grid">
         <div class="process-step">
           <span class="process-number">1</span>
-          <h3>No Travel Fees</h3>
-          <p>Jacksonville is part of our primary service area. You get St. Augustine quality without added travel costs.</p>
+          <h3>No travel fees</h3>
+          <p>Jacksonville is inside our standard 50-mile service area. You get the crew that Northeast Florida's venues keep on call, without a travel line on the invoice.</p>
         </div>
         <div class="process-step">
           <span class="process-number">2</span>
-          <h3>Strategy First</h3>
-          <p>We start with your goals, not a camera. Every project begins with understanding what success looks like for you.</p>
+          <h3>Strategy first</h3>
+          <p>Every project starts with what the finished video needs to do for you, and only then do we talk cameras. We ask why before we ask when.</p>
         </div>
         <div class="process-step">
           <span class="process-number">3</span>
-          <h3>Minimal Footprint</h3>
-          <p>Small team, big results. We work efficiently without disrupting your operations or overwhelming your space.</p>
+          <h3>Small footprint, full redundancy</h3>
+          <p>A two-person core team with backups for cameras, audio, power, and media. We work without disrupting your event or your office, and no single failure can cost you the day.</p>
         </div>
         <div class="process-step">
           <span class="process-number">4</span>
-          <h3>Full Service</h3>
-          <p>Strategy, production, and delivery — all handled by us. You focus on your business; we handle the video.</p>
+          <h3>Everything in-house</h3>
+          <p>Creative direction, filming, editing, color, and music licensing all happen inside First Sight Films. One team, one point of contact, no subcontractor roulette.</p>
         </div>
       </div>
     </div>
@@ -174,10 +366,102 @@
   <section class="section section-light" id="pricing">
     <div class="container">
       <div class="section-header">
-        <h2>Investment</h2>
-        <p>Transparent pricing for Jacksonville video projects.</p>
+        <h2>What Jacksonville video production costs</h2>
+        <p>Most of our projects land between $3,000 and $15,000, depending on crew, days, and deliverables. Corporate videos and brand story films are quoted to scope after a short call. Event coverage runs on fixed tiers, and every event tier includes your photos and a 20 to 30 second social recap within 72 hours.</p>
       </div>
-            <p class="pricing-ladder-summary">Event photo from $1,200 · video day from $2,500 · full photo+video coverage from $5,500 (Rush $7,500, 7 business days) · multi-camera multi-day from $9,500. Photos and a recap within 72 hours; every project quoted to scope. <a href="/guides/event-planning/event-coverage-costs-northeast-florida/">See full event pricing &rarr;</a></p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Event Photo</h3>
+          <p class="pricing-price">From $1,200</p>
+          <ul class="pricing-features">
+            <li>Half-day photography</li>
+            <li>100+ edited images</li>
+            <li>Photos within 72 hours</li>
+          </ul>
+          <a href="/contact/" class="btn btn-secondary">Get a Quote</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Event Story Half-Day</h3>
+          <p class="pricing-price">$2,000</p>
+          <ul class="pricing-features">
+            <li>2-person photo and video crew</li>
+            <li>Up to 5 hours on site</li>
+            <li>Around 150 edited photos</li>
+            <li>60 to 90 second recap film</li>
+            <li>6 to 8 social-ready clips</li>
+          </ul>
+          <a href="/contact/" class="btn btn-secondary">Get a Quote</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Video Day</h3>
+          <p class="pricing-price">From $2,500</p>
+          <ul class="pricing-features">
+            <li>8-hour single-videographer coverage</li>
+            <li>Video only, quoted per scope</li>
+          </ul>
+          <a href="/contact/" class="btn btn-secondary">Get a Quote</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Event Story</h3>
+          <p class="pricing-price">From $5,500</p>
+          <ul class="pricing-features">
+            <li>2-person photo and video crew, up to 10 hours on site</li>
+            <li>300+ edited photos</li>
+            <li>90 to 120 second recap film in 3 cuts</li>
+            <li>Full usage rights, delivered in 2 to 3 weeks</li>
+            <li>Need it faster? Event Story Rush is $7,500 with the full package in 7 business days</li>
+          </ul>
+          <a href="/contact/" class="btn btn-secondary">Get a Quote</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Full Coverage</h3>
+          <p class="pricing-price">From $9,500</p>
+          <ul class="pricing-features">
+            <li>2-person crew across 2 to 3 days</li>
+            <li>500+ edited photos</li>
+            <li>Festival highlight film plus a 60-second brand recap</li>
+            <li>Delivered in 3 to 4 weeks</li>
+          </ul>
+          <a href="/contact/" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 1.5rem;">Commercial photography (product, architectural, brand imagery) is a separate service starting at $1,500, distinct from the $1,200 event photo half-day. Not sure where your project fits? That is what the call is for. Fifteen minutes and you leave with a real number.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2>How it works</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="process-number">1</span>
+          <h3>The 15-minute call</h3>
+          <p>Tell us about your project and what the video needs to do. You get a straight quote, no mystery math.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-number">2</span>
+          <h3>Lock it in</h3>
+          <p>A signed contract and a 50% deposit reserve your date and your crew.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-number">3</span>
+          <h3>We plan the shoot</h3>
+          <p>Key moments, camera positions, audio, and a location scout if we have not shot your Jacksonville venue before.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-number">4</span>
+          <h3>We shoot</h3>
+          <p>Multi-camera coverage, redundant audio, and backups for everything. For events, that includes same-day and next-day social cutdowns.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-number">5</span>
+          <h3>You get your assets</h3>
+          <p>Delivery runs on the timeline we quoted, with raw files archived for three years in case you want re-edits later.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -201,7 +485,7 @@
     @media (max-width: 768px) { .section-reviews-compact { padding: 2rem 0.75rem; } .reviews-compact-grid { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; } .reviews-compact-header h2 { font-size: 1.5rem; } }
     @media (max-width: 480px) { .review-card-compact { height: 115px; padding: 0.6rem; } .review-card-compact .review-text { -webkit-line-clamp: 2; font-size: 0.7rem; } }
     </style>
-    <div class="reviews-compact-header"><h2>What Our Clients Say</h2><p>48 five-star reviews on Google</p></div>
+    <div class="reviews-compact-header"><h2>What Our Clients Say</h2><p>46 five-star reviews on Google</p></div>
     <div class="reviews-compact-grid">
       <div class="review-card-compact"><div class="review-stars">★★★★★</div><p class="review-text">So great to work with! Diego was fun and made the entire experience really easy. The final outcome was exceptional.</p><p class="review-author">Megan Vidal</p></div>
       <div class="review-card-compact"><div class="review-stars">★★★★★</div><p class="review-text">The quality of your work, professionalism, and attention to detail are well above standard. I am very grateful.</p><p class="review-author">Isabelle Renault</p></div>
@@ -227,36 +511,6 @@
     <div class="reviews-compact-cta"><a href="https://www.google.com/maps/place/First+Sight+Films/@30.1788029,-82.3170331,9z/data=!4m16!1m9!3m8!1s0xcd5ff2faebcc099:0xd08ed6156a6d3bfa!2sFirst+Sight+Films!8m2!3d30.180452!4d-81.6576015!9m1!1b1!16s%2Fg%2F11svbh8bjv!3m5!1s0xcd5ff2faebcc099:0xd08ed6156a6d3bfa!8m2!3d30.180452!4d-81.6576015!16s%2Fg%2F11svbh8bjv?entry=ttu" target="_blank" rel="noopener">See all reviews on Google →</a></div>
   </section>
 
-  <!-- Service Area Section -->
-  <section class="section section-gray">
-    <div class="container">
-      <div class="section-header">
-        <h2>Jacksonville Service Area</h2>
-        <p>Based in St. Augustine, serving Jacksonville with no travel fees. Explore our <a href="/st-augustine-video-production/">St. Augustine video production</a> work.</p>
-      </div>
-      <div class="service-areas-grid">
-        <div class="service-area-list">
-          <h3>Jacksonville & Surrounding</h3>
-          <ul>
-            <li>Downtown Jacksonville</li>
-            <li>San Marco</li>
-            <li>Ponte Vedra Beach</li>
-            <li>St. Augustine</li>
-          </ul>
-        </div>
-        <div class="service-area-list">
-          <h3>Also Serving</h3>
-          <ul>
-            <li>St. Johns County</li>
-            <li>Palm Coast</li>
-            <li>Daytona Beach</li>
-            <li>Gainesville</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ Section -->
   <section class="section section-light" id="faq">
     <div class="container">
@@ -267,9 +521,71 @@
     </div>
   </section>
 
+  <!-- Video Modal (same behavior as the event coverage page) -->
+  <div id="video-modal" class="video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="video-modal__backdrop" data-close-modal></div>
+    <div class="video-modal__content">
+      <button type="button" class="video-modal__close" data-close-modal aria-label="Close video">&times;</button>
+      <video id="video-modal-player" class="video-modal__player" controls playsinline preload="metadata"></video>
+    </div>
+  </div>
+
 </main>
 
+<script>
+(function () {
+  const modal = document.getElementById('video-modal');
+  const player = document.getElementById('video-modal-player');
+  if (!modal || !player) return;
+
+  function openModal(src) {
+    if (!src) return;
+    player.src = src;
+    modal.dataset.open = 'true';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    player.play().catch(() => {});
+  }
+
+  function closeModal() {
+    player.pause();
+    player.removeAttribute('src');
+    player.load();
+    delete modal.dataset.open;
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-video]');
+    if (btn) openModal(btn.dataset.video);
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target.matches('[data-close-modal]')) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.dataset.open === 'true') closeModal();
+  });
+})();
+</script>
+
 {{schema}}
+
+<!-- Page-level areaServed supplement — merges into the site-wide LocalBusiness node by @id -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.firstsightfilms.com/#localbusiness",
+  "areaServed": [
+    {"@type": "City", "name": "Jacksonville"},
+    {"@type": "AdministrativeArea", "name": "Duval County"},
+    {"@type": "City", "name": "St. Augustine"}
+  ]
+}
+</script>
 
 {{footer}}
 

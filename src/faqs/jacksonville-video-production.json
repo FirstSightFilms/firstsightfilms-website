@@ -2,23 +2,59 @@
   "questions": [
     {
       "question": "How much does video production cost in Jacksonville?",
-      "answer": "<p>Video production in Jacksonville typically runs from $1,200 to $9,500+ depending on scope. Event photo starts at $1,200, a video day at $2,500, and full photo-and-video event coverage at $5,500. We provide detailed quotes after understanding your goals.</p>"
+      "answer": "<p>Most of our projects run between $3,000 and $15,000, depending on scope. Event coverage has fixed tiers: event photography from $1,200, a half-day photo and video package at $2,000, a single-videographer video day from $2,500, full photo and video coverage from $5,500, and multi-day coverage from $9,500. Corporate videos and brand films are quoted to scope after a short call.</p>"
     },
     {
-      "question": "Do you travel to Jacksonville for video projects?",
-      "answer": "<p>Yes, we're based in St. Augustine — just 40 minutes south of Jacksonville. We regularly work with Jacksonville businesses, nonprofits, and venues. No travel fees for projects within the Jacksonville metro area.</p>"
+      "question": "Do you charge travel fees for Jacksonville projects?",
+      "answer": "<p>No. Jacksonville sits inside our standard 50-mile service radius, so travel is included for any project in Duval County. Our studio is in St. Augustine, about 40 minutes south on I-95, and we quote Jacksonville work at the same rates as work in our home county.</p>"
     },
     {
-      "question": "What types of video production do you offer in Jacksonville?",
-      "answer": "<p>We offer corporate video, event coverage, brand story videos, social media content, and commercial photography. Our clients in Jacksonville include businesses, nonprofits, government agencies, and cultural organizations.</p>"
+      "question": "What kinds of video do you produce for Jacksonville businesses?",
+      "answer": "<p>Corporate videos, conference and event coverage, brand story films, and short-form social content, plus commercial and event photography. Most Jacksonville inquiries are corporate: sales meetings, conferences, testimonial shoots, and recap films a marketing team can keep reusing.</p>"
     },
     {
-      "question": "How long does a video project take from start to finish?",
-      "answer": "<p>Most projects take 3-6 weeks from kickoff to final delivery. This includes strategy, pre-production, filming, and editing. Event coverage and quick-turnaround projects can be delivered faster when needed.</p>"
+      "question": "Have you actually worked in Jacksonville?",
+      "answer": "<p>Yes. We have photographed concerts at the Florida Theatre in downtown Jacksonville. Our festival photography has run in the Jacksonville Business Journal, and we produce ongoing promotional work for the Ponte Vedra Concert Hall on the metro's southern edge.</p>"
     },
     {
-      "question": "Can you handle large corporate events in Jacksonville?",
-      "answer": "<p>Yes, we have experience with multi-day conferences, corporate galas, and large-scale events. We can provide multi-camera coverage, live streaming, and same-day social media content delivery.</p>"
+      "question": "Can you cover a multi-day conference or corporate meeting?",
+      "answer": "<p>Yes, that is the core of our corporate work. For HMA Mortgage's two-day sales rally we ran three cameras, covered the keynotes, breakouts, panels, and Q&As, filmed 12 attendee testimonials, and had a social reel in the client's hands the next morning, with the full recap package delivered inside a week.</p>"
+    },
+    {
+      "question": "Do you provide AV, staging, or livestreaming?",
+      "answer": "<p>No. First Sight Films produces video and photo content, the assets you use after the event. We do not run event AV, staging, sound reinforcement, or livestreams. If your event needs an AV company, we work alongside the one you hire, and the division of labor is clean.</p>"
+    },
+    {
+      "question": "Who owns the footage, and can we run it in paid ads?",
+      "answer": "<p>You get a perpetual license for commercial use of everything we deliver, from your website and social channels to paid advertising campaigns. First Sight Films retains ownership of the work and archives the raw files for three years, so re-edits are possible long after delivery.</p>"
+    },
+    {
+      "question": "How do you keep speaker audio clean?",
+      "answer": "<p>We record multiple audio inputs so a single failure never costs you the speech. At conferences we pull a direct feed from the venue's audio board and add lav mics at the podium when speakers deliver full remarks. You get clean, usable speaker audio rather than room sound.</p>"
+    },
+    {
+      "question": "What happens if a camera or recorder fails mid-event?",
+      "answer": "<p>Nothing you would ever notice. We carry backups for cameras, audio, power, and media, and multi-camera coverage means no single point of failure. Your event only happens once, so we build every shoot around that fact.</p>"
+    },
+    {
+      "question": "Can you provide a certificate of insurance for our Jacksonville venue?",
+      "answer": "<p>Yes. We carry $1 million in general liability insurance and can send a certificate of insurance ahead of your event, including naming the venue as additional insured if it requires that.</p>"
+    },
+    {
+      "question": "How fast is turnaround?",
+      "answer": "<p>Event clients get photos and a 20 to 30 second social recap within 72 hours on every tier. Next-day social reels are available, simple projects deliver in 3 to 5 days, and brand films or multi-day productions run 3 to 6 weeks. Our Event Story Rush tier delivers the full event package in 7 business days.</p>"
+    },
+    {
+      "question": "How far in advance should we book?",
+      "answer": "<p>As early as you can. We take a limited number of dates and busy seasons fill first. If your event is close, ask anyway, because we are quick to answer. One client found us after two recommended vendors went silent for three weeks; we replied within 30 minutes and won the job.</p>"
+    },
+    {
+      "question": "Can you get drone footage of our Jacksonville event or property?",
+      "answer": "<p>Sometimes. Drone work depends on the location and FAA rules. General-area aerial b-roll is sometimes available at no extra cost, and live drone coverage during an event is an add-on we quote per flight with licensed, insured operators.</p>"
+    },
+    {
+      "question": "Why hire a St. Augustine crew instead of a Jacksonville freelancer?",
+      "answer": "<p>Because you are hiring a company: backups on every piece of gear, insurance your venue will accept, a second shooter, and a four-year track record with institutions that keep rebooking us. The real risk at an event is a crew with no backup plan, and that risk has nothing to do with a 40-minute drive.</p>"
     }
   ],
   "schema": {
@@ -30,39 +66,111 @@
         "name": "How much does video production cost in Jacksonville?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Video production in Jacksonville typically runs from $1,200 to $9,500+ depending on scope. Event photo starts at $1,200, a video day at $2,500, and full photo-and-video event coverage at $5,500. We provide detailed quotes after understanding your goals."
+          "text": "Most of our projects run between $3,000 and $15,000, depending on scope. Event coverage has fixed tiers: event photography from $1,200, a half-day photo and video package at $2,000, a single-videographer video day from $2,500, full photo and video coverage from $5,500, and multi-day coverage from $9,500. Corporate videos and brand films are quoted to scope after a short call."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you travel to Jacksonville for video projects?",
+        "name": "Do you charge travel fees for Jacksonville projects?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we're based in St. Augustine — just 40 minutes south of Jacksonville. We regularly work with Jacksonville businesses, nonprofits, and venues. No travel fees for projects within the Jacksonville metro area."
+          "text": "No. Jacksonville sits inside our standard 50-mile service radius, so travel is included for any project in Duval County. Our studio is in St. Augustine, about 40 minutes south on I-95, and we quote Jacksonville work at the same rates as work in our home county."
         }
       },
       {
         "@type": "Question",
-        "name": "What types of video production do you offer in Jacksonville?",
+        "name": "What kinds of video do you produce for Jacksonville businesses?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer corporate video, event coverage, brand story videos, social media content, and commercial photography. Our clients in Jacksonville include businesses, nonprofits, government agencies, and cultural organizations."
+          "text": "Corporate videos, conference and event coverage, brand story films, and short-form social content, plus commercial and event photography. Most Jacksonville inquiries are corporate: sales meetings, conferences, testimonial shoots, and recap films a marketing team can keep reusing."
         }
       },
       {
         "@type": "Question",
-        "name": "How long does a video project take from start to finish?",
+        "name": "Have you actually worked in Jacksonville?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most projects take 3-6 weeks from kickoff to final delivery. This includes strategy, pre-production, filming, and editing. Event coverage and quick-turnaround projects can be delivered faster when needed."
+          "text": "Yes. We have photographed concerts at the Florida Theatre in downtown Jacksonville. Our festival photography has run in the Jacksonville Business Journal, and we produce ongoing promotional work for the Ponte Vedra Concert Hall on the metro's southern edge."
         }
       },
       {
         "@type": "Question",
-        "name": "Can you handle large corporate events in Jacksonville?",
+        "name": "Can you cover a multi-day conference or corporate meeting?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we have experience with multi-day conferences, corporate galas, and large-scale events. We can provide multi-camera coverage, live streaming, and same-day social media content delivery."
+          "text": "Yes, that is the core of our corporate work. For HMA Mortgage's two-day sales rally we ran three cameras, covered the keynotes, breakouts, panels, and Q&As, filmed 12 attendee testimonials, and had a social reel in the client's hands the next morning, with the full recap package delivered inside a week."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide AV, staging, or livestreaming?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. First Sight Films produces video and photo content, the assets you use after the event. We do not run event AV, staging, sound reinforcement, or livestreams. If your event needs an AV company, we work alongside the one you hire, and the division of labor is clean."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the footage, and can we run it in paid ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You get a perpetual license for commercial use of everything we deliver, from your website and social channels to paid advertising campaigns. First Sight Films retains ownership of the work and archives the raw files for three years, so re-edits are possible long after delivery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you keep speaker audio clean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We record multiple audio inputs so a single failure never costs you the speech. At conferences we pull a direct feed from the venue's audio board and add lav mics at the podium when speakers deliver full remarks. You get clean, usable speaker audio rather than room sound."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if a camera or recorder fails mid-event?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nothing you would ever notice. We carry backups for cameras, audio, power, and media, and multi-camera coverage means no single point of failure. Your event only happens once, so we build every shoot around that fact."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you provide a certificate of insurance for our Jacksonville venue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We carry $1 million in general liability insurance and can send a certificate of insurance ahead of your event, including naming the venue as additional insured if it requires that."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast is turnaround?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Event clients get photos and a 20 to 30 second social recap within 72 hours on every tier. Next-day social reels are available, simple projects deliver in 3 to 5 days, and brand films or multi-day productions run 3 to 6 weeks. Our Event Story Rush tier delivers the full event package in 7 business days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should we book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As early as you can. We take a limited number of dates and busy seasons fill first. If your event is close, ask anyway, because we are quick to answer. One client found us after two recommended vendors went silent for three weeks; we replied within 30 minutes and won the job."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you get drone footage of our Jacksonville event or property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sometimes. Drone work depends on the location and FAA rules. General-area aerial b-roll is sometimes available at no extra cost, and live drone coverage during an event is an add-on we quote per flight with licensed, insured operators."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why hire a St. Augustine crew instead of a Jacksonville freelancer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because you are hiring a company: backups on every piece of gear, insurance your venue will accept, a second shooter, and a four-year track record with institutions that keep rebooking us. The real risk at an event is a crew with no backup plan, and that risk has nothing to do with a 40-minute drive."
         }
       }
     ]

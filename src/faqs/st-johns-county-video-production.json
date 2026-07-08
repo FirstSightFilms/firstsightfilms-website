@@ -2,23 +2,59 @@
   "questions": [
     {
       "question": "How much does video production cost in St. Johns County?",
-      "answer": "<p>Video production in St. Johns County typically runs from $1,200 to $9,500+ depending on scope. Event photo starts at $1,200, a video day at $2,500, and full photo-and-video event coverage at $5,500. We provide detailed quotes after understanding your goals.</p>"
+      "answer": "<p>Most event projects run from $1,200 to $9,500 plus. Event photography starts at $1,200 for a half day, a video day starts at $2,500, and combined photo and video coverage starts at $5,500, with a Rush option at $7,500 and multi-day Full Coverage from $9,500. Corporate and brand films are quoted to scope after a 15-minute call.</p>"
     },
     {
       "question": "What areas of St. Johns County do you serve?",
-      "answer": "<p>We serve all of St. Johns County including St. Augustine, St. Augustine Beach, Ponte Vedra Beach, Nocatee, World Golf Village, Fruit Cove, Julington Creek, and surrounding communities. We're based in St. Augustine with no travel fees anywhere in the county.</p>"
+      "answer": "<p>All of it. St. Augustine, St. Augustine Beach, Ponte Vedra Beach, Nocatee, World Golf Village, Fruit Cove, Julington Creek, Palm Valley, and St. Johns. We are based in St. Augustine and charge no travel fees anywhere in the county.</p>"
     },
     {
-      "question": "What types of video production do you offer in St. Johns County?",
-      "answer": "<p>We offer corporate video, event coverage, brand story videos, social media content, and commercial photography. Our clients include the St. Johns County Chamber of Commerce, St. Johns Cultural Council, St. Johns County Government, and businesses throughout the county.</p>"
+      "question": "What types of video do you produce?",
+      "answer": "<p>Corporate and conference video, event coverage, brand story films, social media content, and venue promotional work, plus event and commercial photography. Our county clients include SJC Cultural Events, the St. Johns County Chamber of Commerce, the St. Johns Cultural Council, and St. Johns County Government.</p>"
     },
     {
-      "question": "Do you work with St. Johns County organizations?",
-      "answer": "<p>Yes, we have ongoing partnerships with key St. Johns County organizations including the St. Johns County Chamber of Commerce, St. Johns Cultural Council, SJCCE Inc. (which operates the St. Augustine Amphitheatre and Ponte Vedra Concert Hall), and St. Johns County Government.</p>"
+      "question": "Can you cover events at the St. Augustine Amphitheatre or Ponte Vedra Concert Hall?",
+      "answer": "<p>Yes. SJC Cultural Events, the nonprofit that operates both venues, has kept First Sight Films on call for four years for video, photography, editing, and whatever the season needs. We know both rooms and their crews, down to the audio boards.</p>"
     },
     {
-      "question": "Can you cover events at St. Johns County venues?",
-      "answer": "<p>Absolutely. We're the go-to video and photography partner for St. Johns County's premier venues including the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, and various event spaces throughout the county. We've covered hundreds of events across St. Johns County.</p>"
+      "question": "Do you charge travel fees within St. Johns County?",
+      "answer": "<p>No. The county is our home base, so travel anywhere from Ponte Vedra Beach to St. Augustine Beach is included.</p>"
+    },
+    {
+      "question": "How fast is your turnaround?",
+      "answer": "<p>For events, edited photos and a 20 to 30 second social recap arrive within 72 hours. Simple projects deliver in 3 to 5 days. Brand films and multi-day productions take 3 to 6 weeks. Our Event Story Rush tier guarantees full delivery in 7 business days.</p>"
+    },
+    {
+      "question": "Who owns the footage, and can we use it commercially?",
+      "answer": "<p>First Sight Films retains ownership of the raw footage, and you receive a perpetual license for commercial use: your website, your social channels, your paid advertising, and anything else your marketing needs. You never pay again to use what we made for you.</p>"
+    },
+    {
+      "question": "Are you insured? Can you provide a certificate of insurance?",
+      "answer": "<p>Yes. We carry $1 million in general liability coverage and can supply a certificate of insurance, including naming your venue as additional insured. County venues and resorts routinely require this, and we handle it as part of booking.</p>"
+    },
+    {
+      "question": "How do you handle audio at live events?",
+      "answer": "<p>With redundancy. We record multiple audio inputs and take a direct feed from the venue's audio board when one is available. Lav mics go at the podium when speakers need them. Bad audio ruins good footage, so we never rely on a single source.</p>"
+    },
+    {
+      "question": "What happens if equipment fails during our event?",
+      "answer": "<p>Nothing you would notice. We carry backups for cameras, audio, power, and media, and we shoot multi-camera, so no single failure can cost you a moment that matters.</p>"
+    },
+    {
+      "question": "How far in advance should we book?",
+      "answer": "<p>As early as you can once your date is firm. Fall festival season and spring event dates in the county fill first. Reach out with your date and we will tell you honestly whether we can hold it.</p>"
+    },
+    {
+      "question": "Why hire a local St. Johns County company instead of a Jacksonville crew?",
+      "answer": "<p>Familiarity and speed. We have worked the county's venues for years and can scout a new location in an afternoon, and we charge no travel fees. When the Consulate General of Ireland needed a videographer here, two out-of-area vendors went silent for three weeks. We answered within 30 minutes.</p>"
+    },
+    {
+      "question": "Do you offer photography as well as video?",
+      "answer": "<p>Yes, both event and commercial photography. Event photography starts at $1,200 for a half day with 100 plus edited images. Commercial photography for product, apparel, architectural, and brand imagery starts at $1,500 and is a separate service with its own page.</p>"
+    },
+    {
+      "question": "What makes First Sight Films different from hiring a freelancer?",
+      "answer": "<p>Scope and accountability. A single shooter can film your event, but everything else still lands on you: editing, color, music licensing, backup gear, insurance paperwork. We carry all of it in house, and 46 five-star Google reviews say it shows.</p>"
     }
   ],
   "schema": {
@@ -30,7 +66,7 @@
         "name": "How much does video production cost in St. Johns County?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Video production in St. Johns County typically runs from $1,200 to $9,500+ depending on scope. Event photo starts at $1,200, a video day at $2,500, and full photo-and-video event coverage at $5,500. We provide detailed quotes after understanding your goals."
+          "text": "Most event projects run from $1,200 to $9,500 plus. Event photography starts at $1,200 for a half day, a video day starts at $2,500, and combined photo and video coverage starts at $5,500, with a Rush option at $7,500 and multi-day Full Coverage from $9,500. Corporate and brand films are quoted to scope after a 15-minute call."
         }
       },
       {
@@ -38,31 +74,103 @@
         "name": "What areas of St. Johns County do you serve?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We serve all of St. Johns County including St. Augustine, St. Augustine Beach, Ponte Vedra Beach, Nocatee, World Golf Village, Fruit Cove, Julington Creek, and surrounding communities. We're based in St. Augustine with no travel fees anywhere in the county."
+          "text": "All of it. St. Augustine, St. Augustine Beach, Ponte Vedra Beach, Nocatee, World Golf Village, Fruit Cove, Julington Creek, Palm Valley, and St. Johns. We are based in St. Augustine and charge no travel fees anywhere in the county."
         }
       },
       {
         "@type": "Question",
-        "name": "What types of video production do you offer in St. Johns County?",
+        "name": "What types of video do you produce?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer corporate video, event coverage, brand story videos, social media content, and commercial photography. Our clients include the St. Johns County Chamber of Commerce, St. Johns Cultural Council, St. Johns County Government, and businesses throughout the county."
+          "text": "Corporate and conference video, event coverage, brand story films, social media content, and venue promotional work, plus event and commercial photography. Our county clients include SJC Cultural Events, the St. Johns County Chamber of Commerce, the St. Johns Cultural Council, and St. Johns County Government."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you work with St. Johns County organizations?",
+        "name": "Can you cover events at the St. Augustine Amphitheatre or Ponte Vedra Concert Hall?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we have ongoing partnerships with key St. Johns County organizations including the St. Johns County Chamber of Commerce, St. Johns Cultural Council, SJCCE Inc. (which operates the St. Augustine Amphitheatre and Ponte Vedra Concert Hall), and St. Johns County Government."
+          "text": "Yes. SJC Cultural Events, the nonprofit that operates both venues, has kept First Sight Films on call for four years for video, photography, editing, and whatever the season needs. We know both rooms and their crews, down to the audio boards."
         }
       },
       {
         "@type": "Question",
-        "name": "Can you cover events at St. Johns County venues?",
+        "name": "Do you charge travel fees within St. Johns County?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. We're the go-to video and photography partner for St. Johns County's premier venues including the St. Augustine Amphitheatre, Ponte Vedra Concert Hall, and various event spaces throughout the county. We've covered hundreds of events across St. Johns County."
+          "text": "No. The county is our home base, so travel anywhere from Ponte Vedra Beach to St. Augustine Beach is included."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast is your turnaround?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For events, edited photos and a 20 to 30 second social recap arrive within 72 hours. Simple projects deliver in 3 to 5 days. Brand films and multi-day productions take 3 to 6 weeks. Our Event Story Rush tier guarantees full delivery in 7 business days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the footage, and can we use it commercially?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films retains ownership of the raw footage, and you receive a perpetual license for commercial use: your website, your social channels, your paid advertising, and anything else your marketing needs. You never pay again to use what we made for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you insured? Can you provide a certificate of insurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We carry $1 million in general liability coverage and can supply a certificate of insurance, including naming your venue as additional insured. County venues and resorts routinely require this, and we handle it as part of booking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle audio at live events?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With redundancy. We record multiple audio inputs and take a direct feed from the venue's audio board when one is available. Lav mics go at the podium when speakers need them. Bad audio ruins good footage, so we never rely on a single source."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if equipment fails during our event?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nothing you would notice. We carry backups for cameras, audio, power, and media, and we shoot multi-camera, so no single failure can cost you a moment that matters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should we book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As early as you can once your date is firm. Fall festival season and spring event dates in the county fill first. Reach out with your date and we will tell you honestly whether we can hold it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why hire a local St. Johns County company instead of a Jacksonville crew?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Familiarity and speed. We have worked the county's venues for years and can scout a new location in an afternoon, and we charge no travel fees. When the Consulate General of Ireland needed a videographer here, two out-of-area vendors went silent for three weeks. We answered within 30 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer photography as well as video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, both event and commercial photography. Event photography starts at $1,200 for a half day with 100 plus edited images. Commercial photography for product, apparel, architectural, and brand imagery starts at $1,500 and is a separate service with its own page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes First Sight Films different from hiring a freelancer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Scope and accountability. A single shooter can film your event, but everything else still lands on you: editing, color, music licensing, backup gear, insurance paperwork. We carry all of it in house, and 46 five-star Google reviews say it shows."
         }
       }
     ]
