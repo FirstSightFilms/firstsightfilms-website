@@ -2,6 +2,12 @@
 # Order matters: first match wins. Keep specific rules + asset protections ABOVE wildcards.
 # 301! forces the redirect even when a static file exists at that path.
 
+# Domain canonicalization (2026-07-08): collapse the bare-domain chain to ONE hop.
+# Before: http://firstsightfilms.com -> https://firstsightfilms.com -> https://www... (2 hops)
+# Domain-level rules must sit above all path rules.
+http://firstsightfilms.com/*    https://www.firstsightfilms.com/:splat    301!
+https://firstsightfilms.com/*    https://www.firstsightfilms.com/:splat    301!
+
 /index.html    /    301!
 
 # Crawl artifacts (bare-email href crawled as a path) — keep 410 ABOVE the wildcards so they win (2026-06-17)
