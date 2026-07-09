@@ -32,6 +32,30 @@
     {
       "question": "Do you travel outside St. Augustine?",
       "answer": "<p>Yes; we cover Northeast Florida and travel for corporate work.</p>"
+    },
+    {
+      "question": "Who owns the finished videos and footage?",
+      "answer": "<p>First Sight Films retains ownership of the footage, and you receive a perpetual license for commercial use — your website, social channels, and paid ads, with no expiration. In practice that means you can use everything we deliver, everywhere, forever.</p>"
+    },
+    {
+      "question": "How do you handle audio at live events?",
+      "answer": "<p>With redundancy. We record multiple audio inputs on every live event, take a direct feed from the venue's audio board when one is available, and place lavalier mics at the podium when the program calls for it. Clean audio is planned, not hoped for.</p>"
+    },
+    {
+      "question": "Are you insured?",
+      "answer": "<p>Yes — we carry $1M in general liability coverage. We can provide a certificate of insurance (COI) and name your venue as additional insured, which most St. Augustine venues and municipal locations require.</p>"
+    },
+    {
+      "question": "What happens if equipment fails during a shoot?",
+      "answer": "<p>Nothing you'd notice. We bring backups for everything — cameras, audio recorders, power, and media — and multi-camera coverage means no single camera is a single point of failure. Gear redundancy is standard on every project, not an upgrade.</p>"
+    },
+    {
+      "question": "Do you handle music licensing?",
+      "answer": "<p>Yes, in-house. Every track in a delivered video is licensed for commercial use, and licensing is included in post-production — you never have to source music or worry about a takedown on your own channels.</p>"
+    },
+    {
+      "question": "Why hire a production company instead of a freelancer?",
+      "answer": "<p>A crew and a system. You get creative direction, filming, editing, color grading, and music licensing from one accountable team, with backup gear and insurance behind it. A freelancer can shoot your event; a production company makes sure nothing about it is left to chance.</p>"
     }
   ],
   "schema": {
@@ -100,6 +124,54 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes; we cover Northeast Florida and travel for corporate work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the finished videos and footage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First Sight Films retains ownership of the footage, and you receive a perpetual license for commercial use — your website, social channels, and paid ads, with no expiration. In practice that means you can use everything we deliver, everywhere, forever."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle audio at live events?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With redundancy. We record multiple audio inputs on every live event, take a direct feed from the venue's audio board when one is available, and place lavalier mics at the podium when the program calls for it. Clean audio is planned, not hoped for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — we carry $1M in general liability coverage. We can provide a certificate of insurance (COI) and name your venue as additional insured, which most St. Augustine venues and municipal locations require."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if equipment fails during a shoot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nothing you'd notice. We bring backups for everything — cameras, audio recorders, power, and media — and multi-camera coverage means no single camera is a single point of failure. Gear redundancy is standard on every project, not an upgrade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle music licensing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, in-house. Every track in a delivered video is licensed for commercial use, and licensing is included in post-production — you never have to source music or worry about a takedown on your own channels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why hire a production company instead of a freelancer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A crew and a system. You get creative direction, filming, editing, color grading, and music licensing from one accountable team, with backup gear and insurance behind it. A freelancer can shoot your event; a production company makes sure nothing about it is left to chance."
         }
       }
     ]

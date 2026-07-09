@@ -19,6 +19,18 @@
     {
       "question": "How do we start a project?",
       "answer": "<p>Tell us the date and what you need on the <a href=\"/contact/\">contact page</a>; we'll confirm scope and a quote.</p>"
+    },
+    {
+      "question": "Are these real client projects?",
+      "answer": "<p>Every one. Each page in this portfolio is a project we were hired for and delivered — real clients, real footage, real outcomes. Nothing here is spec work or staged portfolio material.</p>"
+    },
+    {
+      "question": "Do you only take ongoing or retainer work?",
+      "answer": "<p>No — most projects here started as a single event or film. Recurring relationships like our four-year on-call arrangement with SJC Cultural Events grew out of one-off projects that went well. Start with the project in front of you.</p>"
+    },
+    {
+      "question": "Can you share full versions of these videos?",
+      "answer": "<p>Yes. Each project page embeds the delivered films, and we're happy to walk through any project on a call, including what it cost and how long it took.</p>"
     }
   ],
   "schema": {
@@ -63,6 +75,30 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Tell us the date and what you need on the contact page; we'll confirm scope and a quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are these real client projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every one. Each page in this portfolio is a project we were hired for and delivered — real clients, real footage, real outcomes. Nothing here is spec work or staged portfolio material."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you only take ongoing or retainer work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — most projects here started as a single event or film. Recurring relationships like our four-year on-call arrangement with SJC Cultural Events grew out of one-off projects that went well. Start with the project in front of you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you share full versions of these videos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Each project page embeds the delivered films, and we're happy to walk through any project on a call, including what it cost and how long it took."
         }
       }
     ]
