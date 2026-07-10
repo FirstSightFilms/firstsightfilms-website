@@ -59,7 +59,13 @@
 </script>
 
 <link rel="stylesheet" href="/css/services.css?v=801f087d">
-<link rel="stylesheet" href="/css/contact-wizard.css?v=801f087d">
+<!-- contact-wizard.css deferred 2026-07-10: it styles the wizard/booking area BELOW the
+     fold, not the contact-hero image that is this page's LCP element — so keeping it off
+     the render-blocking path lets the hero paint sooner (PSI flagged it 722ms blocking).
+     This is the correct use of the print-media defer; item 1 removed it only from the
+     ABOVE-fold site-wide sheets where it caused an LCP repaint. -->
+<link rel="stylesheet" href="/css/contact-wizard.css?v=801f087d" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/contact-wizard.css?v=801f087d"></noscript>
 <script defer src="/js/estimate-logic.js?v=801f087d"></script>
 <script defer src="/js/contact-wizard.js?v=801f087d"></script>
 <style>
@@ -445,14 +451,34 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="booking-card">
         <h2>Book a 15-Minute Discovery Call</h2>
         <p>Pick a time that works for you. We'll talk through your project, your dates, and what you need&mdash;then follow up with a transparent, no-surprises quote.</p>
-        <!-- Google Calendar Appointment Scheduling (inline embed — no JS dependency) -->
+        <!-- Google Calendar scheduling: FACADE (2026-07-10). The Google scheduling app
+             loads its own heavy main-thread JS (PSI: ~1,090ms) as soon as the iframe
+             mounts. Facade defers that entirely until the visitor asks to see times —
+             first click injects the real iframe. Diego approved the one-tap UX trade
+             2026-07-10. KEEP/DROP is conditional on SEO's post-push PSI TBT check
+             (<400ms median); if it doesn't move the numbers, revert to the inline iframe. -->
         <div class="booking-embed" data-umami-event="calendar-open">
-          <iframe
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2c9GJBG3RO9fVeUMtldiulgbvnT34cuIrJtlahHi5tV6ir3-vY1RDe5M-gBqQ9xLXirsYaZcGu?gv=true"
-            title="Book a 15-minute discovery call with First Sight Films"
-            width="100%" height="600" frameborder="0" loading="lazy" style="border:0;"></iframe>
+          <button type="button" class="btn btn-accent booking-facade-btn" id="booking-facade">Show available times</button>
+          <noscript>
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2c9GJBG3RO9fVeUMtldiulgbvnT34cuIrJtlahHi5tV6ir3-vY1RDe5M-gBqQ9xLXirsYaZcGu?gv=true"
+              title="Book a 15-minute discovery call with First Sight Films"
+              width="100%" height="600" frameborder="0" style="border:0;"></iframe>
+          </noscript>
         </div>
         <p class="booking-fallback">Calendar not loading? <a href="https://calendar.app.google/QzcD7BqrKKBuLCD48" target="_blank" rel="noopener" data-umami-event="calendar-open">Open the scheduler in a new tab</a>.</p>
+        <script>
+          (function () {
+            var btn = document.getElementById('booking-facade');
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+              var f = document.createElement('iframe');
+              f.src = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2c9GJBG3RO9fVeUMtldiulgbvnT34cuIrJtlahHi5tV6ir3-vY1RDe5M-gBqQ9xLXirsYaZcGu?gv=true';
+              f.title = 'Book a 15-minute discovery call with First Sight Films';
+              f.width = '100%'; f.height = '600'; f.frameBorder = '0'; f.style.border = '0';
+              btn.replaceWith(f);
+            }, { once: true });
+          })();
+        </script>
       </div>
     </div>
   </section>
