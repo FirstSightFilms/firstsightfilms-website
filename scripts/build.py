@@ -21,6 +21,7 @@ import json
 import shutil
 import argparse
 import time
+import subprocess
 from pathlib import Path
 from datetime import datetime
 
@@ -1016,10 +1017,61 @@ def validate_video_references():
     return is_valid, missing_videos, large_videos, warnings
 
 
+def _git(*args):
+    """Run a git command in the repo. Returns stripped stdout, or None if git fails."""
+    try:
+        out = subprocess.run(["git", "-C", str(BASE_DIR), *args],
+                             capture_output=True, text=True, timeout=30)
+        # Strip newlines only. `git status --porcelain` encodes state in the
+        # first two columns (" M path"), so a leading space is significant.
+        return out.stdout.strip("\n") if out.returncode == 0 else None
+    except Exception:
+        return None
+
+
+def build_lastmod_lookup(today):
+    """Per-page lastmod: the date that page's built HTML actually last changed.
+
+    Stamping today's date on every URL every build tells Google all 58 pages
+    changed whenever we rebuild, which devalues lastmod. Instead:
+      - page rebuilt to something different from HEAD (or brand new) -> today
+      - otherwise -> the date of the last commit that touched its built HTML
+
+    Reproducible: a clean checkout rebuilds byte-identically, so every page
+    falls through to its commit date. Falls back to today if git is unavailable.
+    """
+    status = _git("status", "--porcelain", "--", "output")
+    if status is None:
+        print("  Warning: git unavailable — stamping today's date on every sitemap URL")
+        return None, set()
+
+    dirty = set()
+    for line in status.splitlines():
+        path = line[3:].strip()
+        if " -> " in path:            # rename
+            path = path.split(" -> ", 1)[1]
+        path = path.strip('"')
+        if path.endswith(".html"):
+            dirty.add(path)
+    return today, dirty
+
+
+def page_lastmod(html_file, today, dirty):
+    """Date this page's built HTML last changed, per build_lastmod_lookup()."""
+    if today is None:
+        return datetime.now().strftime("%Y-%m-%d")
+    rel = html_file.relative_to(BASE_DIR).as_posix()
+    if rel in dirty:
+        return today
+    committed = _git("log", "-1", "--format=%cs", "--", rel)
+    return committed or today
+
+
 def generate_sitemap():
     """Generate sitemap.xml from built pages."""
     site_url = "https://www.firstsightfilms.com"
     today = datetime.now().strftime("%Y-%m-%d")
+    lastmod_today, dirty_pages = build_lastmod_lookup(today)
 
     # Pages to exclude from sitemap (redirects, old URLs, junk, etc.)
     exclude_patterns = [
@@ -1084,7 +1136,7 @@ def generate_sitemap():
 
         urls.append({
             "loc": site_url + url_path,
-            "lastmod": today,
+            "lastmod": page_lastmod(html_file, lastmod_today, dirty_pages),
             "changefreq": get_changefreq(url_path),
             "priority": get_priority(url_path)
         })
