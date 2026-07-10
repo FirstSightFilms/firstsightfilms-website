@@ -78,11 +78,16 @@ RELATED_MAP = {}  # slug -> [related slugs] (computed by compute_related_map)
 
 
 def load_image_manifests():
-    """Load all _manifest.csv files from output/images/*/ into a lookup dict."""
+    """Load all _manifest.csv files from src/images/*/ into a lookup dict.
+
+    Reads from src/, not output/: output/ is disposable and is wiped by
+    copy_assets() on every build. Reading manifests from output/ meant a build
+    against an empty output/ silently dropped every injected alt/width/height.
+    """
     global IMAGE_MANIFEST
     IMAGE_MANIFEST = {}
 
-    images_dir = OUTPUT_DIR / "images"
+    images_dir = SRC_DIR / "images"
     if not images_dir.exists():
         return IMAGE_MANIFEST
 
@@ -826,23 +831,14 @@ def copy_assets():
         dest_path = OUTPUT_DIR / asset_name
 
         if src_path.exists():
-            if asset_name == "images":
-                # Merge images - don't delete existing (preserves optimized images)
-                dest_path.mkdir(parents=True, exist_ok=True)
-                for item in src_path.iterdir():
-                    dest_item = dest_path / item.name
-                    if item.is_file():
-                        shutil.copy2(item, dest_item)
-                    elif item.is_dir() and not dest_item.exists():
-                        # Only copy subdirs that don't already exist
-                        shutil.copytree(item, dest_item)
-                print(f"  Merged: {asset_name}/ (preserving optimized images)")
-            else:
-                # Other assets: replace entirely
-                if dest_path.exists():
-                    shutil.rmtree(dest_path)
-                shutil.copytree(src_path, dest_path)
-                print(f"  Copied: {asset_name}/")
+            # src/ is authoritative for ALL assets, images included. output/ is
+            # disposable: replace it wholesale, exactly as js/ and video/ always were.
+            # (Images used to be merged, never overwritten, which quietly made
+            # output/ the real source of truth for optimized images.)
+            if dest_path.exists():
+                shutil.rmtree(dest_path)
+            shutil.copytree(src_path, dest_path, ignore=shutil.ignore_patterns('.DS_Store'))
+            print(f"  Copied: {asset_name}/")
 
 
 def minify_css(css_content):
