@@ -885,48 +885,33 @@
       text-align: center;
       padding: 0 2rem;
       position: relative;
+      background: #1a1a1a;
       color: var(--white);
       overflow: hidden;
     }
 
-    .hero-dalton .hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-    }
-
-    .hero-dalton .hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-dalton .hero-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(26, 26, 26, 0.50);
-    }
-
     .hero-eyebrow {
+      font-family: var(--font-primary);
       font-size: 0.85rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #f4c057;
-      font-weight: 600;
+      color: var(--white);
+      font-weight: 480;
       margin-bottom: 1rem;
     }
 
-    .hero-dalton h1 {
+    .hero-headline {
+      font-family: var(--font-heading);
       font-size: clamp(2.4rem, 5.5vw, 4.2rem);
       font-weight: 300;
       line-height: 1.1;
       margin-bottom: 1.5rem;
       letter-spacing: -0.02em;
-      color: var(--white);
+      text-transform: uppercase;
+      color: #f4c057;
     }
 
-    .hero-dalton h1 strong {
+    .hero-headline strong {
       font-weight: 600;
       color: #f4c057;
     }
@@ -1030,7 +1015,7 @@
         padding: 0 1.5rem;
       }
 
-      .hero-dalton h1 {
+      .hero-headline {
         font-size: 2.1rem;
         line-height: 1.2;
         margin-bottom: 1.25rem;
@@ -1206,16 +1191,9 @@
 
     <!-- Hero Dalton Style (from 8000) -->
     <section class="hero-dalton">
-      <div class="hero-bg">
-        <img src="/images/amp-fall-merch-hero.webp"
-             alt="Lifestyle apparel photography - The Amp St. Augustine"
-             width="1200"
-             height="960"
-             fetchpriority="high">
-      </div>
-      <p class="hero-eyebrow">Event Video Coverage &amp; Photography · St. Augustine, FL</p>
-      <h1>You made the event look incredible. We make sure the footage does too.</h1>
-      <p class="hero-sub">One team for photo and video, capturing your event so you look good, your client looks good, and you walk away with content you can use all year.</p>
+      <h1 class="hero-eyebrow">Professional Video Production and Photography in St. Augustine, FL</h1>
+      <p class="hero-headline">We capture human connection</p>
+      <p class="hero-sub">A video and photo production company focused on live events, commercial, and brand films.</p>
       <div class="hero-ctas">
         <a href="/contact/" class="btn-primary">Book a 15-Minute Call for a Same-Day Quote</a>
       </div>
@@ -1238,11 +1216,6 @@
         <div class="proof-item-inline">
           <span class="proof-number-inline">5.0★</span>
           <span class="proof-label-inline">Google</span>
-        </div>
-        <div class="proof-divider"></div>
-        <div class="proof-item-inline">
-          <span class="proof-number-inline">48</span>
-          <span class="proof-label-inline">Reviews</span>
         </div>
       </div>
       <div class="scroll-indicator">scroll</div>
