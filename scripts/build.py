@@ -664,6 +664,25 @@ def fix_og_url(html_content, url_path):
     return html_content
 
 
+def sync_og_title_to_page_title(html_content):
+    """Set og:title/twitter:title to the page's own <title> when the page still
+    carries the head-module default (m-085). Pages that override these tags have
+    already had the default stripped upstream, so this is a no-op for them. A
+    page's social title must never claim a term its <title> does not."""
+    title_match = re.search(r'<title>(.*?)</title>', html_content, re.DOTALL)
+    if not title_match:
+        return html_content
+    page_title = title_match.group(1).strip()
+    default = 'St. Augustine Video Production | First Sight Films'
+    html_content = html_content.replace(
+        f'<meta property="og:title" content="{default}">',
+        f'<meta property="og:title" content="{page_title}">')
+    html_content = html_content.replace(
+        f'<meta name="twitter:title" content="{default}">',
+        f'<meta name="twitter:title" content="{page_title}">')
+    return html_content
+
+
 def fix_blog_og_tags(html_content):
     """Remove duplicate OG tags from blog articles.
 
@@ -812,6 +831,11 @@ def build_pages(modules, page_filter=None, skip_protected=True):
                 # count=1: strip only the head-module default (first occurrence);
                 # keep the page's own tag even if its value equals the default.
                 processed_content = re.sub(_pat, '', processed_content, count=1)
+
+        # Any page that kept the head-module default social title gets it rewritten
+        # to its own <title>, so no page's og/twitter title claims a term its
+        # <title> does not (m-085). No-op for pages that override these tags.
+        processed_content = sync_og_title_to_page_title(processed_content)
 
         # Create parent directories
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -1500,6 +1524,7 @@ def build_blog_listing(modules):
 
     processed_content = inject_canonical(processed_content, "/blog/")
     processed_content = fix_og_url(processed_content, "/blog/")
+    processed_content = sync_og_title_to_page_title(processed_content)
 
     output_path.write_text(processed_content, encoding="utf-8")
     print(f"  Built blog listing: {len(BLOG_ARTICLES)} articles")
