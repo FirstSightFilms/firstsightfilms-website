@@ -53,12 +53,17 @@ PROTECTED_PAGES = [
 # Global page config (populated by load_page_config)
 PAGE_CONFIG = {}
 
-# Assets to copy from src to output
-ASSETS_TO_COPY = ["images", "js", "video"]
+# Assets to copy from src to output. The two video folders sit at the site root rather than
+# under video/ because their live URLs predate the module system — moving them would 301.
+ASSETS_TO_COPY = ["images", "js", "video",
+                  "festival-video-portfolio", "first-sight-films-client-testimonials"]
 
 # Files served verbatim from the site root. Authored in src/, copied on every build so a
 # wiped output/ regenerates them. Anything living only in output/ is lost on a clean build.
-ROOT_PASSTHROUGH = ["_redirects", "llms.txt"]
+# netlify.toml is the site's ONLY source of the live security headers — the repo-root
+# netlify.toml just sets publish; this is the one Netlify reads for headers.
+ROOT_PASSTHROUGH = ["_redirects", "llms.txt", "robots.txt", "_headers", "netlify.toml",
+                    "410.html", "google84625c6d8aa32764.html"]
 
 # CSS directory in src
 SRC_CSS_DIR = SRC_DIR / "css"
