@@ -56,6 +56,10 @@ PAGE_CONFIG = {}
 # Assets to copy from src to output
 ASSETS_TO_COPY = ["images", "js", "video"]
 
+# Files served verbatim from the site root. Authored in src/, copied on every build so a
+# wiped output/ regenerates them. Anything living only in output/ is lost on a clean build.
+ROOT_PASSTHROUGH = ["_redirects", "llms.txt"]
+
 # CSS directory in src
 SRC_CSS_DIR = SRC_DIR / "css"
 
@@ -1755,11 +1759,12 @@ def full_build():
     print(f"\n[9/11] Copying assets...")
     copy_assets()
 
-    # Copy _redirects file for Netlify
-    redirects_src = SRC_DIR / "_redirects"
-    if redirects_src.exists():
-        shutil.copy2(redirects_src, OUTPUT_DIR / "_redirects")
-        print(f"  Copied: _redirects")
+    # Copy root passthrough files (_redirects for Netlify, llms.txt for AI engines)
+    for name in ROOT_PASSTHROUGH:
+        root_src = SRC_DIR / name
+        if root_src.exists():
+            shutil.copy2(root_src, OUTPUT_DIR / name)
+            print(f"  Copied: {name}")
 
     # Copy favicon to root (browsers request /favicon.ico automatically)
     favicon_src = OUTPUT_DIR / "images" / "favicon" / "favicon.ico"
