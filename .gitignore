@@ -17,3 +17,8 @@ CLAUDE.md
 
 # Local safety backups (not shipped)
 _backups/
+
+# Video masters and image originals live in the production archive, not the repo
+# (~/Desktop/fsf-master-folder/_video-masters/). Moved out 2026-08-05.
+src/video/**/*-master.*
+src/images/**/originals/
