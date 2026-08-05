@@ -44,8 +44,8 @@
      text/poster-LCP pages). Blocking these two sheets costs ~170–314ms (measured on the
      comparable services.css) — far cheaper than the repaint we were paying. Fonts are
      already preloaded above; critical CSS above stays inline for first paint. -->
-<link rel="stylesheet" href="/css/main.css?v=1de0c807">
-<link rel="stylesheet" href="/css/components.css?v=1de0c807">
+<link rel="stylesheet" href="/css/main.css?v=2683b377">
+<link rel="stylesheet" href="/css/components.css?v=2683b377">
 
 <!-- Umami analytics (privacy-friendly, cookieless — no consent banner needed) -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="23f9e6da-5e3a-461f-a191-1036350897bf"></script>
@@ -58,16 +58,16 @@
   gtag('config', 'G-L7VPSNG2DK');
 </script>
 
-<link rel="stylesheet" href="/css/services.css?v=1de0c807">
+<link rel="stylesheet" href="/css/services.css?v=2683b377">
 <!-- contact-wizard.css deferred 2026-07-10: it styles the wizard/booking area BELOW the
      fold, not the contact-hero image that is this page's LCP element — so keeping it off
      the render-blocking path lets the hero paint sooner (PSI flagged it 722ms blocking).
      This is the correct use of the print-media defer; item 1 removed it only from the
      ABOVE-fold site-wide sheets where it caused an LCP repaint. -->
-<link rel="stylesheet" href="/css/contact-wizard.css?v=1de0c807" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/css/contact-wizard.css?v=1de0c807"></noscript>
-<script defer src="/js/estimate-logic.js?v=1de0c807"></script>
-<script defer src="/js/contact-wizard.js?v=1de0c807"></script>
+<link rel="stylesheet" href="/css/contact-wizard.css?v=2683b377" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/contact-wizard.css?v=2683b377"></noscript>
+<script defer src="/js/estimate-logic.js?v=2683b377"></script>
+<script defer src="/js/contact-wizard.js?v=2683b377"></script>
 <style>
   /* Match the referral dropdown to the form's input styling */
   .form-group select { width: 100%; padding: 0.75rem 0.875rem; font-family: var(--font-primary); font-size: 0.9rem; color: var(--color-black); background: var(--color-white); border: 1px solid var(--color-gray-300); border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
