@@ -49,6 +49,18 @@ https://firstsightfilms.com/*    https://www.firstsightfilms.com/:splat    301!
 /st-augustine-jacksonville-video-production/*    /event-video-coverage-st-augustine/    301!
 
 # Real video assets MUST keep serving; old /video/ project PAGE urls -> event page (2026-06-17)
+# --- Retired portfolio video masters -> their web-delivery encodes (2026-08-05) ---
+# Originals archived out of the repo when the 720p -web versions replaced them.
+# GPTBot fetched two of these directly in June, so the old URLs get a real 301.
+/festival-video-portfolio/festival-video-recap-fort-mose-jazz-blues-fest-2026.mp4    /festival-video-portfolio/festival-video-recap-fort-mose-jazz-blues-fest-2026-web.mp4    301!
+/video/portfolio/aviles-street-festival-st-johns-cultural-council.mp4    /video/portfolio/aviles-street-festival-st-johns-cultural-council-web.mp4    301!
+/video/portfolio/fort-mose-jazz-blues-festival-recap-video-st-augustine.mp4    /video/portfolio/fort-mose-jazz-blues-festival-recap-video-st-augustine-web.mp4    301!
+/video/portfolio/hma-sales-rally-corporate-event-videography.mp4    /video/portfolio/hma-sales-rally-corporate-event-videography-web.mp4    301!
+/video/portfolio/ponte-vedra-concert-hall-brand-video.mp4    /video/portfolio/ponte-vedra-concert-hall-brand-video-web.mp4    301!
+/video/portfolio/sing-out-loud-2024.mp4    /video/portfolio/sing-out-loud-2024-web.mp4    301!
+/video/portfolio/sjc-chamber-of-commerce-celebrate-florida.mp4    /video/portfolio/sjc-chamber-of-commerce-celebrate-florida-web.mp4    301!
+/video/portfolio/st-augustine-amphitheatre-st-johns-florida.mp4    /video/portfolio/st-augustine-amphitheatre-st-johns-florida-web.mp4    301!
+
 /video/portfolio/*    /video/portfolio/:splat    200
 /video    /event-video-coverage-st-augustine/    301!
 /video/*    /event-video-coverage-st-augustine/    301!
@@ -105,15 +117,3 @@ https://firstsightfilms.com/*    https://www.firstsightfilms.com/:splat    301!
 /juvenile    /410.html    410
 /jjgrey    /410.html    410
 /slowdive    /410.html    410
-
-# --- Retired portfolio video masters -> their web-delivery encodes (2026-08-05) ---
-# Originals archived out of the repo when the 720p -web versions replaced them.
-# GPTBot fetched two of these directly in June, so the old URLs get a real 301.
-/festival-video-portfolio/festival-video-recap-fort-mose-jazz-blues-fest-2026.mp4    /festival-video-portfolio/festival-video-recap-fort-mose-jazz-blues-fest-2026-web.mp4    301!
-/video/portfolio/aviles-street-festival-st-johns-cultural-council.mp4    /video/portfolio/aviles-street-festival-st-johns-cultural-council-web.mp4    301!
-/video/portfolio/fort-mose-jazz-blues-festival-recap-video-st-augustine.mp4    /video/portfolio/fort-mose-jazz-blues-festival-recap-video-st-augustine-web.mp4    301!
-/video/portfolio/hma-sales-rally-corporate-event-videography.mp4    /video/portfolio/hma-sales-rally-corporate-event-videography-web.mp4    301!
-/video/portfolio/ponte-vedra-concert-hall-brand-video.mp4    /video/portfolio/ponte-vedra-concert-hall-brand-video-web.mp4    301!
-/video/portfolio/sing-out-loud-2024.mp4    /video/portfolio/sing-out-loud-2024-web.mp4    301!
-/video/portfolio/sjc-chamber-of-commerce-celebrate-florida.mp4    /video/portfolio/sjc-chamber-of-commerce-celebrate-florida-web.mp4    301!
-/video/portfolio/st-augustine-amphitheatre-st-johns-florida.mp4    /video/portfolio/st-augustine-amphitheatre-st-johns-florida-web.mp4    301!
