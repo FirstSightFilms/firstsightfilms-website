@@ -853,53 +853,6 @@
       color: var(--white);
     }
 
-    .hero-proof-inline {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .proof-item-inline {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .proof-number-inline {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.2;
-    }
-
-    .proof-label-inline {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255, 255, 255, 0.7);
-      margin-top: 0.25rem;
-    }
-
-    .proof-divider {
-      width: 1px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.3);
-    }
-
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.5);
-    }
-
     @media (max-width: 768px) {
       .hero-dalton {
         min-height: calc(100vh - 70px);
@@ -935,27 +888,6 @@
         justify-content: center;
       }
 
-      .scroll-indicator {
-        display: none;
-      }
-
-      .hero-proof-inline {
-        gap: 0.75rem;
-        margin-top: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .proof-number-inline {
-        font-size: 1.25rem;
-      }
-
-      .proof-label-inline {
-        font-size: 0.65rem;
-      }
-
-      .proof-divider {
-        height: 30px;
-      }
     }
 
     /* ==========================================================================
@@ -1490,28 +1422,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="hero-ctas">
         <a href="/contact/" class="btn-primary">Book a 15-Minute Call for a Same-Day Quote</a>
       </div>
-      <div class="hero-proof-inline">
-        <div class="proof-item-inline">
-          <span class="proof-number-inline">3</span>
-          <span class="proof-label-inline">Years</span>
-        </div>
-        <div class="proof-divider"></div>
-        <div class="proof-item-inline">
-          <span class="proof-number-inline">50+</span>
-          <span class="proof-label-inline">Events</span>
-        </div>
-        <div class="proof-divider"></div>
-        <div class="proof-item-inline">
-          <span class="proof-number-inline">100+</span>
-          <span class="proof-label-inline">Shoots</span>
-        </div>
-        <div class="proof-divider"></div>
-        <div class="proof-item-inline">
-          <span class="proof-number-inline">5.0★</span>
-          <span class="proof-label-inline">Google</span>
-        </div>
-      </div>
-      <div class="scroll-indicator">scroll</div>
     </section>
 
     <!-- Client Logos -->
