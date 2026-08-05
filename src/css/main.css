@@ -361,6 +361,14 @@ ul, ol {
   display: block;
 }
 
+/* Divides a submenu's service list from its parent hub link */
+.mobile-nav-sep {
+  display: block;
+  height: 1px;
+  margin: 0.5rem 2rem;
+  background: #eee;
+}
+
 .mobile-nav-cta {
   background: #f4c057 !important;
   color: #fff !important;

@@ -37,8 +37,8 @@
      text/poster-LCP pages). Blocking these two sheets costs ~170–314ms (measured on the
      comparable services.css) — far cheaper than the repaint we were paying. Fonts are
      already preloaded above; critical CSS above stays inline for first paint. -->
-<link rel="stylesheet" href="/css/main.css?v=801f087d">
-<link rel="stylesheet" href="/css/components.css?v=801f087d">
+<link rel="stylesheet" href="/css/main.css?v=1de0c807">
+<link rel="stylesheet" href="/css/components.css?v=1de0c807">
 
 <!-- Umami analytics (privacy-friendly, cookieless — no consent banner needed) -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="23f9e6da-5e3a-461f-a191-1036350897bf"></script>
@@ -51,7 +51,7 @@
   gtag('config', 'G-L7VPSNG2DK');
 </script>
 
-<link rel="stylesheet" href="/css/blog.css?v=801f087d">
+<link rel="stylesheet" href="/css/blog.css?v=1de0c807">
 <title>Museum & Cultural Video Florida | Grants & Attendance</title>
 <meta name="description" content="How Florida museums and cultural organizations use video to increase grants and attendance. Documentary-style production for Northeast Florida institutions.">
 
@@ -145,7 +145,7 @@
   <!-- Primary Navigation (hamburger panel) -->
   <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Main navigation">
 
-    <!-- Event Coverage (lead offering — top-level) -->
+    <!-- Event Coverage (lead offering — stays top-level; organic #1 for its term) -->
     <a href="/event-video-coverage-st-augustine/">Event Coverage</a>
 
     <!-- Video (accordion) -->
@@ -154,28 +154,54 @@
         Video <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
       </button>
       <div class="mobile-accordion-content" id="nav-acc-video">
-        <a href="/st-augustine-video-production/">St. Augustine Video Production</a>
         <a href="/corporate-video-st-augustine/">Corporate Video</a>
-        <a href="/social-media-st-augustine/">Social Content</a>
         <a href="/brand-story-st-augustine/">Brand Story</a>
+        <a href="/social-media-st-augustine/">Social Content</a>
+        <!-- Parent of the list above, not a peer — repositioned 2026-07-31 (7e06be4) -->
+        <span class="mobile-nav-sep" role="separator"></span>
+        <a href="/st-augustine-video-production/">Services &amp; Pricing</a>
       </div>
     </div>
 
-    <!-- Photography (accordion) -->
+    <!-- Photo (accordion) -->
     <div class="mobile-accordion">
       <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="nav-acc-photo">
-        Photography <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+        Photo <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
       </button>
       <div class="mobile-accordion-content" id="nav-acc-photo">
-        <a href="/st-augustine-commercial-photographer/">Commercial Photography</a>
         <a href="/st-augustine-event-photographer/">Event Photography</a>
+        <a href="/st-augustine-commercial-photographer/">Commercial Photography</a>
+        <a href="/flagler-college-graduation-photography/">Graduation Photography</a>
+      </div>
+    </div>
+
+    <!-- Where we work (accordion) — location pages were footer-only until 2026-08-05 -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="nav-acc-where">
+        Where we work <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="mobile-accordion-content" id="nav-acc-where">
+        <a href="/st-augustine-video-production/">St. Augustine</a>
+        <a href="/st-johns-county-video-production/">St. Johns County</a>
+        <a href="/jacksonville-video-production/">Jacksonville</a>
+        <a href="/ponte-vedra-video-production/">Ponte Vedra</a>
       </div>
     </div>
 
     <a href="/work/">Work</a>
-    <a href="/guides/">Guides</a>
-    <a href="/blog/">Blog</a>
-    <a href="/aboutus/">About</a>
+
+    <!-- Learn (accordion) -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="nav-acc-learn">
+        Learn <span class="accordion-arrow" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="mobile-accordion-content" id="nav-acc-learn">
+        <a href="/guides/">Guides</a>
+        <a href="/blog/">Blog</a>
+        <a href="/aboutus/">About</a>
+      </div>
+    </div>
+
     <a href="/contact/" class="mobile-nav-cta">Let's Talk</a>
   </nav>
 </header>
