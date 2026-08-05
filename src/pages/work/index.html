@@ -8,6 +8,67 @@
 <head>
 {{head}}
 <link rel="stylesheet" href="/css/blog.css">
+<style>
+  /* Full-bleed photo gateway. The photography is server-rendered on purpose — GPTBot,
+     ClaudeBot and PerplexityBot don't run JS, so a JS-injected grid would be invisible
+     to the engines we want citing us. Never lazy-inject these. */
+  .work-hero {
+    position: relative;
+    width: 100%;
+    height: clamp(340px, 60vh, 600px);
+    overflow: hidden;
+    background: #1a1a1a;
+    /* Shared section spacing adds a bottom margin; the proof bar must sit flush */
+    margin-bottom: 0;
+  }
+  .work-hero > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
+    display: block;
+  }
+  .work-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.10) 40%, rgba(0,0,0,0.72) 100%);
+  }
+  .work-hero-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 0 var(--container-padding) clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    color: #fff;
+  }
+  .work-hero-caption h1 {
+    color: #fff;
+    margin: 0 0 0.5rem;
+  }
+  .work-hero-caption p {
+    color: rgba(255,255,255,0.92);
+    margin: 0 auto;
+    max-width: 640px;
+    font-size: 1.05rem;
+  }
+  /* Slim proof bar directly under the photograph */
+  .work-proof {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 1.25rem var(--container-padding);
+  }
+  .work-proof .hero-stats {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .work-hero { height: clamp(280px, 46vh, 400px); }
+    .work-hero-caption p { font-size: 0.95rem; }
+  }
+</style>
 <title>Our Work — Video &amp; Photography | First Sight Films</title>
 <meta name="description" content="First Sight Films' video and photography work across Northeast Florida — corporate films, event and concert coverage, brand stories, and venue partnerships.">
 {{faq-schema:work}}
@@ -34,39 +95,25 @@
     </div>
   </nav>
 
-  <!-- 2. Hero -->
-  <section class="service-hero">
-    <div class="service-hero-content">
-      <img class="hero-img" src="/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-20-large.webp" alt="First Sight Films video and photography team on a shoot in St. Augustine, Florida" width="1000" height="563" fetchpriority="high">
+  <!-- 2. Hero — full-bleed photograph -->
+  <section class="work-hero">
+    <img src="/images/photography-event-st-augustine-amphitheatre/juvenile-performer-crowd-interaction-augustine-amphitheatre-1920w.webp" alt="Juvenile performing and reaching toward an excited crowd at the St. Augustine Amphitheatre in St. Augustine, Florida" width="1920" height="1279" fetchpriority="high">
+    <div class="work-hero-caption">
       <h1>Our Work</h1>
-      <p class="lead">First Sight Films is a video and photography company in St. Augustine, Florida. We produce corporate films, event and concert coverage, brand stories, and commercial photography for businesses, venues, and nonprofits across Northeast Florida — from the St. Augustine Amphitheatre to Flagler College. This is our work: every page a real project, with real footage, real clients, and real results.</p>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-number">5.0★</span><span class="stat-label">Google rating</span></div>
-        <div class="stat"><span class="stat-number">46</span><span class="stat-label">Five-star reviews</span></div>
-        <div class="stat"><span class="stat-number">300+</span><span class="stat-label">Sessions</span></div>
-        <div class="stat"><span class="stat-number">National</span><span class="stat-label">Reach from St. Augustine, FL</span></div>
-      </div>
+      <p>Every project below is a real shoot — real clients, real footage, real results.</p>
     </div>
   </section>
 
-  <!-- 3. What we do (linked capabilities) -->
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-header">
-        <h2>What we do</h2>
-        <p>Video and photography, often on the same shoot — built for social, web, and broadcast.</p>
-      </div>
-      <ul class="service-list">
-        <li><a href="/corporate-video-st-augustine/">Corporate video production</a> — sales rallies, conferences, training, and brand films.</li>
-        <li><a href="/event-video-coverage-st-augustine/">Event &amp; concert coverage</a> — festivals, ceremonies, and live shows.</li>
-        <li><a href="/st-augustine-commercial-photographer/">Commercial photography</a> — product, architectural, and brand stills.</li>
-        <li><a href="/st-augustine-event-photographer/">Event photography</a> — concerts, conferences, and gatherings.</li>
-        <li><a href="/brand-story-st-augustine/">Brand stories</a> and <a href="/social-media-st-augustine/">social content</a> — the story behind the work, cut for the feed.</li>
-      </ul>
+  <div class="work-proof">
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-number">5.0★</span><span class="stat-label">Google rating</span></div>
+      <div class="stat"><span class="stat-number">46</span><span class="stat-label">Five-star reviews</span></div>
+      <div class="stat"><span class="stat-number">300+</span><span class="stat-label">Sessions</span></div>
+      <div class="stat"><span class="stat-number">National</span><span class="stat-label">Reach from St. Augustine, FL</span></div>
     </div>
-  </section>
+  </div>
 
-  <!-- 4. Featured Work (card grid · ItemList). Render LIVE /work/ pages only. -->
+  <!-- 3. Featured Work (card grid · ItemList). Render LIVE /work/ pages only. -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -78,7 +125,7 @@
         <article class="blog-card">
           <a href="/work/st-augustine-amphitheatre/" class="blog-card-link">
             <div class="blog-card-image">
-              <img src="/images/photography-event-st-augustine-amphitheatre/charley-crockett-live-performance-augustine-amphitheatre-1200w.webp" alt="First Sight Films video and photography at the St. Augustine Amphitheatre" loading="lazy" width="1080" height="1350">
+              <img src="/images/photography-event-st-augustine-amphitheatre/concert-crowd-celebration-augustine-amphitheatre-florida-1200w.webp" alt="Excited concert crowd cheering and celebrating at the St. Augustine Amphitheatre in St. Augustine, Florida" loading="lazy" width="1200" height="675">
             </div>
             <div class="blog-card-content">
               <span class="blog-card-date">Video + Photo</span>
@@ -91,7 +138,7 @@
         <article class="blog-card">
           <a href="/work/hma-mortgage/" class="blog-card-link">
             <div class="blog-card-image">
-              <img src="/images/hma-sales-rally-embassy-suites-st-augustine-720w.jpg" alt="First Sight Films corporate event video for HMA Mortgage's Sales Rally at Embassy Suites St. Augustine Beach" loading="lazy" width="720" height="478">
+              <img src="/images/hma-corporate-event-video-embassy-suites-st-augustine-beach-1200w.webp" alt="First Sight Films corporate event video for HMA Mortgage's Sales Rally at Embassy Suites St. Augustine Beach" loading="lazy" width="1200" height="796">
             </div>
             <div class="blog-card-content">
               <span class="blog-card-date">Video</span>
@@ -104,7 +151,7 @@
         <article class="blog-card">
           <a href="/work/fort-mose-jazz-blues-festival/" class="blog-card-link">
             <div class="blog-card-image">
-              <img src="/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp" alt="First Sight Films photo and video of Gary Clark Jr at the Fort Mose Jazz &amp; Blues Festival" loading="lazy" width="1200" height="1499">
+              <img src="/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-crowd-stage-1200w.webp" alt="Large crowd gathered at the illuminated outdoor stage of the Fort Mose Jazz &amp; Blues Festival in St. Augustine, Florida" loading="lazy" width="1200" height="959">
             </div>
             <div class="blog-card-content">
               <span class="blog-card-date">Photo + Video</span>
@@ -133,7 +180,25 @@
     </div>
   </section>
 
-  <!-- 5. Who we work with -->
+  <!-- 4. What we do (linked capabilities). Carries the page's descriptive lead, which
+       moved here when the hero became a full-bleed photograph. -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>What we do</h2>
+        <p class="lead">First Sight Films is a video and photography company in St. Augustine, Florida. We produce corporate films, event and concert coverage, brand stories, and commercial photography for businesses, venues, and nonprofits across Northeast Florida — from the St. Augustine Amphitheatre to Flagler College. Video and photography, often on the same shoot — built for social, web, and broadcast.</p>
+      </div>
+      <ul class="service-list">
+        <li><a href="/corporate-video-st-augustine/">Corporate video production</a> — sales rallies, conferences, training, and brand films.</li>
+        <li><a href="/event-video-coverage-st-augustine/">Event &amp; concert coverage</a> — festivals, ceremonies, and live shows.</li>
+        <li><a href="/st-augustine-commercial-photographer/">Commercial photography</a> — product, architectural, and brand stills.</li>
+        <li><a href="/st-augustine-event-photographer/">Event photography</a> — concerts, conferences, and gatherings.</li>
+        <li><a href="/brand-story-st-augustine/">Brand stories</a> and <a href="/social-media-st-augustine/">social content</a> — the story behind the work, cut for the feed.</li>
+      </ul>
+    </div>
+  </section>
+
+<!-- 5. Who we work with -->
   <!-- More projects than pages (supplement 2026-07-09). Client names + deliverable types
        only, all bank-verified. The supplement's closing clause about having no engagement
        minimums was dropped: pricing-ladder.md publishes per-service starting prices, which
@@ -224,7 +289,7 @@
       "position": 1,
       "url": "https://www.firstsightfilms.com/work/st-augustine-amphitheatre/",
       "name": "St. Augustine Amphitheatre",
-      "image": "https://www.firstsightfilms.com/images/photography-event-st-augustine-amphitheatre/charley-crockett-live-performance-augustine-amphitheatre-1200w.webp",
+      "image": "https://www.firstsightfilms.com/images/photography-event-st-augustine-amphitheatre/concert-crowd-celebration-augustine-amphitheatre-florida-1200w.webp",
       "description": "Four years on call for Northeast Florida's signature stage — concert coverage, broadcast promos for national touring acts, and the product photography that drew the strongest client reactions of the whole relationship."
     },
     {
@@ -232,7 +297,7 @@
       "position": 2,
       "url": "https://www.firstsightfilms.com/work/hma-mortgage/",
       "name": "HMA Mortgage Sales Rally",
-      "image": "https://www.firstsightfilms.com/images/hma-sales-rally-embassy-suites-st-augustine-720w.jpg",
+      "image": "https://www.firstsightfilms.com/images/hma-corporate-event-video-embassy-suites-st-augustine-beach-1200w.webp",
       "description": "A national lender's two-day sales rally at Embassy Suites St. Augustine Beach: three cameras, 12 attendee testimonials, a social reel delivered the next day, and the full recap package within the week."
     },
     {
@@ -240,7 +305,7 @@
       "position": 3,
       "url": "https://www.firstsightfilms.com/work/fort-mose-jazz-blues-festival/",
       "name": "Fort Mose Jazz & Blues Festival",
-      "image": "https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/gary-clark-jr-fort-mose-jazz-festival-1200w.webp",
+      "image": "https://www.firstsightfilms.com/images/fort-mose-jazz-blues-festival-images/fort-mose-jazz-festival-crowd-stage-1200w.webp",
       "description": "Two years covering St. Augustine's Jazz & Blues Festival at Fort Mose Historic State Park — Gary Clark Jr, Samara Joy, Ledisi, and Robert Cray, in recap films and photography where the historic site is part of the story."
     },
     {
@@ -262,11 +327,11 @@
 {
   "@context": "https://schema.org",
   "@type": "ImageObject",
-  "name": "First Sight Films crew on a St. Augustine shoot",
-  "contentUrl": "https://www.firstsightfilms.com/images/blog/video-production-tips-st-augustine/video-production-st-augustine-behind-the-scenes-20-large.webp",
-  "caption": "First Sight Films video and photography team on a shoot in St. Augustine, Florida",
-  "width": 1000,
-  "height": 563,
+  "name": "First Sight Films event coverage at the St. Augustine Amphitheatre",
+  "contentUrl": "https://www.firstsightfilms.com/images/photography-event-st-augustine-amphitheatre/juvenile-performer-crowd-interaction-augustine-amphitheatre-1920w.webp",
+  "caption": "Juvenile performing and reaching toward an excited crowd at the St. Augustine Amphitheatre in St. Augustine, Florida",
+  "width": 1920,
+  "height": 1279,
   "representativeOfPage": true,
   "publisher": { "@id": "https://www.firstsightfilms.com/#localbusiness" }
 }
