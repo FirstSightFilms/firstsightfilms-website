@@ -298,6 +298,9 @@
         clearState();
         completed = true;
         track('contact-form-submit');
+        if (typeof window.gtag === 'function') { // gtag is skipped for bots (head.html)
+          try { window.gtag('event', 'generate_lead', { form_name: 'contact', estimate_tier: estimate.tier }); } catch (e) { /* analytics must never break the form */ }
+        }
         track('estimate-shown', { tier: estimate.tier });
         renderEstimate(estimate);
       }).catch(function () {
