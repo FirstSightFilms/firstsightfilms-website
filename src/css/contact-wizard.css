@@ -186,18 +186,6 @@
 }
 .wizard-submit-error.is-visible { display: block; }
 
-/* Wedding exit (injected by JS) */
-.wizard-exit { animation: wizard-step-in 0.28s ease both; padding: 0.25rem 0; }
-.wizard-exit h3 {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  line-height: 1.25;
-  margin-bottom: 0.85rem;
-  text-wrap: balance;
-}
-.wizard-exit p { color: var(--color-gray-600); max-width: 56ch; }
-.wizard-exit .btn { margin-top: 0.5rem; }
-
 /* Estimate screen (injected by JS) — the payoff moment: staggered reveal */
 .estimate-screen { animation: wizard-step-in 0.35s ease both; }
 .estimate-screen h3 {
@@ -220,15 +208,6 @@
 }
 .estimate-screen p { margin-bottom: 0.75rem; }
 .estimate-screen .estimate-note { font-size: 0.95rem; color: var(--color-gray-500); }
-.estimate-screen .estimate-extra {
-  padding: 0.85rem 1.1rem;
-  border-left: 3px solid var(--color-accent);
-  background: rgba(244, 192, 87, 0.1);
-  border-radius: 0 8px 8px 0;
-  margin-bottom: 0.75rem;
-  font-size: 0.95rem;
-  animation: wizard-step-in 0.35s ease 0.16s both;
-}
 /* The relocated booking card sits inside the white wizard card — flatten its
    shadow so it reads as a section of the result, not a floating twin card. */
 .estimate-screen .booking-card {
@@ -254,9 +233,7 @@
   .wizard-progress-fill, .chip-option span, .wizard-back, .wizard-fastlane a { transition: none; }
   .chip-option:hover span { transform: none; }
   .contact-form.wizard-active .wizard-step.is-current,
-  .wizard-exit,
   .estimate-screen,
   .estimate-screen .estimate-headline,
-  .estimate-screen .estimate-extra,
   .estimate-screen .booking-card { animation: none; }
 }
