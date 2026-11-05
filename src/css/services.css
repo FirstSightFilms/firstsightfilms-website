@@ -897,6 +897,9 @@
   transform-origin: center;
 }
 
+/* Contact page: keep the gap the removed "or pick a call time" line used to give (52px). */
+.section-contact .booking-card { margin-top: 3.25rem; }
+
 .contact-or {
   max-width: 760px;
   margin: 0 auto var(--spacing-md);

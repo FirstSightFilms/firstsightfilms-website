@@ -44,8 +44,8 @@
      text/poster-LCP pages). Blocking these two sheets costs ~170–314ms (measured on the
      comparable services.css) — far cheaper than the repaint we were paying. Fonts are
      already preloaded above; critical CSS above stays inline for first paint. -->
-<link rel="stylesheet" href="/css/main.css?v=e3c6e4a7">
-<link rel="stylesheet" href="/css/components.css?v=e3c6e4a7">
+<link rel="stylesheet" href="/css/main.css?v=f3f19108">
+<link rel="stylesheet" href="/css/components.css?v=f3f19108">
 
 <!-- Umami analytics (privacy-friendly, cookieless — no consent banner needed) -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="23f9e6da-5e3a-461f-a191-1036350897bf"></script>
@@ -70,16 +70,16 @@
   })();
 </script>
 
-<link rel="stylesheet" href="/css/services.css?v=e3c6e4a7">
+<link rel="stylesheet" href="/css/services.css?v=f3f19108">
 <!-- contact-wizard.css deferred 2026-07-10: it styles the wizard/booking area BELOW the
      fold, not the contact-hero image that is this page's LCP element — so keeping it off
      the render-blocking path lets the hero paint sooner (PSI flagged it 722ms blocking).
      This is the correct use of the print-media defer; item 1 removed it only from the
      ABOVE-fold site-wide sheets where it caused an LCP repaint. -->
-<link rel="stylesheet" href="/css/contact-wizard.css?v=e3c6e4a7" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/css/contact-wizard.css?v=e3c6e4a7"></noscript>
-<script defer src="/js/estimate-logic.js?v=e3c6e4a7"></script>
-<script defer src="/js/contact-wizard.js?v=e3c6e4a7"></script>
+<link rel="stylesheet" href="/css/contact-wizard.css?v=f3f19108" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/contact-wizard.css?v=f3f19108"></noscript>
+<script defer src="/js/estimate-logic.js?v=f3f19108"></script>
+<script defer src="/js/contact-wizard.js?v=f3f19108"></script>
 <style>
   /* Match the referral dropdown to the form's input styling */
   .form-group select { width: 100%; padding: 0.75rem 0.875rem; font-family: var(--font-primary); font-size: 0.9rem; color: var(--color-black); background: var(--color-white); border: 1px solid var(--color-gray-300); border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
@@ -463,10 +463,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
 
-      <p class="contact-or" id="book-a-call">or pick a call time directly</p>
-
       <!-- Discovery Call Booking -->
-      <div class="booking-card">
+      <div class="booking-card" id="book-a-call">
         <h2>Book a 15-Minute Discovery Call</h2>
         <p>Pick a time that works for you. We'll talk through your project, your dates, and what you need&mdash;then follow up with a transparent, no-surprises quote.</p>
         <!-- Google Calendar scheduling: FACADE (2026-07-10). The Google scheduling app

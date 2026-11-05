@@ -337,11 +337,9 @@
 
       // Move the existing booking card into the result screen (single calendar embed on the page).
       var bookingCard = document.querySelector('.booking-card');
-      var anchor = document.getElementById('book-a-call');
       form.hidden = true;
       wrapper.appendChild(screen);
       if (bookingCard) screen.appendChild(bookingCard);
-      if (anchor) anchor.hidden = true;
       screen.querySelector('h3').focus({ preventScroll: true });
       var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       screen.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
