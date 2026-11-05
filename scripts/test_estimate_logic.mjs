@@ -59,4 +59,36 @@ for (const r of combos) {
   assert.ok(r.tier && r.headline, 'every combo returns tier + headline');
 }
 
-console.log(`All estimate-logic tests passed (${combos.length} combos swept).`);
+// — Result screen by service (3-step form, 2026-11-05) —
+const { getResult } = require('../src/js/estimate-logic.js');
+const ans = (coverage, length, budgetRange, eventDate) => ({ coverage, length, budgetRange, eventDate, today: T });
+
+// Event path = today's estimate, unchanged; a blank (optional) budget counts as 'Not sure yet'.
+const ev = getResult('Event photos or video', ans('Photo + video', 'Full day', '$5,500–9,500', '2026-07-20'));
+assert.deepEqual(
+  { tier: ev.tier, headline: ev.headline, rushLine: ev.rushLine, underBudgetLine: ev.underBudgetLine },
+  est('Photo + video', 'Full day', '$5,500–9,500', '2026-07-20'), 'event path matches getEstimate');
+assert.equal(ev.isEvent, true);
+assert.deepEqual(
+  getResult('Event photos or video', ans('Video only', 'Full day', '', '')).headline,
+  est('Video only', 'Full day', 'Not sure yet', '').headline, 'blank budget == Not sure yet');
+assert.equal(getResult('Event photos or video', ans('Photo + video', 'Full day', '', '')).underBudgetLine, null, 'blank budget is never under-budget');
+
+// Product photos: pricing-ladder.md:51, from $1,500.
+const prod = getResult('Product photos', ans('', '', 'Under $2,500', ''));
+assert.equal(prod.headline, 'Product photo shoots start at $1,500.');
+assert.equal(prod.priced, true);
+assert.equal(prod.isEvent, false);
+assert.equal(prod.rushLine, null);
+assert.equal(prod.underBudgetLine, null);
+
+// No-price paths: no dollar figure anywhere.
+for (const s of ['Marketing video', 'Reels for social media', 'Something else']) {
+  const r = getResult(s, ans('', '', '$9,500+', '2026-07-20'));
+  assert.equal(r.priced, false, s);
+  assert.equal(r.headline, 'Thanks — we’ve got it.', s);
+  assert.ok(![r.headline, r.rushLine, r.underBudgetLine].join(' ').includes('$'), `no price for ${s}`);
+  assert.ok(r.tier, `tier for ${s}`);
+}
+
+console.log(`All estimate-logic tests passed (${combos.length} combos swept + per-service results).`);

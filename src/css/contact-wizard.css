@@ -126,6 +126,26 @@
   font-weight: 600;
 }
 
+/* chips in one row share a height when only some carry a hint */
+.chip-group .chip-option span { height: 100%; box-sizing: border-box; }
+.chip-option .chip-hint {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-gray-500);
+}
+
+/* Several questions on one step (step 2) */
+.wizard-question { margin-bottom: 1.5rem; }
+.wizard-question[hidden] { display: none; }
+.wizard-question-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 0.6rem;
+}
+
 /* Wizard nav (injected by JS) */
 .wizard-nav {
   display: flex;

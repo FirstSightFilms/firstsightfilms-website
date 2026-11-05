@@ -83,7 +83,41 @@
     return result;
   }
 
-  var api = { getEstimate: getEstimate, BRACKET_CEILINGS: BRACKET_CEILINGS };
+  // Keys must byte-match the form's `service` radio values.
+  var EVENT_SERVICE = 'Event photos or video';
+  var NO_PRICE_TIERS = {
+    'Marketing video': 'marketing-video',
+    'Reels for social media': 'reels',
+    'Something else': 'other'
+  };
+
+  /**
+   * Result screen by service. answers as for getEstimate; a blank budget counts as 'Not sure yet'.
+   * returns: { tier, headline, priced, isEvent, rushLine|null, underBudgetLine|null }
+   */
+  function getResult(service, answers) {
+    if (service === EVENT_SERVICE) {
+      var e = getEstimate({
+        coverage: answers.coverage,
+        length: answers.length,
+        budgetRange: answers.budgetRange || 'Not sure yet',
+        eventDate: answers.eventDate,
+        today: answers.today
+      });
+      e.priced = true;
+      e.isEvent = true;
+      return e;
+    }
+    if (service === 'Product photos') {
+      // pricing-ladder.md:51 — Commercial photography (product / apparel / architectural), from $1,500.
+      return { tier: 'product', headline: 'Product photo shoots start at $1,500.', priced: true,
+        isEvent: false, rushLine: null, underBudgetLine: null };
+    }
+    return { tier: NO_PRICE_TIERS[service] || 'other', headline: 'Thanks — we’ve got it.', priced: false,
+      isEvent: false, rushLine: null, underBudgetLine: null };
+  }
+
+  var api = { getEstimate: getEstimate, getResult: getResult, EVENT_SERVICE: EVENT_SERVICE, BRACKET_CEILINGS: BRACKET_CEILINGS };
   if (typeof module !== 'undefined' && module.exports) { module.exports = api; }
   else { root.FSF_ESTIMATE = api; }
 })(typeof window !== 'undefined' ? window : globalThis);
