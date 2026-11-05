@@ -7,10 +7,13 @@
 (function () {
   'use strict';
 
-  var STORAGE_KEY = 'fsf-contact-wizard-v2'; // v1 = the 7-step form; its saved state must not restore here
-  var WEDDING = 'Wedding / private party';
-  var REELS = 'Reels for social media';
-  var SOMETHING_ELSE = 'Something else';
+  var STORAGE_KEY = 'fsf-contact-wizard-v3'; // v1 = 7-step form, v2 = 5-choice step 1; neither may restore here
+  // Values must byte-match the form's `service` radios.
+  var QUESTION_FOR_SERVICE = {
+    'Marketing content': 'q-goal-wrap',
+    'Photos for your business': 'q-looking-for-wrap',
+    'Something else': 'q-need-detail-wrap'
+  };
 
   document.addEventListener('DOMContentLoaded', init);
 
@@ -18,13 +21,6 @@
     if (window.umami && typeof window.umami.track === 'function') {
       try { window.umami.track(name, data); } catch (e) { /* analytics must never break the form */ }
     }
-  }
-
-  function localToday() {
-    var d = new Date();
-    return d.getFullYear() + '-' +
-      String(d.getMonth() + 1).padStart(2, '0') + '-' +
-      String(d.getDate()).padStart(2, '0');
   }
 
   function init() {
@@ -80,33 +76,6 @@
     var progressFill = progress.querySelector('.wizard-progress-fill');
     var submitBtn = form.querySelector('button[type="submit"]');
 
-    // --- date field constraints ---
-    var dateInput = form.querySelector('#event_date');
-    var noDate = form.querySelector('#no_date_yet');
-    var projectDate = form.querySelector('#project_date');
-    if (dateInput) dateInput.min = localToday();
-    if (projectDate) projectDate.min = localToday();
-    if (noDate && dateInput) {
-      noDate.addEventListener('change', function () {
-        dateInput.disabled = noDate.checked;
-        if (noDate.checked) dateInput.value = '';
-      });
-      dateInput.addEventListener('input', function () {
-        if (dateInput.value) noDate.checked = false;
-      });
-    }
-
-    // --- referral detail show/hide (replaces the old inline script) ---
-    var refSel = form.querySelector('#referral_source');
-    var refWrap = form.querySelector('#referral_detail_wrap');
-    function syncReferralDetail() {
-      if (!refSel || !refWrap) return;
-      var v = refSel.value;
-      refWrap.style.display =
-        (v === 'Referral (a person or company)' || v === 'Other') ? 'block' : 'none';
-    }
-    if (refSel) refSel.addEventListener('change', syncReferralDetail);
-
     // --- branching on service ---
     function service() {
       var el = form.querySelector('input[name="service"]:checked');
@@ -127,21 +96,16 @@
     }
 
     // Hidden-branch inputs are disabled so they skip validation and stay out of the submission.
-    var coverageWrap = form.querySelector('#q-project-coverage-wrap');
-    var frequencyWrap = form.querySelector('#q-frequency-wrap');
     function syncBranch() {
       var svc = service();
       var ev = isEventPath();
       setEnabled(stepByName['event-details'], ev);
-      setEnabled(stepByName['project-details'], !ev);
-      if (ev && noDate && dateInput) dateInput.disabled = noDate.checked;
-      var showCoverage = !ev && (svc === REELS || svc === SOMETHING_ELSE);
-      var showFrequency = !ev && svc === REELS;
-      coverageWrap.hidden = !showCoverage;
-      setEnabled(coverageWrap, showCoverage);
-      frequencyWrap.hidden = !showFrequency;
-      setEnabled(frequencyWrap, showFrequency);
-      submitLabel = (ev || svc === 'Product photos') ? 'Get my estimate' : 'Send';
+      Object.keys(QUESTION_FOR_SERVICE).forEach(function (key) {
+        var wrap = form.querySelector('#' + QUESTION_FOR_SERVICE[key]);
+        wrap.hidden = (svc !== key);
+        setEnabled(wrap, svc === key);
+      });
+      submitLabel = ev ? 'Get my estimate' : 'Send';
       if (!submitBtn.disabled) submitBtn.textContent = submitLabel;
     }
     var submitLabel = 'Get my estimate';
@@ -182,7 +146,6 @@
         });
       });
       syncBranch();
-      syncReferralDetail();
       if (!service()) return 0;
       return Math.min(Math.max(state.step, 0), 2);
     }
@@ -198,8 +161,6 @@
         var label = q && q.querySelector('.wizard-question-label');
         return label ? 'Pick an answer for “' + label.textContent + '”' : 'Pick one to continue.';
       }
-      if (el.type === 'date') return 'That date looks off — it should be today or later.';
-      if (el.type === 'time') return 'That time looks unfinished — complete it or clear it.';
       return 'Please fill this in to continue.';
     }
 
@@ -236,12 +197,6 @@
         stepError.classList.add('is-visible');
         return;
       }
-      // Wedding branch: exits instead of advancing (spec §4)
-      var et = form.querySelector('input[name="event_type"]:checked');
-      if (path()[current] === stepByName['event-details'] && et && et.value === WEDDING) {
-        showWeddingExit();
-        return;
-      }
       track('wizard-step-' + (current + 1), current === 0 ? { service: service() } : undefined);
       showStep(current + 1);
     }
@@ -270,7 +225,11 @@
     });
     form.addEventListener('input', saveState);
     form.addEventListener('change', saveState); // radios/selects where 'input' doesn't fire
-    form.addEventListener('change', function () { stepError.classList.remove('is-visible'); });
+    // Clear on 'input' too: a textarea only fires change on blur, i.e. on the Next mousedown,
+    // and the collapsing error would shift the button out from under that click.
+    function clearStepError() { stepError.classList.remove('is-visible'); }
+    form.addEventListener('input', clearStepError);
+    form.addEventListener('change', clearStepError);
 
     window.addEventListener('popstate', function (e) {
       if (completed) return;
@@ -288,42 +247,10 @@
       }
     });
 
-    // --- wedding exit (spec §4: generic wording; named referrals drop into the marked block) ---
-    function showWeddingExit() {
-      track('wizard-exit-wedding');
-      var exit = document.createElement('div');
-      exit.className = 'wizard-exit';
-      exit.innerHTML =
-        '<h3>We&rsquo;re probably not your crew &mdash; and that&rsquo;s okay.</h3>' +
-        '<p>First Sight Films covers business and organizational events, product photos and marketing video, so we&rsquo;re not the right fit for weddings or private parties.</p>' +
-        // REFERRAL BLOCK — swap this one paragraph when Diego names 1–2 local wedding filmmakers.
-        '<p>Northeast Florida has wonderful wedding filmmakers and photographers &mdash; WeddingWire and The Knot are great places to find them.</p>' +
-        '<p>Planning a corporate or organizational gathering instead? <button type="button" class="btn btn-primary wizard-exit-back">Go back and tell us about your project</button></p>';
-      form.hidden = true;
-      wrapper.appendChild(exit);
-      exit.querySelector('.wizard-exit-back').addEventListener('click', function () {
-        var checked = form.querySelector('input[name="event_type"]:checked');
-        if (checked) checked.checked = false;
-        exit.remove();
-        form.hidden = false;
-        showStep(0);
-      });
-    }
-
     // --- submit & result screen ---
     function collectAnswers() {
-      var get = function (name) {
-        var el = form.querySelector('input[name="' + name + '"]:checked');
-        return el ? el.value : '';
-      };
-      var budget = form.querySelector('#budget_range');
-      return {
-        coverage: get('coverage_type'),
-        length: get('event_length'),
-        budgetRange: budget ? budget.value : '',
-        eventDate: (dateInput && !dateInput.disabled) ? dateInput.value : '',
-        today: localToday()
-      };
+      var el = form.querySelector('input[name="coverage_type"]:checked');
+      return { coverage: el ? el.value : '' };
     }
 
     form.addEventListener('submit', function (e) {
@@ -385,7 +312,7 @@
       if (form.requestSubmit) form.requestSubmit(); else form.submit();
     });
 
-    // --- result screen (spec §5; per-service variants per the 3-step handoff §5) ---
+    // --- result screen (spec §5; event vs no-price per the 3-step handoff §5) ---
     function renderResult(result) {
       var screen = document.createElement('div');
       screen.className = 'estimate-screen';
@@ -394,17 +321,8 @@
         html =
           '<h3 tabindex="-1">Here&rsquo;s your estimate</h3>' +
           '<p class="estimate-headline">' + result.headline + '</p>' +
-          '<p class="estimate-note">That&rsquo;s an estimate, not a quote &mdash; the exact number depends on days on site, deliverables, and timing. You&rsquo;ll get a firm number on a quick call, and we&rsquo;ll follow up by email within a business day.</p>';
-        if (result.rushLine) html += '<div class="estimate-extra">' + result.rushLine + '</div>';
-        if (result.underBudgetLine) html += '<div class="estimate-extra">' + result.underBudgetLine + '</div>';
-        html +=
+          '<p class="estimate-note">That&rsquo;s an estimate, not a quote &mdash; the exact number depends on days on site, deliverables, and timing. You&rsquo;ll get a firm number on a quick call, and we&rsquo;ll follow up by email within a business day.</p>' +
           '<p><strong>Every package:</strong> photos and a short social recap within 72 hours of your event.</p>' +
-          '<p><strong>Want the exact number sooner? Grab a time below &mdash; 15 minutes, same-day quote.</strong></p>';
-      } else if (result.priced) {
-        html =
-          '<h3 tabindex="-1">Here&rsquo;s your estimate</h3>' +
-          '<p class="estimate-headline">' + result.headline + '</p>' +
-          '<p class="estimate-note">That&rsquo;s a starting price, not a quote. You&rsquo;ll get a firm number on a quick call, and we&rsquo;ll follow up by email within a business day.</p>' +
           '<p><strong>Want the exact number sooner? Grab a time below &mdash; 15 minutes, same-day quote.</strong></p>';
       } else {
         html =
@@ -430,7 +348,6 @@
     // --- activate ---
     form.noValidate = true; // stepValid() validates per step; native check would block on hidden steps
     form.classList.add('wizard-active');
-    syncReferralDetail();
     syncBranch();
     var startAt = restoreState();
     try { history.replaceState({ wizardStep: startAt }, ''); } catch (e) { /* ignore */ }

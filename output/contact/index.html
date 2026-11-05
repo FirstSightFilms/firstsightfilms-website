@@ -44,8 +44,8 @@
      text/poster-LCP pages). Blocking these two sheets costs ~170–314ms (measured on the
      comparable services.css) — far cheaper than the repaint we were paying. Fonts are
      already preloaded above; critical CSS above stays inline for first paint. -->
-<link rel="stylesheet" href="/css/main.css?v=a998001f">
-<link rel="stylesheet" href="/css/components.css?v=a998001f">
+<link rel="stylesheet" href="/css/main.css?v=7ef18e2d">
+<link rel="stylesheet" href="/css/components.css?v=7ef18e2d">
 
 <!-- Umami analytics (privacy-friendly, cookieless — no consent banner needed) -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="23f9e6da-5e3a-461f-a191-1036350897bf"></script>
@@ -70,16 +70,16 @@
   })();
 </script>
 
-<link rel="stylesheet" href="/css/services.css?v=a998001f">
+<link rel="stylesheet" href="/css/services.css?v=7ef18e2d">
 <!-- contact-wizard.css deferred 2026-07-10: it styles the wizard/booking area BELOW the
      fold, not the contact-hero image that is this page's LCP element — so keeping it off
      the render-blocking path lets the hero paint sooner (PSI flagged it 722ms blocking).
      This is the correct use of the print-media defer; item 1 removed it only from the
      ABOVE-fold site-wide sheets where it caused an LCP repaint. -->
-<link rel="stylesheet" href="/css/contact-wizard.css?v=a998001f" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/css/contact-wizard.css?v=a998001f"></noscript>
-<script defer src="/js/estimate-logic.js?v=a998001f"></script>
-<script defer src="/js/contact-wizard.js?v=a998001f"></script>
+<link rel="stylesheet" href="/css/contact-wizard.css?v=7ef18e2d" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/contact-wizard.css?v=7ef18e2d"></noscript>
+<script defer src="/js/estimate-logic.js?v=7ef18e2d"></script>
+<script defer src="/js/contact-wizard.js?v=7ef18e2d"></script>
 <style>
   /* Match the referral dropdown to the form's input styling */
   .form-group select { width: 100%; padding: 0.75rem 0.875rem; font-family: var(--font-primary); font-size: 0.9rem; color: var(--color-black); background: var(--color-white); border: 1px solid var(--color-gray-300); border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
@@ -374,26 +374,24 @@ document.addEventListener('DOMContentLoaded', function() {
             <fieldset class="wizard-step" data-step="need">
               <legend tabindex="-1">How can we help?</legend>
               <div class="chip-group">
-                <label class="chip-option"><input type="radio" name="service" value="Event photos or video" required><span>Event photos or video<small class="chip-hint">recap, highlights, full recording</small></span></label>
-                <label class="chip-option"><input type="radio" name="service" value="Product photos"><span>Product photos</span></label>
-                <label class="chip-option"><input type="radio" name="service" value="Marketing video"><span>Marketing video<small class="chip-hint">interviews, website</small></span></label>
-                <label class="chip-option"><input type="radio" name="service" value="Reels for social media"><span>Reels for social media</span></label>
+                <label class="chip-option"><input type="radio" name="service" value="Event photo and video" required><span>Event photo and video<small class="chip-hint">full campaign, recaps, highlights, reels, full recordings</small></span></label>
+                <label class="chip-option"><input type="radio" name="service" value="Marketing content"><span>Marketing content<small class="chip-hint">SEO content, interviews, promos, reels for social media</small></span></label>
+                <label class="chip-option"><input type="radio" name="service" value="Photos for your business"><span>Photos for your business<small class="chip-hint">lifestyle product shoots, studio product shoots, headshots</small></span></label>
                 <label class="chip-option"><input type="radio" name="service" value="Something else"><span>Something else</span></label>
               </div>
             </fieldset>
 
-            <!-- Step 2, event path. Field names/values are a byte-exact contract with estimate-logic.js. -->
+            <!-- Step 2, event path. coverage_type values are a byte-exact contract with estimate-logic.js. -->
             <fieldset class="wizard-step" data-step="event-details">
-              <legend tabindex="-1">Tell us about the event</legend>
+              <legend tabindex="-1">Tell us about your event</legend>
               <div class="wizard-question">
                 <p class="wizard-question-label" id="q-event-type">What kind of event?</p>
                 <div class="chip-group" role="radiogroup" aria-labelledby="q-event-type">
-                  <label class="chip-option"><input type="radio" name="event_type" value="Festival / Concert" data-required><span>Festival / Concert</span></label>
-                  <label class="chip-option"><input type="radio" name="event_type" value="Conference / Corporate"><span>Conference / Corporate</span></label>
-                  <label class="chip-option"><input type="radio" name="event_type" value="Higher-ed"><span>Higher-ed</span></label>
-                  <label class="chip-option"><input type="radio" name="event_type" value="Nonprofit / Community"><span>Nonprofit / Community</span></label>
-                  <label class="chip-option"><input type="radio" name="event_type" value="Wedding / private party"><span>Wedding or private party</span></label>
-                  <label class="chip-option"><input type="radio" name="event_type" value="Other"><span>Something else</span></label>
+                  <label class="chip-option"><input type="radio" name="event_type" value="Festival" data-required><span>Festival</span></label>
+                  <label class="chip-option"><input type="radio" name="event_type" value="Conference"><span>Conference</span></label>
+                  <label class="chip-option"><input type="radio" name="event_type" value="Fundraiser"><span>Fundraiser</span></label>
+                  <label class="chip-option"><input type="radio" name="event_type" value="Gala"><span>Gala</span></label>
+                  <label class="chip-option"><input type="radio" name="event_type" value="Something else"><span>Something else</span></label>
                 </div>
               </div>
               <div class="wizard-question">
@@ -405,54 +403,22 @@ document.addEventListener('DOMContentLoaded', function() {
                   <label class="chip-option"><input type="radio" name="coverage_type" value="Not sure — help me decide"><span>Not sure — help me decide</span></label>
                 </div>
               </div>
-              <div class="wizard-question">
-                <p class="wizard-question-label" id="q-length">How long?</p>
-                <div class="chip-group" role="radiogroup" aria-labelledby="q-length">
-                  <label class="chip-option"><input type="radio" name="event_length" value="Half day" data-required><span>Half day (up to ~4 hours)</span></label>
-                  <label class="chip-option"><input type="radio" name="event_length" value="Full day"><span>Full day</span></label>
-                  <label class="chip-option"><input type="radio" name="event_length" value="2–3 days"><span>2–3 days</span></label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="event_date">Event date <span class="label-hint">(optional)</span></label>
-                <input type="date" id="event_date" name="event_date">
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="event_start">Start time <span class="label-hint">(optional)</span></label>
-                  <input type="time" id="event_start" name="event_start">
-                </div>
-                <div class="form-group">
-                  <label for="event_end">End time <span class="label-hint">(optional)</span></label>
-                  <input type="time" id="event_end" name="event_end">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="chip-option"><input type="checkbox" id="no_date_yet" name="no_date_yet" value="yes"><span>No date yet</span></label>
-              </div>
             </fieldset>
 
-            <!-- Step 2, every other service. -->
+            <!-- Step 2, every other service: one question, chosen by service. -->
             <fieldset class="wizard-step" data-step="project-details">
-              <legend tabindex="-1">A couple of quick questions</legend>
-              <div class="wizard-question" id="q-project-coverage-wrap">
-                <p class="wizard-question-label" id="q-project-coverage">Photos, video or both?</p>
-                <div class="chip-group" role="radiogroup" aria-labelledby="q-project-coverage">
-                  <label class="chip-option"><input type="radio" name="project_coverage" value="Photos" data-required><span>Photos</span></label>
-                  <label class="chip-option"><input type="radio" name="project_coverage" value="Video"><span>Video</span></label>
-                  <label class="chip-option"><input type="radio" name="project_coverage" value="Both"><span>Both</span></label>
-                </div>
+              <legend tabindex="-1">One quick question</legend>
+              <div class="wizard-question form-group" id="q-goal-wrap">
+                <label for="goal">Tell us about your absolute win scenario! What are you trying to achieve?</label>
+                <textarea id="goal" name="goal" rows="3" data-required></textarea>
               </div>
-              <div class="wizard-question" id="q-frequency-wrap">
-                <p class="wizard-question-label" id="q-frequency">One time or monthly?</p>
-                <div class="chip-group" role="radiogroup" aria-labelledby="q-frequency">
-                  <label class="chip-option"><input type="radio" name="frequency" value="One time" data-required><span>One time</span></label>
-                  <label class="chip-option"><input type="radio" name="frequency" value="Monthly"><span>Monthly</span></label>
-                </div>
+              <div class="wizard-question form-group" id="q-looking-for-wrap">
+                <label for="looking_for">Tell us about what you're looking for.</label>
+                <textarea id="looking_for" name="looking_for" rows="3" data-required></textarea>
               </div>
-              <div class="form-group">
-                <label for="project_date">When do you need it? <span class="label-hint">(optional)</span></label>
-                <input type="date" id="project_date" name="project_date">
+              <div class="wizard-question form-group" id="q-need-detail-wrap">
+                <label for="need_detail">Tell us what you need.</label>
+                <textarea id="need_detail" name="need_detail" rows="3" data-required></textarea>
               </div>
             </fieldset>
 
@@ -479,10 +445,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
               </div>
               <div class="form-group">
-                <label for="message">Anything else we should know?</label>
-                <textarea id="message" name="message" rows="4" placeholder="What do you have in mind? Deadlines, where it will be used, anything else."></textarea>
-              </div>
-              <div class="form-group">
                 <label for="referral_source">How did you hear about us? <span class="required">*</span></label>
                 <select id="referral_source" name="referral_source" required>
                   <option value="" disabled selected>Select one&hellip;</option>
@@ -491,24 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   <option>Google Maps</option>
                   <option>AI assistant (ChatGPT, Perplexity, etc.)</option>
                   <option>Social media</option>
-                  <option>A directory or listing</option>
-                  <option>Met us at an event</option>
                   <option>Other</option>
-                </select>
-              </div>
-              <div class="form-group" id="referral_detail_wrap">
-                <label for="referral_detail">Who referred you / tell us more</label>
-                <input type="text" id="referral_detail" name="referral_detail">
-              </div>
-              <div class="form-group">
-                <label for="budget_range">Budget range <span class="label-hint">(optional)</span></label>
-                <select id="budget_range" name="budget_range">
-                  <option value="" selected>Select one&hellip;</option>
-                  <option value="Under $2,500">Under $2,500</option>
-                  <option value="$2,500–5,500">$2,500–5,500</option>
-                  <option value="$5,500–9,500">$5,500–9,500</option>
-                  <option value="$9,500+">$9,500+</option>
-                  <option value="Not sure yet">Not sure yet</option>
                 </select>
               </div>
             </fieldset>
