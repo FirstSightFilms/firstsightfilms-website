@@ -169,6 +169,7 @@
 }
 .wizard-back:hover { color: var(--color-black); }
 .wizard-back[hidden] { display: none; }
+.wizard-next[hidden] { display: none; }
 
 /* Inline step error */
 .wizard-error { color: #e74c3c; font-size: 0.85rem; margin-top: 0.75rem; display: none; }

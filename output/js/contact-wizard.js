@@ -68,13 +68,15 @@
     submitError.innerHTML =
       '<p>Something went wrong sending your answers. ' +
       '<button type="button" class="btn btn-primary wizard-retry">Try again</button></p>';
-    form.appendChild(submitError);
+    form.insertBefore(submitError, nav);
 
     var backBtn = nav.querySelector('.wizard-back');
     var nextBtn = nav.querySelector('.wizard-next');
     var progressText = progress.querySelector('.wizard-progress-text');
     var progressFill = progress.querySelector('.wizard-progress-fill');
     var submitBtn = form.querySelector('button[type="submit"]');
+    // The last step's submit takes the Next spot (right of Back), so each step shows one forward button.
+    nav.appendChild(submitBtn);
 
     // --- branching on service ---
     function service() {
